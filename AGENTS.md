@@ -84,5 +84,6 @@ python3 scripts/generate_index_tables.py --check        # index tables + nav
 mkdocs build --strict                                   # docs build, zero warnings
 ```
 
-Skipped tests are unsolved practice stubs (`NotSolved`) and are expected;
-failures are not.
+Skips are expected in both suites: offline cache fixtures in the generator
+tests, unsolved `NotSolved` practice stubs in the problem suites. Failures
+are not.
