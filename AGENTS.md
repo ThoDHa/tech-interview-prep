@@ -6,10 +6,18 @@ enforce, not a restatement of global agent standards.
 
 ## Naming
 
-- Descriptive identifiers; opaque abbreviations are rejected in review.
+- Descriptive identifiers; opaque abbreviations are rejected in review
+  (`nxt`, `cur`, `curr`, `prev`, `cnt`, `tmp`, `idx`, `ans`, `res`, `temp`).
   Established domain terms are fine (`dfs`, `bfs`, `bst`, `lru`).
 - Single-letter names (`i`, `j`, `n`, `k`) only as loop counters or established
   algorithm variables in tight scopes.
+- Compound identifiers carrying an abbreviation morpheme follow the bank's
+  established convention (`current_idx`, `pivot_idx`, `open_idx`).
+- Diagram fences (flowcharts, trace tables) may use short trace notation
+  (`ans`, `R`, `L`) when a legend declares it.
+- Adjacency-successor iteration names the element: typed `next_<noun>`
+  (`next_course`, `next_letter`), or `neighbor` when the page's own prose
+  says neighbor.
 - Functions name the operation as a verb phrase; booleans read as predicates.
 
 ## Code blocks
@@ -17,8 +25,8 @@ enforce, not a restatement of global agent standards.
 Applies to write-up fences and reference implementations alike.
 
 - Runnable in isolation: every import a block uses is present and correct.
-- Every fence carries a language tag (`python`, `text`); untagged fences are
-  audit findings.
+- Every fence carries a language tag matching its content (`python`, `text`,
+  `java`, among others); untagged fences are audit findings.
 - Signatures carry type annotations on parameters and returns.
 - Complexity claims next to code match what the code actually does; where a
   page has a `reference.py`, the write-up's approach and complexity match it.
