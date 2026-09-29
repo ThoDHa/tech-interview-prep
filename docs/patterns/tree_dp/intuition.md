@@ -264,7 +264,7 @@ Tree optimization problem?
 
 ## Practice Progression
 
-1. **LC 543 - Diameter of Binary Tree**: The gentlest introduction to the through-value vs return-value split: the answer may use both branches, but the parent only gets one
-2. **LC 124 - Binary Tree Maximum Path Sum**: Pattern 2 in full: clamp negative branches to zero, let the path through each node compete for the global max
+1. **[LC 543 - Diameter of Binary Tree](../../problems/diameter_of_binary_tree.md)**: The gentlest introduction to the through-value vs return-value split: the answer may use both branches, but the parent only gets one
+2. **[LC 124 - Binary Tree Maximum Path Sum](../../problems/binary_tree_maximum_path_sum.md)**: Pattern 2 in full: clamp negative branches to zero, let the path through each node compete for the global max
 
 Tree DP is about **propagating optimal decisions upward**. Think bottom-up: what do leaves know? What do parents need? Let the states flow.

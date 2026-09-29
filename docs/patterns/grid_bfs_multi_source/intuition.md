@@ -210,8 +210,8 @@ if neighbor not in visited:
 
 ## Practice
 
-1. **Rotting Oranges (LC 994)**: the propagation timer variant. All rotten oranges enter the queue at minute 0; count levels until no fresh orange remains.
-2. **01 Matrix (LC 542)**: the distance field variant. All zeros enter the queue at distance 0; fill the matrix outward.
+1. **[Rotting Oranges](../../problems/rotting_oranges.md)**: the propagation timer variant. All rotten oranges enter the queue at minute 0; count levels until no fresh orange remains.
+2. **[01 Matrix](../../problems/01_matrix.md)**: the distance field variant. All zeros enter the queue at distance 0; fill the matrix outward.
 
 ## Quick Pattern Recognition
 

@@ -117,7 +117,7 @@ To reach step 5, you add:
 
 **Formula**: `dp[i] = dp[i-1] + dp[i-2]`
 
-**Problems**: LC 70 (Climbing Stairs), LC 746 (Min Cost Climbing)
+**Problems**: [LC 70 - Climbing Stairs](../../problems/climbing_stairs.md), [LC 746 - Min Cost Climbing Stairs](../../problems/min_cost_climbing_stairs.md)
 
 The Climbing Stairs problem page also covers an O(log n) matrix exponentiation solution and a closed-form formula for this same recurrence.
 
@@ -137,7 +137,7 @@ At each house, you choose:
 
 **Formula**: `dp[i] = max(dp[i-1], dp[i-2] + nums[i])`
 
-**Problems**: LC 198 (House Robber), LC 213 (House Robber II)
+**Problems**: [LC 198 - House Robber](../../problems/house_robber.md), [LC 213 - House Robber II](../../problems/house_robber_ii.md)
 
 ---
 
@@ -201,7 +201,7 @@ return prev1
 
 **Action**: Running min/max (implicit DP).
 
-**Problems**: LC 121 (Best Time Buy/Sell Stock), LC 53 (Maximum Subarray)
+**Problems**: [LC 121 - Best Time to Buy and Sell Stock](../../problems/best_time_to_buy_and_sell_stock.md), [LC 53 - Maximum Subarray](../../problems/maximum_subarray.md)
 
 ### Signal: "Circular array"
 > *"First and last elements are adjacent"*
@@ -281,13 +281,13 @@ Take the better of the two results.
 
 Master 1D Linear DP through this sequence:
 
-1. **LC 70** (Climbing Stairs): Pure Fibonacci, additive DP
-2. **LC 746** (Min Cost Climbing): Add cost, switch to min
-3. **LC 198** (House Robber): Include/exclude framework
-4. **LC 213** (House Robber II): Circular decomposition
-5. **LC 121** (Best Time Buy/Sell): Implicit DP with running min
-6. **LC 53** (Maximum Subarray): Kadane's algorithm, "extend or restart" at each index
-7. **LC 139** (Word Break): dp[i] over string prefixes, transition scans earlier cut points
+1. **[LC 70 - Climbing Stairs](../../problems/climbing_stairs.md)**: Pure Fibonacci, additive DP
+2. **[LC 746 - Min Cost Climbing Stairs](../../problems/min_cost_climbing_stairs.md)**: Add cost, switch to min
+3. **[LC 198 - House Robber](../../problems/house_robber.md)**: Include/exclude framework
+4. **[LC 213 - House Robber II](../../problems/house_robber_ii.md)**: Circular decomposition
+5. **[LC 121 - Best Time to Buy and Sell Stock](../../problems/best_time_to_buy_and_sell_stock.md)**: Implicit DP with running min
+6. **[LC 53 - Maximum Subarray](../../problems/maximum_subarray.md)**: Kadane's algorithm, "extend or restart" at each index
+7. **[LC 139 - Word Break](../../problems/word_break.md)**: dp[i] over string prefixes, transition scans earlier cut points
 
 ---
 
