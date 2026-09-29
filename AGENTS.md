@@ -62,8 +62,11 @@ all three after touching a generator, its data sources, or generated output.
   `docs/problems/amazon_oa/index.md` whole-file. Three write-ups rendered from
   the manifest alone are byte-compared, never hand-edited:
   `amazon-find-minimum-possible-variance.md`, `amazon-get-min-cost-book.md`,
-  `amazon-find-minimum-number-of-operations.md`. Every other Amazon write-up
-  owns its `# [Title](url)` header line byte-exact; the body is hand-editable.
+  `amazon-find-minimum-number-of-operations.md`. For every other Amazon
+  write-up, the generator pins the `# [Title](url)` header line byte-exact and
+  fragment-pins the leading docstring lines of `solution.py` and
+  `test_<slug>.py` under `practice/amazon_oa/<slug>/`; the write-up body is
+  hand-editable.
 - `scripts/generate_index_tables.py` owns the marker-bounded sections of
   `docs/problems/index.md` (`unified-leetcode`, `amazon-oa`, `sources`) and the
   `Problems` nav in `mkdocs.yml`.
@@ -78,6 +81,7 @@ From the repository root:
 
 ```bash
 cd practice && uv run pytest ../scripts/                # generator tests
+cd practice && uv run pytest                            # problem suites
 python3 scripts/generate_neetcode150_scaffolds.py --check
 python3 scripts/generate_amazon_oa_scaffolds.py --check
 python3 scripts/generate_index_tables.py --check        # index tables + nav
@@ -85,5 +89,5 @@ mkdocs build --strict                                   # docs build, zero warni
 ```
 
 Skips are expected in both suites: offline cache fixtures in the generator
-tests, unsolved `NotSolved` practice stubs in the problem suites. Failures
-are not.
+tests; in the problem suites, unsolved `NotSolved` stubs plus a few committed
+module-level skips (non-assertable outputs, unparsed cases). Failures are not.
