@@ -733,14 +733,14 @@ When you swap `arr[mid]` with `arr[high]`, the new value at `mid` is unclassifie
 Work through the shapes in order of increasing difficulty. Each problem exercises one shape until it feels inevitable.
 
 ### Level 1: One Shape, Pure Form
-1. **LC 125 - Valid Palindrome**: Opposite Approach, closing the gap from both ends of a string
-2. **LC 876 - Middle of the Linked List**: Fast-Slow, using the speed differential to land on the midpoint
-3. **LC 141 - Linked List Cycle**: Fast-Slow, the tortoise and hare detecting a loop
+1. **[LC 125 - Valid Palindrome](../../problems/valid_palindrome.md)**: Opposite Approach, closing the gap from both ends of a string
+2. **[LC 876 - Middle of the Linked List](../../problems/middle_of_the_linked_list.md)**: Fast-Slow, using the speed differential to land on the midpoint
+3. **[LC 141 - Linked List Cycle](../../problems/linked_list_cycle.md)**: Fast-Slow, the tortoise and hare detecting a loop
 
 ### Level 2: Decision Rules and Regions
-4. **LC 11 - Container With Most Water**: Opposite Approach, moving the shorter wall on an exclusion proof
-5. **LC 75 - Sort Colors**: Partitioning, the Dutch National Flag in a single pass
-6. **LC 15 - 3Sum**: Dedup Enumeration, pinning an anchor and sweeping with opposite pointers
+4. **[LC 11 - Container With Most Water](../../problems/container_with_most_water.md)**: Opposite Approach, moving the shorter wall on an exclusion proof
+5. **[LC 75 - Sort Colors](../../problems/sort_colors.md)**: Partitioning, the Dutch National Flag in a single pass
+6. **[LC 15 - 3Sum](../../problems/3sum.md)**: Dedup Enumeration, pinning an anchor and sweeping with opposite pointers
 
 ---
 
