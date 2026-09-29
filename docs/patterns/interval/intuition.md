@@ -226,7 +226,7 @@ Space is typically O(n) for the output array, O(1) additional.
 
 ### Level 4: Advanced
 6. **[LC 253 - Meeting Rooms II](../../problems/meeting_rooms_ii.md)** (Concurrent intervals)
-7. LC 1235 - Maximum Profit in Job Scheduling (Weighted scheduling)
+7. **[LC 1235 - Maximum Profit in Job Scheduling](../../problems/maximum_profit_in_job_scheduling.md)** (Weighted scheduling)
 
 ---
 
