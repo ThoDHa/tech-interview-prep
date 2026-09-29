@@ -424,7 +424,7 @@ Every solution so far converts the digits by hand, but Python's `int()` already 
 
 1. Strip leading spaces with `s.lstrip(' ')`; if the string empties, return
    `0`.
-2. Read an optional sign at `s[0]`, setting `sign` and the start position
+2. Read an optional sign at `s[0]`, setting `sign` and the scan's start
    `position`.
 3. Collect consecutive digit characters into `digits`; if none were read,
    return `0`.
