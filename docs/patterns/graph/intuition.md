@@ -231,7 +231,7 @@ def dfs_iterative(start_r, start_c):
 ## Practice Progression
 
 ### Level 1: Basic DFS/BFS (Master First!)
-1. **LC 200 - Number of Islands**: Classic connected components
+1. **[LC 200 - Number of Islands](../../problems/number_of_islands.md)**: Classic connected components
 2. **LC 733 - Flood Fill**: Basic DFS on grid
 
 ### Level 2: BFS for Shortest Path
@@ -239,7 +239,7 @@ def dfs_iterative(start_r, start_c):
 4. **LC 1091 - Shortest Path in Binary Matrix**: BFS shortest path
 
 ### Level 3: Graph Structure
-5. **LC 133 - Clone Graph**: Graph cloning
+5. **[LC 133 - Clone Graph](../../problems/clone_graph.md)**: Graph cloning
 6. **LC 841 - Keys and Rooms**: Reachability check
 
 ### Level 4: Advanced Applications
