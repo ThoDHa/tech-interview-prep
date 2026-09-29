@@ -197,7 +197,7 @@ nums = [3, 2, 1, 5, 6, 4]
 heapq.heappush(heap, (node.val, node))  # Error if vals equal!
 
 # CORRECT: Add unique tie-breaker
-heapq.heappush(heap, (node.val, idx, node))  # idx breaks ties
+heapq.heappush(heap, (node.val, index, node))  # index breaks ties
 ```
 
 ### Pitfall 5: Modifying heap elements in place

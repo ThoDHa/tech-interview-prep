@@ -492,7 +492,7 @@ Now we translate intuition into production-ready code. Each solution demonstrate
 
 ---
 
-### Problem 1: Longest Substring Without Repeating Characters (LeetCode 3)
+### Problem 1: [Longest Substring Without Repeating Characters](../../problems/longest_substring_without_repeating_characters.md)
 
 **The Promise**: *"Every character in my view appears exactly once."*
 
@@ -696,7 +696,7 @@ if __name__ == "__main__":
 
 ---
 
-### Problem 3: Minimum Window Substring (LeetCode 76)
+### Problem 3: [Minimum Window Substring](../../problems/minimum_window_substring.md)
 
 **The Promise**: *"I contain all required characters with sufficient frequency."*
 
@@ -822,7 +822,7 @@ if __name__ == "__main__":
 
 ---
 
-### Problem 4: Find All Anagrams in a String (LeetCode 438)
+### Problem 4: [Find All Anagrams in a String](../../problems/find_all_anagrams_in_a_string.md)
 
 **The Promise**: *"I contain exactly the same character frequencies as the pattern."*
 
