@@ -381,7 +381,7 @@ The template maps exactly to the three forces:
 
 Each problem below shows the shape recognition and implementation.
 
-### 9.1 Permutations (LeetCode 46)
+### 9.1 [Permutations](../../problems/permutations.md)
 
 **Shape**: Permutation: arrange all, order matters.
 
@@ -460,7 +460,7 @@ def permute_unique(nums: list[int]) -> list[list[int]]:
     return results
 ```
 
-### 9.3 Subsets (LeetCode 78)
+### 9.3 [Subsets](../../problems/subsets.md)
 
 **Shape**: Subset: include or exclude, canonical order.
 
@@ -489,7 +489,7 @@ def subsets(nums: list[int]) -> list[list[int]]:
     return results
 ```
 
-### 9.4 Subsets II: With Duplicates (LeetCode 90)
+### 9.4 [Subsets II: With Duplicates](../../problems/subsets_ii.md)
 
 **Shape**: Subset with deduplication.
 
@@ -549,7 +549,7 @@ def combine(n: int, k: int) -> list[list[int]]:
     return results
 ```
 
-### 9.6 Letter Combinations of a Phone Number (LeetCode 17)
+### 9.6 [Letter Combinations of a Phone Number](../../problems/letter_combinations_of_a_phone_number.md)
 
 **Shape**: Fixed-depth enumeration: one independent choice per level (the cartesian product of each digit's letters).
 
@@ -569,21 +569,21 @@ def letter_combinations(digits: str) -> list[str]:
     results: list[str] = []
     path: list[str] = []
     
-    def backtrack(idx: int) -> None:
-        if idx == len(digits):
+    def backtrack(index: int) -> None:
+        if index == len(digits):
             results.append(''.join(path))
             return
-        
-        for letter in mapping[digits[idx]]:
+
+        for letter in mapping[digits[index]]:
             path.append(letter)   # Choose
-            backtrack(idx + 1)    # Explore
+            backtrack(index + 1)  # Explore
             path.pop()            # Unchoose
     
     backtrack(0)
     return results
 ```
 
-### 9.7 Combination Sum (LeetCode 39)
+### 9.7 [Combination Sum](../../problems/combination_sum.md)
 
 **Shape**: Target sum with element reuse allowed.
 
@@ -614,7 +614,7 @@ def combination_sum(candidates: list[int], target: int) -> list[list[int]]:
     return results
 ```
 
-### 9.8 Combination Sum II (LeetCode 40)
+### 9.8 [Combination Sum II](../../problems/combination_sum_ii.md)
 
 **Shape**: Target sum, no reuse, with duplicates.
 
@@ -678,7 +678,7 @@ def combination_sum3(k: int, n: int) -> list[list[int]]:
     return results
 ```
 
-### 9.10 N-Queens (LeetCode 51/52)
+### 9.10 [N-Queens](../../problems/n_queens.md) (LeetCode 51/52)
 
 **Shape**: Constraint satisfaction: place without conflict.
 
@@ -752,7 +752,7 @@ def total_n_queens(n: int) -> int:
     return count
 ```
 
-### 9.11 Palindrome Partitioning (LeetCode 131)
+### 9.11 [Palindrome Partitioning](../../problems/palindrome_partitioning.md)
 
 **Shape**: Segmentation: cut into valid pieces.
 
@@ -839,7 +839,7 @@ def restore_ip_addresses(s: str) -> list[str]:
     return results
 ```
 
-### 9.13 Word Search (LeetCode 79)
+### 9.13 [Word Search](../../problems/word_search.md)
 
 **Shape**: Grid path with visited tracking.
 
@@ -854,21 +854,21 @@ def exist(board: list[list[str]], word: str) -> bool:
     
     rows, cols = len(board), len(board[0])
     
-    def backtrack(r: int, c: int, idx: int) -> bool:
-        if idx == len(word):
+    def backtrack(r: int, c: int, index: int) -> bool:
+        if index == len(word):
             return True
         if r < 0 or r >= rows or c < 0 or c >= cols:
             return False
-        if board[r][c] != word[idx]:
+        if board[r][c] != word[index]:
             return False
-        
+
         # Choose: mark as visited
         original = board[r][c]
         board[r][c] = '#'
-        
+
         # Explore: try all 4 directions
         for dr, dc in [(-1, 0), (1, 0), (0, -1), (0, 1)]:
-            if backtrack(r + dr, c + dc, idx + 1):
+            if backtrack(r + dr, c + dc, index + 1):
                 board[r][c] = original  # Restore before returning
                 return True
         
@@ -956,14 +956,14 @@ def target_sum_template(candidates, target, allow_reuse=True):
 def grid_search_template(grid, target):
     rows, cols = len(grid), len(grid[0])
     
-    def backtrack(r, c, idx):
-        if idx == len(target):
+    def backtrack(r, c, index):
+        if index == len(target):
             return True
-        if r < 0 or r >= rows or c < 0 or c >= cols or grid[r][c] != target[idx]:
+        if r < 0 or r >= rows or c < 0 or c >= cols or grid[r][c] != target[index]:
             return False
-        
+
         temp, grid[r][c] = grid[r][c], '#'
-        found = any(backtrack(r + dr, c + dc, idx + 1) 
+        found = any(backtrack(r + dr, c + dc, index + 1)
                     for dr, dc in [(-1,0), (1,0), (0,-1), (0,1)])
         grid[r][c] = temp
         return found
