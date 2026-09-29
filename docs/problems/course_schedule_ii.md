@@ -179,10 +179,10 @@ class Solution:
         while queue:
             course = queue.popleft()
             order.append(course)
-            for nxt in adjacency[course]:
-                pending[nxt] -= 1
-                if pending[nxt] == 0:
-                    queue.append(nxt)
+            for next_course in adjacency[course]:
+                pending[next_course] -= 1
+                if pending[next_course] == 0:
+                    queue.append(next_course)
         return order if len(order) == numCourses else []
 ```
 
@@ -260,8 +260,8 @@ class Solution:
             if state[course] == DONE:
                 return True
             state[course] = IN_PROGRESS
-            for nxt in adjacency[course]:
-                if not visit(nxt):
+            for next_course in adjacency[course]:
+                if not visit(next_course):
                     return False
             state[course] = DONE
             postorder.append(course)
