@@ -16,8 +16,8 @@ class Solution:
     def longestCommonSubsequence(self, text1, text2):
         """Return the length of the longest common subsequence of the inputs.
 
-        Walks a prefix table one row at a time: `prev` holds the row for the
-        first `i - 1` characters of `text1` and `cur` is built for the first
+        Walks a prefix table one row at a time: `previous` holds the row for the
+        first `i - 1` characters of `text1` and `current` is built for the first
         `i`. Matching characters extend the diagonal; otherwise the row
         inherits the better of dropping one character from either string.
         Only two rows are alive at any time, so the full table never exists.
@@ -33,16 +33,16 @@ class Solution:
         Space: O(n): the two live rows (n = len(text2)).
         """
         width = len(text2)
-        prev = [0] * (width + 1)
+        previous = [0] * (width + 1)
         for i in range(1, len(text1) + 1):
-            cur = [0] * (width + 1)
+            current = [0] * (width + 1)
             for j in range(1, width + 1):
                 if text1[i - 1] == text2[j - 1]:
-                    cur[j] = prev[j - 1] + 1
+                    current[j] = previous[j - 1] + 1
                 else:
-                    cur[j] = max(prev[j], cur[j - 1])
-            prev = cur
-        return prev[width]
+                    current[j] = max(previous[j], current[j - 1])
+            previous = current
+        return previous[width]
 
 
 if __name__ == "__main__":
