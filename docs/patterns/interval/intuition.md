@@ -166,20 +166,20 @@ intervals.sort(key=lambda x: x[1])  # Sort by end
 # [1,2] and [2,3]: Do they overlap?
 
 # LC 56 (Merge): YES - they touch, so merge
-if curr[0] <= prev[1]:  # <= means touching merges
+if current[0] <= previous[1]:  # <= means touching merges
 
 # LC 435 (Scheduling): Depends on definition
-if curr[0] >= prev[1]:  # >= means touching is OK
+if current[0] >= previous[1]:  # >= means touching is OK
 ```
 
 ### Pitfall 3: Not Using max() for Merge
 
 ```python
 # WRONG:
-merged[-1][1] = curr[1]  # What if curr is nested?
+merged[-1][1] = current[1]  # What if current is nested?
 
 # CORRECT:
-merged[-1][1] = max(merged[-1][1], curr[1])
+merged[-1][1] = max(merged[-1][1], current[1])
 
 # Example: [1,10] + [2,5] should give [1,10], not [1,5]
 ```
@@ -214,18 +214,18 @@ Space is typically O(n) for the output array, O(1) additional.
 ## Practice Progression
 
 ### Level 1: Core Patterns
-1. **LC 56 - Merge Intervals** (Merge, Sort by start)
-2. **LC 435 - Non-overlapping Intervals** (Schedule, Sort by end)
+1. **[LC 56 - Merge Intervals](../../problems/merge_intervals.md)** (Merge, Sort by start)
+2. **[LC 435 - Non-overlapping Intervals](../../problems/non_overlapping_intervals.md)** (Schedule, Sort by end)
 
 ### Level 2: Variants
-3. **LC 57 - Insert Interval** (Three-phase)
+3. **[LC 57 - Insert Interval](../../problems/insert_interval.md)** (Three-phase)
 4. **LC 452 - Minimum Arrows** (Group counting)
 
 ### Level 3: Two Lists
 5. **LC 986 - Interval List Intersections** (Two-pointer)
 
 ### Level 4: Advanced
-6. LC 253 - Meeting Rooms II (Concurrent intervals)
+6. **[LC 253 - Meeting Rooms II](../../problems/meeting_rooms_ii.md)** (Concurrent intervals)
 7. LC 1235 - Maximum Profit in Job Scheduling (Weighted scheduling)
 
 ---
@@ -233,23 +233,23 @@ Space is typically O(n) for the output array, O(1) additional.
 ## Quick Reference Card
 
 ```
-┌─────────────────────────────────────────────────────────┐
-│                  INTERVAL PATTERNS                       │
-├─────────────────────────────────────────────────────────┤
-│                                                          │
-│  MERGE (LC 56)               SCHEDULE (LC 435, 452)     │
-│  ─────────────────           ──────────────────────      │
-│  Sort by: START              Sort by: END                │
-│  Action:  Extend end         Action:  Count/Skip         │
-│  Check:   curr[0]<=prev[1]   Check:   curr[0]>=prev[1]  │
-│                                                          │
-│  INTERSECT (LC 986)                                      │
-│  ──────────────────                                      │
-│  Two pointers: i, j                                      │
-│  Intersection: [max(starts), min(ends)]                  │
-│  Advance: pointer with smaller end                       │
-│                                                          │
-└─────────────────────────────────────────────────────────┘
+┌───────────────────────────────────────────────────────────────────────┐
+│                  INTERVAL PATTERNS                                    │
+├───────────────────────────────────────────────────────────────────────┤
+│                                                                       │
+│  MERGE (LC 56)               SCHEDULE (LC 435, 452)                   │
+│  ─────────────────           ──────────────────────                   │
+│  Sort by: START              Sort by: END                             │
+│  Action:  Extend end         Action:  Count/Skip                      │
+│  Check:   current[0]<=previous[1]   Check:   current[0]>=previous[1]  │
+│                                                                       │
+│  INTERSECT (LC 986)                                                   │
+│  ──────────────────                                                   │
+│  Two pointers: i, j                                                   │
+│  Intersection: [max(starts), min(ends)]                               │
+│  Advance: pointer with smaller end                                    │
+│                                                                       │
+└───────────────────────────────────────────────────────────────────────┘
 ```
 
 LC 57 (Insert Interval) uses the merge check but needs no sort: the input is already sorted, so a single linear three-phase pass suffices.
