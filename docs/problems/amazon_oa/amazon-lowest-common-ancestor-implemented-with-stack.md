@@ -18,7 +18,7 @@ The original OP mentioned that the interviewer specifically required a stack-bas
 
 Reference Choice
 
-There are 3 "find lowest common ancestor" questions on LeetCode. 236 was selected as the reference because this source describes the LCA of exactly two existing nodes, p and q, in a normal binary tree.
+There are 3 "find lowest common ancestor" questions on LeetCode. [Lowest Common Ancestor of a Binary Tree](../lowest_common_ancestor_of_a_binary_tree.md) (236) was selected as the reference because this source describes the LCA of exactly two existing nodes, p and q, in a normal binary tree.
 
 It does not match 1644, because that variant changes the contract by allowing one or both target nodes to be missing from the tree. It also does not match 1676, because that variant asks for the LCA of multiple nodes, not just p and q.
 
