@@ -70,11 +70,11 @@ Deleting elements never disturbs the order of those that remain, so an increasin
 
 The most literal reading enumerates subsequences directly: walk left to right holding the value last taken, and at each element make the two possible moves. Skipping keeps the previous value and moves on; taking is allowed only when the current value beats the last taken one, and it then becomes the value every later element must beat. The recursion returns the longest chain obtainable from the remaining elements:
 
-1. Define `best(i, prev)` as the longest increasing subsequence length usable
-   from index `i` onward, with every taken value strictly greater than `prev`.
+1. Define `best(i, previous)` as the longest increasing subsequence length usable
+   from index `i` onward, with every taken value strictly greater than `previous`.
 2. Base case: `i == len(nums)` means no elements remain, so return `0`.
-3. Skip branch: `best(i + 1, prev)`.
-4. Take branch: allowed only when `nums[i] > prev`, worth
+3. Skip branch: `best(i + 1, previous)`.
+4. Take branch: allowed only when `nums[i] > previous`, worth
    `1 + best(i + 1, nums[i])`.
 5. Return `max(skip, take)`; the answer is `best(0, -inf)`.
 
@@ -89,19 +89,19 @@ The recursion tree on either example is far too wide to draw, so trace a tailore
       best(3, 2) -> 0    base case: no elements left
     best(2, -inf) -> 1    skip = 0, take = 1 + best(3, 2) = 1, keep take
       best(3, 3) -> 0    base case: no elements left
-    best(2, 3) -> 0    skip = 0, take = blocked: nums[i] <= prev, keep skip
+    best(2, 3) -> 0    skip = 0, take = blocked: nums[i] <= previous, keep skip
   best(1, -inf) -> 1    skip = 1, take = 1 + best(2, 3) = 1, keep skip
       best(3, 1) -> 0    base case: no elements left
       best(3, 2) -> 0    base case: no elements left
     best(2, 1) -> 1    skip = 0, take = 1 + best(3, 2) = 1, keep take
       best(3, 3) -> 0    base case: no elements left
-    best(2, 3) -> 0    skip = 0, take = blocked: nums[i] <= prev, keep skip
+    best(2, 3) -> 0    skip = 0, take = blocked: nums[i] <= previous, keep skip
   best(1, 1) -> 1    skip = 1, take = 1 + best(2, 3) = 1, keep skip
 best(0, -inf) -> 2    skip = 1, take = 1 + best(1, 1) = 2, keep take
 -> 2
 ```
 
-The root takes `1`, which lets the suffix decide between `3` and `2`, each worth one more element: `best(0, -inf)` returns `2`, and indeed the longest increasing subsequences of `[1, 3, 2]`, `[1, 3]` and `[1, 2]` all have length `2`. Note how `best(2, 3)` runs twice, and the six base calls carry `prev` values `-inf, 2, 3, 1, 2, 3` (`best(3, -inf)` runs once) yet all return `0`: repeated questions answered identically on separate routes, which is exactly the waste the next solution caches away.
+The root takes `1`, which lets the suffix decide between `3` and `2`, each worth one more element: `best(0, -inf)` returns `2`, and indeed the longest increasing subsequences of `[1, 3, 2]`, `[1, 3]` and `[1, 2]` all have length `2`. Note how `best(2, 3)` runs twice, and the six base calls carry `previous` values `-inf, 2, 3, 1, 2, 3` (`best(3, -inf)` runs once) yet all return `0`: repeated questions answered identically on separate routes, which is exactly the waste the next solution caches away.
 
 #### Solution
 
@@ -113,12 +113,12 @@ from typing import List
 
 class Solution:
     def lengthOfLIS(self, nums: List[int]) -> int:
-        def best(i: int, prev: float) -> int:
+        def best(i: int, previous: float) -> int:
             if i == len(nums):
                 return 0
-            skip = best(i + 1, prev)
+            skip = best(i + 1, previous)
             take = 0
-            if nums[i] > prev:
+            if nums[i] > previous:
                 take = 1 + best(i + 1, nums[i])
             return max(skip, take)
 
@@ -137,18 +137,18 @@ No table is kept; the recursion stack reaches depth `n` along the all-take chain
 
 #### Key Insights
 
-- The `prev` value alone summarizes the past: any future element beats the chain
+- The `previous` value alone summarizes the past: any future element beats the chain
   exactly when it beats the last taken value, so no other history matters.
-- The strict comparison `nums[i] > prev` encodes the "strictly increasing" rule;
+- The strict comparison `nums[i] > previous` encodes the "strictly increasing" rule;
   equal values block the take.
-- Correct on every input but exponential: the same `(i, prev)` state is
+- Correct on every input but exponential: the same `(i, previous)` state is
   re-derived once per route, which is what the memoized version keys on.
 
 ### Top-Down Memoization
 
 #### Derivation
 
-The Brute Force's state is the pair `(i, prev)`, and identical pairs recur across routes. Re-anchor the question to remove the redundancy: instead of asking about a suffix with a constraint inherited from the route, ask about a prefix with the chain pinned to its last element. Define `lis(i)` as the length of the longest increasing subsequence that *ends* at index `i`. That answer depends only on `i` and the earlier answers, because the chain ending at `i` must extend some chain ending at a smaller value before it:
+The Brute Force's state is the pair `(i, previous)`, and identical pairs recur across routes. Re-anchor the question to remove the redundancy: instead of asking about a suffix with a constraint inherited from the route, ask about a prefix with the chain pinned to its last element. Define `lis(i)` as the length of the longest increasing subsequence that *ends* at index `i`. That answer depends only on `i` and the earlier answers, because the chain ending at `i` must extend some chain ending at a smaller value before it:
 
 1. Keep a `memo` dictionary keyed by the index.
 2. Compute `lis(i)` as `1` plus the best `lis(j)` over `j < i` with
@@ -226,7 +226,7 @@ The memo holds one entry per index, and the recursion stack reaches depth `n` al
 #### Key Insights
 
 - Pinning the chain to its last element is what makes the state a single index:
-  the value comparison `nums[j] < nums[i]` replaces the recursive `prev`
+  the value comparison `nums[j] < nums[i]` replaces the recursive `previous`
   bookkeeping entirely.
 - The final `max` over all indices is not an optimization detail: `lis(n - 1)`
   can be small (a tiny last element) while the longest chain ends in the middle.

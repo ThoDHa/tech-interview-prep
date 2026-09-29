@@ -283,25 +283,25 @@ class Solution:
 The Bottom-Up table stores all `n + 1` entries, yet the loop body only ever reads `dp[i - 1]` and `dp[i - 2]`: everything older is dead weight. The repair keeps just those two values in rolling variables:
 
 1. We observe that at any step, we only need the previous two values in the sequence
-2. Instead of using an array to store all intermediate results, we use the two variables `prev` and `curr`
-3. We iteratively update these variables as we move up the staircase, saving the old `curr` in `temp` before overwriting it so `prev` can advance correctly
+2. Instead of using an array to store all intermediate results, we use the two variables `previous` and `current`
+3. We iteratively update these variables as we move up the staircase, saving the old `current` in `saved_current` before overwriting it so `previous` can advance correctly
 4. This maintains the same logic as the Bottom-Up DP approach but uses O(1) space
 
 #### Walkthrough
 
-Let us run the rolling pair on Example 2, `n = 3`. At the top of each iteration, `prev` and `curr` play the roles of `dp[i - 2]` and `dp[i - 1]`:
+Let us run the rolling pair on Example 2, `n = 3`. At the top of each iteration, `previous` and `current` play the roles of `dp[i - 2]` and `dp[i - 1]`:
 
 ```text
-start    prev = 1, curr = 1                       ways to reach steps 0 and 1
-i = 2    temp = 1; curr = 1 + 1 = 2; prev = 1     (prev, curr) = (1, 2)
-i = 3    temp = 2; curr = 1 + 2 = 3; prev = 2     (prev, curr) = (2, 3)
+start    previous = 1, current = 1                                ways to reach steps 0 and 1
+i = 2    saved_current = 1; current = 1 + 1 = 2; previous = 1     (previous, current) = (1, 2)
+i = 3    saved_current = 2; current = 1 + 2 = 3; previous = 2     (previous, current) = (2, 3)
 ```
 
-After the loop, `curr` holds the count for step `3`. The method returns `3`, matching the expected Output for Example 2.
+After the loop, `current` holds the count for step `3`. The method returns `3`, matching the expected Output for Example 2.
 
 #### Solution
 
-The code is the walkthrough's update loop: save `curr` in `temp`, roll both variables forward.
+The code is the walkthrough's update loop: save `current` in `saved_current`, roll both variables forward.
 
 ```python
 class Solution:
@@ -310,15 +310,15 @@ class Solution:
             return 1
 
         # Initialize first two numbers in the sequence
-        prev, curr = 1, 1
+        previous, current = 1, 1
 
         # Calculate subsequent numbers using only two variables
         for i in range(2, n + 1):
-            temp = curr
-            curr = prev + curr
-            prev = temp
+            saved_current = current
+            current = previous + current
+            previous = saved_current
 
-        return curr
+        return current
 ```
 
 #### Time and Space Complexity Analysis
@@ -643,7 +643,7 @@ class Solution:
 - The Brute Force is the from-scratch starting point; adding a cache to it is exactly what turns its `O(2^n)` time into the memoized `O(n)`
 - Top-Down Memoization reaches the same linear complexity, so prefer it when the recursive framing is clearer, but be mindful of Python's recursion limit for large n (the constraint here caps n at 45, well within bounds)
 - When the recursive framing is the one you want, write it as `@cache` on the Brute Force function rather than as a hand-rolled dictionary: the two have identical complexity, and the decorator removes the three lines where an off-by-one in the check-or-store logic could hide
-- A key implementation detail is the use of a `temp` variable when updating `prev` and `curr`: the old `curr` must be saved before it is overwritten, otherwise `prev` would advance incorrectly and break the Fibonacci recurrence
+- A key implementation detail is the use of a `saved_current` variable when updating `previous` and `current`: the old `current` must be saved before it is overwritten, otherwise `previous` would advance incorrectly and break the Fibonacci recurrence
 - Avoid reaching for the Closed-Form Formula (Binet's formula) in production: although it is `O(1)`, raising the golden ratio to a power relies on floating-point arithmetic that accumulates rounding error and can return an off-by-one result for larger `n`
 - Matrix Exponentiation is the exact-arithmetic answer to that precision problem: it reaches `O(log n)` without ever leaving integers, so prefer it over Binet's formula whenever sub-linear time is genuinely needed; within this problem's `n <= 45` cap, though, the two-variable loop remains the pragmatic winner
 - Remember the base-case guard `if n <= 1: return 1` in all approaches; without it the loop never runs and the rolling-variable initialization silently returns the wrong count for `n = 0`
