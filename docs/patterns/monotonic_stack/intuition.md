@@ -127,9 +127,9 @@ Always store indices in the stack, never values directly:
 stack = []  # stack of indices
 for i, val in enumerate(arr):
     while stack and arr[stack[-1]] < val:
-        idx = stack.pop()
-        # arr[idx] found its next greater at position i
-        # We have both: the VALUE (arr[idx]) and POSITION (idx, i)
+        index = stack.pop()
+        # arr[index] found its next greater at position i
+        # We have both: the VALUE (arr[index]) and POSITION (index, i)
     stack.append(i)
 ```
 
@@ -217,8 +217,8 @@ Elements remaining in the stack at the end have no boundary (or use sentinel).
 ```python
 # Solution 1: Process remaining elements
 while stack:
-    idx = stack.pop()
-    result[idx] = -1  # No next greater exists
+    index = stack.pop()
+    result[index] = -1  # No next greater exists
 
 # Solution 2: Use sentinel value
 arr.append(float('inf'))  # Guarantees everything gets resolved
@@ -275,16 +275,16 @@ def solve(arr):
     for i in range(n):  # or range(2*n) for circular
         # Resolve: pop elements that found their boundary
         while stack and CONDITION(arr[stack[-1]], arr[i]):
-            idx = stack.pop()
-            result[idx] = COMPUTE_ANSWER(idx, i, stack)
+            index = stack.pop()
+            result[index] = COMPUTE_ANSWER(index, i, stack)
 
         # Candidate: current element awaits its boundary
         stack.append(i)
 
     # Handle unresolved (optional, or use sentinel)
     while stack:
-        idx = stack.pop()
-        result[idx] = NO_BOUNDARY_VALUE
+        index = stack.pop()
+        result[index] = NO_BOUNDARY_VALUE
 
     return result
 ```
