@@ -232,7 +232,7 @@ def dfs_iterative(start_r, start_c):
 
 ### Level 1: Basic DFS/BFS (Master First!)
 1. **[LC 200 - Number of Islands](../../problems/number_of_islands.md)**: Classic connected components
-2. **LC 733 - Flood Fill**: Basic DFS on grid
+2. **[LC 733 - Flood Fill](../../problems/flood_fill.md)**: Basic DFS on grid
 
 ### Level 2: BFS for Shortest Path
 3. **LC 994 - Rotting Oranges**: Multi-source BFS (covered in depth in the multi-source BFS guide)
