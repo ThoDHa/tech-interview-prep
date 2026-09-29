@@ -90,6 +90,8 @@ The window EXPANDS freely, CONTRACTS only when forced.
 
 #### Flowchart: Maximize Window
 
+Notation: in the diagrams and traces below, `ans` stands for the answer and `R`/`L` for the right/left pointers, matching the `answer`/`max_length`, `right`, and `left` variables in the python fences.
+
 ```
 ┌─────────────────────────────────────────────────────────────────────────────┐
 │  Example: Longest Substring Without Repeating Characters                    │
