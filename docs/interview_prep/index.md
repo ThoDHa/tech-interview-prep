@@ -40,7 +40,7 @@ Formats vary by company and role. Ask your recruiter what the loop looks like be
 | Phone screen | Common | A 30 to 60 minute call with an engineer in a collaborative editor. Usually no execution, no debugger: talk while you write |
 | Onsite loop | Almost always for full loops | Three to five rounds over a half day: one or two coding rounds, system design for mid and senior roles, and a behavioral round |
 
-The coding rounds are what the problems and pattern guides train for. The [System Design section](../system_design/index.md) covers the design round, [Behavioral Interviews](behavioral.md) covers the people round, [Interview Day and Follow-Up](interview_day.md) covers the loop itself and its tail, and [Mock Interviews](mock_interviews.md) covers the skill of performing under either.
+The coding rounds are what the problems and pattern guides train for. The [System Design section](../system_design/index.md) covers the design round, [Behavioral Interviews](behavioral.md) covers the people round, [Interview Day and Follow-Up](interview_day.md) covers the loop itself and its tail, and [Mock Interviews](mock_interviews.md) covers the skill of performing under either kind.
 
 ## How you are evaluated
 
@@ -65,7 +65,7 @@ The foundations section carries a full [coding interview rubric](../foundations/
   [study plan](study_plan.md) to place yourself in it, and put [mock interviews](mock_interviews.md) on the calendar for the 60% mark.
 - Minutes before an online assessment or a live round: keep the
   [coding cheatsheet](coding_cheatsheet.md) open for the 30-second checklist, the pattern flash-cards, the warm-up set, and the corner-case shotgun.
-- A loop on the calendar: run the [interview day](interview_day.md) checklist the night before, and have the behavioral question bank ready.
+- A loop on the calendar: run the [interview day](interview_day.md) checklist the night before, and have the [behavioral question bank](behavioral.md#the-common-questions-bank) ready.
 - Holding an offer: [Salary Negotiation](salary_negotiation.md) is an evening's read that pays for the whole search.
 
 ---

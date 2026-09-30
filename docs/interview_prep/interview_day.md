@@ -55,4 +55,4 @@ Three rules for the optional middle paragraph: use it to complete an answer you 
 
 ---
 
-*This page adapts the pre-interview checklist and follow-up guidance from the Tech Interview Handbook's [Software Engineering Interview Guide](https://www.techinterviewhandbook.org/software-engineering-interview-guide/) (MIT), and the between-round and company-culture questions of [InterviewThis](https://github.com/Twipped/InterviewThis) (CC0) informed the day-of mindset sections; credit lines per section above. The round-gap protocol and the email template are original to this project.*
+*This page adapts the pre-interview checklist and follow-up guidance from the Tech Interview Handbook's [Software Engineering Interview Guide](https://www.techinterviewhandbook.org/software-engineering-interview-guide/) (MIT), with the day-of mindset informed by the working-conditions questions of [InterviewThis](https://github.com/Twipped/InterviewThis) (CC0). The round-gap protocol and the email template are original to this project.*
