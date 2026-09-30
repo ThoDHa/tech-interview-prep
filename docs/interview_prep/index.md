@@ -6,7 +6,7 @@ If you have never done algorithm interviews before, read this page once, then le
 
 ## The preparation method
 
-Seven steps, in the order you do them. Each maps onto something in this repo.
+Eight steps, in the order you do them. Each maps onto something in this repo.
 
 1. **Pick one language and commit to it.** Use the same language for every
    problem you solve. Switching mid-plan costs more than any language difference ever adds. See [Choosing a Language](language.md).
@@ -70,4 +70,4 @@ The foundations section carries a full [coding interview rubric](../foundations/
 
 ---
 
-*This page adapts the preparation method and interview-format overview from the Tech Interview Handbook's [Coding Interview Prep Guide](https://www.techinterviewhandbook.org/coding-interview-prep/) and [Software Engineering Interview Guide](https://www.techinterviewhandbook.org/software-engineering-interview-guide/). The mapping onto this repository's foundations, pattern guides, and practice workspace is original to this project, as are the interview-day and negotiation steps introduced with the [Interview Day and Follow-Up](interview_day.md) and [Salary Negotiation](salary_negotiation.md) pages.*
+*This page adapts the preparation method and interview-format overview from the Tech Interview Handbook's [Coding Interview Prep Guide](https://www.techinterviewhandbook.org/coding-interview-prep/) and [Software Engineering Interview Guide](https://www.techinterviewhandbook.org/software-engineering-interview-guide/). The mapping onto this repository's foundations, pattern guides, and practice workspace is original to this project.*

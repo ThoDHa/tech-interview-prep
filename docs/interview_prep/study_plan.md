@@ -23,7 +23,7 @@ The totals above assume the coding track dominates, which is true at every level
 
 | Level | Realistic total | Where the hours go | Schedule adjustment |
 |-------|-----------------|--------------------|---------------------|
-| Junior / new grad | 60 to 80 hours | Nearly all coding: the full Grind 75 track, the [Foundations](../foundations/index.md) read before problem one, light [behavioral](behavioral.md) prep (about three hours) | Run the 8-week table as printed; behavioral stories come from internships, course projects, and side projects |
+| Junior / new grad | 65 to 80 hours | Nearly all coding: the full Grind 75 track, the [Foundations](../foundations/index.md) read before problem one, light [behavioral](behavioral.md) prep (about three hours) | Run the 8-week table as printed; behavioral stories come from internships, course projects, and side projects |
 | Mid-level | 80 to 100 hours | The full coding track plus [System Design](../system_design/index.md) from week 5, at roughly a 4:1 coding-to-design split | Keep 8 weeks only if you can give 10 or more hours weekly; otherwise stretch to 10 rather than cut the design track |
 | Senior and above | 100 to 120 hours | Coding drops to about half the hours; system design (including the [case studies](../system_design/case_studies/index.md)) and leadership-heavy behavioral stories take the other half | Stretch to 10 or 12 weeks; add one design case study per week from week 4 and rehearse influence stories, not just teamwork ones |
 

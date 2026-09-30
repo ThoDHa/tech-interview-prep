@@ -14,7 +14,7 @@ A software offer is a stack of parts that behave very differently, and "which pa
 | Annual bonus | Target percentage of base | Usually fixed by level; worth knowing, rarely worth fighting |
 | Everything else | Remote status, start date, level, team, learning budget | Frequently worth more than cash, and cheaper for the company to give |
 
-Two structural facts drive the whole page: base salary compounds through every year and every future raise, while a signing bonus is one-time money; and equity is the easiest thing for the company to grant because it burns no cash and aligns you with the company's outcome. Negotiate the stack, not a single number.
+Two structural facts drive the whole page: base salary compounds through every future raise while a signing bonus is one-time money, and equity is the easiest lever for the company to grant because it burns no cash and aligns you with its outcome. Negotiate the stack, not a single number.
 
 ## The ten rules
 
@@ -68,4 +68,4 @@ Negotiation preparation is an evening, not a track: read this page once while yo
 
 ---
 
-*This page adapts the negotiation rules, scripts, and compensation framing from Haseeb Qureshi's [job offer negotiation essays](https://haseebq.com/my-ten-rules-for-negotiating-a-job-offer/) and the Tech Interview Handbook's salary negotiation section ([guide](https://www.techinterviewhandbook.org/negotiation/), [rules](https://www.techinterviewhandbook.org/negotiation-rules/), [understanding compensation](https://www.techinterviewhandbook.org/understanding-compensation/)), all MIT-licensed, with credit lines per section above. The package table, the four-step offer evaluation, and the tie-ins to this repository's behavioral and study-plan pages are original to this project.*
+*This page adapts the negotiation rules, scripts, and compensation framing from Haseeb Qureshi's [job offer negotiation essays](https://haseebq.com/my-ten-rules-for-negotiating-a-job-offer/) and from the Tech Interview Handbook's MIT-licensed salary negotiation section ([guide](https://www.techinterviewhandbook.org/negotiation/), [rules](https://www.techinterviewhandbook.org/negotiation-rules/), [understanding compensation](https://www.techinterviewhandbook.org/understanding-compensation/)), with credit lines per section above. The package table, the four-step offer evaluation, and the tie-ins to this repository's behavioral and study-plan pages are original to this project.*
