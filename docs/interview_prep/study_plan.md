@@ -17,6 +17,20 @@ As rough anchors: about 30 hours of focused work is the bare minimum to get thro
 
 **Estimate conservatively.** Plan for your worst realistic week, not your best one. A plan you keep beats an ambitious one you abandon in week three; if the schedule below feels tight, stretch it to ten or twelve weeks rather than cramming. Burnout late in the plan costs more than a slower start.
 
+## How the budget moves with seniority
+
+The totals above assume the coding track dominates, which is true at every level but to different degrees. What the loop actually tests shifts with seniority, and the budget should shift with it:
+
+| Level | Realistic total | Where the hours go | Schedule adjustment |
+|-------|-----------------|--------------------|---------------------|
+| Junior / new grad | 60 to 80 hours | Nearly all coding: the full Grind 75 track, the [Foundations](../foundations/index.md) read twice, light [behavioral](behavioral.md) prep (about three hours) | Run the 8-week table as printed; behavioral stories come from internships, course projects, and side projects |
+| Mid-level | 80 to 100 hours | The full coding track plus [System Design](../system_design/index.md) from week 5, at roughly a 4:1 coding-to-design split | Keep 8 weeks only if you can give 10 or more hours weekly; otherwise stretch to 10 rather than cut the design track |
+| Senior and above | 100 to 120 hours | Coding drops to about half the hours; system design (including the [case studies](../system_design/case_studies/index.md)) and leadership-heavy behavioral stories take the other half | Stretch to 10 or 12 weeks; add one design case study per week from week 4 and rehearse influence stories, not just teamwork ones |
+
+The pattern behind the table: the more senior the role, the more the loop scores judgment over recall. Junior loops stay inside data structures and algorithms; senior loops spend real time on design tradeoffs and on behavioral rounds that probe influence, mentoring, and cross-team leadership rather than teamwork basics. The 8-week schedule below stays the backbone at every level; seniority changes the mix around it, not the shape.
+
+*The seniority adjustments follow the Tech Interview Handbook's guidance on [engineering levels](https://www.techinterviewhandbook.org/engineering-levels/) and [behavioral interviews for senior candidates](https://www.techinterviewhandbook.org/behavioral-interview-senior-candidates/); the hour totals and the mix split are derived from this repository's Time column and track structure.*
+
 ## Three ways to work through the bank
 
 | Style | Shape | Choose it when |
