@@ -1,6 +1,6 @@
 # Amazon OA Problems
 
-Amazon-tagged coding problems from the [Tech-OA-Interview-Questions](https://github.com/perixtar/Tech-OA-Interview-Questions) bank (statement pages on fastprep.io), most recently updated first. Practice stubs live under [`practice/amazon_oa/`](https://github.com/ThoDHa/algo-oa-prep/tree/main/practice/amazon_oa/).
+Amazon-tagged coding problems from the [Tech-OA-Interview-Questions](https://github.com/perixtar/Tech-OA-Interview-Questions) bank (statement pages on fastprep.io), most recently updated first. Practice stubs live under [`practice/amazon_oa/`](https://github.com/ThoDHa/tech-interview-prep/tree/main/practice/amazon_oa/).
 
 | Updated | Problem | Companies |
 |---------|---------|-----------|

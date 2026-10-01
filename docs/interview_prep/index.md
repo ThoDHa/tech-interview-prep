@@ -15,7 +15,7 @@ Eight steps, in the order you do them. Each maps onto something in this repo.
 3. **Learn the prerequisites, then study and practice each topic together.**
    Read the [Foundations](../foundations/index.md) first (about an hour), then for each new topic: read the [pattern guide](../patterns/index.md), solve the problems that use it, and only then move on.
 4. **Work the problems in study order.** For each one: read the problem page,
-   open its linked pattern guide, attempt it yourself in the [`practice/`](https://github.com/ThoDHa/algo-oa-prep/tree/main/practice) workspace, then compare with the solution ladder, baseline first.
+   open its linked pattern guide, attempt it yourself in the [`practice/`](https://github.com/ThoDHa/tech-interview-prep/tree/main/practice) workspace, then compare with the solution ladder, baseline first.
 5. **Review what fades.** Rate every solve with the practice tracker
    (`progress.py rate`) and clear the `due` review queue weekly. Spaced repetition is what turns "I did that problem once" into a skill.
 6. **Prepare the non-coding rounds.** A 90-second self-introduction, a handful

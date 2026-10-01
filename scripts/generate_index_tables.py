@@ -1047,7 +1047,7 @@ def render_amazon_section(
         " The full bank index with companies lives at"
         " [problems/amazon_oa/index.md](amazon_oa/index.md);"
         " practice stubs live under the"
-        " [`practice/amazon_oa/`](https://github.com/ThoDHa/algo-oa-prep/tree/main/practice/amazon_oa)"
+        " [`practice/amazon_oa/`](https://github.com/ThoDHa/tech-interview-prep/tree/main/practice/amazon_oa)"
         " workspace. Time carries difficulty-based estimates"
         " (Easy 15 / Medium 25 / Hard 40 minutes, a dash where the difficulty"
         " is unknown), from the committed difficulty overrides where present"

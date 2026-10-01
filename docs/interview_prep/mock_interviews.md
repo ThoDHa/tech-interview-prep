@@ -39,7 +39,7 @@ This repository is built for this. The `main` branch is spoiler-free by design, 
    branch), so they know the expected approaches and can judge the ladder rather than just the final answer.
 3. **Budget it like a real round:** five minutes of introductions, 30 to 40
    minutes on the problem (use the problem's Time column as the target), five to ten minutes for the candidate's questions.
-4. **The candidate works in the [`practice/`](https://github.com/ThoDHa/algo-oa-prep/tree/main/practice)
+4. **The candidate works in the [`practice/`](https://github.com/ThoDHa/tech-interview-prep/tree/main/practice)
    workspace** and narrates throughout. `-m simple` after the first working pass is the "Run" button; `-m full` before declaring done is "Submit".
 5. **Debrief for ten minutes** while it is fresh (below).
 
