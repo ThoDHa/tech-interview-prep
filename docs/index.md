@@ -1,6 +1,6 @@
-# Algo OA Prep Solutions
+# Tech Interview Prep Solutions
 
-A study guide spanning three curated problem banks: the [Grind 75](https://www.techinterviewhandbook.org/grind75) and the [NeetCode 150](https://neetcode.io/practice/practice/neetcode150) LeetCode lists, merged into one unified [problem catalog](problems/index.md), and the [Amazon OA](problems/amazon_oa/index.md) bank. Problems on both LeetCode tracks appear once, credited to each. Each problem page covers the statement and examples, with constraints where available. The [pattern intuition guides](patterns/index.md) explain the mental models behind the recurring algorithm patterns, and the [`practice/`](https://github.com/ThoDHa/algo-oa-prep/tree/main/practice) workspace lets you implement and test each solution yourself.
+A study guide spanning three curated problem banks: the [Grind 75](https://www.techinterviewhandbook.org/grind75) and the [NeetCode 150](https://neetcode.io/practice/practice/neetcode150) LeetCode lists, merged into one unified [problem catalog](problems/index.md), and the [Amazon OA](problems/amazon_oa/index.md) bank. Problems on both LeetCode tracks appear once, credited to each. Each problem page covers the statement and examples, with constraints where available. The [pattern intuition guides](patterns/index.md) explain the mental models behind the recurring algorithm patterns, and the [`practice/`](https://github.com/ThoDHa/tech-interview-prep/tree/main/practice) workspace lets you implement and test each solution yourself.
 
 !!! tip "New to algorithms or interviews?"
 
@@ -14,4 +14,4 @@ The [pattern intuition guides](patterns/index.md) explain the *why* behind each 
 
 ## Practice Workspace
 
-The [`practice/`](https://github.com/ThoDHa/algo-oa-prep/tree/main/practice) directory is a `pytest` workspace for solving the problems yourself. Each problem has a `solution.py` to implement plus two test sets that mirror LeetCode's Run (the examples) and Submit (a full corner-case gauntlet). See its [README](https://github.com/ThoDHa/algo-oa-prep/blob/main/practice/README.md) for setup and the practice loop.
+The [`practice/`](https://github.com/ThoDHa/tech-interview-prep/tree/main/practice) directory is a `pytest` workspace for solving the problems yourself. Each problem has a `solution.py` to implement plus two test sets that mirror LeetCode's Run (the examples) and Submit (a full corner-case gauntlet). See its [README](https://github.com/ThoDHa/tech-interview-prep/blob/main/practice/README.md) for setup and the practice loop.

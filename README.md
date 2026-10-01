@@ -1,8 +1,8 @@
-# Algo OA Prep
+# Tech Interview Prep
 
 This repository is a structured study guide for algorithmic problem solving built on three curated problem banks: the [Grind 75](https://www.techinterviewhandbook.org/grind75) list of LeetCode questions from the [Tech Interview Handbook](https://www.techinterviewhandbook.org/) team, the [NeetCode 150](https://neetcode.io/practice/practice/neetcode150) track from the [NeetCode](https://neetcode.io/) team, and an [Amazon OA](docs/problems/amazon_oa/index.md) bank collected from the [Tech-OA-Interview-Questions](https://github.com/perixtar/Tech-OA-Interview-Questions) repository. All credit for the curated problem lists goes to them for their excellent work in creating these focused interview preparation resources.
 
-**Read it as a website:** the full guide, including complete solution write-ups for every Grind 75 problem (write-ups for the newer banks are in progress), is published at [thodha.github.io/algo-oa-prep](https://thodha.github.io/algo-oa-prep/).
+**Read it as a website:** the full guide, including complete solution write-ups for every Grind 75 problem (write-ups for the newer banks are in progress), is published at [thodha.github.io/tech-interview-prep](https://thodha.github.io/tech-interview-prep/).
 
 ## The three problem banks
 

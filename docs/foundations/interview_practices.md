@@ -92,7 +92,7 @@ The round is not over when the code compiles. This is [step 7 of the method](how
 - Restate the final time and space complexity, and name what you would
   improve with more time.
 
-**Don't:** announce "done" the moment the last line is written, and don't argue when the interviewer spots a bug. "Good catch" plus a fast fix is the behavior being graded. The `full` marker in the [practice workspace](https://github.com/ThoDHa/algo-oa-prep/blob/main/practice/README.md) runs exactly this kind of corner-case gauntlet on every problem in this guide.
+**Don't:** announce "done" the moment the last line is written, and don't argue when the interviewer spots a bug. "Good catch" plus a fast fix is the behavior being graded. The `full` marker in the [practice workspace](https://github.com/ThoDHa/tech-interview-prep/blob/main/practice/README.md) runs exactly this kind of corner-case gauntlet on every problem in this guide.
 
 ### 6. Wrap up
 

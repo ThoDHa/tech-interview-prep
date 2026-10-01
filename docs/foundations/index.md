@@ -31,7 +31,7 @@ The section continues past these four: once you have worked your first batch of 
 3. For each problem, follow this loop:
    - Read the problem page: the statement, examples, and constraints.
    - Open the linked **Pattern** guide. This is where the *why* lives.
-   - Try to solve it yourself in the [`practice/`](https://github.com/ThoDHa/algo-oa-prep/tree/main/practice)
+   - Try to solve it yourself in the [`practice/`](https://github.com/ThoDHa/tech-interview-prep/tree/main/practice)
      workspace before reading the solutions.
    - Read the solutions, starting with the first one listed. It is always the
      most direct baseline you could have reached yourself, usually a brute force, even when the page names it something more specific (Linear Scan, Simulation, Stack). Then work down the ladder to the faster approaches.
@@ -54,16 +54,16 @@ The pass signal to aim at is not "I have seen every problem once". It is rough b
 
 ## Practicing in this repo
 
-The [`practice/`](https://github.com/ThoDHa/algo-oa-prep/tree/main/practice) workspace is a ready-made pytest harness. One-time setup: `cd practice`, then `uv sync`. After that, for any problem:
+The [`practice/`](https://github.com/ThoDHa/tech-interview-prep/tree/main/practice) workspace is a ready-made pytest harness. One-time setup: `cd practice`, then `uv sync`. After that, for any problem:
 
 - `uv run pytest <slug>/ -m simple` is the equivalent of LeetCode's **Run**:
   just the example cases, for quick feedback while you iterate.
 - `uv run pytest <slug>/ -m full` is the equivalent of **Submit**: the
   examples plus a comprehensive corner-case gauntlet.
 
-An unsolved stub raises `NotSolved`, so its tests **skip** rather than fail. A fresh checkout shows everything skipped, which is expected. Each `solution.py` also has a `__main__` debug playground: set `CASE` to a case id near the bottom of the file, then run the file directly (`uv run python <slug>/solution.py`) to print the input, expected, and actual values. The [practice README](https://github.com/ThoDHa/algo-oa-prep/blob/main/practice/README.md) walks through the full workflow.
+An unsolved stub raises `NotSolved`, so its tests **skip** rather than fail. A fresh checkout shows everything skipped, which is expected. Each `solution.py` also has a `__main__` debug playground: set `CASE` to a case id near the bottom of the file, then run the file directly (`uv run python <slug>/solution.py`) to print the input, expected, and actual values. The [practice README](https://github.com/ThoDHa/tech-interview-prep/blob/main/practice/README.md) walks through the full workflow.
 
-The workspace also includes a small progress tracker, `progress.py`: `scan` records which problems your tests currently pass, `rate` captures how each solve felt, and `due` gives you a spaced-repetition review queue so earlier problems come back before they fade. The [practice README](https://github.com/ThoDHa/algo-oa-prep/blob/main/practice/README.md) documents the commands and intervals.
+The workspace also includes a small progress tracker, `progress.py`: `scan` records which problems your tests currently pass, `rate` captures how each solve felt, and `due` gives you a spaced-repetition review queue so earlier problems come back before they fade. The [practice README](https://github.com/ThoDHa/tech-interview-prep/blob/main/practice/README.md) documents the commands and intervals.
 
 The point is not to finish fast. It is to build the mental models that make the next problem easier than the last.
 

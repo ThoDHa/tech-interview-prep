@@ -1,8 +1,8 @@
-site_name: Algo OA Prep Solutions
-site_description: Solution write-ups for the Grind 75, NeetCode 150, and Amazon OA problem banks
-site_url: https://thodha.github.io/algo-oa-prep/
-repo_url: https://github.com/ThoDHa/algo-oa-prep
-repo_name: ThoDHa/algo-oa-prep
+site_name: Tech Interview Prep Solutions
+site_description: Solution write-ups for the Grind 75, NeetCode 150, and Amazon OA problem banks, plus pattern guides, interview prep, and system design material
+site_url: https://thodha.github.io/tech-interview-prep/
+repo_url: https://github.com/ThoDHa/tech-interview-prep
+repo_name: ThoDHa/tech-interview-prep
 edit_uri: edit/solutions/docs/
 docs_dir: docs
 exclude_docs: |
