@@ -32,7 +32,7 @@ Can you turn the agreed approach into code that actually runs?
 
 **Advanced signals:** compares implementation approaches (not just algorithm approaches); strong command of the language's constructs.
 
-**Trained by:** [step 7 of the method](how_to_approach.md#7-code-it-then-test-the-edges), and above all the [`practice/`](https://github.com/ThoDHa/algo-oa-prep/blob/main/practice/README.md) workspace: writing and running real code for every problem is what turns "looks right" into "is right". The pattern guides' solution write-ups model the clean version you are aiming at.
+**Trained by:** [step 7 of the method](how_to_approach.md#7-code-it-then-test-the-edges), and above all the [`practice/`](https://github.com/ThoDHa/tech-interview-prep/blob/main/practice/README.md) workspace: writing and running real code for every problem is what turns "looks right" into "is right". The pattern guides' solution write-ups model the clean version you are aiming at.
 
 ### Testing
 

@@ -11,3 +11,6 @@ practice/.progress.json
 
 # Parallel unit worktrees (see .worktrees/)
 .worktrees/
+
+# Browser session scratch (see .playwright-mcp/)
+.playwright-mcp/

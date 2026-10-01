@@ -65,7 +65,7 @@ WRITEUP_LINK_TEMPLATE = "../../../docs/problems/amazon_oa/{slug}.md"
 # Site-relative links cannot reach the practice/ tree outside the mkdocs
 # docs_dir; the published site gets the absolute repo URL instead.
 PRACTICE_INDEX_URL = (
-    "https://github.com/ThoDHa/algo-oa-prep/tree/main/practice/amazon_oa/"
+    "https://github.com/ThoDHa/tech-interview-prep/tree/main/practice/amazon_oa/"
 )
 
 BANK_ROW_PATTERN = re.compile(

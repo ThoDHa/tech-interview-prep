@@ -190,7 +190,7 @@ Rows marked · Amazon OA also appear in the [Amazon OA bank](amazon_oa/index.md)
 <!-- amazon-oa:start -->
 ## Amazon OA Problems
 
-The Amazon OA coding bank, separate from the LeetCode tables above: 350 Amazon-tagged online-assessment problems, most recently updated first. The problems come from [perixtar/Tech-OA-Interview-Questions](https://github.com/perixtar/Tech-OA-Interview-Questions) with statement pages on [FastPrep](https://www.fastprep.io). The full bank index with companies lives at [problems/amazon_oa/index.md](amazon_oa/index.md); practice stubs live under the [`practice/amazon_oa/`](https://github.com/ThoDHa/algo-oa-prep/tree/main/practice/amazon_oa) workspace. Time carries difficulty-based estimates (Easy 15 / Medium 25 / Hard 40 minutes, a dash where the difficulty is unknown), from the committed difficulty overrides where present and each write-up's difficulty header otherwise.
+The Amazon OA coding bank, separate from the LeetCode tables above: 350 Amazon-tagged online-assessment problems, most recently updated first. The problems come from [perixtar/Tech-OA-Interview-Questions](https://github.com/perixtar/Tech-OA-Interview-Questions) with statement pages on [FastPrep](https://www.fastprep.io). The full bank index with companies lives at [problems/amazon_oa/index.md](amazon_oa/index.md); practice stubs live under the [`practice/amazon_oa/`](https://github.com/ThoDHa/tech-interview-prep/tree/main/practice/amazon_oa) workspace. Time carries difficulty-based estimates (Easy 15 / Medium 25 / Hard 40 minutes, a dash where the difficulty is unknown), from the committed difficulty overrides where present and each write-up's difficulty header otherwise.
 
 | Problem | Updated | Practice at | Time |
 |---|---------|---------|------|
@@ -558,4 +558,4 @@ The three problem banks are curated elsewhere; this site adds the write-ups, pat
 
 ## Study Guide and Practice
 
-The [home page](../index.md) carries the study-guide front door: the [pattern intuition guides](../patterns/index.md) explain the *why* behind each recurring algorithm pattern. The [`practice/`](https://github.com/ThoDHa/algo-oa-prep/tree/main/practice) directory is a `pytest` workspace for solving the problems yourself; see its [README](https://github.com/ThoDHa/algo-oa-prep/blob/main/practice/README.md) for setup and the practice loop.
+The [home page](../index.md) carries the study-guide front door: the [pattern intuition guides](../patterns/index.md) explain the *why* behind each recurring algorithm pattern. The [`practice/`](https://github.com/ThoDHa/tech-interview-prep/tree/main/practice) directory is a `pytest` workspace for solving the problems yourself; see its [README](https://github.com/ThoDHa/tech-interview-prep/blob/main/practice/README.md) for setup and the practice loop.
