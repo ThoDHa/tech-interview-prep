@@ -2,6 +2,8 @@
 
 **Hard** | **NN minutes** | **Dynamic Programming, String**
 
+Special thanks: A special thank you to a lovely, amazing fren who shared that this question appeared again on September 17, 2026! 💜
+
 Developers want to merge two source-control branches into one unified branch while preserving the relative order of commits from each branch.
 
 Each branch is represented by a lowercase string. Each character represents a commit priority, where a lower alphabetical character has higher priority.

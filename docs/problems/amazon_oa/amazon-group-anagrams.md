@@ -4,7 +4,7 @@
 
 Group the strings in strs so that two strings appear in the same group exactly when they are anagrams.
 
-For deterministic output, sort the strings inside each group and then sort the groups lexicographically by their first string.
+For this exercise, assume every string contains only lowercase English letters. Do not sort the characters of a string to determine its group. Build a fixed 26-entry character-count vector and use that vector as the grouping key.
 
 ## Examples
 
@@ -13,12 +13,6 @@ For deterministic output, sort the strings inside each group and then sort the g
 **Input:** `strs = ["eat","tea","tan","ate","nat","bat"]`
 
 **Output:** `[["ate","eat","tea"],["bat"],["nat","tan"]]`
-
-### Example 2
-
-**Input:** `strs = [""]`
-
-**Output:** `[[""]]`
 
 ## Constraints
 

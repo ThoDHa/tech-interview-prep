@@ -6,6 +6,8 @@ You are given currency conversion rates. Each row contains a source currency, a 
 
 A conversion may use multiple rates. A listed rate may also be used in reverse by taking its reciprocal.
 
+Given a query [from, to], return the conversion rate from from to to, rounded and formatted with exactly two digits after the decimal point. Every judged query is connected by the supplied rates.
+
 ## Examples
 
 ### Example 1
@@ -15,6 +17,14 @@ A conversion may use multiple rates. A listed rate may also be used in reverse b
 **Output:** `"1.88"`
 
 **Explanation:** Use the reverse of JPY -> GBP, then the reverse of USD -> JPY, then USD -> AUD: (1 / 0.0070) * (1 / 110) * 1.45 = 1.883116.... Rounded to two decimal places, the result is 1.88.
+
+### Example 2
+
+**Input:** `rates = [["USD","CAD","1.30"],["CAD","EUR","0.70"]]`, `query = ["USD","EUR"]`
+
+**Output:** `"0.91"`
+
+**Explanation:** One USD is 1.30 CAD, and one CAD is 0.70 EUR, so the rate is 1.30 * 0.70 = 0.91.
 
 ## Constraints
 

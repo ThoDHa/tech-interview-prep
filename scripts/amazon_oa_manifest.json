@@ -1,5 +1,405 @@
 [
   {
+    "slug": "amazon-concatenated-words-variant",
+    "title": "Concatenated Words",
+    "url": "https://www.fastprep.io/problems/amazon-concatenated-words-variant",
+    "companies": [
+      "Amazon"
+    ],
+    "updated": "2026-10-07",
+    "parse_status": "parsed-with-cases"
+  },
+  {
+    "slug": "amazon-longest-increasing-subsequence-variant",
+    "title": "Longest Increasing Subsequence",
+    "url": "https://www.fastprep.io/problems/amazon-longest-increasing-subsequence-variant",
+    "companies": [
+      "Amazon"
+    ],
+    "updated": "2026-10-07",
+    "parse_status": "parsed-with-cases"
+  },
+  {
+    "slug": "amazon-minimum-moves-to-capture-king",
+    "title": "Minimum Moves to Capture the King",
+    "url": "https://www.fastprep.io/problems/amazon-minimum-moves-to-capture-king",
+    "companies": [
+      "Amazon"
+    ],
+    "updated": "2026-10-07",
+    "parse_status": "parsed-with-cases"
+  },
+  {
+    "slug": "amazon-squirrel-nut-collection-shortest-path",
+    "title": "Squirrel Nut Collection Shortest Path",
+    "url": "https://www.fastprep.io/problems/amazon-squirrel-nut-collection-shortest-path",
+    "companies": [
+      "Amazon"
+    ],
+    "updated": "2026-10-07",
+    "parse_status": "parsed-with-cases"
+  },
+  {
+    "slug": "amazon-center-a-package-benefit",
+    "title": "Maximize Center A Package Benefit",
+    "url": "https://www.fastprep.io/problems/amazon-center-a-package-benefit",
+    "companies": [
+      "Amazon"
+    ],
+    "updated": "2026-10-03",
+    "parse_status": "parsed-with-cases"
+  },
+  {
+    "slug": "amazon-max-area-of-island",
+    "title": "Max Area of Island",
+    "url": "https://www.fastprep.io/problems/amazon-max-area-of-island",
+    "companies": [
+      "Amazon"
+    ],
+    "updated": "2026-10-03",
+    "parse_status": "parsed-with-cases"
+  },
+  {
+    "slug": "amazon-maximum-rating-threshold-count",
+    "title": "Maximum Rating Threshold Count",
+    "url": "https://www.fastprep.io/problems/amazon-maximum-rating-threshold-count",
+    "companies": [
+      "Amazon"
+    ],
+    "updated": "2026-10-03",
+    "parse_status": "parsed-with-cases"
+  },
+  {
+    "slug": "amazon-number-of-islands",
+    "title": "Number of Islands",
+    "url": "https://www.fastprep.io/problems/amazon-number-of-islands",
+    "companies": [
+      "Amazon"
+    ],
+    "updated": "2026-10-03",
+    "parse_status": "parsed-with-cases"
+  },
+  {
+    "slug": "amazon-streaming-island-count",
+    "title": "Count Islands from Streaming Rows",
+    "url": "https://www.fastprep.io/problems/amazon-streaming-island-count",
+    "companies": [
+      "Amazon"
+    ],
+    "updated": "2026-10-03",
+    "parse_status": "parsed-with-cases"
+  },
+  {
+    "slug": "amazon-top-k-frequent-elements",
+    "title": "Top K Frequent Elements",
+    "url": "https://www.fastprep.io/problems/amazon-top-k-frequent-elements",
+    "companies": [
+      "Amazon"
+    ],
+    "updated": "2026-10-03",
+    "parse_status": "parsed-with-cases"
+  },
+  {
+    "slug": "amazon-minimum-merge-conflicts",
+    "title": "Minimum Merge Conflicts",
+    "url": "https://www.fastprep.io/problems/amazon-minimum-merge-conflicts",
+    "companies": [
+      "Amazon"
+    ],
+    "updated": "2026-10-01",
+    "parse_status": "parsed-with-cases"
+  },
+  {
+    "slug": "amazon-optimize-package-order-one-window",
+    "title": "Optimize Package Order by Sorting One Window",
+    "url": "https://www.fastprep.io/problems/amazon-optimize-package-order-one-window",
+    "companies": [
+      "Amazon"
+    ],
+    "updated": "2026-09-30",
+    "parse_status": "parsed-with-cases"
+  },
+  {
+    "slug": "amazon-binary-strings-bounded-subset",
+    "title": "Largest Binary-String Subset Within Bit Budgets",
+    "url": "https://www.fastprep.io/problems/amazon-binary-strings-bounded-subset",
+    "companies": [
+      "Amazon"
+    ],
+    "updated": "2026-09-29",
+    "parse_status": "parsed-with-cases"
+  },
+  {
+    "slug": "amazon-bst-lowest-common-ancestor",
+    "title": "Lowest Common Ancestor in an Inserted BST",
+    "url": "https://www.fastprep.io/problems/amazon-bst-lowest-common-ancestor",
+    "companies": [
+      "Amazon"
+    ],
+    "updated": "2026-09-29",
+    "parse_status": "parsed-with-cases"
+  },
+  {
+    "slug": "amazon-maximize-k-element-and-with-increment-budget",
+    "title": "Maximize K-Element AND with an Increment Budget",
+    "url": "https://www.fastprep.io/problems/amazon-maximize-k-element-and-with-increment-budget",
+    "companies": [
+      "Amazon"
+    ],
+    "updated": "2026-09-29",
+    "parse_status": "parsed-with-cases"
+  },
+  {
+    "slug": "amazon-evaluate-division",
+    "title": "Evaluate Division",
+    "url": "https://www.fastprep.io/problems/amazon-evaluate-division",
+    "companies": [
+      "Amazon"
+    ],
+    "updated": "2026-09-28",
+    "parse_status": "parsed-with-cases"
+  },
+  {
+    "slug": "amazon-reversi-move-simulation",
+    "title": "Apply a Reversi Move",
+    "url": "https://www.fastprep.io/problems/amazon-reversi-move-simulation",
+    "companies": [
+      "Amazon"
+    ],
+    "updated": "2026-09-28",
+    "parse_status": "parsed-with-cases"
+  },
+  {
+    "slug": "amazon-streaming-content-label-window",
+    "title": "Longest Content Window with Bounded Labels",
+    "url": "https://www.fastprep.io/problems/amazon-streaming-content-label-window",
+    "companies": [
+      "Amazon"
+    ],
+    "updated": "2026-09-28",
+    "parse_status": "parsed-with-cases"
+  },
+  {
+    "slug": "amazon-best-time-to-buy-and-sell-stock-iii",
+    "title": "Maximum Stock Profit with At Most Two Transactions",
+    "url": "https://www.fastprep.io/problems/amazon-best-time-to-buy-and-sell-stock-iii",
+    "companies": [
+      "Amazon"
+    ],
+    "updated": "2026-09-27",
+    "parse_status": "parsed-with-cases"
+  },
+  {
+    "slug": "amazon-currency-conversion-rate",
+    "title": "Currency Conversion Rate",
+    "url": "https://www.fastprep.io/problems/amazon-currency-conversion-rate",
+    "companies": [
+      "Amazon"
+    ],
+    "updated": "2026-09-27",
+    "parse_status": "parsed-with-cases"
+  },
+  {
+    "slug": "amazon-house-robber",
+    "title": "House Robber",
+    "url": "https://www.fastprep.io/problems/amazon-house-robber",
+    "companies": [
+      "Amazon"
+    ],
+    "updated": "2026-09-27",
+    "parse_status": "parsed-with-cases"
+  },
+  {
+    "slug": "amazon-lisp-expression-parser",
+    "title": "Lisp Expression Parser",
+    "url": "https://www.fastprep.io/problems/amazon-lisp-expression-parser",
+    "companies": [
+      "Amazon"
+    ],
+    "updated": "2026-09-27",
+    "parse_status": "parsed-with-cases"
+  },
+  {
+    "slug": "amazon-maximize-answer-key-confusion",
+    "title": "Maximize Consecutive Equal Answers",
+    "url": "https://www.fastprep.io/problems/amazon-maximize-answer-key-confusion",
+    "companies": [
+      "Amazon"
+    ],
+    "updated": "2026-09-27",
+    "parse_status": "parsed-with-cases"
+  },
+  {
+    "slug": "amazon-most-frequent-name",
+    "title": "Most Frequent Name",
+    "url": "https://www.fastprep.io/problems/amazon-most-frequent-name",
+    "companies": [
+      "Amazon"
+    ],
+    "updated": "2026-09-27",
+    "parse_status": "parsed-with-cases"
+  },
+  {
+    "slug": "amazon-rotting-oranges-variation",
+    "title": "Minimum Time to Spread Through a Grid",
+    "url": "https://www.fastprep.io/problems/amazon-rotting-oranges-variation",
+    "companies": [
+      "Amazon"
+    ],
+    "updated": "2026-09-27",
+    "parse_status": "parsed-with-cases"
+  },
+  {
+    "slug": "amazon-group-relative-policy-advantages",
+    "title": "Group-Relative Policy Advantages",
+    "url": "https://www.fastprep.io/problems/amazon-group-relative-policy-advantages",
+    "companies": [
+      "Amazon"
+    ],
+    "updated": "2026-09-25",
+    "parse_status": "parsed-with-cases"
+  },
+  {
+    "slug": "amazon-grouped-query-attention-with-kv-cache",
+    "title": "Grouped-Query Attention with a KV Cache",
+    "url": "https://www.fastprep.io/problems/amazon-grouped-query-attention-with-kv-cache",
+    "companies": [
+      "Amazon"
+    ],
+    "updated": "2026-09-25",
+    "parse_status": "parsed-with-cases"
+  },
+  {
+    "slug": "amazon-capacity-to-ship-packages-within-d-days",
+    "title": "Capacity To Ship Packages Within D Days",
+    "url": "https://www.fastprep.io/problems/amazon-capacity-to-ship-packages-within-d-days",
+    "companies": [
+      "Amazon"
+    ],
+    "updated": "2026-09-24",
+    "parse_status": "parsed-with-cases"
+  },
+  {
+    "slug": "amazon-get-min-amount",
+    "title": "Get Minimum Amount",
+    "url": "https://www.fastprep.io/problems/amazon-get-min-amount",
+    "companies": [
+      "Amazon"
+    ],
+    "updated": "2026-09-24",
+    "parse_status": "parsed-with-cases"
+  },
+  {
+    "slug": "amazon-roads-and-hospitals-minimum-cost",
+    "title": "Minimum Cost for Roads and Hospitals",
+    "url": "https://www.fastprep.io/problems/amazon-roads-and-hospitals-minimum-cost",
+    "companies": [
+      "Amazon"
+    ],
+    "updated": "2026-09-24",
+    "parse_status": "parsed-with-cases"
+  },
+  {
+    "slug": "amazon-select-k-paired-array-score",
+    "title": "Select K Paired Indices for Maximum Score",
+    "url": "https://www.fastprep.io/problems/amazon-select-k-paired-array-score",
+    "companies": [
+      "Amazon"
+    ],
+    "updated": "2026-09-24",
+    "parse_status": "parsed-with-cases"
+  },
+  {
+    "slug": "amazon-environment-variable-substitution",
+    "title": "Environment Variable Store and Substitution",
+    "url": "https://www.fastprep.io/problems/amazon-environment-variable-substitution",
+    "companies": [
+      "Amazon"
+    ],
+    "updated": "2026-09-23",
+    "parse_status": "parsed-empty-cases"
+  },
+  {
+    "slug": "amazon-minimum-edge-moves-to-connect-graph",
+    "title": "Minimum Edge Moves to Connect a Network",
+    "url": "https://www.fastprep.io/problems/amazon-minimum-edge-moves-to-connect-graph",
+    "companies": [
+      "Amazon"
+    ],
+    "updated": "2026-09-23",
+    "parse_status": "parsed-with-cases"
+  },
+  {
+    "slug": "amazon-simplify-expression-tree",
+    "title": "Simplify a Binary Expression Tree",
+    "url": "https://www.fastprep.io/problems/amazon-simplify-expression-tree",
+    "companies": [
+      "Amazon"
+    ],
+    "updated": "2026-09-23",
+    "parse_status": "parsed-with-cases"
+  },
+  {
+    "slug": "amazon-right-down-grid-path",
+    "title": "Path Through an O/X Grid Using Only Right and Down",
+    "url": "https://www.fastprep.io/problems/amazon-right-down-grid-path",
+    "companies": [
+      "Amazon"
+    ],
+    "updated": "2026-09-22",
+    "parse_status": "parsed-with-cases"
+  },
+  {
+    "slug": "amazon-allocate-minimum-pages",
+    "title": "Allocate Minimum Pages",
+    "url": "https://www.fastprep.io/problems/amazon-allocate-minimum-pages",
+    "companies": [
+      "Amazon"
+    ],
+    "updated": "2026-09-21",
+    "parse_status": "parsed-with-cases"
+  },
+  {
+    "slug": "amazon-edit-distance",
+    "title": "Edit Distance",
+    "url": "https://www.fastprep.io/problems/amazon-edit-distance",
+    "companies": [
+      "Amazon"
+    ],
+    "updated": "2026-09-21",
+    "parse_status": "parsed-with-cases"
+  },
+  {
+    "slug": "amazon-longest-subarray-with-k-distinct",
+    "title": "Longest Subarray with K Distinct Values",
+    "url": "https://www.fastprep.io/problems/amazon-longest-subarray-with-k-distinct",
+    "companies": [
+      "Amazon"
+    ],
+    "updated": "2026-09-21",
+    "parse_status": "parsed-with-cases"
+  },
+  {
+    "slug": "amazon-trapping-rain-water",
+    "title": "Trapping Rain Water",
+    "url": "https://www.fastprep.io/problems/amazon-trapping-rain-water",
+    "companies": [
+      "Amazon"
+    ],
+    "updated": "2026-09-21",
+    "parse_status": "parsed-with-cases"
+  },
+  {
+    "slug": "amazon-word-ladder",
+    "title": "Word Ladder",
+    "url": "https://www.fastprep.io/problems/amazon-word-ladder",
+    "companies": [
+      "Amazon"
+    ],
+    "updated": "2026-09-21",
+    "parse_status": "parsed-with-cases"
+  },
+  {
     "slug": "amazon-maximize-adjacent-difference-with-one-reversal",
     "title": "Maximize Adjacent Difference With One Reversal",
     "url": "https://www.fastprep.io/problems/amazon-maximize-adjacent-difference-with-one-reversal",
@@ -110,16 +510,6 @@
     "parse_status": "parsed-with-cases"
   },
   {
-    "slug": "amazon-binary-strings-bounded-subset",
-    "title": "Largest Binary-String Subset Within Bit Budgets",
-    "url": "https://www.fastprep.io/problems/amazon-binary-strings-bounded-subset",
-    "companies": [
-      "Amazon"
-    ],
-    "updated": "2026-09-13",
-    "parse_status": "parsed-with-cases"
-  },
-  {
     "slug": "amazon-binary-tree-cameras",
     "title": "Binary Tree Cameras",
     "url": "https://www.fastprep.io/problems/amazon-binary-tree-cameras",
@@ -143,16 +533,6 @@
     "slug": "amazon-calculate-beauty-values",
     "title": "Calculate Beauty Values",
     "url": "https://www.fastprep.io/problems/amazon-calculate-beauty-values",
-    "companies": [
-      "Amazon"
-    ],
-    "updated": "2026-09-13",
-    "parse_status": "parsed-with-cases"
-  },
-  {
-    "slug": "amazon-capacity-to-ship-packages-within-d-days",
-    "title": "Capacity To Ship Packages Within D Days",
-    "url": "https://www.fastprep.io/problems/amazon-capacity-to-ship-packages-within-d-days",
     "companies": [
       "Amazon"
     ],
@@ -223,16 +603,6 @@
     "slug": "amazon-course-schedule-ii",
     "title": "Course Schedule II",
     "url": "https://www.fastprep.io/problems/amazon-course-schedule-ii",
-    "companies": [
-      "Amazon"
-    ],
-    "updated": "2026-09-13",
-    "parse_status": "parsed-with-cases"
-  },
-  {
-    "slug": "amazon-currency-conversion-rate",
-    "title": "Currency Conversion Rate",
-    "url": "https://www.fastprep.io/problems/amazon-currency-conversion-rate",
     "companies": [
       "Amazon"
     ],
@@ -560,26 +930,6 @@
     "parse_status": "parsed-with-cases"
   },
   {
-    "slug": "amazon-right-down-grid-path",
-    "title": "Path Through an O/X Grid Using Only Right and Down",
-    "url": "https://www.fastprep.io/problems/amazon-right-down-grid-path",
-    "companies": [
-      "Amazon"
-    ],
-    "updated": "2026-09-13",
-    "parse_status": "parsed-with-cases"
-  },
-  {
-    "slug": "amazon-rotting-oranges-variation",
-    "title": "Minimum Time to Spread Through a Grid",
-    "url": "https://www.fastprep.io/problems/amazon-rotting-oranges-variation",
-    "companies": [
-      "Amazon"
-    ],
-    "updated": "2026-09-13",
-    "parse_status": "parsed-with-cases"
-  },
-  {
     "slug": "amazon-running-delivery-time-medians",
     "title": "Running Delivery Time Medians",
     "url": "https://www.fastprep.io/problems/amazon-running-delivery-time-medians",
@@ -633,16 +983,6 @@
     "slug": "amazon-transfer-chain-endpoints",
     "title": "Initial and Final Accounts in a Transfer Chain",
     "url": "https://www.fastprep.io/problems/amazon-transfer-chain-endpoints",
-    "companies": [
-      "Amazon"
-    ],
-    "updated": "2026-09-13",
-    "parse_status": "parsed-with-cases"
-  },
-  {
-    "slug": "amazon-trapping-rain-water",
-    "title": "Trapping Rain Water",
-    "url": "https://www.fastprep.io/problems/amazon-trapping-rain-water",
     "companies": [
       "Amazon"
     ],
@@ -720,16 +1060,6 @@
     "parse_status": "parsed-with-cases"
   },
   {
-    "slug": "amazon-get-min-amount",
-    "title": "Get Minimum Amount",
-    "url": "https://www.fastprep.io/problems/amazon-get-min-amount",
-    "companies": [
-      "Amazon"
-    ],
-    "updated": "2026-09-12",
-    "parse_status": "parsed-with-cases"
-  },
-  {
     "slug": "amazon-interleaving-string",
     "title": "Interleaving String",
     "url": "https://www.fastprep.io/problems/amazon-interleaving-string",
@@ -790,6 +1120,16 @@
     "parse_status": "parsed-with-cases"
   },
   {
+    "slug": "amazon-page-referrer-reachability",
+    "title": "Page Referrer Reachability",
+    "url": "https://www.fastprep.io/problems/amazon-page-referrer-reachability",
+    "companies": [
+      "Amazon"
+    ],
+    "updated": "2026-09-10",
+    "parse_status": "parsed-with-cases"
+  },
+  {
     "slug": "amazon-sliding-window-rate-limiter",
     "title": "Sliding-Window Rate Limiter",
     "url": "https://www.fastprep.io/problems/amazon-sliding-window-rate-limiter",
@@ -823,16 +1163,6 @@
     "slug": "amazon-meeting-rooms-ii",
     "title": "Meeting Rooms II",
     "url": "https://www.fastprep.io/problems/amazon-meeting-rooms-ii",
-    "companies": [
-      "Amazon"
-    ],
-    "updated": "2026-09-08",
-    "parse_status": "parsed-with-cases"
-  },
-  {
-    "slug": "amazon-minimum-merge-conflicts",
-    "title": "Minimum Merge Conflicts",
-    "url": "https://www.fastprep.io/problems/amazon-minimum-merge-conflicts",
     "companies": [
       "Amazon"
     ],
