@@ -832,7 +832,7 @@ def fetch_problem_page(
         return f"<!-- fetch failed: HTTP {error.code} for {slug} -->"
     except Exception as error:
         raise RuntimeError(f"fetching {slug} failed: {error}") from error
-    cache_dir.mkdir(parents=True, exist_ok=True)
+    cache_root.mkdir(parents=True, exist_ok=True)
     cache_path.write_text(body, encoding="utf-8")
     return body
 
