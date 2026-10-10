@@ -1,6 +1,12 @@
 # [Interleaving String](https://leetcode.com/problems/interleaving-string/)
 
-**Medium** | **NN minutes** | **String, Dynamic Programming**
+**Medium** | **25 minutes** | **String, Dynamic Programming**
+
+**Pattern:** [String DP](../patterns/string_dp/intuition.md)
+
+**Algorithm:** [Dynamic programming](https://en.wikipedia.org/wiki/Dynamic_programming) · [Memoization](https://en.wikipedia.org/wiki/Memoization)
+
+**Practice:** [`practice/interleaving_string/solution.py`](../../practice/interleaving_string/solution.py)
 
 You are given three strings `s1`, `s2`, and `s3`. Return `true` if `s3` is formed by **interleaving** `s1` and `s2` together or `false` otherwise.
 

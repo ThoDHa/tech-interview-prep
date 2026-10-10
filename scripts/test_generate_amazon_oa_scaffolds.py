@@ -646,12 +646,10 @@ def test_render_test_links_writeup_at_amazon_depth():
     assert "live in ../../docs/" not in text
 
 
-def test_render_index_links_practice_directory_with_absolute_repo_url():
+def test_render_index_names_practice_directory_as_inline_code():
     text = gen.render_index([{"slug": "amazon-x", "title": "X", "url": "https://x/x", "companies": ["Amazon"], "updated": "2026-09-19"}])
-    assert (
-        "[`practice/amazon_oa/`](https://github.com/ThoDHa/tech-interview-prep/tree/main/practice/amazon_oa/)"
-        in text
-    )
+    assert "`practice/amazon_oa/`" in text
+    assert "https://github.com/ThoDHa" not in text
     assert "../../../practice" not in text
 
 

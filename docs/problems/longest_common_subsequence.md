@@ -1,6 +1,12 @@
 # [Longest Common Subsequence](https://leetcode.com/problems/longest-common-subsequence/)
 
-**Medium** | **NN minutes** | **String, Dynamic Programming**
+**Medium** | **25 minutes** | **String, Dynamic Programming**
+
+**Pattern:** [String DP](../patterns/string_dp/intuition.md)
+
+**Algorithm:** [Longest common subsequence](https://en.wikipedia.org/wiki/Longest_common_subsequence) · [Dynamic programming](https://en.wikipedia.org/wiki/Dynamic_programming) · [Memoization](https://en.wikipedia.org/wiki/Memoization)
+
+**Practice:** [`practice/longest_common_subsequence/solution.py`](../../practice/longest_common_subsequence/solution.py)
 
 Given two strings `text1` and `text2`, return the length of the *longest common subsequence* between the two strings if one exists, otherwise return `0`.
 

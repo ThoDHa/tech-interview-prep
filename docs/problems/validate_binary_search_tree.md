@@ -4,6 +4,8 @@
 
 **Pattern:** [Tree Traversal](../patterns/tree/intuition.md)
 
+**Algorithm:** [Binary search tree](https://en.wikipedia.org/wiki/Binary_search_tree) · [Depth-first search](https://en.wikipedia.org/wiki/Depth-first_search) · [Tree traversal](https://en.wikipedia.org/wiki/Tree_traversal)
+
 **Practice:** [`practice/validate_binary_search_tree/solution.py`](../../practice/validate_binary_search_tree/solution.py)
 
 Given the `root` of a binary tree, determine if it is a valid binary search tree (BST).
@@ -38,3 +40,4 @@ A **valid BST** is defined as follows:
 
 - The number of nodes in the tree is in the range `[1, 10^4]`.
 - `-2^31 <= Node.val <= 2^31 - 1`
+

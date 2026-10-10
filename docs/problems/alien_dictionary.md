@@ -1,8 +1,14 @@
 # [Alien Dictionary](https://leetcode.com/problems/alien-dictionary/)
 
-**Hard** | **NN minutes** | **Array, String, Depth-First Search, Breadth-First Search, Graph Theory, Topological Sort**
+**Hard** | **40 minutes** | **Array, String, Depth-First Search, Breadth-First Search, Graph Theory, Topological Sort**
 
 > This problem is locked behind [LeetCode Premium](https://leetcode.com/problems/alien-dictionary/); read it free on [NeetCode](https://neetcode.io/problems/foreign-dictionary).
+
+**Pattern:** [Topological Sort](../patterns/topological_sort/intuition.md)
+
+**Algorithm:** [Topological sorting](https://en.wikipedia.org/wiki/Topological_sorting) · [Kahn's algorithm](https://en.wikipedia.org/wiki/Topological_sorting#Kahn%27s_algorithm) · [Depth-first search](https://en.wikipedia.org/wiki/Depth-first_search)
+
+**Practice:** [`practice/alien_dictionary/solution.py`](../../practice/alien_dictionary/solution.py)
 
 There is a new alien language that uses the English alphabet, but the order of the letters is unknown.
 

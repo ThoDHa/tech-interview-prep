@@ -4,6 +4,8 @@
 
 **Pattern:** [DP 1D Linear](../patterns/dp_1d_linear/intuition.md)
 
+**Algorithm:** [Dynamic programming](https://en.wikipedia.org/wiki/Dynamic_programming) · [Memoization](https://en.wikipedia.org/wiki/Memoization) · [Fibonacci sequence](https://en.wikipedia.org/wiki/Fibonacci_sequence) · [Exponentiation by squaring](https://en.wikipedia.org/wiki/Exponentiation_by_squaring) · [Binet's formula](https://en.wikipedia.org/wiki/Fibonacci_sequence#Closed-form_expression)
+
 **Practice:** [`practice/climbing_stairs/solution.py`](../../practice/climbing_stairs/solution.py)
 
 You are climbing a staircase. It takes `n` steps to reach the top.
@@ -38,3 +40,4 @@ Each time you can either climb 1 or 2 steps. In how many distinct ways can you c
 ## Constraints
 
 - `1 <= n <= 45`
+

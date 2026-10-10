@@ -1,6 +1,6 @@
 # Tech Interview Prep Solutions
 
-A study guide spanning three curated problem banks: the [Grind 75](https://www.techinterviewhandbook.org/grind75) and the [NeetCode 150](https://neetcode.io/practice/practice/neetcode150) LeetCode lists, merged into one unified [problem catalog](problems/index.md), and the [Amazon OA](problems/amazon_oa/index.md) bank. Problems on both LeetCode tracks appear once, credited to each. Each problem page covers the statement and examples, with constraints where available. The [pattern intuition guides](patterns/index.md) explain the mental models behind the recurring algorithm patterns, and the [`practice/`](https://github.com/ThoDHa/tech-interview-prep/tree/main/practice) workspace lets you implement and test each solution yourself.
+A study guide spanning three curated problem banks: the [Grind 75](https://www.techinterviewhandbook.org/grind75) and the [NeetCode 150](https://neetcode.io/practice/practice/neetcode150) LeetCode lists, merged into one unified [problem catalog](problems/index.md), and the [Amazon OA](problems/amazon_oa/index.md) bank. Problems on both LeetCode tracks appear once, credited to each. Each problem page covers the statement and examples, with constraints where available. The [pattern intuition guides](patterns/index.md) explain the mental models behind the recurring algorithm patterns, and the `practice/` workspace lets you implement and test each solution yourself.
 
 !!! tip "New to algorithms or interviews?"
 
@@ -10,8 +10,8 @@ Browse every problem in the [Problems catalog](problems/index.md), or use the na
 
 ## Pattern Intuition
 
-The [pattern intuition guides](patterns/index.md) explain the *why* behind each recurring algorithm pattern: the mental model, when it applies, the invariant that makes it work, and the Grind75 problems that use it. Start there when a problem feels unfamiliar and you need to recognize which pattern fits.
+The [pattern intuition guides](patterns/index.md) explain the *why* behind each recurring algorithm pattern: the mental model, when it applies, the invariant that makes it work. The [pattern index](patterns/index.md) maps the Grind 75 problems that use each pattern. Start there when a problem feels unfamiliar and you need to recognize which pattern fits.
 
 ## Practice Workspace
 
-The [`practice/`](https://github.com/ThoDHa/tech-interview-prep/tree/main/practice) directory is a `pytest` workspace for solving the problems yourself. Each problem has a `solution.py` to implement plus two test sets that mirror LeetCode's Run (the examples) and Submit (a full corner-case gauntlet). See its [README](https://github.com/ThoDHa/tech-interview-prep/blob/main/practice/README.md) for setup and the practice loop.
+The `practice/` directory is a `pytest` workspace for solving the problems yourself. Each problem has a `solution.py` to implement plus two test sets that mirror LeetCode's Run (the examples) and Submit (a full corner-case gauntlet). See `practice/README.md` for setup and the practice loop.

@@ -4,6 +4,8 @@
 
 **Pattern:** [Binary Search](../patterns/binary_search/intuition.md)
 
+**Algorithm:** [Binary search](https://en.wikipedia.org/wiki/Binary_search_algorithm)
+
 **Practice:** [`practice/time_based_key_value_store/solution.py`](../../practice/time_based_key_value_store/solution.py)
 
 Design a time-based key-value data structure that can store multiple values for the same key at different time stamps and retrieve the key's value at a certain timestamp.
@@ -20,20 +22,20 @@ Implement the `TimeMap` class:
 
 **Input:**
 
-```
+```text
 ["TimeMap", "set", "get", "get", "set", "get", "get"]
 [[], ["foo", "bar", 1], ["foo", 1], ["foo", 3], ["foo", "bar2", 4], ["foo", 4], ["foo", 5]]
 ```
 
 **Output:**
 
-```
+```text
 [null, null, "bar", "bar", null, "bar2", "bar2"]
 ```
 
 **Explanation:**
 
-```
+```text
 TimeMap timeMap = new TimeMap();
 timeMap.set("foo", "bar", 1);  // store the key "foo" and value "bar" along with timestamp = 1.
 timeMap.get("foo", 1);         // return "bar"
@@ -50,3 +52,4 @@ timeMap.get("foo", 5);         // return "bar2"
 - `1 <= timestamp <= 10^7`
 - All the timestamps `timestamp` of `set` are strictly increasing.
 - At most `2 * 10^5` calls will be made to `set` and `get`.
+

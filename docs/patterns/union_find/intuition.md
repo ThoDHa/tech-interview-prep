@@ -192,10 +192,10 @@ for eq in equations:
 1. **LC 547 - Number of Provinces** (Basic connectivity)
 
 ### Level 2: Cycle Detection
-2. **LC 684 - Redundant Connection** (Find cycle-forming edge)
+2. **[LC 684 - Redundant Connection](../../problems/redundant_connection.md)** (Find cycle-forming edge)
 
 ### Level 3: Equivalence
-3. **LC 721 - Accounts Merge** (Group by common elements)
+3. **[LC 721 - Accounts Merge](../../problems/accounts_merge.md)** (Group by common elements)
 4. **LC 990 - Satisfiability of Equality Equations** (Constraint checking)
 
 ### Level 4: Network Operations

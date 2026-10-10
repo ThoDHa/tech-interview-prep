@@ -4,6 +4,8 @@
 
 **Pattern:** [Topological Sort](../patterns/topological_sort/intuition.md)
 
+**Algorithm:** [Topological sorting](https://en.wikipedia.org/wiki/Topological_sorting) · [Breadth-first search](https://en.wikipedia.org/wiki/Breadth-first_search)
+
 **Practice:** [`practice/minimum_height_trees/solution.py`](../../practice/minimum_height_trees/solution.py)
 
 A tree is an undirected graph in which any two vertices are connected by exactly one path. In other words, any connected graph without simple cycles is a tree.
@@ -44,3 +46,4 @@ The **height** of a rooted tree is the number of edges on the longest downward p
 - `ai != bi`
 - All the pairs `(ai, bi)` are distinct.
 - The given input is **guaranteed** to be a tree and there will be **no repeated** edges.
+

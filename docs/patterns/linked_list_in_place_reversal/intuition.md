@@ -27,15 +27,15 @@ The Caboose becomes the new Engine (new head), and the original Engine points to
 At each step, you work with three positions:
 
 ```
-             prev    curr    next_node
-               ↓       ↓       ↓
+             previous    current    next_node
+                ↓           ↓           ↓
 (reversed) ← [ A ] <- [ B ] -> [ C ] -> (to process)
 
 Action:
-1. Save next_node = curr.next (or we lose C forever!)
-2. Flip: curr.next = prev (B now points backward to A)
-3. Advance prev = curr (prev moves to B)
-4. Advance curr = next_node (curr moves to C)
+1. Save next_node = current.next (or we lose C forever!)
+2. Flip: current.next = previous (B now points backward to A)
+3. Advance previous = current (previous moves to B)
+4. Advance current = next_node (current moves to C)
 ```
 
 It's like a caterpillar inching forward while flipping tracks behind it.
@@ -105,15 +105,15 @@ Consider reversing just one link without helpers:
 
 ```python
 # WRONG - we lose access to the rest!
-curr.next = prev   # Oops, where's the next node?
+current.next = previous   # Oops, where's the next node?
 ```
 
-The moment you flip `curr.next`, you've severed the connection to everything after `curr`. That's why you MUST save `curr.next` first:
+The moment you flip `current.next`, you've severed the connection to everything after `current`. That's why you MUST save `current.next` first:
 
 ```python
 # CORRECT
-next_node = curr.next   # Save the bridge before burning it
-curr.next = prev        # Now safe to flip
+next_node = current.next   # Save the bridge before burning it
+current.next = previous    # Now safe to flip
 ```
 
 This is the most common bug in reversal problems!
@@ -155,8 +155,8 @@ To reverse pages 6-10:
 In code:
 - `before_segment` = the bookmark (node before left)
 - `segment_start` = first page to reverse (becomes tail after)
-- `prev` after reversal = last page reversed (becomes head)
-- `curr` after reversal = first page NOT reversed (page 11)
+- `previous` after reversal = last page reversed (becomes head)
+- `current` after reversal = first page NOT reversed (page 11)
 
 ---
 
@@ -259,13 +259,13 @@ The same discipline as the three-pointer dance: a fixed number of pointer variab
 ### Pitfall 1: Losing the Next Node
 ```python
 # WRONG
-curr.next = prev
-curr = curr.next  # Oops, curr.next is now prev!
+current.next = previous
+current = current.next  # Oops, current.next is now previous!
 
 # FIXED
-next_node = curr.next
-curr.next = prev
-curr = next_node
+next_node = current.next
+current.next = previous
+current = next_node
 ```
 
 ### Pitfall 2: Returning Wrong Head
@@ -274,7 +274,7 @@ curr = next_node
 return head  # head is still the original first node (now tail)
 
 # FIXED
-return prev  # prev is the new head after loop ends
+return previous  # previous is the new head after loop ends
 ```
 
 ### Pitfall 3: Off-By-One in Segment
@@ -295,8 +295,8 @@ for _ in range(left - 1):
 return dummy.next  # Lost connection!
 
 # FIXED: Reconnect both ends
-segment_start.next = curr       # old head → after segment
-before_segment.next = prev      # before → new head
+segment_start.next = current        # old head → after segment
+before_segment.next = previous      # before → new head
 ```
 
 ### Pitfall 5: Advancing Fast Without Checking the Road Ahead
@@ -342,11 +342,11 @@ The iterative versions are strictly O(1) space because we only use a fixed numbe
 
 ## Practice Progression
 
-1. **Reverse Linked List (LC 206)**: the full three-pointer dance on the whole list. Master this first.
+1. **[Reverse Linked List (LC 206)](../../problems/reverse_linked_list.md)**: the full three-pointer dance on the whole list. Master this first.
 2. **Reverse Linked List II (LC 92)**: segment reversal. Add the dummy node and the bookmark reconnection.
-3. **Reverse Nodes in k-Group (LC 25)**: repeated segment reversal, with an availability check before each group.
-4. **Linked List Cycle (LC 141, Grind 75 #12)**: fast/slow cycle detection; the lap-and-collide argument in action.
-5. **Middle of the Linked List (LC 876, Grind 75 #22)**: the same gap used as a measuring tape; when fast exits, slow stands at the middle.
+3. **[Reverse Nodes in k-Group (LC 25)](../../problems/reverse_nodes_in_k_group.md)**: repeated segment reversal, with an availability check before each group.
+4. **[Linked List Cycle (LC 141, Grind 75 #12)](../../problems/linked_list_cycle.md)**: fast/slow cycle detection; the lap-and-collide argument in action.
+5. **[Middle of the Linked List (LC 876, Grind 75 #22)](../../problems/middle_of_the_linked_list.md)**: the same gap used as a measuring tape; when fast exits, slow stands at the middle.
 
 ---
 

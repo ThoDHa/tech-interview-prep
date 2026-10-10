@@ -1,6 +1,12 @@
 # [Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/)
 
-**Medium** | **NN minutes** | **Array, Binary Search, Dynamic Programming**
+**Medium** | **25 minutes** | **Array, Binary Search, Dynamic Programming**
+
+**Pattern:** [DP 1D Linear](../patterns/dp_1d_linear/intuition.md)
+
+**Algorithm:** [Longest increasing subsequence](https://en.wikipedia.org/wiki/Longest_increasing_subsequence) · [Dynamic programming](https://en.wikipedia.org/wiki/Dynamic_programming) · [Binary search algorithm](https://en.wikipedia.org/wiki/Binary_search_algorithm)
+
+**Practice:** [`practice/longest_increasing_subsequence/solution.py`](../../practice/longest_increasing_subsequence/solution.py)
 
 Given an integer array `nums`, return the *length* of the longest strictly *increasing* subsequence.
 

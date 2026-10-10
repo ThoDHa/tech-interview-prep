@@ -1,6 +1,12 @@
 # [Course Schedule II](https://leetcode.com/problems/course-schedule-ii/)
 
-**Medium** | **NN minutes** | **Depth-First Search, Breadth-First Search, Graph Theory, Topological Sort**
+**Medium** | **25 minutes** | **Depth-First Search, Breadth-First Search, Graph Theory, Topological Sort**
+
+**Pattern:** [Graph Traversal](../patterns/graph/intuition.md), [Topological Sort](../patterns/topological_sort/intuition.md)
+
+**Algorithm:** [Depth-first search](https://en.wikipedia.org/wiki/Depth-first_search) · [Breadth-first search](https://en.wikipedia.org/wiki/Breadth-first_search) · [Topological sorting](https://en.wikipedia.org/wiki/Topological_sorting) · [Kahn's algorithm](https://en.wikipedia.org/wiki/Topological_sorting#Kahn%27s_algorithm)
+
+**Practice:** [`practice/course_schedule_ii/solution.py`](../../practice/course_schedule_ii/solution.py)
 
 You are given an array `prerequisites` where `prerequisites[i] = [a, b]` indicates that you **must** take course `b` first if you want to take course `a`.
 

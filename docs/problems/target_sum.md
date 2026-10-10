@@ -1,6 +1,12 @@
 # [Target Sum](https://leetcode.com/problems/target-sum/)
 
-**Medium** | **NN minutes** | **Array, Dynamic Programming, Backtracking**
+**Medium** | **25 minutes** | **Array, Dynamic Programming, Backtracking**
+
+**Pattern:** [DP Knapsack/Subset](../patterns/dp_knapsack_subset/intuition.md)
+
+**Algorithm:** [Dynamic programming](https://en.wikipedia.org/wiki/Dynamic_programming) · [Memoization](https://en.wikipedia.org/wiki/Memoization) · [Backtracking](https://en.wikipedia.org/wiki/Backtracking)
+
+**Practice:** [`practice/target_sum/solution.py`](../../practice/target_sum/solution.py)
 
 You are given an array of integers `nums` and an integer `target`.
 

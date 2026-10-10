@@ -4,6 +4,8 @@
 
 **Pattern:** [Simulation](../patterns/simulation/intuition.md)
 
+**Algorithm:** [Finite-state machine](https://en.wikipedia.org/wiki/Finite-state_machine)
+
 **Practice:** [`practice/string_to_integer_atoi/solution.py`](../../practice/string_to_integer_atoi/solution.py)
 
 Implement the `myAtoi(string s)` function, which converts a string to a 32-bit signed integer (similar to C/C++'s `atoi` function).
@@ -31,7 +33,7 @@ The algorithm for `myAtoi(string s)` is as follows:
 
 **Explanation:** The underlined characters are what is read in, the caret is the current reader position.
 
-```
+```text
 Step 1: "42" (no characters read because there is no leading whitespace)
          ^
 Step 2: "42" (no characters read because there is neither a '-' nor '+')
@@ -50,7 +52,7 @@ The parsed integer is 42. Since 42 is in the range `[-2^31, 2^31 - 1]`, the fina
 
 **Explanation:**
 
-```
+```text
 Step 1: "   -42" (leading whitespace is read and ignored)
             ^
 Step 2: "   -42" ('-' is read, so the result should be negative)
@@ -69,7 +71,7 @@ The parsed integer is -42. Since -42 is in the range `[-2^31, 2^31 - 1]`, the fi
 
 **Explanation:**
 
-```
+```text
 Step 1: "4193 with words" (no characters read because there is no leading whitespace)
          ^
 Step 2: "4193 with words" (no characters read because there is neither a '-' nor '+')
@@ -84,3 +86,4 @@ The parsed integer is 4193. Since 4193 is in the range `[-2^31, 2^31 - 1]`, the 
 
 - `0 <= s.length <= 200`
 - `s` consists of English letters (lower-case and upper-case), digits (0-9), `' '`, `'+'`, `'-'`, and `'.'`.
+
