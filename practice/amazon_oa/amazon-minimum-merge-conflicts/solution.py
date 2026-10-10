@@ -2,7 +2,7 @@
 
 Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-minimum-merge-conflicts.md
 
-Developers want to merge two source-control branches into one unified branch while preserving the relative order of commits from each branch.
+Special thanks: A special thank you to a lovely, amazing fren who shared that this question appeared again on September 17, 2026! 💜
 
   uv run python amazon_oa/amazon-minimum-merge-conflicts/solution.py   # debug one case (see CASE below)
   uv run pytest amazon_oa/amazon-minimum-merge-conflicts/              # run the test sets

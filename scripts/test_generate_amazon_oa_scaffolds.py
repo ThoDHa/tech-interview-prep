@@ -119,12 +119,12 @@ def test_build_manifest_entries_carry_required_fields():
     not all(path.exists() for path in REAL_BANK_PAGES),
     reason="cached bank pages not present (offline fixture-only run)",
 )
-def test_real_bank_pages_yield_350_unique_amazon_entries():
+def test_real_bank_pages_yield_383_unique_amazon_entries():
     texts = [path.read_text(encoding="utf-8") for path in REAL_BANK_PAGES]
     manifest = gen.build_manifest(texts)
-    assert len(manifest) == 350
+    assert len(manifest) == 383
     slugs = [entry["slug"] for entry in manifest]
-    assert len(set(slugs)) == 350
+    assert len(set(slugs)) == 383
     updated = [entry["updated"] for entry in manifest]
     assert updated == sorted(updated, reverse=True)
 

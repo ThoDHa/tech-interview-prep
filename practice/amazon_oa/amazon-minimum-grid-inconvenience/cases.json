@@ -24,5 +24,16 @@
       ]
     ],
     "expected": 2
+  },
+  {
+    "id": "example_2",
+    "args": [
+      [
+        [
+          0
+        ]
+      ]
+    ],
+    "expected": 0
   }
 ]

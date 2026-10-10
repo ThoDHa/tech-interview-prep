@@ -1,0 +1,70 @@
+[
+  {
+    "id": "example_1",
+    "args": [
+      [
+        [
+          "toxic",
+          "ok"
+        ],
+        [
+          "toxic",
+          "ok",
+          "spam"
+        ]
+      ],
+      2
+    ],
+    "expected": [
+      0,
+      0
+    ]
+  },
+  {
+    "id": "example_2",
+    "args": [
+      [
+        [
+          "toxic",
+          "ok"
+        ],
+        [
+          "toxic",
+          "ok",
+          "spam"
+        ]
+      ],
+      3
+    ],
+    "expected": [
+      0,
+      1
+    ]
+  },
+  {
+    "id": "example_3",
+    "args": [
+      [
+        [
+          "a"
+        ],
+        [
+          "b",
+          "c"
+        ],
+        [
+          "a",
+          "b"
+        ],
+        [
+          "d"
+        ]
+      ],
+      3
+    ],
+    "expected": [
+      0,
+      2
+    ]
+  }
+]
