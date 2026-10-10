@@ -237,12 +237,12 @@ return candidate_start if total_surplus >= 0 else -1
 
 Master Greedy Core through this sequence:
 
-1. **LC 55** (Jump Game): Pure reachability tracking
-2. **LC 45** (Jump Game II): Add level counting
+1. **[LC 55 - Jump Game](../../problems/jump_game.md)**: Pure reachability tracking
+2. **[LC 45 - Jump Game II](../../problems/jump_game_ii.md)**: Add level counting
 3. **LC 455** (Assign Cookies): Simple sort + match
 4. **LC 1029** (Two City Scheduling): Sort by derived metric
-5. **LC 134** (Gas Station): Reset logic with feasibility
-6. **LC 621** (Task Scheduler): Frequency-first slot filling with cooldown
+5. **[LC 134 - Gas Station](../../problems/gas_station.md)**: Reset logic with feasibility
+6. **[LC 621 - Task Scheduler](../../problems/task_scheduler.md)**: Frequency-first slot filling with cooldown
 7. **LC 135** (Candy): Two-pass bidirectional constraints
 
 ---
