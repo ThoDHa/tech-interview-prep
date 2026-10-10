@@ -10,7 +10,7 @@ Browse every problem in the [Problems catalog](problems/index.md), or use the na
 
 ## Pattern Intuition
 
-The [pattern intuition guides](patterns/index.md) explain the *why* behind each recurring algorithm pattern: the mental model, when it applies, the invariant that makes it work, and the Grind75 problems that use it. Start there when a problem feels unfamiliar and you need to recognize which pattern fits.
+The [pattern intuition guides](patterns/index.md) explain the *why* behind each recurring algorithm pattern: the mental model, when it applies, the invariant that makes it work. The [pattern index](patterns/index.md) maps the Grind 75 problems that use each pattern. Start there when a problem feels unfamiliar and you need to recognize which pattern fits.
 
 ## Practice Workspace
 
