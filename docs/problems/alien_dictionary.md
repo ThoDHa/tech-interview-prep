@@ -197,10 +197,10 @@ class Solution:
         while queue:
             letter = queue.popleft()
             order.append(letter)
-            for nxt in adjacency[letter]:
-                indegree[nxt] -= 1
-                if indegree[nxt] == 0:
-                    queue.append(nxt)
+            for next_letter in adjacency[letter]:
+                indegree[next_letter] -= 1
+                if indegree[next_letter] == 0:
+                    queue.append(next_letter)
         return "".join(order) if len(order) == len(adjacency) else ""
 ```
 
@@ -280,8 +280,8 @@ class Solution:
             if letter in state:
                 return state[letter] == "done"
             state[letter] = "visiting"
-            for nxt in adjacency[letter]:
-                if not dfs(nxt):
+            for next_letter in adjacency[letter]:
+                if not dfs(next_letter):
                     return False
             state[letter] = "done"
             order.append(letter)

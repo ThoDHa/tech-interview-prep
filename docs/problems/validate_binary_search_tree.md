@@ -265,9 +265,9 @@ The recursion stack reaches the tree's height `h`: `O(log n)` for a balanced tre
 The bounds solution threads two numbers through every call. A different property of BSTs removes even that: an [inorder traversal](https://en.wikipedia.org/wiki/Tree_traversal) (left, node, right) of a valid BST visits values in strictly increasing order, and the converse holds as well. So validating a BST is equivalent to confirming the inorder sequence never decreases or repeats, which needs only the single previously visited value:
 
 1. Traverse in inorder (left, node, right).
-2. Track the previously visited value in `prev`.
-3. At each node, fail if `node.val <= prev`, since a valid BST must strictly increase.
-4. Update `prev` and continue into the right subtree.
+2. Track the previously visited value in `previous`.
+3. At each node, fail if `node.val <= previous`, since a valid BST must strictly increase.
+4. Update `previous` and continue into the right subtree.
 
 This avoids threading bounds through the recursion; instead it leans on the structural property that inorder linearizes a BST into sorted order.
 
@@ -283,28 +283,28 @@ Trace the traversal on Example 2: `root = [5,1,4,null,null,3,6]`, expected outpu
         3   6
 ```
 
-Inorder visits each node between its left and right subtrees, so a valid BST would emit its values in ascending order. The trace below indents one level per recursive call; "visit" marks the moment a node's value is compared against `prev` after its left subtree returns:
+Inorder visits each node between its left and right subtrees, so a valid BST would emit its values in ascending order. The trace below indents one level per recursive call; "visit" marks the moment a node's value is compared against `previous` after its left subtree returns:
 
 ```text
 inorder(5)                       descend left first
   inorder(1)                     descend left first
     inorder(None) -> True        empty left subtree
-    visit 1    prev=None         first value, no check; prev = 1
+    visit 1    previous=None     first value, no check; previous = 1
     inorder(None) -> True        empty right subtree
-  visit 5      prev=1            5 > 1, still increasing; prev = 5
+  visit 5      previous=1        5 > 1, still increasing; previous = 5
   inorder(4)                     descend left first
     inorder(3)                   descend left first
       inorder(None) -> True      empty left subtree
-      visit 3    prev=5          3 <= 5 -> return False
+      visit 3    previous=5      3 <= 5 -> return False
     inorder(4) left call False   -> False, node 4 never visited
 inorder(5) right call False      -> False
 ```
 
-The visited sequence begins `1, 5, 3`: the moment `3` follows `5`, the strictly increasing order breaks, and the `node.val <= prev` test fires. `False` propagates straight up without visiting nodes `4` or `6`, and the function returns `False`, matching the expected Output for Example 2.
+The visited sequence begins `1, 5, 3`: the moment `3` follows `5`, the strictly increasing order breaks, and the `node.val <= previous` test fires. `False` propagates straight up without visiting nodes `4` or `6`, and the function returns `False`, matching the expected Output for Example 2.
 
 #### Solution
 
-The code is the inorder visit from the walkthrough, with `prev` as the only carried state.
+The code is the inorder visit from the walkthrough, with `previous` as the only carried state.
 
 ```python
 from typing import Optional
@@ -312,18 +312,18 @@ from typing import Optional
 
 class Solution:
     def isValidBST(self, root: Optional[TreeNode]) -> bool:
-        prev = None
+        previous = None
 
         def inorder(node: Optional[TreeNode]) -> bool:
-            nonlocal prev
+            nonlocal previous
             if not node:
                 return True
             if not inorder(node.left):
                 return False
             # Inorder of a valid BST is strictly increasing
-            if prev is not None and node.val <= prev:
+            if previous is not None and node.val <= previous:
                 return False
-            prev = node.val
+            previous = node.val
             return inorder(node.right)
 
         return inorder(root)

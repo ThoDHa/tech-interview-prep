@@ -356,55 +356,55 @@ The full table.
 
 #### Derivation
 
-Cell `(i, j)` reads only `dp[i - 1][j - 1]`, `dp[i - 1][j]`, and `dp[i][j - 1]`: the previous row and the cell just built. Row `i - 2` and older are dead weight, so the whole table collapses to two rows, `prev` for row `i - 1` and `cur` under construction. Row rotation (`prev = cur`) plays the role the index decrement played in the recursion, and the border moves into the loop (`cur[0] = i`):
+Cell `(i, j)` reads only `dp[i - 1][j - 1]`, `dp[i - 1][j]`, and `dp[i][j - 1]`: the previous row and the cell just built. Row `i - 2` and older are dead weight, so the whole table collapses to two rows, `previous` for row `i - 1` and `current` under construction. Row rotation (`previous = current`) plays the role the index decrement played in the recursion, and the border moves into the loop (`current[0] = i`):
 
-1. Initialize `prev` to `list(range(n + 1))`, row 0.
-2. For each `i` in `1..m`, build `cur` from `prev`:
-   `cur[0] = i`, and for `j` in `1..n`:
-   - `word1[i - 1] == word2[j - 1]`: `cur[j] = prev[j - 1]`.
-   - Otherwise: `cur[j] = 1 + min(prev[j], cur[j - 1], prev[j - 1])`.
-3. Replace `prev` with `cur` and continue.
-4. Return `prev[n]`, the last row's last cell.
+1. Initialize `previous` to `list(range(n + 1))`, row 0.
+2. For each `i` in `1..m`, build `current` from `previous`:
+   `current[0] = i`, and for `j` in `1..n`:
+   - `word1[i - 1] == word2[j - 1]`: `current[j] = previous[j - 1]`.
+   - Otherwise: `current[j] = 1 + min(previous[j], current[j - 1], previous[j - 1])`.
+3. Replace `previous` with `current` and continue.
+4. Return `previous[n]`, the last row's last cell.
 
 #### Walkthrough
 
 Trace the two rolling rows on Example 1: `word1 = "monkeys"`, `word2 = "money"`:
 
 ```text
-i=0         prev = [0, 1, 2, 3, 4, 5]
-i=1 (m)     cur  = [1, 0, 1, 2, 3, 4]
-i=2 (o)     cur  = [2, 1, 0, 1, 2, 3]
-i=3 (n)     cur  = [3, 2, 1, 0, 1, 2]
-i=4 (k)     cur  = [4, 3, 2, 1, 1, 2]
-i=5 (e)     cur  = [5, 4, 3, 2, 1, 2]
-i=6 (y)     cur  = [6, 5, 4, 3, 2, 1]
-i=7 (s)     cur  = [7, 6, 5, 4, 3, 2]
+i=0         previous = [0, 1, 2, 3, 4, 5]
+i=1 (m)     current  = [1, 0, 1, 2, 3, 4]
+i=2 (o)     current  = [2, 1, 0, 1, 2, 3]
+i=3 (n)     current  = [3, 2, 1, 0, 1, 2]
+i=4 (k)     current  = [4, 3, 2, 1, 1, 2]
+i=5 (e)     current  = [5, 4, 3, 2, 1, 2]
+i=6 (y)     current  = [6, 5, 4, 3, 2, 1]
+i=7 (s)     current  = [7, 6, 5, 4, 3, 2]
 ```
 
-Each row equals the corresponding table row from the Bottom-Up 2-D DP walkthrough, and the unneeded predecessor is discarded as soon as its successor exists. In row `k`, cell `[k][e]` takes `1 + min(prev[e] = 1, cur[n] = 1, prev[n] = 0) = 1`, the diagonal replace being cheapest. The final `prev[n]` is `2`, matching the expected Output for Example 1; Example 2's last row ends in `3`.
+Each row equals the corresponding table row from the Bottom-Up 2-D DP walkthrough, and the unneeded predecessor is discarded as soon as its successor exists. In row `k`, cell `[k][e]` takes `1 + min(previous[e] = 1, current[n] = 1, previous[n] = 0) = 1`, the diagonal replace being cheapest. The final `previous[n]` is `2`, matching the expected Output for Example 1; Example 2's last row ends in `3`.
 
 #### Solution
 
-The code is the walkthrough's row loop: build `cur` from `prev`, then rotate.
+The code is the walkthrough's row loop: build `current` from `previous`, then rotate.
 
 ```python
 class Solution:
     def minDistance(self, word1: str, word2: str) -> int:
         m, n = len(word1), len(word2)
-        prev = list(range(n + 1))
+        previous = list(range(n + 1))
         for i in range(1, m + 1):
-            cur = [i] + [0] * n
+            current = [i] + [0] * n
             for j in range(1, n + 1):
                 if word1[i - 1] == word2[j - 1]:
-                    cur[j] = prev[j - 1]
+                    current[j] = previous[j - 1]
                 else:
-                    cur[j] = 1 + min(
-                        prev[j],      # delete word1[i - 1]
-                        cur[j - 1],   # insert word2[j - 1]
-                        prev[j - 1],  # replace word1[i - 1] with word2[j - 1]
+                    current[j] = 1 + min(
+                        previous[j],      # delete word1[i - 1]
+                        current[j - 1],   # insert word2[j - 1]
+                        previous[j - 1],  # replace word1[i - 1] with word2[j - 1]
                     )
-            prev = cur
-        return prev[n]
+            previous = current
+        return previous[n]
 ```
 
 #### Time and Space Complexity Analysis
@@ -421,8 +421,8 @@ Two rows of `n + 1` cells; the discarded predecessor is garbage-collected.
 
 - The dependency pattern of the recurrence determines its memory: anything a
   cell does not read can be freed.
-- `cur` must be a fresh row per `i`; updating `prev` in place would overwrite
-  the diagonal `prev[j - 1]` before it is read.
+- `current` must be a fresh row per `i`; updating `previous` in place would overwrite
+  the diagonal `previous[j - 1]` before it is read.
 - Iterating the shorter string as `word2` minimizes the row width; the
   distance is unchanged by the argument order.
 

@@ -142,10 +142,10 @@ class Solution:
                 depth += 1
                 for _ in range(len(queue)):
                     node = queue.popleft()
-                    for nxt in adj[node]:
-                        if nxt not in seen:
-                            seen.add(nxt)
-                            queue.append(nxt)
+                    for neighbor in adj[node]:
+                        if neighbor not in seen:
+                            seen.add(neighbor)
+                            queue.append(neighbor)
             return depth
 
         heights = [height_from(root) for root in range(n)]
@@ -357,11 +357,11 @@ class Solution:
             while queue:
                 node = queue.popleft()
                 last = node
-                for nxt in adj[node]:
-                    if not seen[nxt]:
-                        seen[nxt] = True
-                        parent[nxt] = node
-                        queue.append(nxt)
+                for neighbor in adj[node]:
+                    if not seen[neighbor]:
+                        seen[neighbor] = True
+                        parent[neighbor] = node
+                        queue.append(neighbor)
             return last, parent
 
         # First BFS from any node reaches one endpoint of a diameter.

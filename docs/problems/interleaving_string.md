@@ -333,35 +333,35 @@ The full table.
 
 #### Derivation
 
-Cell `(i, j)` reads only `dp[i - 1][j]` and `dp[i][j - 1]`: the previous row and the cell just built. Row `i - 2` and older are dead weight, so the whole table collapses to two rows, `prev` for row `i - 1` and `cur` under construction. Row rotation (`prev = cur`) plays the role the index decrement played in the recursion, and the borders move into the loop: `cur[0]` inherits from `prev[0]` alone:
+Cell `(i, j)` reads only `dp[i - 1][j]` and `dp[i][j - 1]`: the previous row and the cell just built. Row `i - 2` and older are dead weight, so the whole table collapses to two rows, `previous` for row `i - 1` and `current` under construction. Row rotation (`previous = current`) plays the role the index decrement played in the recursion, and the borders move into the loop: `current[0]` inherits from `previous[0]` alone:
 
-1. Initialize `prev` to row 0: `prev[0] = True`, then
-   `prev[j] = prev[j - 1] and s2[j - 1] == s3[j - 1]`.
-2. For each `i` in `1..m`, build `cur` from `prev`:
-   `cur[0] = prev[0] and s1[i - 1] == s3[i - 1]`, and for `j` in `1..n`, with
-   `k = i + j - 1`: `cur[j] = (prev[j] and s1[i - 1] == s3[k]) or
-   (cur[j - 1] and s2[j - 1] == s3[k])`.
-3. Replace `prev` with `cur` and continue.
-4. Return `prev[n]`, the last row's last cell.
+1. Initialize `previous` to row 0: `previous[0] = True`, then
+   `previous[j] = previous[j - 1] and s2[j - 1] == s3[j - 1]`.
+2. For each `i` in `1..m`, build `current` from `previous`:
+   `current[0] = previous[0] and s1[i - 1] == s3[i - 1]`, and for `j` in `1..n`, with
+   `k = i + j - 1`: `current[j] = (previous[j] and s1[i - 1] == s3[k]) or
+   (current[j - 1] and s2[j - 1] == s3[k])`.
+3. Replace `previous` with `current` and continue.
+4. Return `previous[n]`, the last row's last cell.
 
 #### Walkthrough
 
 Trace the two rolling rows on the successful classic input `s1 = "aabcc"`, `s2 = "dbbca"`, `s3 = "aadbbcbcac"`:
 
 ```text
-i=0 (s2 only)  prev = [T, ., ., ., ., .]
-i=1 (a)        cur  = [T, ., ., ., ., .]
-i=2 (a)        cur  = [T, T, T, T, T, .]
-i=3 (b)        cur  = [., T, T, ., T, .]
-i=4 (c)        cur  = [., ., T, T, T, T]
-i=5 (c)        cur  = [., ., ., T, ., T]
+i=0 (s2 only)  previous = [T, ., ., ., ., .]
+i=1 (a)        current  = [T, ., ., ., ., .]
+i=2 (a)        current  = [T, T, T, T, T, .]
+i=3 (b)        current  = [., T, T, ., T, .]
+i=4 (c)        current  = [., ., T, T, T, T]
+i=5 (c)        current  = [., ., ., T, ., T]
 ```
 
-Each row equals the corresponding table row from the Bottom-Up 2-D DP walkthrough, and the unneeded predecessor is discarded as soon as its successor exists. The final `prev[n]` is `T`, matching the expected answer `true` for this input; on the failing variant the final cell is `.`, returning `False`.
+Each row equals the corresponding table row from the Bottom-Up 2-D DP walkthrough, and the unneeded predecessor is discarded as soon as its successor exists. The final `previous[n]` is `T`, matching the expected answer `true` for this input; on the failing variant the final cell is `.`, returning `False`.
 
 #### Solution
 
-The code is the walkthrough's row loop: build `cur` from `prev`, then rotate.
+The code is the walkthrough's row loop: build `current` from `previous`, then rotate.
 
 ```python
 class Solution:
@@ -369,19 +369,19 @@ class Solution:
         m, n = len(s1), len(s2)
         if len(s3) != m + n:
             return False
-        prev = [True] + [False] * n
+        previous = [True] + [False] * n
         for j in range(1, n + 1):
-            prev[j] = prev[j - 1] and s2[j - 1] == s3[j - 1]
+            previous[j] = previous[j - 1] and s2[j - 1] == s3[j - 1]
         for i in range(1, m + 1):
-            cur = [False] * (n + 1)
-            cur[0] = prev[0] and s1[i - 1] == s3[i - 1]
+            current = [False] * (n + 1)
+            current[0] = previous[0] and s1[i - 1] == s3[i - 1]
             for j in range(1, n + 1):
                 k = i + j - 1
-                from_s1 = prev[j] and s1[i - 1] == s3[k]
-                from_s2 = cur[j - 1] and s2[j - 1] == s3[k]
-                cur[j] = from_s1 or from_s2
-            prev = cur
-        return prev[n]
+                from_s1 = previous[j] and s1[i - 1] == s3[k]
+                from_s2 = current[j - 1] and s2[j - 1] == s3[k]
+                current[j] = from_s1 or from_s2
+            previous = current
+        return previous[n]
 ```
 
 #### Time and Space Complexity Analysis
@@ -398,8 +398,8 @@ Two rows of `n + 1` cells; the discarded predecessor is garbage-collected.
 
 - The dependency pattern of the recurrence determines its memory: a cell
   reads its top and left neighbors only, so one spare row suffices.
-- `cur` must be a fresh row per `i`; updating `prev` in place would destroy
-  the top neighbor `prev[j]` before it is read.
+- `current` must be a fresh row per `i`; updating `previous` in place would destroy
+  the top neighbor `previous[j]` before it is read.
 - Iterating the shorter string as `s2` minimizes the row width; the answer is
   unchanged by the argument order.
 

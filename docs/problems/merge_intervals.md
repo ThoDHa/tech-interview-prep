@@ -422,21 +422,21 @@ class Solution:
         def dfs(node: int, component: List[int]) -> None:
             stack = [node]
             while stack:
-                cur = stack.pop()
-                if visited[cur]:
+                current = stack.pop()
+                if visited[current]:
                     continue
-                visited[cur] = True
-                component.append(cur)
-                for nxt in graph[cur]:
-                    if not visited[nxt]:
-                        stack.append(nxt)
+                visited[current] = True
+                component.append(current)
+                for neighbor in graph[current]:
+                    if not visited[neighbor]:
+                        stack.append(neighbor)
 
         for i in range(n):
             if not visited[i]:
                 component: List[int] = []
                 dfs(i, component)
-                lo = min(intervals[idx][0] for idx in component)
-                hi = max(intervals[idx][1] for idx in component)
+                lo = min(intervals[index][0] for index in component)
+                hi = max(intervals[index][1] for index in component)
                 result.append([lo, hi])
 
         return result

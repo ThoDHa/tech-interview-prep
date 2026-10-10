@@ -63,10 +63,8 @@ FETCH_DELAY_SECONDS = 0.5
 AMAZON_TAG = "Amazon"
 WRITEUP_LINK_TEMPLATE = "../../../docs/problems/amazon_oa/{slug}.md"
 # Site-relative links cannot reach the practice/ tree outside the mkdocs
-# docs_dir; the published site gets the absolute repo URL instead.
-PRACTICE_INDEX_URL = (
-    "https://github.com/ThoDHa/tech-interview-prep/tree/main/practice/amazon_oa/"
-)
+# docs_dir, and the AGENTS.md internal-links rule bars hyperlinks to
+# practice paths in docs prose; the index names the path as inline code.
 
 BANK_ROW_PATTERN = re.compile(
     r"^\|\*\*(?P<companies>[^*]+)\*\*\*?"
@@ -737,7 +735,7 @@ def render_index(manifest: Sequence[dict]) -> str:
         "Amazon-tagged coding problems from the"
         " [Tech-OA-Interview-Questions](https://github.com/perixtar/Tech-OA-Interview-Questions)"
         " bank (statement pages on fastprep.io), most recently updated first."
-        f" Practice stubs live under [`practice/amazon_oa/`]({PRACTICE_INDEX_URL}).",
+        " Practice stubs live under `practice/amazon_oa/`.",
         "",
         "| Updated | Problem | Companies |",
         "|---------|---------|-----------|",

@@ -289,30 +289,30 @@ def traverse_iterative(root):
 
 ### Level 1: Basic Traversals (Master First!)
 1. **LC 94 - Binary Tree Inorder Traversal**: Core DFS pattern
-2. **LC 102 - Binary Tree Level Order Traversal**: Core BFS pattern
-3. **LC 104 - Maximum Depth of Binary Tree**: Basic recursion
-4. **LC 226 - Invert Binary Tree**: Simplest structural recursion (swap children at every node)
+2. **[LC 102 - Binary Tree Level Order Traversal](../../problems/binary_tree_level_order_traversal.md)**: Core BFS pattern
+3. **[LC 104 - Maximum Depth of Binary Tree](../../problems/maximum_depth_of_binary_tree.md)**: Basic recursion
+4. **[LC 226 - Invert Binary Tree](../../problems/invert_binary_tree.md)**: Simplest structural recursion (swap children at every node)
 
 ### Level 2: Property Computation
-5. **LC 110 - Balanced Binary Tree**: Early termination pattern
-6. **LC 100 - Same Tree**: Parallel recursion
+5. **[LC 110 - Balanced Binary Tree](../../problems/balanced_binary_tree.md)**: Early termination pattern
+6. **[LC 100 - Same Tree](../../problems/same_tree.md)**: Parallel recursion
 7. **LC 101 - Symmetric Tree**: Mirror comparison
-8. **LC 98 - Validate Binary Search Tree**: Pass min/max bounds down the tree
+8. **[LC 98 - Validate Binary Search Tree](../../problems/validate_binary_search_tree.md)**: Pass min/max bounds down the tree
 
 ### Level 3: BST Order and Level Views
-9. **LC 235 - Lowest Common Ancestor of a BST**: Use BST ordering to walk toward the split point
-10. **LC 230 - Kth Smallest Element in a BST**: Inorder traversal visits BST values in sorted order
-11. **LC 199 - Binary Tree Right Side View**: BFS batching, keep the last node of each level
+9. **[LC 235 - Lowest Common Ancestor of a BST](../../problems/lowest_common_ancestor_of_a_binary_search_tree.md)**: Use BST ordering to walk toward the split point
+10. **[LC 230 - Kth Smallest Element in a BST](../../problems/kth_smallest_element_in_a_bst.md)**: Inorder traversal visits BST values in sorted order
+11. **[LC 199 - Binary Tree Right Side View](../../problems/binary_tree_right_side_view.md)**: BFS batching, keep the last node of each level
 
 ### Level 4: Path Problems
-12. **LC 543 - Diameter of Binary Tree**: Return vs update pattern
-13. **LC 124 - Binary Tree Maximum Path Sum**: Complex path tracking
+12. **[LC 543 - Diameter of Binary Tree](../../problems/diameter_of_binary_tree.md)**: Return vs update pattern
+13. **[LC 124 - Binary Tree Maximum Path Sum](../../problems/binary_tree_maximum_path_sum.md)**: Complex path tracking
 14. **LC 112 - Path Sum**: Root-to-leaf paths
 
 ### Level 5: Advanced Applications
-15. **LC 236 - LCA of Binary Tree**: Ancestor finding
-16. **LC 297 - Serialize/Deserialize Binary Tree**: Tree encoding
-17. **LC 105 - Construct from Preorder/Inorder**: Tree building
+15. **[LC 236 - LCA of Binary Tree](../../problems/lowest_common_ancestor_of_a_binary_tree.md)**: Ancestor finding
+16. **[LC 297 - Serialize/Deserialize Binary Tree](../../problems/serialize_and_deserialize_binary_tree.md)**: Tree encoding
+17. **[LC 105 - Construct from Preorder/Inorder](../../problems/construct_binary_tree_from_preorder_and_inorder_traversal.md)**: Tree building
 
 ---
 

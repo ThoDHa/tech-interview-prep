@@ -424,8 +424,8 @@ Every solution so far converts the digits by hand, but Python's `int()` already 
 
 1. Strip leading spaces with `s.lstrip(' ')`; if the string empties, return
    `0`.
-2. Read an optional sign at `s[0]`, setting `sign` and the start position
-   `idx`.
+2. Read an optional sign at `s[0]`, setting `sign` and the scan's start
+   `position`.
 3. Collect consecutive digit characters into `digits`; if none were read,
    return `0`.
 4. Convert with `result = sign * int(digits)` and clamp once with
@@ -437,9 +437,9 @@ Let us run Strip and Parse on Example 2: `s = "   -42"`, expected Output `-42`. 
 
 ```text
 lstrip(' ')     s = "-42"                 the three leading spaces vanish
-s[0] = '-'      sign = -1, idx = 1
-idx=1  '4'      digits = "4",  idx = 2
-idx=2  '2'      digits = "42", idx = 3    idx == len(s): scan stops
+s[0] = '-'      sign = -1, position = 1
+position=1  '4'      digits = "4",  position = 2
+position=2  '2'      digits = "42", position = 3    position == len(s): scan stops
 int("42")       result = -1 * 42 = -42
 clamp           max(INT_MIN, min(INT_MAX, -42)) = -42
 ```
@@ -464,17 +464,17 @@ class Solution:
             return 0
 
         sign = 1
-        idx = 0
+        position = 0
         if s[0] == '-':
             sign = -1
-            idx = 1
+            position = 1
         elif s[0] == '+':
-            idx = 1
+            position = 1
 
         digits = ''
-        while idx < len(s) and s[idx].isdigit():
-            digits += s[idx]
-            idx += 1
+        while position < len(s) and s[position].isdigit():
+            digits += s[position]
+            position += 1
 
         if not digits:
             return 0

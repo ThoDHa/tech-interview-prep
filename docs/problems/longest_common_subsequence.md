@@ -302,46 +302,46 @@ The full table.
 
 #### Derivation
 
-The table fill reads, for cell `(i, j)`, only `dp[i - 1][j - 1]`, `dp[i - 1][j]`, and `dp[i][j - 1]`: the previous row and the cell just built. Row `i - 2` and older are dead weight, so the whole table collapses to two rows, `prev` for row `i - 1` and `cur` under construction. Row rotation (`prev = cur`) plays the role the index decrement played in the recursion:
+The table fill reads, for cell `(i, j)`, only `dp[i - 1][j - 1]`, `dp[i - 1][j]`, and `dp[i][j - 1]`: the previous row and the cell just built. Row `i - 2` and older are dead weight, so the whole table collapses to two rows, `previous` for row `i - 1` and `current` under construction. Row rotation (`previous = current`) plays the role the index decrement played in the recursion:
 
-1. Initialize `prev` to a row of `n + 1` zeros.
-2. For each `i` in `1..m`, build `cur` from `prev`:
-   - `text1[i - 1] == text2[j - 1]`: `cur[j] = prev[j - 1] + 1`.
-   - Otherwise: `cur[j] = max(prev[j], cur[j - 1])`.
-3. Replace `prev` with `cur` and continue.
-4. Return `prev[n]`, the last row's last cell.
+1. Initialize `previous` to a row of `n + 1` zeros.
+2. For each `i` in `1..m`, build `current` from `previous`:
+   - `text1[i - 1] == text2[j - 1]`: `current[j] = previous[j - 1] + 1`.
+   - Otherwise: `current[j] = max(previous[j], current[j - 1])`.
+3. Replace `previous` with `current` and continue.
+4. Return `previous[n]`, the last row's last cell.
 
 #### Walkthrough
 
 Trace the two rolling rows on Example 1: `text1 = "cat"`, `text2 = "crabt"`:
 
 ```text
-start      prev = [0, 0, 0, 0, 0, 0]
-after i=1  cur  = [0, 1, 1, 1, 1, 1]
-after i=2  cur  = [0, 1, 1, 2, 2, 2]
-after i=3  cur  = [0, 1, 1, 2, 2, 3]
+start      previous = [0, 0, 0, 0, 0, 0]
+after i=1  current  = [0, 1, 1, 1, 1, 1]
+after i=2  current  = [0, 1, 1, 2, 2, 2]
+after i=3  current  = [0, 1, 1, 2, 2, 3]
 ```
 
-Each row equals the corresponding table row from the Bottom-Up 2-D DP walkthrough, and the unneeded predecessor is discarded as soon as its successor exists. The final `prev[n]` is `3`, matching the expected Output for Example 1; on Example 3 every row stays all zeros and `prev[n]` returns `0`.
+Each row equals the corresponding table row from the Bottom-Up 2-D DP walkthrough, and the unneeded predecessor is discarded as soon as its successor exists. The final `previous[n]` is `3`, matching the expected Output for Example 1; on Example 3 every row stays all zeros and `previous[n]` returns `0`.
 
 #### Solution
 
-The code is the walkthrough's row loop: build `cur` from `prev`, then rotate.
+The code is the walkthrough's row loop: build `current` from `previous`, then rotate.
 
 ```python
 class Solution:
     def longestCommonSubsequence(self, text1: str, text2: str) -> int:
         width = len(text2)
-        prev = [0] * (width + 1)
+        previous = [0] * (width + 1)
         for i in range(1, len(text1) + 1):
-            cur = [0] * (width + 1)
+            current = [0] * (width + 1)
             for j in range(1, width + 1):
                 if text1[i - 1] == text2[j - 1]:
-                    cur[j] = prev[j - 1] + 1
+                    current[j] = previous[j - 1] + 1
                 else:
-                    cur[j] = max(prev[j], cur[j - 1])
-            prev = cur
-        return prev[width]
+                    current[j] = max(previous[j], current[j - 1])
+            previous = current
+        return previous[width]
 ```
 
 #### Time and Space Complexity Analysis
@@ -358,8 +358,8 @@ Two rows of `n + 1` cells; the third row from the rotation is garbage-collected.
 
 - The dependency pattern of a recurrence determines its memory: anything a
   cell does not read can be freed.
-- `cur` must be a fresh row per `i`; writing into `prev` in place would
-  overwrite the diagonal `prev[j - 1]` before it is read.
+- `current` must be a fresh row per `i`; writing into `previous` in place would
+  overwrite the diagonal `previous[j - 1]` before it is read.
 - Iterating over the shorter string as `text2` minimizes the row width; the
   answer is unchanged by the argument order.
 

@@ -259,9 +259,9 @@ The hand-written search implements a textbook pattern, and Python ships that exa
 
 1. Per key, keep two parallel lists: `self.times[key]` for timestamps and
    `self.values[key]` for values, appended together on `set`. The increasing-timestamp guarantee keeps `times` sorted.
-2. On `get`, compute `idx = bisect.bisect_right(self.times[key], timestamp)`,
+2. On `get`, compute `insertion_point = bisect.bisect_right(self.times[key], timestamp)`,
    the count of timestamps `<=` the query.
-3. Return `""` when `idx == 0`, else `self.values[key][idx - 1]`, the value
+3. Return `""` when `insertion_point == 0`, else `self.values[key][insertion_point - 1]`, the value
    stored with the largest qualifying timestamp.
 
 #### Walkthrough
@@ -270,14 +270,14 @@ Trace the class through Example 1. Here `bisect_right` is itself the technique b
 
 ```text
 set("foo", "bar", 1)    times["foo"] = [1]     values["foo"] = ["bar"]
-get("foo", 1)           bisect_right([1], 1) = 1     idx=1 -> values["foo"][0] = "bar"
-get("foo", 3)           bisect_right([1], 3) = 1     idx=1 -> values["foo"][0] = "bar"
+get("foo", 1)           bisect_right([1], 1) = 1     insertion_point=1 -> values["foo"][0] = "bar"
+get("foo", 3)           bisect_right([1], 3) = 1     insertion_point=1 -> values["foo"][0] = "bar"
 set("foo", "bar2", 4)   times["foo"] = [1, 4]  values["foo"] = ["bar", "bar2"]
-get("foo", 4)           bisect_right([1, 4], 4) = 2  idx=2 -> values["foo"][1] = "bar2"
-get("foo", 5)           bisect_right([1, 4], 5) = 2  idx=2 -> values["foo"][1] = "bar2"
+get("foo", 4)           bisect_right([1, 4], 4) = 2  insertion_point=2 -> values["foo"][1] = "bar2"
+get("foo", 5)           bisect_right([1, 4], 5) = 2  insertion_point=2 -> values["foo"][1] = "bar2"
 ```
 
-Each `idx` equals the count of stored timestamps not exceeding the query, so `values["foo"][idx - 1]` is the newest qualifying value; a query before the first timestamp would yield `idx == 0` and return `""`. The collected returns are `[null, null, "bar", "bar", null, "bar2", "bar2"]`, matching the expected Output.
+Each `insertion_point` equals the count of stored timestamps not exceeding the query, so `values["foo"][insertion_point - 1]` is the newest qualifying value; a query before the first timestamp would yield `insertion_point == 0` and return `""`. The collected returns are `[null, null, "bar", "bar", null, "bar2", "bar2"]`, matching the expected Output.
 
 #### Solution
 
@@ -306,11 +306,12 @@ class TimeMap:
             return ""
 
         # bisect_right returns the count of timestamps <= query, so the entry
-        # just before it (idx - 1) holds the largest qualifying timestamp.
-        idx = bisect.bisect_right(self.times[key], timestamp)
-        if idx == 0:
+        # just before it (insertion_point - 1) holds the largest qualifying
+        # timestamp.
+        insertion_point = bisect.bisect_right(self.times[key], timestamp)
+        if insertion_point == 0:
             return ""
-        return self.values[key][idx - 1]
+        return self.values[key][insertion_point - 1]
 
 
 # Your TimeMap object will be instantiated and used as follows:
@@ -333,7 +334,7 @@ Across all keys, every `set` stores one timestamp and one value, so total storag
 
 #### Key Insights
 
-- `bisect_right` returns exactly the count of qualifying timestamps, so `idx - 1` is the
+- `bisect_right` returns exactly the count of qualifying timestamps, so `insertion_point - 1` is the
   rightmost valid index with no manual bound tracking.
 - Splitting timestamps and values into parallel lists lets `bisect` operate on a plain
   list of integers without a key function or extra unpacking.

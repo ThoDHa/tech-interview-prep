@@ -70,11 +70,11 @@ Every expression assigns each number a sign, so there are `2^n` candidate expres
 
 The most literal reading builds each expression one number at a time. Walking left to right, number `i` either joins the running total as `+nums[i]` or as `-nums[i]`; the expression is complete when every number has a sign, and it counts when the total hits `target`:
 
-1. Define `dfs(i, curr)` as the number of sign choices for `nums[i:]` that
-   turn the running total `curr` into `target`.
+1. Define `dfs(i, current)` as the number of sign choices for `nums[i:]` that
+   turn the running total `current` into `target`.
 2. When `i == len(nums)`, the expression is complete: return `1` when
-   `curr == target`, else `0`.
-3. Otherwise return `dfs(i + 1, curr + nums[i]) + dfs(i + 1, curr - nums[i])`.
+   `current == target`, else `0`.
+3. Otherwise return `dfs(i + 1, current + nums[i]) + dfs(i + 1, current - nums[i])`.
 4. Return `dfs(0, 0)`.
 
 #### Walkthrough
@@ -115,11 +115,11 @@ from typing import List
 
 class Solution:
     def findTargetSumWays(self, nums: List[int], target: int) -> int:
-        def dfs(i: int, curr: int) -> int:
+        def dfs(i: int, current: int) -> int:
             if i == len(nums):
-                return 1 if curr == target else 0
+                return 1 if current == target else 0
             # Assign + or - to nums[i] and recurse
-            return dfs(i + 1, curr + nums[i]) + dfs(i + 1, curr - nums[i])
+            return dfs(i + 1, current + nums[i]) + dfs(i + 1, current - nums[i])
 
         return dfs(0, 0)
 ```
@@ -141,17 +141,17 @@ The recursion stack, one frame per number along the current branch.
 - Correct on every input the constraints allow, including zeros and negative
   targets, with no special cases.
 - The number of distinct states is far below the number of paths: different
-  sign prefixes often reach the same `(i, curr)`, which is the redundancy the
+  sign prefixes often reach the same `(i, current)`, which is the redundancy the
   next solution removes.
 
 ### Top-Down Memoization
 
 #### Derivation
 
-The enumeration re-solves futures it has already seen: on `[2, 2, 2]`, the state `(index 2, current 0)` is reached both by `+2, -2` and by `-2, +2`, yet the subtree below it is walked twice. A branch's future depends only on `(i, curr)`, never on the signs that produced `curr`, so each pair is a [memoizable](https://en.wikipedia.org/wiki/Memoization) state. The running total stays within `±total`, so there are at most `n × (2 × total + 1)` of them:
+The enumeration re-solves futures it has already seen: on `[2, 2, 2]`, the state `(index 2, current 0)` is reached both by `+2, -2` and by `-2, +2`, yet the subtree below it is walked twice. A branch's future depends only on `(i, current)`, never on the signs that produced `current`, so each pair is a [memoizable](https://en.wikipedia.org/wiki/Memoization) state. The running total stays within `±total`, so there are at most `n × (2 × total + 1)` of them:
 
 1. Keep the enumeration's recursion unchanged.
-2. Add a `memo` keyed by `(i, curr)`; check it on entry and store before
+2. Add a `memo` keyed by `(i, current)`; check it on entry and store before
    every return.
 
 #### Walkthrough
@@ -194,15 +194,15 @@ class Solution:
     def findTargetSumWays(self, nums: List[int], target: int) -> int:
         memo = {}
 
-        def dfs(i: int, curr: int) -> int:
+        def dfs(i: int, current: int) -> int:
             if i == len(nums):
-                return 1 if curr == target else 0
-            if (i, curr) in memo:
-                return memo[(i, curr)]
-            memo[(i, curr)] = dfs(i + 1, curr + nums[i]) + dfs(
-                i + 1, curr - nums[i]
+                return 1 if current == target else 0
+            if (i, current) in memo:
+                return memo[(i, current)]
+            memo[(i, current)] = dfs(i + 1, current + nums[i]) + dfs(
+                i + 1, current - nums[i]
             )
-            return memo[(i, curr)]
+            return memo[(i, current)]
 
         return dfs(0, 0)
 ```
@@ -219,9 +219,9 @@ The memo's entries plus the recursion stack of `n` frames.
 
 #### Key Insights
 
-- The state `(i, curr)` is a complete summary of the sign history: many
+- The state `(i, current)` is a complete summary of the sign history: many
   prefixes collapse onto one entry.
-- The memo does not care that `curr` can be negative: dict keys handle it,
+- The memo does not care that `current` can be negative: dict keys handle it,
   which is why this formulation survives negative targets with no shifts or
   offsets.
 - The polynomial state count hints the problem has knapsack structure; the
@@ -395,12 +395,12 @@ The single row of `positive_sum + 1` entries.
 
 #### Derivation
 
-Step 2's memo is not part of the recurrence. The dict, the membership test, and the store all exist to remember what `dfs(i, curr)` returned, which is precisely what [`functools.cache`](https://docs.python.org/3/library/functools.html#functools.cache) does around any pure function. Decorating the recursion deletes all three pieces of bookkeeping and leaves the sign fork and the base case untouched:
+Step 2's memo is not part of the recurrence. The dict, the membership test, and the store all exist to remember what `dfs(i, current)` returned, which is precisely what [`functools.cache`](https://docs.python.org/3/library/functools.html#functools.cache) does around any pure function. Decorating the recursion deletes all three pieces of bookkeeping and leaves the sign fork and the base case untouched:
 
 1. Keep the memoized recursion's structure: the same base case, the same
    two-branch sum.
 2. Replace the `memo` dict with `@cache` on `dfs`, keyed automatically by the
-   arguments `(i, curr)`.
+   arguments `(i, current)`.
 3. Return `dfs(0, 0)`.
 
 The one behavioral cost: `@cache` also stores the `n + 1` leaf results and keeps every state alive for the life of the process.
@@ -416,7 +416,7 @@ dfs(2, +0) -> 1                       ** cached: no recompute **
 dfs(0, +0) -> 3
 ```
 
-10 distinct `(i, curr)` calls are cached (6 interior states plus the 4 leaves the dict version never stored), the one repeat arrival is a hit, and the answer is `3`, matching the expected Output for Example 1.
+10 distinct `(i, current)` calls are cached (6 interior states plus the 4 leaves the dict version never stored), the one repeat arrival is a hit, and the answer is `3`, matching the expected Output for Example 1.
 
 #### Solution
 
@@ -430,10 +430,10 @@ from typing import List
 class Solution:
     def findTargetSumWays(self, nums: List[int], target: int) -> int:
         @cache
-        def dfs(i: int, curr: int) -> int:
+        def dfs(i: int, current: int) -> int:
             if i == len(nums):
-                return 1 if curr == target else 0
-            return dfs(i + 1, curr + nums[i]) + dfs(i + 1, curr - nums[i])
+                return 1 if current == target else 0
+            return dfs(i + 1, current + nums[i]) + dfs(i + 1, current - nums[i])
 
         return dfs(0, 0)
 ```
@@ -442,7 +442,7 @@ class Solution:
 
 ##### Time Complexity: `O(n × total)`
 
-The cache admits each `(i, curr)` state once; the body is constant work.
+The cache admits each `(i, current)` state once; the body is constant work.
 
 ##### Space Complexity: `O(n × total)`
 
@@ -463,7 +463,7 @@ The decorator's cache plus the recursion stack.
 ### Time Complexity
 
 - **Brute Force Enumeration**: `O(2^n)` - every sign assignment enumerated.
-- **Top-Down Memoization**: `O(n × total)` - one solve per `(i, curr)` state.
+- **Top-Down Memoization**: `O(n × total)` - one solve per `(i, current)` state.
 - **Bottom-Up 2-D DP**: `O(n × total)` - one update per table cell.
 - **Space-Optimized 1-D DP**: `O(n × total)` - the same cells, one row at a time.
 - **Top-Down Memoization with functools.cache**: `O(n × total)` - the dict memo with library bookkeeping.
@@ -502,7 +502,7 @@ The decorator's cache plus the recursion stack.
 
 - The parity and range gates are free early exits: they reject impossible
   targets in `O(n)` before any table or recursion is built.
-- The state space of the memoized recursion is symmetric in `±curr`, so
+- The state space of the memoized recursion is symmetric in `±current`, so
   states beyond `±(total - remaining)` are unreachable; neither the memo nor
   the table exploits this, and exploiting it complicates the code for a
   constant factor.
