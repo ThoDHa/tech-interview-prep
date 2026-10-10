@@ -1,0 +1,66 @@
+[
+  {
+    "id": "example_1",
+    "args": [
+      [
+        [
+          "/catalog",
+          "/home"
+        ],
+        [
+          "/item/7",
+          "/catalog"
+        ],
+        [
+          "/cart",
+          "/item/7"
+        ]
+      ],
+      [
+        "/home",
+        "/cart"
+      ]
+    ],
+    "expected": true
+  },
+  {
+    "id": "example_2",
+    "args": [
+      [
+        [
+          "/pricing",
+          "/home"
+        ],
+        [
+          "/signup",
+          "/pricing"
+        ]
+      ],
+      [
+        "/pricing",
+        "/home"
+      ]
+    ],
+    "expected": false
+  },
+  {
+    "id": "example_3",
+    "args": [
+      [
+        [
+          "/landing",
+          ""
+        ],
+        [
+          "/account",
+          "/landing"
+        ]
+      ],
+      [
+        "/account",
+        "/account"
+      ]
+    ],
+    "expected": true
+  }
+]

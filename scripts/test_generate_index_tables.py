@@ -120,18 +120,24 @@ EXPECTED_AMAZON_OVERLAP_LC_SLUGS = frozenset(
         "container-with-most-water",
         "course-schedule",
         "course-schedule-ii",
+        "edit-distance",
         "find-median-from-data-stream",
         "group-anagrams",
+        "house-robber",
         "interleaving-string",
         "longest-substring-without-repeating-characters",
+        "max-area-of-island",
         "meeting-rooms-ii",
         "merge-intervals",
         "merge-k-sorted-lists",
         "minimum-window-substring",
+        "number-of-islands",
         "sliding-window-maximum",
         "task-scheduler",
+        "top-k-frequent-elements",
         "trapping-rain-water",
         "word-break",
+        "word-ladder",
         "word-search-ii",
     }
 )
@@ -627,7 +633,7 @@ def test_amazon_writeup_difficulty_reads_every_committed_header_offline():
         gen.amazon_writeup_difficulty(entry["slug"]) for entry in amazon
     )
     assert counts == collections.Counter(
-        {"Easy": 67, "Medium": 180, "Hard": 79, None: 24}
+        {"Easy": 69, "Medium": 204, "Hard": 86, None: 24}
     )
 
 
@@ -1118,7 +1124,7 @@ def test_amazon_overlap_lc_slugs_ignores_entries_without_the_amazon_prefix():
     assert gen.amazon_overlap_lc_slugs(fixture_neetcode(), [entry]) == set()
 
 
-def test_committed_amazon_overlap_rule_yields_exactly_the_17_listed_problems():
+def test_committed_amazon_overlap_rule_yields_exactly_the_23_listed_problems():
     overlap = gen.amazon_overlap_lc_slugs(
         gen.load_neetcode_manifest(NEETCODE_MANIFEST_PATH),
         gen.load_amazon_manifest(AMAZON_MANIFEST_PATH),
@@ -1548,13 +1554,13 @@ def test_render_unified_section_links_rows_landing_relative():
     assert "](problems/" not in section
 
 
-def test_render_unified_section_marks_exactly_the_17_committed_amazon_overlap_rows():
+def test_render_unified_section_marks_exactly_the_23_committed_amazon_overlap_rows():
     rows = unified_table_rows(committed_section())
     marked_slugs = {
         unified_row_lc_slug(row) for row in rows if gen.AMAZON_MARKER in row
     }
     assert marked_slugs == EXPECTED_AMAZON_OVERLAP_LC_SLUGS
-    assert sum(gen.AMAZON_MARKER in row for row in rows) == 17
+    assert sum(gen.AMAZON_MARKER in row for row in rows) == 23
 
 
 def test_render_unified_section_excludes_grind_only_amazon_matches_from_the_marker():
@@ -1997,7 +2003,7 @@ def test_committed_nav_follows_the_interleaved_study_order():
     assert children == [slug.replace("-", "_") for slug in EXPECTED_STUDY_ORDER]
 
 
-def test_committed_nav_amazon_subsection_holds_350_unique_pages_at_one_level():
+def test_committed_nav_amazon_subsection_holds_383_unique_pages_at_one_level():
     mkdocs_text = gen.MKDOCS_PATH.read_text(encoding="utf-8")
     children = gen.nav_amazon_children(mkdocs_text)
     assert len(children) == gen.AMAZON_ROW_COUNT

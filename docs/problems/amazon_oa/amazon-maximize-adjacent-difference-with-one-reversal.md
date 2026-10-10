@@ -4,6 +4,8 @@
 
 Given an integer array values, define its score as the sum of abs(values[i] - values[i + 1]) over every adjacent pair.
 
+You may reverse at most one contiguous subarray. Return the maximum score obtainable after the optional reversal.
+
 ## Examples
 
 ### Example 1
@@ -14,9 +16,18 @@ Given an integer array values, define its score as the sum of abs(values[i] - va
 
 **Explanation:** The original score is 8. Reversing the subarray [3,1,5] produces [2,5,1,3,4], whose score is 10.
 
+### Example 2
+
+**Input:** `values = [1,2,3,4]`
+
+**Output:** `5`
+
+**Explanation:** Reversing [2,3] produces [1,3,2,4], with score 2 + 1 + 2 = 5.
+
 ## Constraints
 
-<!-- Constraints not parseable from FastPrep for amazon-maximize-adjacent-difference-with-one-reversal; fill them in. -->
+- `1 <= values.length <= 10^5`
+- `-10^9 <= values[i] <= 10^9`
 
 ## Solutions
 

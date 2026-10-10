@@ -317,6 +317,46 @@ nav:
       - "Maximum Frequency Stack": problems/maximum_frequency_stack.md
     - "Amazon OA":
       - problems/amazon_oa/index.md
+      - "Concatenated Words": problems/amazon_oa/amazon-concatenated-words-variant.md
+      - "Longest Increasing Subsequence": problems/amazon_oa/amazon-longest-increasing-subsequence-variant.md
+      - "Minimum Moves to Capture the King": problems/amazon_oa/amazon-minimum-moves-to-capture-king.md
+      - "Squirrel Nut Collection Shortest Path": problems/amazon_oa/amazon-squirrel-nut-collection-shortest-path.md
+      - "Maximize Center A Package Benefit": problems/amazon_oa/amazon-center-a-package-benefit.md
+      - "Max Area of Island": problems/amazon_oa/amazon-max-area-of-island.md
+      - "Maximum Rating Threshold Count": problems/amazon_oa/amazon-maximum-rating-threshold-count.md
+      - "Number of Islands": problems/amazon_oa/amazon-number-of-islands.md
+      - "Count Islands from Streaming Rows": problems/amazon_oa/amazon-streaming-island-count.md
+      - "Top K Frequent Elements": problems/amazon_oa/amazon-top-k-frequent-elements.md
+      - "Minimum Merge Conflicts": problems/amazon_oa/amazon-minimum-merge-conflicts.md
+      - "Optimize Package Order by Sorting One Window": problems/amazon_oa/amazon-optimize-package-order-one-window.md
+      - "Largest Binary-String Subset Within Bit Budgets": problems/amazon_oa/amazon-binary-strings-bounded-subset.md
+      - "Lowest Common Ancestor in an Inserted BST": problems/amazon_oa/amazon-bst-lowest-common-ancestor.md
+      - "Maximize K-Element AND with an Increment Budget": problems/amazon_oa/amazon-maximize-k-element-and-with-increment-budget.md
+      - "Evaluate Division": problems/amazon_oa/amazon-evaluate-division.md
+      - "Apply a Reversi Move": problems/amazon_oa/amazon-reversi-move-simulation.md
+      - "Longest Content Window with Bounded Labels": problems/amazon_oa/amazon-streaming-content-label-window.md
+      - "Maximum Stock Profit with At Most Two Transactions": problems/amazon_oa/amazon-best-time-to-buy-and-sell-stock-iii.md
+      - "Currency Conversion Rate": problems/amazon_oa/amazon-currency-conversion-rate.md
+      - "House Robber": problems/amazon_oa/amazon-house-robber.md
+      - "Lisp Expression Parser": problems/amazon_oa/amazon-lisp-expression-parser.md
+      - "Maximize Consecutive Equal Answers": problems/amazon_oa/amazon-maximize-answer-key-confusion.md
+      - "Most Frequent Name": problems/amazon_oa/amazon-most-frequent-name.md
+      - "Minimum Time to Spread Through a Grid": problems/amazon_oa/amazon-rotting-oranges-variation.md
+      - "Group-Relative Policy Advantages": problems/amazon_oa/amazon-group-relative-policy-advantages.md
+      - "Grouped-Query Attention with a KV Cache": problems/amazon_oa/amazon-grouped-query-attention-with-kv-cache.md
+      - "Capacity To Ship Packages Within D Days": problems/amazon_oa/amazon-capacity-to-ship-packages-within-d-days.md
+      - "Get Minimum Amount": problems/amazon_oa/amazon-get-min-amount.md
+      - "Minimum Cost for Roads and Hospitals": problems/amazon_oa/amazon-roads-and-hospitals-minimum-cost.md
+      - "Select K Paired Indices for Maximum Score": problems/amazon_oa/amazon-select-k-paired-array-score.md
+      - "Environment Variable Store and Substitution": problems/amazon_oa/amazon-environment-variable-substitution.md
+      - "Minimum Edge Moves to Connect a Network": problems/amazon_oa/amazon-minimum-edge-moves-to-connect-graph.md
+      - "Simplify a Binary Expression Tree": problems/amazon_oa/amazon-simplify-expression-tree.md
+      - "Path Through an O/X Grid Using Only Right and Down": problems/amazon_oa/amazon-right-down-grid-path.md
+      - "Allocate Minimum Pages": problems/amazon_oa/amazon-allocate-minimum-pages.md
+      - "Edit Distance": problems/amazon_oa/amazon-edit-distance.md
+      - "Longest Subarray with K Distinct Values": problems/amazon_oa/amazon-longest-subarray-with-k-distinct.md
+      - "Trapping Rain Water": problems/amazon_oa/amazon-trapping-rain-water.md
+      - "Word Ladder": problems/amazon_oa/amazon-word-ladder.md
       - "Maximize Adjacent Difference With One Reversal": problems/amazon_oa/amazon-maximize-adjacent-difference-with-one-reversal.md
       - "Shortest Grid Path With One Wall Break": problems/amazon_oa/amazon-shortest-grid-path-with-one-wall-break.md
       - "Course Order and Cycle": problems/amazon_oa/amazon-course-order-and-cycle.md
@@ -328,11 +368,9 @@ nav:
       - "Aggressive Cows": problems/amazon_oa/amazon-aggressive-cows.md
       - "All Anagram Start Indices": problems/amazon_oa/amazon-anagram-start-indices.md
       - "Basic Calculator": problems/amazon_oa/amazon-basic-calculator.md
-      - "Largest Binary-String Subset Within Bit Budgets": problems/amazon_oa/amazon-binary-strings-bounded-subset.md
       - "Binary Tree Cameras": problems/amazon_oa/amazon-binary-tree-cameras.md
       - "Binary Tree Right View": problems/amazon_oa/amazon-binary-tree-right-view.md
       - "Calculate Beauty Values": problems/amazon_oa/amazon-calculate-beauty-values.md
-      - "Capacity To Ship Packages Within D Days": problems/amazon_oa/amazon-capacity-to-ship-packages-within-d-days.md
       - "Cheapest Flights Within K Stops": problems/amazon_oa/amazon-cheapest-flights-within-k-stops.md
       - "Construct a Tree from Level-Order and Inorder Traversals": problems/amazon_oa/amazon-construct-tree-level-inorder.md
       - "Container With Most Water": problems/amazon_oa/amazon-container-with-most-water.md
@@ -340,7 +378,6 @@ nav:
       - "Count Uni-Valued Subtrees": problems/amazon_oa/amazon-count-univalued-subtrees.md
       - "Course Schedule": problems/amazon_oa/amazon-course-schedule.md
       - "Course Schedule II": problems/amazon_oa/amazon-course-schedule-ii.md
-      - "Currency Conversion Rate": problems/amazon_oa/amazon-currency-conversion-rate.md
       - "Decode an Encoded String": problems/amazon_oa/amazon-decode-encoded-string.md
       - "Distance Between Two Tree Nodes": problems/amazon_oa/amazon-distance-between-tree-nodes.md
       - "E-commerce Notification Router": problems/amazon_oa/amazon-ecommerce-notification-router.md
@@ -373,15 +410,12 @@ nav:
       - "Next Permutation": problems/amazon_oa/amazon-next-permutation.md
       - "Product of Array Except Self": problems/amazon_oa/amazon-product-array-except-self.md
       - "Reorganize a String": problems/amazon_oa/amazon-reorganize-string.md
-      - "Path Through an O/X Grid Using Only Right and Down": problems/amazon_oa/amazon-right-down-grid-path.md
-      - "Minimum Time to Spread Through a Grid": problems/amazon_oa/amazon-rotting-oranges-variation.md
       - "Running Delivery Time Medians": problems/amazon_oa/amazon-running-delivery-time-medians.md
       - "Search in a Rotated Sorted Array": problems/amazon_oa/amazon-search-rotated-sorted-array.md
       - "Task Scheduler": problems/amazon_oa/amazon-task-scheduler.md
       - "Three Sum Closest": problems/amazon_oa/amazon-three-sum-closest.md
       - "Fare Between Stops on a Train Route": problems/amazon_oa/amazon-train-route-fare.md
       - "Initial and Final Accounts in a Transfer Chain": problems/amazon_oa/amazon-transfer-chain-endpoints.md
-      - "Trapping Rain Water": problems/amazon_oa/amazon-trapping-rain-water.md
       - "Minimum Moves for Two Knights to Meet": problems/amazon_oa/amazon-two-knights-minimum-meeting-moves.md
       - "Unique Pairs in a 2D Matrix Summing to Target": problems/amazon_oa/amazon-unique-pairs-2d-target.md
       - "Unique String Permutations": problems/amazon_oa/amazon-unique-string-permutations.md
@@ -389,18 +423,17 @@ nav:
       - "Maximum Saw Height for At Least M Cut Length": problems/amazon_oa/amazon-woodcut-saw-height.md
       - "Word Break": problems/amazon_oa/amazon-word-break.md
       - "Word Break II": problems/amazon_oa/amazon-word-break-ii.md
-      - "Get Minimum Amount": problems/amazon_oa/amazon-get-min-amount.md
       - "Interleaving String": problems/amazon_oa/amazon-interleaving-string.md
       - "Dynamic Prefix Search Collection": problems/amazon_oa/amazon-prefix-search-collection.md
       - "Word Search II": problems/amazon_oa/amazon-word-search-ii.md
       - "Recent Advertisement Click Counts": problems/amazon_oa/amazon-ad-click-counts-sliding-window.md
       - "Most Frequent Consecutive Website Pattern": problems/amazon_oa/amazon-consecutive-website-visit-pattern.md
       - "Longest Substring Without Repeating Characters": problems/amazon_oa/amazon-longest-substring-without-repeating-characters.md
+      - "Page Referrer Reachability": problems/amazon_oa/amazon-page-referrer-reachability.md
       - "Sliding-Window Rate Limiter": problems/amazon_oa/amazon-sliding-window-rate-limiter.md
       - "Find Minimum Cost": problems/amazon_oa/amazon-find-minimum-cost.md
       - "Maximum System Memory Capacity": problems/amazon_oa/amazon-maximum-capacity.md
       - "Meeting Rooms II": problems/amazon_oa/amazon-meeting-rooms-ii.md
-      - "Minimum Merge Conflicts": problems/amazon_oa/amazon-minimum-merge-conflicts.md
       - "Next Smaller Ticket Price": problems/amazon_oa/amazon-next-smaller-ticket-price.md
       - "Remove K Digits": problems/amazon_oa/amazon-remove-k-digits.md
       - "Get Distinct Pairs": problems/amazon_oa/amazon-get-distinct-pairs.md

@@ -9,5 +9,17 @@
       ]
     ],
     "expected": 14
+  },
+  {
+    "id": "example_2",
+    "args": [
+      [
+        1,
+        8,
+        3,
+        5
+      ]
+    ],
+    "expected": 30
   }
 ]

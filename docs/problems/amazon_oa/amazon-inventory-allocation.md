@@ -18,9 +18,21 @@ Requests with a higher bidAmount are processed before lower bids.For requests wi
 
 **Explanation:** Customer 2 is fully served first because bid 8 is highest. Customers 1 and 3 then share the remaining inventory at bid 5. No inventory remains for customer 4.
 
+### Example 2
+
+**Input:** `requests = [[1,2,10,0],[2,3,10,1],[3,1,5,0]]`, `totalInventory = 3`
+
+**Output:** `[3]`
+
+**Explanation:** The bid-10 group receives all 3 available items before the lower bid is considered, so customer 3 receives none.
+
 ## Constraints
 
-<!-- Constraints not parseable from FastPrep for amazon-inventory-allocation; fill them in. -->
+- `1 <= requests.length <= 10^5`
+- `requests[i].length = 4`
+- `customer IDs are unique.`
+- `0 <= timestamp <= 10^9`
+- `0 <= totalInventory <= 10^9`
 
 ## Solutions
 

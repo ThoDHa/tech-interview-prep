@@ -5,7 +5,7 @@ Pipeline:
   1. Validate the three committed data sources: scripts/grind75_table.json
      (the 77 hand-maintained Grind 75 rows extracted from the original hand
      table), scripts/neetcode150_manifest.json (the 150-entry NeetCode
-     track), and scripts/amazon_oa_manifest.json (the 350-entry Amazon OA
+     track), and scripts/amazon_oa_manifest.json (the 383-entry Amazon OA
      bank, most recently updated first).
   2. Merge the two LeetCode tracks into one unified table: 168 unique
      problems, 59 of them on both tracks (one row, both credited). The
@@ -25,7 +25,7 @@ Pipeline:
      (navigation.indexes) with two subsections, LeetCode (all 168 problem
      pages at one level, in the same interleaved study order) and Amazon
      OA (a section-with-page: the bank index is the section's own entry,
-     with all 350 problem pages at one level beneath it, most recently
+     with all 383 problem pages at one level beneath it, most recently
      updated first). --check verifies the nav shape, so the subsections
      stay generator-owned and refreshable.
 
@@ -83,7 +83,7 @@ BOTH_TRACKS = "Grind 75 + NeetCode 150"
 GRIND_ROW_COUNT = 77
 NUMBERED_GRIND_COUNT = 75
 NEETCODE_TRACK_SIZE = 150
-AMAZON_ROW_COUNT = 350
+AMAZON_ROW_COUNT = 383
 GRIND_ONLY_COUNT = 18
 OVERLAP_COUNT = 59
 NEETCODE_ONLY_COUNT = 91
@@ -387,7 +387,7 @@ def load_amazon_manifest(path: Path = AMAZON_MANIFEST_PATH) -> List[dict]:
         path: Path to amazon_oa_manifest.json (default: scripts/amazon_oa_manifest.json).
 
     Returns:
-        The 350 entries, most recently updated first.
+        The 383 entries, most recently updated first.
 
     Raises:
         SourceError: When the file is missing or not a JSON list.

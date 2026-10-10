@@ -35,6 +35,28 @@ CASES = [
         ],
         "expected": '1.88',
     },
+    {
+        "id": 'example_2',
+        "args": [
+            [
+                [
+                    'USD',
+                    'CAD',
+                    '1.30',
+                ],
+                [
+                    'CAD',
+                    'EUR',
+                    '0.70',
+                ],
+            ],
+            [
+                'USD',
+                'EUR',
+            ],
+        ],
+        "expected": '0.91',
+    },
 ]
 
 if len(CASES) == 0:
@@ -54,6 +76,6 @@ def _check(method, case):
 @pytest.mark.parametrize("case", CASES, ids=_ids(CASES))
 def test_solution(case):
     try:
-        _check(solution.Solution().solve, case)
+        _check(solution.Solution().findConversionRate, case)
     except NotSolved:
         pytest.skip("solution.py not implemented yet")

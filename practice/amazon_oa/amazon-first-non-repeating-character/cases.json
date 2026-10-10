@@ -5,5 +5,19 @@
       "swiss"
     ],
     "expected": "w"
+  },
+  {
+    "id": "example_2",
+    "args": [
+      "aabbc"
+    ],
+    "expected": "c"
+  },
+  {
+    "id": "example_3",
+    "args": [
+      "aabb"
+    ],
+    "expected": ""
   }
 ]

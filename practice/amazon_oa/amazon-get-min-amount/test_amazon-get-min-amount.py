@@ -42,6 +42,6 @@ def _check(method, case):
 @pytest.mark.parametrize("case", CASES, ids=_ids(CASES))
 def test_solution(case):
     try:
-        _check(solution.Solution().solve, case)
+        _check(solution.Solution().getMinAmount, case)
     except NotSolved:
         pytest.skip("solution.py not implemented yet")
