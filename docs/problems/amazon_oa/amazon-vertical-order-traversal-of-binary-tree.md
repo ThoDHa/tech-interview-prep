@@ -115,6 +115,17 @@ The code is the walkthrough's two queue passes: replay the tokens into a tree, t
 ```python
 from collections import deque
 from typing import List, Tuple
+from typing import Optional
+class TreeNode:
+    def __init__(
+        self,
+        val: int = 0,
+        left: "Optional[TreeNode]" = None,
+        right: "Optional[TreeNode]" = None,
+    ) -> None:
+        self.val = val
+        self.left = left
+        self.right = right
 
 
 class Solution:
@@ -157,6 +168,7 @@ class Solution:
                 columns.append([])
             columns[-1].append(record[3])
         return columns
+
 ```
 
 #### Time and Space Complexity Analysis
@@ -213,6 +225,16 @@ The code swaps the coordinate queue for the recursive `visit`; rebuild, sort, an
 ```python
 from collections import deque
 from typing import List, Optional, Tuple
+class TreeNode:
+    def __init__(
+        self,
+        val: int = 0,
+        left: "Optional[TreeNode]" = None,
+        right: "Optional[TreeNode]" = None,
+    ) -> None:
+        self.val = val
+        self.left = left
+        self.right = right
 
 
 class Solution:
@@ -255,6 +277,7 @@ class Solution:
                 columns.append([])
             columns[-1].append(record[3])
         return columns
+
 ```
 
 #### Time and Space Complexity Analysis
@@ -309,6 +332,17 @@ The code is the bucket-filling BFS with the range-walk emission; the rebuild blo
 ```python
 from collections import deque
 from typing import Dict, List
+from typing import Optional
+class TreeNode:
+    def __init__(
+        self,
+        val: int = 0,
+        left: "Optional[TreeNode]" = None,
+        right: "Optional[TreeNode]" = None,
+    ) -> None:
+        self.val = val
+        self.left = left
+        self.right = right
 
 
 class Solution:
@@ -347,6 +381,7 @@ class Solution:
                 queue.append((node.right, col + 1))
 
         return [columns[col] for col in range(smallest_col, largest_col + 1)]
+
 ```
 
 #### Time and Space Complexity Analysis
