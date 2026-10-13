@@ -11,11 +11,12 @@ Pipeline:
        - practice/<dirSlug>/cases.json     (parseable examples, else [])
        - practice/<dirSlug>/test_<dirSlug>.py (harness-driven tests)
   3. Once every delta problem is scaffolded, the mkdocs.yml Problems nav
-      and the docs/problems/index.md landing page are updated by their
-      owners: the nav's Problems section is owned by
-      scripts/generate_index_tables.py (which merges this track with the
-      Grind 75 rows into one flat LeetCode subsection), and the landing
-      page tables are owned by the same generator.
+       and the docs/problems/index.md landing page are updated by their
+       owners: the nav's Problems section is owned by
+       scripts/generate_index_tables.py (which merges this track with the
+       Grind 75 rows into one flat "Grind 75 + NeetCode 150" subsection),
+       and the landing
+       page tables are owned by the same generator.
 
 Overlap problems (already in the bank) keep their single write-up and
 practice folder and are never scaffolded or modified.

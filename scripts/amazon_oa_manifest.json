@@ -7,7 +7,9 @@
       "Amazon"
     ],
     "updated": "2026-10-07",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Hard",
+    "categories": "String, Dynamic Programming, Trie"
   },
   {
     "slug": "amazon-longest-increasing-subsequence-variant",
@@ -17,7 +19,9 @@
       "Amazon"
     ],
     "updated": "2026-10-07",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Array, Binary Search, Dynamic Programming"
   },
   {
     "slug": "amazon-minimum-moves-to-capture-king",
@@ -27,7 +31,9 @@
       "Amazon"
     ],
     "updated": "2026-10-07",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Graph, Breadth First Search, Matrix"
   },
   {
     "slug": "amazon-squirrel-nut-collection-shortest-path",
@@ -37,7 +43,9 @@
       "Amazon"
     ],
     "updated": "2026-10-07",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Array, Greedy, Math"
   },
   {
     "slug": "amazon-center-a-package-benefit",
@@ -47,7 +55,9 @@
       "Amazon"
     ],
     "updated": "2026-10-03",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Array, Greedy, Sorting"
   },
   {
     "slug": "amazon-max-area-of-island",
@@ -57,7 +67,9 @@
       "Amazon"
     ],
     "updated": "2026-10-03",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Matrix, Graph, Depth First Search, Breadth First Search"
   },
   {
     "slug": "amazon-maximum-rating-threshold-count",
@@ -67,7 +79,9 @@
       "Amazon"
     ],
     "updated": "2026-10-03",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Array, Sorting"
   },
   {
     "slug": "amazon-number-of-islands",
@@ -77,7 +91,9 @@
       "Amazon"
     ],
     "updated": "2026-10-03",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Matrix, Graph, Depth First Search, Breadth First Search"
   },
   {
     "slug": "amazon-streaming-island-count",
@@ -87,7 +103,9 @@
       "Amazon"
     ],
     "updated": "2026-10-03",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Hard",
+    "categories": "Matrix, Graph, Union Find, Simulation"
   },
   {
     "slug": "amazon-top-k-frequent-elements",
@@ -97,7 +115,9 @@
       "Amazon"
     ],
     "updated": "2026-10-03",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Array, Hash Table, Heap, Sorting"
   },
   {
     "slug": "amazon-minimum-merge-conflicts",
@@ -107,7 +127,9 @@
       "Amazon"
     ],
     "updated": "2026-10-01",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Hard",
+    "categories": "Dynamic Programming, String"
   },
   {
     "slug": "amazon-optimize-package-order-one-window",
@@ -117,7 +139,9 @@
       "Amazon"
     ],
     "updated": "2026-09-30",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Array, Sorting, Simulation"
   },
   {
     "slug": "amazon-binary-strings-bounded-subset",
@@ -127,7 +151,9 @@
       "Amazon"
     ],
     "updated": "2026-09-29",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Array, String, Dynamic Programming"
   },
   {
     "slug": "amazon-bst-lowest-common-ancestor",
@@ -137,7 +163,9 @@
       "Amazon"
     ],
     "updated": "2026-09-29",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Easy",
+    "categories": "Tree, Binary Search"
   },
   {
     "slug": "amazon-maximize-k-element-and-with-increment-budget",
@@ -147,7 +175,9 @@
       "Amazon"
     ],
     "updated": "2026-09-29",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Hard",
+    "categories": "Array, Bit Manipulation, Greedy, Sorting"
   },
   {
     "slug": "amazon-evaluate-division",
@@ -157,7 +187,9 @@
       "Amazon"
     ],
     "updated": "2026-09-28",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Graph, Depth First Search, Breadth First Search"
   },
   {
     "slug": "amazon-reversi-move-simulation",
@@ -167,7 +199,9 @@
       "Amazon"
     ],
     "updated": "2026-09-28",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Array, Matrix, Simulation"
   },
   {
     "slug": "amazon-streaming-content-label-window",
@@ -177,7 +211,9 @@
       "Amazon"
     ],
     "updated": "2026-09-28",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Hard",
+    "categories": "Array, Hash Table, Sliding Window"
   },
   {
     "slug": "amazon-best-time-to-buy-and-sell-stock-iii",
@@ -187,7 +223,9 @@
       "Amazon"
     ],
     "updated": "2026-09-27",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Array, Dynamic Programming"
   },
   {
     "slug": "amazon-currency-conversion-rate",
@@ -197,7 +235,9 @@
       "Amazon"
     ],
     "updated": "2026-09-27",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Graph, Breadth First Search, Hash Table"
   },
   {
     "slug": "amazon-house-robber",
@@ -207,7 +247,9 @@
       "Amazon"
     ],
     "updated": "2026-09-27",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Array, Dynamic Programming"
   },
   {
     "slug": "amazon-lisp-expression-parser",
@@ -217,7 +259,9 @@
       "Amazon"
     ],
     "updated": "2026-09-27",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "String, Stack, Parsing"
   },
   {
     "slug": "amazon-maximize-answer-key-confusion",
@@ -227,7 +271,9 @@
       "Amazon"
     ],
     "updated": "2026-09-27",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "String, Sliding Window"
   },
   {
     "slug": "amazon-most-frequent-name",
@@ -237,7 +283,9 @@
       "Amazon"
     ],
     "updated": "2026-09-27",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Easy",
+    "categories": "Array, Hash Table, String"
   },
   {
     "slug": "amazon-rotting-oranges-variation",
@@ -247,7 +295,9 @@
       "Amazon"
     ],
     "updated": "2026-09-27",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Array, Breadth First Search, Matrix"
   },
   {
     "slug": "amazon-group-relative-policy-advantages",
@@ -257,7 +307,9 @@
       "Amazon"
     ],
     "updated": "2026-09-25",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Array, Hash Table, Math, Simulation"
   },
   {
     "slug": "amazon-grouped-query-attention-with-kv-cache",
@@ -267,7 +319,9 @@
       "Amazon"
     ],
     "updated": "2026-09-25",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Hard",
+    "categories": "Matrix, Simulation, Math"
   },
   {
     "slug": "amazon-capacity-to-ship-packages-within-d-days",
@@ -277,7 +331,9 @@
       "Amazon"
     ],
     "updated": "2026-09-24",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Array, Binary Search"
   },
   {
     "slug": "amazon-get-min-amount",
@@ -287,7 +343,9 @@
       "Amazon"
     ],
     "updated": "2026-09-24",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": null,
+    "categories": null
   },
   {
     "slug": "amazon-roads-and-hospitals-minimum-cost",
@@ -297,7 +355,9 @@
       "Amazon"
     ],
     "updated": "2026-09-24",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Graph, Union Find, Greedy"
   },
   {
     "slug": "amazon-select-k-paired-array-score",
@@ -307,7 +367,9 @@
       "Amazon"
     ],
     "updated": "2026-09-24",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Array, Sorting, Heap, Greedy"
   },
   {
     "slug": "amazon-environment-variable-substitution",
@@ -317,7 +379,9 @@
       "Amazon"
     ],
     "updated": "2026-09-23",
-    "parse_status": "parsed-empty-cases"
+    "parse_status": "parsed-empty-cases",
+    "difficulty": "Medium",
+    "categories": "String, Hash Table, Simulation"
   },
   {
     "slug": "amazon-minimum-edge-moves-to-connect-graph",
@@ -327,7 +391,9 @@
       "Amazon"
     ],
     "updated": "2026-09-23",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Graph, Union Find"
   },
   {
     "slug": "amazon-simplify-expression-tree",
@@ -337,7 +403,9 @@
       "Amazon"
     ],
     "updated": "2026-09-23",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Tree, Recursion, Parsing"
   },
   {
     "slug": "amazon-right-down-grid-path",
@@ -347,7 +415,9 @@
       "Amazon"
     ],
     "updated": "2026-09-22",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Array, Matrix, Dynamic Programming, Breadth First Search"
   },
   {
     "slug": "amazon-allocate-minimum-pages",
@@ -357,7 +427,9 @@
       "Amazon"
     ],
     "updated": "2026-09-21",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Hard",
+    "categories": "Array, Binary Search, Greedy"
   },
   {
     "slug": "amazon-edit-distance",
@@ -367,7 +439,9 @@
       "Amazon"
     ],
     "updated": "2026-09-21",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "String, Dynamic Programming"
   },
   {
     "slug": "amazon-longest-subarray-with-k-distinct",
@@ -377,7 +451,9 @@
       "Amazon"
     ],
     "updated": "2026-09-21",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Array, Hash Table, Sliding Window"
   },
   {
     "slug": "amazon-trapping-rain-water",
@@ -387,7 +463,9 @@
       "Amazon"
     ],
     "updated": "2026-09-21",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Hard",
+    "categories": "Array, Two Pointers, Stack"
   },
   {
     "slug": "amazon-word-ladder",
@@ -397,7 +475,9 @@
       "Amazon"
     ],
     "updated": "2026-09-21",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Hard",
+    "categories": "Breadth First Search, Graph, String"
   },
   {
     "slug": "amazon-maximize-adjacent-difference-with-one-reversal",
@@ -407,7 +487,9 @@
       "Amazon"
     ],
     "updated": "2026-09-19",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Hard",
+    "categories": "Array, Greedy, Math"
   },
   {
     "slug": "amazon-shortest-grid-path-with-one-wall-break",
@@ -417,7 +499,9 @@
       "Amazon"
     ],
     "updated": "2026-09-19",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Matrix, Breadth First Search, Shortest Path"
   },
   {
     "slug": "amazon-course-order-and-cycle",
@@ -427,7 +511,9 @@
       "Amazon"
     ],
     "updated": "2026-09-18",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Hard",
+    "categories": "Graph, Breadth First Search, Depth First Search, Topological Sort"
   },
   {
     "slug": "amazon-inventory-allocation",
@@ -437,7 +523,9 @@
       "Amazon"
     ],
     "updated": "2026-09-18",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Simulation, Sorting, Heap"
   },
   {
     "slug": "amazon-lru-query-result-cache",
@@ -447,7 +535,9 @@
       "Amazon"
     ],
     "updated": "2026-09-18",
-    "parse_status": "parsed-empty-cases"
+    "parse_status": "parsed-empty-cases",
+    "difficulty": "Medium",
+    "categories": "Design, Hash Table, Linked List, Simulation"
   },
   {
     "slug": "amazon-minimum-stick-connection-cost",
@@ -457,7 +547,9 @@
       "Amazon"
     ],
     "updated": "2026-09-18",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": null,
+    "categories": null
   },
   {
     "slug": "amazon-first-non-repeating-character",
@@ -467,7 +559,9 @@
       "Amazon"
     ],
     "updated": "2026-09-14",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Easy",
+    "categories": "String, Hash Table"
   },
   {
     "slug": "amazon-root-to-leaf-target-sum-paths",
@@ -477,7 +571,9 @@
       "Amazon"
     ],
     "updated": "2026-09-14",
-    "parse_status": "parsed-empty-cases"
+    "parse_status": "parsed-empty-cases",
+    "difficulty": "Medium",
+    "categories": "Tree, Depth First Search, Backtracking"
   },
   {
     "slug": "amazon-aggressive-cows",
@@ -487,7 +583,9 @@
       "Amazon"
     ],
     "updated": "2026-09-13",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Array, Sorting, Binary Search, Greedy"
   },
   {
     "slug": "amazon-anagram-start-indices",
@@ -497,7 +595,9 @@
       "Amazon"
     ],
     "updated": "2026-09-13",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "String, Hash Table, Sliding Window"
   },
   {
     "slug": "amazon-basic-calculator",
@@ -507,7 +607,9 @@
       "Amazon"
     ],
     "updated": "2026-09-13",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Hard",
+    "categories": "String, Stack, Recursion"
   },
   {
     "slug": "amazon-binary-tree-cameras",
@@ -517,7 +619,9 @@
       "Amazon"
     ],
     "updated": "2026-09-13",
-    "parse_status": "parsed-empty-cases"
+    "parse_status": "parsed-empty-cases",
+    "difficulty": "Hard",
+    "categories": "Tree, Depth First Search, Dynamic Programming, Greedy"
   },
   {
     "slug": "amazon-binary-tree-right-view",
@@ -527,7 +631,9 @@
       "Amazon"
     ],
     "updated": "2026-09-13",
-    "parse_status": "parsed-empty-cases"
+    "parse_status": "parsed-empty-cases",
+    "difficulty": "Medium",
+    "categories": "Tree, Breadth First Search, Depth First Search"
   },
   {
     "slug": "amazon-calculate-beauty-values",
@@ -537,7 +643,9 @@
       "Amazon"
     ],
     "updated": "2026-09-13",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Array, Sorting, Prefix Sum"
   },
   {
     "slug": "amazon-cheapest-flights-within-k-stops",
@@ -547,7 +655,9 @@
       "Amazon"
     ],
     "updated": "2026-09-13",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Graph, Breadth First Search, Shortest Path, Heap"
   },
   {
     "slug": "amazon-construct-tree-level-inorder",
@@ -557,7 +667,9 @@
       "Amazon"
     ],
     "updated": "2026-09-13",
-    "parse_status": "parsed-empty-cases"
+    "parse_status": "parsed-empty-cases",
+    "difficulty": "Hard",
+    "categories": "Array, Hash Table, Tree, Recursion, Stack"
   },
   {
     "slug": "amazon-container-with-most-water",
@@ -567,7 +679,9 @@
       "Amazon"
     ],
     "updated": "2026-09-13",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Array, Two Pointers, Greedy"
   },
   {
     "slug": "amazon-count-stepping-numbers-in-range",
@@ -577,7 +691,9 @@
       "Amazon"
     ],
     "updated": "2026-09-13",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Hard",
+    "categories": "Math, Breadth First Search, Dynamic Programming"
   },
   {
     "slug": "amazon-count-univalued-subtrees",
@@ -587,7 +703,9 @@
       "Amazon"
     ],
     "updated": "2026-09-13",
-    "parse_status": "parsed-empty-cases"
+    "parse_status": "parsed-empty-cases",
+    "difficulty": "Medium",
+    "categories": "Tree, Depth First Search, Recursion"
   },
   {
     "slug": "amazon-course-schedule",
@@ -597,7 +715,9 @@
       "Amazon"
     ],
     "updated": "2026-09-13",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Graph, Depth First Search, Breadth First Search, Topological Sort"
   },
   {
     "slug": "amazon-course-schedule-ii",
@@ -607,7 +727,9 @@
       "Amazon"
     ],
     "updated": "2026-09-13",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Graph, Heap, Breadth First Search, Topological Sort"
   },
   {
     "slug": "amazon-decode-encoded-string",
@@ -617,7 +739,9 @@
       "Amazon"
     ],
     "updated": "2026-09-13",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "String, Stack, Parsing"
   },
   {
     "slug": "amazon-distance-between-tree-nodes",
@@ -627,7 +751,9 @@
       "Amazon"
     ],
     "updated": "2026-09-13",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Tree, Breadth First Search, Graph"
   },
   {
     "slug": "amazon-ecommerce-notification-router",
@@ -637,7 +763,9 @@
       "Amazon"
     ],
     "updated": "2026-09-13",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Easy",
+    "categories": "Array, String, Simulation"
   },
   {
     "slug": "amazon-employee-ratings-data-structure",
@@ -647,7 +775,9 @@
       "Amazon"
     ],
     "updated": "2026-09-13",
-    "parse_status": "parsed-empty-cases"
+    "parse_status": "parsed-empty-cases",
+    "difficulty": "Hard",
+    "categories": "Array, Segment Tree, Binary Search, Design"
   },
   {
     "slug": "amazon-find-median-from-data-stream",
@@ -657,7 +787,9 @@
       "Amazon"
     ],
     "updated": "2026-09-13",
-    "parse_status": "parsed-empty-cases"
+    "parse_status": "parsed-empty-cases",
+    "difficulty": "Hard",
+    "categories": "Design, Heap, Sorting"
   },
   {
     "slug": "amazon-find-safest-path-in-grid",
@@ -667,7 +799,9 @@
       "Amazon"
     ],
     "updated": "2026-09-13",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Hard",
+    "categories": "Array, Matrix, Breadth First Search, Binary Search, Heap, Shortest Path"
   },
   {
     "slug": "amazon-first-missing-positive",
@@ -677,7 +811,9 @@
       "Amazon"
     ],
     "updated": "2026-09-13",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Hard",
+    "categories": "Array, Hash Table"
   },
   {
     "slug": "amazon-first-unique-character-stream",
@@ -687,7 +823,9 @@
       "Amazon"
     ],
     "updated": "2026-09-13",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "String, Hash Table, Queue"
   },
   {
     "slug": "amazon-indexed-bit-after-binary-expansion",
@@ -697,7 +835,9 @@
       "Amazon"
     ],
     "updated": "2026-09-13",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "String, Math"
   },
   {
     "slug": "amazon-islands-eight-direction",
@@ -707,7 +847,9 @@
       "Amazon"
     ],
     "updated": "2026-09-13",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Array, Matrix, Depth First Search, Breadth First Search"
   },
   {
     "slug": "amazon-k-closest-elements-in-sorted-array",
@@ -717,7 +859,9 @@
       "Amazon"
     ],
     "updated": "2026-09-13",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Array, Binary Search, Two Pointers"
   },
   {
     "slug": "amazon-kth-smallest-row-sum",
@@ -727,7 +871,9 @@
       "Amazon"
     ],
     "updated": "2026-09-13",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Hard",
+    "categories": "Array, Matrix, Heap"
   },
   {
     "slug": "amazon-largest-lexicographic-unique-letters",
@@ -737,7 +883,9 @@
       "Amazon"
     ],
     "updated": "2026-09-13",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Hard",
+    "categories": "String, Stack, Greedy"
   },
   {
     "slug": "amazon-longest-common-subsequence-length",
@@ -747,7 +895,9 @@
       "Amazon"
     ],
     "updated": "2026-09-13",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "String, Dynamic Programming"
   },
   {
     "slug": "amazon-longest-happy-prefix",
@@ -757,7 +907,9 @@
       "Amazon"
     ],
     "updated": "2026-09-13",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Hard",
+    "categories": "String"
   },
   {
     "slug": "amazon-longest-increasing-subsequence-bounded-difference",
@@ -767,7 +919,9 @@
       "Amazon"
     ],
     "updated": "2026-09-13",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Hard",
+    "categories": "Array, Dynamic Programming, Segment Tree"
   },
   {
     "slug": "amazon-max-consecutive-ones-iii",
@@ -777,7 +931,9 @@
       "Amazon"
     ],
     "updated": "2026-09-13",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Array, Sliding Window, Two Pointers"
   },
   {
     "slug": "amazon-maximize-distance-to-closest-person",
@@ -787,7 +943,9 @@
       "Amazon"
     ],
     "updated": "2026-09-13",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Easy",
+    "categories": "Array, Two Pointers"
   },
   {
     "slug": "amazon-maximum-non-adjacent-house-value",
@@ -797,7 +955,9 @@
       "Amazon"
     ],
     "updated": "2026-09-13",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Array, Dynamic Programming"
   },
   {
     "slug": "amazon-maximum-profit-job-scheduling",
@@ -807,7 +967,9 @@
       "Amazon"
     ],
     "updated": "2026-09-13",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Hard",
+    "categories": "Array, Sorting, Binary Search, Dynamic Programming, Intervals"
   },
   {
     "slug": "amazon-maximum-sum-bst",
@@ -817,7 +979,9 @@
       "Amazon"
     ],
     "updated": "2026-09-13",
-    "parse_status": "parsed-empty-cases"
+    "parse_status": "parsed-empty-cases",
+    "difficulty": "Hard",
+    "categories": "Tree, Depth First Search, Dynamic Programming"
   },
   {
     "slug": "amazon-meeting-room-scheduler",
@@ -827,7 +991,9 @@
       "Amazon"
     ],
     "updated": "2026-09-13",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Array, Heap, Intervals, Simulation"
   },
   {
     "slug": "amazon-merge-intervals",
@@ -837,7 +1003,9 @@
       "Amazon"
     ],
     "updated": "2026-09-13",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Easy",
+    "categories": "Intervals, Sorting"
   },
   {
     "slug": "amazon-merge-k-sorted-lists",
@@ -847,7 +1015,9 @@
       "Amazon"
     ],
     "updated": "2026-09-13",
-    "parse_status": "parsed-empty-cases"
+    "parse_status": "parsed-empty-cases",
+    "difficulty": "Hard",
+    "categories": "Linked List, Heap"
   },
   {
     "slug": "amazon-middle-stack-operations",
@@ -857,7 +1027,9 @@
       "Amazon"
     ],
     "updated": "2026-09-13",
-    "parse_status": "parsed-empty-cases"
+    "parse_status": "parsed-empty-cases",
+    "difficulty": "Medium",
+    "categories": "Array, Stack, Design, Simulation"
   },
   {
     "slug": "amazon-minimize-malware-facility-network",
@@ -867,7 +1039,9 @@
       "Amazon"
     ],
     "updated": "2026-09-13",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Hard",
+    "categories": "Graph, Depth First Search, Union Find"
   },
   {
     "slug": "amazon-minimum-window-substring",
@@ -877,7 +1051,9 @@
       "Amazon"
     ],
     "updated": "2026-09-13",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Hard",
+    "categories": "String, Hash Table, Sliding Window"
   },
   {
     "slug": "amazon-nary-tree-nodes-at-level",
@@ -887,7 +1063,9 @@
       "Amazon"
     ],
     "updated": "2026-09-13",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Easy",
+    "categories": "Tree, Breadth First Search"
   },
   {
     "slug": "amazon-next-palindromic-time",
@@ -897,7 +1075,9 @@
       "Amazon"
     ],
     "updated": "2026-09-13",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "String, Simulation"
   },
   {
     "slug": "amazon-next-permutation",
@@ -907,7 +1087,9 @@
       "Amazon"
     ],
     "updated": "2026-09-13",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Array, Two Pointers"
   },
   {
     "slug": "amazon-product-array-except-self",
@@ -917,7 +1099,9 @@
       "Amazon"
     ],
     "updated": "2026-09-13",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Array, Prefix Sum"
   },
   {
     "slug": "amazon-reorganize-string",
@@ -927,7 +1111,9 @@
       "Amazon"
     ],
     "updated": "2026-09-13",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "String, Hash Table, Heap, Greedy"
   },
   {
     "slug": "amazon-running-delivery-time-medians",
@@ -937,7 +1123,9 @@
       "Amazon"
     ],
     "updated": "2026-09-13",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Heap, Design"
   },
   {
     "slug": "amazon-search-rotated-sorted-array",
@@ -947,7 +1135,9 @@
       "Amazon"
     ],
     "updated": "2026-09-13",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Array, Binary Search"
   },
   {
     "slug": "amazon-task-scheduler",
@@ -957,7 +1147,9 @@
       "Amazon"
     ],
     "updated": "2026-09-13",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Greedy, Heap"
   },
   {
     "slug": "amazon-three-sum-closest",
@@ -967,7 +1159,9 @@
       "Amazon"
     ],
     "updated": "2026-09-13",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Array, Sorting, Two Pointers"
   },
   {
     "slug": "amazon-train-route-fare",
@@ -977,7 +1171,9 @@
       "Amazon"
     ],
     "updated": "2026-09-13",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Easy",
+    "categories": "Array, Hash Table, Simulation"
   },
   {
     "slug": "amazon-transfer-chain-endpoints",
@@ -987,7 +1183,9 @@
       "Amazon"
     ],
     "updated": "2026-09-13",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Easy",
+    "categories": "Array, Hash Table, Graph"
   },
   {
     "slug": "amazon-two-knights-minimum-meeting-moves",
@@ -997,7 +1195,9 @@
       "Amazon"
     ],
     "updated": "2026-09-13",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Math, Breadth First Search"
   },
   {
     "slug": "amazon-unique-pairs-2d-target",
@@ -1007,7 +1207,9 @@
       "Amazon"
     ],
     "updated": "2026-09-13",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Easy",
+    "categories": "Array, Matrix, Hash Table, Two Pointers"
   },
   {
     "slug": "amazon-unique-string-permutations",
@@ -1017,7 +1219,9 @@
       "Amazon"
     ],
     "updated": "2026-09-13",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "String, Sorting, Backtracking, Combinatorics"
   },
   {
     "slug": "amazon-validate-two-color-chessboard",
@@ -1027,7 +1231,9 @@
       "Amazon"
     ],
     "updated": "2026-09-13",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Easy",
+    "categories": "Matrix, Array"
   },
   {
     "slug": "amazon-woodcut-saw-height",
@@ -1037,7 +1243,9 @@
       "Amazon"
     ],
     "updated": "2026-09-13",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Array, Binary Search"
   },
   {
     "slug": "amazon-word-break",
@@ -1047,7 +1255,9 @@
       "Amazon"
     ],
     "updated": "2026-09-13",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Array, Hash Table, String, Dynamic Programming"
   },
   {
     "slug": "amazon-word-break-ii",
@@ -1057,7 +1267,9 @@
       "Amazon"
     ],
     "updated": "2026-09-13",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Hard",
+    "categories": "Array, Hash Table, String, Dynamic Programming, Backtracking, Trie"
   },
   {
     "slug": "amazon-interleaving-string",
@@ -1067,7 +1279,9 @@
       "Amazon"
     ],
     "updated": "2026-09-12",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Dynamic Programming, String"
   },
   {
     "slug": "amazon-prefix-search-collection",
@@ -1077,7 +1291,9 @@
       "Amazon"
     ],
     "updated": "2026-09-12",
-    "parse_status": "parsed-empty-cases"
+    "parse_status": "parsed-empty-cases",
+    "difficulty": "Medium",
+    "categories": "Trie, String, Design"
   },
   {
     "slug": "amazon-word-search-ii",
@@ -1087,7 +1303,9 @@
       "Amazon"
     ],
     "updated": "2026-09-12",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Hard",
+    "categories": "Trie, Backtracking, Matrix, Depth First Search"
   },
   {
     "slug": "amazon-ad-click-counts-sliding-window",
@@ -1097,7 +1315,9 @@
       "Amazon"
     ],
     "updated": "2026-09-10",
-    "parse_status": "parsed-empty-cases"
+    "parse_status": "parsed-empty-cases",
+    "difficulty": "Medium",
+    "categories": "Queue, Hash Table, Sliding Window, Design"
   },
   {
     "slug": "amazon-consecutive-website-visit-pattern",
@@ -1107,7 +1327,9 @@
       "Amazon"
     ],
     "updated": "2026-09-10",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Array, Hash Table, Sorting, String"
   },
   {
     "slug": "amazon-longest-substring-without-repeating-characters",
@@ -1117,7 +1339,9 @@
       "Amazon"
     ],
     "updated": "2026-09-10",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "String, Sliding Window, Hash Table"
   },
   {
     "slug": "amazon-page-referrer-reachability",
@@ -1127,7 +1351,9 @@
       "Amazon"
     ],
     "updated": "2026-09-10",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Graph, Breadth First Search, Depth First Search, Hash Table"
   },
   {
     "slug": "amazon-sliding-window-rate-limiter",
@@ -1137,7 +1363,9 @@
       "Amazon"
     ],
     "updated": "2026-09-10",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Queue, Hash Table, Sliding Window, Design"
   },
   {
     "slug": "amazon-find-minimum-cost",
@@ -1147,7 +1375,9 @@
       "Amazon"
     ],
     "updated": "2026-09-09",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Hard",
+    "categories": "Array, Prefix Sum, Greedy"
   },
   {
     "slug": "amazon-maximum-capacity",
@@ -1157,7 +1387,9 @@
       "Amazon"
     ],
     "updated": "2026-09-08",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Easy",
+    "categories": "Sorting, Greedy"
   },
   {
     "slug": "amazon-meeting-rooms-ii",
@@ -1167,7 +1399,9 @@
       "Amazon"
     ],
     "updated": "2026-09-08",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Array, Sorting, Two Pointers, Heap, Intervals"
   },
   {
     "slug": "amazon-next-smaller-ticket-price",
@@ -1177,7 +1411,9 @@
       "Amazon"
     ],
     "updated": "2026-09-08",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Array, Stack"
   },
   {
     "slug": "amazon-remove-k-digits",
@@ -1187,7 +1423,9 @@
       "Amazon"
     ],
     "updated": "2026-09-08",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Stack, Greedy, String"
   },
   {
     "slug": "amazon-get-distinct-pairs",
@@ -1197,7 +1435,9 @@
       "Amazon"
     ],
     "updated": "2026-09-05",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Easy",
+    "categories": "Hash Table, Two Pointers"
   },
   {
     "slug": "amazon-minimum-adjacent-swaps-binary-groups",
@@ -1207,7 +1447,9 @@
       "Amazon"
     ],
     "updated": "2026-09-02",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Array, Greedy"
   },
   {
     "slug": "amazon-maximum-frequency-stack",
@@ -1217,7 +1459,9 @@
       "Amazon"
     ],
     "updated": "2026-09-01",
-    "parse_status": "parsed-empty-cases"
+    "parse_status": "parsed-empty-cases",
+    "difficulty": "Hard",
+    "categories": "Hash Table, Stack, Design"
   },
   {
     "slug": "amazon-linked-list-queue-operations",
@@ -1227,7 +1471,9 @@
       "Amazon"
     ],
     "updated": "2026-08-31",
-    "parse_status": "parsed-empty-cases"
+    "parse_status": "parsed-empty-cases",
+    "difficulty": "Medium",
+    "categories": "Linked List, Design, Simulation"
   },
   {
     "slug": "amazon-minimum-grid-inconvenience",
@@ -1237,7 +1483,9 @@
       "Amazon"
     ],
     "updated": "2026-08-28",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Hard",
+    "categories": "Matrix, Breadth First Search, Binary Search"
   },
   {
     "slug": "amazon-single-element-in-sorted-array",
@@ -1247,7 +1495,9 @@
       "Amazon"
     ],
     "updated": "2026-07-30",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Array, Binary Search"
   },
   {
     "slug": "amazon-count-complete-components",
@@ -1257,7 +1507,9 @@
       "Amazon"
     ],
     "updated": "2026-07-29",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Graph, Depth First Search, Breadth First Search, Union Find"
   },
   {
     "slug": "amazon-cousins-in-binary-tree-ii",
@@ -1267,7 +1519,9 @@
       "Amazon"
     ],
     "updated": "2026-07-29",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Tree, Breadth First Search, Depth First Search"
   },
   {
     "slug": "amazon-minimum-operations-to-make-array-continuous",
@@ -1277,7 +1531,9 @@
       "Amazon"
     ],
     "updated": "2026-07-29",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Hard",
+    "categories": "Array, Sorting, Binary Search, Sliding Window"
   },
   {
     "slug": "amazon-vertical-order-traversal-of-binary-tree",
@@ -1287,7 +1543,9 @@
       "Amazon"
     ],
     "updated": "2026-07-29",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Tree, Breadth First Search, Hash Table, Sorting"
   },
   {
     "slug": "amazon-http-request-redirection",
@@ -1297,7 +1555,9 @@
       "Amazon"
     ],
     "updated": "2026-07-28",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Array, Hash Table, Sorting, Simulation, Geometry"
   },
   {
     "slug": "amazon-resolve-task-dependencies",
@@ -1307,7 +1567,9 @@
       "Amazon"
     ],
     "updated": "2026-07-27",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Hard",
+    "categories": "Graph, Topological Sort, Heap"
   },
   {
     "slug": "amazon-shortest-distance-circular-bus-route",
@@ -1317,7 +1579,9 @@
       "Amazon"
     ],
     "updated": "2026-07-26",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Easy",
+    "categories": "Array, Prefix Sum"
   },
   {
     "slug": "amazon-sort-array-with-rotate-and-flip",
@@ -1327,7 +1591,9 @@
       "Amazon"
     ],
     "updated": "2026-07-22",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Array, Math, Simulation"
   },
   {
     "slug": "amazon-loyal-customers",
@@ -1337,7 +1603,9 @@
       "Amazon"
     ],
     "updated": "2026-07-21",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Easy",
+    "categories": "Hash Table, Sorting"
   },
   {
     "slug": "amazon-smallest-number-with-digit-sum",
@@ -1347,7 +1615,9 @@
       "Amazon"
     ],
     "updated": "2026-07-21",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Greedy, Math, String"
   },
   {
     "slug": "amazon-group-anagrams",
@@ -1357,7 +1627,9 @@
       "Amazon"
     ],
     "updated": "2026-07-12",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "String, Array, Hash Table, Sorting"
   },
   {
     "slug": "amazon-longest-palindromic-subsequence",
@@ -1367,7 +1639,9 @@
       "Amazon"
     ],
     "updated": "2026-07-12",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "String, Dynamic Programming"
   },
   {
     "slug": "amazon-maximal-square",
@@ -1377,7 +1651,9 @@
       "Amazon"
     ],
     "updated": "2026-07-12",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Array, Matrix, Dynamic Programming"
   },
   {
     "slug": "amazon-maximum-sum-of-heights",
@@ -1387,7 +1663,9 @@
       "Amazon"
     ],
     "updated": "2026-07-12",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Hard",
+    "categories": "Array, Stack, Dynamic Programming"
   },
   {
     "slug": "amazon-number-of-islands-ii",
@@ -1397,7 +1675,9 @@
       "Amazon"
     ],
     "updated": "2026-07-12",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Hard",
+    "categories": "Array, Matrix, Graph, Union Find"
   },
   {
     "slug": "amazon-sliding-window-maximum",
@@ -1407,7 +1687,9 @@
       "Amazon"
     ],
     "updated": "2026-07-12",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Hard",
+    "categories": "Array, Sliding Window, Queue"
   },
   {
     "slug": "amazon-domain-weight-calculation",
@@ -1417,7 +1699,9 @@
       "Amazon"
     ],
     "updated": "2026-07-10",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "String, Hash Table, Trie, Depth First Search"
   },
   {
     "slug": "amazon-minimum-contiguous-replacements",
@@ -1427,7 +1711,9 @@
       "Amazon"
     ],
     "updated": "2026-07-10",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Array, Hash Table, Union Find"
   },
   {
     "slug": "amazon-minimum-redistribution-cost",
@@ -1437,7 +1723,9 @@
       "Amazon"
     ],
     "updated": "2026-07-10",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Array, Prefix Sum, Greedy"
   },
   {
     "slug": "amazon-number-of-atoms",
@@ -1447,7 +1735,9 @@
       "Amazon"
     ],
     "updated": "2026-07-10",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Hard",
+    "categories": "String, Stack, Hash Table, Parsing, Sorting"
   },
   {
     "slug": "amazon-closest-version-date",
@@ -1457,7 +1747,9 @@
       "Amazon"
     ],
     "updated": "2026-07-08",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Easy",
+    "categories": "Array, String, Binary Search"
   },
   {
     "slug": "amazon-max-concurrent-processes",
@@ -1467,7 +1759,9 @@
       "Amazon"
     ],
     "updated": "2026-07-08",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Intervals, Sorting"
   },
   {
     "slug": "amazon-package-dependency-order",
@@ -1477,7 +1771,9 @@
       "Amazon"
     ],
     "updated": "2026-07-08",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Graph, Depth First Search, Topological Sort"
   },
   {
     "slug": "amazon-merge-sorted-array",
@@ -1487,7 +1783,9 @@
       "Amazon"
     ],
     "updated": "2026-07-07",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Easy",
+    "categories": "Array, Two Pointers, Sorting"
   },
   {
     "slug": "amazon-find-maximum-number-of-servers",
@@ -1497,7 +1795,9 @@
       "Amazon"
     ],
     "updated": "2026-07-03",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Array, Sorting, Greedy"
   },
   {
     "slug": "amazon-permutation-sorter",
@@ -1507,7 +1807,9 @@
       "Amazon"
     ],
     "updated": "2026-07-03",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Array, Math, Greedy"
   },
   {
     "slug": "amazon-feasible-indices-after-prefix-suffix-reduction",
@@ -1517,7 +1819,9 @@
       "Amazon"
     ],
     "updated": "2026-06-30",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Array, Greedy"
   },
   {
     "slug": "amazon-frequently-bought-together",
@@ -1527,7 +1831,9 @@
       "Amazon"
     ],
     "updated": "2026-06-29",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Array, String, Hash Table, Sorting"
   },
   {
     "slug": "amazon-souvenir-shop-purchases",
@@ -1537,7 +1843,9 @@
       "Amazon"
     ],
     "updated": "2026-06-29",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Array, Simulation, Binary Search, Math"
   },
   {
     "slug": "amazon-find-minimum-groups",
@@ -1547,7 +1855,9 @@
       "Amazon"
     ],
     "updated": "2026-06-24",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Array, Hash Table, Greedy"
   },
   {
     "slug": "amazon-maximum-equal-parts-for-prefixes",
@@ -1557,7 +1867,9 @@
       "Amazon"
     ],
     "updated": "2026-06-19",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "String, Array, Hash Table, Math"
   },
   {
     "slug": "amazon-count-promotional-periods",
@@ -1567,7 +1879,9 @@
       "Amazon"
     ],
     "updated": "2026-06-09",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": null,
+    "categories": null
   },
   {
     "slug": "amazon-get-smallest-base-segment",
@@ -1577,7 +1891,9 @@
       "Amazon"
     ],
     "updated": "2026-06-09",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": null,
+    "categories": null
   },
   {
     "slug": "amazon-select-least-resource-tasks",
@@ -1587,7 +1903,9 @@
       "Amazon"
     ],
     "updated": "2026-06-09",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": null,
+    "categories": null
   },
   {
     "slug": "amazon-lowest-common-ancestor-implemented-with-stack",
@@ -1597,7 +1915,9 @@
       "Amazon"
     ],
     "updated": "2026-05-30",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Tree, Stack, Hash Table"
   },
   {
     "slug": "amazon-product-category-groups",
@@ -1607,7 +1927,9 @@
       "Amazon"
     ],
     "updated": "2026-05-23",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Easy",
+    "categories": "Union Find, Sorting"
   },
   {
     "slug": "amazon-count-connected-components",
@@ -1617,7 +1939,9 @@
       "Amazon"
     ],
     "updated": "2026-05-21",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Easy",
+    "categories": "Graph, Union Find, Depth First Search"
   },
   {
     "slug": "amazon-unique-pairs-with-target-sum",
@@ -1627,7 +1951,9 @@
       "Amazon"
     ],
     "updated": "2026-05-13",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Easy",
+    "categories": "Array, Hash Table, Two Pointers"
   },
   {
     "slug": "amazon-feasible-indices-after-reduction",
@@ -1637,7 +1963,9 @@
       "Amazon"
     ],
     "updated": "2026-04-30",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": null,
+    "categories": null
   },
   {
     "slug": "amazon-count-similar-string-groups",
@@ -1647,7 +1975,9 @@
       "Amazon"
     ],
     "updated": "2026-04-25",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": null,
+    "categories": null
   },
   {
     "slug": "amazon-get-min-errors",
@@ -1657,7 +1987,9 @@
       "Amazon"
     ],
     "updated": "2026-04-16",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Hard",
+    "categories": "Dynamic Programming, String, Greedy"
   },
   {
     "slug": "amazon-maximum-score-with-non-adjacent-values",
@@ -1667,7 +1999,9 @@
       "Amazon"
     ],
     "updated": "2026-04-14",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": null,
+    "categories": null
   },
   {
     "slug": "amazon-make-value-groups-contiguous",
@@ -1677,7 +2011,9 @@
       "Amazon"
     ],
     "updated": "2026-04-13",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Array, Hash Table, Greedy"
   },
   {
     "slug": "amazon-dynamic-kth-largest-queries",
@@ -1687,7 +2023,9 @@
       "Amazon"
     ],
     "updated": "2026-04-09",
-    "parse_status": "parsed-empty-cases"
+    "parse_status": "parsed-empty-cases",
+    "difficulty": null,
+    "categories": null
   },
   {
     "slug": "amazon-longest-zero-sum-subarray",
@@ -1697,7 +2035,9 @@
       "Amazon"
     ],
     "updated": "2026-04-09",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": null,
+    "categories": null
   },
   {
     "slug": "amazon-maximize-minimum-machine-power",
@@ -1707,7 +2047,9 @@
       "Amazon"
     ],
     "updated": "2026-04-09",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": null,
+    "categories": null
   },
   {
     "slug": "amazon-maximize-protected-city-population",
@@ -1717,7 +2059,9 @@
       "Amazon"
     ],
     "updated": "2026-04-06",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Array, Greedy, Dynamic Programming"
   },
   {
     "slug": "amazon-minimum-cost-to-convert-products-to-variant-a",
@@ -1727,7 +2071,9 @@
       "Amazon"
     ],
     "updated": "2026-04-06",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Array, Sliding Window, Greedy"
   },
   {
     "slug": "amazon-minimum-preparation-time-for-two-handlers",
@@ -1737,7 +2083,9 @@
       "Amazon"
     ],
     "updated": "2026-04-06",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Dynamic Programming, Array"
   },
   {
     "slug": "amazon-sum-max-plus-min-after-decrement-operations",
@@ -1747,7 +2095,9 @@
       "Amazon"
     ],
     "updated": "2026-03-25",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Heap, Greedy"
   },
   {
     "slug": "amazon-sort-error-codes-by-frequency",
@@ -1757,7 +2107,9 @@
       "Amazon"
     ],
     "updated": "2026-03-24",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Easy",
+    "categories": "Sorting, Hash Table"
   },
   {
     "slug": "amazon-lexicographically-smallest-after-one-substring-rotation",
@@ -1767,7 +2119,9 @@
       "Amazon"
     ],
     "updated": "2026-02-05",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": null,
+    "categories": null
   },
   {
     "slug": "amazon-minimum-operations-to-sort-permutation",
@@ -1777,7 +2131,9 @@
       "Amazon"
     ],
     "updated": "2026-01-30",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": null,
+    "categories": null
   },
   {
     "slug": "amazon-lexicographically-maximum-final-sequence",
@@ -1787,7 +2143,9 @@
       "Amazon"
     ],
     "updated": "2026-01-24",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": null,
+    "categories": null
   },
   {
     "slug": "amazon-package-delivery-system",
@@ -1797,7 +2155,9 @@
       "Amazon"
     ],
     "updated": "2026-01-24",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Greedy, Sorting, Heap"
   },
   {
     "slug": "amazon-vm-rental-revenue",
@@ -1807,7 +2167,9 @@
       "Amazon"
     ],
     "updated": "2026-01-24",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Heap, Greedy"
   },
   {
     "slug": "amazon-longest-arithmetic-subarray-after-one-change",
@@ -1817,7 +2179,9 @@
       "Amazon"
     ],
     "updated": "2026-01-06",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": null,
+    "categories": null
   },
   {
     "slug": "amazon-replace-values-and-return-sums",
@@ -1827,7 +2191,9 @@
       "Amazon"
     ],
     "updated": "2026-01-06",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": null,
+    "categories": null
   },
   {
     "slug": "amazon-minimum-s3-storage-cost",
@@ -1837,7 +2203,9 @@
       "Amazon"
     ],
     "updated": "2025-12-11",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": null,
+    "categories": null
   },
   {
     "slug": "amazon-count-picked-items-less-than-queries",
@@ -1847,7 +2215,9 @@
       "Amazon"
     ],
     "updated": "2025-08-10",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": null,
+    "categories": null
   },
   {
     "slug": "amazon-fair-prize-distribution",
@@ -1857,7 +2227,9 @@
       "Amazon"
     ],
     "updated": "2025-08-10",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": null,
+    "categories": null
   },
   {
     "slug": "amazon-largest-number-with-digit-sum",
@@ -1867,7 +2239,9 @@
       "Amazon"
     ],
     "updated": "2025-08-03",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": null,
+    "categories": null
   },
   {
     "slug": "amazon-minimize-binary-subsequence-cost",
@@ -1877,7 +2251,9 @@
       "Amazon"
     ],
     "updated": "2025-08-03",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": null,
+    "categories": null
   },
   {
     "slug": "amazon-first-word-segmentation",
@@ -1887,7 +2263,9 @@
       "Amazon"
     ],
     "updated": "2025-07-26",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "String, Dynamic Programming, Backtracking"
   },
   {
     "slug": "amazon-nearby-fulfillment-centers",
@@ -1897,7 +2275,9 @@
       "Amazon"
     ],
     "updated": "2025-07-26",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Graph, Breadth First Search, Shortest Path"
   },
   {
     "slug": "amazon-maximize-pages-before-suspension",
@@ -1907,7 +2287,9 @@
       "Amazon"
     ],
     "updated": "2025-07-08",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Hard",
+    "categories": "Greedy, Sorting, Simulation"
   },
   {
     "slug": "amazon-predict-answer",
@@ -1917,7 +2299,9 @@
       "Amazon"
     ],
     "updated": "2025-06-23",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Array, Binary Search, Sorting, Stack"
   },
   {
     "slug": "amazon-find-security-level",
@@ -1927,7 +2311,9 @@
       "Amazon"
     ],
     "updated": "2025-06-18",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Hard",
+    "categories": "Array, Prefix Sum, Hash Table"
   },
   {
     "slug": "amazon-get-min-subsegments",
@@ -1937,7 +2323,9 @@
       "Amazon"
     ],
     "updated": "2025-06-18",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Hard",
+    "categories": "Dynamic Programming, Greedy, String"
   },
   {
     "slug": "amazon-minimize-variation",
@@ -1947,7 +2335,9 @@
       "Amazon"
     ],
     "updated": "2025-06-18",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Array, Sorting, Greedy"
   },
   {
     "slug": "amazon-find-hash",
@@ -1957,7 +2347,9 @@
       "Amazon"
     ],
     "updated": "2025-06-12",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Array, Math"
   },
   {
     "slug": "amazon-count-special-substrs",
@@ -1967,7 +2359,9 @@
       "Amazon"
     ],
     "updated": "2025-05-31",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "String, Prefix Sum, Hash Table"
   },
   {
     "slug": "amazon-find-minimum-days",
@@ -1977,7 +2371,9 @@
       "Amazon"
     ],
     "updated": "2025-05-31",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Hard",
+    "categories": "Binary Search, Sliding Window"
   },
   {
     "slug": "amazon-find-minimum-machines-size",
@@ -1987,7 +2383,9 @@
       "Amazon"
     ],
     "updated": "2025-05-31",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Array, Greedy"
   },
   {
     "slug": "amazon-get-maximum-count",
@@ -1997,7 +2395,9 @@
       "Amazon"
     ],
     "updated": "2025-05-31",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Hard",
+    "categories": "Array, Hash Table, Sliding Window"
   },
   {
     "slug": "amazon-split-prefix-suffix",
@@ -2007,7 +2407,9 @@
       "Amazon"
     ],
     "updated": "2025-05-31",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "String, Prefix Sum, Hash Table"
   },
   {
     "slug": "amazon-determine-the-best-skipping-strategy",
@@ -2017,7 +2419,9 @@
       "Amazon"
     ],
     "updated": "2025-05-25",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Hard",
+    "categories": "Dynamic Programming, Greedy"
   },
   {
     "slug": "amazon-compute-beauty-of-array-products",
@@ -2027,7 +2431,9 @@
       "Amazon"
     ],
     "updated": "2025-04-27",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Hard",
+    "categories": "Array, Sliding Window, Segment Tree"
   },
   {
     "slug": "amazon-find-idle-skills-query",
@@ -2037,7 +2443,9 @@
       "Amazon"
     ],
     "updated": "2025-04-27",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Hash Table, Binary Search"
   },
   {
     "slug": "amazon-get-minimum-dock-bays",
@@ -2047,7 +2455,9 @@
       "Amazon"
     ],
     "updated": "2025-04-27",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Array, Binary Search, Heap"
   },
   {
     "slug": "amazon-get-minimum-number-of-unique-distribution-centers",
@@ -2057,7 +2467,9 @@
       "Amazon"
     ],
     "updated": "2025-04-13",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Easy",
+    "categories": "Array, Greedy"
   },
   {
     "slug": "amazon-next-greater-perfect-string",
@@ -2067,7 +2479,9 @@
       "Amazon"
     ],
     "updated": "2025-04-13",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Hard",
+    "categories": "String, Greedy"
   },
   {
     "slug": "amazon-use-minimum-tokens",
@@ -2077,7 +2491,9 @@
       "Amazon"
     ],
     "updated": "2025-04-13",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Hard",
+    "categories": "Sorting, Prefix Sum, Binary Search"
   },
   {
     "slug": "amazon-remove-characters-in-frequency-order",
@@ -2087,7 +2503,9 @@
       "Amazon"
     ],
     "updated": "2025-04-10",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Hard",
+    "categories": "String, Dynamic Programming"
   },
   {
     "slug": "amazon-optimal-utilization",
@@ -2097,7 +2515,9 @@
       "Amazon"
     ],
     "updated": "2025-04-05",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Two Pointers, Sorting"
   },
   {
     "slug": "amazon-purchase-servers",
@@ -2107,7 +2527,9 @@
       "Amazon"
     ],
     "updated": "2025-04-05",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Greedy, Sorting"
   },
   {
     "slug": "amazon-cinema-shows",
@@ -2117,7 +2539,9 @@
       "Amazon"
     ],
     "updated": "2025-03-31",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Dynamic Programming, Binary Search, Intervals"
   },
   {
     "slug": "amazon-minimum-retailers",
@@ -2127,7 +2551,9 @@
       "Amazon"
     ],
     "updated": "2025-03-31",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Hard",
+    "categories": "Intervals, Sorting, Greedy"
   },
   {
     "slug": "amazon-find-min-replacements",
@@ -2137,7 +2563,9 @@
       "Amazon"
     ],
     "updated": "2025-03-29",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Hard",
+    "categories": "Array, Greedy"
   },
   {
     "slug": "amazon-convert-to-good-string",
@@ -2147,7 +2575,9 @@
       "Amazon"
     ],
     "updated": "2025-03-28",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Dynamic Programming, String"
   },
   {
     "slug": "amazon-find-min-max-difference",
@@ -2157,7 +2587,9 @@
       "Amazon"
     ],
     "updated": "2025-03-27",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Hard",
+    "categories": "Sorting, Greedy"
   },
   {
     "slug": "amazon-max-sum-of-non-overlapping-intervals",
@@ -2167,7 +2599,9 @@
       "Amazon"
     ],
     "updated": "2025-03-27",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Intervals, Dynamic Programming, Sorting"
   },
   {
     "slug": "amazon-get-minimal-cost",
@@ -2177,7 +2611,9 @@
       "Amazon"
     ],
     "updated": "2025-03-26",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Array, Sorting, Greedy"
   },
   {
     "slug": "amazon-find-least-possible-vulnerability",
@@ -2187,7 +2623,9 @@
       "Amazon"
     ],
     "updated": "2025-03-24",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Hard",
+    "categories": "Array, Binary Search, Sliding Window, Math"
   },
   {
     "slug": "amazon-make-array-distinct",
@@ -2197,7 +2635,9 @@
       "Amazon"
     ],
     "updated": "2025-03-24",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Array, Sorting, Greedy"
   },
   {
     "slug": "amazon-ensure-non-zero-load-sum",
@@ -2207,7 +2647,9 @@
       "Amazon"
     ],
     "updated": "2025-03-23",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Hard",
+    "categories": "Prefix Sum, Hash Table, Greedy"
   },
   {
     "slug": "amazon-number-of-well-performing-groups",
@@ -2217,7 +2659,9 @@
       "Amazon"
     ],
     "updated": "2025-03-23",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Array, Sliding Window"
   },
   {
     "slug": "amazon-get-max-increments",
@@ -2227,7 +2671,9 @@
       "Amazon"
     ],
     "updated": "2025-03-22",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Easy",
+    "categories": "Array, Sorting, Greedy"
   },
   {
     "slug": "amazon-password-strength",
@@ -2237,7 +2683,9 @@
       "Amazon"
     ],
     "updated": "2025-03-22",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "String, Greedy"
   },
   {
     "slug": "amazon-find-optimal-level",
@@ -2247,7 +2695,9 @@
       "Amazon"
     ],
     "updated": "2025-03-21",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Hard",
+    "categories": "Array, Binary Search, Greedy"
   },
   {
     "slug": "amazon-min-operation",
@@ -2257,7 +2707,9 @@
       "Amazon"
     ],
     "updated": "2025-03-21",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Easy",
+    "categories": "Array, Greedy, Hash Table"
   },
   {
     "slug": "amazon-trader-joe-trades",
@@ -2267,7 +2719,9 @@
       "Amazon"
     ],
     "updated": "2025-03-21",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Hard",
+    "categories": "Dynamic Programming, Greedy"
   },
   {
     "slug": "amazon-all-about-rewards",
@@ -2277,7 +2731,9 @@
       "Amazon"
     ],
     "updated": "2025-03-20",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Array, Sorting"
   },
   {
     "slug": "amazon-inventory-processes-survival-possibility",
@@ -2287,7 +2743,9 @@
       "Amazon"
     ],
     "updated": "2025-03-18",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Greedy, Math"
   },
   {
     "slug": "amazon-medians",
@@ -2297,7 +2755,9 @@
       "Amazon"
     ],
     "updated": "2025-03-18",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Easy",
+    "categories": "Array, Sorting"
   },
   {
     "slug": "amazon-find-partition-cost",
@@ -2307,7 +2767,9 @@
       "Amazon"
     ],
     "updated": "2025-03-13",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Dynamic Programming, Array"
   },
   {
     "slug": "amazon-get-most-out-of-the-data",
@@ -2317,7 +2779,9 @@
       "Amazon"
     ],
     "updated": "2025-02-10",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Array, Greedy, Sorting"
   },
   {
     "slug": "amazon-maximize-sum-of-array-multiplication",
@@ -2327,7 +2791,9 @@
       "Amazon"
     ],
     "updated": "2025-02-05",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Easy",
+    "categories": "Array, Sorting, Greedy"
   },
   {
     "slug": "amazon-maximum-number-of-products-you-can-pick",
@@ -2337,7 +2803,9 @@
       "Amazon"
     ],
     "updated": "2025-02-05",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Hard",
+    "categories": "Dynamic Programming, Array"
   },
   {
     "slug": "amazon-get-maximum",
@@ -2347,7 +2815,9 @@
       "Amazon"
     ],
     "updated": "2025-02-02",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Dynamic Programming, Array"
   },
   {
     "slug": "amazon-sum-of-max-subarrays",
@@ -2357,7 +2827,9 @@
       "Amazon"
     ],
     "updated": "2025-02-02",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Hard",
+    "categories": "Array, Stack"
   },
   {
     "slug": "amazon-calculate-max-salary",
@@ -2367,7 +2839,9 @@
       "Amazon"
     ],
     "updated": "2025-01-09",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "String, Dynamic Programming, Greedy"
   },
   {
     "slug": "amazon-maximize-product-of-sizes-of-subtrees",
@@ -2377,7 +2851,9 @@
       "Amazon"
     ],
     "updated": "2025-01-09",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Hard",
+    "categories": "Tree, Dynamic Programming, Greedy"
   },
   {
     "slug": "amazon-minimum-energy-cost",
@@ -2387,7 +2863,9 @@
       "Amazon"
     ],
     "updated": "2025-01-09",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Dynamic Programming, Array"
   },
   {
     "slug": "amazon-optimal-interval-difference",
@@ -2397,7 +2875,9 @@
       "Amazon"
     ],
     "updated": "2025-01-08",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Intervals, Sorting"
   },
   {
     "slug": "amazon-find-max-value",
@@ -2407,7 +2887,9 @@
       "Amazon"
     ],
     "updated": "2025-01-05",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Matrix, Dynamic Programming, Greedy"
   },
   {
     "slug": "amazon-get-maximum-events",
@@ -2417,7 +2899,9 @@
       "Amazon"
     ],
     "updated": "2025-01-05",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Hard",
+    "categories": "Dynamic Programming, Sorting, Greedy"
   },
   {
     "slug": "amazon-calculate-max-profit",
@@ -2427,7 +2911,9 @@
       "Amazon"
     ],
     "updated": "2024-12-22",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Easy",
+    "categories": "Greedy, Sorting"
   },
   {
     "slug": "amazon-get-final-locations",
@@ -2437,7 +2923,9 @@
       "Amazon"
     ],
     "updated": "2024-12-22",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Easy",
+    "categories": "Hash Table, Sorting"
   },
   {
     "slug": "amazon-get-stable-periods-count",
@@ -2447,7 +2935,9 @@
       "Amazon"
     ],
     "updated": "2024-12-22",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Sliding Window, Hash Table"
   },
   {
     "slug": "amazon-max-transfer-rate",
@@ -2457,7 +2947,9 @@
       "Amazon"
     ],
     "updated": "2024-12-22",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Easy",
+    "categories": "Greedy, Sorting, Math"
   },
   {
     "slug": "amazon-get-max-stability",
@@ -2467,7 +2959,9 @@
       "Amazon"
     ],
     "updated": "2024-12-20",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Sorting, Greedy"
   },
   {
     "slug": "amazon-make-array-zero-by-subtracting-equal-amounts",
@@ -2477,7 +2971,9 @@
       "Amazon"
     ],
     "updated": "2024-12-20",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Easy",
+    "categories": "Array, Hash Table"
   },
   {
     "slug": "amazon-minimum-swaps-to-make-palindrome",
@@ -2487,7 +2983,9 @@
       "Amazon"
     ],
     "updated": "2024-12-20",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "String, Two Pointers, Greedy"
   },
   {
     "slug": "amazon-get-max-skill-sum",
@@ -2497,7 +2995,9 @@
       "Amazon"
     ],
     "updated": "2024-12-11",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Prefix Sum, Hash Table"
   },
   {
     "slug": "amazon-get-minimum-value",
@@ -2507,7 +3007,9 @@
       "Amazon"
     ],
     "updated": "2024-12-11",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Easy",
+    "categories": "Array, Greedy"
   },
   {
     "slug": "amazon-find-number",
@@ -2517,7 +3019,9 @@
       "Amazon"
     ],
     "updated": "2024-12-10",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Math, Combinatorics, Dynamic Programming"
   },
   {
     "slug": "amazon-get-min-removal",
@@ -2527,7 +3031,9 @@
       "Amazon"
     ],
     "updated": "2024-12-10",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Easy",
+    "categories": "Hash Table, Greedy, Sorting"
   },
   {
     "slug": "amazon-find-lexicographically-smallest-string",
@@ -2537,7 +3043,9 @@
       "Amazon"
     ],
     "updated": "2024-12-08",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Hard",
+    "categories": "String, Greedy"
   },
   {
     "slug": "amazon-find-password-strength",
@@ -2547,7 +3055,9 @@
       "Amazon"
     ],
     "updated": "2024-12-08",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "String, Hash Table"
   },
   {
     "slug": "amazon-perform-queries",
@@ -2557,7 +3067,9 @@
       "Amazon"
     ],
     "updated": "2024-12-08",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Easy",
+    "categories": "Queue, Simulation"
   },
   {
     "slug": "amazon-get-data-dependence-sum",
@@ -2567,7 +3079,9 @@
       "Amazon"
     ],
     "updated": "2024-12-03",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Hard",
+    "categories": "Math"
   },
   {
     "slug": "amazon-get-min-operations2",
@@ -2577,7 +3091,9 @@
       "Amazon"
     ],
     "updated": "2024-12-03",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Sorting, Greedy"
   },
   {
     "slug": "amazon-sum-of-all-days-numbers-on-which-the-data-of-the-xth-will-be-dependent",
@@ -2587,7 +3103,9 @@
       "Amazon"
     ],
     "updated": "2024-11-27",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Math"
   },
   {
     "slug": "amazon-optimize-identifiers",
@@ -2597,7 +3115,9 @@
       "Amazon"
     ],
     "updated": "2024-11-25",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "String, Two Pointers"
   },
   {
     "slug": "amazon-minimum-insertions",
@@ -2607,7 +3127,9 @@
       "Amazon"
     ],
     "updated": "2024-11-24",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Dynamic Programming, Array"
   },
   {
     "slug": "amazon-determine-minimum-characters-to-append",
@@ -2617,7 +3139,9 @@
       "Amazon"
     ],
     "updated": "2024-11-23",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Easy",
+    "categories": "String, Two Pointers"
   },
   {
     "slug": "amazon-reduce-memory-usage",
@@ -2627,7 +3151,9 @@
       "Amazon"
     ],
     "updated": "2024-11-20",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Easy",
+    "categories": "Array, Prefix Sum, Sliding Window"
   },
   {
     "slug": "amazon-calculate-truck-distance",
@@ -2637,7 +3163,9 @@
       "Amazon"
     ],
     "updated": "2024-11-18",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Array, Prefix Sum"
   },
   {
     "slug": "amazon-get-minimum-changes",
@@ -2647,7 +3175,9 @@
       "Amazon"
     ],
     "updated": "2024-11-18",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Array, Hash Table"
   },
   {
     "slug": "amazon-find-ideal-days",
@@ -2657,7 +3187,9 @@
       "Amazon"
     ],
     "updated": "2024-11-17",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Array, Sliding Window"
   },
   {
     "slug": "amazon-get-min-moves",
@@ -2667,7 +3199,9 @@
       "Amazon"
     ],
     "updated": "2024-11-14",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Bit Manipulation, Greedy"
   },
   {
     "slug": "amazon-minimize-effort",
@@ -2677,7 +3211,9 @@
       "Amazon"
     ],
     "updated": "2024-11-14",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Array, Math, Greedy"
   },
   {
     "slug": "amazon-get-max-discount-pairs",
@@ -2687,7 +3223,9 @@
       "Amazon"
     ],
     "updated": "2024-11-13",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Easy",
+    "categories": "Array, Hash Table, Math"
   },
   {
     "slug": "amazon-rooks-left",
@@ -2697,7 +3235,9 @@
       "Amazon"
     ],
     "updated": "2024-11-12",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Matrix, Union Find, Graph"
   },
   {
     "slug": "amazon-optimized-identifiers",
@@ -2707,7 +3247,9 @@
       "Amazon"
     ],
     "updated": "2024-11-09",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "String, Two Pointers"
   },
   {
     "slug": "amazon-cleanup-dataset",
@@ -2717,7 +3259,9 @@
       "Amazon"
     ],
     "updated": "2024-10-30",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Greedy, Hash Table"
   },
   {
     "slug": "amazon-find-minimum-possible-variance",
@@ -2727,7 +3271,9 @@
       "Amazon"
     ],
     "updated": "2024-10-30",
-    "parse_status": "page-unparseable"
+    "parse_status": "page-unparseable",
+    "difficulty": null,
+    "categories": null
   },
   {
     "slug": "amazon-find-minimum-time-required",
@@ -2737,7 +3283,9 @@
       "Amazon"
     ],
     "updated": "2024-10-30",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "String, Greedy, Hash Table"
   },
   {
     "slug": "amazon-calculate-warehouse-efficiency",
@@ -2747,7 +3295,9 @@
       "Amazon"
     ],
     "updated": "2024-10-28",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Array, Greedy, Prefix Sum"
   },
   {
     "slug": "amazon-find-network-calls",
@@ -2757,7 +3307,9 @@
       "Amazon"
     ],
     "updated": "2024-10-28",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Array, Sorting, Prefix Sum"
   },
   {
     "slug": "amazon-make-all-elements-distinct",
@@ -2767,7 +3319,9 @@
       "Amazon"
     ],
     "updated": "2024-10-28",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Easy",
+    "categories": "Array, Hash Table"
   },
   {
     "slug": "amazon-maximize-similarity",
@@ -2777,7 +3331,9 @@
       "Amazon"
     ],
     "updated": "2024-10-28",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Easy",
+    "categories": "Array, Greedy, Math"
   },
   {
     "slug": "amazon-get-min-cost-book",
@@ -2787,7 +3343,9 @@
       "Amazon"
     ],
     "updated": "2024-10-22",
-    "parse_status": "page-unparseable"
+    "parse_status": "page-unparseable",
+    "difficulty": null,
+    "categories": null
   },
   {
     "slug": "amazon-get-smaller-items",
@@ -2797,7 +3355,9 @@
       "Amazon"
     ],
     "updated": "2024-10-22",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Hard",
+    "categories": "Prefix Sum, Binary Search, Sorting"
   },
   {
     "slug": "amazon-maximum-number-of-days-to-survive",
@@ -2807,7 +3367,9 @@
       "Amazon"
     ],
     "updated": "2024-10-22",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Greedy, Sorting"
   },
   {
     "slug": "amazon-schedule-tasks",
@@ -2817,7 +3379,9 @@
       "Amazon"
     ],
     "updated": "2024-10-22",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Greedy, Sorting, Two Pointers"
   },
   {
     "slug": "amazon-minimum-weekly-input",
@@ -2827,7 +3391,9 @@
       "Amazon"
     ],
     "updated": "2024-10-20",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Dynamic Programming, Array"
   },
   {
     "slug": "amazon-find-minimum-time",
@@ -2837,7 +3403,9 @@
       "Amazon"
     ],
     "updated": "2024-10-19",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Array, Sorting, Greedy"
   },
   {
     "slug": "amazon-get-max-programs",
@@ -2847,7 +3415,9 @@
       "Amazon"
     ],
     "updated": "2024-10-19",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Array, Binary Search, Greedy"
   },
   {
     "slug": "amazon-can-sort-permutation-in-given-moves",
@@ -2857,7 +3427,9 @@
       "Amazon"
     ],
     "updated": "2024-10-11",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Math, Graph"
   },
   {
     "slug": "amazon-find-minimum-time-to-create-beautiful-canvas",
@@ -2867,7 +3439,9 @@
       "Amazon"
     ],
     "updated": "2024-10-11",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Hard",
+    "categories": "Matrix, Binary Search, Prefix Sum"
   },
   {
     "slug": "amazon-get-max-charge",
@@ -2877,7 +3451,9 @@
       "Amazon"
     ],
     "updated": "2024-10-11",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Hard",
+    "categories": "Dynamic Programming, Stack"
   },
   {
     "slug": "amazon-rearrange-binary-string",
@@ -2887,7 +3463,9 @@
       "Amazon"
     ],
     "updated": "2024-10-11",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "String, Greedy, Hash Table"
   },
   {
     "slug": "amazon-get-max-alternating-music",
@@ -2897,7 +3475,9 @@
       "Amazon"
     ],
     "updated": "2024-10-08",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "String, Sliding Window"
   },
   {
     "slug": "amazon-get-special-string",
@@ -2907,7 +3487,9 @@
       "Amazon"
     ],
     "updated": "2024-10-05",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Hard",
+    "categories": "String, Greedy"
   },
   {
     "slug": "amazon-find-days-s2-subsequence-of-s1",
@@ -2917,7 +3499,9 @@
       "Amazon"
     ],
     "updated": "2024-09-28",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Hard",
+    "categories": "String, Binary Search, Prefix Sum"
   },
   {
     "slug": "amazon-find-subarray-with-minimum-distinct-integers",
@@ -2927,7 +3511,9 @@
       "Amazon"
     ],
     "updated": "2024-09-27",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Sliding Window, Hash Table, Array"
   },
   {
     "slug": "amazon-find-maximum-calories",
@@ -2937,7 +3523,9 @@
       "Amazon"
     ],
     "updated": "2024-09-26",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Hard",
+    "categories": "Array, Math, Greedy"
   },
   {
     "slug": "amazon-find-sum-of-beauties",
@@ -2947,7 +3535,9 @@
       "Amazon"
     ],
     "updated": "2024-09-26",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Array, Sorting, Binary Search"
   },
   {
     "slug": "amazon-longest-perfect-anagrams",
@@ -2957,7 +3547,9 @@
       "Amazon"
     ],
     "updated": "2024-09-26",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Hard",
+    "categories": "String, Hash Table, Sliding Window"
   },
   {
     "slug": "amazon-maximum-quality-sum",
@@ -2967,7 +3559,9 @@
       "Amazon"
     ],
     "updated": "2024-09-26",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Hard",
+    "categories": "Greedy, Sorting, Heap"
   },
   {
     "slug": "amazon-minimize-warehouse-transfer-cost",
@@ -2977,7 +3571,9 @@
       "Amazon"
     ],
     "updated": "2024-09-26",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Hard",
+    "categories": "Array, Prefix Sum, Greedy"
   },
   {
     "slug": "amazon-calculate-total-distance-travelled",
@@ -2987,7 +3583,9 @@
       "Amazon"
     ],
     "updated": "2024-09-19",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Array, Binary Search, Prefix Sum"
   },
   {
     "slug": "amazon-maximum-possible-racers",
@@ -2997,7 +3595,9 @@
       "Amazon"
     ],
     "updated": "2024-09-19",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Sliding Window, Hash Table"
   },
   {
     "slug": "amazon-distribute-packages",
@@ -3007,7 +3607,9 @@
       "Amazon"
     ],
     "updated": "2024-09-03",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Array, Greedy, Sorting"
   },
   {
     "slug": "amazon-find-capable-winners",
@@ -3017,7 +3619,9 @@
       "Amazon"
     ],
     "updated": "2024-09-03",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Hard",
+    "categories": "Sorting, Greedy, Array"
   },
   {
     "slug": "amazon-get-max-information-gain",
@@ -3027,7 +3631,9 @@
       "Amazon"
     ],
     "updated": "2024-09-03",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Easy",
+    "categories": "String, Hash Table, Sorting"
   },
   {
     "slug": "amazon-get-min-size",
@@ -3037,7 +3643,9 @@
       "Amazon"
     ],
     "updated": "2024-08-30",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Binary Search, Greedy, Sorting"
   },
   {
     "slug": "amazon-find-minimum-number-of-operations",
@@ -3047,7 +3655,9 @@
       "Amazon"
     ],
     "updated": "2024-08-28",
-    "parse_status": "page-unparseable"
+    "parse_status": "page-unparseable",
+    "difficulty": null,
+    "categories": null
   },
   {
     "slug": "amazon-choose-warehouses-location",
@@ -3057,7 +3667,9 @@
       "Amazon"
     ],
     "updated": "2024-08-25",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Array, Dynamic Programming, Prefix Sum"
   },
   {
     "slug": "amazon-minimum-storage-capacity-required",
@@ -3067,7 +3679,9 @@
       "Amazon"
     ],
     "updated": "2024-08-23",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Array, Binary Search, Greedy, Two Pointers"
   },
   {
     "slug": "amazon-get-maximum-sum",
@@ -3077,7 +3691,9 @@
       "Amazon"
     ],
     "updated": "2024-08-10",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Easy",
+    "categories": "Hash Table, Sorting, Greedy"
   },
   {
     "slug": "amazon-assign-tasks",
@@ -3087,7 +3703,9 @@
       "Amazon"
     ],
     "updated": "2024-08-05",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Easy",
+    "categories": "Array, Heap"
   },
   {
     "slug": "amazon-get-active-requests-count",
@@ -3097,7 +3715,9 @@
       "Amazon"
     ],
     "updated": "2024-08-05",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Queue, Simulation"
   },
   {
     "slug": "amazon-get-operations",
@@ -3107,7 +3727,9 @@
       "Amazon"
     ],
     "updated": "2024-08-05",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Hard",
+    "categories": "Array, Greedy, Sorting"
   },
   {
     "slug": "amazon-process-queries-on-cart",
@@ -3117,7 +3739,9 @@
       "Amazon"
     ],
     "updated": "2024-08-05",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Easy",
+    "categories": "Linked List, Hash Table, Simulation"
   },
   {
     "slug": "amazon-get-minimum-boxes",
@@ -3127,7 +3751,9 @@
       "Amazon"
     ],
     "updated": "2024-07-25",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Array, Sorting, Sliding Window"
   },
   {
     "slug": "amazon-compute-encoded-product-name",
@@ -3137,7 +3763,9 @@
       "Amazon"
     ],
     "updated": "2024-07-15",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Easy",
+    "categories": "String, Sorting"
   },
   {
     "slug": "amazon-get-redundant-substrings",
@@ -3147,7 +3775,9 @@
       "Amazon"
     ],
     "updated": "2024-07-15",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Hard",
+    "categories": "String, Prefix Sum, Hash Table"
   },
   {
     "slug": "amazon-process-queue",
@@ -3157,7 +3787,9 @@
       "Amazon"
     ],
     "updated": "2024-07-15",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Queue, Simulation"
   },
   {
     "slug": "amazon-get-max-consecutive-on",
@@ -3167,7 +3799,9 @@
       "Amazon"
     ],
     "updated": "2024-07-09",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Hard",
+    "categories": "String, Sliding Window"
   },
   {
     "slug": "amazon-get-total-requests",
@@ -3177,7 +3811,9 @@
       "Amazon"
     ],
     "updated": "2024-06-27",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Easy",
+    "categories": "Array, Hash Table, Simulation"
   },
   {
     "slug": "maximize-negative-signs",
@@ -3187,7 +3823,9 @@
       "Amazon"
     ],
     "updated": "2024-06-24",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Array, Greedy"
   },
   {
     "slug": "amazon-is-regex-matching",
@@ -3197,7 +3835,9 @@
       "Amazon"
     ],
     "updated": "2024-06-15",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Hard",
+    "categories": "Dynamic Programming, String, Parsing"
   },
   {
     "slug": "amazon-maximum-stability",
@@ -3207,7 +3847,9 @@
       "Amazon"
     ],
     "updated": "2024-06-15",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Sorting, Greedy"
   },
   {
     "slug": "amazon-bring-servers-down",
@@ -3217,7 +3859,9 @@
       "Amazon"
     ],
     "updated": "2024-06-10",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Hard",
+    "categories": "Greedy, Math, Simulation"
   },
   {
     "slug": "amazon-maximize-subtree-product",
@@ -3227,7 +3871,9 @@
       "Amazon"
     ],
     "updated": "2024-06-10",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Hard",
+    "categories": "Tree, Dynamic Programming, Greedy"
   },
   {
     "slug": "amazon-find-k-level-permutation",
@@ -3237,7 +3883,9 @@
       "Amazon"
     ],
     "updated": "2024-06-02",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Hard",
+    "categories": "Array, Greedy"
   },
   {
     "slug": "amazon-minimal-heaviest-set-a",
@@ -3247,7 +3895,9 @@
       "Amazon"
     ],
     "updated": "2024-06-02",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Easy",
+    "categories": "Array, Sorting, Greedy"
   },
   {
     "slug": "amazon-get-exp",
@@ -3257,7 +3907,9 @@
       "Amazon"
     ],
     "updated": "2024-05-13",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Easy",
+    "categories": "Sorting, Hash Table"
   },
   {
     "slug": "amazon-orda-layout",
@@ -3267,7 +3919,9 @@
       "Amazon"
     ],
     "updated": "2024-05-04",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "String, Sorting, Parsing"
   },
   {
     "slug": "find-median-of-subarray-uniqueness",
@@ -3277,7 +3931,9 @@
       "Amazon"
     ],
     "updated": "2024-04-15",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Hard",
+    "categories": "Binary Search, Sliding Window"
   },
   {
     "slug": "amazon-count-pairs",
@@ -3287,7 +3943,9 @@
       "Amazon"
     ],
     "updated": "2024-04-12",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Easy",
+    "categories": "Array, Hash Table"
   },
   {
     "slug": "amazon-get-max-pairs",
@@ -3297,7 +3955,9 @@
       "Amazon"
     ],
     "updated": "2024-04-12",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Easy",
+    "categories": "Array, Sorting, Greedy, Two Pointers"
   },
   {
     "slug": "amazon-get-min-time",
@@ -3307,7 +3967,9 @@
       "Amazon"
     ],
     "updated": "2024-04-12",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Array, Sorting, Greedy"
   },
   {
     "slug": "amazon-kth-smallest-in-subarray",
@@ -3317,7 +3979,9 @@
       "Amazon"
     ],
     "updated": "2024-04-12",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Array, Sliding Window, Heap"
   },
   {
     "slug": "amazon-maximize-the-array-sum-after-negating-at-most-k-elements",
@@ -3327,7 +3991,9 @@
       "Amazon"
     ],
     "updated": "2024-04-12",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Array, Greedy, Prefix Sum"
   },
   {
     "slug": "amazon-calculate-median-sum",
@@ -3337,7 +4003,9 @@
       "Amazon"
     ],
     "updated": "2024-04-09",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Sorting, Greedy"
   },
   {
     "slug": "max-lucky-numbers",
@@ -3347,7 +4015,9 @@
       "Amazon"
     ],
     "updated": "2024-04-07",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Easy",
+    "categories": "Math, Greedy"
   },
   {
     "slug": "amazon-find-kth-minimum-vulnerability",
@@ -3357,7 +4027,9 @@
       "Amazon"
     ],
     "updated": "2024-04-05",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Sliding Window, Heap"
   },
   {
     "slug": "amazon-get-max-aggregate-temperature-change",
@@ -3367,7 +4039,9 @@
       "Amazon"
     ],
     "updated": "2024-03-31",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Easy",
+    "categories": "Array, Prefix Sum"
   },
   {
     "slug": "amazon-count-faults",
@@ -3377,7 +4051,9 @@
       "Amazon"
     ],
     "updated": "2024-03-19",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Easy",
+    "categories": "Simulation, Hash Table, String"
   },
   {
     "slug": "amazon-find-maximum-num",
@@ -3387,7 +4063,9 @@
       "Amazon"
     ],
     "updated": "2024-03-19",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Easy",
+    "categories": "Array, Greedy, Sorting"
   },
   {
     "slug": "amazon-minimize-sum-of-absolute-differences",
@@ -3397,7 +4075,9 @@
       "Amazon"
     ],
     "updated": "2024-03-18",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Easy",
+    "categories": "Array, Sorting, Greedy"
   },
   {
     "slug": "amazon-match-strings",
@@ -3407,7 +4087,9 @@
       "Amazon"
     ],
     "updated": "2024-03-14",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Easy",
+    "categories": "String, Two Pointers"
   },
   {
     "slug": "amazon-find-encrypted-password",
@@ -3417,7 +4099,9 @@
       "Amazon"
     ],
     "updated": "2024-03-12",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Easy",
+    "categories": "String, Sorting"
   },
   {
     "slug": "amazon-find-number-of-possible-unique-strings",
@@ -3427,7 +4111,9 @@
       "Amazon"
     ],
     "updated": "2024-03-12",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Hard",
+    "categories": "String, Math"
   },
   {
     "slug": "amazon-lexicographically-smallest-palindrome-possible",
@@ -3437,7 +4123,9 @@
       "Amazon"
     ],
     "updated": "2024-03-09",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "String, Two Pointers, Greedy"
   },
   {
     "slug": "amazon-find-number-of-ways-to-group-parcels",
@@ -3447,7 +4135,9 @@
       "Amazon"
     ],
     "updated": "2024-03-04",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Hash Table, Math, Combinatorics"
   },
   {
     "slug": "amazon-maximum-times-word-removed",
@@ -3457,7 +4147,9 @@
       "Amazon"
     ],
     "updated": "2024-03-03",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Easy",
+    "categories": "String, Hash Table"
   },
   {
     "slug": "amazon-return-records",
@@ -3467,7 +4159,9 @@
       "Amazon"
     ],
     "updated": "2024-03-02",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Easy",
+    "categories": "Hash Table, Simulation, String"
   },
   {
     "slug": "amazon-reverse-binary-string",
@@ -3477,7 +4171,9 @@
       "Amazon"
     ],
     "updated": "2024-03-02",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "String, Two Pointers, Greedy"
   },
   {
     "slug": "amazon-get-max-racers",
@@ -3487,7 +4183,9 @@
       "Amazon"
     ],
     "updated": "2024-02-20",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Sliding Window, Hash Table"
   },
   {
     "slug": "amazon-count-distinct-passwords",
@@ -3497,7 +4195,9 @@
       "Amazon"
     ],
     "updated": "2024-02-19",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Hard",
+    "categories": "String, Hash Table"
   },
   {
     "slug": "amazon-get-min-num-moves",
@@ -3507,7 +4207,9 @@
       "Amazon"
     ],
     "updated": "2024-02-19",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Easy",
+    "categories": "Array, Greedy"
   },
   {
     "slug": "amazon-find-min-trips",
@@ -3517,7 +4219,9 @@
       "Amazon"
     ],
     "updated": "2024-02-17",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Easy",
+    "categories": "Hash Table, Greedy"
   },
   {
     "slug": "amazon-maximum-user-traffic",
@@ -3527,7 +4231,9 @@
       "Amazon"
     ],
     "updated": "2024-02-17",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Easy",
+    "categories": "Prefix Sum, Sorting"
   },
   {
     "slug": "amazon-minimize-the-range",
@@ -3537,7 +4243,9 @@
       "Amazon"
     ],
     "updated": "2024-02-17",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Hard",
+    "categories": "Sliding Window, Sorting, Greedy"
   },
   {
     "slug": "amazon-find-recurring-names",
@@ -3547,7 +4255,9 @@
       "Amazon"
     ],
     "updated": "2024-02-14",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Easy",
+    "categories": "Hash Table, Sorting, String"
   },
   {
     "slug": "amazon-find-requests-in-queue",
@@ -3557,7 +4267,9 @@
       "Amazon"
     ],
     "updated": "2024-02-14",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Queue, Simulation"
   },
   {
     "slug": "amazon-find-largest-set-of-onion-bags",
@@ -3567,7 +4279,9 @@
       "Amazon"
     ],
     "updated": "2024-02-06",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Array, Hash Table, Math"
   },
   {
     "slug": "amazon-min-errors",
@@ -3577,7 +4291,9 @@
       "Amazon"
     ],
     "updated": "2024-02-06",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "String, Dynamic Programming, Greedy"
   },
   {
     "slug": "amazon-dropped-requests",
@@ -3587,7 +4303,9 @@
       "Amazon"
     ],
     "updated": "2024-01-27",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Sliding Window, Array"
   },
   {
     "slug": "amazon-execute-processes",
@@ -3597,7 +4315,9 @@
       "Amazon"
     ],
     "updated": "2024-01-27",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Array, Hash Table, Simulation"
   },
   {
     "slug": "amazon-find-unique-values",
@@ -3607,7 +4327,9 @@
       "Amazon"
     ],
     "updated": "2024-01-27",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Easy",
+    "categories": "Sorting, Hash Table"
   },
   {
     "slug": "amazon-group-students",
@@ -3617,7 +4339,9 @@
       "Amazon"
     ],
     "updated": "2024-01-27",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Easy",
+    "categories": "Sorting, Greedy"
   },
   {
     "slug": "amazon-num-of-suitable-places",
@@ -3627,7 +4351,9 @@
       "Amazon"
     ],
     "updated": "2024-01-27",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Sorting, Binary Search, Prefix Sum"
   },
   {
     "slug": "max-set-size",
@@ -3637,7 +4363,9 @@
       "Amazon"
     ],
     "updated": "2024-01-13",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Hash Table, Dynamic Programming"
   },
   {
     "slug": "get-discount-pairs",
@@ -3647,7 +4375,9 @@
       "Amazon"
     ],
     "updated": "2024-01-11",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Easy",
+    "categories": "Array, Hash Table, Math"
   },
   {
     "slug": "get-min-cost-data",
@@ -3657,7 +4387,9 @@
       "Amazon"
     ],
     "updated": "2024-01-10",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "String, Greedy, Hash Table"
   },
   {
     "slug": "count-maximum-profitable-groups",
@@ -3667,7 +4399,9 @@
       "Amazon"
     ],
     "updated": "2024-01-07",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Array, Stack"
   },
   {
     "slug": "amazon-find-minimum-dist",
@@ -3677,7 +4411,9 @@
       "Amazon"
     ],
     "updated": "2023-12-27",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Easy",
+    "categories": "Sorting, Greedy"
   },
   {
     "slug": "amazon-how-many-games-did-the-team-win",
@@ -3687,7 +4423,9 @@
       "Amazon"
     ],
     "updated": "2023-12-27",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Sorting, Binary Search"
   },
   {
     "slug": "check-similar-passwords",
@@ -3697,7 +4435,9 @@
       "Amazon"
     ],
     "updated": "2023-12-23",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "String, Two Pointers"
   },
   {
     "slug": "location-of-data-after-transfers",
@@ -3707,7 +4447,9 @@
       "Amazon"
     ],
     "updated": "2023-12-23",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Easy",
+    "categories": "Hash Table, Sorting"
   },
   {
     "slug": "maximum-score-in-balanced-string",
@@ -3717,7 +4459,9 @@
       "Amazon"
     ],
     "updated": "2023-12-23",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "String, Stack"
   },
   {
     "slug": "get-success-value",
@@ -3727,7 +4471,9 @@
       "Amazon"
     ],
     "updated": "2023-12-19",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Easy",
+    "categories": "Sorting, Prefix Sum"
   },
   {
     "slug": "warehouse-allocation",
@@ -3737,7 +4483,9 @@
       "Amazon"
     ],
     "updated": "2023-12-15",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Easy",
+    "categories": "Array, Math, Greedy"
   },
   {
     "slug": "erase-pairs",
@@ -3747,7 +4495,9 @@
       "Amazon"
     ],
     "updated": "2023-12-13",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Stack, String"
   },
   {
     "slug": "get-priorities-after-execution",
@@ -3757,7 +4507,9 @@
       "Amazon"
     ],
     "updated": "2023-12-06",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Hard",
+    "categories": "Heap, Hash Table, Simulation"
   },
   {
     "slug": "count-max-num-teams",
@@ -3767,7 +4519,9 @@
       "Amazon"
     ],
     "updated": "2023-09-24",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Easy",
+    "categories": "Array, Sorting, Sliding Window"
   },
   {
     "slug": "get-average-standing",
@@ -3777,7 +4531,9 @@
       "Amazon"
     ],
     "updated": "2023-09-24",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Array, Sorting, Math"
   },
   {
     "slug": "minimum-time-spent",
@@ -3787,7 +4543,9 @@
       "Amazon"
     ],
     "updated": "2023-09-24",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Greedy, Sorting, Binary Search"
   },
   {
     "slug": "count-spikes",
@@ -3797,7 +4555,9 @@
       "Amazon"
     ],
     "updated": "2023-08-31",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Array, Sorting"
   },
   {
     "slug": "find-minimum-inefficiency",
@@ -3807,7 +4567,9 @@
       "Amazon"
     ],
     "updated": "2023-08-31",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Dynamic Programming, String"
   },
   {
     "slug": "get-mean-rank-count",
@@ -3817,7 +4579,9 @@
       "Amazon"
     ],
     "updated": "2023-08-31",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Hard",
+    "categories": "Array, Hash Table, Prefix Sum"
   },
   {
     "slug": "get-minimum-cost",
@@ -3827,6 +4591,8 @@
       "Amazon"
     ],
     "updated": "2023-08-31",
-    "parse_status": "parsed-with-cases"
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Medium",
+    "categories": "Heap, Greedy"
   }
 ]

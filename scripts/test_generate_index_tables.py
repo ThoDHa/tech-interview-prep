@@ -102,6 +102,8 @@ def fixture_amazon():
             "companies": ["Amazon"],
             "updated": "2026-09-19",
             "parse_status": "parsed-with-cases",
+            "difficulty": "Hard",
+            "categories": "Array, Math",
         },
         {
             "slug": "amazon-first-non-repeating-character",
@@ -110,6 +112,8 @@ def fixture_amazon():
             "companies": ["Amazon"],
             "updated": "2026-09-18",
             "parse_status": "parsed-with-cases",
+            "difficulty": "Easy",
+            "categories": "Hash Table, String",
         },
     ]
 
@@ -204,6 +208,8 @@ def valid_amazon(count=gen.AMAZON_ROW_COUNT):
             "companies": ["Amazon"],
             "updated": (datetime.date(2020, 1, 1) + datetime.timedelta(days=n)).isoformat(),
             "parse_status": "parsed-with-cases",
+            "difficulty": "Easy",
+            "categories": "Array, Hash Table",
         }
         for n in range(count, 0, -1)
     ]
@@ -218,6 +224,8 @@ def amazon_entry_for(lc_slug):
         "companies": ["Amazon"],
         "updated": "2026-09-17",
         "parse_status": "parsed-with-cases",
+        "difficulty": "Medium",
+        "categories": "Stack",
     }
 
 
@@ -452,6 +460,22 @@ def test_load_amazon_manifest_rejects_duplicate_slugs(tmp_path):
     entries[1]["slug"] = entries[0]["slug"]
     path = write_json(tmp_path, "amazon.json", entries)
     with pytest.raises(gen.SourceError, match="duplicate"):
+        gen.validate_amazon_manifest(gen.load_amazon_manifest(path))
+
+
+def test_load_amazon_manifest_rejects_a_missing_difficulty_field(tmp_path):
+    entries = valid_amazon()
+    del entries[0]["difficulty"]
+    path = write_json(tmp_path, "amazon.json", entries)
+    with pytest.raises(gen.SourceError, match="difficulty"):
+        gen.validate_amazon_manifest(gen.load_amazon_manifest(path))
+
+
+def test_load_amazon_manifest_rejects_a_missing_categories_field(tmp_path):
+    entries = valid_amazon()
+    del entries[0]["categories"]
+    path = write_json(tmp_path, "amazon.json", entries)
+    with pytest.raises(gen.SourceError, match="categories"):
         gen.validate_amazon_manifest(gen.load_amazon_manifest(path))
 
 
@@ -1845,8 +1869,9 @@ def test_render_problems_nav_emits_landing_parent_and_two_subsections():
     nav = gen.render_problems_nav(committed_nav_rows(), amazon)
     assert nav.startswith("  - Problems:\n")
     assert "    - problems/index.md\n" in nav
-    assert nav.index("    - problems/index.md\n") < nav.index('    - "LeetCode":\n')
-    assert nav.index('    - "LeetCode":\n') < nav.index(gen.NAV_AMAZON_HEADER)
+    assert nav.index("    - problems/index.md\n") < nav.index(gen.NAV_LEETCODE_HEADER)
+    assert gen.NAV_LEETCODE_HEADER == f'    - "{gen.BOTH_TRACKS}":\n'
+    assert nav.index(gen.NAV_LEETCODE_HEADER) < nav.index(gen.NAV_AMAZON_HEADER)
     first_amazon = amazon[0]
     last_amazon = amazon[-1]
     assert (
@@ -1929,7 +1954,7 @@ def test_write_problems_nav_requires_a_problems_section(tmp_path):
 
 
 def nav_children(mkdocs_text):
-    """The LeetCode subsection's child lines in file order."""
+    """The merged-tracks subsection's child lines in file order."""
     at = mkdocs_text.index(gen.NAV_LEETCODE_HEADER) + len(gen.NAV_LEETCODE_HEADER)
     children = []
     for line in mkdocs_text[at:].splitlines():
@@ -1990,6 +2015,8 @@ def test_committed_mkdocs_nav_satisfies_the_check_gate():
 
 def test_committed_nav_leetcode_subsection_holds_168_unique_pages_at_one_level():
     mkdocs_text = gen.MKDOCS_PATH.read_text(encoding="utf-8")
+    assert gen.NAV_LEETCODE_HEADER in mkdocs_text
+    assert '    - "LeetCode":\n' not in mkdocs_text
     children = nav_children(mkdocs_text)
     assert len(children) == gen.UNIQUE_PROBLEM_COUNT
     assert len(set(children)) == len(children)

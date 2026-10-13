@@ -99,7 +99,24 @@ def test_build_manifest_breaks_date_ties_by_slug_ascending():
         "|**Amazon**|[Zeta Task](https://www.fastprep.io/problems/amazon-zeta-task)|[![Practice][p]](https://www.fastprep.io/problems/amazon-zeta-task)|Sep 19, 2026|\n"
         "|**Amazon**|[Alpha Task](https://www.fastprep.io/problems/amazon-alpha-task)|[![Practice][p]](https://www.fastprep.io/problems/amazon-alpha-task)|Sep 19, 2026|\n"
     )
-    manifest = gen.build_manifest([page])
+    writeups = []
+    for slug, title in (
+        ("amazon-zeta-task", "Zeta Task"),
+        ("amazon-alpha-task", "Alpha Task"),
+    ):
+        path = gen.DOCS_DIR / f"{slug}.md"
+        path.write_text(
+            f"# [{title}](https://www.fastprep.io/problems/{slug})\n"
+            "\n"
+            "**Medium** | **NN minutes** | **Array**\n",
+            encoding="utf-8",
+        )
+        writeups.append(path)
+    try:
+        manifest = gen.build_manifest([page])
+    finally:
+        for path in writeups:
+            path.unlink()
     assert [entry["slug"] for entry in manifest] == [
         "amazon-alpha-task",
         "amazon-zeta-task",
@@ -113,6 +130,42 @@ def test_build_manifest_entries_carry_required_fields():
     assert entry["companies"] == ["Amazon", "Google"]
     assert entry["updated"] == "2026-09-17"
     assert entry["url"].startswith("https://www.fastprep.io/problems/")
+
+
+def test_build_manifest_persists_the_writeup_header_difficulty_and_categories():
+    manifest = gen.build_manifest([BANK_PAGE])
+    entry = next(e for e in manifest if e["slug"] == "amazon-lru-query-result-cache")
+    assert entry["difficulty"] == "Medium"
+    assert entry["categories"] == "Design, Hash Table, Linked List, Simulation"
+    reversal = next(
+        e for e in manifest
+        if e["slug"] == "amazon-maximize-adjacent-difference-with-one-reversal"
+    )
+    assert reversal["difficulty"] == "Hard"
+    assert reversal["categories"] == "Array, Greedy, Math"
+
+
+def test_build_manifest_maps_the_unknown_markers_to_none():
+    page = (
+        "| Company | OA / Interview Question | Practice | Updated |\n"
+        "| :-- | :-- | :-: | :-- |\n"
+        "|**Amazon**|[Mystery Task](https://www.fastprep.io/problems/amazon-mystery-task)"
+        "|[![Practice][p]](https://www.fastprep.io/problems/amazon-mystery-task)"
+        "|Sep 19, 2026|\n"
+    )
+    (gen.DOCS_DIR / "amazon-mystery-task.md").write_text(
+        "# [Mystery Task](https://www.fastprep.io/problems/amazon-mystery-task)\n"
+        "\n"
+        "**unknown difficulty** | **NN minutes** | **unknown categories**\n",
+        encoding="utf-8",
+    )
+    try:
+        manifest = gen.build_manifest([page])
+    finally:
+        (gen.DOCS_DIR / "amazon-mystery-task.md").unlink()
+    entry = manifest[0]
+    assert entry["difficulty"] is None
+    assert entry["categories"] is None
 
 
 @pytest.mark.skipif(
@@ -448,6 +501,58 @@ def test_render_writeup_placeholder_when_statement_implausible_and_unrecoverable
     assert "$23" not in text
 
 
+# ---------------------------------------------------------------------------
+# Write-up header metadata (difficulty, categories)
+# ---------------------------------------------------------------------------
+
+
+def write_header_fixture(tmp_path, header):
+    """One synthetic write-up carrying `header` at the pinned line 3."""
+    path = tmp_path / "amazon-header-fixture.md"
+    path.write_text(
+        "# [Header Fixture](https://x)\n"
+        "\n"
+        f"{header}\n",
+        encoding="utf-8",
+    )
+    return path
+
+
+def test_parse_difficulty_line_reads_the_pinned_header():
+    path = write_header_fixture(
+        tmp_path_factory(), "**Medium** | **NN minutes** | **Array, Greedy, Math**"
+    )
+    parsed = gen.parse_difficulty_line(path)
+    assert parsed == {"difficulty": "Medium", "categories": "Array, Greedy, Math"}
+
+
+def tmp_path_factory():
+    """A throwaway directory for header fixtures outside pytest's tmp_path."""
+    import tempfile
+
+    directory = Path(tempfile.mkdtemp())
+    return directory
+
+
+def test_parse_difficulty_line_maps_the_unknown_markers_to_none():
+    path = write_header_fixture(
+        tmp_path_factory(), "**unknown difficulty** | **NN minutes** | **unknown categories**"
+    )
+    parsed = gen.parse_difficulty_line(path)
+    assert parsed == {"difficulty": None, "categories": None}
+
+
+def test_parse_difficulty_line_rejects_a_missing_writeup(tmp_path):
+    with pytest.raises(SystemExit, match="not found"):
+        gen.parse_difficulty_line(tmp_path / "amazon-absent.md")
+
+
+def test_parse_difficulty_line_rejects_a_headerless_writeup(tmp_path):
+    path = write_header_fixture(tmp_path, "no bold groups here")
+    with pytest.raises(SystemExit, match="difficulty"):
+        gen.parse_difficulty_line(path)
+
+
 def test_signature_args_suffixes_python_keywords():
     problem = {
         "examples": [
@@ -647,10 +752,98 @@ def test_render_test_links_writeup_at_amazon_depth():
 
 
 def test_render_index_names_practice_directory_as_inline_code():
-    text = gen.render_index([{"slug": "amazon-x", "title": "X", "url": "https://x/x", "companies": ["Amazon"], "updated": "2026-09-19"}])
+    entry = {
+        "slug": "amazon-x",
+        "title": "X",
+        "url": "https://x/x",
+        "companies": ["Amazon"],
+        "updated": "2026-09-19",
+        "difficulty": "Hard",
+        "categories": "Array, Greedy, Math",
+    }
+    text = gen.render_index([entry], difficulty_overrides={})
     assert "`practice/amazon_oa/`" in text
     assert "https://github.com/ThoDHa" not in text
     assert "../../../practice" not in text
+
+
+def test_render_index_orders_the_catalog_columns():
+    entry = {
+        "slug": "amazon-x",
+        "title": "X",
+        "url": "https://x/x",
+        "companies": ["Amazon", "Google"],
+        "updated": "2026-09-19",
+        "difficulty": "Hard",
+        "categories": "Array, Greedy, Math",
+    }
+    text = gen.render_index([entry], difficulty_overrides={})
+    header = next(line for line in text.splitlines() if line.startswith("| Updated"))
+    assert [name.strip() for name in header.strip("|").split("|")] == [
+        "Updated",
+        "Problem",
+        "Difficulty",
+        "Category",
+        "Time",
+        "Companies",
+    ]
+    row = next(line for line in text.splitlines() if line.startswith("| 2026"))
+    assert row == (
+        "| 2026-09-19 | [X](amazon-x.md) | Hard | Array, Greedy, Math"
+        " | 40 minutes | Amazon, Google |"
+    )
+
+
+def test_render_index_estimates_time_from_the_difficulty():
+    entries = [
+        dict(
+            INDEX_INDEX_ENTRY,
+            slug="amazon-easy",
+            title="Easy One",
+            difficulty="Easy",
+        ),
+        dict(
+            INDEX_INDEX_ENTRY,
+            slug="amazon-medium",
+            title="Medium One",
+            difficulty="Medium",
+        ),
+    ]
+    text = gen.render_index(entries, difficulty_overrides={})
+    rows = [line for line in text.splitlines() if line.startswith("| 2026")]
+    assert [row.rsplit("|", 3)[1].strip() for row in rows] == [
+        "15 minutes",
+        "25 minutes",
+    ]
+
+
+def test_render_index_applies_the_difficulty_overrides():
+    entry = dict(INDEX_INDEX_ENTRY, difficulty="Hard")
+    text = gen.render_index(
+        [entry], difficulty_overrides={entry["slug"]: "Easy"}
+    )
+    row = next(line for line in text.splitlines() if line.startswith("| 2026"))
+    assert "| Easy |" in row
+    assert "| 15 minutes |" in row
+
+
+def test_render_index_dashes_the_unknown_rows():
+    entry = dict(INDEX_INDEX_ENTRY, difficulty=None, categories=None)
+    text = gen.render_index([entry], difficulty_overrides={})
+    row = next(line for line in text.splitlines() if line.startswith("| 2026"))
+    assert row.endswith("| - | - | - | Amazon |")
+
+
+INDEX_INDEX_ENTRY = {
+    "slug": "amazon-x",
+    "title": "X",
+    "url": "https://x/x",
+    "companies": ["Amazon"],
+    "updated": "2026-09-19",
+    "parse_status": "parsed-with-cases",
+    "difficulty": "Hard",
+    "categories": "Array, Greedy, Math",
+}
 
 
 # ---------------------------------------------------------------------------
