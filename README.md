@@ -8,7 +8,7 @@ This repository is a structured study guide for algorithmic problem solving buil
 
 - **Grind 75** is the core track: the canonical 75 problems in study order, plus two bonus problems ([Binary Tree Maximum Path Sum](docs/problems/binary_tree_maximum_path_sum.md) and [Maximum Frequency Stack](docs/problems/maximum_frequency_stack.md)).
 - **NeetCode 150** extends the LeetCode track to 150 problems in NeetCode's section order; 59 of them overlap with Grind 75 and share their pages and write-ups.
-- **Amazon OA** is a growing bank of Amazon-tagged online-assessment questions (383 problems at the time of writing, tracked against its upstream sources), with its own [bank index](docs/problems/amazon_oa/index.md), most recently updated first, and practice stubs under `practice/amazon_oa/`.
+- **Amazon OA** is a growing bank of Amazon-tagged online-assessment questions (383 problems as of October 2026, tracked against its upstream sources), with its own [bank index](docs/problems/amazon_oa/index.md), most recently updated first, and practice stubs under `practice/amazon_oa/`.
 
 All three banks are presented through one generated catalog, the [Problems page](docs/problems/index.md): the Grind 75 and NeetCode 150 tracks merge into a single unified table of 168 unique problems (each problem appears once, credited to every track it belongs to), and the Amazon OA bank gets its own table on the same page.
 
@@ -17,7 +17,7 @@ Every problem, regardless of track, has the same core page structure (statement 
 ## How this repository is organized
 
 - The `main` branch is the study environment: problem statements, pattern guides, foundations, interview prep planning, system design material, and the `practice/` workspace with unsolved stubs. Solution write-ups are deliberately absent here so you can attempt problems without spoilers.
-- The `solutions` branch stacks the full multi-approach solution write-ups for every Grind 75 and NeetCode 150 problem on top of `main`, with Amazon OA write-ups landing in waves (183 of 383 at the time of writing). The published site is built from this branch, so read solutions on the website (or on the branch) when you are ready to compare answers.
+- The `solutions` branch stacks the full multi-approach solution write-ups for every Grind 75 and NeetCode 150 problem on top of `main`, with Amazon OA write-ups landing in waves (183 of 383 as of October 2026). The published site is built from this branch, so read solutions on the website (or on the branch) when you are ready to compare answers.
 - The `practice` branch stacks your own problem attempts on top of `solutions`: it is where your commits in the `practice/` workspace live, without touching the underlying material.
 - The `scripts/` directory holds the generators that maintain the generated tracks: `generate_neetcode150_scaffolds.py` emits problem pages and practice stubs for new NeetCode-only problems from `scripts/neetcode150_manifest.json`, `generate_amazon_oa_scaffolds.py` does the same for the Amazon OA bank (and owns its bank index) from `scripts/amazon_oa_manifest.json`, and `generate_index_tables.py` assembles the tables on the Problems catalog page and the site navigation from those data sources. All three are manifest-driven: a generator scaffolds a problem once and never touches it again once the write-up and practice folder have landed, so write-up bodies are hand-maintained after landing, and changes are validated with `cd practice && uv run pytest ../scripts/` and the generators' `--check` modes.
 
