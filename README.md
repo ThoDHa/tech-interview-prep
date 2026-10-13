@@ -2,24 +2,24 @@
 
 This repository is a structured study guide for algorithmic problem solving built on three curated problem banks: the [Grind 75](https://www.techinterviewhandbook.org/grind75) list of LeetCode questions from the [Tech Interview Handbook](https://www.techinterviewhandbook.org/) team, the [NeetCode 150](https://neetcode.io/practice/practice/neetcode150) track from the [NeetCode](https://neetcode.io/) team, and an [Amazon OA](docs/problems/amazon_oa/index.md) bank collected from the [Tech-OA-Interview-Questions](https://github.com/perixtar/Tech-OA-Interview-Questions) repository. All credit for the curated problem lists goes to them for their excellent work in creating these focused interview preparation resources.
 
-**Read it as a website:** the full guide, including complete solution write-ups for every Grind 75 and NeetCode 150 problem, is published at [thodha.github.io/tech-interview-prep](https://thodha.github.io/tech-interview-prep/).
+**Read it as a website:** the full guide, including worked solution write-ups for every Grind 75 and NeetCode 150 problem and a growing share of the Amazon OA bank, is published at [thodha.github.io/tech-interview-prep](https://thodha.github.io/tech-interview-prep/).
 
 ## The three problem banks
 
 - **Grind 75** is the core track: the canonical 75 problems in study order, plus two bonus problems ([Binary Tree Maximum Path Sum](docs/problems/binary_tree_maximum_path_sum.md) and [Maximum Frequency Stack](docs/problems/maximum_frequency_stack.md)).
-- **NeetCode 150** extends the bank to 150 problems in NeetCode's section order; 59 of them overlap with Grind 75 and share their pages and write-ups.
-- **Amazon OA** is a growing bank of 350 Amazon-tagged online-assessment questions with its own [bank index](docs/problems/amazon_oa/index.md), most recently updated first, and practice stubs under `practice/amazon_oa/`.
+- **NeetCode 150** extends the LeetCode track to 150 problems in NeetCode's section order; 59 of them overlap with Grind 75 and share their pages and write-ups.
+- **Amazon OA** is a growing bank of Amazon-tagged online-assessment questions (383 problems at the time of writing, tracked against its upstream sources), with its own [bank index](docs/problems/amazon_oa/index.md), most recently updated first, and practice stubs under `practice/amazon_oa/`.
 
 All three banks are presented through one generated catalog, the [Problems page](docs/problems/index.md): the Grind 75 and NeetCode 150 tracks merge into a single unified table of 168 unique problems (each problem appears once, credited to every track it belongs to), and the Amazon OA bank gets its own table on the same page.
 
-Every problem, regardless of track, has the same core page structure (statement and examples, with constraints where available) and a matching practice folder under `practice/` with stubs and tests; Grind 75 and NeetCode 150 pages also link the **Pattern** guide behind the technique.
+Every problem, regardless of track, has the same core page structure (statement and examples, with constraints where available) and a matching practice folder under `practice/` with stubs and tests; the Grind 75 and NeetCode 150 pages (not the Amazon OA pages) also link the **Pattern** guide behind the technique.
 
 ## How this repository is organized
 
 - The `main` branch is the study environment: problem statements, pattern guides, foundations, interview prep planning, system design material, and the `practice/` workspace with unsolved stubs. Solution write-ups are deliberately absent here so you can attempt problems without spoilers.
-- The `solutions` branch stacks the full multi-approach solution write-ups for every Grind 75 and NeetCode 150 problem on top of `main`; Amazon OA write-ups land there later. The published site is built from this branch, so read solutions on the website (or on the branch) when you are ready to compare answers.
+- The `solutions` branch stacks the full multi-approach solution write-ups for every Grind 75 and NeetCode 150 problem on top of `main`, with Amazon OA write-ups landing in waves (183 of 383 at the time of writing). The published site is built from this branch, so read solutions on the website (or on the branch) when you are ready to compare answers.
 - The `practice` branch stacks your own problem attempts on top of `solutions`: it is where your commits in the `practice/` workspace live, without touching the underlying material.
-- The `scripts/` directory holds the generators that maintain the generated tracks: `generate_neetcode150_scaffolds.py` rebuilds the NeetCode-only problem pages and practice stubs from `scripts/neetcode150_manifest.json`, `generate_amazon_oa_scaffolds.py` does the same for the Amazon OA bank (plus its bank index) from `scripts/amazon_oa_manifest.json`, and `generate_index_tables.py` assembles the tables on the Problems catalog page and the site navigation from those data sources. All three are manifest-driven: the generated files are not edited by hand, and changes are validated with `cd practice && uv run pytest ../scripts/`.
+- The `scripts/` directory holds the generators that maintain the generated tracks: `generate_neetcode150_scaffolds.py` emits problem pages and practice stubs for new NeetCode-only problems from `scripts/neetcode150_manifest.json`, `generate_amazon_oa_scaffolds.py` does the same for the Amazon OA bank (and owns its bank index) from `scripts/amazon_oa_manifest.json`, and `generate_index_tables.py` assembles the tables on the Problems catalog page and the site navigation from those data sources. All three are manifest-driven: a generator scaffolds a problem once and never touches it again once the write-up and practice folder have landed, so write-up bodies are hand-maintained after landing, and changes are validated with `cd practice && uv run pytest ../scripts/` and the generators' `--check` modes.
 
 ## First time here?
 
@@ -31,11 +31,11 @@ New to algorithms or interview prep? Start with the [Foundations](docs/foundatio
 4. [How to Approach a Problem](docs/foundations/how_to_approach.md): a repeatable method from problem statement to working solution.
 5. [Glossary](docs/foundations/glossary.md): the jargon the guides lean on, defined in plain language.
 
-Then work the problems in the [Problems catalog](docs/problems/index.md)'s unified study order, reading each one's linked **Pattern** guide for the *why* behind the technique. The [8-week schedule](docs/interview_prep/study_plan.md#the-8-week-schedule) paces that order into eight weeks, easier to harder with related problem types grouped together. For the plan around the problems, how to budget your time, and what the non-coding rounds require, see the [Interview Prep](docs/interview_prep/index.md) section.
+Then work the problems in the [Problems catalog](docs/problems/index.md)'s unified study order, reading each one's linked **Pattern** guide for the *why* behind the technique. The [8-week schedule](docs/interview_prep/study_plan.md#the-8-week-schedule) paces that order into eight weeks, easier to harder with related problem types grouped together. For the plan around the problems, how to budget your time, and what the non-coding rounds require, see the [Interview Prep](docs/interview_prep/index.md) section. To record what you have solved as you go, use the practice progress tracker (`practice/progress.py`, described under [Practice Workspace](#practice-workspace)).
 
 ## Pattern Intuition
 
-Beyond the individual problems, the guide includes [algorithm pattern intuition guides](docs/patterns/index.md) covering the recurring patterns these problems share (sliding window, two pointers, binary search, backtracking, dynamic programming, graph traversal, and more). Each guide explains *why* the pattern works, when it applies, and the invariant that makes it correct, then maps the pattern to the Grind 75 problems that use it. The guides are adapted from the [NeetCode practice framework](https://lufftw.github.io/neetcode/).
+Beyond the individual problems, the guide includes [algorithm pattern intuition guides](docs/patterns/index.md) covering the recurring patterns these problems share (sliding window, two pointers, binary search, backtracking, dynamic programming, graph traversal, and more). Each guide explains *why* the pattern works, when it applies, and the invariant that makes it correct, then maps the pattern to the Grind 75 problems that use it. Most of the guides are adapted from the [NeetCode practice framework](https://lufftw.github.io/neetcode/); the Fundamentals guides (Hashing & Frequency Counting, Stack, Simulation, Data-Structure Design, String) and Grid DP are original to this project, and the corner-case checklists are adapted from the [Tech Interview Handbook](https://www.techinterviewhandbook.org/algorithms/study-cheatsheet/) algorithm cheatsheets.
 
 ## System Design
 
@@ -74,5 +74,3 @@ This will:
 - Generate a PDF file named `grind75.pdf` using the XeLaTeX engine
 
 To customize the output, edit the `grind75.yaml` file. You can add more input files (for example, the two bonus problems), change metadata, adjust the table of contents, or modify the PDF engine settings.
-
-As you work through each problem, document your solutions, optimizations, and insights. This creates a personalized study resource that helps reinforce your understanding of algorithms and data structures while preparing you for technical interviews.
