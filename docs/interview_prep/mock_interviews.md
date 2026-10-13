@@ -31,12 +31,12 @@ Peer mocks give you volume and also make you a better interviewer, and interview
 
 ## Run a mock with a peer, using this repo
 
-This repository is built for this. The `main` branch is spoiler-free by design, which makes problem selection easy:
+This repository is built for this. The candidate works in the `practice/` workspace where write-ups stay out of sight until deliberately opened, so the separation is one of discipline:
 
 1. **The interviewer picks a problem the candidate has not seen** from the
    [problem list](../index.md), roughly at the candidate's current level: problems from week 4 to 5 of the schedule are a good mid-plan target.
-2. **The interviewer prepares from the published site** (or the `solutions`
-   branch), so they know the expected approaches and can judge the ladder rather than just the final answer.
+2. **The interviewer prepares from the published site**, so they know the
+   expected approaches and can judge the ladder rather than just the final answer.
 3. **Budget it like a real round:** five minutes of introductions, 30 to 40
    minutes on the problem (use the problem's Time column as the target), five to ten minutes for the candidate's questions.
 4. **The candidate works in the `practice/`
