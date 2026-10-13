@@ -22,8 +22,9 @@ Pipeline:
      credits. --check compares the marker spans against a fresh render, so
      the tables stay generator-owned and refreshable.
   5. Emit the mkdocs.yml Problems nav: the landing page as section parent
-     (navigation.indexes) with two subsections, LeetCode (all 168 problem
-     pages at one level, in the same interleaved study order) and Amazon
+      (navigation.indexes) with two subsections, Grind 75 + NeetCode 150
+      (all 168 problem pages at one level, in the same interleaved study
+      order) and Amazon
      OA (a section-with-page: the bank index is the section's own entry,
      with all 383 problem pages at one level beneath it, most recently
      updated first). --check verifies the nav shape, so the subsections
@@ -67,18 +68,18 @@ SOURCES_SECTION_END = "<!-- sources:end -->"
 # replacements keep their in-place position instead.
 LANDING_ANCHOR = "## Study Guide and Practice"
 
+GRIND_TRACK = "Grind 75"
+NEETCODE_TRACK = "NeetCode 150"
+BOTH_TRACKS = "Grind 75 + NeetCode 150"
+
 NAV_PROBLEMS_MARKER = "  - Problems:\n"
 NAV_LANDING_ENTRY = "    - problems/index.md\n"
-NAV_LEETCODE_HEADER = '    - "LeetCode":\n'
+NAV_LEETCODE_HEADER = f'    - "{BOTH_TRACKS}":\n'
 NAV_AMAZON_HEADER = '    - "Amazon OA":\n'
 NAV_AMAZON_INDEX_ENTRY = "      - problems/amazon_oa/index.md\n"
 NAV_LEETCODE_CHILD_PATTERN = re.compile(r'^      - "(.+?)": problems/(.+?)\.md$')
 NAV_AMAZON_CHILD_PATTERN = re.compile(r'^      - "(.+?)": problems/amazon_oa/(.+?)\.md$')
 NAV_NEXT_TOP_PATTERN = re.compile(r"^  - ", re.M)
-
-GRIND_TRACK = "Grind 75"
-NEETCODE_TRACK = "NeetCode 150"
-BOTH_TRACKS = "Grind 75 + NeetCode 150"
 
 GRIND_ROW_COUNT = 77
 NUMBERED_GRIND_COUNT = 75
@@ -107,6 +108,8 @@ AMAZON_MANIFEST_FIELDS = (
     "companies",
     "updated",
     "parse_status",
+    "difficulty",
+    "categories",
 )
 DIFFICULTIES = ("Easy", "Medium", "Hard")
 
@@ -399,7 +402,9 @@ def validate_amazon_manifest(entries: Sequence[dict]) -> None:
     """Check the Amazon OA manifest against the table contract.
 
     The contract: exactly AMAZON_ROW_COUNT entries with the manifest
-    fields, unique slugs, sorted most recently updated first.
+    fields (including the write-up header's difficulty and categories,
+    either canonical values or None), unique slugs, sorted most recently
+    updated first.
 
     Args:
         entries: The loaded Amazon OA manifest entries.
@@ -1205,8 +1210,9 @@ def render_problems_nav(merged: Sequence[dict], amazon: Sequence[dict]) -> str:
     """Render the Problems nav block: landing parent plus two subsections.
 
     The landing page is the section parent (mkdocs-material's
-    navigation.indexes renders it as the Problems index); the LeetCode
-    subsection carries every merged row at one level in the interleaved
+    navigation.indexes renders it as the Problems index); the Grind 75 +
+    NeetCode 150 subsection carries every merged row at one level in the
+    interleaved
     study order (the unified table's order); the Amazon OA subsection
     carries the bank index as its own link (the section's first entry,
     which navigation.indexes turns into the subsection link) with every
@@ -1364,7 +1370,7 @@ def check_problems_nav(mkdocs_path: Optional[Path] = None) -> int:
             print(f"  {item}")
         return 1
     print(
-        f"--check: mkdocs Problems nav up to date ({len(merged)} LeetCode children,"
+        f"--check: mkdocs Problems nav up to date ({len(merged)} {BOTH_TRACKS} children,"
         f" {len(_amazon)} Amazon OA children)"
     )
     return 0
@@ -1380,8 +1386,8 @@ def nav_child_drift_detail(
 
     Args:
         problems_text: The mkdocs.yml text starting at the Problems marker.
-        merged: The merged rows from the committed sources (the LeetCode
-            subsection's expected children).
+        merged: The merged rows from the committed sources (the Grind 75 +
+            NeetCode 150 subsection's expected children).
         amazon: The Amazon OA manifest entries (the Amazon subsection's
             expected children).
 
@@ -1394,7 +1400,7 @@ def nav_child_drift_detail(
     expected_amazon = [entry["slug"] for entry in amazon]
     detail = []
     for label, source, actual, expected in (
-        ("LeetCode", "unified table", actual_leetcode, expected_leetcode),
+        (BOTH_TRACKS, "unified table", actual_leetcode, expected_leetcode),
         ("Amazon OA", "manifest table", actual_amazon, expected_amazon),
     ):
         if len(actual) != len(set(actual)):
@@ -1443,14 +1449,15 @@ def bounded_nav_children(text: str, child_pattern: re.Pattern) -> List[str]:
 
 
 def nav_leetcode_children(problems_text: str) -> List[str]:
-    """Extract the LeetCode subsection's dirSlugs in file order.
+    """Extract the merged-tracks subsection's dirSlugs in file order.
 
     Args:
         problems_text: The mkdocs.yml text starting at the Problems marker.
 
     Returns:
-        The child dirSlugs between the LeetCode header and the first line
-        that is not a LeetCode child; empty when the header is absent.
+        The child dirSlugs between the Grind 75 + NeetCode 150 header and
+        the first line that is not a subsection child; empty when the
+        header is absent.
     """
     header_at = problems_text.find(NAV_LEETCODE_HEADER)
     if header_at == -1:

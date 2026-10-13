@@ -146,7 +146,7 @@ nav:
       - Web Crawler: system_design/case_studies/web_crawler.md
   - Problems:
     - problems/index.md
-    - "LeetCode":
+    - "Grind 75 + NeetCode 150":
       - "Two Sum": problems/two_sum.md
       - "Group Anagrams": problems/group_anagrams.md
       - "Top K Frequent Elements": problems/top_k_frequent_elements.md
