@@ -3,13 +3,17 @@
 Pipeline:
   1. Parse the cached Tech-OA bank pages, keep Amazon-tagged coding rows,
      dedup by FastPrep slug, and sort most-recently-updated first.
-  2. Write scripts/amazon_oa_manifest.json.
+  2. Write scripts/amazon_oa_manifest.json; each entry carries the
+     write-up header's difficulty and categories (None where the header
+     carries the unknown markers).
   3. For each manifest entry, fetch the FastPrep problem page (disk cache,
      polite delay), parse the statement/examples/constraints, and emit:
        - docs/problems/amazon_oa/<slug>.md   (statement write-up scaffold)
        - practice/amazon_oa/<slug>/solution.py   (NotSolved stub)
        - practice/amazon_oa/<slug>/cases.json    (parseable examples, else [])
        - practice/amazon_oa/<slug>/test_<slug>.py (harness-driven tests)
+       - docs/problems/amazon_oa/index.md    (bank table: Updated, Problem,
+         Difficulty, Category, Time, Companies)
 
 Cases contract: a case is emitted only when every example value parses to a
 JSON-representable literal assertable with `==` against the method's return
@@ -21,7 +25,11 @@ Offline contract: the committed scripts/amazon_oa_manifest.json (with its
 per-slug parse_status) is the source of truth. When the bank pages under /tmp
 are absent (any fresh clone), every mode falls back to the committed manifest,
 and --check compares the tree against manifest-driven expectations, never
-against a re-render from the unversioned fastprep cache.
+against a re-render from the unversioned fastprep cache. The bank index's
+Difficulty/Time columns reuse generate_index_tables.py's conventions: the
+committed amazon_difficulty_overrides.json corrects externally sourced
+difficulties at render time, and Time carries the shared difficulty-based
+estimates (Easy 15 / Medium 25 / Hard 40 minutes, a dash where unknown).
 
 Usage (from the repository root):
   cd practice && uv run pytest ../scripts/          # run the generator tests
@@ -44,7 +52,9 @@ import urllib.error
 import urllib.request
 from dataclasses import dataclass
 from pathlib import Path
-from typing import Any, Dict, List, Optional, Sequence
+from typing import Any, Dict, List, Mapping, Optional, Sequence
+
+import generate_index_tables as index_tables
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 MANIFEST_PATH = REPO_ROOT / "scripts" / "amazon_oa_manifest.json"
@@ -62,6 +72,19 @@ FASTPREP_URL_TEMPLATE = "https://www.fastprep.io/problems/{slug}"
 FETCH_DELAY_SECONDS = 0.5
 AMAZON_TAG = "Amazon"
 WRITEUP_LINK_TEMPLATE = "../../../docs/problems/amazon_oa/{slug}.md"
+# Header placeholders for what FastPrep does not publish; the bank index
+# renders those rows with the dash filler instead.
+WRITEUP_UNKNOWN_DIFFICULTY_MARKER = "unknown difficulty"
+WRITEUP_UNKNOWN_CATEGORIES_MARKER = "unknown categories"
+# The write-up's line-3 metadata line (`**<Difficulty>** | **NN minutes** |
+# **<Topics>**`) is the parseable source of the manifest's difficulty and
+# categories; generate_index_tables.py pins the same layout for its own
+# header parse.
+WRITEUP_DIFFICULTY_LINE = 3
+WRITEUP_HEADER_PATTERN = re.compile(
+    r"^\*\*(?P<difficulty>.+?)\*\* \| \*\*(?P<minutes>.+?)\*\*"
+    r" \| \*\*(?P<categories>.+?)\*\*$"
+)
 # Site-relative links cannot reach the practice/ tree outside the mkdocs
 # docs_dir, and the AGENTS.md internal-links rule bars hyperlinks to
 # practice paths in docs prose; the index names the path as inline code.
@@ -166,9 +189,10 @@ def build_manifest(page_texts: Sequence[str]) -> List[dict]:
         page_texts: Raw markdown of each bank page, in any order.
 
     Returns:
-        Manifest entries (`slug`, `title`, `url`, `companies`, `updated`)
-        sorted by `updated` descending with slug-ascending tie-break. When a
-        slug appears on several pages the most recently updated row wins.
+        Manifest entries (`slug`, `title`, `url`, `companies`, `updated`,
+        `difficulty`, `categories`) sorted by `updated` descending with
+        slug-ascending tie-break. When a slug appears on several pages the
+        most recently updated row wins.
     """
     by_slug: Dict[str, dict] = {}
     for page_text in page_texts:
@@ -187,6 +211,9 @@ def build_manifest(page_texts: Sequence[str]) -> List[dict]:
             "url": row["url"],
             "companies": row["companies"],
             "updated": row["updated"],
+            **parse_difficulty_line(
+                DOCS_DIR / f"{row['slug']}.md"
+            ),
         }
         for row in entries
     ]
@@ -218,6 +245,64 @@ def load_committed_manifest(path: Path = MANIFEST_PATH) -> List[dict]:
     if not isinstance(entries, list):
         raise SystemExit(f"committed manifest {path} must be a JSON list")
     return entries
+
+
+# ---------------------------------------------------------------------------
+# Write-up header metadata (difficulty, categories)
+# ---------------------------------------------------------------------------
+
+
+def parse_difficulty_line(writeup_path: Path) -> dict:
+    """Extract one write-up's difficulty and categories from its header line.
+
+    The scaffold layout pins the metadata line at line 3:
+    ``**<Difficulty>** | **NN minutes** | **<Topics>**``. The minutes are a
+    literal placeholder and carry no data; the unknown markers map to None
+    so the bank index can dash those cells.
+
+    Args:
+        writeup_path: Path to the committed write-up markdown.
+
+    Returns:
+        `{"difficulty": ...}` where the value is the canonical difficulty
+        name, or None under the unknown-difficulty marker, and likewise
+        `{"categories": ...}` with the raw comma-separated string or None.
+
+    Raises:
+        SystemExit: When the write-up is missing or its header line does
+            not match the scaffold layout.
+    """
+    if not writeup_path.exists():
+        raise SystemExit(
+            f"write-up not found: {writeup_path}; regenerate the scaffolds"
+            " before building the manifest"
+        )
+    lines = writeup_path.read_text(encoding="utf-8").splitlines()
+    header = (
+        lines[WRITEUP_DIFFICULTY_LINE - 1]
+        if len(lines) >= WRITEUP_DIFFICULTY_LINE
+        else None
+    )
+    match = WRITEUP_HEADER_PATTERN.match(header) if header is not None else None
+    if match is None:
+        raise SystemExit(
+            f"write-up {writeup_path} has no **difficulty** | **minutes** |"
+            f" **categories** header at line {WRITEUP_DIFFICULTY_LINE}"
+        )
+    difficulty = match.group("difficulty")
+    categories = match.group("categories")
+    return {
+        "difficulty": (
+            None
+            if difficulty == WRITEUP_UNKNOWN_DIFFICULTY_MARKER
+            else difficulty
+        ),
+        "categories": (
+            None
+            if categories == WRITEUP_UNKNOWN_CATEGORIES_MARKER
+            else categories
+        ),
+    }
 
 
 # ---------------------------------------------------------------------------
@@ -727,24 +812,59 @@ def test_solution(case):
 '''
 
 
-def render_index(manifest: Sequence[dict]) -> str:
-    """Render docs/problems/amazon_oa/index.md, most-recent first."""
+def render_index(
+    manifest: Sequence[dict],
+    difficulty_overrides: Optional[Mapping[str, str]] = None,
+) -> str:
+    """Render docs/problems/amazon_oa/index.md, most-recent first.
+
+    Columns follow the unified catalog's conventions: `Updated`, `Problem`,
+    `Difficulty`, `Category`, `Time`, `Companies`. The Difficulty cell
+    reads the manifest entry's difficulty (backfilled from the write-up
+    headers), corrected by `difficulty_overrides` where one addresses the
+    slug; the unknown-difficulty rows dash. `Time` reuses the shared
+    difficulty-based estimates from generate_index_tables.py and dashes
+    wherever the difficulty is unknown.
+
+    Args:
+        manifest: The manifest entries (or a suffix of them under --limit),
+            most-recent first, each carrying `difficulty`.
+        difficulty_overrides: Slug -> difficulty consulted before each
+            entry's manifest difficulty; None (the default) means the
+            committed overrides file.
+
+    Returns:
+        The index markdown with a trailing newline.
+    """
+    overrides = (
+        index_tables.load_amazon_difficulty_overrides()
+        if difficulty_overrides is None
+        else difficulty_overrides
+    )
     lines = [
         "# Amazon OA Problems",
         "",
         "Amazon-tagged coding problems from the"
         " [Tech-OA-Interview-Questions](https://github.com/perixtar/Tech-OA-Interview-Questions)"
         " bank (statement pages on fastprep.io), most recently updated first."
-        " Practice stubs live under `practice/amazon_oa/`.",
+        " Practice stubs live under `practice/amazon_oa/`."
+        " Time carries difficulty-based estimates"
+        " (Easy 15 / Medium 25 / Hard 40 minutes, a dash where the difficulty"
+        " is unknown), corrected by the committed difficulty overrides where"
+        " present.",
         "",
-        "| Updated | Problem | Companies |",
-        "|---------|---------|-----------|",
+        "| Updated | Problem | Difficulty | Category | Time | Companies |",
+        "|---------|---------|-----------|----------|------|-----------|",
     ]
     for entry in manifest:
         title = f"[{entry['title']}]({entry['slug']}.md)"
         companies = ", ".join(entry["companies"])
+        difficulty = overrides.get(entry["slug"]) or entry.get("difficulty")
         lines.append(
-            f"| {entry['updated']} | {title} | {companies} |"
+            f"| {entry['updated']} | {title} |"
+            f" {difficulty or index_tables.UNKNOWN_TIME_CELL} |"
+            f" {entry.get('categories') or index_tables.UNKNOWN_TIME_CELL} |"
+            f" {index_tables.estimated_time_cell(difficulty)} | {companies} |"
         )
     return "\n".join(lines) + "\n"
 
