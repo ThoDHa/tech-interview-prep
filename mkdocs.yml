@@ -3,7 +3,7 @@ site_description: Worked solution write-ups for every Grind 75 and NeetCode 150 
 site_url: https://thodha.github.io/tech-interview-prep/
 repo_url: https://github.com/ThoDHa/tech-interview-prep
 repo_name: ThoDHa/tech-interview-prep
-edit_uri: edit/solutions/docs/
+edit_uri: edit/main/docs/
 docs_dir: docs
 exclude_docs: |
   _TEMPLATE.md
