@@ -2,18 +2,18 @@
 
 Pipeline:
   1. Parse the cached Tech-OA bank pages, keep Amazon-tagged coding rows,
-     dedup by FastPrep slug, and sort most-recently-updated first.
+      dedup by FastPrep slug, and sort most-recently-updated first.
   2. Write scripts/amazon_oa_manifest.json; each entry carries the
-     write-up header's difficulty and categories (None where the header
-     carries the unknown markers).
+      write-up header's difficulty and categories (None where the header
+      carries the unknown markers).
   3. For each manifest entry, fetch the FastPrep problem page (disk cache,
-     polite delay), parse the statement/examples/constraints, and emit:
-       - docs/problems/amazon_oa/<slug>.md   (statement write-up scaffold)
-       - practice/amazon_oa/<slug>/solution.py   (NotSolved stub)
-       - practice/amazon_oa/<slug>/cases.json    (parseable examples, else [])
-       - practice/amazon_oa/<slug>/test_<slug>.py (harness-driven tests)
-       - docs/problems/amazon_oa/index.md    (bank table: Updated, Problem,
-         Difficulty, Category, Time, Companies)
+      polite delay), parse the statement/examples/constraints, and emit:
+        - docs/amazon/<slug>.md                  (statement write-up scaffold)
+        - practice/amazon/<slug>/solution.py     (NotSolved stub)
+        - practice/amazon/<slug>/cases.json      (parseable examples, else [])
+        - practice/amazon/<slug>/test_<slug>.py  (harness-driven tests)
+        - docs/amazon/index.md   (bank table: Updated, Problem, Difficulty,
+          Category, Time, Companies)
 
 Cases contract: a case is emitted only when every example value parses to a
 JSON-representable literal assertable with `==` against the method's return
@@ -58,9 +58,9 @@ import generate_index_tables as index_tables
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 MANIFEST_PATH = REPO_ROOT / "scripts" / "amazon_oa_manifest.json"
-DOCS_DIR = REPO_ROOT / "docs" / "problems" / "amazon_oa"
-PRACTICE_DIR = REPO_ROOT / "practice" / "amazon_oa"
-TEMPLATE_PATH = REPO_ROOT / "docs" / "problems" / "_TEMPLATE.md"
+DOCS_DIR = REPO_ROOT / "docs" / "amazon"
+PRACTICE_DIR = REPO_ROOT / "practice" / "amazon"
+TEMPLATE_PATH = REPO_ROOT / "docs" / "leetcode" / "_TEMPLATE.md"
 MKTABS_PATH = REPO_ROOT / "mkdocs.yml"
 
 DEFAULT_BANK_PAGES = (
@@ -71,7 +71,7 @@ FASTPREP_CACHE_DIR = Path("/tmp/opencode/fastprep-cache")
 FASTPREP_URL_TEMPLATE = "https://www.fastprep.io/problems/{slug}"
 FETCH_DELAY_SECONDS = 0.5
 AMAZON_TAG = "Amazon"
-WRITEUP_LINK_TEMPLATE = "../../../docs/problems/amazon_oa/{slug}.md"
+WRITEUP_LINK_TEMPLATE = "../../../docs/amazon/{slug}.md"
 # Header placeholders for what FastPrep does not publish; the bank index
 # renders those rows with the dash filler instead.
 WRITEUP_UNKNOWN_DIFFICULTY_MARKER = "unknown difficulty"
@@ -552,7 +552,7 @@ def render_writeup(entry: dict, problem: Optional[dict], statement_html: Optiona
             None, the record's own problemStatement is used without recovery.
 
     Returns:
-        Write-up markdown following the docs/problems/_TEMPLATE.md section
+        Write-up markdown following the docs/leetcode/_TEMPLATE.md section
         order, with solution sections left as explicit placeholders.
     """
     if statement_html is None:
@@ -579,8 +579,8 @@ def render_writeup(entry: dict, problem: Optional[dict], statement_html: Optiona
         [
             "## Solutions",
             "",
-            "<!-- Scaffold placeholder: the worked derivation and solutions land",
-            "     on the solutions branch later. See ../_TEMPLATE.md for the",
+            "<!-- Scaffold placeholder: the worked derivation and write-up land",
+            "     on main later. See ../../leetcode/_TEMPLATE.md for the",
             "     expected layout, naming, and ordering conventions. -->",
             "",
         ]
@@ -689,8 +689,8 @@ Write-up & approaches: {writeup_link}
 
 {summary}
 
-  uv run python amazon_oa/{entry["slug"]}/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/{entry["slug"]}/              # run the test sets
+  uv run python amazon/{entry["slug"]}/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/{entry["slug"]}/              # run the test sets
 """
 
 from harness import NotSolved, pick_case
@@ -816,7 +816,7 @@ def render_index(
     manifest: Sequence[dict],
     difficulty_overrides: Optional[Mapping[str, str]] = None,
 ) -> str:
-    """Render docs/problems/amazon_oa/index.md, most-recent first.
+    """Render docs/amazon/index.md, most-recent first.
 
     Columns follow the unified catalog's conventions: `Updated`, `Problem`,
     `Difficulty`, `Category`, `Time`, `Companies`. The Difficulty cell
@@ -847,7 +847,7 @@ def render_index(
         "Amazon-tagged coding problems from the"
         " [Tech-OA-Interview-Questions](https://github.com/perixtar/Tech-OA-Interview-Questions)"
         " bank (statement pages on fastprep.io), most recently updated first."
-        " Practice stubs live under `practice/amazon_oa/`."
+        " Practice stubs live under `practice/amazon/`."
         " Time carries difficulty-based estimates"
         " (Easy 15 / Medium 25 / Hard 40 minutes, a dash where the difficulty"
         " is unknown), corrected by the committed difficulty overrides where"
@@ -1021,25 +1021,28 @@ def write_manifest(manifest: Sequence[dict]) -> None:
 
 
 def write_index(manifest: Sequence[dict]) -> None:
-    """Write docs/problems/amazon_oa/index.md."""
+    """Write docs/amazon/index.md."""
     DOCS_DIR.mkdir(parents=True, exist_ok=True)
     (DOCS_DIR / "index.md").write_text(render_index(manifest), encoding="utf-8")
 
 
 def ensure_nav_entry() -> bool:
-    """Add the single Amazon OA nav entry to mkdocs.yml when missing.
+    """Add the Amazon nav section to mkdocs.yml when missing.
 
     Returns:
-        True when mkdocs.yml was modified, False when the entry already exists.
+        True when mkdocs.yml was modified, False when the section already exists.
     """
     text = MKTABS_PATH.read_text(encoding="utf-8")
-    nav_line = '    - "Amazon OA": problems/amazon_oa/index.md\n'
-    if "problems/amazon_oa/index.md" in text:
+    nav_section = (
+        "  - Amazon:\n"
+        "    - amazon/index.md\n"
+    )
+    if "  - Amazon:\n" in text:
         return False
-    marker = "  - Problems:\n"
-    if marker not in text:
-        raise SystemExit("mkdocs.yml has no Problems nav section to extend")
-    text = text.replace(marker, marker + nav_line, 1)
+    leetcode_marker = "  - Leetcode:\n"
+    if leetcode_marker not in text:
+        raise SystemExit("mkdocs.yml has no Leetcode nav section to extend")
+    text = text.replace(leetcode_marker, leetcode_marker + nav_section, 1)
     MKTABS_PATH.write_text(text, encoding="utf-8")
     return True
 

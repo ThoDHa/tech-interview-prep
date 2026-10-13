@@ -618,7 +618,7 @@ def test_render_writeup_follows_template_section_order():
     assert headings.index("## Examples") < headings.index("## Constraints")
     assert "## Solutions" in headings
     assert headings.index("## Constraints") < headings.index("## Solutions")
-    assert "solutions branch" in text
+    assert "main later" in text
 
 
 def test_render_writeup_references_template_as_sibling():
@@ -726,7 +726,7 @@ def test_render_solution_stub_matches_house_style():
     cases = gen.CasesResult("groupAnagrams", [{"id": "example_1", "args": [["a"]], "expected": [["a"]]}], None)
     text = gen.render_solution_stub(writeup_entry(), metadata, cases)
     assert text.startswith('"""Group Anagrams — https://leetcode.com/problems/group-anagrams/')
-    assert "Write-up & approaches: ../../docs/problems/group_anagrams.md" in text
+    assert "Write-up & approaches: ../../../docs/leetcode/group_anagrams.md" in text
     assert "from harness import NotSolved, pick_case" in text
     assert "raise NotSolved" in text
     assert "def groupAnagrams(self, strs" in text
