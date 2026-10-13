@@ -40,6 +40,6 @@ Given n, find the sum of all the days' numbers on which the data of the xth (0 â
 
 ## Solutions
 
-<!-- Scaffold placeholder: the worked derivation and solutions land
-     on the solutions branch later. See ../_TEMPLATE.md for the
+<!-- Scaffold placeholder: the worked derivation and write-up land
+     on main later. See ../../leetcode/_TEMPLATE.md for the
      expected layout, naming, and ordering conventions. -->

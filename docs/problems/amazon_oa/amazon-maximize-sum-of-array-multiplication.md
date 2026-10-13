@@ -47,6 +47,6 @@ Larger values stay later. Sort the array based on 1. value 2. if there's a tie, 
 
 ## Solutions
 
-<!-- Scaffold placeholder: the worked derivation and solutions land
-     on the solutions branch later. See ../_TEMPLATE.md for the
+<!-- Scaffold placeholder: the worked derivation and write-up land
+     on main later. See ../../leetcode/_TEMPLATE.md for the
      expected layout, naming, and ordering conventions. -->

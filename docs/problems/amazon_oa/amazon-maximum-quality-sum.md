@@ -54,6 +54,6 @@ The quality of transfer for channel 1 is (2 + 3)/2 = 2.5 and that of channel 2 i
 
 ## Solutions
 
-<!-- Scaffold placeholder: the worked derivation and solutions land
-     on the solutions branch later. See ../_TEMPLATE.md for the
+<!-- Scaffold placeholder: the worked derivation and write-up land
+     on main later. See ../../leetcode/_TEMPLATE.md for the
      expected layout, naming, and ordering conventions. -->

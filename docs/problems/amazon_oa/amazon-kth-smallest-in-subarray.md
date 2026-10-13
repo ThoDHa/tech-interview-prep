@@ -20,6 +20,6 @@ Given an array arr, return the kth smallest integer for each subarray of size m.
 
 ## Solutions
 
-<!-- Scaffold placeholder: the worked derivation and solutions land
-     on the solutions branch later. See ../_TEMPLATE.md for the
+<!-- Scaffold placeholder: the worked derivation and write-up land
+     on main later. See ../../leetcode/_TEMPLATE.md for the
      expected layout, naming, and ordering conventions. -->

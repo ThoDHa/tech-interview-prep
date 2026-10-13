@@ -48,6 +48,6 @@ We can make the input string empty in just 3 operations. So, we return 3 as the 
 
 ## Solutions
 
-<!-- Scaffold placeholder: the worked derivation and solutions land
-     on the solutions branch later. See ../_TEMPLATE.md for the
+<!-- Scaffold placeholder: the worked derivation and write-up land
+     on main later. See ../../leetcode/_TEMPLATE.md for the
      expected layout, naming, and ordering conventions. -->

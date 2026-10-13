@@ -5,10 +5,15 @@ solved, how confident each solve felt, and which problems are due for a
 spaced-repetition review. State lives in `.progress.json` next to this file;
 it is personal (gitignored) and never read by the tests.
 
-  uv run python progress.py scan                 # run the suite, record per-problem status
-  uv run python progress.py rate two_sum shaky   # record a confidence rating
-  uv run python progress.py status               # full board in canonical study order
-  uv run python progress.py due                  # just the review queue
+    uv run python progress.py scan                    # run the suite, record per-problem status
+    uv run python progress.py rate two_sum shaky      # record a confidence rating
+    uv run python progress.py status                  # full board in canonical study order
+    uv run python progress.py due                     # just the review queue
+
+Problems live in bank subdirectories (`leetcode/<slug>/`, `amazon/<slug>/`);
+the slug is the directory name inside the bank. The layout is discovered at
+runtime: bank subdirectories when present, the flat `practice/<slug>/`
+layout otherwise, so the tool works across the reorganization transition.
 
 Status semantics: `scan` reports the tests honestly. A problem is `solved`
 only while every one of its tests passes, `attempted` when any test fails or
@@ -40,7 +45,10 @@ from typing import Optional
 
 PRACTICE_DIR = Path(__file__).resolve().parent
 STATE_FILE = PRACTICE_DIR / ".progress.json"
-DOCS_INDEX = PRACTICE_DIR.parent / "docs" / "problems" / "index.md"
+# The post-move landing is docs/leetcode/index.md; until wave B moves the
+# tree the pre-move landing is used when the new one is absent.
+DOCS_INDEX = PRACTICE_DIR.parent / "docs" / "leetcode" / "index.md"
+DOCS_INDEX_PRE_MOVE = PRACTICE_DIR.parent / "docs" / "problems" / "index.md"
 
 STATUS_SOLVED = "solved"
 STATUS_ATTEMPTED = "attempted"
@@ -53,10 +61,43 @@ CONFIDENCE_LEVELS = tuple(sorted(REVIEW_INTERVALS, key=REVIEW_INTERVALS.get))
 
 
 def discover_problems() -> list[str]:
-    """Return every problem slug: a practice subdirectory holding a solution.py."""
-    return sorted(
+    """Return every problem slug: a directory holding a solution.py.
+
+    Bank-shaped layout first (`practice/<bank>/<slug>/solution.py` for the
+    known banks, leetcode and amazon); when no bank directory exists, the
+    flat layout (`practice/<slug>/solution.py`) is discovered instead, so
+    both the pre-move and post-move trees work.
+    """
+    slugs = {
         entry.name
-        for entry in PRACTICE_DIR.iterdir()
+        for bank in ("leetcode", "amazon")
+        for entry in _bank_problem_dirs(bank)
+    }
+    if not slugs:
+        slugs = {
+            entry.name
+            for entry in PRACTICE_DIR.iterdir()
+            if entry.is_dir() and (entry / "solution.py").is_file()
+        }
+    return sorted(slugs)
+
+
+def _bank_problem_dirs(bank: str) -> list[Path]:
+    """Return the problem directories inside one bank holding a solution.py.
+
+    Args:
+        bank: The bank directory name under practice/ (leetcode or amazon).
+
+    Returns:
+        The bank's problem directories, in name order; empty when the bank
+        directory itself does not exist.
+    """
+    bank_dir = PRACTICE_DIR / bank
+    if not bank_dir.is_dir():
+        return []
+    return sorted(
+        entry
+        for entry in bank_dir.iterdir()
         if entry.is_dir() and (entry / "solution.py").is_file()
     )
 
@@ -87,28 +128,33 @@ def save_state(state: dict) -> None:
 def canonical_order(problems: list[str]) -> list[str]:
     """Return problems in canonical study order.
 
-    Parses the problem table in docs/problems/index.md, whose rows the
-    index-tables generator emits in the interleaved study order. Any
+    Parses the problem table in docs/leetcode/index.md, whose rows the
+    index-tables generator emits in the interleaved study order. Amazon
+    rows live in the amazon bank's own index and never appear in this
+    table, so they sort alphabetically after the tabled problems. Any
     problem missing from the table is appended alphabetically. Falls back
-    to alphabetical order if the table cannot be read or has no rows.
+    to alphabetical order if the table cannot be read or has no rows. The
+    pre-move landing (docs/problems/index.md) is read when the post-move
+    one does not exist yet, so the transition does not degrade the board.
     """
     known = set(problems)
+    landing = DOCS_INDEX if DOCS_INDEX.exists() else DOCS_INDEX_PRE_MOVE
     row = re.compile(r"^\|\s*\[[^\]]+\]\((?:problems/)?([A-Za-z0-9_]+)\.md\)")
     ordered_rows: list[str] = []
     try:
-        for line in DOCS_INDEX.read_text(encoding="utf-8").splitlines():
+        for line in landing.read_text(encoding="utf-8").splitlines():
             match = row.match(line)
             if match is not None:
                 ordered_rows.append(match.group(1))
     except OSError as exc:
         print(
-            f"warning: could not read {DOCS_INDEX} ({exc}); listing alphabetically.",
+            f"warning: could not read {landing} ({exc}); listing alphabetically.",
             file=sys.stderr,
         )
         return sorted(problems)
     if not ordered_rows:
         print(
-            f"warning: no problem table found in {DOCS_INDEX}; listing alphabetically.",
+            f"warning: no problem table found in {landing}; listing alphabetically.",
             file=sys.stderr,
         )
         return sorted(problems)
@@ -140,13 +186,20 @@ def run_test_suite() -> Path:
 
 
 def statuses_from_report(report: Path, problems: list[str]) -> dict[str, str]:
-    """Derive each problem's status from the junit XML report."""
+    """Derive each problem's status from the junit XML report.
+
+    The junit classname's trailing two segments (`<slug>.test_<slug>`) name
+    the problem module regardless of whether the module path carries a bank
+    segment (`leetcode.two_sum.test_two_sum` post-move,
+    `two_sum.test_two_sum` flat), so both layouts attribute their results.
+    """
     counts: dict[str, dict[str, int]] = {
         slug: {"passed": 0, "skipped": 0, "failed": 0} for slug in problems
     }
     known = set(problems)
     for case in ET.parse(report).getroot().iter("testcase"):
-        slug = (case.get("classname") or "").split(".", 1)[0]
+        segments = (case.get("classname") or "").split(".")
+        slug = segments[-2] if len(segments) >= 2 else segments[-1]
         if slug not in known:
             continue
         if case.find("skipped") is not None:
@@ -267,7 +320,8 @@ def cmd_rate(args: argparse.Namespace) -> int:
         suggestion = f" Did you mean: {', '.join(hint)}?" if hint else ""
         print(
             f"error: unknown problem '{args.slug}'.{suggestion} "
-            "Slugs are the practice/ directory names (e.g. two_sum).",
+            "Slugs are the problem directory names inside practice/leetcode/ "
+            "and practice/amazon/ (e.g. two_sum).",
             file=sys.stderr,
         )
         return 1

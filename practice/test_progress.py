@@ -1,7 +1,10 @@
-"""Unit tests for the progress tracker's canonical order parser.
+"""Unit tests for the progress tracker's canonical order parser and layout
+discovery.
 
 The canonical order comes from the problem table the index-tables
-generator emits into docs/problems/index.md. Run with:
+generator emits into docs/leetcode/index.md. Discovery is pinned against
+a tmp bank-shaped tree (leetcode/ and amazon/ subdirs) and the flat
+fallback layout. Run with:
 
     cd practice && uv run pytest test_progress.py
 """
@@ -23,6 +26,17 @@ def patch_docs_index(tmp_path, monkeypatch):
     return _patch
 
 
+@pytest.fixture
+def patch_practice_dir(tmp_path, monkeypatch):
+    """Point the tracker's practice root at a caller-built tree."""
+
+    def _patch():
+        monkeypatch.setattr(progress, "PRACTICE_DIR", tmp_path)
+        return tmp_path
+
+    return _patch
+
+
 UNIFIED_TABLE = """\
 # Problems
 
@@ -35,17 +49,37 @@ UNIFIED_TABLE = """\
 | [Daily Temperatures](daily_temperatures.md) | Medium | Stack | [LeetCode](https://leetcode.com/problems/daily-temperatures/) | [NeetCode 150](https://neetcode.io/practice/neetcode150) |  |
 | [Implement Trie (Prefix Tree)](implement_trie_prefix_tree.md) | Medium | Trie | [LeetCode](https://leetcode.com/problems/implement-trie-prefix-tree/) | [Grind 75](https://www.techinterviewhandbook.org/grind75?order=grind75-order) + [NeetCode 150](https://neetcode.io/practice/neetcode150) | 35 minutes |
 
-Rows marked · Amazon OA also appear in the [Amazon OA bank](amazon_oa/index.md).
+Rows marked · Amazon OA also appear in the [Amazon OA bank](../amazon/index.md).
 <!-- unified-leetcode:end -->
-
-<!-- amazon-oa:start -->
-## Amazon OA Problems
-
-| Problem | Updated | Practice at |
-|---|---------|---------|
-| [Some OA Problem](amazon_oa/amazon-some-oa-problem.md) | 2026-09-19 | [FastPrep](https://www.fastprep.io/problems/amazon-some-oa-problem) |
-<!-- amazon-oa:end -->
 """
+
+
+def test_discover_problems_descends_the_bank_directories(patch_practice_dir):
+    practice_root = patch_practice_dir()
+    for bank, slug in (("leetcode", "two_sum"), ("amazon", "amazon-word-break")):
+        problem_dir = practice_root / bank / slug
+        problem_dir.mkdir(parents=True)
+        (problem_dir / "solution.py").write_text("", encoding="utf-8")
+    assert progress.discover_problems() == ["amazon-word-break", "two_sum"]
+
+
+def test_discover_problems_ignores_bank_children_without_solution_py(patch_practice_dir):
+    practice_root = patch_practice_dir()
+    stale_bank = practice_root / "not_a_bank"
+    stale_bank.mkdir()
+    (stale_bank / "stray_problem").mkdir()
+    solved_dir = practice_root / "amazon" / "amazon-ok"
+    solved_dir.mkdir(parents=True)
+    (solved_dir / "solution.py").write_text("", encoding="utf-8")
+    assert progress.discover_problems() == ["amazon-ok"]
+
+
+def test_discover_problems_falls_back_to_the_flat_layout(patch_practice_dir):
+    practice_root = patch_practice_dir()
+    flat_dir = practice_root / "two_sum"
+    flat_dir.mkdir()
+    (flat_dir / "solution.py").write_text("", encoding="utf-8")
+    assert progress.discover_problems() == ["two_sum"]
 
 
 def test_canonical_order_reads_table_rows_in_appearance_order(patch_docs_index):
@@ -62,12 +96,6 @@ def test_canonical_order_appends_problems_missing_from_the_table(patch_docs_inde
         "aa_extra",
         "zz_extra",
     ]
-
-
-def test_canonical_order_ignores_amazon_table_rows(patch_docs_index):
-    patch_docs_index(UNIFIED_TABLE)
-    ordered = progress.canonical_order(["amazon_some_oa_problem", "two_sum"])
-    assert ordered == ["two_sum", "amazon_some_oa_problem"]
 
 
 def test_canonical_order_tolerates_titles_with_parentheses(patch_docs_index):
@@ -89,12 +117,22 @@ def test_canonical_order_falls_back_when_the_file_is_missing(tmp_path, monkeypat
     assert progress.canonical_order(["bb", "aa"]) == ["aa", "bb"]
 
 
-def test_committed_landing_page_orders_the_full_problem_universe():
-    known = sorted(
-        entry.name
-        for entry in progress.PRACTICE_DIR.iterdir()
-        if entry.is_dir() and (entry / "solution.py").is_file()
+def test_statuses_from_report_strips_the_bank_segment_from_classnames(tmp_path):
+    report = tmp_path / "report.xml"
+    report.write_text(
+        '<testsuite name="pytest">\n'
+        '  <testcase classname="leetcode.two_sum.test_two_sum" name="test_two_sum_example_1"/>\n'
+        '  <testcase classname="amazon.amazon-word-break.test_amazon-word-break" name="test_example_1"/>\n'
+        '  <testcase classname="test_progress" name="test_canonical_order_reads_table_rows_in_appearance_order"/>\n'
+        "</testsuite>\n",
+        encoding="utf-8",
     )
+    statuses = progress.statuses_from_report(report, ["two_sum", "amazon_word_break"])
+    assert statuses == {"two_sum": "solved", "amazon_word_break": "unsolved"}
+
+
+def test_committed_landing_page_orders_the_full_problem_universe():
+    known = progress.discover_problems()
     ordered = progress.canonical_order(known)
     assert len(ordered) == len(known)
     assert set(ordered) == set(known)

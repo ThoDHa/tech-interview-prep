@@ -69,7 +69,36 @@ def test_parse_bank_rows_ignores_non_table_lines():
 # ---------------------------------------------------------------------------
 
 
-def test_build_manifest_keeps_only_amazon_tagged_rows():
+@pytest.fixture
+def seeded_docs_dir(tmp_path, monkeypatch):
+    """Point the manifest's write-up reads at synthetic headers.
+
+    build_manifest enriches each row from the write-up pinned at
+    DOCS_DIR/<slug>.md; these tests feed fixture bank pages, so the
+    directory must hold a synthetic write-up per fixture slug.
+    """
+    slugs = set()
+    for page_text in (BANK_PAGE, BANK_PAGE_2):
+        for row in gen.parse_bank_rows(page_text):
+            slugs.add(row["slug"])
+    slug_headers = {
+        "amazon-lru-query-result-cache": "**Medium** | **NN minutes** | **Design, Hash Table, Linked List, Simulation**",
+        "amazon-maximize-adjacent-difference-with-one-reversal": "**Hard** | **NN minutes** | **Array, Greedy, Math**",
+    }
+    for slug in slugs:
+        header = slug_headers.get(slug, "**Medium** | **NN minutes** | **Array, Math**")
+        (tmp_path / f"{slug}.md").write_text(
+            "# [Fixture](https://x)\n"
+            "\n"
+            f"{header}\n",
+            encoding="utf-8",
+        )
+    monkeypatch.setattr(gen, "DOCS_DIR", tmp_path)
+    return tmp_path
+
+
+
+def test_build_manifest_keeps_only_amazon_tagged_rows(seeded_docs_dir):
     manifest = gen.build_manifest([BANK_PAGE, BANK_PAGE_2])
     assert {entry["slug"] for entry in manifest} == {
         "amazon-maximize-adjacent-difference-with-one-reversal",
@@ -79,20 +108,20 @@ def test_build_manifest_keeps_only_amazon_tagged_rows():
     }
 
 
-def test_build_manifest_dedups_by_slug_keeping_most_recent():
+def test_build_manifest_dedups_by_slug_keeping_most_recent(seeded_docs_dir):
     manifest = gen.build_manifest([BANK_PAGE, BANK_PAGE_2])
     entries = [e for e in manifest if e["slug"].endswith("one-reversal")]
     assert len(entries) == 1
     assert entries[0]["updated"] == "2026-09-19"
 
 
-def test_build_manifest_sorts_most_recent_first():
+def test_build_manifest_sorts_most_recent_first(seeded_docs_dir):
     manifest = gen.build_manifest([BANK_PAGE, BANK_PAGE_2])
     updated = [entry["updated"] for entry in manifest]
     assert updated == sorted(updated, reverse=True)
 
 
-def test_build_manifest_breaks_date_ties_by_slug_ascending():
+def test_build_manifest_breaks_date_ties_by_slug_ascending(seeded_docs_dir):
     page = (
         "| Company | OA / Interview Question | Practice | Updated |\n"
         "| :-- | :-- | :-: | :-- |\n"
@@ -123,7 +152,7 @@ def test_build_manifest_breaks_date_ties_by_slug_ascending():
     ]
 
 
-def test_build_manifest_entries_carry_required_fields():
+def test_build_manifest_entries_carry_required_fields(seeded_docs_dir):
     manifest = gen.build_manifest([BANK_PAGE])
     entry = next(e for e in manifest if e["slug"] == "amazon-lru-query-result-cache")
     assert entry["title"] == "LRU Cache for Query Results"
@@ -132,7 +161,7 @@ def test_build_manifest_entries_carry_required_fields():
     assert entry["url"].startswith("https://www.fastprep.io/problems/")
 
 
-def test_build_manifest_persists_the_writeup_header_difficulty_and_categories():
+def test_build_manifest_persists_the_writeup_header_difficulty_and_categories(seeded_docs_dir):
     manifest = gen.build_manifest([BANK_PAGE])
     entry = next(e for e in manifest if e["slug"] == "amazon-lru-query-result-cache")
     assert entry["difficulty"] == "Medium"
@@ -145,7 +174,7 @@ def test_build_manifest_persists_the_writeup_header_difficulty_and_categories():
     assert reversal["categories"] == "Array, Greedy, Math"
 
 
-def test_build_manifest_maps_the_unknown_markers_to_none():
+def test_build_manifest_maps_the_unknown_markers_to_none(seeded_docs_dir):
     page = (
         "| Company | OA / Interview Question | Practice | Updated |\n"
         "| :-- | :-- | :-: | :-- |\n"
@@ -365,7 +394,7 @@ def test_render_writeup_follows_template_section_order():
     assert "## Constraints" in headings
     assert headings.index("## Examples") < headings.index("## Constraints")
     assert "## Solutions" in headings
-    assert "solutions branch" in text
+    assert "main later" in text
 
 
 def test_render_writeup_uses_placeholder_metadata_when_absent():
@@ -383,8 +412,8 @@ def seed_cache(monkeypatch, cache_dir, *slugs):
 
 
 def test_emit_scaffolds_tolerates_unparseable_pages(tmp_path, monkeypatch):
-    docs_dir = tmp_path / "docs" / "problems" / "amazon_oa"
-    practice_dir = tmp_path / "practice" / "amazon_oa"
+    docs_dir = tmp_path / "docs" / "amazon"
+    practice_dir = tmp_path / "practice" / "amazon"
     monkeypatch.setattr(gen, "DOCS_DIR", docs_dir)
     monkeypatch.setattr(gen, "PRACTICE_DIR", practice_dir)
     seed_cache(monkeypatch, tmp_path / "cache", "amazon-gone")
@@ -602,8 +631,8 @@ def test_render_all_covers_every_scaffold_file():
 
 
 def test_emit_scaffolds_skips_uncached_slugs_without_overwriting(tmp_path, monkeypatch):
-    docs_dir = tmp_path / "docs" / "problems" / "amazon_oa"
-    practice_dir = tmp_path / "practice" / "amazon_oa"
+    docs_dir = tmp_path / "docs" / "amazon"
+    practice_dir = tmp_path / "practice" / "amazon"
     monkeypatch.setattr(gen, "DOCS_DIR", docs_dir)
     monkeypatch.setattr(gen, "PRACTICE_DIR", practice_dir)
 
@@ -628,8 +657,8 @@ def test_emit_scaffolds_skips_uncached_slugs_without_overwriting(tmp_path, monke
 
 
 def test_emit_scaffolds_total_cache_loss_preserves_manifest_parse_status(tmp_path, monkeypatch):
-    docs_dir = tmp_path / "docs" / "problems" / "amazon_oa"
-    practice_dir = tmp_path / "practice" / "amazon_oa"
+    docs_dir = tmp_path / "docs" / "amazon"
+    practice_dir = tmp_path / "practice" / "amazon"
     monkeypatch.setattr(gen, "DOCS_DIR", docs_dir)
     monkeypatch.setattr(gen, "PRACTICE_DIR", practice_dir)
     monkeypatch.setattr(gen, "FASTPREP_CACHE_DIR", tmp_path / "cache")
@@ -645,8 +674,8 @@ def test_emit_scaffolds_total_cache_loss_preserves_manifest_parse_status(tmp_pat
 
 
 def test_emit_scaffolds_records_parse_status_on_entries(tmp_path, monkeypatch):
-    docs_dir = tmp_path / "docs" / "problems" / "amazon_oa"
-    practice_dir = tmp_path / "practice" / "amazon_oa"
+    docs_dir = tmp_path / "docs" / "amazon"
+    practice_dir = tmp_path / "practice" / "amazon"
     monkeypatch.setattr(gen, "DOCS_DIR", docs_dir)
     monkeypatch.setattr(gen, "PRACTICE_DIR", practice_dir)
     seed_cache(monkeypatch, tmp_path / "cache", "amazon-ok", "amazon-dead")
@@ -665,12 +694,13 @@ def test_emit_scaffolds_records_parse_status_on_entries(tmp_path, monkeypatch):
     assert dead_entry["parse_status"] == "page-unparseable"
 
 
-def test_main_check_mode_does_not_rewrite_manifest(tmp_path, monkeypatch):
+def test_main_check_mode_does_not_rewrite_manifest(tmp_path, monkeypatch, seeded_docs_dir):
     monkeypatch.setattr(
         gen,
         "DEFAULT_BANK_PAGES",
         [FIXTURES_DIR / "bank_coding.md", FIXTURES_DIR / "bank_coding_page_2.md"],
     )
+
     manifest_path = tmp_path / "manifest.json"
     manifest_path.write_text('[{"slug": "amazon-x", "parse_status": "parsed-with-cases"}]', encoding="utf-8")
     monkeypatch.setattr(gen, "MANIFEST_PATH", manifest_path)
@@ -736,19 +766,19 @@ def test_render_solution_stub_links_writeup_at_amazon_depth():
     entry = {"slug": problem["id"], "title": problem["title"], "url": "https://x", "companies": ["Amazon"], "updated": "2026-09-19"}
     text = gen.render_solution_stub(entry, problem, gen.cases_from_record(problem))
     assert (
-        "Write-up & approaches: ../../../docs/problems/amazon_oa/"
+        "Write-up & approaches: ../../../docs/amazon/"
         f"{entry['slug']}.md" in text
     )
-    assert "approaches: ../../docs/" not in text
+    assert "approaches: ../../../docs/problems/" not in text
 
 
 def test_render_test_links_writeup_at_amazon_depth():
     entry = {"slug": "amazon-depth", "title": "T", "url": "https://x", "companies": ["Amazon"], "updated": "2026-09-19"}
     text = gen.render_test(entry, function_name="solve", cases=[], skip_reason="no parseable examples for amazon-depth")
     assert (
-        "The worked approaches live in ../../../docs/problems/amazon_oa/amazon-depth.md." in text
+        "The worked approaches live in ../../../docs/amazon/amazon-depth.md." in text
     )
-    assert "live in ../../docs/" not in text
+    assert "live in ../../../docs/problems/" not in text
 
 
 def test_render_index_names_practice_directory_as_inline_code():
@@ -762,7 +792,7 @@ def test_render_index_names_practice_directory_as_inline_code():
         "categories": "Array, Greedy, Math",
     }
     text = gen.render_index([entry], difficulty_overrides={})
-    assert "`practice/amazon_oa/`" in text
+    assert "`practice/amazon/`" in text
     assert "https://github.com/ThoDHa" not in text
     assert "../../../practice" not in text
 
@@ -853,8 +883,8 @@ INDEX_INDEX_ENTRY = {
 
 def write_scaffold_set(tmp_path, entry):
     """Emit the four scaffolds for `entry` under the tmp dirs."""
-    docs_dir = tmp_path / "docs" / "problems" / "amazon_oa"
-    practice_dir = tmp_path / "practice" / "amazon_oa"
+    docs_dir = tmp_path / "docs" / "amazon"
+    practice_dir = tmp_path / "practice" / "amazon"
     docs_dir.mkdir(parents=True, exist_ok=True)
     slug = entry["slug"]
     (docs_dir / f"{slug}.md").write_text(
@@ -876,8 +906,8 @@ def write_scaffold_set(tmp_path, entry):
 
 def redirect_check_paths(tmp_path, monkeypatch):
     """Point every path `check()` reads at the tmp tree."""
-    monkeypatch.setattr(gen, "DOCS_DIR", tmp_path / "docs" / "problems" / "amazon_oa")
-    monkeypatch.setattr(gen, "PRACTICE_DIR", tmp_path / "practice" / "amazon_oa")
+    monkeypatch.setattr(gen, "DOCS_DIR", tmp_path / "docs" / "amazon")
+    monkeypatch.setattr(gen, "PRACTICE_DIR", tmp_path / "practice" / "amazon")
 
 
 UNPARSEABLE_ENTRY = {
@@ -911,7 +941,7 @@ def test_check_names_a_genuinely_stale_scaffold(tmp_path, monkeypatch):
     captured = io.StringIO()
     with contextlib.redirect_stdout(captured):
         gen.check([UNPARSEABLE_ENTRY])
-    assert "practice/amazon_oa/amazon-gone/solution.py" in captured.getvalue()
+    assert "practice/amazon/amazon-gone/solution.py" in captured.getvalue()
 
 
 def test_check_flags_missing_scaffolds_and_missing_cases_json(tmp_path, monkeypatch):
@@ -961,8 +991,8 @@ def test_main_warns_when_bank_pages_are_absent_and_slugs_are_skipped(tmp_path, m
     monkeypatch.setattr(gen, "FASTPREP_CACHE_DIR", tmp_path / "empty-cache")
     mkdocs_path = tmp_path / "mkdocs.yml"
     mkdocs_path.write_text(
-        'nav:\n  - Home: index.md\n  - Problems:\n    - "Amazon OA":'
-        " problems/amazon_oa/index.md\n",
+        'nav:\n  - Home: index.md\n  - Problems:\n    - Leetcode:\n'
+        "      - \"Amazon OA\": amazon/index.md\n",
         encoding="utf-8",
     )
     monkeypatch.setattr(gen, "MKTABS_PATH", mkdocs_path)

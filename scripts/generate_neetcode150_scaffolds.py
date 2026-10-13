@@ -2,21 +2,19 @@
 
 Pipeline:
   1. Validate the committed scripts/neetcode150_manifest.json (150 entries,
-     18 canonical sections, Easy 28 / Medium 102 / Hard 20, unique slugs).
+      18 canonical sections, Easy 28 / Medium 102 / Hard 20, unique slugs).
   2. For each delta problem (no existing docs write-up and practice folder),
-     fetch its metadata from neetcode.io (disk cache, polite delay), parse
-     the statement markdown, and emit:
-       - docs/problems/<dirSlug>.md        (statement write-up scaffold)
-       - practice/<dirSlug>/solution.py    (NotSolved stub)
-       - practice/<dirSlug>/cases.json     (parseable examples, else [])
-       - practice/<dirSlug>/test_<dirSlug>.py (harness-driven tests)
-  3. Once every delta problem is scaffolded, the mkdocs.yml Problems nav
-       and the docs/problems/index.md landing page are updated by their
-       owners: the nav's Problems section is owned by
-       scripts/generate_index_tables.py (which merges this track with the
-       Grind 75 rows into one flat "Grind 75 + NeetCode 150" subsection),
-       and the landing
-       page tables are owned by the same generator.
+      fetch its metadata from neetcode.io (disk cache, polite delay), parse
+      the statement markdown, and emit:
+        - docs/leetcode/<dirSlug>.md             (statement write-up scaffold)
+        - practice/leetcode/<dirSlug>/solution.py    (NotSolved stub)
+        - practice/leetcode/<dirSlug>/cases.json     (parseable examples, else [])
+        - practice/leetcode/<dirSlug>/test_<dirSlug>.py (harness-driven tests)
+  3. Once every delta problem is scaffolded, the mkdocs.yml generated nav
+        and the docs/leetcode/index.md landing page are updated by their
+        owner: scripts/generate_index_tables.py (which merges this track
+        with the Grind 75 rows into the flat Leetcode nav section and the
+        unified landing table).
 
 Overlap problems (already in the bank) keep their single write-up and
 practice folder and are never scaffolded or modified.
@@ -52,8 +50,8 @@ from typing import Any, Dict, List, Optional, Sequence
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 MANIFEST_PATH = REPO_ROOT / "scripts" / "neetcode150_manifest.json"
-DOCS_DIR = REPO_ROOT / "docs" / "problems"
-PRACTICE_DIR = REPO_ROOT / "practice"
+DOCS_DIR = REPO_ROOT / "docs" / "leetcode"
+PRACTICE_DIR = REPO_ROOT / "practice" / "leetcode"
 
 METADATA_URL = "https://neetcode.io/api/getProblemMetadataFunctionHttp"
 METADATA_CACHE_DIR = Path("/tmp/opencode/neetcode-cache")
@@ -65,8 +63,10 @@ BROWSER_USER_AGENT = (
 
 LC_PROBLEM_URL_TEMPLATE = "https://leetcode.com/problems/{slug}/"
 NC_PROBLEM_URL_TEMPLATE = "https://neetcode.io/problems/{slug}"
-# Write-ups live flat in docs/problems/, so the template is a sibling.
+# Write-ups live flat in docs/leetcode/, so the template is a sibling.
 TEMPLATE_LINK = "_TEMPLATE.md"
+# From practice/leetcode/<slug>/ the write-up bank sits three levels up.
+WRITEUP_LINK_TEMPLATE = "../../../docs/leetcode/{dir_slug}.md"
 
 TRACK_SIZE = 150
 DIFFICULTY_TOTALS = {"Easy": 28, "Medium": 102, "Hard": 20}
@@ -280,14 +280,15 @@ def derive_delta(
 ) -> List[dict]:
     """Split the manifest into delta problems in track order.
 
-    A problem is delta when it has neither a `docs/problems/<dirSlug>.md`
-    write-up nor a `practice/<dirSlug>/` folder; overlap problems (the shared
-    LeetCode universe) keep their existing files untouched.
+    A problem is delta when it has neither a `docs/leetcode/<dirSlug>.md`
+    write-up nor a `practice/leetcode/<dirSlug>/` folder; overlap problems
+    (the shared LeetCode universe) keep their existing files untouched.
 
     Args:
         entries: The validated manifest entries.
-        docs_dir: Overrides the docs/problems directory (default: module constant).
-        practice_dir: Overrides the practice directory (default: module constant).
+        docs_dir: Overrides the docs/leetcode directory (default: module constant).
+        practice_dir: Overrides the practice/leetcode directory (default: module
+            constant).
 
     Returns:
         The manifest entries whose write-up and practice folder are both absent.
@@ -941,7 +942,7 @@ def render_writeup(entry: dict, metadata: Optional[dict], parsed: Optional[dict]
             None, the metadata description is parsed here.
 
     Returns:
-        Write-up markdown following the docs/problems/_TEMPLATE.md section
+        Write-up markdown following the docs/leetcode/_TEMPLATE.md section
         order, with solutions left as an explicit placeholder.
     """
     if parsed is None:
@@ -968,8 +969,8 @@ def render_writeup(entry: dict, metadata: Optional[dict], parsed: Optional[dict]
         [
             "## Solutions",
             "",
-            "<!-- Scaffold placeholder: the worked derivation and solutions land",
-            f"     on the solutions branch later. See {TEMPLATE_LINK} for the",
+            "<!-- Scaffold placeholder: the worked derivation and write-up land",
+            f"     on main later. See {TEMPLATE_LINK} for the",
             "     expected layout, naming, and ordering conventions. -->",
             "",
         ]
@@ -997,14 +998,15 @@ def render_solution_stub(
     function_name = parsed_cases.function_name
     args_signature = _signature_args(parsed, parsed_cases)
     dir_slug = entry["dirSlug"]
+    writeup_link = WRITEUP_LINK_TEMPLATE.format(dir_slug=dir_slug)
     return f'''"""{entry["title"]} — {lc_url}
 
-Write-up & approaches: ../../docs/problems/{dir_slug}.md
+Write-up & approaches: {writeup_link}
 
 {summary}
 
-  uv run python {dir_slug}/solution.py   # debug one case (see CASE below)
-  uv run pytest {dir_slug}/              # run the test sets
+  uv run python leetcode/{dir_slug}/solution.py   # debug one case (see CASE below)
+  uv run pytest leetcode/{dir_slug}/              # run the test sets
 """
 
 from harness import NotSolved, pick_case
@@ -1099,9 +1101,10 @@ def render_test(
     case_list = _python_literal(cases)
     dir_slug = entry["dirSlug"]
     title = entry["title"]
+    writeup_link = WRITEUP_LINK_TEMPLATE.format(dir_slug=dir_slug)
     return f'''"""Tests for {title} — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../docs/problems/{dir_slug}.md.
+The worked approaches live in {writeup_link}.
 """
 
 import pytest
