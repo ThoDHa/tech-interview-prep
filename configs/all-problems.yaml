@@ -553,6 +553,7 @@ input-files:
   - amazon/find-minimum-inefficiency.md
   - amazon/get-mean-rank-count.md
   - amazon/get-minimum-cost.md
+from: markdown+tex_math_single_backslash
 output-file: all-problems.pdf
 pdf-engine: xelatex
 variables:
@@ -566,7 +567,7 @@ variables:
   listings: true
   breaklines: true
 toc: true
-toc-depth: 1
+toc-depth: 2
 resource-path: ["./leetcode/", "./amazon/", "../configs/"]
 metadata:
   title: "All Problems: LeetCode Track and Amazon OA Bank"
