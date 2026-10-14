@@ -1,6 +1,6 @@
 """Sum Max Plus Min After Decrement Operations — https://www.fastprep.io/problems/amazon-sum-max-plus-min-after-decrement-operations
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-sum-max-plus-min-after-decrement-operations.md
+Write-up & approaches: ../../../docs/amazon/amazon-sum-max-plus-min-after-decrement-operations.md
 
 You are given an integer array arr and an integer requests.
 

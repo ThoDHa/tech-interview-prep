@@ -1,6 +1,6 @@
 """Tests for Number of Islands II — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-number-of-islands-ii.md.
+The worked approaches live in ../../../docs/amazon/amazon-number-of-islands-ii.md.
 """
 
 import pytest

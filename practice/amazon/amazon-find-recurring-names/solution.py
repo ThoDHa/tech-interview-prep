@@ -1,6 +1,6 @@
 """Find Recurring Name — https://www.fastprep.io/problems/amazon-find-recurring-names
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-find-recurring-names.md
+Write-up & approaches: ../../../docs/amazon/amazon-find-recurring-names.md
 
 Amazon rewards its new users with a discount coupon that can be applied to their first purchase. Some users create more than one account in order to receive the offer multiple times. It was found that
 

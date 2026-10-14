@@ -1,6 +1,6 @@
 """Binary Search: https://leetcode.com/problems/binary-search/
 
-Write-up & approaches: ../../docs/problems/binary_search.md
+Write-up & approaches: ../../../docs/leetcode/binary_search.md
 
 Given an array of integers `nums` sorted in ascending order and an integer
 `target`, return the index of `target` in `nums`, or -1 if it is absent. The

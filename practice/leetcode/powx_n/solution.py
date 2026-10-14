@@ -1,6 +1,6 @@
 """Pow(x, n) — https://leetcode.com/problems/powx-n/
 
-Write-up & approaches: ../../docs/problems/powx_n.md
+Write-up & approaches: ../../../docs/leetcode/powx_n.md
 
 `Pow(x, n)` is a mathematical function to calculate the value of `x` raised to the power of `n` (i.e., `x^n`). Given a floating-point value `x` and an integer value `n`, implement the `myPow(x, n)` fu
 

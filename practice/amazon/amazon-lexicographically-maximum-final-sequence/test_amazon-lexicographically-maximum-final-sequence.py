@@ -1,6 +1,6 @@
 """Tests for Lexicographically Maximum Final Sequence — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-lexicographically-maximum-final-sequence.md.
+The worked approaches live in ../../../docs/amazon/amazon-lexicographically-maximum-final-sequence.md.
 """
 
 import pytest

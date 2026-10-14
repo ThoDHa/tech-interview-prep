@@ -2,7 +2,7 @@
 
 Trees are stored in the case files as LeetCode level-order arrays (null = missing)
 and marshalled to TreeNode here. The worked approaches live in
-../../docs/problems/validate_binary_search_tree.md.
+../../../docs/leetcode/validate_binary_search_tree.md.
 """
 
 import pytest

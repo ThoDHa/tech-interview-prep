@@ -1,6 +1,6 @@
 """Tests for Longest Zero Sum Subarray — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-longest-zero-sum-subarray.md.
+The worked approaches live in ../../../docs/amazon/amazon-longest-zero-sum-subarray.md.
 """
 
 import pytest

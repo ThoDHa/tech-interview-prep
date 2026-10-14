@@ -1,6 +1,6 @@
 """Rearrange Binary String — https://www.fastprep.io/problems/amazon-rearrange-binary-string
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-rearrange-binary-string.md
+Write-up & approaches: ../../../docs/amazon/amazon-rearrange-binary-string.md
 
 You are given a binary string, binary, consisting only of characters '0' and '1'. You are allowed to perform the following operation zero or more times:
 

@@ -1,6 +1,6 @@
 """Smallest Number With a Given Digit Sum — https://www.fastprep.io/problems/amazon-smallest-number-with-digit-sum
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-smallest-number-with-digit-sum.md
+Write-up & approaches: ../../../docs/amazon/amazon-smallest-number-with-digit-sum.md
 
 Given integers digitSum and numberOfDigits, construct the smallest non-negative decimal number that:
 

@@ -1,6 +1,6 @@
 """Tests for Feasible Indices After Prefix/Suffix Reduction — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-feasible-indices-after-prefix-suffix-reduction.md.
+The worked approaches live in ../../../docs/amazon/amazon-feasible-indices-after-prefix-suffix-reduction.md.
 """
 
 import pytest

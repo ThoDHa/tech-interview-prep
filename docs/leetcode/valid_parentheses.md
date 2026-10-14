@@ -6,7 +6,7 @@
 
 **Algorithm:** [Stack (abstract data type)](https://en.wikipedia.org/wiki/Stack_(abstract_data_type)) · [Hash table](https://en.wikipedia.org/wiki/Hash_table)
 
-**Practice:** [`practice/valid_parentheses/solution.py`](../../practice/valid_parentheses/solution.py)
+**Practice:** [`practice/leetcode/valid_parentheses/solution.py`](../../practice/leetcode/valid_parentheses/solution.py)
 
 Given a string `s` containing just the characters `'('`, `')'`, `'{'`, `'}'`, `'['` and `']'`, determine if the input string is valid.
 

@@ -1,6 +1,6 @@
 """Word Ladder — https://www.fastprep.io/problems/amazon-word-ladder
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-word-ladder.md
+Write-up & approaches: ../../../docs/amazon/amazon-word-ladder.md
 
 You are given beginWord, endWord, and a dictionary wordList. A transformation changes exactly one character, and every transformed word—including endWord—must appear in the dictionary.
 

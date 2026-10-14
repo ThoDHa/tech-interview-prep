@@ -1,6 +1,6 @@
 """Tests for Rearrange Binary String — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-rearrange-binary-string.md.
+The worked approaches live in ../../../docs/amazon/amazon-rearrange-binary-string.md.
 """
 
 import pytest

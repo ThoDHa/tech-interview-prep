@@ -1,6 +1,6 @@
 """Tests for Find Requests In Queue — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-find-requests-in-queue.md.
+The worked approaches live in ../../../docs/amazon/amazon-find-requests-in-queue.md.
 """
 
 import pytest

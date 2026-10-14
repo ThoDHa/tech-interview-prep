@@ -1,6 +1,6 @@
 """Tests for Sort an Array with Rotate and Flip — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-sort-array-with-rotate-and-flip.md.
+The worked approaches live in ../../../docs/amazon/amazon-sort-array-with-rotate-and-flip.md.
 """
 
 import pytest

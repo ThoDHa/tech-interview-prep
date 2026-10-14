@@ -1,6 +1,6 @@
 """Hand of Straights — https://leetcode.com/problems/hand-of-straights/
 
-Write-up & approaches: ../../docs/problems/hand_of_straights.md
+Write-up & approaches: ../../../docs/leetcode/hand_of_straights.md
 
 You are given an integer array `hand` where `hand[i]` is the value written on the `ith` card and an integer `groupSize`. You want to rearrange the cards into groups so that each group is of size `grou
 

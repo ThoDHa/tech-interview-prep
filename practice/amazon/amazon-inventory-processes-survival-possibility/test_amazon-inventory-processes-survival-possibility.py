@@ -1,6 +1,6 @@
 """Tests for Inventory Processes Survival Possibility — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-inventory-processes-survival-possibility.md.
+The worked approaches live in ../../../docs/amazon/amazon-inventory-processes-survival-possibility.md.
 """
 
 import pytest

@@ -1,6 +1,6 @@
 """Get Maximum Count — https://www.fastprep.io/problems/amazon-get-maximum-count
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-get-maximum-count.md
+Write-up & approaches: ../../../docs/amazon/amazon-get-maximum-count.md
 
 Amazon has launched a "Play to Win" game where users get a chance to earn free gift vouchers. The game presents you with an array of integers (arr) and an integer k. You are allowed to choose any cont
 

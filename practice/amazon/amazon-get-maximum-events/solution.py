@@ -1,6 +1,6 @@
 """Get Max Events — https://www.fastprep.io/problems/amazon-get-maximum-events
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-get-maximum-events.md
+Write-up & approaches: ../../../docs/amazon/amazon-get-maximum-events.md
 
 You are given an array payload of size n, where payload[i] represents the size of the (i)-th event payload. The task is to select a subset of events and rearrange them into a new array optimizedPayloa
 

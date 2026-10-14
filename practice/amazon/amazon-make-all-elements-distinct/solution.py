@@ -1,6 +1,6 @@
 """Make All Elements Distinct — https://www.fastprep.io/problems/amazon-make-all-elements-distinct
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-make-all-elements-distinct.md
+Write-up & approaches: ../../../docs/amazon/amazon-make-all-elements-distinct.md
 
 An Amazon warehouse manager is responsible for managing inventory and ensuring that each product has a unique identifier. There are n products in the warehouse, where the identifier of the i-th item i
 

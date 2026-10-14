@@ -1,6 +1,6 @@
 """Longest Palindromic Subsequence — https://www.fastprep.io/problems/amazon-longest-palindromic-subsequence
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-longest-palindromic-subsequence.md
+Write-up & approaches: ../../../docs/amazon/amazon-longest-palindromic-subsequence.md
 
 Given a string s, return the length of its longest subsequence that reads the same from left to right and right to left.
 

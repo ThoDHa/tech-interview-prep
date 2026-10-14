@@ -1,6 +1,6 @@
 """Tests for Get Min Cost of Purchasing Books — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-get-min-cost-book.md.
+The worked approaches live in ../../../docs/amazon/amazon-get-min-cost-book.md.
 """
 
 import pytest

@@ -1,6 +1,6 @@
 """Tests for Find the Safest Path in a Grid — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-find-safest-path-in-grid.md.
+The worked approaches live in ../../../docs/amazon/amazon-find-safest-path-in-grid.md.
 """
 
 import pytest

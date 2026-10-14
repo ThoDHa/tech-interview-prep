@@ -1,6 +1,6 @@
 """Generate Parentheses — https://leetcode.com/problems/generate-parentheses/
 
-Write-up & approaches: ../../docs/problems/generate_parentheses.md
+Write-up & approaches: ../../../docs/leetcode/generate_parentheses.md
 Reference implementation of the write-up's Backtracking solution, kept
 next to the harness so authored cases stay falsifiable. Your own attempt
 lives in solution.py.

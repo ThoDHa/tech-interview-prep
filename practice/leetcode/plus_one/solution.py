@@ -1,6 +1,6 @@
 """Plus One — https://leetcode.com/problems/plus-one/
 
-Write-up & approaches: ../../docs/problems/plus_one.md
+Write-up & approaches: ../../../docs/leetcode/plus_one.md
 
 You are given an integer array `digits`, where each `digits[i]` is the `ith` digit of a large integer. It is ordered from most significant to least significant digit, and it will not contain any leadi
 

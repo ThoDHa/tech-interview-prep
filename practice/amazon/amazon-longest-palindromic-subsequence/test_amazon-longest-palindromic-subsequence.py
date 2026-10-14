@@ -1,6 +1,6 @@
 """Tests for Longest Palindromic Subsequence — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-longest-palindromic-subsequence.md.
+The worked approaches live in ../../../docs/amazon/amazon-longest-palindromic-subsequence.md.
 """
 
 import pytest

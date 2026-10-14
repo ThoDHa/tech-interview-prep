@@ -1,6 +1,6 @@
 """Container With Most Water — https://www.fastprep.io/problems/amazon-container-with-most-water
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-container-with-most-water.md
+Write-up & approaches: ../../../docs/amazon/amazon-container-with-most-water.md
 
 You are given an integer array height of length n. There are n vertical lines drawn such that the two endpoints of the i-th line are (i, 0) and (i, height[i]).
 

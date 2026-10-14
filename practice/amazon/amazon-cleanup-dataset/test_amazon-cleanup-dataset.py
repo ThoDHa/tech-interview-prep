@@ -1,6 +1,6 @@
 """Tests for Cleanup Dataset — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-cleanup-dataset.md.
+The worked approaches live in ../../../docs/amazon/amazon-cleanup-dataset.md.
 """
 
 import pytest

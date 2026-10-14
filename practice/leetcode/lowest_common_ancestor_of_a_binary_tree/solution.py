@@ -1,6 +1,6 @@
 """Lowest Common Ancestor of a Binary Tree: https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/
 
-Write-up & approaches: ../../docs/problems/lowest_common_ancestor_of_a_binary_tree.md
+Write-up & approaches: ../../../docs/leetcode/lowest_common_ancestor_of_a_binary_tree.md
 
 Given a binary tree and two nodes `p` and `q`, return their lowest common
 ancestor: the deepest node that has both `p` and `q` as descendants (a node may

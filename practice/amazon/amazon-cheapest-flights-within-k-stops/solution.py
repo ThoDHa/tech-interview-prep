@@ -1,6 +1,6 @@
 """Cheapest Flights Within K Stops — https://www.fastprep.io/problems/amazon-cheapest-flights-within-k-stops
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-cheapest-flights-within-k-stops.md
+Write-up & approaches: ../../../docs/amazon/amazon-cheapest-flights-within-k-stops.md
 
 There are n cities numbered from 0 to n - 1. You are given an array flights where flights[i] = [from_i, to_i, price_i] means there is a directed flight from city from_i to city to_i with cost price_i.
 

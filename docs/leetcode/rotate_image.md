@@ -6,7 +6,7 @@
 
 **Algorithm:** [Rotation matrix](https://en.wikipedia.org/wiki/Rotation_matrix) · [Transpose](https://en.wikipedia.org/wiki/Transpose) · [In-place algorithm](https://en.wikipedia.org/wiki/In-place_algorithm)
 
-**Practice:** [`practice/rotate_image/solution.py`](../../practice/rotate_image/solution.py)
+**Practice:** [`practice/leetcode/rotate_image/solution.py`](../../practice/leetcode/rotate_image/solution.py)
 
 Given a square `n x n` matrix of integers `matrix`, rotate it by 90 degrees *clockwise*.
 
@@ -357,7 +357,7 @@ The comprehension materializes all `n` rotated rows before the assignment; this 
 
 ## Comparison of Solutions
 
-The practice harness's `practice/rotate_image/reference.py` implements the **Transpose then Reverse Rows** solution.
+The practice harness's `practice/leetcode/rotate_image/reference.py` implements the **Transpose then Reverse Rows** solution.
 
 ### Time Complexity
 

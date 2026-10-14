@@ -381,7 +381,7 @@ The template maps exactly to the three forces:
 
 Each problem below shows the shape recognition and implementation.
 
-### 9.1 [Permutations](../../problems/permutations.md)
+### 9.1 [Permutations](../../leetcode/permutations.md)
 
 **Shape**: Permutation: arrange all, order matters.
 
@@ -460,7 +460,7 @@ def permute_unique(nums: list[int]) -> list[list[int]]:
     return results
 ```
 
-### 9.3 [Subsets](../../problems/subsets.md)
+### 9.3 [Subsets](../../leetcode/subsets.md)
 
 **Shape**: Subset: include or exclude, canonical order.
 
@@ -489,7 +489,7 @@ def subsets(nums: list[int]) -> list[list[int]]:
     return results
 ```
 
-### 9.4 [Subsets II: With Duplicates](../../problems/subsets_ii.md)
+### 9.4 [Subsets II: With Duplicates](../../leetcode/subsets_ii.md)
 
 **Shape**: Subset with deduplication.
 
@@ -549,7 +549,7 @@ def combine(n: int, k: int) -> list[list[int]]:
     return results
 ```
 
-### 9.6 [Letter Combinations of a Phone Number](../../problems/letter_combinations_of_a_phone_number.md)
+### 9.6 [Letter Combinations of a Phone Number](../../leetcode/letter_combinations_of_a_phone_number.md)
 
 **Shape**: Fixed-depth enumeration: one independent choice per level (the cartesian product of each digit's letters).
 
@@ -583,7 +583,7 @@ def letter_combinations(digits: str) -> list[str]:
     return results
 ```
 
-### 9.7 [Combination Sum](../../problems/combination_sum.md)
+### 9.7 [Combination Sum](../../leetcode/combination_sum.md)
 
 **Shape**: Target sum with element reuse allowed.
 
@@ -614,7 +614,7 @@ def combination_sum(candidates: list[int], target: int) -> list[list[int]]:
     return results
 ```
 
-### 9.8 [Combination Sum II](../../problems/combination_sum_ii.md)
+### 9.8 [Combination Sum II](../../leetcode/combination_sum_ii.md)
 
 **Shape**: Target sum, no reuse, with duplicates.
 
@@ -678,7 +678,7 @@ def combination_sum3(k: int, n: int) -> list[list[int]]:
     return results
 ```
 
-### 9.10 [N-Queens](../../problems/n_queens.md) (LeetCode 51/52)
+### 9.10 [N-Queens](../../leetcode/n_queens.md) (LeetCode 51/52)
 
 **Shape**: Constraint satisfaction: place without conflict.
 
@@ -752,7 +752,7 @@ def total_n_queens(n: int) -> int:
     return count
 ```
 
-### 9.11 [Palindrome Partitioning](../../problems/palindrome_partitioning.md)
+### 9.11 [Palindrome Partitioning](../../leetcode/palindrome_partitioning.md)
 
 **Shape**: Segmentation: cut into valid pieces.
 
@@ -839,7 +839,7 @@ def restore_ip_addresses(s: str) -> list[str]:
     return results
 ```
 
-### 9.13 [Word Search](../../problems/word_search.md)
+### 9.13 [Word Search](../../leetcode/word_search.md)
 
 **Shape**: Grid path with visited tracking.
 

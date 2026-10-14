@@ -1,6 +1,6 @@
 """Search a 2D Matrix — https://leetcode.com/problems/search-a-2d-matrix/
 
-Write-up & approaches: ../../docs/problems/search_a_2d_matrix.md
+Write-up & approaches: ../../../docs/leetcode/search_a_2d_matrix.md
 
 You are given an `m x n` 2-D integer array `matrix` and an integer `target`. * Each row in `matrix` is sorted in *non-decreasing* order. * The first integer of every row is greater than the last integ
 

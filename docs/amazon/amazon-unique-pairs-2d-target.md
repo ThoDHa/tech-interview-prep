@@ -180,7 +180,7 @@ In the worst case (few or no pairs) `seen` holds every value in the matrix.
 
 #### Derivation
 
-The hash set buys linear time with linear extra memory. The same count can be found with ordered data and two moving ends: in a sorted sequence, if the extreme values sum to less than `target` the small end must grow, if they sum to more the large end must shrink, and every other pairing is eliminated by the same argument at each step. The matrix is flattened once and sorted, which costs the `O(c log c)` that hashing avoids, and the two-pointer sweep then uses `O(1)` working memory beyond the sorted copy. This is the flattening of [Two Sum's](../two_sum.md) sort-based variant, with counting instead of index reporting:
+The hash set buys linear time with linear extra memory. The same count can be found with ordered data and two moving ends: in a sorted sequence, if the extreme values sum to less than `target` the small end must grow, if they sum to more the large end must shrink, and every other pairing is eliminated by the same argument at each step. The matrix is flattened once and sorted, which costs the `O(c log c)` that hashing avoids, and the two-pointer sweep then uses `O(1)` working memory beyond the sorted copy. This is the flattening of [Two Sum's](../leetcode/two_sum.md) sort-based variant, with counting instead of index reporting:
 
 1. Flatten the matrix into `values` and sort it ascending.
 2. Point `low` at the start and `high` at the end of `values`.

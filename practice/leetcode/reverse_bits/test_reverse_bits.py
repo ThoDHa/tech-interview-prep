@@ -1,6 +1,6 @@
 """Tests for Reverse Bits — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../docs/problems/reverse_bits.md.
+The worked approaches live in ../../../docs/leetcode/reverse_bits.md.
 """
 
 import pytest

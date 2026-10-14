@@ -1,6 +1,6 @@
 """Longest Increasing Subsequence With Bounded Adjacent Difference — https://www.fastprep.io/problems/amazon-longest-increasing-subsequence-bounded-difference
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-longest-increasing-subsequence-bounded-difference.md
+Write-up & approaches: ../../../docs/amazon/amazon-longest-increasing-subsequence-bounded-difference.md
 
 Given a non-empty integer array arr and a non-negative integer k, return the maximum length of a subsequence that satisfies all of the following:
 

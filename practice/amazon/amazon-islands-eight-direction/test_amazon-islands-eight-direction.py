@@ -1,6 +1,6 @@
 """Tests for Count Islands with Eight-Direction Adjacency — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-islands-eight-direction.md.
+The worked approaches live in ../../../docs/amazon/amazon-islands-eight-direction.md.
 """
 
 import pytest

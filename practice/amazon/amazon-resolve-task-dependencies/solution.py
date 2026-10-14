@@ -1,6 +1,6 @@
 """Resolve Task Dependencies — https://www.fastprep.io/problems/amazon-resolve-task-dependencies
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-resolve-task-dependencies.md
+Write-up & approaches: ../../../docs/amazon/amazon-resolve-task-dependencies.md
 
 There are n tasks numbered from 0 through n - 1. A dependency [u, v] means task u must be completed before task v.
 

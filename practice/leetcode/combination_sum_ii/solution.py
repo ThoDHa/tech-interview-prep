@@ -1,6 +1,6 @@
 """Combination Sum II — https://leetcode.com/problems/combination-sum-ii/
 
-Write-up & approaches: ../../docs/problems/combination_sum_ii.md
+Write-up & approaches: ../../../docs/leetcode/combination_sum_ii.md
 
 You are given an array of integers `candidates`, which may contain duplicates, and a target integer `target`. Your task is to return a list of all **unique combinations** of `candidates` where the cho
 

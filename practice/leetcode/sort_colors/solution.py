@@ -1,6 +1,6 @@
 """Sort Colors: https://leetcode.com/problems/sort-colors/
 
-Write-up & approaches: ../../docs/problems/sort_colors.md
+Write-up & approaches: ../../../docs/leetcode/sort_colors.md
 
 Given an array `nums` with `n` objects colored red, white, or blue (encoded as
 `0`, `1`, `2`), sort them in-place so the colors appear in the order red, white,

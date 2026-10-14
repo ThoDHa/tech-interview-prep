@@ -1,6 +1,6 @@
 """Tests for Unique Pairs With Target Sum — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-unique-pairs-with-target-sum.md.
+The worked approaches live in ../../../docs/amazon/amazon-unique-pairs-with-target-sum.md.
 """
 
 import pytest

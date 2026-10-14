@@ -1,7 +1,7 @@
 """Tests for Insert Interval: your attempt (solution.py) against both case sets.
 
 cases.json (marker `simple`) is the "Run" set; cases_full.json (marker `full`) is
-the "Submit" gauntlet. The worked approaches live in ../../docs/problems/insert_interval.md.
+the "Submit" gauntlet. The worked approaches live in ../../../docs/leetcode/insert_interval.md.
 """
 
 import pytest

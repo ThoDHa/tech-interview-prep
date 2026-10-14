@@ -1,6 +1,6 @@
 """Task Scheduler: https://leetcode.com/problems/task-scheduler/
 
-Write-up & approaches: ../../docs/problems/task_scheduler.md
+Write-up & approaches: ../../../docs/leetcode/task_scheduler.md
 
 Given a list of CPU `tasks` (uppercase letters) and a cooldown `n`, return the
 least number of time units needed so that any two identical tasks are separated

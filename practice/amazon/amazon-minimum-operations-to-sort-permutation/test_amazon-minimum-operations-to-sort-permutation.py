@@ -1,6 +1,6 @@
 """Tests for Minimum Operations to Sort a Permutation — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-minimum-operations-to-sort-permutation.md.
+The worked approaches live in ../../../docs/amazon/amazon-minimum-operations-to-sort-permutation.md.
 """
 
 import pytest

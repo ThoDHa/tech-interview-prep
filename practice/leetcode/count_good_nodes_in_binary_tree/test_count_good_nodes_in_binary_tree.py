@@ -1,6 +1,6 @@
 """Tests for Count Good Nodes In Binary Tree — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../docs/problems/count_good_nodes_in_binary_tree.md.
+The worked approaches live in ../../../docs/leetcode/count_good_nodes_in_binary_tree.md.
 """
 
 import pytest

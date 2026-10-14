@@ -1,6 +1,6 @@
 """Sort Error Codes by Frequency — https://www.fastprep.io/problems/amazon-sort-error-codes-by-frequency
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-sort-error-codes-by-frequency.md
+Write-up & approaches: ../../../docs/amazon/amazon-sort-error-codes-by-frequency.md
 
 You are given an integer array codes representing error codes.
 

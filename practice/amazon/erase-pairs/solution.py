@@ -1,6 +1,6 @@
 """Erase Pairs — https://www.fastprep.io/problems/erase-pairs
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/erase-pairs.md
+Write-up & approaches: ../../../docs/amazon/erase-pairs.md
 
 You are given a string S. In one move you can erase from S a pair of identical letters. Find the shortest possible string that can be created this way. 
 

@@ -6,7 +6,7 @@
 
 **Algorithm:** [Sliding window](https://usaco.guide/gold/sliding-window) · [Hash table](https://en.wikipedia.org/wiki/Hash_table)
 
-**Practice:** [`practice/longest_repeating_character_replacement/solution.py`](../../practice/longest_repeating_character_replacement/solution.py)
+**Practice:** [`practice/leetcode/longest_repeating_character_replacement/solution.py`](../../practice/leetcode/longest_repeating_character_replacement/solution.py)
 
 You are given a string `s` consisting of only uppercase english characters and an integer `k`. You can choose up to `k` characters of the string and replace them with any other uppercase English character.
 

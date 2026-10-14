@@ -1,6 +1,6 @@
 """Tests for Find Minimum Cost — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-find-minimum-cost.md.
+The worked approaches live in ../../../docs/amazon/amazon-find-minimum-cost.md.
 """
 
 import pytest

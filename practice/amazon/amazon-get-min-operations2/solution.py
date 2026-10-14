@@ -1,6 +1,6 @@
 """Min Operations — https://www.fastprep.io/problems/amazon-get-min-operations2
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-get-min-operations2.md
+Write-up & approaches: ../../../docs/amazon/amazon-get-min-operations2.md
 
 Amazon OA problem.
 

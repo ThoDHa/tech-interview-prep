@@ -6,7 +6,7 @@
 
 **Algorithm:** [Binary search](https://en.wikipedia.org/wiki/Binary_search_algorithm)
 
-**Practice:** [`practice/binary_search/solution.py`](../../practice/binary_search/solution.py)
+**Practice:** [`practice/leetcode/binary_search/solution.py`](../../practice/leetcode/binary_search/solution.py)
 
 Given an array of integers `nums` which is sorted in ascending order, and an integer `target`, write a function to search `target` in `nums`. If `target` exists, then return its index. Otherwise, return -1.
 

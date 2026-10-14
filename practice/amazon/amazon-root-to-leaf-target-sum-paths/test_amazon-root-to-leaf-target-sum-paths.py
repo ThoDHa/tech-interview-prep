@@ -1,6 +1,6 @@
 """Tests for Root-to-Leaf Paths with a Target Sum — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-root-to-leaf-target-sum-paths.md.
+The worked approaches live in ../../../docs/amazon/amazon-root-to-leaf-target-sum-paths.md.
 """
 
 import pytest

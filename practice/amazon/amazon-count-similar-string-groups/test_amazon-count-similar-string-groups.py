@@ -1,6 +1,6 @@
 """Tests for Count Similar String Groups — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-count-similar-string-groups.md.
+The worked approaches live in ../../../docs/amazon/amazon-count-similar-string-groups.md.
 """
 
 import pytest

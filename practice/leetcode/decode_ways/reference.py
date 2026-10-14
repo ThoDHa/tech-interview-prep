@@ -1,6 +1,6 @@
 """Decode Ways — https://leetcode.com/problems/decode-ways/
 
-Write-up & approaches: ../../docs/problems/decode_ways.md
+Write-up & approaches: ../../../docs/leetcode/decode_ways.md
 Reference implementation of the write-up's Space-Optimized DP solution, kept
 next to the harness so authored cases stay falsifiable. Your own attempt
 lives in solution.py.

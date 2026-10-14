@@ -1,6 +1,6 @@
 """Find Largest Set of Onion Bags — https://www.fastprep.io/problems/amazon-find-largest-set-of-onion-bags
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-find-largest-set-of-onion-bags.md
+Write-up & approaches: ../../../docs/amazon/amazon-find-largest-set-of-onion-bags.md
 
 You are shopping online for some bags of onion. Each listing displays the number of onions that the bag contains. You want to buy a perfect set of onion bags from the entire search results list, onion
 

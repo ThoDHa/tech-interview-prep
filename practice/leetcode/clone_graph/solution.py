@@ -1,6 +1,6 @@
 """Clone Graph: https://leetcode.com/problems/clone-graph/
 
-Write-up & approaches: ../../docs/problems/clone_graph.md
+Write-up & approaches: ../../../docs/leetcode/clone_graph.md
 
 Given a reference to a node in a connected undirected graph, return a deep copy
 (clone) of the graph. Each node holds an `int` value and a list of its neighbors.

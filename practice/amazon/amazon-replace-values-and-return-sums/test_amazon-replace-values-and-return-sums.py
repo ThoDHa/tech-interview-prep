@@ -1,6 +1,6 @@
 """Tests for Replace Values and Return Sums — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-replace-values-and-return-sums.md.
+The worked approaches live in ../../../docs/amazon/amazon-replace-values-and-return-sums.md.
 """
 
 import pytest

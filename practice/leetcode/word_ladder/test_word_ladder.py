@@ -1,7 +1,7 @@
 """Tests for Word Ladder: your attempt (solution.py) against both case sets.
 
 cases.json (marker `simple`) is the "Run" set; cases_full.json (marker `full`) is
-the "Submit" gauntlet. The worked approaches live in ../../docs/problems/word_ladder.md.
+the "Submit" gauntlet. The worked approaches live in ../../../docs/leetcode/word_ladder.md.
 """
 
 import pytest

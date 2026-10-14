@@ -6,7 +6,7 @@
 
 **Algorithm:** [Tree traversal](https://en.wikipedia.org/wiki/Tree_traversal) · [Recursion](https://en.wikipedia.org/wiki/Recursion_(computer_science))
 
-**Practice:** [`practice/construct_binary_tree_from_preorder_and_inorder_traversal/solution.py`](../../practice/construct_binary_tree_from_preorder_and_inorder_traversal/solution.py)
+**Practice:** [`practice/leetcode/construct_binary_tree_from_preorder_and_inorder_traversal/solution.py`](../../practice/leetcode/construct_binary_tree_from_preorder_and_inorder_traversal/solution.py)
 
 Given two integer arrays `preorder` and `inorder` where `preorder` is the preorder traversal of a binary tree and `inorder` is the inorder traversal of the same tree, construct and return the binary tree.
 

@@ -6,7 +6,7 @@
 
 **Algorithm:** [Binary search](https://en.wikipedia.org/wiki/Binary_search_algorithm)
 
-**Practice:** [`practice/find_minimum_in_rotated_sorted_array/solution.py`](../../practice/find_minimum_in_rotated_sorted_array/solution.py)
+**Practice:** [`practice/leetcode/find_minimum_in_rotated_sorted_array/solution.py`](../../practice/leetcode/find_minimum_in_rotated_sorted_array/solution.py)
 
 You are given an array of length `n` which was originally sorted in ascending order. It has now been **rotated** between `1` and `n` times. For example, the array `nums = [1,2,3,4,5,6]` might become:
 

@@ -1,6 +1,6 @@
 """Tests for Remove K Digits — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-remove-k-digits.md.
+The worked approaches live in ../../../docs/amazon/amazon-remove-k-digits.md.
 """
 
 import pytest

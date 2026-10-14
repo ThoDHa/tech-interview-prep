@@ -1,6 +1,6 @@
 """Min Cost to Connect All Points — https://leetcode.com/problems/min-cost-to-connect-all-points/
 
-Write-up & approaches: ../../docs/problems/min_cost_to_connect_all_points.md
+Write-up & approaches: ../../../docs/leetcode/min_cost_to_connect_all_points.md
 Reference implementation of the write-up's Prim's Algorithm solution.
 
 You are given a 2-D integer array `points`, where `points[i] = [xi, yi]`. Each `points[i]` represents a distinct point on a 2-D plane. The cost of connecting two points `[xi, yi]` and `[xj, yj]` is the manhattan distance between them: `|xi - xj| + |yi - yj|`. Return the minimum cost to make all points connected. All points are connected if there is exactly one simple path between any two points.

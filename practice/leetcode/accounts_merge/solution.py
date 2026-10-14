@@ -1,6 +1,6 @@
 """Accounts Merge: https://leetcode.com/problems/accounts-merge/
 
-Write-up & approaches: ../../docs/problems/accounts_merge.md
+Write-up & approaches: ../../../docs/leetcode/accounts_merge.md
 
 Given a list of accounts where each `accounts[i]` is `[name, email1, email2, ...]`,
 merge accounts that share any common email and return each merged account as the

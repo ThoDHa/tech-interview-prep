@@ -1,6 +1,6 @@
 """Min Chars to Append — https://www.fastprep.io/problems/amazon-determine-minimum-characters-to-append
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-determine-minimum-characters-to-append.md
+Write-up & approaches: ../../../docs/amazon/amazon-determine-minimum-characters-to-append.md
 
 You are given two strings, searchWord and resultWord. You may append characters only to the end of searchWord. Return the minimum number of characters that must be appended so that resultWord is a sub
 

@@ -1,6 +1,6 @@
 """Tests for Get Min Value — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-get-minimum-value.md.
+The worked approaches live in ../../../docs/amazon/amazon-get-minimum-value.md.
 """
 
 import pytest

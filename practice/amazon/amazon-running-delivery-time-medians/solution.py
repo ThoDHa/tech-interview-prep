@@ -1,6 +1,6 @@
 """Running Delivery Time Medians — https://www.fastprep.io/problems/amazon-running-delivery-time-medians
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-running-delivery-time-medians.md
+Write-up & approaches: ../../../docs/amazon/amazon-running-delivery-time-medians.md
 
 Given an array deliveryTimes, process the values from left to right. After each new delivery time arrives, output the median of all delivery times seen so far.
 

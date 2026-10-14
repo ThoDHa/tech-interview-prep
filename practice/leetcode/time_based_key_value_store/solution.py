@@ -1,6 +1,6 @@
 """Time Based Key-Value Store: https://leetcode.com/problems/time-based-key-value-store/
 
-Write-up & approaches: ../../docs/problems/time_based_key_value_store.md
+Write-up & approaches: ../../../docs/leetcode/time_based_key_value_store.md
 
 Design a TimeMap that stores multiple values for the same key at different
 timestamps; `get(key, t)` returns the value with the largest timestamp `<= t`

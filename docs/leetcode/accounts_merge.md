@@ -6,7 +6,7 @@
 
 **Algorithm:** [Depth-first search](https://en.wikipedia.org/wiki/Depth-first_search) · [Disjoint-set (Union-Find)](https://en.wikipedia.org/wiki/Disjoint-set_data_structure)
 
-**Practice:** [`practice/accounts_merge/solution.py`](../../practice/accounts_merge/solution.py)
+**Practice:** [`practice/leetcode/accounts_merge/solution.py`](../../practice/leetcode/accounts_merge/solution.py)
 
 Given a list of accounts where each element `accounts[i]` is a list of strings, where the first element `accounts[i][0]` is a name, and the rest of the elements are emails representing emails of the account.
 

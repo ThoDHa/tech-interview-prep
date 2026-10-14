@@ -1,6 +1,6 @@
 """Sum of Two Integers — https://leetcode.com/problems/sum-of-two-integers/
 
-Write-up & approaches: ../../docs/problems/sum_of_two_integers.md
+Write-up & approaches: ../../../docs/leetcode/sum_of_two_integers.md
 
 Given two integers `a` and `b`, return the sum of the two integers without using the `+` and `-` operators.
 

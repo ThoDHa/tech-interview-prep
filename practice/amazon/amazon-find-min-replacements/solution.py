@@ -1,6 +1,6 @@
 """Find Replacement — https://www.fastprep.io/problems/amazon-find-min-replacements
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-find-min-replacements.md
+Write-up & approaches: ../../../docs/amazon/amazon-find-min-replacements.md
 
 In Amazon's distribution network, there are several drones with varying capacities, ranging from 1 to 10^9. Each j-th drone has a carrying capacity of j. The company needs to dispatch n packages, wher
 

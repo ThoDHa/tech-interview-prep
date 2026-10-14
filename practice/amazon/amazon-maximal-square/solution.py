@@ -1,6 +1,6 @@
 """Maximal Square — https://www.fastprep.io/problems/amazon-maximal-square
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-maximal-square.md
+Write-up & approaches: ../../../docs/amazon/amazon-maximal-square.md
 
 Given a matrix of characters '0' and '1', return the area of the largest square containing only '1' cells.
 

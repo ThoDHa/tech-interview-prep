@@ -1,6 +1,6 @@
 """Longest Subarray with K Distinct Values — https://www.fastprep.io/problems/amazon-longest-subarray-with-k-distinct
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-longest-subarray-with-k-distinct.md
+Write-up & approaches: ../../../docs/amazon/amazon-longest-subarray-with-k-distinct.md
 
 Given an integer array nums and an integer k, return the longest contiguous subarray containing exactly k distinct values.
 

@@ -1,6 +1,6 @@
 """Tests for Word Search II — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../docs/problems/word_search_ii.md.
+The worked approaches live in ../../../docs/leetcode/word_search_ii.md.
 """
 
 import pytest

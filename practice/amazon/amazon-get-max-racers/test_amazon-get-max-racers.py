@@ -1,6 +1,6 @@
 """Tests for Get Max Racers — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-get-max-racers.md.
+The worked approaches live in ../../../docs/amazon/amazon-get-max-racers.md.
 """
 
 import pytest

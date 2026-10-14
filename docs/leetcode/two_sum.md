@@ -6,7 +6,7 @@
 
 **Algorithm:** [Hash table](https://en.wikipedia.org/wiki/Hash_table) · [Two-pointer technique](https://usaco.guide/silver/two-pointers) · [Sorting](https://en.wikipedia.org/wiki/Sorting_algorithm)
 
-**Practice:** [`practice/two_sum/solution.py`](../../practice/two_sum/solution.py)
+**Practice:** [`practice/leetcode/two_sum/solution.py`](../../practice/leetcode/two_sum/solution.py)
 
 Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
 

@@ -1,6 +1,6 @@
 """Longest Common Subsequence — https://leetcode.com/problems/longest-common-subsequence/
 
-Write-up & approaches: ../../docs/problems/longest_common_subsequence.md
+Write-up & approaches: ../../../docs/leetcode/longest_common_subsequence.md
 Reference implementation of the write-up's Space-Optimized Two-Row DP solution.
 
 Given two strings `text1` and `text2`, return the length of the longest common subsequence between the two strings if one exists, otherwise return `0`. A subsequence is a sequence derived by deleting some or no elements without changing the relative order of the remaining characters.

@@ -1,7 +1,7 @@
 """Tests for Task Scheduler: your attempt (solution.py) against both case sets.
 
 cases.json (marker `simple`) is the "Run" set; cases_full.json (marker `full`) is
-the "Submit" gauntlet. The worked approaches live in ../../docs/problems/task_scheduler.md.
+the "Submit" gauntlet. The worked approaches live in ../../../docs/leetcode/task_scheduler.md.
 """
 
 import pytest

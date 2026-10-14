@@ -1,6 +1,6 @@
 """Tests for Find Idle Skill Query — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-find-idle-skills-query.md.
+The worked approaches live in ../../../docs/amazon/amazon-find-idle-skills-query.md.
 """
 
 import pytest

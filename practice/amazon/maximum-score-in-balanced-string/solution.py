@@ -1,6 +1,6 @@
 """Maximum Score in Balanced String — https://www.fastprep.io/problems/maximum-score-in-balanced-string
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/maximum-score-in-balanced-string.md
+Write-up & approaches: ../../../docs/amazon/maximum-score-in-balanced-string.md
 
 Given a string s consisting of parentheses, you need to find the maximum score possible in a balanced substring of s. The score of a substring is calculated by choosing two indices i and j (0 <= i < j
 

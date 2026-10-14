@@ -6,7 +6,7 @@
 
 **Algorithm:** [Heap (data structure)](https://en.wikipedia.org/wiki/Heap_(data_structure)) · [Sweep line algorithm](https://en.wikipedia.org/wiki/Sweep_line_algorithm) · [Two-pointer technique](https://usaco.guide/silver/two-pointers) · [Sorting algorithm](https://en.wikipedia.org/wiki/Sorting_algorithm)
 
-**Practice:** [`practice/meeting_rooms_ii/solution.py`](../../practice/meeting_rooms_ii/solution.py)
+**Practice:** [`practice/leetcode/meeting_rooms_ii/solution.py`](../../practice/leetcode/meeting_rooms_ii/solution.py)
 
 > This problem is locked behind [LeetCode Premium](https://leetcode.com/problems/meeting-rooms-ii/); read it free on [NeetCode](https://neetcode.io/problems/meeting-schedule-ii).
 
@@ -372,7 +372,7 @@ The event list holds two entries per meeting.
 
 ## Comparison of Solutions
 
-The practice harness's `practice/meeting_rooms_ii/reference.py` implements the **Min-Heap of End Times** solution.
+The practice harness's `practice/leetcode/meeting_rooms_ii/reference.py` implements the **Min-Heap of End Times** solution.
 
 ### Time Complexity
 

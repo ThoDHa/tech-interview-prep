@@ -1,6 +1,6 @@
 """First Unique Character in a Stream — https://www.fastprep.io/problems/amazon-first-unique-character-stream
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-first-unique-character-stream.md
+Write-up & approaches: ../../../docs/amazon/amazon-first-unique-character-stream.md
 
 Characters arrive in the order of the string stream. After each arrival, append the earliest character seen so far whose frequency in the processed prefix is exactly one.
 

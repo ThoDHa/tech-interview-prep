@@ -6,7 +6,7 @@
 
 **Algorithm:** [Heap (data structure)](https://en.wikipedia.org/wiki/Heap_(data_structure)) · [K-way merge](https://en.wikipedia.org/wiki/K-way_merge_algorithm) · [Hash table](https://en.wikipedia.org/wiki/Hash_table)
 
-**Practice:** [`practice/design_twitter/solution.py`](../../practice/design_twitter/solution.py)
+**Practice:** [`practice/leetcode/design_twitter/solution.py`](../../practice/leetcode/design_twitter/solution.py)
 
 Implement a simplified version of Twitter which allows users to post tweets, follow/unfollow each other, and view the `10` most recent tweets within their own news feed.
 

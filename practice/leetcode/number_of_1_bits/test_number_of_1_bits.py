@@ -1,6 +1,6 @@
 """Tests for Number of 1 Bits — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../docs/problems/number_of_1_bits.md.
+The worked approaches live in ../../../docs/leetcode/number_of_1_bits.md.
 """
 
 import pytest

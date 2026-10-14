@@ -1,6 +1,6 @@
 """Tests for Max User Traffic — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-maximum-user-traffic.md.
+The worked approaches live in ../../../docs/amazon/amazon-maximum-user-traffic.md.
 """
 
 import pytest

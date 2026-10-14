@@ -1,6 +1,6 @@
 """Nodes at a Given N-ary Tree Level — https://www.fastprep.io/problems/amazon-nary-tree-nodes-at-level
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-nary-tree-nodes-at-level.md
+Write-up & approaches: ../../../docs/amazon/amazon-nary-tree-nodes-at-level.md
 
 An N-ary tree uses node IDs from 0 through children.length - 1, with root ID 0. For each node ID, children[id] lists its child IDs from left to right.
 

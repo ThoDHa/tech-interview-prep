@@ -6,7 +6,7 @@
 
 **Algorithm:** [Depth-first search](https://en.wikipedia.org/wiki/Depth-first_search) · [Breadth-first search](https://en.wikipedia.org/wiki/Breadth-first_search) · [Flood fill](https://en.wikipedia.org/wiki/Flood_fill)
 
-**Practice:** [`practice/pacific_atlantic_water_flow/solution.py`](../../practice/pacific_atlantic_water_flow/solution.py)
+**Practice:** [`practice/leetcode/pacific_atlantic_water_flow/solution.py`](../../practice/leetcode/pacific_atlantic_water_flow/solution.py)
 
 You are given a rectangular island `heights` where `heights[r][c]` represents the **height above sea level** of the cell at coordinate `(r, c)`.
 

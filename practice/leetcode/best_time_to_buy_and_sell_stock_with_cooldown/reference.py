@@ -1,6 +1,6 @@
 """Best Time to Buy And Sell Stock With Cooldown — https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/
 
-Write-up & approaches: ../../docs/problems/best_time_to_buy_and_sell_stock_with_cooldown.md
+Write-up & approaches: ../../../docs/leetcode/best_time_to_buy_and_sell_stock_with_cooldown.md
 Reference implementation of the write-up's Bottom-Up State Machine solution.
 
 You are given an integer array `prices` where `prices[i]` is the price of NeetCoin on the `ith` day. You may buy and sell one NeetCoin multiple times with a one-day cooldown after each sale, and you may own at most one NeetCoin at a time. Return the maximum profit you can achieve.

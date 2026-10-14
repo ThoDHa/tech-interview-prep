@@ -1,6 +1,6 @@
 """Tests for Non Overlapping Intervals — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../docs/problems/non_overlapping_intervals.md.
+The worked approaches live in ../../../docs/leetcode/non_overlapping_intervals.md.
 """
 
 import pytest

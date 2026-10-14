@@ -1,6 +1,6 @@
 """Longest Consecutive Sequence — https://leetcode.com/problems/longest-consecutive-sequence/
 
-Write-up & approaches: ../../docs/problems/longest_consecutive_sequence.md
+Write-up & approaches: ../../../docs/leetcode/longest_consecutive_sequence.md
 
 Given an array of integers `nums`, return *the length* of the longest consecutive sequence of elements that can be formed. A *consecutive sequence* is a sequence of elements in which each element is e
 

@@ -1,6 +1,6 @@
 """Same Tree — https://leetcode.com/problems/same-tree/
 
-Write-up & approaches: ../../docs/problems/same_tree.md
+Write-up & approaches: ../../../docs/leetcode/same_tree.md
 
 Given the roots of two binary trees `p` and `q`, return `true` if the trees are **equivalent**, otherwise return `false`. Two binary trees are considered **equivalent** if they share the exact same st
 

@@ -6,7 +6,7 @@
 
 **Algorithm:** [Stack](https://en.wikipedia.org/wiki/Stack_(abstract_data_type)) · [Recursion](https://en.wikipedia.org/wiki/Recursion_(computer_science))
 
-**Practice:** [`practice/basic_calculator/solution.py`](../../practice/basic_calculator/solution.py)
+**Practice:** [`practice/leetcode/basic_calculator/solution.py`](../../practice/leetcode/basic_calculator/solution.py)
 
 Given a string `s` representing a valid expression, implement a basic calculator to evaluate it, and return the result of the evaluation.
 

@@ -1,6 +1,6 @@
 """Tests for Meeting Rooms II — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-meeting-rooms-ii.md.
+The worked approaches live in ../../../docs/amazon/amazon-meeting-rooms-ii.md.
 """
 
 import pytest

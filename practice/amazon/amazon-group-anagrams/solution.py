@@ -1,6 +1,6 @@
 """Group Anagrams — https://www.fastprep.io/problems/amazon-group-anagrams
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-group-anagrams.md
+Write-up & approaches: ../../../docs/amazon/amazon-group-anagrams.md
 
 Group the strings in strs so that two strings appear in the same group exactly when they are anagrams.
 

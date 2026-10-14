@@ -1,6 +1,6 @@
 """Tests for Cheapest Flights Within K Stops — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../docs/problems/cheapest_flights_within_k_stops.md.
+The worked approaches live in ../../../docs/leetcode/cheapest_flights_within_k_stops.md.
 """
 
 import pytest

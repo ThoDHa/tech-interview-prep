@@ -1,6 +1,6 @@
 """Tests for Top K Frequent Elements — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-top-k-frequent-elements.md.
+The worked approaches live in ../../../docs/amazon/amazon-top-k-frequent-elements.md.
 """
 
 import pytest

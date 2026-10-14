@@ -1,6 +1,6 @@
 """Network Delay Time — https://leetcode.com/problems/network-delay-time/
 
-Write-up & approaches: ../../docs/problems/network_delay_time.md
+Write-up & approaches: ../../../docs/leetcode/network_delay_time.md
 
 You are given a network of `n` directed nodes, labeled from `1` to `n`. You are also given `times`, a list of directed edges where `times[i] = (ui, vi, ti)`. * `ui` is the source node (an integer from
 

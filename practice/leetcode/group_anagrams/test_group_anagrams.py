@@ -1,6 +1,6 @@
 """Tests for Group Anagrams — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../docs/problems/group_anagrams.md.
+The worked approaches live in ../../../docs/leetcode/group_anagrams.md.
 """
 
 import pytest

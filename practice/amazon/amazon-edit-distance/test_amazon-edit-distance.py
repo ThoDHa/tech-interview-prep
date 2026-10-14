@@ -1,6 +1,6 @@
 """Tests for Edit Distance — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-edit-distance.md.
+The worked approaches live in ../../../docs/amazon/amazon-edit-distance.md.
 """
 
 import pytest

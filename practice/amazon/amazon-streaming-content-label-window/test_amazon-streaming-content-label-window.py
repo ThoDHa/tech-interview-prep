@@ -1,6 +1,6 @@
 """Tests for Longest Content Window with Bounded Labels — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-streaming-content-label-window.md.
+The worked approaches live in ../../../docs/amazon/amazon-streaming-content-label-window.md.
 """
 
 import pytest

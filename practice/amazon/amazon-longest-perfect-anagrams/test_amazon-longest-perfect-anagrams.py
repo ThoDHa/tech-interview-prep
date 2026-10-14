@@ -1,6 +1,6 @@
 """Tests for Longest Perfect Anagrams — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-longest-perfect-anagrams.md.
+The worked approaches live in ../../../docs/amazon/amazon-longest-perfect-anagrams.md.
 """
 
 import pytest

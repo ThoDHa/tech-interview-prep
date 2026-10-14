@@ -1,6 +1,6 @@
 """Pacific Atlantic Water Flow — https://leetcode.com/problems/pacific-atlantic-water-flow/
 
-Write-up & approaches: ../../docs/problems/pacific_atlantic_water_flow.md
+Write-up & approaches: ../../../docs/leetcode/pacific_atlantic_water_flow.md
 
 You are given a rectangular island `heights` where `heights[r][c]` represents the **height above sea level** of the cell at coordinate `(r, c)`. The islands borders the **Pacific Ocean** from the top 
 

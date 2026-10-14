@@ -6,7 +6,7 @@
 
 **Algorithm:** [Bellman-Ford algorithm](https://en.wikipedia.org/wiki/Bellman%E2%80%93Ford_algorithm) · [Dijkstra's algorithm](https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm) · [Dynamic programming](https://en.wikipedia.org/wiki/Dynamic_programming) · [Memoization](https://en.wikipedia.org/wiki/Memoization) · [Depth-first search](https://en.wikipedia.org/wiki/Depth-first_search)
 
-**Practice:** [`practice/cheapest_flights_within_k_stops/solution.py`](../../practice/cheapest_flights_within_k_stops/solution.py)
+**Practice:** [`practice/leetcode/cheapest_flights_within_k_stops/solution.py`](../../practice/leetcode/cheapest_flights_within_k_stops/solution.py)
 
 There are `n` airports, labeled from `0` to `n - 1`, which are connected by some flights. You are given an array `flights` where `flights[i] = [from_i, to_i, price_i]` represents a one-way flight from airport `from_i` to airport `to_i` with cost `price_i`. You may assume there are no duplicate flights and no flights from an airport to itself.
 

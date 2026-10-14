@@ -6,7 +6,7 @@
 
 **Algorithm:** [Backtracking](https://en.wikipedia.org/wiki/Backtracking) · [Dynamic programming](https://en.wikipedia.org/wiki/Dynamic_programming) · [Sorting](https://en.wikipedia.org/wiki/Sorting_algorithm)
 
-**Practice:** [`practice/combination_sum_ii/solution.py`](../../practice/combination_sum_ii/solution.py)
+**Practice:** [`practice/leetcode/combination_sum_ii/solution.py`](../../practice/leetcode/combination_sum_ii/solution.py)
 
 You are given an array of integers `candidates`, which may contain duplicates, and a target integer `target`. Your task is to return a list of all **unique combinations** of `candidates` where the chosen numbers sum to `target`.
 

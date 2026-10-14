@@ -1,6 +1,6 @@
 """Reverse Bits — https://leetcode.com/problems/reverse-bits/
 
-Write-up & approaches: ../../docs/problems/reverse_bits.md
+Write-up & approaches: ../../../docs/leetcode/reverse_bits.md
 
 Given a 32-bit unsigned integer `n`, reverse the bits of the binary representation of `n` and return the result.
 

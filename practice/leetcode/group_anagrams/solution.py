@@ -1,6 +1,6 @@
 """Group Anagrams — https://leetcode.com/problems/group-anagrams/
 
-Write-up & approaches: ../../docs/problems/group_anagrams.md
+Write-up & approaches: ../../../docs/leetcode/group_anagrams.md
 
 Given an array of strings `strs`, group all *anagrams* together into sublists. You may return the output in **any order**. An **anagram** is a string that contains the exact same characters as another
 

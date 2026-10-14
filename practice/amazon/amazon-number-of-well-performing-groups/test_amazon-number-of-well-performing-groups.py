@@ -1,6 +1,6 @@
 """Tests for Number Of Well Performing Groups — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-number-of-well-performing-groups.md.
+The worked approaches live in ../../../docs/amazon/amazon-number-of-well-performing-groups.md.
 """
 
 import pytest

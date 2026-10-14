@@ -6,7 +6,7 @@
 
 **Algorithm:** [Hash table](https://en.wikipedia.org/wiki/Hash_table) · [Greedy algorithm](https://en.wikipedia.org/wiki/Greedy_algorithm)
 
-**Practice:** [`practice/longest_palindrome/solution.py`](../../practice/longest_palindrome/solution.py)
+**Practice:** [`practice/leetcode/longest_palindrome/solution.py`](../../practice/leetcode/longest_palindrome/solution.py)
 
 Given a string `s` which consists of lowercase or uppercase letters, return the length of the longest palindrome that can be built with those letters.
 

@@ -1,6 +1,6 @@
 """Valid Palindrome: https://leetcode.com/problems/valid-palindrome/
 
-Write-up & approaches: ../../docs/problems/valid_palindrome.md
+Write-up & approaches: ../../../docs/leetcode/valid_palindrome.md
 
 Given a string `s`, return `true` if it is a palindrome after lowercasing every
 letter and dropping every non-alphanumeric character, or `false` otherwise.

@@ -1,6 +1,6 @@
 """Tests for Find Max Num — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-find-maximum-num.md.
+The worked approaches live in ../../../docs/amazon/amazon-find-maximum-num.md.
 """
 
 import pytest

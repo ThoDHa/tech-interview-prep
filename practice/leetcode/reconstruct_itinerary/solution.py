@@ -1,6 +1,6 @@
 """Reconstruct Itinerary — https://leetcode.com/problems/reconstruct-itinerary/
 
-Write-up & approaches: ../../docs/problems/reconstruct_itinerary.md
+Write-up & approaches: ../../../docs/leetcode/reconstruct_itinerary.md
 
 You are given a list of flight tickets `tickets` where `tickets[i] = [from_i, to_i]` represent the source airport and the destination airport. Each `from_i` and `to_i` consists of three uppercase Engl
 

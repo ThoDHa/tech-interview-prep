@@ -1,6 +1,6 @@
 """Decode an Encoded String — https://www.fastprep.io/problems/amazon-decode-encoded-string
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-decode-encoded-string.md
+Write-up & approaches: ../../../docs/amazon/amazon-decode-encoded-string.md
 
 An encoded string uses positive repeat counts followed by bracketed segments. Decode it using these rules:
 

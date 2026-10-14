@@ -1,6 +1,6 @@
 """Tests for Aggressive Cows — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-aggressive-cows.md.
+The worked approaches live in ../../../docs/amazon/amazon-aggressive-cows.md.
 """
 
 import pytest

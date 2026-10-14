@@ -1,6 +1,6 @@
 """Balanced Binary Tree: https://leetcode.com/problems/balanced-binary-tree/
 
-Write-up & approaches: ../../docs/problems/balanced_binary_tree.md
+Write-up & approaches: ../../../docs/leetcode/balanced_binary_tree.md
 
 Given a binary tree, determine if it is height-balanced (the left and right
 subtrees of every node differ in height by no more than 1).

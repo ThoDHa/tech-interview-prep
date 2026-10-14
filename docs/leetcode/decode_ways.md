@@ -6,7 +6,7 @@
 
 **Algorithm:** [Dynamic programming](https://en.wikipedia.org/wiki/Dynamic_programming) · [Memoization](https://en.wikipedia.org/wiki/Memoization) · [Recurrence relation](https://en.wikipedia.org/wiki/Recurrence_relation)
 
-**Practice:** [`practice/decode_ways/solution.py`](../../practice/decode_ways/solution.py)
+**Practice:** [`practice/leetcode/decode_ways/solution.py`](../../practice/leetcode/decode_ways/solution.py)
 
 A string consisting of uppercase english characters can be encoded to a number using the following mapping:
 
@@ -490,7 +490,7 @@ class Solution:
 
 ## Comparison of Solutions
 
-The practice harness's `practice/decode_ways/reference.py` implements the **Space-Optimized DP** solution.
+The practice harness's `practice/leetcode/decode_ways/reference.py` implements the **Space-Optimized DP** solution.
 
 ### Time Complexity
 

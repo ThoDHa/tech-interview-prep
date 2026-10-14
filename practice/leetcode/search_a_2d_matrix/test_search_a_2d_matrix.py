@@ -1,6 +1,6 @@
 """Tests for Search a 2D Matrix — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../docs/problems/search_a_2d_matrix.md.
+The worked approaches live in ../../../docs/leetcode/search_a_2d_matrix.md.
 """
 
 import pytest

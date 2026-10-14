@@ -1,6 +1,6 @@
 """Min Cost Climbing Stairs — https://leetcode.com/problems/min-cost-climbing-stairs/
 
-Write-up & approaches: ../../docs/problems/min_cost_climbing_stairs.md
+Write-up & approaches: ../../../docs/leetcode/min_cost_climbing_stairs.md
 Reference implementation of the write-up's Space-Optimized DP solution, kept
 next to the harness so authored cases stay falsifiable. Your own attempt
 lives in solution.py.

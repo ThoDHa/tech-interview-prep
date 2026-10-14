@@ -1,6 +1,6 @@
 """Counting Bits — https://leetcode.com/problems/counting-bits/
 
-Write-up & approaches: ../../docs/problems/counting_bits.md
+Write-up & approaches: ../../../docs/leetcode/counting_bits.md
 Reference implementation of the write-up's Bottom-Up DP with Lowest Set Bit
 solution, kept next to the harness so authored cases stay falsifiable. Your
 own attempt lives in solution.py.

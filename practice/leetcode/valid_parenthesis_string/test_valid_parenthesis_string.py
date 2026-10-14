@@ -1,6 +1,6 @@
 """Tests for Valid Parenthesis String — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../docs/problems/valid_parenthesis_string.md.
+The worked approaches live in ../../../docs/leetcode/valid_parenthesis_string.md.
 """
 
 import pytest

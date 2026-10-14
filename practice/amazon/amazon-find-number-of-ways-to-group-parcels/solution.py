@@ -1,6 +1,6 @@
 """Ways to Group Parcels — https://www.fastprep.io/problems/amazon-find-number-of-ways-to-group-parcels
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-find-number-of-ways-to-group-parcels.md
+Write-up & approaches: ../../../docs/amazon/amazon-find-number-of-ways-to-group-parcels.md
 
 In one of the warehouses of Amazon, a pan balance is used to weigh and load the parcels for delivery.
 

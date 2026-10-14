@@ -1,6 +1,6 @@
 """Tests for Graph Valid Tree — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../docs/problems/graph_valid_tree.md.
+The worked approaches live in ../../../docs/leetcode/graph_valid_tree.md.
 """
 
 import pytest

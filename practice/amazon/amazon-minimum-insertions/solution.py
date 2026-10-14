@@ -1,6 +1,6 @@
 """Min Insertions — https://www.fastprep.io/problems/amazon-minimum-insertions
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-minimum-insertions.md
+Write-up & approaches: ../../../docs/amazon/amazon-minimum-insertions.md
 
 Amazon CodeCraft introduces you to an engaging problem-solving challenge. You are
 

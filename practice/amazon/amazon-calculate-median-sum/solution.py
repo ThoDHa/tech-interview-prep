@@ -1,6 +1,6 @@
 """Channel Max Quality — https://www.fastprep.io/problems/amazon-calculate-median-sum
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-calculate-median-sum.md
+Write-up & approaches: ../../../docs/amazon/amazon-calculate-median-sum.md
 
 You are given a list of packets of varying sizes and there are n channels.
 

@@ -1,6 +1,6 @@
 """Tests for Detect Squares — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../docs/problems/detect_squares.md.
+The worked approaches live in ../../../docs/leetcode/detect_squares.md.
 """
 
 import pytest

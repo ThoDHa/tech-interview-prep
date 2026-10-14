@@ -1,6 +1,6 @@
 """Return Records — https://www.fastprep.io/problems/amazon-return-records
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-return-records.md
+Write-up & approaches: ../../../docs/amazon/amazon-return-records.md
 
 Simulate a website authentication service. Initially, no users are registered and no user is logged in. Process each request in attempts from left to right.
 

@@ -1,6 +1,6 @@
 """Tests for Find Median Of Subarray Uniqueness — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/find-median-of-subarray-uniqueness.md.
+The worked approaches live in ../../../docs/amazon/find-median-of-subarray-uniqueness.md.
 """
 
 import pytest

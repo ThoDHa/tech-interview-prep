@@ -1,6 +1,6 @@
 """Tests for HTTP Request Redirection — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-http-request-redirection.md.
+The worked approaches live in ../../../docs/amazon/amazon-http-request-redirection.md.
 """
 
 import pytest

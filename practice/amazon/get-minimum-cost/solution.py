@@ -1,6 +1,6 @@
 """Get Minimum Costs — https://www.fastprep.io/problems/get-minimum-cost
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/get-minimum-cost.md
+Write-up & approaches: ../../../docs/amazon/get-minimum-cost.md
 
 In Amazon Go Store, there are nitems, each associated with two positive
 

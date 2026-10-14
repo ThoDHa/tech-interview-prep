@@ -1,6 +1,6 @@
 """Tests for Predict Answer — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-predict-answer.md.
+The worked approaches live in ../../../docs/amazon/amazon-predict-answer.md.
 """
 
 import pytest

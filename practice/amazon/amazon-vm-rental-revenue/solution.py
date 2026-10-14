@@ -1,6 +1,6 @@
 """VM Rental Revenue — https://www.fastprep.io/problems/amazon-vm-rental-revenue
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-vm-rental-revenue.md
+Write-up & approaches: ../../../docs/amazon/amazon-vm-rental-revenue.md
 
 There are multiple VM types, each with an initial stock count. A sequence of customers rent one VM at a time.
 

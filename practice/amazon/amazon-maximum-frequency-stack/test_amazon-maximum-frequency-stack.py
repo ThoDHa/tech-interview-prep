@@ -1,6 +1,6 @@
 """Tests for Maximum Frequency Stack — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-maximum-frequency-stack.md.
+The worked approaches live in ../../../docs/amazon/amazon-maximum-frequency-stack.md.
 """
 
 import pytest

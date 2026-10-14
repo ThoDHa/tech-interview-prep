@@ -6,7 +6,7 @@
 
 **Algorithm:** [Heap (data structure)](https://en.wikipedia.org/wiki/Heap_(data_structure)) · [Insertion sort](https://en.wikipedia.org/wiki/Insertion_sort) · [Binary search](https://en.wikipedia.org/wiki/Binary_search_algorithm)
 
-**Practice:** [`practice/kth_largest_element_in_a_stream/solution.py`](../../practice/kth_largest_element_in_a_stream/solution.py)
+**Practice:** [`practice/leetcode/kth_largest_element_in_a_stream/solution.py`](../../practice/leetcode/kth_largest_element_in_a_stream/solution.py)
 
 Design a class to find the `kth` largest integer in a stream of values, including duplicates. E.g. the `2nd` largest from [1, 2, 3, 3] is `3`. The stream is not necessarily sorted.
 

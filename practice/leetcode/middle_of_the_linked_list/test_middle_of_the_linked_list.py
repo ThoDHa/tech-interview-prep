@@ -2,7 +2,7 @@
 
 Linked lists are stored in the case files as plain value arrays and marshalled to
 ListNode here. The result node is serialized back to a list (middle node to end)
-for comparison. The worked approaches live in ../../docs/problems/middle_of_the_linked_list.md.
+for comparison. The worked approaches live in ../../../docs/leetcode/middle_of_the_linked_list.md.
 """
 
 import pytest

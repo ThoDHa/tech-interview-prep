@@ -1,6 +1,6 @@
 """Tests for Palindromic Substrings — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../docs/problems/palindromic_substrings.md.
+The worked approaches live in ../../../docs/leetcode/palindromic_substrings.md.
 """
 
 import pytest

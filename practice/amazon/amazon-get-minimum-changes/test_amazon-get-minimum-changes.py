@@ -1,6 +1,6 @@
 """Tests for Get Min Change — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-get-minimum-changes.md.
+The worked approaches live in ../../../docs/amazon/amazon-get-minimum-changes.md.
 """
 
 import pytest

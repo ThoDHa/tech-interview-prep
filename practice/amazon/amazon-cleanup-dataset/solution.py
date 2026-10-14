@@ -1,6 +1,6 @@
 """Cleanup Dataset — https://www.fastprep.io/problems/amazon-cleanup-dataset
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-cleanup-dataset.md
+Write-up & approaches: ../../../docs/amazon/amazon-cleanup-dataset.md
 
 Data Scientists at Amazon are working on cleansing a machine learning dataset. The dataset is represented as a string dataset consisting of an even number of lowercase English letters. The goal is to 
 

@@ -1,6 +1,6 @@
 """Tests for Coin Change II — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../docs/problems/coin_change_ii.md.
+The worked approaches live in ../../../docs/leetcode/coin_change_ii.md.
 """
 
 import pytest

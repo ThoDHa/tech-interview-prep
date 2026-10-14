@@ -1,6 +1,6 @@
 """Add Binary: https://leetcode.com/problems/add-binary/
 
-Write-up & approaches: ../../docs/problems/add_binary.md
+Write-up & approaches: ../../../docs/leetcode/add_binary.md
 
 Given two binary strings `a` and `b`, return their sum as a binary string.
 

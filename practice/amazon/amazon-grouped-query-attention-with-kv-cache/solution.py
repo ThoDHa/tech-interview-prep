@@ -1,6 +1,6 @@
 """Grouped-Query Attention with a KV Cache — https://www.fastprep.io/problems/amazon-grouped-query-attention-with-kv-cache
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-grouped-query-attention-with-kv-cache.md
+Write-up & approaches: ../../../docs/amazon/amazon-grouped-query-attention-with-kv-cache.md
 
 Compute one projection-free grouped-query scaled dot-product attention pass using an existing key-value cache plus newly generated key and value rows.
 

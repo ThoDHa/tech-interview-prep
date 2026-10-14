@@ -1,6 +1,6 @@
 """Tests for Optimizing Box Weights — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-minimal-heaviest-set-a.md.
+The worked approaches live in ../../../docs/amazon/amazon-minimal-heaviest-set-a.md.
 """
 
 import pytest

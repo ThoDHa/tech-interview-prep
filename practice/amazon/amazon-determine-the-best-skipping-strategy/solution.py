@@ -1,6 +1,6 @@
 """Determine the Best Skipping Strategy — https://www.fastprep.io/problems/amazon-determine-the-best-skipping-strategy
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-determine-the-best-skipping-strategy.md
+Write-up & approaches: ../../../docs/amazon/amazon-determine-the-best-skipping-strategy.md
 
 A company operates numerous warehouses, with each warehouse i holding inventory[i] units of a particular product. You and your co-worker are responsible for dispatching these items to fulfill customer
 

@@ -1,6 +1,6 @@
 """Find Minimum Days — https://www.fastprep.io/problems/amazon-find-minimum-days
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-find-minimum-days.md
+Write-up & approaches: ../../../docs/amazon/amazon-find-minimum-days.md
 
 A student is preparing for a scholarship test which is organized on the Amazon Academy platform and scheduled for next month.
 

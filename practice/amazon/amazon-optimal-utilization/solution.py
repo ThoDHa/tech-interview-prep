@@ -1,6 +1,6 @@
 """Optimal Utilization — https://www.fastprep.io/problems/amazon-optimal-utilization
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-optimal-utilization.md
+Write-up & approaches: ../../../docs/amazon/amazon-optimal-utilization.md
 
 You are given a device with a limited amount of memory. Each device must run two applications at the same time: one foreground application and one background application. Each application is identifie
 

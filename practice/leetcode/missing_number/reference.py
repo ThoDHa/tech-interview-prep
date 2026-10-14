@@ -1,6 +1,6 @@
 """Missing Number — https://leetcode.com/problems/missing-number/
 
-Write-up & approaches: ../../docs/problems/missing_number.md
+Write-up & approaches: ../../../docs/leetcode/missing_number.md
 Reference implementation of the write-up's Gauss Sum Formula solution,
 kept next to the harness so authored cases stay falsifiable. Your own
 attempt lives in solution.py.

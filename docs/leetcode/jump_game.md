@@ -6,7 +6,7 @@
 
 **Algorithm:** [Recursion](https://en.wikipedia.org/wiki/Recursion_(computer_science)) · [Dynamic programming](https://en.wikipedia.org/wiki/Dynamic_programming) · [Greedy algorithm](https://en.wikipedia.org/wiki/Greedy_algorithm)
 
-**Practice:** [`practice/jump_game/solution.py`](../../practice/jump_game/solution.py)
+**Practice:** [`practice/leetcode/jump_game/solution.py`](../../practice/leetcode/jump_game/solution.py)
 
 You are given an integer array `nums` where each element `nums[i]` indicates your maximum jump length at that position.
 
@@ -356,7 +356,7 @@ One integer of state, regardless of input length.
 
 ## Comparison of Solutions
 
-The practice harness's `practice/jump_game/reference.py` implements the **Greedy** solution.
+The practice harness's `practice/leetcode/jump_game/reference.py` implements the **Greedy** solution.
 
 ### Time Complexity
 

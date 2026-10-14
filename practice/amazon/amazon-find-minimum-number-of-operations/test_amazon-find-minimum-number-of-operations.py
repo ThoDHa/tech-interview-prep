@@ -1,6 +1,6 @@
 """Tests for Min Operations To Make Zeros — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-find-minimum-number-of-operations.md.
+The worked approaches live in ../../../docs/amazon/amazon-find-minimum-number-of-operations.md.
 """
 
 import pytest

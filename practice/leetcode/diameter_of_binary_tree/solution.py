@@ -1,6 +1,6 @@
 """Diameter of Binary Tree: https://leetcode.com/problems/diameter-of-binary-tree/
 
-Write-up & approaches: ../../docs/problems/diameter_of_binary_tree.md
+Write-up & approaches: ../../../docs/leetcode/diameter_of_binary_tree.md
 
 Given the `root` of a binary tree, return the length of the diameter of the tree:
 the number of edges on the longest path between any two nodes, which may or may

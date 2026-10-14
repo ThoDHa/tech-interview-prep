@@ -6,7 +6,7 @@
 
 **Algorithm:** [Dynamic programming](https://en.wikipedia.org/wiki/Dynamic_programming) · [Memoization](https://en.wikipedia.org/wiki/Memoization) · [Recursion](https://en.wikipedia.org/wiki/Recursion_(computer_science))
 
-**Practice:** [`practice/min_cost_climbing_stairs/solution.py`](../../practice/min_cost_climbing_stairs/solution.py)
+**Practice:** [`practice/leetcode/min_cost_climbing_stairs/solution.py`](../../practice/leetcode/min_cost_climbing_stairs/solution.py)
 
 Given an array of integers `cost` where `cost[i]` is the cost of taking a step from the `ith` floor of a staircase. After paying the cost, you can step to either the `(i + 1)th` floor or the `(i + 2)th` floor.
 

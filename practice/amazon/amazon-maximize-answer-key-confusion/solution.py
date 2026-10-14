@@ -1,6 +1,6 @@
 """Maximize Consecutive Equal Answers — https://www.fastprep.io/problems/amazon-maximize-answer-key-confusion
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-maximize-answer-key-confusion.md
+Write-up & approaches: ../../../docs/amazon/amazon-maximize-answer-key-confusion.md
 
 A string contains only T and F. You may change at most maxChanges characters. Return the maximum length of a contiguous substring that can be made entirely equal.
 

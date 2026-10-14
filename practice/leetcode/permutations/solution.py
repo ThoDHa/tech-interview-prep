@@ -1,6 +1,6 @@
 """Permutations: https://leetcode.com/problems/permutations/
 
-Write-up & approaches: ../../docs/problems/permutations.md
+Write-up & approaches: ../../../docs/leetcode/permutations.md
 
 Given an array `nums` of distinct integers, return all the possible
 permutations. You can return the answer in any order.

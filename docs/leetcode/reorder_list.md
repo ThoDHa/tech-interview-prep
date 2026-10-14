@@ -6,7 +6,7 @@
 
 **Algorithm:** [Linked list](https://en.wikipedia.org/wiki/Linked_list) · [Two-pointer technique](https://usaco.guide/silver/two-pointers) · [Stack (abstract data type)](https://en.wikipedia.org/wiki/Stack_(abstract_data_type))
 
-**Practice:** [`practice/reorder_list/solution.py`](../../practice/reorder_list/solution.py)
+**Practice:** [`practice/leetcode/reorder_list/solution.py`](../../practice/leetcode/reorder_list/solution.py)
 
 You are given the head of a singly linked-list.
 

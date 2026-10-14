@@ -1,6 +1,6 @@
 """Tests for Location of Data After Transfers — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/location-of-data-after-transfers.md.
+The worked approaches live in ../../../docs/amazon/location-of-data-after-transfers.md.
 """
 
 import pytest

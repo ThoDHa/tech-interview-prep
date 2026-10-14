@@ -6,7 +6,7 @@
 
 **Algorithm:** [Hash table](https://en.wikipedia.org/wiki/Hash_table) · [Counting](https://en.wikipedia.org/wiki/Counting) · [Combinatorics](https://en.wikipedia.org/wiki/Combinatorics)
 
-**Practice:** [`practice/detect_squares/solution.py`](../../practice/detect_squares/solution.py)
+**Practice:** [`practice/leetcode/detect_squares/solution.py`](../../practice/leetcode/detect_squares/solution.py)
 
 You are given a stream of points consisting of x-y coordinates on a 2-D plane. Points can be added and queried as follows:
 
@@ -309,7 +309,7 @@ The nested dictionaries hold one entry per distinct point, grouped by column.
 
 ## Comparison of Solutions
 
-The practice harness's `practice/detect_squares/reference.py` implements the **Count Map with Diagonal Scan** solution.
+The practice harness's `practice/leetcode/detect_squares/reference.py` implements the **Count Map with Diagonal Scan** solution.
 
 ### Time Complexity
 

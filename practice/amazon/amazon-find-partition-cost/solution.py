@@ -1,6 +1,6 @@
 """Get Largest Number — https://www.fastprep.io/problems/amazon-find-partition-cost
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-find-partition-cost.md
+Write-up & approaches: ../../../docs/amazon/amazon-find-partition-cost.md
 
 The database specialists at Amazon are engaged in segmenting their sequence of interconnected servers. There exists a consecutive sequence of m servers, labeled from 1 to m, where the expense metric l
 

@@ -1,6 +1,6 @@
 """Find Min Time Required — https://www.fastprep.io/problems/amazon-find-minimum-time-required
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-find-minimum-time-required.md
+Write-up & approaches: ../../../docs/amazon/amazon-find-minimum-time-required.md
 
 Some developers at Amazon are building a prototype for a simple rate-limiting algorithm. There are n requests to be processed by the server represented by a string requests where the ith character rep
 

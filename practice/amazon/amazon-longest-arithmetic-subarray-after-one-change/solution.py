@@ -1,6 +1,6 @@
 """Longest Arithmetic Subarray After One Change — https://www.fastprep.io/problems/amazon-longest-arithmetic-subarray-after-one-change
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-longest-arithmetic-subarray-after-one-change.md
+Write-up & approaches: ../../../docs/amazon/amazon-longest-arithmetic-subarray-after-one-change.md
 
 You are given an integer array deviation.
 

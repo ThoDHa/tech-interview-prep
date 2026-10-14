@@ -1,6 +1,6 @@
 """Get Min Distance (AMZ CN) — https://www.fastprep.io/problems/amazon-find-minimum-dist
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-find-minimum-dist.md
+Write-up & approaches: ../../../docs/amazon/amazon-find-minimum-dist.md
 
 note - See the Problem Source at the vely bottom of the page for the original problem description~
 

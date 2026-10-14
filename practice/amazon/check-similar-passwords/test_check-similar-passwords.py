@@ -1,6 +1,6 @@
 """Tests for Check Similar Passwords — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/check-similar-passwords.md.
+The worked approaches live in ../../../docs/amazon/check-similar-passwords.md.
 """
 
 import pytest

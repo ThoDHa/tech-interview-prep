@@ -1,6 +1,6 @@
 """Reverse Nodes In K Group — https://leetcode.com/problems/reverse-nodes-in-k-group/
 
-Write-up & approaches: ../../docs/problems/reverse_nodes_in_k_group.md
+Write-up & approaches: ../../../docs/leetcode/reverse_nodes_in_k_group.md
 
 Canonical reference implementation: the write-up's Iterative In-place
 Reversal solution (per-group lookahead, flip, and stitch in O(1) space).

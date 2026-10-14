@@ -6,7 +6,7 @@
 
 **Algorithm:** [Exclusive or](https://en.wikipedia.org/wiki/Exclusive_or) · [Hash table](https://en.wikipedia.org/wiki/Hash_table) · [Sorting](https://en.wikipedia.org/wiki/Sorting_algorithm)
 
-**Practice:** [`practice/single_number/solution.py`](../../practice/single_number/solution.py)
+**Practice:** [`practice/leetcode/single_number/solution.py`](../../practice/leetcode/single_number/solution.py)
 
 You are given a **non-empty** array of integers `nums`. Every integer appears twice except for one.
 
@@ -375,7 +375,7 @@ The `Counter` stores up to `n / 2 + 1` distinct keys, matching the hand-written 
 
 ## Comparison of Solutions
 
-The practice harness's `practice/single_number/reference.py` implements the **XOR Accumulator** solution.
+The practice harness's `practice/leetcode/single_number/reference.py` implements the **XOR Accumulator** solution.
 
 ### Time Complexity
 

@@ -1,6 +1,6 @@
 """Number of Islands II — https://www.fastprep.io/problems/amazon-number-of-islands-ii
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-number-of-islands-ii.md
+Write-up & approaches: ../../../docs/amazon/amazon-number-of-islands-ii.md
 
 Start with an m by n grid containing only water. For each distinct position [row, col] in positions, turn that cell into land and append the current number of islands to the result.
 

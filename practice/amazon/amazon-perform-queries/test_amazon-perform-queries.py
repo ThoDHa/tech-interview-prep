@@ -1,6 +1,6 @@
 """Tests for Perform Queries — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-perform-queries.md.
+The worked approaches live in ../../../docs/amazon/amazon-perform-queries.md.
 """
 
 import pytest

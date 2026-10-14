@@ -6,7 +6,7 @@
 
 **Algorithm:** [Depth-first search](https://en.wikipedia.org/wiki/Depth-first_search) · [Breadth-first search](https://en.wikipedia.org/wiki/Breadth-first_search) · [Topological sorting](https://en.wikipedia.org/wiki/Topological_sorting) · [Kahn's algorithm](https://en.wikipedia.org/wiki/Topological_sorting#Kahn%27s_algorithm)
 
-**Practice:** [`practice/course_schedule_ii/solution.py`](../../practice/course_schedule_ii/solution.py)
+**Practice:** [`practice/leetcode/course_schedule_ii/solution.py`](../../practice/leetcode/course_schedule_ii/solution.py)
 
 You are given an array `prerequisites` where `prerequisites[i] = [a, b]` indicates that you **must** take course `b` first if you want to take course `a`.
 

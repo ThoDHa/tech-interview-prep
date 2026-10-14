@@ -1,6 +1,6 @@
 """Alien Dictionary — https://leetcode.com/problems/alien-dictionary/
 
-Write-up & approaches: ../../docs/problems/alien_dictionary.md
+Write-up & approaches: ../../../docs/leetcode/alien_dictionary.md
 
 There is a new alien language that uses the English alphabet, but the order of the letters is unknown. You are given a list of strings `words` from the alien language's dictionary. It is claimed that 
 

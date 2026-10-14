@@ -1,6 +1,6 @@
 """Maximum Quality Sum — https://www.fastprep.io/problems/amazon-maximum-quality-sum
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-maximum-quality-sum.md
+Write-up & approaches: ../../../docs/amazon/amazon-maximum-quality-sum.md
 
 Amazon's AWS provides fast and efficient server solutions. The developers want to stress-test the quality of the servers' channels. They must ensure the following:
 

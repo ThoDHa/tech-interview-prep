@@ -1,6 +1,6 @@
 """Maximum Product Subarray — https://leetcode.com/problems/maximum-product-subarray/
 
-Write-up & approaches: ../../docs/problems/maximum_product_subarray.md
+Write-up & approaches: ../../../docs/leetcode/maximum_product_subarray.md
 
 Given an integer array `nums`, find a **subarray** that has the largest product, and return the product. A **subarray** is a contiguous non-empty sequence of elements within an array. You can assume t
 

@@ -1,6 +1,6 @@
 """Tests for Sort Permutation — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-can-sort-permutation-in-given-moves.md.
+The worked approaches live in ../../../docs/amazon/amazon-can-sort-permutation-in-given-moves.md.
 """
 
 import pytest

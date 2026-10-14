@@ -6,7 +6,7 @@
 
 **Algorithm:** [Simulation](https://en.wikipedia.org/wiki/Simulation) · [Heap (data structure)](https://en.wikipedia.org/wiki/Heap_(data_structure)) · [Sorting](https://en.wikipedia.org/wiki/Sorting_algorithm)
 
-**Practice:** [`practice/last_stone_weight/solution.py`](../../practice/last_stone_weight/solution.py)
+**Practice:** [`practice/leetcode/last_stone_weight/solution.py`](../../practice/leetcode/last_stone_weight/solution.py)
 
 You are given an array of integers `stones` where `stones[i]` represents the weight of the `ith` stone.
 

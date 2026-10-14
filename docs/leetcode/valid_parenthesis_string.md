@@ -6,7 +6,7 @@
 
 **Algorithm:** [Greedy algorithm](https://en.wikipedia.org/wiki/Greedy_algorithm) · [Dynamic programming](https://en.wikipedia.org/wiki/Dynamic_programming) · [Recursion](https://en.wikipedia.org/wiki/Recursion_(computer_science))
 
-**Practice:** [`practice/valid_parenthesis_string/solution.py`](../../practice/valid_parenthesis_string/solution.py)
+**Practice:** [`practice/leetcode/valid_parenthesis_string/solution.py`](../../practice/leetcode/valid_parenthesis_string/solution.py)
 
 You are given a string `s` which contains only three types of characters: `'('`, `')'` and `'*'`.
 
@@ -405,7 +405,7 @@ Two counters.
 
 ## Comparison of Solutions
 
-The practice harness's `practice/valid_parenthesis_string/reference.py` implements the **Greedy Range Tracking** solution.
+The practice harness's `practice/leetcode/valid_parenthesis_string/reference.py` implements the **Greedy Range Tracking** solution.
 
 ### Time Complexity
 

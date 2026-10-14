@@ -1,6 +1,6 @@
 """Make Array Distinct — https://www.fastprep.io/problems/amazon-make-array-distinct
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-make-array-distinct.md
+Write-up & approaches: ../../../docs/amazon/amazon-make-array-distinct.md
 
 Amazon OA problem.
 

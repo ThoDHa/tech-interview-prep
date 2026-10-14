@@ -1,6 +1,6 @@
 """Find Capable Winners — https://www.fastprep.io/problems/amazon-find-capable-winners
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-find-capable-winners.md
+Write-up & approaches: ../../../docs/amazon/amazon-find-capable-winners.md
 
 Amazon games have recently launched a new multi-player tournament on the platform. Each game of the tournament has 3 rounds. The players are provided with exactly three power boosters at the start of 
 

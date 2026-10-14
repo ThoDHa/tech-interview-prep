@@ -1,6 +1,6 @@
 """Maximum Possible Racers — https://www.fastprep.io/problems/amazon-maximum-possible-racers
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-maximum-possible-racers.md
+Write-up & approaches: ../../../docs/amazon/amazon-maximum-possible-racers.md
 
 HackerLand Sports Club wants to send a team for a relay race. There are n racers in the group indexed from 0 to n. The ith racer has a speed of speed[i] units.
 

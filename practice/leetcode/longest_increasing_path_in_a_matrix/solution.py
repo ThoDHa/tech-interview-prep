@@ -1,6 +1,6 @@
 """Longest Increasing Path In a Matrix — https://leetcode.com/problems/longest-increasing-path-in-a-matrix/
 
-Write-up & approaches: ../../docs/problems/longest_increasing_path_in_a_matrix.md
+Write-up & approaches: ../../../docs/leetcode/longest_increasing_path_in_a_matrix.md
 
 You are given a 2-D grid of integers `matrix`, where each integer is greater than or equal to `0`. Return the length of the longest strictly increasing path within `matrix`. From each cell within the 
 

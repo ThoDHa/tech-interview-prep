@@ -1,6 +1,6 @@
 """Find Password Strength — https://www.fastprep.io/problems/amazon-find-password-strength
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-find-password-strength.md
+Write-up & approaches: ../../../docs/amazon/amazon-find-password-strength.md
 
 Hello! Did you navigate here from my sister question Password Strength 🐣?
 

@@ -1,6 +1,6 @@
 """Tests for Choose Warehouse Location — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-choose-warehouses-location.md.
+The worked approaches live in ../../../docs/amazon/amazon-choose-warehouses-location.md.
 """
 
 import pytest

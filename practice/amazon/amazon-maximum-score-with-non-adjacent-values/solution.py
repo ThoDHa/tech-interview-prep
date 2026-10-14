@@ -1,6 +1,6 @@
 """Maximum Score With Non-Adjacent Values — https://www.fastprep.io/problems/amazon-maximum-score-with-non-adjacent-values
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-maximum-score-with-non-adjacent-values.md
+Write-up & approaches: ../../../docs/amazon/amazon-maximum-score-with-non-adjacent-values.md
 
 You are given a list of integers nums. You may choose any set of values from the list.
 

@@ -1,6 +1,6 @@
 """Min Cost to Connect All Points — https://leetcode.com/problems/min-cost-to-connect-all-points/
 
-Write-up & approaches: ../../docs/problems/min_cost_to_connect_all_points.md
+Write-up & approaches: ../../../docs/leetcode/min_cost_to_connect_all_points.md
 
 You are given a 2-D integer array `points`, where `points[i] = [xi, yi]`. Each `points[i]` represents a distinct point on a 2-D plane. The cost of connecting two points `[xi, yi]` and `[xj, yj]` is th
 

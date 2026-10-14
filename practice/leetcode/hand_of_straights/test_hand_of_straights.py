@@ -1,6 +1,6 @@
 """Tests for Hand of Straights — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../docs/problems/hand_of_straights.md.
+The worked approaches live in ../../../docs/leetcode/hand_of_straights.md.
 """
 
 import pytest

@@ -6,7 +6,7 @@
 
 **Algorithm:** [Queue](https://en.wikipedia.org/wiki/Queue_(abstract_data_type)) · [Stack](https://en.wikipedia.org/wiki/Stack_(abstract_data_type))
 
-**Practice:** [`practice/implement_queue_using_stacks/solution.py`](../../practice/implement_queue_using_stacks/solution.py)
+**Practice:** [`practice/leetcode/implement_queue_using_stacks/solution.py`](../../practice/leetcode/implement_queue_using_stacks/solution.py)
 
 Implement a first in first out (FIFO) queue using only two stacks. The implemented queue should support all the functions of a normal queue (`push`, `pop`, `peek`, and `empty`).
 

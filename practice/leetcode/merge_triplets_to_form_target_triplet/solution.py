@@ -1,6 +1,6 @@
 """Merge Triplets to Form Target Triplet — https://leetcode.com/problems/merge-triplets-to-form-target-triplet/
 
-Write-up & approaches: ../../docs/problems/merge_triplets_to_form_target_triplet.md
+Write-up & approaches: ../../../docs/leetcode/merge_triplets_to_form_target_triplet.md
 
 You are given a 2D array of integers `triplets`, where `triplets[i] = [ai, bi, ci]` represents the `ith` **triplet**. You are also given an array of integers `target = [x, y, z]` which is the triplet 
 

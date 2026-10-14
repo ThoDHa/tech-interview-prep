@@ -1,6 +1,6 @@
 """Tests for Min Cost Climbing Stairs — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../docs/problems/min_cost_climbing_stairs.md.
+The worked approaches live in ../../../docs/leetcode/min_cost_climbing_stairs.md.
 """
 
 import pytest

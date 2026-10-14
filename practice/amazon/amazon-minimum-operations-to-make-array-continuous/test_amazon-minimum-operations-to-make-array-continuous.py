@@ -1,6 +1,6 @@
 """Tests for Minimum Operations to Make an Array Continuous — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-minimum-operations-to-make-array-continuous.md.
+The worked approaches live in ../../../docs/amazon/amazon-minimum-operations-to-make-array-continuous.md.
 """
 
 import pytest

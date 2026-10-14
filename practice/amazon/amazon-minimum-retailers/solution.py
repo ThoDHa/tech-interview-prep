@@ -1,6 +1,6 @@
 """Min Retailers — https://www.fastprep.io/problems/amazon-minimum-retailers
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-minimum-retailers.md
+Write-up & approaches: ../../../docs/amazon/amazon-minimum-retailers.md
 
 An online marketplace has onboarded n retailers, each operating within a designated geographical range. Retailer i operates over the interval from regionStart[i] to regionEnd[i] (inclusive on both end
 

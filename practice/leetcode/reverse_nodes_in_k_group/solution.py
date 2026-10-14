@@ -1,6 +1,6 @@
 """Reverse Nodes In K Group — https://leetcode.com/problems/reverse-nodes-in-k-group/
 
-Write-up & approaches: ../../docs/problems/reverse_nodes_in_k_group.md
+Write-up & approaches: ../../../docs/leetcode/reverse_nodes_in_k_group.md
 
 You are given the head of a singly linked list `head` and a positive integer `k`. You must reverse the first `k` nodes in the linked list, and then reverse the next `k` nodes, and so on. If there are 
 

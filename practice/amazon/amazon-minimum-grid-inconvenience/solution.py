@@ -1,6 +1,6 @@
 """Minimum Grid Inconvenience — https://www.fastprep.io/problems/amazon-minimum-grid-inconvenience
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-minimum-grid-inconvenience.md
+Write-up & approaches: ../../../docs/amazon/amazon-minimum-grid-inconvenience.md
 
 A city is represented by a binary grid. A cell marked 1 is a delivery center, and a cell marked 0 is any other place.
 

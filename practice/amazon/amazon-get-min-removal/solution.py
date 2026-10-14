@@ -1,6 +1,6 @@
 """Get Min Removal — https://www.fastprep.io/problems/amazon-get-min-removal
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-get-min-removal.md
+Write-up & approaches: ../../../docs/amazon/amazon-get-min-removal.md
 
 There are n products in an Amazon catalogue, where the category of the i^th product is represented by the array catalogue.
 

@@ -1,6 +1,6 @@
 """Longest Palindromic Substring: https://leetcode.com/problems/longest-palindromic-substring/
 
-Write-up & approaches: ../../docs/problems/longest_palindromic_substring.md
+Write-up & approaches: ../../../docs/leetcode/longest_palindromic_substring.md
 
 Given a string `s`, return the longest palindromic substring in `s`. The answer
 may not be unique; any longest palindromic substring is accepted.

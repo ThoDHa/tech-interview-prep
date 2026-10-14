@@ -1,6 +1,6 @@
 """Minimum Window Substring: https://leetcode.com/problems/minimum-window-substring/
 
-Write-up & approaches: ../../docs/problems/minimum_window_substring.md
+Write-up & approaches: ../../../docs/leetcode/minimum_window_substring.md
 
 Given two strings `s` and `t`, return the shortest substring of `s` that contains
 every character of `t` (including duplicates), or `""` if no such window exists.

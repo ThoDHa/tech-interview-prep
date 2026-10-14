@@ -1,6 +1,6 @@
 """Tests for Determine the Best Skipping Strategy — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-determine-the-best-skipping-strategy.md.
+The worked approaches live in ../../../docs/amazon/amazon-determine-the-best-skipping-strategy.md.
 """
 
 import pytest

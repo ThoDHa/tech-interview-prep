@@ -1,6 +1,6 @@
 """Maximize K-Element AND with an Increment Budget — https://www.fastprep.io/problems/amazon-maximize-k-element-and-with-increment-budget
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-maximize-k-element-and-with-increment-budget.md
+Write-up & approaches: ../../../docs/amazon/amazon-maximize-k-element-and-with-increment-budget.md
 
 You are given an array nums, an integer k, and a nonnegative increment budget budget. You may increase array elements by nonnegative integer amounts whose total is at most budget.
 

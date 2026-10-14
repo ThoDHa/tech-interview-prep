@@ -4,7 +4,7 @@ Each case is a LeetCode design-operation sequence: an `operations` list (first
 entry is the constructor), an `arguments` list aligned with it, and the
 `expected` results. `run_operations` drives the TimeMap class and the results
 are compared against `expected`. The worked approaches live in
-../../docs/problems/time_based_key_value_store.md.
+../../../docs/leetcode/time_based_key_value_store.md.
 """
 
 import pytest

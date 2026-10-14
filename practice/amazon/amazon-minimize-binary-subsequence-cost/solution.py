@@ -1,6 +1,6 @@
 """Minimize Binary Subsequence Cost — https://www.fastprep.io/problems/amazon-minimize-binary-subsequence-cost
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-minimize-binary-subsequence-cost.md
+Write-up & approaches: ../../../docs/amazon/amazon-minimize-binary-subsequence-cost.md
 
 You are given a string binaryString consisting only of '0', '1', and '!', and two integers x and y.
 

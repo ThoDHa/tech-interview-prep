@@ -1,6 +1,6 @@
 """Binary Tree Right Side View: https://leetcode.com/problems/binary-tree-right-side-view/
 
-Write-up & approaches: ../../docs/problems/binary_tree_right_side_view.md
+Write-up & approaches: ../../../docs/leetcode/binary_tree_right_side_view.md
 
 Given the `root` of a binary tree, return the values of the nodes visible from
 the right side, ordered from top to bottom.

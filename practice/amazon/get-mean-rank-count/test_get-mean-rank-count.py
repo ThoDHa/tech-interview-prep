@@ -1,6 +1,6 @@
 """Tests for Cet Mean Rank Count — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/get-mean-rank-count.md.
+The worked approaches live in ../../../docs/amazon/get-mean-rank-count.md.
 """
 
 import pytest

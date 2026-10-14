@@ -1,6 +1,6 @@
 """Environment Variable Store and Substitution — https://www.fastprep.io/problems/amazon-environment-variable-substitution
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-environment-variable-substitution.md
+Write-up & approaches: ../../../docs/amazon/amazon-environment-variable-substitution.md
 
 Process a sequence of environment-variable operations:
 

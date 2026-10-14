@@ -1,6 +1,6 @@
 """Set Matrix Zeroes — https://leetcode.com/problems/set-matrix-zeroes/
 
-Write-up & approaches: ../../docs/problems/set_matrix_zeroes.md
+Write-up & approaches: ../../../docs/leetcode/set_matrix_zeroes.md
 
 Given an `m x n` matrix of integers `matrix`, if an element is `0`, set its entire row and column to `0`'s. You must update the matrix *in-place*.
 

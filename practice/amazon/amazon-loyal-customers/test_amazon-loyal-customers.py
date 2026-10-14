@@ -1,6 +1,6 @@
 """Tests for Loyal Customers Across Two Days — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-loyal-customers.md.
+The worked approaches live in ../../../docs/amazon/amazon-loyal-customers.md.
 """
 
 import pytest

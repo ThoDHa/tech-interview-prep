@@ -1,6 +1,6 @@
 """Execute Processes — https://www.fastprep.io/problems/amazon-execute-processes
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-execute-processes.md
+Write-up & approaches: ../../../docs/amazon/amazon-execute-processes.md
 
 Amazon Web Services (AWS) has several processors for executing processes scheduled on its servers.
 

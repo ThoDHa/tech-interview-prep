@@ -1,6 +1,6 @@
 """Rotate Image — https://leetcode.com/problems/rotate-image/
 
-Write-up & approaches: ../../docs/problems/rotate_image.md
+Write-up & approaches: ../../../docs/leetcode/rotate_image.md
 
 Given a square `n x n` matrix of integers `matrix`, rotate it by 90 degrees *clockwise*. You must rotate the matrix *in-place*. Do not allocate another 2D matrix and do the rotation.
 

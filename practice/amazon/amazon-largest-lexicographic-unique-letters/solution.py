@@ -1,6 +1,6 @@
 """Remove Duplicate Letters for the Largest Result — https://www.fastprep.io/problems/amazon-largest-lexicographic-unique-letters
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-largest-lexicographic-unique-letters.md
+Write-up & approaches: ../../../docs/amazon/amazon-largest-lexicographic-unique-letters.md
 
 Given a lowercase string s, remove characters so that every distinct letter appears exactly once. The remaining characters must preserve their original relative order.
 

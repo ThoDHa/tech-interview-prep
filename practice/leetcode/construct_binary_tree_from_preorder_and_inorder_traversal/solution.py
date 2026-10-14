@@ -1,6 +1,6 @@
 """Construct Binary Tree from Preorder and Inorder Traversal: https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/
 
-Write-up & approaches: ../../docs/problems/construct_binary_tree_from_preorder_and_inorder_traversal.md
+Write-up & approaches: ../../../docs/leetcode/construct_binary_tree_from_preorder_and_inorder_traversal.md
 
 Given preorder and inorder traversals of a binary tree (with unique values),
 reconstruct and return the tree.

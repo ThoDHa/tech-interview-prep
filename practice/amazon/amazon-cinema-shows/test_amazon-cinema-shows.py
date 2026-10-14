@@ -1,6 +1,6 @@
 """Tests for Cinema Shows — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-cinema-shows.md.
+The worked approaches live in ../../../docs/amazon/amazon-cinema-shows.md.
 """
 
 import pytest

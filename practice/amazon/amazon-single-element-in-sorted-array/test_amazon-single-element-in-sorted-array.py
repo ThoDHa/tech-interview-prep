@@ -1,6 +1,6 @@
 """Tests for Single Element in a Sorted Array — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-single-element-in-sorted-array.md.
+The worked approaches live in ../../../docs/amazon/amazon-single-element-in-sorted-array.md.
 """
 
 import pytest

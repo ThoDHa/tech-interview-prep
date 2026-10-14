@@ -1,6 +1,6 @@
 """Find Min Max Difference — https://www.fastprep.io/problems/amazon-find-min-max-difference
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-find-min-max-difference.md
+Write-up & approaches: ../../../docs/amazon/amazon-find-min-max-difference.md
 
 Given one unsorted array of size n and integer k.
 

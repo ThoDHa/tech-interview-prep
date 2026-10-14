@@ -1,6 +1,6 @@
 """Two Sum: https://leetcode.com/problems/two-sum/
 
-Write-up & approaches: ../../docs/problems/two_sum.md
+Write-up & approaches: ../../../docs/leetcode/two_sum.md
 
 Given an array of integers `nums` and an integer `target`, return indices of the
 two numbers such that they add up to `target`. Exactly one solution exists; you

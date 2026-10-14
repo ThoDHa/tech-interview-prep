@@ -1,6 +1,6 @@
 """Generate Parentheses — https://leetcode.com/problems/generate-parentheses/
 
-Write-up & approaches: ../../docs/problems/generate_parentheses.md
+Write-up & approaches: ../../../docs/leetcode/generate_parentheses.md
 
 You are given an integer `n`. Return all well-formed parentheses strings that you can generate with `n` pairs of parentheses.
 

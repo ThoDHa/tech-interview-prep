@@ -1,6 +1,6 @@
 """N Queens — https://leetcode.com/problems/n-queens/
 
-Write-up & approaches: ../../docs/problems/n_queens.md
+Write-up & approaches: ../../../docs/leetcode/n_queens.md
 
 The **n-queens** puzzle is the problem of placing `n` queens on an `n x n` chessboard so that no two queens can attack each other. A **queen** in a chessboard can attack horizontally, vertically, and 
 

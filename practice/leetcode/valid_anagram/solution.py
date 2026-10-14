@@ -1,6 +1,6 @@
 """Valid Anagram: https://leetcode.com/problems/valid-anagram/
 
-Write-up & approaches: ../../docs/problems/valid_anagram.md
+Write-up & approaches: ../../../docs/leetcode/valid_anagram.md
 
 Given two strings `s` and `t`, return True if `t` is an anagram of `s`.
 

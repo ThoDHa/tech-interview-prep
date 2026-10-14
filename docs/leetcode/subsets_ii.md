@@ -6,7 +6,7 @@
 
 **Algorithm:** [Power set](https://en.wikipedia.org/wiki/Power_set) · [Backtracking](https://en.wikipedia.org/wiki/Backtracking)
 
-**Practice:** [`practice/subsets_ii/solution.py`](../../practice/subsets_ii/solution.py)
+**Practice:** [`practice/leetcode/subsets_ii/solution.py`](../../practice/leetcode/subsets_ii/solution.py)
 
 You are given an array `nums` of integers, which may contain duplicates. Return all possible subsets.
 

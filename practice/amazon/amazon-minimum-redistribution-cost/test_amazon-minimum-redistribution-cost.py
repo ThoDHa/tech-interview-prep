@@ -1,6 +1,6 @@
 """Tests for Minimum Redistribution Cost — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-minimum-redistribution-cost.md.
+The worked approaches live in ../../../docs/amazon/amazon-minimum-redistribution-cost.md.
 """
 
 import pytest

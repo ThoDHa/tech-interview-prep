@@ -4,7 +4,7 @@ This is an api-callback problem: Solution.firstBadVersion(n) calls the module-le
 isBadVersion(version). Each case is {args: [n, bad], expected: first_bad}; before
 calling the solution we point solution.bad at the case's bad version so that
 isBadVersion(v) returns v >= bad. The worked approaches live in
-../../docs/problems/first_bad_version.md.
+../../../docs/leetcode/first_bad_version.md.
 """
 
 import pytest

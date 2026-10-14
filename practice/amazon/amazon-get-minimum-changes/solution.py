@@ -1,6 +1,6 @@
 """Get Min Change — https://www.fastprep.io/problems/amazon-get-minimum-changes
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-get-minimum-changes.md
+Write-up & approaches: ../../../docs/amazon/amazon-get-minimum-changes.md
 
 Amazon's software developers are working on enhancing their inventory management system with a new pricing adjustment operation on an array of products, where the price of the i^th product is given by
 

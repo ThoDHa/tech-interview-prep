@@ -1,6 +1,6 @@
 """Longest Common Subsequence Length — https://www.fastprep.io/problems/amazon-longest-common-subsequence-length
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-longest-common-subsequence-length.md
+Write-up & approaches: ../../../docs/amazon/amazon-longest-common-subsequence-length.md
 
 Given two lowercase strings first and second, return the length of their longest common subsequence.
 

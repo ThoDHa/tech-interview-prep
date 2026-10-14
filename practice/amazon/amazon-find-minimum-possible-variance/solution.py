@@ -1,11 +1,11 @@
 """Find Min Variance — https://www.fastprep.io/problems/amazon-find-minimum-possible-variance
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-find-minimum-possible-variance.md
+Write-up & approaches: ../../../docs/amazon/amazon-find-minimum-possible-variance.md
 
 Amazon OA problem.
 
-  uv run python amazon_oa/amazon-find-minimum-possible-variance/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-find-minimum-possible-variance/              # run the test sets
+  uv run python amazon/amazon-find-minimum-possible-variance/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-find-minimum-possible-variance/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

@@ -8,7 +8,7 @@
 
 **Algorithm:** [Depth-first search](https://en.wikipedia.org/wiki/Depth-first_search) · [Breadth-first search](https://en.wikipedia.org/wiki/Breadth-first_search) · [Disjoint-set (Union-Find)](https://en.wikipedia.org/wiki/Disjoint-set_data_structure)
 
-**Practice:** [`practice/graph_valid_tree/solution.py`](../../practice/graph_valid_tree/solution.py)
+**Practice:** [`practice/leetcode/graph_valid_tree/solution.py`](../../practice/leetcode/graph_valid_tree/solution.py)
 
 Given `n` nodes labeled from `0` to `n - 1` and a list of **undirected** edges (each edge is a pair of nodes), write a function to check whether these edges make up a valid tree.
 
@@ -270,7 +270,7 @@ The `parent` and `rank` arrays; the iterative `find` adds no stack.
 
 ## Comparison of Solutions
 
-The practice harness's `practice/graph_valid_tree/reference.py` implements the **Union-Find** solution.
+The practice harness's `practice/leetcode/graph_valid_tree/reference.py` implements the **Union-Find** solution.
 
 ### Time Complexity
 

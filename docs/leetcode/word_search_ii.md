@@ -6,7 +6,7 @@
 
 **Algorithm:** [Trie](https://en.wikipedia.org/wiki/Trie) · [Backtracking](https://en.wikipedia.org/wiki/Backtracking)
 
-**Practice:** [`practice/word_search_ii/solution.py`](../../practice/word_search_ii/solution.py)
+**Practice:** [`practice/leetcode/word_search_ii/solution.py`](../../practice/leetcode/word_search_ii/solution.py)
 
 Given a 2-D grid of characters `board` and a list of strings `words`, return all words that are present in the grid.
 

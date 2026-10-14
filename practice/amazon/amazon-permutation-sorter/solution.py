@@ -1,6 +1,6 @@
 """Permutation Sorter — https://www.fastprep.io/problems/amazon-permutation-sorter
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-permutation-sorter.md
+Write-up & approaches: ../../../docs/amazon/amazon-permutation-sorter.md
 
 Amazon engineers are testing a new tool, the Permutation Sorter, built to reorder sequences using limited operations.
 

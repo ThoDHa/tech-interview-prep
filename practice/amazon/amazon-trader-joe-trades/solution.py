@@ -1,6 +1,6 @@
 """Trader Joe Trades — https://www.fastprep.io/problems/amazon-trader-joe-trades
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-trader-joe-trades.md
+Write-up & approaches: ../../../docs/amazon/amazon-trader-joe-trades.md
 
 In the Amazon Trade Optimization System, a financial strategist named Joe the trader is assigned the task of maximizing revenue while following the execution rules for trade operations. The trading sy
 

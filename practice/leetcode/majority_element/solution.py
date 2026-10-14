@@ -1,6 +1,6 @@
 """Majority Element: https://leetcode.com/problems/majority-element/
 
-Write-up & approaches: ../../docs/problems/majority_element.md
+Write-up & approaches: ../../../docs/leetcode/majority_element.md
 
 Given an array `nums` of size `n`, return the majority element: the element that
 appears more than `⌊n / 2⌋` times. You may assume it always exists.

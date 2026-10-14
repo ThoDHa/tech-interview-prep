@@ -1,6 +1,6 @@
 """Tests for Get Experience — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-get-exp.md.
+The worked approaches live in ../../../docs/amazon/amazon-get-exp.md.
 """
 
 import pytest

@@ -6,7 +6,7 @@
 
 **Algorithm:** [Hash table](https://en.wikipedia.org/wiki/Hash_table) · [Sorting](https://en.wikipedia.org/wiki/Sorting_algorithm)
 
-**Practice:** [`practice/longest_consecutive_sequence/solution.py`](../../practice/longest_consecutive_sequence/solution.py)
+**Practice:** [`practice/leetcode/longest_consecutive_sequence/solution.py`](../../practice/leetcode/longest_consecutive_sequence/solution.py)
 
 Given an array of integers `nums`, return *the length* of the longest consecutive sequence of elements that can be formed.
 

@@ -1,6 +1,6 @@
 """Decode Ways — https://leetcode.com/problems/decode-ways/
 
-Write-up & approaches: ../../docs/problems/decode_ways.md
+Write-up & approaches: ../../../docs/leetcode/decode_ways.md
 
 A string consisting of uppercase english characters can be encoded to a number using the following mapping: ```java 'A' -> "1" 'B' -> "2" ... 'Z' -> "26" ``` To **decode** a message, digits must be gr
 

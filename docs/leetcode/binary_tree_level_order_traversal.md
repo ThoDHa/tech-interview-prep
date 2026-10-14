@@ -6,7 +6,7 @@
 
 **Algorithm:** [Breadth-first search](https://en.wikipedia.org/wiki/Breadth-first_search) · [Depth-first search](https://en.wikipedia.org/wiki/Depth-first_search)
 
-**Practice:** [`practice/binary_tree_level_order_traversal/solution.py`](../../practice/binary_tree_level_order_traversal/solution.py)
+**Practice:** [`practice/leetcode/binary_tree_level_order_traversal/solution.py`](../../practice/leetcode/binary_tree_level_order_traversal/solution.py)
 
 Given the `root` of a binary tree, return the level order traversal of its nodes' values. (i.e., from left to right, level by level).
 

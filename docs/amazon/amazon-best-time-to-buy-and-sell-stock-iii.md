@@ -45,7 +45,7 @@ A transaction consists of buying one share and selling that share on a later day
 
 #### Derivation
 
-The most direct reading turns "at most two transactions" into geometry: every plan that uses two transactions has a boundary day, the day the first sale settles on, after which the second buy happens. Split the array at that boundary and the two halves become two independent copies of the single-transaction problem, [Best Time to Buy and Sell Stock](../best_time_to_buy_and_sell_stock.md):
+The most direct reading turns "at most two transactions" into geometry: every plan that uses two transactions has a boundary day, the day the first sale settles on, after which the second buy happens. Split the array at that boundary and the two halves become two independent copies of the single-transaction problem, [Best Time to Buy and Sell Stock](../leetcode/best_time_to_buy_and_sell_stock.md):
 
 1. Define `best_single_transaction(start, end)` as the largest profit of one
    buy-then-sell inside `prices[start..end]`, floored at `0` (no transaction).

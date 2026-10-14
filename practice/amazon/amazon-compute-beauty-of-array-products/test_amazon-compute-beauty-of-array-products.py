@@ -1,6 +1,6 @@
 """Tests for Compute Beauty of Array Products — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-compute-beauty-of-array-products.md.
+The worked approaches live in ../../../docs/amazon/amazon-compute-beauty-of-array-products.md.
 """
 
 import pytest

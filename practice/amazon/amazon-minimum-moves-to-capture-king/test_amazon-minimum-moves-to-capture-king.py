@@ -1,6 +1,6 @@
 """Tests for Minimum Moves to Capture the King — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-minimum-moves-to-capture-king.md.
+The worked approaches live in ../../../docs/amazon/amazon-minimum-moves-to-capture-king.md.
 """
 
 import pytest

@@ -1,6 +1,6 @@
 """Tests for Longest Increasing Subsequence With Bounded Adjacent Difference — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-longest-increasing-subsequence-bounded-difference.md.
+The worked approaches live in ../../../docs/amazon/amazon-longest-increasing-subsequence-bounded-difference.md.
 """
 
 import pytest

@@ -1,6 +1,6 @@
 """Find Requests In Queue — https://www.fastprep.io/problems/amazon-find-requests-in-queue
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-find-requests-in-queue.md
+Write-up & approaches: ../../../docs/amazon/amazon-find-requests-in-queue.md
 
 Amazon Web Services (AWS) is a cloud computing platform with multiple servers. One of the servers is assigned to serve customer requests. There are n customer requests placed sequentially in a queue, 
 

@@ -1,6 +1,6 @@
 """Maximum Concurrent Processes (Bar Raiser Round) — https://www.fastprep.io/problems/amazon-max-concurrent-processes
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-max-concurrent-processes.md
+Write-up & approaches: ../../../docs/amazon/amazon-max-concurrent-processes.md
 
 🍇 FastPrep match note: This version is based on a reported Amazon SDE2 full-time onsite Bar Raiser round prompt and should match the core task about 90-95%: given process running intervals, return the
 

@@ -1,6 +1,6 @@
 """Coin Change II — https://leetcode.com/problems/coin-change-ii/
 
-Write-up & approaches: ../../docs/problems/coin_change_ii.md
+Write-up & approaches: ../../../docs/leetcode/coin_change_ii.md
 
 You are given an integer array `coins` representing coins of different denominations (e.g. 1 dollar, 5 dollars, etc) and an integer `amount` representing a target amount of money. Return the number of
 

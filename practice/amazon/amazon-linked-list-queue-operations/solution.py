@@ -1,6 +1,6 @@
 """Linked-List Queue with Delete and Deduplication — https://www.fastprep.io/problems/amazon-linked-list-queue-operations
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-linked-list-queue-operations.md
+Write-up & approaches: ../../../docs/amazon/amazon-linked-list-queue-operations.md
 
 Source note: The source omits whether deletion removes one or all matches, which duplicate occurrence survives, and the callable batch format. The judged core task matches the visible report at about 
 

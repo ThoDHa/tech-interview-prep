@@ -1,6 +1,6 @@
 """Tests for Min Insertions — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-minimum-insertions.md.
+The worked approaches live in ../../../docs/amazon/amazon-minimum-insertions.md.
 """
 
 import pytest

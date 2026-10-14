@@ -1,6 +1,6 @@
 """Burst Balloons — https://leetcode.com/problems/burst-balloons/
 
-Write-up & approaches: ../../docs/problems/burst_balloons.md
+Write-up & approaches: ../../../docs/leetcode/burst_balloons.md
 Reference implementation of the write-up's Top-Down Memoization solution, kept
 next to the harness so authored cases stay falsifiable. Your own attempt
 lives in solution.py.

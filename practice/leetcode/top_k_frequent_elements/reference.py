@@ -1,6 +1,6 @@
 """Top K Frequent Elements — https://leetcode.com/problems/top-k-frequent-elements/
 
-Write-up & approaches: ../../docs/problems/top_k_frequent_elements.md
+Write-up & approaches: ../../../docs/leetcode/top_k_frequent_elements.md
 
 Canonical reference implementation: the write-up's optimal approach (bucket
 sort by frequency), kept next to the harness so authored cases stay

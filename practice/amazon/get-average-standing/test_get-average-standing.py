@@ -1,6 +1,6 @@
 """Tests for Get Average Standing — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/get-average-standing.md.
+The worked approaches live in ../../../docs/amazon/get-average-standing.md.
 """
 
 import pytest

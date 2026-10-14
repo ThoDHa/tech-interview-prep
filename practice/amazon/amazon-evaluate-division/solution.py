@@ -1,6 +1,6 @@
 """Evaluate Division — https://www.fastprep.io/problems/amazon-evaluate-division
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-evaluate-division.md
+Write-up & approaches: ../../../docs/amazon/amazon-evaluate-division.md
 
 You are given variable pairs equations and positive real numbers values. For every index i, equations[i] = [a, b] and values[i] mean a / b = values[i].
 

@@ -6,7 +6,7 @@
 
 **Algorithm:** [Subset sum problem](https://en.wikipedia.org/wiki/Subset_sum_problem) · [Dynamic programming](https://en.wikipedia.org/wiki/Dynamic_programming) · [Knapsack problem](https://en.wikipedia.org/wiki/Knapsack_problem)
 
-**Practice:** [`practice/partition_equal_subset_sum/solution.py`](../../practice/partition_equal_subset_sum/solution.py)
+**Practice:** [`practice/leetcode/partition_equal_subset_sum/solution.py`](../../practice/leetcode/partition_equal_subset_sum/solution.py)
 
 Given an integer array `nums`, return `true` if you can partition the array into two subsets such that the sum of the elements in both subsets is equal.
 

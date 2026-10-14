@@ -1,6 +1,6 @@
 """Count Good Nodes In Binary Tree — https://leetcode.com/problems/count-good-nodes-in-binary-tree/
 
-Write-up & approaches: ../../docs/problems/count_good_nodes_in_binary_tree.md
+Write-up & approaches: ../../../docs/leetcode/count_good_nodes_in_binary_tree.md
 
 Within a binary tree, a node `x` is considered **good** if the path from the root of the tree to the node `x` contains no nodes with a value greater than the value of node `x` Given the root of a bina
 

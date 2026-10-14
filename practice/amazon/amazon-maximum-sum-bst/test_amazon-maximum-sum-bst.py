@@ -1,6 +1,6 @@
 """Tests for Maximum Sum BST in a Binary Tree — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-maximum-sum-bst.md.
+The worked approaches live in ../../../docs/amazon/amazon-maximum-sum-bst.md.
 """
 
 import pytest

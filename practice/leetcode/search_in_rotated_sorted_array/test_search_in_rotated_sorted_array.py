@@ -2,7 +2,7 @@
 
 cases.json (marker `simple`) is the "Run" set; cases_full.json (marker `full`) is
 the "Submit" gauntlet. The worked approaches live in
-../../docs/problems/search_in_rotated_sorted_array.md.
+../../../docs/leetcode/search_in_rotated_sorted_array.md.
 """
 
 import pytest

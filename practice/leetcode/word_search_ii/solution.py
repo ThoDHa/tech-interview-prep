@@ -1,6 +1,6 @@
 """Word Search II — https://leetcode.com/problems/word-search-ii/
 
-Write-up & approaches: ../../docs/problems/word_search_ii.md
+Write-up & approaches: ../../../docs/leetcode/word_search_ii.md
 
 Given a 2-D grid of characters `board` and a list of strings `words`, return all words that are present in the grid. For a word to be present it must be possible to form the word with a path in the bo
 

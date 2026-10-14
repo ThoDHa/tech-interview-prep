@@ -6,7 +6,7 @@
 
 **Algorithm:** [Dynamic programming](https://en.wikipedia.org/wiki/Dynamic_programming) · [Memoization](https://en.wikipedia.org/wiki/Memoization) · [Backtracking](https://en.wikipedia.org/wiki/Backtracking)
 
-**Practice:** [`practice/target_sum/solution.py`](../../practice/target_sum/solution.py)
+**Practice:** [`practice/leetcode/target_sum/solution.py`](../../practice/leetcode/target_sum/solution.py)
 
 You are given an array of integers `nums` and an integer `target`.
 

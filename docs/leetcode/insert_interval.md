@@ -6,7 +6,7 @@
 
 **Algorithm:** [Interval pattern](../patterns/interval/intuition.md) · [Binary search](https://en.wikipedia.org/wiki/Binary_search_algorithm)
 
-**Practice:** [`practice/insert_interval/solution.py`](../../practice/insert_interval/solution.py)
+**Practice:** [`practice/leetcode/insert_interval/solution.py`](../../practice/leetcode/insert_interval/solution.py)
 
 You are given an array of non-overlapping intervals where `intervals[i] = [starti, endi]` represent the start and the end of the `ith` interval and `intervals` is sorted in ascending order by `starti`. You are also given an interval `newInterval = [start, end]` that represents the start and end of another interval.
 

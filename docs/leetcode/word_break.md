@@ -6,7 +6,7 @@
 
 **Algorithm:** [Dynamic programming](https://en.wikipedia.org/wiki/Dynamic_programming) · [Breadth-first search](https://en.wikipedia.org/wiki/Breadth-first_search) · [Trie](https://en.wikipedia.org/wiki/Trie)
 
-**Practice:** [`practice/word_break/solution.py`](../../practice/word_break/solution.py)
+**Practice:** [`practice/leetcode/word_break/solution.py`](../../practice/leetcode/word_break/solution.py)
 
 Given a string `s` and a dictionary of strings `wordDict`, return `true` if `s` can be segmented into a space-separated sequence of one or more dictionary words.
 

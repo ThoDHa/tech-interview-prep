@@ -1,6 +1,6 @@
 """Tests for Word Break II — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-word-break-ii.md.
+The worked approaches live in ../../../docs/amazon/amazon-word-break-ii.md.
 """
 
 import pytest

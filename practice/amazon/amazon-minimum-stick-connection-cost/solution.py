@@ -1,6 +1,6 @@
 """Minimum Stick Connection Cost — https://www.fastprep.io/problems/amazon-minimum-stick-connection-cost
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-minimum-stick-connection-cost.md
+Write-up & approaches: ../../../docs/amazon/amazon-minimum-stick-connection-cost.md
 
 You are given an integer array sticks, where each element is the length of a stick.
 

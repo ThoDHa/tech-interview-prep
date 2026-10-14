@@ -1,6 +1,6 @@
 """Last Stone Weight — https://leetcode.com/problems/last-stone-weight/
 
-Write-up & approaches: ../../docs/problems/last_stone_weight.md
+Write-up & approaches: ../../../docs/leetcode/last_stone_weight.md
 
 You are given an array of integers `stones` where `stones[i]` represents the weight of the `ith` stone. We want to run a simulation on the stones as follows: * At each step we choose the **two heavies
 

@@ -1,6 +1,6 @@
 """Minimum Height Trees — https://leetcode.com/problems/minimum-height-trees/
 
-Write-up & approaches: ../../docs/problems/minimum_height_trees.md
+Write-up & approaches: ../../../docs/leetcode/minimum_height_trees.md
 
 Given a tree of `n` nodes labelled `0..n-1` and its `n - 1` undirected edges,
 return the labels of every root that yields a tree of minimum height. Answer may

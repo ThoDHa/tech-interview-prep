@@ -1,6 +1,6 @@
 """Minimum Redistribution Cost — https://www.fastprep.io/problems/amazon-minimum-redistribution-cost
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-minimum-redistribution-cost.md
+Write-up & approaches: ../../../docs/amazon/amazon-minimum-redistribution-cost.md
 
 There are n warehouses arranged in a circle. Warehouse i initially stores products[i] items.
 

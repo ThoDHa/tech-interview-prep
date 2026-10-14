@@ -1,6 +1,6 @@
 """Choose Warehouse Location — https://www.fastprep.io/problems/amazon-choose-warehouses-location
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-choose-warehouses-location.md
+Write-up & approaches: ../../../docs/amazon/amazon-choose-warehouses-location.md
 
 Amazon has recently established n distribution centers in a new location. They want to set up 2 warehouses to serve these distribution centers. Note that the centers and warehouses are all built along
 

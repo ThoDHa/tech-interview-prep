@@ -1,6 +1,6 @@
 """Tests for Minimize Warehouse Transfer Cost — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-minimize-warehouse-transfer-cost.md.
+The worked approaches live in ../../../docs/amazon/amazon-minimize-warehouse-transfer-cost.md.
 """
 
 import pytest

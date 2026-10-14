@@ -1,6 +1,6 @@
 """Tests for Find Networking Calls — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-find-network-calls.md.
+The worked approaches live in ../../../docs/amazon/amazon-find-network-calls.md.
 """
 
 import pytest

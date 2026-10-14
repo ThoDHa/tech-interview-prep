@@ -1,6 +1,6 @@
 # Amazon OA Problems
 
-Amazon-tagged coding problems from the [Tech-OA-Interview-Questions](https://github.com/perixtar/Tech-OA-Interview-Questions) bank (statement pages on fastprep.io), most recently updated first. Practice stubs live under `practice/amazon_oa/`. Time carries difficulty-based estimates (Easy 15 / Medium 25 / Hard 40 minutes, a dash where the difficulty is unknown), corrected by the committed difficulty overrides where present.
+Amazon-tagged coding problems from the [Tech-OA-Interview-Questions](https://github.com/perixtar/Tech-OA-Interview-Questions) bank (statement pages on fastprep.io), most recently updated first. Practice stubs live under `practice/amazon/`. Time carries difficulty-based estimates (Easy 15 / Medium 25 / Hard 40 minutes, a dash where the difficulty is unknown), corrected by the committed difficulty overrides where present.
 
 | Updated | Problem | Difficulty | Category | Time | Companies |
 |---------|---------|-----------|----------|------|-----------|

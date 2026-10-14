@@ -1,6 +1,6 @@
 """Find Median Of Subarray Uniqueness — https://www.fastprep.io/problems/find-median-of-subarray-uniqueness
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/find-median-of-subarray-uniqueness.md
+Write-up & approaches: ../../../docs/amazon/find-median-of-subarray-uniqueness.md
 
 In an Amazon coding marathon, the following challenge was given.
 

@@ -1,6 +1,6 @@
 """Schedule Tasks — https://www.fastprep.io/problems/amazon-schedule-tasks
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-schedule-tasks.md
+Write-up & approaches: ../../../docs/amazon/amazon-schedule-tasks.md
 
 In managing tasks at analytics platform, the goal is to efficiently schedule both primary and secondary tasks within specified time constraints.
 

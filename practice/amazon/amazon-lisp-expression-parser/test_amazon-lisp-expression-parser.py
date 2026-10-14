@@ -1,6 +1,6 @@
 """Tests for Lisp Expression Parser — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-lisp-expression-parser.md.
+The worked approaches live in ../../../docs/amazon/amazon-lisp-expression-parser.md.
 """
 
 import pytest

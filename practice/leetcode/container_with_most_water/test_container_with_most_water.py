@@ -2,7 +2,7 @@
 
 cases.json (marker `simple`) is the "Run" set; cases_full.json (marker `full`) is
 the "Submit" gauntlet. The worked approaches live in
-../../docs/problems/container_with_most_water.md.
+../../../docs/leetcode/container_with_most_water.md.
 """
 
 import pytest

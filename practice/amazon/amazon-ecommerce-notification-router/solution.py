@@ -1,6 +1,6 @@
 """E-commerce Notification Router — https://www.fastprep.io/problems/amazon-ecommerce-notification-router
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-ecommerce-notification-router.md
+Write-up & approaches: ../../../docs/amazon/amazon-ecommerce-notification-router.md
 
 Implement the routing decision for a batch of e-commerce notifications. For notification i, preferredChannels[i] is the user's preferred channel and priorities[i] is either NORMAL or URGENT.
 

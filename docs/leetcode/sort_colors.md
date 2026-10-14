@@ -6,7 +6,7 @@
 
 **Algorithm:** [Dutch national flag problem](https://en.wikipedia.org/wiki/Dutch_national_flag_problem) · [Two-pointer technique](https://usaco.guide/silver/two-pointers)
 
-**Practice:** [`practice/sort_colors/solution.py`](../../practice/sort_colors/solution.py)
+**Practice:** [`practice/leetcode/sort_colors/solution.py`](../../practice/leetcode/sort_colors/solution.py)
 
 Given an array `nums` with `n` objects colored red, white, or blue, sort them in-place so that objects of the same color are adjacent, with the colors in the order red, white, and blue.
 

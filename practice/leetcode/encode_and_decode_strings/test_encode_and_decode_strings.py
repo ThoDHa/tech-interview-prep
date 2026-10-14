@@ -1,6 +1,6 @@
 """Tests for Encode and Decode Strings — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../docs/problems/encode_and_decode_strings.md.
+The worked approaches live in ../../../docs/leetcode/encode_and_decode_strings.md.
 """
 
 import pytest

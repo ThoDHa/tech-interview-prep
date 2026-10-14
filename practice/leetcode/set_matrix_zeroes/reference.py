@@ -1,6 +1,6 @@
 """Set Matrix Zeroes — https://leetcode.com/problems/set-matrix-zeroes/
 
-Write-up & approaches: ../../docs/problems/set_matrix_zeroes.md
+Write-up & approaches: ../../../docs/leetcode/set_matrix_zeroes.md
 Canonical reference implementation: the write-up's First Row and Column as
 Flags solution (in place, O(1) extra space). Your own attempt lives in
 solution.py.

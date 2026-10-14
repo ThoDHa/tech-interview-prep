@@ -1,6 +1,6 @@
 """Maximum Frequency Stack: https://leetcode.com/problems/maximum-frequency-stack/
 
-Write-up & approaches: ../../docs/problems/maximum_frequency_stack.md
+Write-up & approaches: ../../../docs/leetcode/maximum_frequency_stack.md
 
 Design a stack-like structure: push elements, and pop the most frequent element.
 If several elements share the highest frequency, pop the one pushed most recently.

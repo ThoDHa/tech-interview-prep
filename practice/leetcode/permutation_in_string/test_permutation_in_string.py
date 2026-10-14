@@ -1,6 +1,6 @@
 """Tests for Permutation In String — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../docs/problems/permutation_in_string.md.
+The worked approaches live in ../../../docs/leetcode/permutation_in_string.md.
 """
 
 import pytest

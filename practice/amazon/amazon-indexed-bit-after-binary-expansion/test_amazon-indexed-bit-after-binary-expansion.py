@@ -1,6 +1,6 @@
 """Tests for Bit at an Index After Repeated Binary Expansion — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-indexed-bit-after-binary-expansion.md.
+The worked approaches live in ../../../docs/amazon/amazon-indexed-bit-after-binary-expansion.md.
 """
 
 import pytest

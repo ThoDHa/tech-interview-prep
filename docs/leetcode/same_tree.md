@@ -6,7 +6,7 @@
 
 **Algorithm:** [Tree traversal](https://en.wikipedia.org/wiki/Tree_traversal) · [Depth-first search](https://en.wikipedia.org/wiki/Depth-first_search) · [Breadth-first search](https://en.wikipedia.org/wiki/Breadth-first_search)
 
-**Practice:** [`practice/same_tree/solution.py`](../../practice/same_tree/solution.py)
+**Practice:** [`practice/leetcode/same_tree/solution.py`](../../practice/leetcode/same_tree/solution.py)
 
 Given the roots of two binary trees `p` and `q`, return `true` if the trees are **equivalent**, otherwise return `false`.
 

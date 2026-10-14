@@ -1,6 +1,6 @@
 """Get Smaller Items — https://www.fastprep.io/problems/amazon-get-smaller-items
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-get-smaller-items.md
+Write-up & approaches: ../../../docs/amazon/amazon-get-smaller-items.md
 
 Special thanks: 🐳 Manyyy thanks to the GG of Error-Free Excellence 👉 ✨ spike ✨! 🐝
 

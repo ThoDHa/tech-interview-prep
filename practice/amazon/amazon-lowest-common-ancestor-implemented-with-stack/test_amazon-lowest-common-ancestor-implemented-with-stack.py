@@ -1,6 +1,6 @@
 """Tests for Lowest Common Ancestor Implemented with Stack — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-lowest-common-ancestor-implemented-with-stack.md.
+The worked approaches live in ../../../docs/amazon/amazon-lowest-common-ancestor-implemented-with-stack.md.
 """
 
 import pytest

@@ -1,6 +1,6 @@
 """Encode and Decode Strings — https://leetcode.com/problems/encode-and-decode-strings/
 
-Write-up & approaches: ../../docs/problems/encode_and_decode_strings.md
+Write-up & approaches: ../../../docs/leetcode/encode_and_decode_strings.md
 
 Canonical reference implementation: the write-up's optimal approach
 (length-prefixed encoding), kept next to the harness so authored cases stay

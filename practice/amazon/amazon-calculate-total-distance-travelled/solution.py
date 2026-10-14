@@ -1,6 +1,6 @@
 """Calculate Total Distrance Travelled — https://www.fastprep.io/problems/amazon-calculate-total-distance-travelled
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-calculate-total-distance-travelled.md
+Write-up & approaches: ../../../docs/amazon/amazon-calculate-total-distance-travelled.md
 
 Giving position of trucks and they are always moving towards end station as it is a gas station. 
 

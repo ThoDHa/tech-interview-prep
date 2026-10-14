@@ -1,6 +1,6 @@
 """Tests for Reverse Binary String — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-reverse-binary-string.md.
+The worked approaches live in ../../../docs/amazon/amazon-reverse-binary-string.md.
 """
 
 import pytest

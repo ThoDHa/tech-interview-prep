@@ -1,6 +1,6 @@
 """Find All Anagrams in a String: https://leetcode.com/problems/find-all-anagrams-in-a-string/
 
-Write-up & approaches: ../../docs/problems/find_all_anagrams_in_a_string.md
+Write-up & approaches: ../../../docs/leetcode/find_all_anagrams_in_a_string.md
 
 Given two strings `s` and `p`, return an array of all the start indices of `p`'s
 anagrams in `s`. You may return the answer in any order.

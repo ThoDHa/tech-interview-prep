@@ -1,6 +1,6 @@
 """Alien Dictionary — https://leetcode.com/problems/alien-dictionary/
 
-Write-up & approaches: ../../docs/problems/alien_dictionary.md
+Write-up & approaches: ../../../docs/leetcode/alien_dictionary.md
 Reference implementation of the write-up's Kahn's Algorithm (Topological Sort
 via BFS) solution.
 

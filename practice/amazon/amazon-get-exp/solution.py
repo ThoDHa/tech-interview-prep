@@ -1,6 +1,6 @@
 """Get Experience — https://www.fastprep.io/problems/amazon-get-exp
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-get-exp.md
+Write-up & approaches: ../../../docs/amazon/amazon-get-exp.md
 
 Note --> Feel free to check the source image below for the original problem statement :)
 

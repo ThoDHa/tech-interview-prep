@@ -1,6 +1,6 @@
 """Hand of Straights — https://leetcode.com/problems/hand-of-straights/
 
-Write-up & approaches: ../../docs/problems/hand_of_straights.md
+Write-up & approaches: ../../../docs/leetcode/hand_of_straights.md
 Reference implementation of the write-up's Greedy solution, kept next to the
 harness so authored cases stay falsifiable. Your own attempt lives in
 solution.py.

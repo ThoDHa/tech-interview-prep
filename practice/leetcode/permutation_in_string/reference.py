@@ -1,6 +1,6 @@
 """Permutation In String — https://leetcode.com/problems/permutation-in-string/
 
-Write-up & approaches: ../../docs/problems/permutation-in-string/
+Write-up & approaches: ../../../docs/leetcode/permutation-in-string/
 
 Canonical reference implementation: the write-up's optimal approach
 (sliding window with a fixed 26-letter deficit count), kept next to the

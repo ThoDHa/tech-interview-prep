@@ -1,6 +1,6 @@
 """Interleaving String — https://leetcode.com/problems/interleaving-string/
 
-Write-up & approaches: ../../docs/problems/interleaving_string.md
+Write-up & approaches: ../../../docs/leetcode/interleaving_string.md
 Reference implementation of the write-up's Space-Optimized Two-Row DP solution.
 
 You are given three strings `s1`, `s2`, and `s3`. Return `true` if `s3` is formed by interleaving `s1` and `s2` together or `false` otherwise: the characters of `s1` and `s2` are merged so that each keeps its own relative order.

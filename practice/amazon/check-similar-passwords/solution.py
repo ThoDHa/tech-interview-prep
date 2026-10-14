@@ -1,6 +1,6 @@
 """Check Similar Passwords — https://www.fastprep.io/problems/check-similar-passwords
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/check-similar-passwords.md
+Write-up & approaches: ../../../docs/amazon/check-similar-passwords.md
 
 Amazon would like to enforce a password policy for password changes. For each pair of strings newPasswords[i] and oldPasswords[i], determine whether the two passwords are similar.
 

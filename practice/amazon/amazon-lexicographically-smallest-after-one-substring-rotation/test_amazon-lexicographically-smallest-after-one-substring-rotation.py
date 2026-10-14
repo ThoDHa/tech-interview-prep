@@ -1,6 +1,6 @@
 """Tests for Lexicographically Smallest After One Substring Rotation — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-lexicographically-smallest-after-one-substring-rotation.md.
+The worked approaches live in ../../../docs/amazon/amazon-lexicographically-smallest-after-one-substring-rotation.md.
 """
 
 import pytest

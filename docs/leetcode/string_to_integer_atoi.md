@@ -6,7 +6,7 @@
 
 **Algorithm:** [Finite-state machine](https://en.wikipedia.org/wiki/Finite-state_machine)
 
-**Practice:** [`practice/string_to_integer_atoi/solution.py`](../../practice/string_to_integer_atoi/solution.py)
+**Practice:** [`practice/leetcode/string_to_integer_atoi/solution.py`](../../practice/leetcode/string_to_integer_atoi/solution.py)
 
 Implement the `myAtoi(string s)` function, which converts a string to a 32-bit signed integer (similar to C/C++'s `atoi` function).
 

@@ -1,6 +1,6 @@
 """Tests for Get Stable Periods Count — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-get-stable-periods-count.md.
+The worked approaches live in ../../../docs/amazon/amazon-get-stable-periods-count.md.
 """
 
 import pytest

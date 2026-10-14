@@ -1,6 +1,6 @@
 """Min Stack: https://leetcode.com/problems/min-stack/
 
-Write-up & approaches: ../../docs/problems/min_stack.md
+Write-up & approaches: ../../../docs/leetcode/min_stack.md
 
 Design a stack that supports push, pop, top, and retrieving the minimum element
 in constant time.

@@ -6,7 +6,7 @@
 
 **Algorithm:** [Carry (arithmetic)](https://en.wikipedia.org/wiki/Carry_(arithmetic)) · [Positional notation](https://en.wikipedia.org/wiki/Positional_notation)
 
-**Practice:** [`practice/plus_one/solution.py`](../../practice/plus_one/solution.py)
+**Practice:** [`practice/leetcode/plus_one/solution.py`](../../practice/leetcode/plus_one/solution.py)
 
 You are given an integer array `digits`, where each `digits[i]` is the `ith` digit of a large integer. It is ordered from most significant to least significant digit, and it will not contain any leading zero.
 
@@ -245,7 +245,7 @@ The copied output list; the input is left unmodified, which is the trade this ve
 
 ## Comparison of Solutions
 
-The practice harness's `practice/plus_one/reference.py` implements the **Right-to-Left Carry Ripple** solution.
+The practice harness's `practice/leetcode/plus_one/reference.py` implements the **Right-to-Left Carry Ripple** solution.
 
 ### Time Complexity
 

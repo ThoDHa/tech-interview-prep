@@ -6,7 +6,7 @@
 
 **Algorithm:** [Kadane's algorithm](https://en.wikipedia.org/wiki/Maximum_subarray_problem) · [Dynamic programming](https://en.wikipedia.org/wiki/Dynamic_programming) · [Divide and conquer](https://en.wikipedia.org/wiki/Divide-and-conquer_algorithm) · [Prefix sum](https://en.wikipedia.org/wiki/Prefix_sum)
 
-**Practice:** [`practice/maximum_subarray/solution.py`](../../practice/maximum_subarray/solution.py)
+**Practice:** [`practice/leetcode/maximum_subarray/solution.py`](../../practice/leetcode/maximum_subarray/solution.py)
 
 Given an integer array `nums`, find the contiguous subarray (containing at least one number) which has the largest sum and return *its sum*.
 

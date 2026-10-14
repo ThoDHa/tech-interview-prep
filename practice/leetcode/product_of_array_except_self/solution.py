@@ -1,6 +1,6 @@
 """Product of Array Except Self: https://leetcode.com/problems/product-of-array-except-self/
 
-Write-up & approaches: ../../docs/problems/product_of_array_except_self.md
+Write-up & approaches: ../../../docs/leetcode/product_of_array_except_self.md
 
 Given an integer array `nums`, return an array `answer` such that `answer[i]` is
 the product of all elements of `nums` except `nums[i]`. Solve it in `O(n)` time

@@ -1,6 +1,6 @@
 """Tests for Employee Ratings Management System — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-employee-ratings-data-structure.md.
+The worked approaches live in ../../../docs/amazon/amazon-employee-ratings-data-structure.md.
 """
 
 import pytest

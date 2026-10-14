@@ -1,6 +1,6 @@
 """Tests for Remove Duplicate Letters for the Largest Result — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-largest-lexicographic-unique-letters.md.
+The worked approaches live in ../../../docs/amazon/amazon-largest-lexicographic-unique-letters.md.
 """
 
 import pytest

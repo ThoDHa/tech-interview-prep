@@ -1,6 +1,6 @@
 """Find Sum of Beauties — https://www.fastprep.io/problems/amazon-find-sum-of-beauties
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-find-sum-of-beauties.md
+Write-up & approaches: ../../../docs/amazon/amazon-find-sum-of-beauties.md
 
 Amazon's development team is working on a feature for a new product, a smart array processor. A user has provided an integer array called arr of size n and a 2-dimensional array called pairs of size m
 

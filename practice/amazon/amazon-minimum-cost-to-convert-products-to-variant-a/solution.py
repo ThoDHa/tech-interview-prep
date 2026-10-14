@@ -1,6 +1,6 @@
 """Minimum Cost to Convert Products to Variant A — https://www.fastprep.io/problems/amazon-minimum-cost-to-convert-products-to-variant-a
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-minimum-cost-to-convert-products-to-variant-a.md
+Write-up & approaches: ../../../docs/amazon/amazon-minimum-cost-to-convert-products-to-variant-a.md
 
 An inventory array product contains only 0 and 1, where 0 represents variant A and 1 represents variant B.
 

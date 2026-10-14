@@ -1,6 +1,6 @@
 """Tests for Product Category Group Sizes — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-product-category-groups.md.
+The worked approaches live in ../../../docs/amazon/amazon-product-category-groups.md.
 """
 
 import pytest

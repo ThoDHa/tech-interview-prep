@@ -51,7 +51,7 @@ neighbors, and the question is plain reachability. [Breadth-first
 search](https://en.wikipedia.org/wiki/Breadth-first_search) answers reachability on any
 graph without needing any property of the move set, which makes it the natural baseline;
 the same framing drives the flood fills of
-[Number of Islands](../number_of_islands.md):
+[Number of Islands](../leetcode/number_of_islands.md):
 
 1. Read `start_row, start_col` from `source` and `target_row, target_col` from
    `destination`; return `False` immediately when either endpoint is blocked (`'X'`).
@@ -157,7 +157,7 @@ order agrees with move order. A cell is reachable exactly when it is open and at
 of its two possible predecessors (the cell above, the cell to the left) is reachable, so
 one ordered sweep computes reachability for the whole rectangle with no queue and no
 recursion. The same one-directional transition underlies
-[Unique Paths](../unique_paths.md), which counts these paths instead of deciding
+[Unique Paths](../leetcode/unique_paths.md), which counts these paths instead of deciding
 reachability:
 
 1. Return `False` when the destination sits above or left of the source (outside the
@@ -244,7 +244,7 @@ entirely.
   above or left of the source is rejected by the bounds guard instead of discovered
   absent the slow way.
 - Reachability composes through OR (`from_above or from_left`) where path counting would
-  add; the transition skeleton is shared with [Unique Paths](../unique_paths.md).
+  add; the transition skeleton is shared with [Unique Paths](../leetcode/unique_paths.md).
 
 ## Comparison of Solutions
 

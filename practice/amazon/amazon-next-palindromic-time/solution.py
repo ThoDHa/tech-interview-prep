@@ -1,6 +1,6 @@
 """Next Palindromic Time — https://www.fastprep.io/problems/amazon-next-palindromic-time
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-next-palindromic-time.md
+Write-up & approaches: ../../../docs/amazon/amazon-next-palindromic-time.md
 
 Given a valid 24-hour time time in HH:MM format, return the first strictly later time whose four digits form a palindrome.
 

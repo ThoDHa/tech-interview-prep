@@ -1,6 +1,6 @@
 """Tests for Find Min Max Difference — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-find-min-max-difference.md.
+The worked approaches live in ../../../docs/amazon/amazon-find-min-max-difference.md.
 """
 
 import pytest

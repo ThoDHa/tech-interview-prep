@@ -2,7 +2,7 @@
 
 cases.json (marker `simple`) is the "Run" set; cases_full.json (marker `full`) is
 the "Submit" gauntlet. The worked approaches live in
-../../docs/problems/product_of_array_except_self.md.
+../../../docs/leetcode/product_of_array_except_self.md.
 """
 
 import pytest

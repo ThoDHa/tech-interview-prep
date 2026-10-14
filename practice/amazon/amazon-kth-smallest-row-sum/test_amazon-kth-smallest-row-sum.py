@@ -1,6 +1,6 @@
 """Tests for Kth Smallest Sum from Sorted Matrix Rows — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-kth-smallest-row-sum.md.
+The worked approaches live in ../../../docs/amazon/amazon-kth-smallest-row-sum.md.
 """
 
 import pytest

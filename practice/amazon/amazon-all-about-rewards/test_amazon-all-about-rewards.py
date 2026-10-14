@@ -1,6 +1,6 @@
 """Tests for All About Rewards — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-all-about-rewards.md.
+The worked approaches live in ../../../docs/amazon/amazon-all-about-rewards.md.
 """
 
 import pytest

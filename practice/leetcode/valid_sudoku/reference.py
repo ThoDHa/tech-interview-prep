@@ -1,6 +1,6 @@
 """Valid Sudoku — https://leetcode.com/problems/valid-sudoku/
 
-Write-up & approaches: ../../docs/problems/valid_sudoku.md
+Write-up & approaches: ../../../docs/leetcode/valid_sudoku.md
 
 Canonical reference implementation: the write-up's optimal approach (one
 pass with per-row, per-column, and per-box seen sets), kept next to the

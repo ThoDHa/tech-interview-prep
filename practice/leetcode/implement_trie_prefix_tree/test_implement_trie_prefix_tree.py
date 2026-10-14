@@ -4,7 +4,7 @@ Each case is a LeetCode design-operation sequence: an `operations` list (first
 entry is the constructor), an `arguments` list aligned with it, and the
 `expected` results. `run_operations` drives the Trie class and the results are
 compared against `expected`. The worked approaches live in
-../../docs/problems/implement_trie_prefix_tree.md.
+../../../docs/leetcode/implement_trie_prefix_tree.md.
 """
 
 import pytest

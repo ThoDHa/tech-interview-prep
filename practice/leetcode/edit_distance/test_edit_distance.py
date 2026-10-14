@@ -1,6 +1,6 @@
 """Tests for Edit Distance — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../docs/problems/edit_distance.md.
+The worked approaches live in ../../../docs/leetcode/edit_distance.md.
 """
 
 import pytest

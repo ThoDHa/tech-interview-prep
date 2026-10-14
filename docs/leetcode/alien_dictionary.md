@@ -8,7 +8,7 @@
 
 **Algorithm:** [Topological sorting](https://en.wikipedia.org/wiki/Topological_sorting) · [Kahn's algorithm](https://en.wikipedia.org/wiki/Topological_sorting#Kahn%27s_algorithm) · [Depth-first search](https://en.wikipedia.org/wiki/Depth-first_search)
 
-**Practice:** [`practice/alien_dictionary/solution.py`](../../practice/alien_dictionary/solution.py)
+**Practice:** [`practice/leetcode/alien_dictionary/solution.py`](../../practice/leetcode/alien_dictionary/solution.py)
 
 There is a new alien language that uses the English alphabet, but the order of the letters is unknown.
 

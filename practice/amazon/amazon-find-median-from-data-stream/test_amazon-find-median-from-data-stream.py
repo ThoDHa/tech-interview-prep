@@ -1,6 +1,6 @@
 """Tests for Find Median from Data Stream — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-find-median-from-data-stream.md.
+The worked approaches live in ../../../docs/amazon/amazon-find-median-from-data-stream.md.
 """
 
 import pytest

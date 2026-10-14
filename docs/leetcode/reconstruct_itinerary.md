@@ -6,7 +6,7 @@
 
 **Algorithm:** [Eulerian path](https://en.wikipedia.org/wiki/Eulerian_path) · [Hierholzer's algorithm](https://en.wikipedia.org/wiki/Eulerian_path#Hierholzer%27s_algorithm) · [Backtracking](https://en.wikipedia.org/wiki/Backtracking)
 
-**Practice:** [`practice/reconstruct_itinerary/solution.py`](../../practice/reconstruct_itinerary/solution.py)
+**Practice:** [`practice/leetcode/reconstruct_itinerary/solution.py`](../../practice/leetcode/reconstruct_itinerary/solution.py)
 
 You are given a list of flight tickets `tickets` where `tickets[i] = [from_i, to_i]` represent the source airport and the destination airport. 
 

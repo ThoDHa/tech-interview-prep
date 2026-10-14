@@ -46,7 +46,7 @@ int n: the number of nodes, labeled from 0 to n - 1int edges[][]: an array where
 
 ## Solutions
 
-Throughout, `n` is the node count and `e` is the edge count. The approaches mirror the unified-track page [Number of Connected Components in an Undirected Graph](../number_of_connected_components_in_an_undirected_graph.md), which solves the same problem on LeetCode's adjacency-list input.
+Throughout, `n` is the node count and `e` is the edge count. The approaches mirror the unified-track page [Number of Connected Components in an Undirected Graph](../leetcode/number_of_connected_components_in_an_undirected_graph.md), which solves the same problem on LeetCode's adjacency-list input.
 
 ### DFS with Visited Set
 

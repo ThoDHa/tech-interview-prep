@@ -6,7 +6,7 @@
 
 **Algorithm:** [Lowest common ancestor](https://en.wikipedia.org/wiki/Lowest_common_ancestor) · [Depth-first search](https://en.wikipedia.org/wiki/Depth-first_search) · [Breadth-first search](https://en.wikipedia.org/wiki/Breadth-first_search)
 
-**Practice:** [`practice/lowest_common_ancestor_of_a_binary_tree/solution.py`](../../practice/lowest_common_ancestor_of_a_binary_tree/solution.py)
+**Practice:** [`practice/leetcode/lowest_common_ancestor_of_a_binary_tree/solution.py`](../../practice/leetcode/lowest_common_ancestor_of_a_binary_tree/solution.py)
 
 Given a binary tree, find the lowest common ancestor (LCA) of two given nodes in the tree.
 

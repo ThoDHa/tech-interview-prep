@@ -2,7 +2,7 @@
 
 cases.json (marker `simple`) is the "Run" set; cases_full.json (marker `full`) is
 the "Submit" gauntlet. The worked approaches live in
-../../docs/problems/minimum_window_substring.md.
+../../../docs/leetcode/minimum_window_substring.md.
 """
 
 import pytest

@@ -1,6 +1,6 @@
 """Ransom Note: https://leetcode.com/problems/ransom-note/
 
-Write-up & approaches: ../../docs/problems/ransom_note.md
+Write-up & approaches: ../../../docs/leetcode/ransom_note.md
 
 Given two strings `ransomNote` and `magazine`, return `True` if `ransomNote`
 can be constructed using the letters of `magazine` (each letter used once).

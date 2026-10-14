@@ -1,6 +1,6 @@
 """Number of Connected Components In An Undirected Graph — https://leetcode.com/problems/number-of-connected-components-in-an-undirected-graph/
 
-Write-up & approaches: ../../docs/problems/number_of_connected_components_in_an_undirected_graph.md
+Write-up & approaches: ../../../docs/leetcode/number_of_connected_components_in_an_undirected_graph.md
 Reference implementation of the write-up's Union-Find solution.
 
 You have an undirected graph of `n` nodes labeled from `0` to `n - 1`. You are given an integer `n` and an array `edges` where `edges[i] = [aᵢ, bᵢ]` indicates that there is an edge between `aᵢ` and `bᵢ` in the graph. Return the number of connected components in the graph.

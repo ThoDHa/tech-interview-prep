@@ -1,6 +1,6 @@
 """Subtree of Another Tree — https://leetcode.com/problems/subtree-of-another-tree/
 
-Write-up & approaches: ../../docs/problems/subtree_of_another_tree.md
+Write-up & approaches: ../../../docs/leetcode/subtree_of_another_tree.md
 
 Canonical reference implementation: the write-up's Subtree Serialization
 Set solution (one lossless fingerprint per subtree, one membership test).

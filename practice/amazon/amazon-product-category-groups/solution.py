@@ -1,6 +1,6 @@
 """Product Category Group Sizes — https://www.fastprep.io/problems/amazon-product-category-groups
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-product-category-groups.md
+Write-up & approaches: ../../../docs/amazon/amazon-product-category-groups.md
 
 You are given a list of products and a list of pairs. Each pair means the two products belong to the same category. Category membership is transitive: if product A is in the same category as B, and B 
 

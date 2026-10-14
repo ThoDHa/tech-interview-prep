@@ -1,6 +1,6 @@
 """Tests for Find Number — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-find-number.md.
+The worked approaches live in ../../../docs/amazon/amazon-find-number.md.
 """
 
 import pytest

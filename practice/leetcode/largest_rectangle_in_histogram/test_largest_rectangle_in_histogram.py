@@ -2,7 +2,7 @@
 
 cases.json (marker `simple`) is the "Run" set; cases_full.json (marker `full`) is
 the "Submit" gauntlet. The worked approaches live in
-../../docs/problems/largest_rectangle_in_histogram.md.
+../../../docs/leetcode/largest_rectangle_in_histogram.md.
 """
 
 import pytest

@@ -1,6 +1,6 @@
 """Add Two Numbers — https://leetcode.com/problems/add-two-numbers/
 
-Write-up & approaches: ../../docs/problems/add_two_numbers.md
+Write-up & approaches: ../../../docs/leetcode/add_two_numbers.md
 
 Canonical reference implementation: the write-up's Digit-wise Addition
 solution (streaming schoolbook addition with a carry). Your own attempt

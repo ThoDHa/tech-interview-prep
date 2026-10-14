@@ -6,7 +6,7 @@
 
 **Algorithm:** [Breadth-first search](https://en.wikipedia.org/wiki/Breadth-first_search) · [Dynamic programming](https://en.wikipedia.org/wiki/Dynamic_programming)
 
-**Practice:** [`practice/01_matrix/solution.py`](../../practice/01_matrix/solution.py)
+**Practice:** [`practice/leetcode/01_matrix/solution.py`](../../practice/leetcode/01_matrix/solution.py)
 
 Given an `m x n` binary matrix `mat`, return the distance of the nearest `0` for each cell.
 

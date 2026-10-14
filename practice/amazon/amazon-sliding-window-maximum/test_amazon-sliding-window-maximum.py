@@ -1,6 +1,6 @@
 """Tests for Sliding Window Maximum — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-sliding-window-maximum.md.
+The worked approaches live in ../../../docs/amazon/amazon-sliding-window-maximum.md.
 """
 
 import pytest

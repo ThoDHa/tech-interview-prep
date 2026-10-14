@@ -1,6 +1,6 @@
 """Get Max Pairs — https://www.fastprep.io/problems/amazon-get-max-pairs
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-get-max-pairs.md
+Write-up & approaches: ../../../docs/amazon/amazon-get-max-pairs.md
 
 An AWS client wants to deploy multiple applications and needs two servers, one for their frontend and another for their backend. They have a list of integers representing the quality of servers in ter
 

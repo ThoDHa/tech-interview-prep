@@ -1,6 +1,6 @@
 """Tests for Vertical Order Traversal of a Binary Tree — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-vertical-order-traversal-of-binary-tree.md.
+The worked approaches live in ../../../docs/amazon/amazon-vertical-order-traversal-of-binary-tree.md.
 """
 
 import pytest

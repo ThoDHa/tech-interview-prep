@@ -1,6 +1,6 @@
 """Find Minimum Groups — https://www.fastprep.io/problems/amazon-find-minimum-groups
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-find-minimum-groups.md
+Write-up & approaches: ../../../docs/amazon/amazon-find-minimum-groups.md
 
 A financial services company has requested AWS for a private deployment of its cloud network. Considering the sensitive nature of the company's business, AWS has also advised them to add a specific ty
 

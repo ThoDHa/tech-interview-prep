@@ -1,6 +1,6 @@
 """Car Fleet — https://leetcode.com/problems/car-fleet/
 
-Write-up & approaches: ../../docs/problems/car_fleet.md
+Write-up & approaches: ../../../docs/leetcode/car_fleet.md
 
 There are `n` cars traveling to the same destination on a one-lane highway. You are given two arrays of integers `position` and `speed`, both of length `n`. * `position[i]` is the position of the `ith
 

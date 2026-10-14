@@ -1,6 +1,6 @@
 """Vertical Order Traversal of a Binary Tree — https://www.fastprep.io/problems/amazon-vertical-order-traversal-of-binary-tree
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-vertical-order-traversal-of-binary-tree.md
+Write-up & approaches: ../../../docs/amazon/amazon-vertical-order-traversal-of-binary-tree.md
 
 You are given a binary tree serialized as a level-order array levelOrder. Each non-null token is a signed decimal integer, and the token "null" denotes a missing child.
 

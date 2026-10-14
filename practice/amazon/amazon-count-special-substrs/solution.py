@@ -1,6 +1,6 @@
 """Count Special Substrings — https://www.fastprep.io/problems/amazon-count-special-substrs
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-count-special-substrs.md
+Write-up & approaches: ../../../docs/amazon/amazon-count-special-substrs.md
 
 Imagine you're working with Amazon's data analysis team, specifically focusing on analyzing customer behavior through clickstream data. This data consists of sequences of user actions on the website, 
 

@@ -6,7 +6,7 @@
 
 **Algorithm:** [Arithmetic series](https://en.wikipedia.org/wiki/Arithmetic_progression) · [Hash table](https://en.wikipedia.org/wiki/Hash_table) · [Exclusive or](https://en.wikipedia.org/wiki/Exclusive_or) · [Binary search algorithm](https://en.wikipedia.org/wiki/Binary_search_algorithm)
 
-**Practice:** [`practice/missing_number/solution.py`](../../practice/missing_number/solution.py)
+**Practice:** [`practice/leetcode/missing_number/solution.py`](../../practice/leetcode/missing_number/solution.py)
 
 Given an array `nums` containing `n` integers in the range `[0, n]` without any duplicates, return the single number in the range that is missing from `nums`.
 
@@ -279,7 +279,7 @@ An in-place sort uses `O(1)` auxiliary space; Python's `list.sort` allocates `O(
 
 ## Comparison of Solutions
 
-The practice harness's `practice/missing_number/reference.py` implements the **Gauss Sum Formula** solution.
+The practice harness's `practice/leetcode/missing_number/reference.py` implements the **Gauss Sum Formula** solution.
 
 ### Time Complexity
 

@@ -1,6 +1,6 @@
 """Subtree of Another Tree — https://leetcode.com/problems/subtree-of-another-tree/
 
-Write-up & approaches: ../../docs/problems/subtree_of_another_tree.md
+Write-up & approaches: ../../../docs/leetcode/subtree_of_another_tree.md
 
 Given the roots of two binary trees `root` and `subRoot`, return `true` if there is a subtree of `root` with the same structure and node values of `subRoot` and `false` otherwise. A subtree of a binar
 

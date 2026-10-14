@@ -1,6 +1,6 @@
 """Min Cost Climbing Stairs — https://leetcode.com/problems/min-cost-climbing-stairs/
 
-Write-up & approaches: ../../docs/problems/min_cost_climbing_stairs.md
+Write-up & approaches: ../../../docs/leetcode/min_cost_climbing_stairs.md
 
 You are given an array of integers `cost` where `cost[i]` is the cost of taking a step from the `ith` floor of a staircase. After paying the cost, you can step to either the `(i + 1)th` floor or the `
 

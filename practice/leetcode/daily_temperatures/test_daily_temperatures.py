@@ -1,6 +1,6 @@
 """Tests for Daily Temperatures — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../docs/problems/daily_temperatures.md.
+The worked approaches live in ../../../docs/leetcode/daily_temperatures.md.
 """
 
 import pytest

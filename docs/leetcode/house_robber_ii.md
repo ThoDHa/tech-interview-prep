@@ -6,7 +6,7 @@
 
 **Algorithm:** [Dynamic programming](https://en.wikipedia.org/wiki/Dynamic_programming) · [Recurrence relation](https://en.wikipedia.org/wiki/Recurrence_relation) · [Memoization](https://en.wikipedia.org/wiki/Memoization)
 
-**Practice:** [`practice/house_robber_ii/solution.py`](../../practice/house_robber_ii/solution.py)
+**Practice:** [`practice/leetcode/house_robber_ii/solution.py`](../../practice/leetcode/house_robber_ii/solution.py)
 
 You are given an integer array `nums` where `nums[i]` represents the amount of money the `i`th house has. The houses are arranged in a circle, i.e. the first house and the last house are neighbors.
 
@@ -594,7 +594,7 @@ class Solution:
 
 ## Comparison of Solutions
 
-The practice harness's `practice/house_robber_ii/reference.py` implements the **Space-Optimized DP** solution.
+The practice harness's `practice/leetcode/house_robber_ii/reference.py` implements the **Space-Optimized DP** solution.
 
 ### Time Complexity
 

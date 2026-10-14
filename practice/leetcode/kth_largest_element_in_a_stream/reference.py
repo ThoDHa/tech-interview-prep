@@ -1,6 +1,6 @@
 """Kth Largest Element In a Stream — https://leetcode.com/problems/kth-largest-element-in-a-stream/
 
-Write-up & approaches: ../../docs/problems/kth_largest_element_in_a_stream.md
+Write-up & approaches: ../../../docs/leetcode/kth_largest_element_in_a_stream.md
 Reference implementation of the write-up's Min-Heap of Size K solution, kept
 next to the harness so authored cases stay falsifiable. Your own attempt
 lives in solution.py.

@@ -1,6 +1,6 @@
 """Fortune Telling — https://www.fastprep.io/problems/amazon-minimize-the-range
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-minimize-the-range.md
+Write-up & approaches: ../../../docs/amazon/amazon-minimize-the-range.md
 
 Given a collection of n cards. The i-th card (1 ≤ i ≤ n) has a number Ai on its front and a number Bi on its back. At the start, all the cards are facing upwards. He wants to minimize the range of num
 

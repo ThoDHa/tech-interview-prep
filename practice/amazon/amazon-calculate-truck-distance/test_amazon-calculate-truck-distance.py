@@ -1,6 +1,6 @@
 """Tests for Calculate Truck Distance — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-calculate-truck-distance.md.
+The worked approaches live in ../../../docs/amazon/amazon-calculate-truck-distance.md.
 """
 
 import pytest

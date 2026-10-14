@@ -1,6 +1,6 @@
 """Meeting Rooms II — https://leetcode.com/problems/meeting-rooms-ii/
 
-Write-up & approaches: ../../docs/problems/meeting_rooms_ii.md
+Write-up & approaches: ../../../docs/leetcode/meeting_rooms_ii.md
 Reference implementation of the write-up's Min-Heap of End Times solution, kept
 next to the harness so authored cases stay falsifiable. Your own attempt
 lives in solution.py.

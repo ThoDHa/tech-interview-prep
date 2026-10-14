@@ -4,7 +4,7 @@ attempt (solution.py) against both case sets.
 Trees are stored in the case files as preorder/inorder value arrays (inputs) and a
 LeetCode level-order array (expected output), marshalled with tree_to_list here.
 The worked approaches live in
-../../docs/problems/construct_binary_tree_from_preorder_and_inorder_traversal.md.
+../../../docs/leetcode/construct_binary_tree_from_preorder_and_inorder_traversal.md.
 """
 
 import pytest

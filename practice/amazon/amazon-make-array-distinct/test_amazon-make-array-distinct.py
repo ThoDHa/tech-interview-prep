@@ -1,6 +1,6 @@
 """Tests for Make Array Distinct — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-make-array-distinct.md.
+The worked approaches live in ../../../docs/amazon/amazon-make-array-distinct.md.
 """
 
 import pytest

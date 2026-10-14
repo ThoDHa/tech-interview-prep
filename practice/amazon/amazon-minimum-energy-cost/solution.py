@@ -1,6 +1,6 @@
 """Min Energy Cost — https://www.fastprep.io/problems/amazon-minimum-energy-cost
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-minimum-energy-cost.md
+Write-up & approaches: ../../../docs/amazon/amazon-minimum-energy-cost.md
 
 Janet has N bags in a row. Each bag has a weight (Wi). Janet can collect bags from either the leftmost or rightmost position, but there are energy costs:
 

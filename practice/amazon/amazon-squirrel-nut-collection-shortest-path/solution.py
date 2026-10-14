@@ -1,6 +1,6 @@
 """Squirrel Nut Collection Shortest Path — https://www.fastprep.io/problems/amazon-squirrel-nut-collection-shortest-path
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-squirrel-nut-collection-shortest-path.md
+Write-up & approaches: ../../../docs/amazon/amazon-squirrel-nut-collection-shortest-path.md
 
 A squirrel, a tree, and several nuts occupy distinct cells on a rectangular Manhattan grid. The squirrel can carry one nut at a time. Every nut must be delivered to the tree.
 

@@ -6,7 +6,7 @@
 
 **Algorithm:** [Hash table](https://en.wikipedia.org/wiki/Hash_table) · [Heap (data structure)](https://en.wikipedia.org/wiki/Heap_(data_structure)) · [Bucket sort](https://en.wikipedia.org/wiki/Bucket_sort) · [Sorting](https://en.wikipedia.org/wiki/Sorting_algorithm)
 
-**Practice:** [`practice/top_k_frequent_elements/solution.py`](../../practice/top_k_frequent_elements/solution.py)
+**Practice:** [`practice/leetcode/top_k_frequent_elements/solution.py`](../../practice/leetcode/top_k_frequent_elements/solution.py)
 
 Given an integer array `nums` and an integer `k`, return the `k` most frequent elements within the array.
 

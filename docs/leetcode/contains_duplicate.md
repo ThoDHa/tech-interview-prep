@@ -6,7 +6,7 @@
 
 **Algorithm:** [Hash table](https://en.wikipedia.org/wiki/Hash_table) · [Sorting](https://en.wikipedia.org/wiki/Sorting_algorithm)
 
-**Practice:** [`practice/contains_duplicate/solution.py`](../../practice/contains_duplicate/solution.py)
+**Practice:** [`practice/leetcode/contains_duplicate/solution.py`](../../practice/leetcode/contains_duplicate/solution.py)
 
 Given an integer array `nums`, return `true` if any value appears **at least twice** in the array, and return `false` if every element is distinct.
 

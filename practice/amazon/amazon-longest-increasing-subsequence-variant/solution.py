@@ -1,6 +1,6 @@
 """Longest Increasing Subsequence — https://www.fastprep.io/problems/amazon-longest-increasing-subsequence-variant
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-longest-increasing-subsequence-variant.md
+Write-up & approaches: ../../../docs/amazon/amazon-longest-increasing-subsequence-variant.md
 
 Given an integer array nums, return the length of its longest strictly increasing subsequence.
 

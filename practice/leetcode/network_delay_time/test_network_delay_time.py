@@ -1,6 +1,6 @@
 """Tests for Network Delay Time — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../docs/problems/network_delay_time.md.
+The worked approaches live in ../../../docs/leetcode/network_delay_time.md.
 """
 
 import pytest

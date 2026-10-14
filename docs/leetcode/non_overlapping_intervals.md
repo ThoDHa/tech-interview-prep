@@ -6,7 +6,7 @@
 
 **Algorithm:** [Greedy algorithm](https://en.wikipedia.org/wiki/Greedy_algorithm) · [Interval scheduling](https://en.wikipedia.org/wiki/Interval_scheduling) · [Sorting algorithm](https://en.wikipedia.org/wiki/Sorting_algorithm) · [Dynamic programming](https://en.wikipedia.org/wiki/Dynamic_programming)
 
-**Practice:** [`practice/non_overlapping_intervals/solution.py`](../../practice/non_overlapping_intervals/solution.py)
+**Practice:** [`practice/leetcode/non_overlapping_intervals/solution.py`](../../practice/leetcode/non_overlapping_intervals/solution.py)
 
 Given an array of intervals `intervals` where `intervals[i] = [start_i, end_i]`, return the minimum number of intervals you need to remove to make the rest of the intervals non-overlapping.
 
@@ -374,7 +374,7 @@ A counter and a running end.
 
 ## Comparison of Solutions
 
-The practice harness's `practice/non_overlapping_intervals/reference.py` implements the **Greedy Earliest End** solution.
+The practice harness's `practice/leetcode/non_overlapping_intervals/reference.py` implements the **Greedy Earliest End** solution.
 
 ### Time Complexity
 

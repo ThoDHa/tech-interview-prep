@@ -1,6 +1,6 @@
 """Subsets: https://leetcode.com/problems/subsets/
 
-Write-up & approaches: ../../docs/problems/subsets.md
+Write-up & approaches: ../../../docs/leetcode/subsets.md
 
 Given an integer array `nums` of unique elements, return all possible subsets
 (the power set). The solution set must not contain duplicate subsets, and may be

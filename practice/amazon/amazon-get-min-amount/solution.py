@@ -1,6 +1,6 @@
 """Get Minimum Amount — https://www.fastprep.io/problems/amazon-get-min-amount
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-get-min-amount.md
+Write-up & approaches: ../../../docs/amazon/amazon-get-min-amount.md
 
 Special thanks: A special thank you to a lovely, amazing fren who shared that this question appeared again on September 21, 2026! 💜
 

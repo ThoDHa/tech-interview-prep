@@ -1,6 +1,6 @@
 """Same Tree — https://leetcode.com/problems/same-tree/
 
-Write-up & approaches: ../../docs/problems/same_tree.md
+Write-up & approaches: ../../../docs/leetcode/same_tree.md
 
 Canonical reference implementation: the write-up's Recursive DFS solution
 (the equivalence definition translated clause by clause). Your own attempt

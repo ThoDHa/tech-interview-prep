@@ -1,6 +1,6 @@
 """Loyal Customers Across Two Days — https://www.fastprep.io/problems/amazon-loyal-customers
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-loyal-customers.md
+Write-up & approaches: ../../../docs/amazon/amazon-loyal-customers.md
 
 You are given two arrays of website logs, dayOneLogs and dayTwoLogs. Each log entry contains exactly three strings in this order: timestamp, customerId, and pageId.
 

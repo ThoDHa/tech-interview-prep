@@ -6,7 +6,7 @@
 
 **Algorithm:** [Dynamic programming](https://en.wikipedia.org/wiki/Dynamic_programming) · [Memoization](https://en.wikipedia.org/wiki/Memoization) · [Breadth-first search](https://en.wikipedia.org/wiki/Breadth-first_search)
 
-**Practice:** [`practice/coin_change/solution.py`](../../practice/coin_change/solution.py)
+**Practice:** [`practice/leetcode/coin_change/solution.py`](../../practice/leetcode/coin_change/solution.py)
 
 You are given an integer array `coins` representing coins of different denominations and an integer `amount` representing a total amount of money.
 

@@ -1,6 +1,6 @@
 """Tests for Rice Bags — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/max-set-size.md.
+The worked approaches live in ../../../docs/amazon/max-set-size.md.
 """
 
 import pytest

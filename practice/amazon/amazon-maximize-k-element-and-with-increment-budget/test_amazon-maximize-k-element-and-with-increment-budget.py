@@ -1,6 +1,6 @@
 """Tests for Maximize K-Element AND with an Increment Budget — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-maximize-k-element-and-with-increment-budget.md.
+The worked approaches live in ../../../docs/amazon/amazon-maximize-k-element-and-with-increment-budget.md.
 """
 
 import pytest

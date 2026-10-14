@@ -1,6 +1,6 @@
 """Largest Number With Digit Sum — https://www.fastprep.io/problems/amazon-largest-number-with-digit-sum
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-largest-number-with-digit-sum.md
+Write-up & approaches: ../../../docs/amazon/amazon-largest-number-with-digit-sum.md
 
 You are given three integers x, y, and n, where x and y are digits from 1 to 9.
 

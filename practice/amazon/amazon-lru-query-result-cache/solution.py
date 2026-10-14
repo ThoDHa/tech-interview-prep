@@ -1,6 +1,6 @@
 """LRU Cache for Query Results — https://www.fastprep.io/problems/amazon-lru-query-result-cache
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-lru-query-result-cache.md
+Write-up & approaches: ../../../docs/amazon/amazon-lru-query-result-cache.md
 
 Maintain a cache with positive integer capacity. Process each operation atomically in the supplied completed serialization order:
 

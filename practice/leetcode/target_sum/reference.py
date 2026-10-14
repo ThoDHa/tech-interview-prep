@@ -1,6 +1,6 @@
 """Target Sum — https://leetcode.com/problems/target-sum/
 
-Write-up & approaches: ../../docs/problems/target_sum.md
+Write-up & approaches: ../../../docs/leetcode/target_sum.md
 Reference implementation of the write-up's Space-Optimized 1-D DP solution.
 
 You are given an array of integers `nums` and an integer `target`. For each number you choose to either add or subtract it, building an expression; return the number of different expressions whose total equals `target`.

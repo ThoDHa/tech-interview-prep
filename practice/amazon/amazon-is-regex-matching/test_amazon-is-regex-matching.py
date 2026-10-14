@@ -1,6 +1,6 @@
 """Tests for Is Regex Matching — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-is-regex-matching.md.
+The worked approaches live in ../../../docs/amazon/amazon-is-regex-matching.md.
 """
 
 import pytest

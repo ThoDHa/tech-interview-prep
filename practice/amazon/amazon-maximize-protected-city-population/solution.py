@@ -1,6 +1,6 @@
 """Maximize Protected City Population — https://www.fastprep.io/problems/amazon-maximize-protected-city-population
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-maximize-protected-city-population.md
+Write-up & approaches: ../../../docs/amazon/amazon-maximize-protected-city-population.md
 
 You are given n cities arranged in a line. City i has population population[i] and may contain a security unit described by unit[i], where unit[i] = '1' means a unit is initially stationed in city i.
 

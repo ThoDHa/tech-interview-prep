@@ -1,6 +1,6 @@
 """Palindrome Partitioning — https://leetcode.com/problems/palindrome-partitioning/
 
-Write-up & approaches: ../../docs/problems/palindrome_partitioning.md
+Write-up & approaches: ../../../docs/leetcode/palindrome_partitioning.md
 
 Given a string `s`, split `s` into substrings where every substring is a palindrome. Return all possible lists of palindromic substrings. You may return the solution in **any order**.
 

@@ -1,6 +1,6 @@
 """House Robber — https://leetcode.com/problems/house-robber/
 
-Write-up & approaches: ../../docs/problems/house_robber.md
+Write-up & approaches: ../../../docs/leetcode/house_robber.md
 
 You are given an integer array `nums` where `nums[i]` represents the amount of money the `i`th house has. The houses are arranged in a straight line, i.e. the `i`th house is the neighbor of the `(i-1)
 

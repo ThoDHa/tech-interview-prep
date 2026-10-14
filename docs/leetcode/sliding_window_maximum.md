@@ -6,7 +6,7 @@
 
 **Algorithm:** [Sliding window](https://usaco.guide/gold/sliding-window) · [Heap (data structure)](https://en.wikipedia.org/wiki/Heap_(data_structure)) · [Double-ended queue](https://en.wikipedia.org/wiki/Double-ended_queue)
 
-**Practice:** [`practice/sliding_window_maximum/solution.py`](../../practice/sliding_window_maximum/solution.py)
+**Practice:** [`practice/leetcode/sliding_window_maximum/solution.py`](../../practice/leetcode/sliding_window_maximum/solution.py)
 
 You are given an array of integers `nums` and an integer `k`. There is a sliding window of size `k` that starts at the left edge of the array. The window slides one position to the right until it reaches the right edge of the array.
 

@@ -1,6 +1,6 @@
 """Course Schedule II — https://leetcode.com/problems/course-schedule-ii/
 
-Write-up & approaches: ../../docs/problems/course_schedule_ii.md
+Write-up & approaches: ../../../docs/leetcode/course_schedule_ii.md
 Reference implementation of the write-up's Kahn's Algorithm solution, kept
 next to the harness so authored cases stay falsifiable. Your own attempt
 lives in solution.py.

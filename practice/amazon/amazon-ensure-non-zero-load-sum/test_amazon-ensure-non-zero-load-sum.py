@@ -1,6 +1,6 @@
 """Tests for Ensure Non Zero Load Sum — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-ensure-non-zero-load-sum.md.
+The worked approaches live in ../../../docs/amazon/amazon-ensure-non-zero-load-sum.md.
 """
 
 import pytest

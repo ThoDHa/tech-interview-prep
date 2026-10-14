@@ -1,6 +1,6 @@
 """Get Maximum — https://www.fastprep.io/problems/amazon-get-maximum
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-get-maximum.md
+Write-up & approaches: ../../../docs/amazon/amazon-get-maximum.md
 
 Amazon Fresh is a grocery store designed from the ground up to offer a seamless grocery shopping experience to consumers. As part of a stock clearance exercise at the store, given the number of fresh 
 

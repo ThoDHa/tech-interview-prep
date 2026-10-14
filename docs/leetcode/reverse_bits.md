@@ -6,7 +6,7 @@
 
 **Algorithm:** [Bitwise operation](https://en.wikipedia.org/wiki/Bitwise_operation) · [Divide-and-conquer bit swap](https://en.wikipedia.org/wiki/Hamming_weight)
 
-**Practice:** [`practice/reverse_bits/solution.py`](../../practice/reverse_bits/solution.py)
+**Practice:** [`practice/leetcode/reverse_bits/solution.py`](../../practice/leetcode/reverse_bits/solution.py)
 
 Given a 32-bit unsigned integer `n`, reverse the bits of the binary representation of `n` and return the result.
 
@@ -265,7 +265,7 @@ Two transient 32-character strings: the padded rendering and its reversed copy.
 
 ## Comparison of Solutions
 
-The practice harness's `practice/reverse_bits/reference.py` implements the **Build-by-Shift Loop** solution.
+The practice harness's `practice/leetcode/reverse_bits/reference.py` implements the **Build-by-Shift Loop** solution.
 
 ### Time Complexity
 

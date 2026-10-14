@@ -1,6 +1,6 @@
 """Tests for Trapping Rain Water — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-trapping-rain-water.md.
+The worked approaches live in ../../../docs/amazon/amazon-trapping-rain-water.md.
 """
 
 import pytest

@@ -1,6 +1,6 @@
 """Tests for Get Maximum Sum — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-get-maximum-sum.md.
+The worked approaches live in ../../../docs/amazon/amazon-get-maximum-sum.md.
 """
 
 import pytest

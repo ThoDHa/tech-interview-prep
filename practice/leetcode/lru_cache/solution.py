@@ -1,6 +1,6 @@
 """LRU Cache: https://leetcode.com/problems/lru-cache/
 
-Write-up & approaches: ../../docs/problems/lru_cache.md
+Write-up & approaches: ../../../docs/leetcode/lru_cache.md
 
 Design a data structure that follows the constraints of a Least Recently Used
 (LRU) cache, with O(1) average time for both get and put.

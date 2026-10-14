@@ -1,6 +1,6 @@
 """Tests for Find K Level Permutation — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-find-k-level-permutation.md.
+The worked approaches live in ../../../docs/amazon/amazon-find-k-level-permutation.md.
 """
 
 import pytest

@@ -3,7 +3,7 @@
 Trees are stored in the case files as LeetCode level-order arrays (null = missing
 node) and marshalled to TreeNode here. cases.json (marker `simple`) is the "Run"
 set; cases_full.json (marker `full`) is the "Submit" gauntlet. The worked
-approaches live in ../../docs/problems/binary_tree_level_order_traversal.md.
+approaches live in ../../../docs/leetcode/binary_tree_level_order_traversal.md.
 """
 
 import pytest

@@ -1,6 +1,6 @@
 """Partition Equal Subset Sum: https://leetcode.com/problems/partition-equal-subset-sum/
 
-Write-up & approaches: ../../docs/problems/partition_equal_subset_sum.md
+Write-up & approaches: ../../../docs/leetcode/partition_equal_subset_sum.md
 
 Given an integer array `nums`, return `True` if it can be partitioned into two
 subsets with equal sum.

@@ -1,6 +1,6 @@
 """Course Schedule II — https://www.fastprep.io/problems/amazon-course-schedule-ii
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-course-schedule-ii.md
+Write-up & approaches: ../../../docs/amazon/amazon-course-schedule-ii.md
 
 There are numCourses courses labeled from 0 to numCourses - 1. Each pair [course, prerequisite] means the prerequisite must be completed before the course.
 

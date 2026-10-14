@@ -1,6 +1,6 @@
 """Maximum Sum BST in a Binary Tree — https://www.fastprep.io/problems/amazon-maximum-sum-bst
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-maximum-sum-bst.md
+Write-up & approaches: ../../../docs/amazon/amazon-maximum-sum-bst.md
 
 Given the root of a binary tree, find the maximum sum of node values among all subtrees that are valid binary search trees.
 

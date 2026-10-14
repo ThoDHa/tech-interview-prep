@@ -1,6 +1,6 @@
 """Max Aggregate Temp Change — https://www.fastprep.io/problems/amazon-get-max-aggregate-temperature-change
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-get-max-aggregate-temperature-change.md
+Write-up & approaches: ../../../docs/amazon/amazon-get-max-aggregate-temperature-change.md
 
 Alexa is Amazon's virtual AI assistant. It makes it easy to set up your Alexa-enabled devices, listen to music, get weather updates, and much more. The team is working on a new feature that evaluates 
 

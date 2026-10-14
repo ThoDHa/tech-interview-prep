@@ -1,6 +1,6 @@
 """Max User Traffic — https://www.fastprep.io/problems/amazon-maximum-user-traffic
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-maximum-user-traffic.md
+Write-up & approaches: ../../../docs/amazon/amazon-maximum-user-traffic.md
 
 Special thanks: Nick contributed this problem.
 

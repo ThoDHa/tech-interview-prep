@@ -1,6 +1,6 @@
 """Design Twitter — https://leetcode.com/problems/design-twitter/
 
-Write-up & approaches: ../../docs/problems/design_twitter.md
+Write-up & approaches: ../../../docs/leetcode/design_twitter.md
 Reference implementation of the write-up's Min-Heap K-Way Merge solution, kept
 next to the harness so authored cases stay falsifiable. Your own attempt
 lives in solution.py.

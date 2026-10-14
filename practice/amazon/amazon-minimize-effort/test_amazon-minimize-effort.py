@@ -1,6 +1,6 @@
 """Tests for Minimize Effort — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-minimize-effort.md.
+The worked approaches live in ../../../docs/amazon/amazon-minimize-effort.md.
 """
 
 import pytest

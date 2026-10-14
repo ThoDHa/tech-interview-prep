@@ -1,6 +1,6 @@
 """Tests for Resolve Task Dependencies — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-resolve-task-dependencies.md.
+The worked approaches live in ../../../docs/amazon/amazon-resolve-task-dependencies.md.
 """
 
 import pytest

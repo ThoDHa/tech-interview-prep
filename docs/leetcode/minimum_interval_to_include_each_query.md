@@ -6,7 +6,7 @@
 
 **Algorithm:** [Heap (data structure)](https://en.wikipedia.org/wiki/Heap_(data_structure)) · [Sweep line algorithm](https://en.wikipedia.org/wiki/Sweep_line_algorithm) · [Sorting algorithm](https://en.wikipedia.org/wiki/Sorting_algorithm)
 
-**Practice:** [`practice/minimum_interval_to_include_each_query/solution.py`](../../practice/minimum_interval_to_include_each_query/solution.py)
+**Practice:** [`practice/leetcode/minimum_interval_to_include_each_query/solution.py`](../../practice/leetcode/minimum_interval_to_include_each_query/solution.py)
 
 You are given a 2D integer array `intervals`, where `intervals[i] = [left_i, right_i]` represents the `ith` interval starting at `left_i` and ending at `right_i` **(inclusive)**.
 
@@ -294,7 +294,7 @@ The heap holds at most `n` pairs, and the indexed queries hold one pair per quer
 
 ## Comparison of Solutions
 
-The practice harness's `practice/minimum_interval_to_include_each_query/reference.py` implements the **Min-Heap Sweep** solution.
+The practice harness's `practice/leetcode/minimum_interval_to_include_each_query/reference.py` implements the **Min-Heap Sweep** solution.
 
 ### Time Complexity
 

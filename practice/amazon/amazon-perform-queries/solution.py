@@ -1,6 +1,6 @@
 """Perform Queries — https://www.fastprep.io/problems/amazon-perform-queries
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-perform-queries.md
+Write-up & approaches: ../../../docs/amazon/amazon-perform-queries.md
 
 Amazon ships millions of packages every day. A large percentage of them are fulfilled by Amazon, so it is important to minimize shipping costs. It has been found that moving a group of 3 packages to t
 

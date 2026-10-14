@@ -1,6 +1,6 @@
 """Invert Binary Tree: https://leetcode.com/problems/invert-binary-tree/
 
-Write-up & approaches: ../../docs/problems/invert_binary_tree.md
+Write-up & approaches: ../../../docs/leetcode/invert_binary_tree.md
 
 Given the `root` of a binary tree, invert it (swap every node's children) and
 return the root.

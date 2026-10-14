@@ -6,7 +6,7 @@
 
 **Algorithm:** [Matrix](https://en.wikipedia.org/wiki/Matrix_(mathematics)) · [Finite-state machine](https://en.wikipedia.org/wiki/Finite-state_machine) · [Recursion](https://en.wikipedia.org/wiki/Recursion_(computer_science))
 
-**Practice:** [`practice/spiral_matrix/solution.py`](../../practice/spiral_matrix/solution.py)
+**Practice:** [`practice/leetcode/spiral_matrix/solution.py`](../../practice/leetcode/spiral_matrix/solution.py)
 
 Given an `m x n` matrix, return all elements of the `matrix` in spiral order.
 

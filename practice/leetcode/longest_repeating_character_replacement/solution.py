@@ -1,6 +1,6 @@
 """Longest Repeating Character Replacement — https://leetcode.com/problems/longest-repeating-character-replacement/
 
-Write-up & approaches: ../../docs/problems/longest_repeating_character_replacement.md
+Write-up & approaches: ../../../docs/leetcode/longest_repeating_character_replacement.md
 
 You are given a string `s` consisting of only uppercase english characters and an integer `k`. You can choose up to `k` characters of the string and replace them with any other uppercase English chara
 

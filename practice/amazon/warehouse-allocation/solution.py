@@ -1,6 +1,6 @@
 """Warehouse Distribution — https://www.fastprep.io/problems/warehouse-allocation
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/warehouse-allocation.md
+Write-up & approaches: ../../../docs/amazon/warehouse-allocation.md
 
 Amazon has a warehouse that stores piles of boxes containing goods to be shipped. There are n piles numbered 1, 2, ..., n, where the i-th pile has boxes[i] boxes.
 

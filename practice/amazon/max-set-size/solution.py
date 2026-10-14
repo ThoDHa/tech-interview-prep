@@ -1,6 +1,6 @@
 """Rice Bags — https://www.fastprep.io/problems/max-set-size
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/max-set-size.md
+Write-up & approaches: ../../../docs/amazon/max-set-size.md
 
 You are shopping on Amazon.com for some bags of rice. Each listing displays the number of grains of rice that the bag contains. You want to buy a perfect set of rice bags chosen from the entire search
 

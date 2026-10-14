@@ -1,6 +1,6 @@
 """Number of Islands — https://www.fastprep.io/problems/amazon-number-of-islands
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-number-of-islands.md
+Write-up & approaches: ../../../docs/amazon/amazon-number-of-islands.md
 
 Given an array of equal-length strings grid, where '1' represents land and '0' represents water, return the number of islands.
 

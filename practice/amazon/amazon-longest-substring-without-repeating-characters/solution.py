@@ -1,6 +1,6 @@
 """Longest Substring Without Repeating Characters — https://www.fastprep.io/problems/amazon-longest-substring-without-repeating-characters
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-longest-substring-without-repeating-characters.md
+Write-up & approaches: ../../../docs/amazon/amazon-longest-substring-without-repeating-characters.md
 
 Given a string s, return the length of the longest contiguous substring whose characters are all distinct.
 

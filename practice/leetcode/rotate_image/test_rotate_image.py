@@ -1,6 +1,6 @@
 """Tests for Rotate Image — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../docs/problems/rotate_image.md.
+The worked approaches live in ../../../docs/leetcode/rotate_image.md.
 """
 
 import pytest

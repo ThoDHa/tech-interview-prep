@@ -6,7 +6,7 @@
 
 **Algorithm:** [Binary search](https://en.wikipedia.org/wiki/Binary_search_algorithm) · [Divide-and-conquer algorithm](https://en.wikipedia.org/wiki/Divide-and-conquer_algorithm) · [Heap (data structure)](https://en.wikipedia.org/wiki/Heap_(data_structure))
 
-**Practice:** [`practice/median_of_two_sorted_arrays/solution.py`](../../practice/median_of_two_sorted_arrays/solution.py)
+**Practice:** [`practice/leetcode/median_of_two_sorted_arrays/solution.py`](../../practice/leetcode/median_of_two_sorted_arrays/solution.py)
 
 You are given two integer arrays `nums1` and `nums2` of size `m` and `n` respectively, where each is sorted in ascending order. Return the [median](https://en.wikipedia.org/wiki/Median) value among all elements of the two arrays.
 

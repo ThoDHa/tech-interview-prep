@@ -1,6 +1,6 @@
 """Tests for Permutation Sorter — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-permutation-sorter.md.
+The worked approaches live in ../../../docs/amazon/amazon-permutation-sorter.md.
 """
 
 import pytest

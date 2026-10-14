@@ -1,6 +1,6 @@
 """Tests for Construct a Tree from Level-Order and Inorder Traversals — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-construct-tree-level-inorder.md.
+The worked approaches live in ../../../docs/amazon/amazon-construct-tree-level-inorder.md.
 """
 
 import pytest

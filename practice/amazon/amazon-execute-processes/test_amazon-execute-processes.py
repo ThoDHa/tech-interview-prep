@@ -1,6 +1,6 @@
 """Tests for Execute Processes — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-execute-processes.md.
+The worked approaches live in ../../../docs/amazon/amazon-execute-processes.md.
 """
 
 import pytest

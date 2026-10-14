@@ -1,6 +1,6 @@
 """Tests for Good String — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-convert-to-good-string.md.
+The worked approaches live in ../../../docs/amazon/amazon-convert-to-good-string.md.
 """
 
 import pytest

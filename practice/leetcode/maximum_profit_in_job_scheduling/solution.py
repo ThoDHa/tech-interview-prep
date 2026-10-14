@@ -1,6 +1,6 @@
 """Maximum Profit in Job Scheduling: https://leetcode.com/problems/maximum-profit-in-job-scheduling/
 
-Write-up & approaches: ../../docs/problems/maximum_profit_in_job_scheduling.md
+Write-up & approaches: ../../../docs/leetcode/maximum_profit_in_job_scheduling.md
 
 Given `startTime`, `endTime`, and `profit` arrays describing `n` jobs, return the
 maximum profit obtainable from a subset of non-overlapping jobs (a job ending at

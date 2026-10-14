@@ -1,6 +1,6 @@
 """Calculate Truck Distance — https://www.fastprep.io/problems/amazon-calculate-truck-distance
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-calculate-truck-distance.md
+Write-up & approaches: ../../../docs/amazon/amazon-calculate-truck-distance.md
 
 Trucks dispatch packages in a city. There are n trucks numbered 0, 1, ..., n - 1 used for dispatching goods. Assuming the trucks are parked along the x-coordinate axis, the coordinates of these trucks
 

@@ -1,6 +1,6 @@
 """Coin Change II — https://leetcode.com/problems/coin-change-ii/
 
-Write-up & approaches: ../../docs/problems/coin_change_ii.md
+Write-up & approaches: ../../../docs/leetcode/coin_change_ii.md
 Reference implementation of the write-up's Space-Optimized 1-D DP solution.
 
 You are given an integer array `coins` representing coins of different denominations and an integer `amount` representing a target amount of money. Return the number of distinct combinations that total up to `amount`, or `0` when it is impossible. You have an unlimited number of each coin and each value in `coins` is unique.

@@ -1,6 +1,6 @@
 """First Missing Positive — https://www.fastprep.io/problems/amazon-first-missing-positive
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-first-missing-positive.md
+Write-up & approaches: ../../../docs/amazon/amazon-first-missing-positive.md
 
 Given an unsorted integer array nums, return the smallest positive integer that does not appear in the array.
 

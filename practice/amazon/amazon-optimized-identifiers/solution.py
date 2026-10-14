@@ -1,6 +1,6 @@
 """Optimize Identifiers — https://www.fastprep.io/problems/amazon-optimized-identifiers
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-optimized-identifiers.md
+Write-up & approaches: ../../../docs/amazon/amazon-optimized-identifiers.md
 
 In an Amazon inventory management, an operations analyst is dealing with a set of initial product identifiers represented by strings. The type of a string product identifier is determined by the first
 

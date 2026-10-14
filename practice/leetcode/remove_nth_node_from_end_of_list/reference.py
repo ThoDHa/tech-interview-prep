@@ -1,6 +1,6 @@
 """Remove Nth Node From End of List — https://leetcode.com/problems/remove-nth-node-from-end-of-list/
 
-Write-up & approaches: ../../docs/problems/remove_nth_node_from_end_of_list.md
+Write-up & approaches: ../../../docs/leetcode/remove_nth_node_from_end_of_list.md
 
 Canonical reference implementation: the write-up's Two Pointers solution
 (single pass with a gap-locked pointer pair). Your own attempt lives in

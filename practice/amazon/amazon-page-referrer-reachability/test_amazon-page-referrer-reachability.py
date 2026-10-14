@@ -1,6 +1,6 @@
 """Tests for Page Referrer Reachability — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-page-referrer-reachability.md.
+The worked approaches live in ../../../docs/amazon/amazon-page-referrer-reachability.md.
 """
 
 import pytest

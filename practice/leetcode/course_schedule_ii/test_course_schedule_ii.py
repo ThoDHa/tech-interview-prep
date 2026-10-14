@@ -1,6 +1,6 @@
 """Tests for Course Schedule II — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../docs/problems/course_schedule_ii.md.
+The worked approaches live in ../../../docs/leetcode/course_schedule_ii.md.
 """
 
 import pytest

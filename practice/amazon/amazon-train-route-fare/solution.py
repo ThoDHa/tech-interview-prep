@@ -1,6 +1,6 @@
 """Fare Between Stops on a Train Route — https://www.fastprep.io/problems/amazon-train-route-fare
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-train-route-fare.md
+Write-up & approaches: ../../../docs/amazon/amazon-train-route-fare.md
 
 A train route is given as an ordered array of unique stop names. Traveling across one adjacent segment costs one fare unit in either direction.
 

@@ -1,6 +1,6 @@
 """Tests for Alien Dictionary — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../docs/problems/alien_dictionary.md.
+The worked approaches live in ../../../docs/leetcode/alien_dictionary.md.
 """
 
 import pytest

@@ -1,6 +1,6 @@
 """Reverse Integer — https://leetcode.com/problems/reverse-integer/
 
-Write-up & approaches: ../../docs/problems/reverse_integer.md
+Write-up & approaches: ../../../docs/leetcode/reverse_integer.md
 
 You are given a signed 32-bit integer `x`. Return `x` after reversing each of its digits. After reversing, if `x` goes outside the signed 32-bit integer range `[-2^31, 2^31 - 1]`, then return `0` inst
 

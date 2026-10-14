@@ -1,6 +1,6 @@
 """Tests for Longest Increasing Path In a Matrix — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../docs/problems/longest_increasing_path_in_a_matrix.md.
+The worked approaches live in ../../../docs/leetcode/longest_increasing_path_in_a_matrix.md.
 """
 
 import pytest

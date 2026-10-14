@@ -2,7 +2,7 @@
 
 cases.json (marker `simple`) is the "Run" set; cases_full.json (marker `full`) is
 the "Submit" gauntlet. The worked approaches live in
-../../docs/problems/longest_palindromic_substring.md.
+../../../docs/leetcode/longest_palindromic_substring.md.
 """
 
 import pytest

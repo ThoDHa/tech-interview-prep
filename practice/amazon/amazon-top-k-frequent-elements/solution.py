@@ -1,6 +1,6 @@
 """Top K Frequent Elements — https://www.fastprep.io/problems/amazon-top-k-frequent-elements
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-top-k-frequent-elements.md
+Write-up & approaches: ../../../docs/amazon/amazon-top-k-frequent-elements.md
 
 Given a nonempty integer array nums and an integer k, return the k distinct values that occur most frequently.
 

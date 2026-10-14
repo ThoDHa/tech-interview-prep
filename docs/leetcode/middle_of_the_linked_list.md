@@ -6,7 +6,7 @@
 
 **Algorithm:** [Two-pointer technique](https://usaco.guide/silver/two-pointers) · [Linked list](https://en.wikipedia.org/wiki/Linked_list)
 
-**Practice:** [`practice/middle_of_the_linked_list/solution.py`](../../practice/middle_of_the_linked_list/solution.py)
+**Practice:** [`practice/leetcode/middle_of_the_linked_list/solution.py`](../../practice/leetcode/middle_of_the_linked_list/solution.py)
 
 Given the `head` of a singly linked list, return the middle node of the linked list.
 

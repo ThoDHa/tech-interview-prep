@@ -1,6 +1,6 @@
 """Longest Perfect Anagrams — https://www.fastprep.io/problems/amazon-longest-perfect-anagrams
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-longest-perfect-anagrams.md
+Write-up & approaches: ../../../docs/amazon/amazon-longest-perfect-anagrams.md
 
 Developers at Amazon continuously develop algorithms to ensure the security of users' accounts through strong passwords.
 

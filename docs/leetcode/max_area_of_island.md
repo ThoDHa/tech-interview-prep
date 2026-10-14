@@ -6,7 +6,7 @@
 
 **Algorithm:** [Flood fill](https://en.wikipedia.org/wiki/Flood_fill) · [Depth-first search](https://en.wikipedia.org/wiki/Depth-first_search) · [Breadth-first search](https://en.wikipedia.org/wiki/Breadth-first_search)
 
-**Practice:** [`practice/max_area_of_island/solution.py`](../../practice/max_area_of_island/solution.py)
+**Practice:** [`practice/leetcode/max_area_of_island/solution.py`](../../practice/leetcode/max_area_of_island/solution.py)
 
 You are given a matrix `grid` where `grid[i]` is either a `0` (representing water) or `1` (representing land).
 

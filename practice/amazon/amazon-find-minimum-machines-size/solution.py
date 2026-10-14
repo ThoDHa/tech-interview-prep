@@ -1,6 +1,6 @@
 """Find Minimum Machine Sizes — https://www.fastprep.io/problems/amazon-find-minimum-machines-size
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-find-minimum-machines-size.md
+Write-up & approaches: ../../../docs/amazon/amazon-find-minimum-machines-size.md
 
 A sequence of n machines is tasked with stocking or retrieving items. You are given the individual stocking/retrieving capacity values of each machine as an integer array, machineCapacity.
 

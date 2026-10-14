@@ -1,6 +1,6 @@
 """Meeting Room Scheduler — https://www.fastprep.io/problems/amazon-meeting-room-scheduler
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-meeting-room-scheduler.md
+Write-up & approaches: ../../../docs/amazon/amazon-meeting-room-scheduler.md
 
 Implement a scheduler for roomCount meeting rooms numbered from 0 to roomCount - 1.
 

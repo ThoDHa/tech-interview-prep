@@ -1,6 +1,6 @@
 """Longest Palindrome: https://leetcode.com/problems/longest-palindrome/
 
-Write-up & approaches: ../../docs/problems/longest_palindrome.md
+Write-up & approaches: ../../../docs/leetcode/longest_palindrome.md
 
 Given a string `s` of lowercase and/or uppercase letters, return the length of
 the longest palindrome that can be built with those letters. Letters are case

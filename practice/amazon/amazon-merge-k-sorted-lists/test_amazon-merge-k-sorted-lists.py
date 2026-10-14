@@ -1,6 +1,6 @@
 """Tests for Merge k Sorted Lists — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-merge-k-sorted-lists.md.
+The worked approaches live in ../../../docs/amazon/amazon-merge-k-sorted-lists.md.
 """
 
 import pytest

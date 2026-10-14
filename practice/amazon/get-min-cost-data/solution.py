@@ -1,6 +1,6 @@
 """Get Min Cost Data — https://www.fastprep.io/problems/get-min-cost-data
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/get-min-cost-data.md
+Write-up & approaches: ../../../docs/amazon/get-min-cost-data.md
 
 You are given a string data containing lowercase English letters and question marks. Replace every ? with a lowercase English letter.
 

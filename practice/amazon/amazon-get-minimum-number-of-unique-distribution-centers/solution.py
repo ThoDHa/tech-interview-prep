@@ -1,6 +1,6 @@
 """Min Num Unique Distribution Hubs — https://www.fastprep.io/problems/amazon-get-minimum-number-of-unique-distribution-centers
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-get-minimum-number-of-unique-distribution-centers.md
+Write-up & approaches: ../../../docs/amazon/amazon-get-minimum-number-of-unique-distribution-centers.md
 
 A well-known consumer brand selling everyday products on Amazon is facing a supply issue due to daily changes in product demand. To manage this, Amazon has set up n distribution hubs, each labeled wit
 

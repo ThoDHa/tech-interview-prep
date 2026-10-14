@@ -1,6 +1,6 @@
 """Tests for Decode an Encoded String — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-decode-encoded-string.md.
+The worked approaches live in ../../../docs/amazon/amazon-decode-encoded-string.md.
 """
 
 import pytest

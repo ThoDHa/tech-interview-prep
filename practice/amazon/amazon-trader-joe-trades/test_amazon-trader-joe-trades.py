@@ -1,6 +1,6 @@
 """Tests for Trader Joe Trades — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-trader-joe-trades.md.
+The worked approaches live in ../../../docs/amazon/amazon-trader-joe-trades.md.
 """
 
 import pytest

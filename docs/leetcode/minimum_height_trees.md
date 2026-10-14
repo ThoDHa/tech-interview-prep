@@ -6,7 +6,7 @@
 
 **Algorithm:** [Topological sorting](https://en.wikipedia.org/wiki/Topological_sorting) · [Breadth-first search](https://en.wikipedia.org/wiki/Breadth-first_search)
 
-**Practice:** [`practice/minimum_height_trees/solution.py`](../../practice/minimum_height_trees/solution.py)
+**Practice:** [`practice/leetcode/minimum_height_trees/solution.py`](../../practice/leetcode/minimum_height_trees/solution.py)
 
 A tree is an undirected graph in which any two vertices are connected by exactly one path. In other words, any connected graph without simple cycles is a tree.
 

@@ -1,6 +1,6 @@
 """Tests for Regular Expression Matching — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../docs/problems/regular_expression_matching.md.
+The worked approaches live in ../../../docs/leetcode/regular_expression_matching.md.
 """
 
 import pytest

@@ -1,6 +1,6 @@
 """Tests for Reduce Memory Usage — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-reduce-memory-usage.md.
+The worked approaches live in ../../../docs/amazon/amazon-reduce-memory-usage.md.
 """
 
 import pytest

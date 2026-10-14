@@ -1,6 +1,6 @@
 """Trapping Rain Water — https://www.fastprep.io/problems/amazon-trapping-rain-water
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-trapping-rain-water.md
+Write-up & approaches: ../../../docs/amazon/amazon-trapping-rain-water.md
 
 You are given an integer array height of length n. n vertical bars stand on the x-axis. The i-th bar has width 1 and height height[i].
 

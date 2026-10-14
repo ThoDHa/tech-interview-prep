@@ -6,7 +6,7 @@
 
 **Algorithm:** [Dynamic programming](https://en.wikipedia.org/wiki/Dynamic_programming) · [Monotonic stack](https://usaco.guide/gold/stacks) · [Two-pointer technique](https://usaco.guide/silver/two-pointers)
 
-**Practice:** [`practice/trapping_rain_water/solution.py`](../../practice/trapping_rain_water/solution.py)
+**Practice:** [`practice/leetcode/trapping_rain_water/solution.py`](../../practice/leetcode/trapping_rain_water/solution.py)
 
 Given `n` non-negative integers representing an elevation map where the width of each bar is `1`, compute how much water it can trap after raining.
 

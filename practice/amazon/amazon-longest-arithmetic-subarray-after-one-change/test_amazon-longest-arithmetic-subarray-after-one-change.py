@@ -1,6 +1,6 @@
 """Tests for Longest Arithmetic Subarray After One Change — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-longest-arithmetic-subarray-after-one-change.md.
+The worked approaches live in ../../../docs/amazon/amazon-longest-arithmetic-subarray-after-one-change.md.
 """
 
 import pytest

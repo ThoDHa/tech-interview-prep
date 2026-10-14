@@ -1,6 +1,6 @@
 """Find Hash — https://www.fastprep.io/problems/amazon-find-hash
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-find-hash.md
+Write-up & approaches: ../../../docs/amazon/amazon-find-hash.md
 
 The developers at AWS IAM are designing a new checksum logic for an authentication module. The checksum is calculated as an array hash where hash[i] = secretKey[i] % param[i]. There are n parameters f
 

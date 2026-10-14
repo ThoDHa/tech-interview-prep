@@ -1,6 +1,6 @@
 """Get Minimal Cost — https://www.fastprep.io/problems/amazon-get-minimal-cost
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-get-minimal-cost.md
+Write-up & approaches: ../../../docs/amazon/amazon-get-minimal-cost.md
 
 An online retailer offers products in n different dimensions as specified in the array dimensions. The category supervisor notices that several dimensions are redundant and do not offer a favorable cu
 

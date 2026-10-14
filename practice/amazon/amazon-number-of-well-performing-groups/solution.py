@@ -1,6 +1,6 @@
 """Number Of Well Performing Groups — https://www.fastprep.io/problems/amazon-number-of-well-performing-groups
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-number-of-well-performing-groups.md
+Write-up & approaches: ../../../docs/amazon/amazon-number-of-well-performing-groups.md
 
 Amazon aims to review its network of m servers deployed across different regions globally. The workloads on these servers are stored in the array workloads. A collection of servers is labeled as perfo
 

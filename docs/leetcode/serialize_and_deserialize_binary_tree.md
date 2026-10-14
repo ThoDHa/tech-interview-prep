@@ -6,7 +6,7 @@
 
 **Algorithm:** [Tree traversal](https://en.wikipedia.org/wiki/Tree_traversal) · [Depth-first search](https://en.wikipedia.org/wiki/Depth-first_search) · [Breadth-first search](https://en.wikipedia.org/wiki/Breadth-first_search)
 
-**Practice:** [`practice/serialize_and_deserialize_binary_tree/solution.py`](../../practice/serialize_and_deserialize_binary_tree/solution.py)
+**Practice:** [`practice/leetcode/serialize_and_deserialize_binary_tree/solution.py`](../../practice/leetcode/serialize_and_deserialize_binary_tree/solution.py)
 
 Serialization is the process of converting a data structure or object into a sequence of bits so that it can be stored in a file or memory buffer, or transmitted across a network connection link to be reconstructed later in the same or another computer environment.
 

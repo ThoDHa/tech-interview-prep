@@ -6,7 +6,7 @@
 
 **Algorithm:** [Hash table](https://en.wikipedia.org/wiki/Hash_table) · [Sorting](https://en.wikipedia.org/wiki/Sorting_algorithm) · [Python `collections.Counter`](https://docs.python.org/3/library/collections.html#collections.Counter)
 
-**Practice:** [`practice/valid_anagram/solution.py`](../../practice/valid_anagram/solution.py)
+**Practice:** [`practice/leetcode/valid_anagram/solution.py`](../../practice/leetcode/valid_anagram/solution.py)
 
 Given two strings `s` and `t`, return `true` if `t` is an anagram of `s`, and `false` otherwise.
 

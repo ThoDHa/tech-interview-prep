@@ -1,6 +1,6 @@
 """Feasible Indices After Reduction — https://www.fastprep.io/problems/amazon-feasible-indices-after-reduction
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-feasible-indices-after-reduction.md
+Write-up & approaches: ../../../docs/amazon/amazon-feasible-indices-after-reduction.md
 
 You are given an integer array arr of size n. All elements of arr are distinct.
 

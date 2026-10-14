@@ -1,6 +1,6 @@
 """Group Anagrams — https://leetcode.com/problems/group-anagrams/
 
-Write-up & approaches: ../../docs/problems/group_anagrams.md
+Write-up & approaches: ../../../docs/leetcode/group_anagrams.md
 
 Canonical reference implementation: the write-up's optimal approach (the
 26-slot character-count key), kept next to the harness so authored cases stay

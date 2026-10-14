@@ -1,6 +1,6 @@
 """Tests for Get Min Num Moves — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-get-min-num-moves.md.
+The worked approaches live in ../../../docs/amazon/amazon-get-min-num-moves.md.
 """
 
 import pytest

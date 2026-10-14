@@ -1,6 +1,6 @@
 """Tests for Combination Sum II — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../docs/problems/combination_sum_ii.md.
+The worked approaches live in ../../../docs/leetcode/combination_sum_ii.md.
 """
 
 import pytest

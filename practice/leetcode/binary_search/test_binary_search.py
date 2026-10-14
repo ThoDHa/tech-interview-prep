@@ -1,7 +1,7 @@
 """Tests for Binary Search: your attempt (solution.py) against both case sets.
 
 cases.json (marker `simple`) is the "Run" set; cases_full.json (marker `full`) is
-the "Submit" gauntlet. The worked approaches live in ../../docs/problems/binary_search.md.
+the "Submit" gauntlet. The worked approaches live in ../../../docs/leetcode/binary_search.md.
 """
 
 import pytest

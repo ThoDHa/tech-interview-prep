@@ -1,6 +1,6 @@
 """Tests for Minimum Grid Inconvenience — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-minimum-grid-inconvenience.md.
+The worked approaches live in ../../../docs/amazon/amazon-minimum-grid-inconvenience.md.
 """
 
 import pytest

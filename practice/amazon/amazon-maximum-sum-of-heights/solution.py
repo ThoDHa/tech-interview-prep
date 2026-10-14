@@ -1,6 +1,6 @@
 """Maximum Sum of Heights — https://www.fastprep.io/problems/amazon-maximum-sum-of-heights
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-maximum-sum-of-heights.md
+Write-up & approaches: ../../../docs/amazon/amazon-maximum-sum-of-heights.md
 
 Given positive maximum heights maxHeights, choose a positive height for every index so that height[i] <= maxHeights[i]. The resulting array must be mountain-shaped: for some peak index, heights do not
 

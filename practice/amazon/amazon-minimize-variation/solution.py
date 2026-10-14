@@ -1,6 +1,6 @@
 """Minimize Variation — https://www.fastprep.io/problems/amazon-minimize-variation
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-minimize-variation.md
+Write-up & approaches: ../../../docs/amazon/amazon-minimize-variation.md
 
 Source note: Examples 3 through 5 were added on 2025-06-25, with relevant source images included in Problem Source. The original poster said Example 5 failed but did not clarify whether the testcase i
 

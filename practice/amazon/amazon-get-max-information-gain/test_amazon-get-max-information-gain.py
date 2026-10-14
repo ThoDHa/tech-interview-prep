@@ -1,6 +1,6 @@
 """Tests for Get Max Information Gain — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-get-max-information-gain.md.
+The worked approaches live in ../../../docs/amazon/amazon-get-max-information-gain.md.
 """
 
 import pytest

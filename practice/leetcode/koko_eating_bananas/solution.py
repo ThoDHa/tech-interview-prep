@@ -1,6 +1,6 @@
 """Koko Eating Bananas — https://leetcode.com/problems/koko-eating-bananas/
 
-Write-up & approaches: ../../docs/problems/koko_eating_bananas.md
+Write-up & approaches: ../../../docs/leetcode/koko_eating_bananas.md
 
 You are given an integer array `piles` where `piles[i]` is the number of bananas in the `ith` pile. You are also given an integer `h`, which represents the number of hours you have to eat all the bana
 

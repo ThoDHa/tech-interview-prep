@@ -1,6 +1,6 @@
 """Tests for Reverse Integer — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../docs/problems/reverse_integer.md.
+The worked approaches live in ../../../docs/leetcode/reverse_integer.md.
 """
 
 import pytest

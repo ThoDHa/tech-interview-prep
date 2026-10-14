@@ -1,6 +1,6 @@
 """Tests for Longest Common Subsequence — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../docs/problems/longest_common_subsequence.md.
+The worked approaches live in ../../../docs/leetcode/longest_common_subsequence.md.
 """
 
 import pytest

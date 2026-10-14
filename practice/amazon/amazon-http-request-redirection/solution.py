@@ -1,6 +1,6 @@
 """HTTP Request Redirection — https://www.fastprep.io/problems/amazon-http-request-redirection
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-http-request-redirection.md
+Write-up & approaches: ../../../docs/amazon/amazon-http-request-redirection.md
 
 Amazon engineers are investigating an HTTP request that is redirected among servers.
 

@@ -1,6 +1,6 @@
 """Initial and Final Accounts in a Transfer Chain — https://www.fastprep.io/problems/amazon-transfer-chain-endpoints
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-transfer-chain-endpoints.md
+Write-up & approaches: ../../../docs/amazon/amazon-transfer-chain-endpoints.md
 
 You are given directed account-transfer pairs [from, to] in arbitrary order. Together they form one non-branching chain containing every pair exactly once.
 

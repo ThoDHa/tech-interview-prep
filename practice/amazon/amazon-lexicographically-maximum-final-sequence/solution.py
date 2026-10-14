@@ -1,6 +1,6 @@
 """Lexicographically Maximum Final Sequence — https://www.fastprep.io/problems/amazon-lexicographically-maximum-final-sequence
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-lexicographically-maximum-final-sequence.md
+Write-up & approaches: ../../../docs/amazon/amazon-lexicographically-maximum-final-sequence.md
 
 You are given a binary string shipmentData consisting only of '0' and '1'.
 

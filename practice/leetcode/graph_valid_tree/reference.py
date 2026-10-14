@@ -1,6 +1,6 @@
 """Graph Valid Tree — https://leetcode.com/problems/graph-valid-tree/
 
-Write-up & approaches: ../../docs/problems/graph_valid_tree.md
+Write-up & approaches: ../../../docs/leetcode/graph_valid_tree.md
 Reference implementation of the write-up's Union-Find solution.
 
 Given `n` nodes labeled from `0` to `n - 1` and a list of **undirected** edges (each edge is a pair of nodes), write a function to check whether these edges make up a valid tree.

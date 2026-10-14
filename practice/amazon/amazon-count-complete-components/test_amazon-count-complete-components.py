@@ -1,6 +1,6 @@
 """Tests for Count the Number of Complete Components — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-count-complete-components.md.
+The worked approaches live in ../../../docs/amazon/amazon-count-complete-components.md.
 """
 
 import pytest

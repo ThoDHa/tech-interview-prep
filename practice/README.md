@@ -1,6 +1,6 @@
 # Grind75 Practice Harness
 
-A `pytest` workspace for practicing the [Grind75](https://www.techinterviewhandbook.org/grind75) problems. Each problem gets a directory you solve in, debug through, and test. The canonical worked solutions are **not** kept here: they live in the matching [`../docs/problems/<slug>.md`](../docs/problems) write-up, which each `solution.py` links to (and which links back), so you can go back and forth.
+A `pytest` workspace for practicing the [Grind75](https://www.techinterviewhandbook.org/grind75) problems. Each problem gets a directory you solve in, debug through, and test. The canonical worked solutions are **not** kept here: they live in the matching [`../docs/leetcode/<slug>.md`](../docs/leetcode) write-up, which each `solution.py` links to (and which links back), so you can go back and forth.
 
 ## Layout
 
@@ -26,7 +26,7 @@ uv sync           # creates .venv and installs pytest
 ## The practice loop
 
 1. Open `<problem_slug>/solution.py`. The header links to the write-up at
-   `../../docs/problems/<slug>.md`: read the problem there.
+   `../../docs/leetcode/<slug>.md`: read the problem there.
 2. Implement the method.
 3. **Debug it inside the file.** Each `solution.py` has a `__main__` block that
    runs one case and prints input / expected / actual. Set a breakpoint in your method, pick the case (edit the `CASE` id near the bottom), and run/de­bug the file directly:
@@ -46,7 +46,7 @@ uv sync           # creates .venv and installs pytest
 
    An unsolved `solution.py` raises `NotSolved`, so its tests **skip** rather than fail. Once you implement it, they run for real (red → green).
 
-5. To study the approaches, open `../docs/problems/<slug>.md` (linked from the top
+5. To study the approaches, open `../docs/leetcode/<slug>.md` (linked from the top
    of `solution.py`).
 
 ## Two test sets: Run vs Submit

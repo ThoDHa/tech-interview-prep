@@ -6,7 +6,7 @@
 
 **Algorithm:** [Half-adder](https://en.wikipedia.org/wiki/Adder_(electronics)#Half-adder) · [Bitwise operation](https://en.wikipedia.org/wiki/Bitwise_operation) · [Two's complement](https://en.wikipedia.org/wiki/Two%27s_complement)
 
-**Practice:** [`practice/sum_of_two_integers/solution.py`](../../practice/sum_of_two_integers/solution.py)
+**Practice:** [`practice/leetcode/sum_of_two_integers/solution.py`](../../practice/leetcode/sum_of_two_integers/solution.py)
 
 Given two integers `a` and `b`, return the sum of the two integers without using the `+` and `-` operators.
 
@@ -227,7 +227,7 @@ The two working registers; the loop replaces the recursion's stack.
 
 ## Comparison of Solutions
 
-The practice harness's `practice/sum_of_two_integers/reference.py` implements the **Masked Half-Adder Loop** solution.
+The practice harness's `practice/leetcode/sum_of_two_integers/reference.py` implements the **Masked Half-Adder Loop** solution.
 
 ### Time Complexity
 

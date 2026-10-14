@@ -1,6 +1,6 @@
 """Tests for Max Transfer Rate — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-max-transfer-rate.md.
+The worked approaches live in ../../../docs/amazon/amazon-max-transfer-rate.md.
 """
 
 import pytest

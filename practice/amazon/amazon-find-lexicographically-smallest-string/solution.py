@@ -1,6 +1,6 @@
 """Find Lexicographically Smallest String — https://www.fastprep.io/problems/amazon-find-lexicographically-smallest-string
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-find-lexicographically-smallest-string.md
+Write-up & approaches: ../../../docs/amazon/amazon-find-lexicographically-smallest-string.md
 
 Given a lowercase string s, find the lexicographically smallest lowercase string t that has the same length as s, is strictly greater than s, and has no two equal adjacent characters.
 

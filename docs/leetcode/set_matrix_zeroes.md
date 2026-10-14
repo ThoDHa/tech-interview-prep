@@ -6,7 +6,7 @@
 
 **Algorithm:** [In-place algorithm](https://en.wikipedia.org/wiki/In-place_algorithm) · [Hash table](https://en.wikipedia.org/wiki/Hash_table) · [Matrix](https://en.wikipedia.org/wiki/Matrix_(mathematics))
 
-**Practice:** [`practice/set_matrix_zeroes/solution.py`](../../practice/set_matrix_zeroes/solution.py)
+**Practice:** [`practice/leetcode/set_matrix_zeroes/solution.py`](../../practice/leetcode/set_matrix_zeroes/solution.py)
 
 Given an `m x n` matrix of integers `matrix`, if an element is `0`, set its entire row and column to `0`'s.
 
@@ -353,7 +353,7 @@ Two booleans; the flags occupy the matrix's own first row and column.
 
 ## Comparison of Solutions
 
-The practice harness's `practice/set_matrix_zeroes/reference.py` implements the **First Row and Column as Flags** solution.
+The practice harness's `practice/leetcode/set_matrix_zeroes/reference.py` implements the **First Row and Column as Flags** solution.
 
 ### Time Complexity
 

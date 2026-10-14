@@ -1,6 +1,6 @@
 """Get Max Stability — https://www.fastprep.io/problems/amazon-get-max-stability
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-get-max-stability.md
+Write-up & approaches: ../../../docs/amazon/amazon-get-max-stability.md
 
 AWS provides a range of servers to meet the deployment needs of its clients. A client wants to choose a set of servers to deploy their application. Each server is
 

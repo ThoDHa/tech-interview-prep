@@ -1,6 +1,6 @@
 """Encode and Decode Strings — https://leetcode.com/problems/encode-and-decode-strings/
 
-Write-up & approaches: ../../docs/problems/encode_and_decode_strings.md
+Write-up & approaches: ../../../docs/leetcode/encode_and_decode_strings.md
 
 Design an algorithm to encode **a list of strings** to **a string**. The **encoded string** is then sent over the network and is **decoded** back to the **original list** of strings. **Machine 1 (send
 

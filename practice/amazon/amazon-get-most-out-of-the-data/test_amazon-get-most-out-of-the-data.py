@@ -1,6 +1,6 @@
 """Tests for Get The Most Out Of The Data — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-get-most-out-of-the-data.md.
+The worked approaches live in ../../../docs/amazon/amazon-get-most-out-of-the-data.md.
 """
 
 import pytest

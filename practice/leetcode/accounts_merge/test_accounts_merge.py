@@ -3,7 +3,7 @@
 cases.json (marker `simple`) is the "Run" set; cases_full.json (marker `full`) is
 the "Submit" gauntlet. Answer order is not fixed, so both sides are canonicalized
 (emails sorted within each account, then accounts sorted) before comparing. The
-worked approaches live in ../../docs/problems/accounts_merge.md.
+worked approaches live in ../../../docs/leetcode/accounts_merge.md.
 """
 
 import pytest

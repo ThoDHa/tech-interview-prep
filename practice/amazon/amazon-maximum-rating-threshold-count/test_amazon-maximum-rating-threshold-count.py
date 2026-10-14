@@ -1,6 +1,6 @@
 """Tests for Maximum Rating Threshold Count — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-maximum-rating-threshold-count.md.
+The worked approaches live in ../../../docs/amazon/amazon-maximum-rating-threshold-count.md.
 """
 
 import pytest

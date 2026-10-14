@@ -1,6 +1,6 @@
 """Shortest Grid Path With One Wall Break — https://www.fastprep.io/problems/amazon-shortest-grid-path-with-one-wall-break
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-shortest-grid-path-with-one-wall-break.md
+Write-up & approaches: ../../../docs/amazon/amazon-shortest-grid-path-with-one-wall-break.md
 
 Given a rectangular binary matrix grid, a cell containing 1 is open and a cell containing 0 is a wall.
 

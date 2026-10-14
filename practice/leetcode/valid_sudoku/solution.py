@@ -1,6 +1,6 @@
 """Valid Sudoku — https://leetcode.com/problems/valid-sudoku/
 
-Write-up & approaches: ../../docs/problems/valid_sudoku.md
+Write-up & approaches: ../../../docs/leetcode/valid_sudoku.md
 
 You are given a `9 x 9` Sudoku board `board`. A Sudoku board is valid if the following rules are followed: 1. Each row must contain the digits `1-9` without duplicates. 2. Each column must contain the
 

@@ -1,6 +1,6 @@
 """Linked List Cycle: https://leetcode.com/problems/linked-list-cycle/
 
-Write-up & approaches: ../../docs/problems/linked_list_cycle.md
+Write-up & approaches: ../../../docs/leetcode/linked_list_cycle.md
 
 Given `head`, the head of a linked list, determine if the linked list has a
 cycle in it. `pos` denotes the index the tail's `next` connects to (-1 = none)

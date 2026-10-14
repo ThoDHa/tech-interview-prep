@@ -1,6 +1,6 @@
 """Validate a Two-Color Chessboard — https://www.fastprep.io/problems/amazon-validate-two-color-chessboard
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-validate-two-color-chessboard.md
+Write-up & approaches: ../../../docs/amazon/amazon-validate-two-color-chessboard.md
 
 You are given a nonempty rectangular integer matrix board. Every cell is one of two colors, encoded as 0 or 1.
 

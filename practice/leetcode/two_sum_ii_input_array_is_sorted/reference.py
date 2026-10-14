@@ -1,6 +1,6 @@
 """Two Sum II Input Array Is Sorted — https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/
 
-Write-up & approaches: ../../docs/problems/two_sum_ii_input_array_is_sorted.md
+Write-up & approaches: ../../../docs/leetcode/two_sum_ii_input_array_is_sorted.md
 
 Canonical reference implementation: the write-up's optimal approach (two
 pointers converging on the sorted array), kept next to the harness so

@@ -1,6 +1,6 @@
 """Rotting Oranges: https://leetcode.com/problems/rotting-oranges/
 
-Write-up & approaches: ../../docs/problems/rotting_oranges.md
+Write-up & approaches: ../../../docs/leetcode/rotting_oranges.md
 
 Given an `m x n` grid of cells (`0` empty, `1` fresh, `2` rotten), each minute
 every fresh orange 4-directionally adjacent to a rotten one rots. Return the

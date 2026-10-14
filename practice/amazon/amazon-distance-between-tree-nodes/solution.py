@@ -1,6 +1,6 @@
 """Distance Between Two Tree Nodes — https://www.fastprep.io/problems/amazon-distance-between-tree-nodes
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-distance-between-tree-nodes.md
+Write-up & approaches: ../../../docs/amazon/amazon-distance-between-tree-nodes.md
 
 You are given a rooted tree whose nodes are numbered from 1 through treeNodes. The arrays treeFrom and treeTo describe the undirected edges of the tree, and root identifies its root.
 

@@ -1,6 +1,6 @@
 """Find Unique Values — https://www.fastprep.io/problems/amazon-find-unique-values
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-find-unique-values.md
+Write-up & approaches: ../../../docs/amazon/amazon-find-unique-values.md
 
 There are n developers working at Amazon where the ith developer has the experience points experience[i]. The company decided to pair the developers by iteratively pairing the developers with the high
 

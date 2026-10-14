@@ -6,7 +6,7 @@
 
 **Algorithm:** [Heap (data structure)](https://en.wikipedia.org/wiki/Heap_(data_structure))
 
-**Practice:** [`practice/find_median_from_data_stream/solution.py`](../../practice/find_median_from_data_stream/solution.py)
+**Practice:** [`practice/leetcode/find_median_from_data_stream/solution.py`](../../practice/leetcode/find_median_from_data_stream/solution.py)
 
 The **median** is the middle value in an ordered integer list. If the size of the list is even, there is no middle value, and the median is the mean of the two middle values.
 

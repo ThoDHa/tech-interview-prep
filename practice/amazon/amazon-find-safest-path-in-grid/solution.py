@@ -1,6 +1,6 @@
 """Find the Safest Path in a Grid — https://www.fastprep.io/problems/amazon-find-safest-path-in-grid
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-find-safest-path-in-grid.md
+Write-up & approaches: ../../../docs/amazon/amazon-find-safest-path-in-grid.md
 
 You are given an n x n binary matrix grid. A cell containing 1 contains a thief, and a cell containing 0 is empty.
 

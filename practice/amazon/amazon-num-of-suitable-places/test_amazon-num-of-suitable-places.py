@@ -1,6 +1,6 @@
 """Tests for Number of Suitable Locations — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-num-of-suitable-places.md.
+The worked approaches live in ../../../docs/amazon/amazon-num-of-suitable-places.md.
 """
 
 import pytest

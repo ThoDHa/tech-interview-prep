@@ -1,6 +1,6 @@
 """Single Number — https://leetcode.com/problems/single-number/
 
-Write-up & approaches: ../../docs/problems/single_number.md
+Write-up & approaches: ../../../docs/leetcode/single_number.md
 Reference implementation of the write-up's Exclusive-Or Accumulator solution,
 kept next to the harness so authored cases stay falsifiable. Your own attempt
 lives in solution.py.

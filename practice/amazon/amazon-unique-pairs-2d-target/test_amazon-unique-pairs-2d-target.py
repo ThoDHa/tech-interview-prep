@@ -1,6 +1,6 @@
 """Tests for Unique Pairs in a 2D Matrix Summing to Target — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-unique-pairs-2d-target.md.
+The worked approaches live in ../../../docs/amazon/amazon-unique-pairs-2d-target.md.
 """
 
 import pytest

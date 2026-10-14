@@ -1,6 +1,6 @@
 """Count Uni-Valued Subtrees — https://www.fastprep.io/problems/amazon-count-univalued-subtrees
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-count-univalued-subtrees.md
+Write-up & approaches: ../../../docs/amazon/amazon-count-univalued-subtrees.md
 
 Given the root of a binary tree, return the number of subtrees whose nodes all have the same value.
 

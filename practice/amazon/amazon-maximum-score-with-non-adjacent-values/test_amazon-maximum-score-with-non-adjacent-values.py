@@ -1,6 +1,6 @@
 """Tests for Maximum Score With Non-Adjacent Values — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-maximum-score-with-non-adjacent-values.md.
+The worked approaches live in ../../../docs/amazon/amazon-maximum-score-with-non-adjacent-values.md.
 """
 
 import pytest

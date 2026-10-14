@@ -1,6 +1,6 @@
 """Get Average Standing — https://www.fastprep.io/problems/get-average-standing
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/get-average-standing.md
+Write-up & approaches: ../../../docs/amazon/get-average-standing.md
 
 As an aspiring developer, you are required to develop a result analysis service for a car game on Amazon games.
 

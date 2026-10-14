@@ -1,6 +1,6 @@
 """Tests for Product of Array Except Self — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-product-array-except-self.md.
+The worked approaches live in ../../../docs/amazon/amazon-product-array-except-self.md.
 """
 
 import pytest

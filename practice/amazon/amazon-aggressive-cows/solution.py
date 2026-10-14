@@ -1,6 +1,6 @@
 """Aggressive Cows — https://www.fastprep.io/problems/amazon-aggressive-cows
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-aggressive-cows.md
+Write-up & approaches: ../../../docs/amazon/amazon-aggressive-cows.md
 
 Given distinct integer stall positions stalls and an integer cows, place exactly cows cows in different stalls.
 

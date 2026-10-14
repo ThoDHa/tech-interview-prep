@@ -6,7 +6,7 @@
 
 **Algorithm:** [Linked list](https://en.wikipedia.org/wiki/Linked_list) · [Recursion (computer science)](https://en.wikipedia.org/wiki/Recursion_(computer_science)) · [Positional notation](https://en.wikipedia.org/wiki/Positional_notation)
 
-**Practice:** [`practice/add_two_numbers/solution.py`](../../practice/add_two_numbers/solution.py)
+**Practice:** [`practice/leetcode/add_two_numbers/solution.py`](../../practice/leetcode/add_two_numbers/solution.py)
 
 You are given two **non-empty** linked lists, `l1` and `l2`, where each represents a non-negative integer.
 

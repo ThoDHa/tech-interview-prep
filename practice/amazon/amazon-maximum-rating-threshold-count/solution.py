@@ -1,6 +1,6 @@
 """Maximum Rating Threshold Count — https://www.fastprep.io/problems/amazon-maximum-rating-threshold-count
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-maximum-rating-threshold-count.md
+Write-up & approaches: ../../../docs/amazon/amazon-maximum-rating-threshold-count.md
 
 Given a nonempty integer array ratings, return the largest integer k such that at least k entries in ratings are greater than or equal to k.
 

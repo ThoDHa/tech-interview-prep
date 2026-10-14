@@ -1,6 +1,6 @@
 """Evaluate Reverse Polish Notation: https://leetcode.com/problems/evaluate-reverse-polish-notation/
 
-Write-up & approaches: ../../docs/problems/evaluate_reverse_polish_notation.md
+Write-up & approaches: ../../../docs/leetcode/evaluate_reverse_polish_notation.md
 
 Evaluate an arithmetic expression given in Reverse Polish Notation and return its
 integer value (division truncates toward zero).

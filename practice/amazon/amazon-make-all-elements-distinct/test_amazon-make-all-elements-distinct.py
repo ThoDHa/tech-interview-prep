@@ -1,6 +1,6 @@
 """Tests for Make All Elements Distinct — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-make-all-elements-distinct.md.
+The worked approaches live in ../../../docs/amazon/amazon-make-all-elements-distinct.md.
 """
 
 import pytest

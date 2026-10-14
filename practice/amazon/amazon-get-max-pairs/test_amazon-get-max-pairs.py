@@ -1,6 +1,6 @@
 """Tests for Get Max Pairs — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-get-max-pairs.md.
+The worked approaches live in ../../../docs/amazon/amazon-get-max-pairs.md.
 """
 
 import pytest

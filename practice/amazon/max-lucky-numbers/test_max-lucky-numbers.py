@@ -1,6 +1,6 @@
 """Tests for Max Lucky Numbers — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/max-lucky-numbers.md.
+The worked approaches live in ../../../docs/amazon/max-lucky-numbers.md.
 """
 
 import pytest

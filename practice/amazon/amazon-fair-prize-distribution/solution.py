@@ -1,6 +1,6 @@
 """Fair Prize Distribution — https://www.fastprep.io/problems/amazon-fair-prize-distribution
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-fair-prize-distribution.md
+Write-up & approaches: ../../../docs/amazon/amazon-fair-prize-distribution.md
 
 A coding challenge has n participants. Participant i earned score points[i]. There are m available prizes, and values[j] is the value of the j-th prize.
 

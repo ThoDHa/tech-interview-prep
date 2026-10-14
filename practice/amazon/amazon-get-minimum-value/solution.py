@@ -1,6 +1,6 @@
 """Get Min Value — https://www.fastprep.io/problems/amazon-get-minimum-value
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-get-minimum-value.md
+Write-up & approaches: ../../../docs/amazon/amazon-get-minimum-value.md
 
 Amazon Prime Games is designing a game. The player needs to pass n rounds sequentially in this game. Rules of play are as follows:
 

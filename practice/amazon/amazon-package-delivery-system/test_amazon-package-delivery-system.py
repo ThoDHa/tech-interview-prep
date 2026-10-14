@@ -1,6 +1,6 @@
 """Tests for Package Delivery System — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-package-delivery-system.md.
+The worked approaches live in ../../../docs/amazon/amazon-package-delivery-system.md.
 """
 
 import pytest

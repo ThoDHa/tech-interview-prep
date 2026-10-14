@@ -1,6 +1,6 @@
 """Merge Two Sorted Lists: https://leetcode.com/problems/merge-two-sorted-lists/
 
-Write-up & approaches: ../../docs/problems/merge_two_sorted_lists.md
+Write-up & approaches: ../../../docs/leetcode/merge_two_sorted_lists.md
 
 You are given the heads of two sorted linked lists `list1` and `list2`. Splice
 their nodes together into one sorted list and return the head of the merged list.

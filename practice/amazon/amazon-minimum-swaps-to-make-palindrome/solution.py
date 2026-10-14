@@ -1,6 +1,6 @@
 """Get Max Stability — https://www.fastprep.io/problems/amazon-minimum-swaps-to-make-palindrome
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-minimum-swaps-to-make-palindrome.md
+Write-up & approaches: ../../../docs/amazon/amazon-minimum-swaps-to-make-palindrome.md
 
 Example output is a placeholder. Please ignore it.
 

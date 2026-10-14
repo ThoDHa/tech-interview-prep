@@ -1,6 +1,6 @@
 """Tests for Grouped-Query Attention with a KV Cache — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-grouped-query-attention-with-kv-cache.md.
+The worked approaches live in ../../../docs/amazon/amazon-grouped-query-attention-with-kv-cache.md.
 """
 
 import pytest

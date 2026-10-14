@@ -1,6 +1,6 @@
 """Get Max Programs — https://www.fastprep.io/problems/amazon-get-max-programs
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-get-max-programs.md
+Write-up & approaches: ../../../docs/amazon/amazon-get-max-programs.md
 
 Within an Amazon software management tool, there's a collection of software programs and time slots. Each time slot lasts k seconds, and within that time the slots do not overlap. The software program
 

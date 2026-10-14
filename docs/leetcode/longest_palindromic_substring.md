@@ -6,7 +6,7 @@
 
 **Algorithm:** [Longest palindromic substring](https://en.wikipedia.org/wiki/Longest_palindromic_substring) · [Manacher's algorithm](https://en.wikipedia.org/wiki/Longest_palindromic_substring#Manacher%27s_algorithm) · [Dynamic programming](https://en.wikipedia.org/wiki/Dynamic_programming)
 
-**Practice:** [`practice/longest_palindromic_substring/solution.py`](../../practice/longest_palindromic_substring/solution.py)
+**Practice:** [`practice/leetcode/longest_palindromic_substring/solution.py`](../../practice/leetcode/longest_palindromic_substring/solution.py)
 
 Given a string `s`, return the longest palindromic substring in `s`.
 

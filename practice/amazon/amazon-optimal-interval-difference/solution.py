@@ -1,6 +1,6 @@
 """Optimal Interval Difference — https://www.fastprep.io/problems/amazon-optimal-interval-difference
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-optimal-interval-difference.md
+Write-up & approaches: ../../../docs/amazon/amazon-optimal-interval-difference.md
 
 AMZ Interval Collection (A group of problems focused on operations involving intervals :) - 
 

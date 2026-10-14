@@ -1,6 +1,6 @@
 """Maximum Stability — https://www.fastprep.io/problems/amazon-maximum-stability
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-maximum-stability.md
+Write-up & approaches: ../../../docs/amazon/amazon-maximum-stability.md
 
 AWS provides servers for client deployments. Each server has an availability factor and a reliability factor. You are given two arrays, availability and reliability, where availability[i] and reliabil
 

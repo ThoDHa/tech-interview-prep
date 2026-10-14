@@ -1,6 +1,6 @@
 """Word Search II — https://leetcode.com/problems/word-search-ii/
 
-Write-up & approaches: ../../docs/problems/word_search_ii.md
+Write-up & approaches: ../../../docs/leetcode/word_search_ii.md
 Reference implementation of the write-up's Trie-Pruned Backtracking solution,
 kept next to the harness so authored cases stay falsifiable. Your own attempt
 lives in solution.py.

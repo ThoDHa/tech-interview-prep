@@ -1,6 +1,6 @@
 """Tests for Assign Tasks — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-assign-tasks.md.
+The worked approaches live in ../../../docs/amazon/amazon-assign-tasks.md.
 """
 
 import pytest

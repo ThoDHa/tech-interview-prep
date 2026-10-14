@@ -1,6 +1,6 @@
 """Tests for Recent Advertisement Click Counts — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-ad-click-counts-sliding-window.md.
+The worked approaches live in ../../../docs/amazon/amazon-ad-click-counts-sliding-window.md.
 """
 
 import pytest

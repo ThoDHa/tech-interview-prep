@@ -1,6 +1,6 @@
 """Edit Distance — https://leetcode.com/problems/edit-distance/
 
-Write-up & approaches: ../../docs/problems/edit_distance.md
+Write-up & approaches: ../../../docs/leetcode/edit_distance.md
 
 You are given two strings `word1` and `word2`, each consisting of lowercase English letters. You are allowed to perform three operations on `word1` an unlimited number of times: * Insert a character a
 

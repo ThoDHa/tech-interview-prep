@@ -1,6 +1,6 @@
 """Remove Characters in Frequency Order — https://www.fastprep.io/problems/amazon-remove-characters-in-frequency-order
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-remove-characters-in-frequency-order.md
+Write-up & approaches: ../../../docs/amazon/amazon-remove-characters-in-frequency-order.md
 
 (Look into LC 664. Strange Printer may help :)
 

@@ -6,7 +6,7 @@
 
 **Algorithm:** [Bellman-Ford algorithm](https://en.wikipedia.org/wiki/Bellman%E2%80%93Ford_algorithm) · [Dijkstra's algorithm](https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm) · [Depth-first search](https://en.wikipedia.org/wiki/Depth-first_search)
 
-**Practice:** [`practice/network_delay_time/solution.py`](../../practice/network_delay_time/solution.py)
+**Practice:** [`practice/leetcode/network_delay_time/solution.py`](../../practice/leetcode/network_delay_time/solution.py)
 
 You are given a network of `n` directed nodes, labeled from `1` to `n`. You are also given `times`, a list of directed edges where `times[i] = (ui, vi, ti)`. 
 

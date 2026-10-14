@@ -1,6 +1,6 @@
 """Pacific Atlantic Water Flow — https://leetcode.com/problems/pacific-atlantic-water-flow/
 
-Write-up & approaches: ../../docs/problems/pacific_atlantic_water_flow.md
+Write-up & approaches: ../../../docs/leetcode/pacific_atlantic_water_flow.md
 Reference implementation of the write-up's Reverse Two-Ocean DFS solution,
 kept next to the harness so authored cases stay falsifiable. Your own attempt
 lives in solution.py.

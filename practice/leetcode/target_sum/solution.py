@@ -1,6 +1,6 @@
 """Target Sum — https://leetcode.com/problems/target-sum/
 
-Write-up & approaches: ../../docs/problems/target_sum.md
+Write-up & approaches: ../../../docs/leetcode/target_sum.md
 
 You are given an array of integers `nums` and an integer `target`. For each number in the array, you can choose to either add or subtract it to a total sum. * For example, if `nums = [1, 2]`, one poss
 

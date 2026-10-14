@@ -1,6 +1,6 @@
 """Match Strings — https://www.fastprep.io/problems/amazon-match-strings
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-match-strings.md
+Write-up & approaches: ../../../docs/amazon/amazon-match-strings.md
 
 Special thanks: MasterKhan contributed this problem.
 

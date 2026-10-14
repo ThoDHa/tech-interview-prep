@@ -1,6 +1,6 @@
 """House Robber — https://www.fastprep.io/problems/amazon-house-robber
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-house-robber.md
+Write-up & approaches: ../../../docs/amazon/amazon-house-robber.md
 
 You are given an array nums, where nums[i] is the amount of money in house i.
 

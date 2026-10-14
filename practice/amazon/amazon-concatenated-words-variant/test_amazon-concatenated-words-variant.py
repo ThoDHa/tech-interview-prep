@@ -1,6 +1,6 @@
 """Tests for Concatenated Words — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-concatenated-words-variant.md.
+The worked approaches live in ../../../docs/amazon/amazon-concatenated-words-variant.md.
 """
 
 import pytest

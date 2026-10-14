@@ -1,6 +1,6 @@
 """Kth Smallest Sum from Sorted Matrix Rows — https://www.fastprep.io/problems/amazon-kth-smallest-row-sum
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-kth-smallest-row-sum.md
+Write-up & approaches: ../../../docs/amazon/amazon-kth-smallest-row-sum.md
 
 Given an integer matrix mat whose rows are sorted in nondecreasing order, choose exactly one value from each row and add the chosen values.
 

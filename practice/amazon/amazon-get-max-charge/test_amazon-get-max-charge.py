@@ -1,6 +1,6 @@
 """Tests for Get Max Charge — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-get-max-charge.md.
+The worked approaches live in ../../../docs/amazon/amazon-get-max-charge.md.
 """
 
 import pytest

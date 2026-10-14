@@ -1,6 +1,6 @@
 """Add Two Numbers — https://leetcode.com/problems/add-two-numbers/
 
-Write-up & approaches: ../../docs/problems/add_two_numbers.md
+Write-up & approaches: ../../../docs/leetcode/add_two_numbers.md
 
 You are given two **non-empty** linked lists, `l1` and `l2`, where each represents a non-negative integer. The digits are stored in **reverse order**, e.g. the number 321 is represented as `1 -> 2 -> 
 

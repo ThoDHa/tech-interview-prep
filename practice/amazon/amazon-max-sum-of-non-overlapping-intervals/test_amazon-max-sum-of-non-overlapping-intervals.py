@@ -1,6 +1,6 @@
 """Tests for Max Sum of Non-overlapping Intervals — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-max-sum-of-non-overlapping-intervals.md.
+The worked approaches live in ../../../docs/amazon/amazon-max-sum-of-non-overlapping-intervals.md.
 """
 
 import pytest

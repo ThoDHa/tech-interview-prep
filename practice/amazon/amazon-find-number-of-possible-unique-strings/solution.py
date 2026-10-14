@@ -1,6 +1,6 @@
 """Num of Possible Unique Strings — https://www.fastprep.io/problems/amazon-find-number-of-possible-unique-strings
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-find-number-of-possible-unique-strings.md
+Write-up & approaches: ../../../docs/amazon/amazon-find-number-of-possible-unique-strings.md
 
 Given a string of lowercase characters, pick substring of any length in it and reverse them. Find the number of possible unique strings.
 

@@ -6,7 +6,7 @@
 
 **Algorithm:** [Dynamic programming](https://en.wikipedia.org/wiki/Dynamic_programming) · [Two-pointer technique](https://usaco.guide/silver/two-pointers) · [Manacher's algorithm](https://en.wikipedia.org/wiki/Longest_palindromic_substring#Manacher%27s_algorithm)
 
-**Practice:** [`practice/palindromic_substrings/solution.py`](../../practice/palindromic_substrings/solution.py)
+**Practice:** [`practice/leetcode/palindromic_substrings/solution.py`](../../practice/leetcode/palindromic_substrings/solution.py)
 
 Given a string `s`, return the number of substrings within `s` that are palindromes.
 
@@ -388,7 +388,7 @@ The transformed string `t` and the radius array `p` each hold `O(n)` entries.
 
 ## Comparison of Solutions
 
-The practice harness's `practice/palindromic_substrings/reference.py` implements the **Expand Around Center** solution.
+The practice harness's `practice/leetcode/palindromic_substrings/reference.py` implements the **Expand Around Center** solution.
 
 ### Time Complexity
 

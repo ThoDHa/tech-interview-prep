@@ -1,6 +1,6 @@
 """Sort Permutation — https://www.fastprep.io/problems/amazon-can-sort-permutation-in-given-moves
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-can-sort-permutation-in-given-moves.md
+Write-up & approaches: ../../../docs/amazon/amazon-can-sort-permutation-in-given-moves.md
 
 Amazon recently conducted interviews where the candidates were asked to sort the permutation p of length n. Then the ith candidate sorted the permutation in moves[i] moves. To verify the result once m
 

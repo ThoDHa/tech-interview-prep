@@ -1,6 +1,6 @@
 """Tests for Maximize Negative Signs — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/maximize-negative-signs.md.
+The worked approaches live in ../../../docs/amazon/maximize-negative-signs.md.
 """
 
 import pytest

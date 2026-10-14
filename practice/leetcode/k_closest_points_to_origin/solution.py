@@ -1,6 +1,6 @@
 """K Closest Points to Origin: https://leetcode.com/problems/k-closest-points-to-origin/
 
-Write-up & approaches: ../../docs/problems/k_closest_points_to_origin.md
+Write-up & approaches: ../../../docs/leetcode/k_closest_points_to_origin.md
 
 Given an array of points `points[i] = [xi, yi]` and an integer `k`, return the
 `k` points closest to the origin `(0, 0)` by Euclidean distance, in any order.

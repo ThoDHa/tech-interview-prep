@@ -1,6 +1,6 @@
 """Palindromic Substrings — https://leetcode.com/problems/palindromic-substrings/
 
-Write-up & approaches: ../../docs/problems/palindromic_substrings.md
+Write-up & approaches: ../../../docs/leetcode/palindromic_substrings.md
 Reference implementation of the write-up's Expand Around Center solution, kept
 next to the harness so authored cases stay falsifiable. Your own attempt
 lives in solution.py.

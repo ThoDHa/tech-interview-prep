@@ -1,6 +1,6 @@
 """Max Negation — https://www.fastprep.io/problems/amazon-maximize-the-array-sum-after-negating-at-most-k-elements
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-maximize-the-array-sum-after-negating-at-most-k-elements.md
+Write-up & approaches: ../../../docs/amazon/amazon-maximize-the-array-sum-after-negating-at-most-k-elements.md
 
 Given an array A with only positive numbers. We are allowed to negate any entries in the array, 
 

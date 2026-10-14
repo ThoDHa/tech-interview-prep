@@ -1,6 +1,6 @@
 """Tests for Reorder List — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../docs/problems/reorder_list.md.
+The worked approaches live in ../../../docs/leetcode/reorder_list.md.
 """
 
 import pytest

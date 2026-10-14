@@ -1,6 +1,6 @@
 """Distinct Subsequences — https://leetcode.com/problems/distinct-subsequences/
 
-Write-up & approaches: ../../docs/problems/distinct_subsequences.md
+Write-up & approaches: ../../../docs/leetcode/distinct_subsequences.md
 Reference implementation of the write-up's Space-Optimized One-Row DP solution.
 
 You are given two strings `s` and `t`, both consisting of english letters. Return the number of distinct subsequences of `s` which are equal to `t`.

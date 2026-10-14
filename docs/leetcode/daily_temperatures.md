@@ -6,7 +6,7 @@
 
 **Algorithm:** [Monotonic stack](https://usaco.guide/gold/stacks) · [Stack (abstract data type)](https://en.wikipedia.org/wiki/Stack_(abstract_data_type))
 
-**Practice:** [`practice/daily_temperatures/solution.py`](../../practice/daily_temperatures/solution.py)
+**Practice:** [`practice/leetcode/daily_temperatures/solution.py`](../../practice/leetcode/daily_temperatures/solution.py)
 
 You are given an array of integers `temperatures` where `temperatures[i]` represents the daily temperatures on the `ith` day.
 

@@ -1,6 +1,6 @@
 """Valid Parentheses: https://leetcode.com/problems/valid-parentheses/
 
-Write-up & approaches: ../../docs/problems/valid_parentheses.md
+Write-up & approaches: ../../../docs/leetcode/valid_parentheses.md
 
 Given a string `s` of just `'()[]{}'`, determine whether every bracket is
 closed by the same type in the correct order.

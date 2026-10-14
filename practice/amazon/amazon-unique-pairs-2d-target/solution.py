@@ -1,6 +1,6 @@
 """Unique Pairs in a 2D Matrix Summing to Target — https://www.fastprep.io/problems/amazon-unique-pairs-2d-target
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-unique-pairs-2d-target.md
+Write-up & approaches: ../../../docs/amazon/amazon-unique-pairs-2d-target.md
 
 Given a rectangular integer matrix matrix whose values are globally unique and an integer target, return the number of unordered pairs of values whose sum is target.
 

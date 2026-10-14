@@ -1,6 +1,6 @@
 """Cousins in Binary Tree II — https://www.fastprep.io/problems/amazon-cousins-in-binary-tree-ii
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-cousins-in-binary-tree-ii.md
+Write-up & approaches: ../../../docs/amazon/amazon-cousins-in-binary-tree-ii.md
 
 You are given a non-empty binary tree serialized as a level-order string array levelOrder. Each non-null token is a decimal integer, and "null" denotes a missing child.
 

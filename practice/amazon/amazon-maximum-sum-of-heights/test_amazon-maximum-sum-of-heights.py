@@ -1,6 +1,6 @@
 """Tests for Maximum Sum of Heights — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-maximum-sum-of-heights.md.
+The worked approaches live in ../../../docs/amazon/amazon-maximum-sum-of-heights.md.
 """
 
 import pytest

@@ -2,7 +2,7 @@
 
 cases.json (marker `simple`) is the "Run" set; cases_full.json (marker `full`) is
 the "Submit" gauntlet. The worked approaches live in
-../../docs/problems/best_time_to_buy_and_sell_stock.md.
+../../../docs/leetcode/best_time_to_buy_and_sell_stock.md.
 """
 
 import pytest

@@ -1,6 +1,6 @@
 """Tests for Min Chars to Append — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-determine-minimum-characters-to-append.md.
+The worked approaches live in ../../../docs/amazon/amazon-determine-minimum-characters-to-append.md.
 """
 
 import pytest

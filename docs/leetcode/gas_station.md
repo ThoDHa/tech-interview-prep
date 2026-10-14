@@ -6,7 +6,7 @@
 
 **Algorithm:** [Greedy algorithm](https://en.wikipedia.org/wiki/Greedy_algorithm) · [Prefix sum](https://en.wikipedia.org/wiki/Prefix_sum) · [Circular buffer](https://en.wikipedia.org/wiki/Circular_buffer)
 
-**Practice:** [`practice/gas_station/solution.py`](../../practice/gas_station/solution.py)
+**Practice:** [`practice/leetcode/gas_station/solution.py`](../../practice/leetcode/gas_station/solution.py)
 
 There are `n` gas stations along a circular route. You are given two integer arrays `gas` and `cost` where:
 
@@ -390,7 +390,7 @@ The `net` array holds one entry per station; dropping it (folding the gain compu
 
 ## Comparison of Solutions
 
-The practice harness's `practice/gas_station/reference.py` implements the **Greedy** solution.
+The practice harness's `practice/leetcode/gas_station/reference.py` implements the **Greedy** solution.
 
 ### Time Complexity
 

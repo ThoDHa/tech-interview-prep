@@ -1,6 +1,6 @@
 """Plus One — https://leetcode.com/problems/plus-one/
 
-Write-up & approaches: ../../docs/problems/plus_one.md
+Write-up & approaches: ../../../docs/leetcode/plus_one.md
 Canonical reference implementation: the write-up's Right-to-Left Carry
 Ripple solution. Your own attempt lives in solution.py.
 

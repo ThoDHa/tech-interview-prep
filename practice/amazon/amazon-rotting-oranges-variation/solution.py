@@ -1,6 +1,6 @@
 """Minimum Time to Spread Through a Grid — https://www.fastprep.io/problems/amazon-rotting-oranges-variation
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-rotting-oranges-variation.md
+Write-up & approaches: ../../../docs/amazon/amazon-rotting-oranges-variation.md
 
 You are given a rectangular grid whose cells contain 0, 1, or 2. A zero is empty, a one is fresh, and a two is already active.
 

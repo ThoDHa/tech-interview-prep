@@ -1,6 +1,6 @@
 """Subsets II — https://leetcode.com/problems/subsets-ii/
 
-Write-up & approaches: ../../docs/problems/subsets_ii.md
+Write-up & approaches: ../../../docs/leetcode/subsets_ii.md
 Reference implementation of the write-up's Sorted Backtracking solution,
 kept next to the harness so authored cases stay falsifiable. Your own attempt
 lives in solution.py.

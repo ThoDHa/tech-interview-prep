@@ -1,6 +1,6 @@
 """Tests for Maximize Product of Sizes of Subtrees — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-maximize-product-of-sizes-of-subtrees.md.
+The worked approaches live in ../../../docs/amazon/amazon-maximize-product-of-sizes-of-subtrees.md.
 """
 
 import pytest

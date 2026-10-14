@@ -1,6 +1,6 @@
 """Reverse Integer — https://leetcode.com/problems/reverse-integer/
 
-Write-up & approaches: ../../docs/problems/reverse_integer.md
+Write-up & approaches: ../../../docs/leetcode/reverse_integer.md
 Reference implementation of the write-up's Pop-and-Push with Pre-Check
 solution, kept next to the harness so authored cases stay falsifiable.
 Your own attempt lives in solution.py.

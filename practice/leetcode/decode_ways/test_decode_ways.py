@@ -1,6 +1,6 @@
 """Tests for Decode Ways — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../docs/problems/decode_ways.md.
+The worked approaches live in ../../../docs/leetcode/decode_ways.md.
 """
 
 import pytest

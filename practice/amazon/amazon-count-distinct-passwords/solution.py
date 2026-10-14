@@ -1,6 +1,6 @@
 """Count Distinct Passwords — https://www.fastprep.io/problems/amazon-count-distinct-passwords
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-count-distinct-passwords.md
+Write-up & approaches: ../../../docs/amazon/amazon-count-distinct-passwords.md
 
 Weak passwords are likely to be hacked and misused. Due to this, developers at Amazon regularly come up with new algorithms to check the health of user passwords. A new algorithm estimates the variabi
 

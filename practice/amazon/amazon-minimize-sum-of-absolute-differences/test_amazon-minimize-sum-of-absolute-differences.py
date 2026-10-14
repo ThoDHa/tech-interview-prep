@@ -1,6 +1,6 @@
 """Tests for Minimize Sum of Absolute Differences — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-minimize-sum-of-absolute-differences.md.
+The worked approaches live in ../../../docs/amazon/amazon-minimize-sum-of-absolute-differences.md.
 """
 
 import pytest

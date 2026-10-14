@@ -1,6 +1,6 @@
 """Good String — https://www.fastprep.io/problems/amazon-convert-to-good-string
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-convert-to-good-string.md
+Write-up & approaches: ../../../docs/amazon/amazon-convert-to-good-string.md
 
 Given A String Containing Integers, A Good String Is One Not Containing A Subsequence With The Patterns "010" Or "101". You Can Perform Operations To Convert 0 To 1 Or 1 To 0. Return The Number Of Ope
 

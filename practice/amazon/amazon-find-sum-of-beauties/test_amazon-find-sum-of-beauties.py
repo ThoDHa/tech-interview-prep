@@ -1,6 +1,6 @@
 """Tests for Find Sum of Beauties — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-find-sum-of-beauties.md.
+The worked approaches live in ../../../docs/amazon/amazon-find-sum-of-beauties.md.
 """
 
 import pytest

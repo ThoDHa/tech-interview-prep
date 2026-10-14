@@ -1,6 +1,6 @@
 """Reduce Memory Usage — https://www.fastprep.io/problems/amazon-reduce-memory-usage
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-reduce-memory-usage.md
+Write-up & approaches: ../../../docs/amazon/amazon-reduce-memory-usage.md
 
 You are working on an Amazon Data Center where you are required to reduce the amount of main memory consumption by the processes.
 

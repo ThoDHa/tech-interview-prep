@@ -1,6 +1,6 @@
 """Tests for Max Number of Products You can Pick — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-maximum-number-of-products-you-can-pick.md.
+The worked approaches live in ../../../docs/amazon/amazon-maximum-number-of-products-you-can-pick.md.
 """
 
 import pytest

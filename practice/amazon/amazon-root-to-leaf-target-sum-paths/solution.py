@@ -1,6 +1,6 @@
 """Root-to-Leaf Paths with a Target Sum — https://www.fastprep.io/problems/amazon-root-to-leaf-target-sum-paths
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-root-to-leaf-target-sum-paths.md
+Write-up & approaches: ../../../docs/amazon/amazon-root-to-leaf-target-sum-paths.md
 
 Given the root of a binary tree and an integer targetSum, return every root-to-leaf path whose node values add up to targetSum.
 

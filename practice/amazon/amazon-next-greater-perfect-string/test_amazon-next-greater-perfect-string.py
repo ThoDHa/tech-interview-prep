@@ -1,6 +1,6 @@
 """Tests for Next Perfect String — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-next-greater-perfect-string.md.
+The worked approaches live in ../../../docs/amazon/amazon-next-greater-perfect-string.md.
 """
 
 import pytest

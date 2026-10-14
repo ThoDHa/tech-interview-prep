@@ -1,6 +1,6 @@
 """Three Sum Closest — https://www.fastprep.io/problems/amazon-three-sum-closest
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-three-sum-closest.md
+Write-up & approaches: ../../../docs/amazon/amazon-three-sum-closest.md
 
 Given an integer array nums and an integer target, choose three distinct indices and return the sum of their values that is closest to target.
 

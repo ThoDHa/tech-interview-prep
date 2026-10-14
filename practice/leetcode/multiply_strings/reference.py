@@ -1,6 +1,6 @@
 """Multiply Strings — https://leetcode.com/problems/multiply-strings/
 
-Write-up & approaches: ../../docs/problems/multiply_strings.md
+Write-up & approaches: ../../../docs/leetcode/multiply_strings.md
 Canonical reference implementation: the write-up's Position Accumulator
 solution (schoolbook grid into one bucket array). Your own attempt lives in
 solution.py.

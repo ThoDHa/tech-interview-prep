@@ -1,6 +1,6 @@
 """Gas Station — https://leetcode.com/problems/gas-station/
 
-Write-up & approaches: ../../docs/problems/gas_station.md
+Write-up & approaches: ../../../docs/leetcode/gas_station.md
 
 There are `n` gas stations along a circular route. You are given two integer arrays `gas` and `cost` where: * `gas[i]` is the amount of gas at the `ith` station. * `cost[i]` is the amount of gas neede
 

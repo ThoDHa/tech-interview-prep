@@ -1,6 +1,6 @@
 """Maximize Sum of Array Multiplication — https://www.fastprep.io/problems/amazon-maximize-sum-of-array-multiplication
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-maximize-sum-of-array-multiplication.md
+Write-up & approaches: ../../../docs/amazon/amazon-maximize-sum-of-array-multiplication.md
 
 You have an array of data (index starting from 1)
 

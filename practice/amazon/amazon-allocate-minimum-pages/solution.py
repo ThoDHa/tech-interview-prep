@@ -1,6 +1,6 @@
 """Allocate Minimum Pages — https://www.fastprep.io/problems/amazon-allocate-minimum-pages
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-allocate-minimum-pages.md
+Write-up & approaches: ../../../docs/amazon/amazon-allocate-minimum-pages.md
 
 You are given an array pages, where pages[i] is the number of pages in the i-th book, and an integer students.
 

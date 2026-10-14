@@ -1,6 +1,6 @@
 """Tests for Merge Intervals — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-merge-intervals.md.
+The worked approaches live in ../../../docs/amazon/amazon-merge-intervals.md.
 """
 
 import pytest

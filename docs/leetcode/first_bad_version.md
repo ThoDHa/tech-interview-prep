@@ -6,7 +6,7 @@
 
 **Algorithm:** [Binary search](https://en.wikipedia.org/wiki/Binary_search_algorithm)
 
-**Practice:** [`practice/first_bad_version/solution.py`](../../practice/first_bad_version/solution.py)
+**Practice:** [`practice/leetcode/first_bad_version/solution.py`](../../practice/leetcode/first_bad_version/solution.py)
 
 You are a product manager and currently leading a team to develop a new product. Unfortunately, the latest version of your product fails the quality check. Since each version is developed based on the previous version, all the versions after a bad version are also bad.
 
@@ -43,7 +43,7 @@ Because every version after a bad one is also bad, the API's answers over versio
 
 ## Solutions
 
-A note on the harness: on LeetCode, `isBadVersion` is predefined by the judge. In this repo's practice setup, `practice/first_bad_version/solution.py` defines a module-level `bad` and an `isBadVersion` shim (`return v >= bad`) that the tests configure per case, so the same solution code runs unchanged.
+A note on the harness: on LeetCode, `isBadVersion` is predefined by the judge. In this repo's practice setup, `practice/leetcode/first_bad_version/solution.py` defines a module-level `bad` and an `isBadVersion` shim (`return v >= bad`) that the tests configure per case, so the same solution code runs unchanged.
 
 ### Linear Scan
 

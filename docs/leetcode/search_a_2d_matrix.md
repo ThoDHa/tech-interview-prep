@@ -6,7 +6,7 @@
 
 **Algorithm:** [Binary search](https://en.wikipedia.org/wiki/Binary_search_algorithm)
 
-**Practice:** [`practice/search_a_2d_matrix/solution.py`](../../practice/search_a_2d_matrix/solution.py)
+**Practice:** [`practice/leetcode/search_a_2d_matrix/solution.py`](../../practice/leetcode/search_a_2d_matrix/solution.py)
 
 You are given an `m x n` 2-D integer array `matrix` and an integer `target`.
 

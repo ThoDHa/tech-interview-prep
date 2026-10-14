@@ -6,7 +6,7 @@
 
 **Algorithm:** [Hash table](https://en.wikipedia.org/wiki/Hash_table)
 
-**Practice:** [`practice/ransom_note/solution.py`](../../practice/ransom_note/solution.py)
+**Practice:** [`practice/leetcode/ransom_note/solution.py`](../../practice/leetcode/ransom_note/solution.py)
 
 Given two strings `ransomNote` and `magazine`, return `true` if `ransomNote` can be constructed from `magazine` and `false` otherwise.
 

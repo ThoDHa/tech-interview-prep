@@ -1,6 +1,6 @@
 """Tests for Maximum Product Subarray — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../docs/problems/maximum_product_subarray.md.
+The worked approaches live in ../../../docs/leetcode/maximum_product_subarray.md.
 """
 
 import pytest

@@ -1,6 +1,6 @@
 """Tests for Get Maximum Count — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-get-maximum-count.md.
+The worked approaches live in ../../../docs/amazon/amazon-get-maximum-count.md.
 """
 
 import pytest

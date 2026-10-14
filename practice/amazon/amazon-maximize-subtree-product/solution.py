@@ -1,6 +1,6 @@
 """Maximize Subtree Product — https://www.fastprep.io/problems/amazon-maximize-subtree-product
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-maximize-subtree-product.md
+Write-up & approaches: ../../../docs/amazon/amazon-maximize-subtree-product.md
 
 You are given a mystical tree with n nodes. Each node is connected to at least one other node by an edge. Your task is to sever one or more edges in the tree to split it into subtrees. The goal is to 
 

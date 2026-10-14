@@ -1,6 +1,6 @@
 """Tests for Data Dependence Sum — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-get-data-dependence-sum.md.
+The worked approaches live in ../../../docs/amazon/amazon-get-data-dependence-sum.md.
 """
 
 import pytest

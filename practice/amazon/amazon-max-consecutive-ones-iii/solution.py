@@ -1,6 +1,6 @@
 """Max Consecutive Ones III — https://www.fastprep.io/problems/amazon-max-consecutive-ones-iii
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-max-consecutive-ones-iii.md
+Write-up & approaches: ../../../docs/amazon/amazon-max-consecutive-ones-iii.md
 
 Given a binary array nums and an integer k, return the maximum number of consecutive ones obtainable by flipping at most k zeros to ones.
 

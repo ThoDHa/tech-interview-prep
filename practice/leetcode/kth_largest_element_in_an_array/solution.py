@@ -1,6 +1,6 @@
 """Kth Largest Element In An Array — https://leetcode.com/problems/kth-largest-element-in-an-array/
 
-Write-up & approaches: ../../docs/problems/kth_largest_element_in_an_array.md
+Write-up & approaches: ../../../docs/leetcode/kth_largest_element_in_an_array.md
 
 Given an unsorted array of integers `nums` and an integer `k`, return the `kth` largest element in the array. By `kth` largest element, we mean the `kth` largest element in the sorted order, not the `
 

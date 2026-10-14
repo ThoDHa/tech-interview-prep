@@ -1,6 +1,6 @@
 """Merge k Sorted Lists: https://leetcode.com/problems/merge-k-sorted-lists/
 
-Write-up & approaches: ../../docs/problems/merge_k_sorted_lists.md
+Write-up & approaches: ../../../docs/leetcode/merge_k_sorted_lists.md
 
 You are given an array of `k` linked lists, each sorted in ascending order. Merge
 all the linked lists into one sorted linked list and return its head.

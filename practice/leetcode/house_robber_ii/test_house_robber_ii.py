@@ -1,6 +1,6 @@
 """Tests for House Robber II — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../docs/problems/house_robber_ii.md.
+The worked approaches live in ../../../docs/leetcode/house_robber_ii.md.
 """
 
 import pytest

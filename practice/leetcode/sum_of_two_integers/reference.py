@@ -1,6 +1,6 @@
 """Sum of Two Integers — https://leetcode.com/problems/sum-of-two-integers/
 
-Write-up & approaches: ../../docs/problems/sum_of_two_integers.md
+Write-up & approaches: ../../../docs/leetcode/sum_of_two_integers.md
 Reference implementation of the write-up's Masked Half-Adder Loop solution,
 kept next to the harness so authored cases stay falsifiable. Your own
 attempt lives in solution.py.

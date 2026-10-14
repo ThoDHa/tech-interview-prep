@@ -1,7 +1,7 @@
 """Tests for Sort Colors: your attempt (solution.py) against both case sets.
 
 cases.json (marker `simple`) is the "Run" set; cases_full.json (marker `full`) is
-the "Submit" gauntlet. The worked approaches live in ../../docs/problems/sort_colors.md.
+the "Submit" gauntlet. The worked approaches live in ../../../docs/leetcode/sort_colors.md.
 
 sortColors mutates its list argument in place and returns None, so we copy the
 input, call the method, then compare the mutated list to the expected output.

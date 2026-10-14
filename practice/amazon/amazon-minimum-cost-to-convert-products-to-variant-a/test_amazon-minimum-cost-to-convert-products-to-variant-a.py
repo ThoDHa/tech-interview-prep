@@ -1,6 +1,6 @@
 """Tests for Minimum Cost to Convert Products to Variant A — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-minimum-cost-to-convert-products-to-variant-a.md.
+The worked approaches live in ../../../docs/amazon/amazon-minimum-cost-to-convert-products-to-variant-a.md.
 """
 
 import pytest

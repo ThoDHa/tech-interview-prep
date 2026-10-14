@@ -1,6 +1,6 @@
 """Tests for Nodes at a Given N-ary Tree Level — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-nary-tree-nodes-at-level.md.
+The worked approaches live in ../../../docs/amazon/amazon-nary-tree-nodes-at-level.md.
 """
 
 import pytest

@@ -2,7 +2,7 @@
 
 Each list is stored in the case files as a plain value array; the array of arrays
 is marshalled into a list of ListNodes here. The worked approaches live in
-../../docs/problems/merge_k_sorted_lists.md.
+../../../docs/leetcode/merge_k_sorted_lists.md.
 """
 
 import pytest

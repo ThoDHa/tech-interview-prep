@@ -1,6 +1,6 @@
 """Find Encrypted Password — https://www.fastprep.io/problems/amazon-find-encrypted-password
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-find-encrypted-password.md
+Write-up & approaches: ../../../docs/amazon/amazon-find-encrypted-password.md
 
 The developers at Amazon employ several algorithms for encrypting passwords. In one algorithm, they encrypt palindromic passwords. A palindromic password reads the same forward and backward.
 

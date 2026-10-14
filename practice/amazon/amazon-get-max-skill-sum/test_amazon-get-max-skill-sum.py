@@ -1,6 +1,6 @@
 """Tests for Get Max Skill Sum — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-get-max-skill-sum.md.
+The worked approaches live in ../../../docs/amazon/amazon-get-max-skill-sum.md.
 """
 
 import pytest

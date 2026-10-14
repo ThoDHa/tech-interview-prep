@@ -1,6 +1,6 @@
 """Replace Values and Return Sums — https://www.fastprep.io/problems/amazon-replace-values-and-return-sums
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-replace-values-and-return-sums.md
+Write-up & approaches: ../../../docs/amazon/amazon-replace-values-and-return-sums.md
 
 You are given an integer array entries and a 2D integer array transactions. Each transaction is a pair [oldValue, newValue].
 

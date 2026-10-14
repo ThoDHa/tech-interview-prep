@@ -87,14 +87,14 @@ nav:
     - The Coding Interview, Phase by Phase: foundations/interview_practices.md
     - Glossary: foundations/glossary.md
   - Interview Prep:
-    - interview_prep/index.md
-    - Study Plan and Schedule: interview_prep/study_plan.md
-    - Choosing a Language: interview_prep/language.md
-    - Behavioral Interviews: interview_prep/behavioral.md
-    - Interview Day and Follow-Up: interview_prep/interview_day.md
-    - Salary Negotiation: interview_prep/salary_negotiation.md
-    - Mock Interviews: interview_prep/mock_interviews.md
-    - The Coding Cheatsheet: interview_prep/coding_cheatsheet.md
+    - interview-prep/index.md
+    - Study Plan and Schedule: interview-prep/study_plan.md
+    - Choosing a Language: interview-prep/language.md
+    - Behavioral Interviews: interview-prep/behavioral.md
+    - Interview Day and Follow-Up: interview-prep/interview_day.md
+    - Salary Negotiation: interview-prep/salary_negotiation.md
+    - Mock Interviews: interview-prep/mock_interviews.md
+    - The Coding Cheatsheet: interview-prep/coding_cheatsheet.md
   - Patterns:
     - patterns/index.md
     - Fundamentals:
@@ -133,570 +133,569 @@ nav:
       - K-Way Merge: patterns/k_way_merge/intuition.md
       - Linked List Reversal: patterns/linked_list_in_place_reversal/intuition.md
   - System Design:
-    - system_design/index.md
-    - The Interview Method: system_design/method.md
-    - Back-of-Envelope Estimation: system_design/estimation.md
-    - Building Blocks: system_design/building_blocks.md
+    - system-design/index.md
+    - The Interview Method: system-design/method.md
+    - Back-of-Envelope Estimation: system-design/estimation.md
+    - Building Blocks: system-design/building_blocks.md
     - Case Studies:
-      - system_design/case_studies/index.md
-      - URL Shortener: system_design/case_studies/url_shortener.md
-      - Rate Limiter: system_design/case_studies/rate_limiter.md
-      - News Feed: system_design/case_studies/news_feed.md
-      - Chat System: system_design/case_studies/chat_system.md
-      - Web Crawler: system_design/case_studies/web_crawler.md
-  - Problems:
-    - problems/index.md
-    - "Grind 75 + NeetCode 150":
-      - "Two Sum": problems/two_sum.md
-      - "Group Anagrams": problems/group_anagrams.md
-      - "Top K Frequent Elements": problems/top_k_frequent_elements.md
-      - "Encode and Decode Strings": problems/encode_and_decode_strings.md
-      - "Valid Sudoku": problems/valid_sudoku.md
-      - "Longest Consecutive Sequence": problems/longest_consecutive_sequence.md
-      - "Valid Parentheses": problems/valid_parentheses.md
-      - "Daily Temperatures": problems/daily_temperatures.md
-      - "Car Fleet": problems/car_fleet.md
-      - "Merge Two Sorted Lists": problems/merge_two_sorted_lists.md
-      - "Reorder List": problems/reorder_list.md
-      - "Remove Nth Node From End of List": problems/remove_nth_node_from_end_of_list.md
-      - "Copy List With Random Pointer": problems/copy_list_with_random_pointer.md
-      - "Add Two Numbers": problems/add_two_numbers.md
-      - "Find The Duplicate Number": problems/find_the_duplicate_number.md
-      - "Reverse Nodes In K Group": problems/reverse_nodes_in_k_group.md
-      - "Best Time to Buy and Sell Stock": problems/best_time_to_buy_and_sell_stock.md
-      - "Valid Palindrome": problems/valid_palindrome.md
-      - "Two Sum II Input Array Is Sorted": problems/two_sum_ii_input_array_is_sorted.md
-      - "Invert Binary Tree": problems/invert_binary_tree.md
-      - "Same Tree": problems/same_tree.md
-      - "Subtree of Another Tree": problems/subtree_of_another_tree.md
-      - "Count Good Nodes In Binary Tree": problems/count_good_nodes_in_binary_tree.md
-      - "Valid Anagram": problems/valid_anagram.md
-      - "Binary Search": problems/binary_search.md
-      - "Search a 2D Matrix": problems/search_a_2d_matrix.md
-      - "Koko Eating Bananas": problems/koko_eating_bananas.md
-      - "Find Minimum In Rotated Sorted Array": problems/find_minimum_in_rotated_sorted_array.md
-      - "Median of Two Sorted Arrays": problems/median_of_two_sorted_arrays.md
-      - "Flood Fill": problems/flood_fill.md
-      - "Max Area of Island": problems/max_area_of_island.md
-      - "Walls And Gates": problems/walls_and_gates.md
-      - "Pacific Atlantic Water Flow": problems/pacific_atlantic_water_flow.md
-      - "Surrounded Regions": problems/surrounded_regions.md
-      - "Course Schedule II": problems/course_schedule_ii.md
-      - "Graph Valid Tree": problems/graph_valid_tree.md
-      - "Number of Connected Components In An Undirected Graph": problems/number_of_connected_components_in_an_undirected_graph.md
-      - "Redundant Connection": problems/redundant_connection.md
-      - "Lowest Common Ancestor of a BST": problems/lowest_common_ancestor_of_a_binary_search_tree.md
-      - "Balanced Binary Tree": problems/balanced_binary_tree.md
-      - "Linked List Cycle": problems/linked_list_cycle.md
-      - "Implement Queue using Stacks": problems/implement_queue_using_stacks.md
-      - "First Bad Version": problems/first_bad_version.md
-      - "Ransom Note": problems/ransom_note.md
-      - "Climbing Stairs": problems/climbing_stairs.md
-      - "Min Cost Climbing Stairs": problems/min_cost_climbing_stairs.md
-      - "House Robber": problems/house_robber.md
-      - "House Robber II": problems/house_robber_ii.md
-      - "Palindromic Substrings": problems/palindromic_substrings.md
-      - "Decode Ways": problems/decode_ways.md
-      - "Maximum Product Subarray": problems/maximum_product_subarray.md
-      - "Longest Increasing Subsequence": problems/longest_increasing_subsequence.md
-      - "Longest Palindrome": problems/longest_palindrome.md
-      - "Reverse Linked List": problems/reverse_linked_list.md
-      - "Majority Element": problems/majority_element.md
-      - "Add Binary": problems/add_binary.md
-      - "Diameter of Binary Tree": problems/diameter_of_binary_tree.md
-      - "Middle of the Linked List": problems/middle_of_the_linked_list.md
-      - "Maximum Depth of Binary Tree": problems/maximum_depth_of_binary_tree.md
-      - "Contains Duplicate": problems/contains_duplicate.md
-      - "Maximum Subarray": problems/maximum_subarray.md
-      - "Jump Game": problems/jump_game.md
-      - "Jump Game II": problems/jump_game_ii.md
-      - "Gas Station": problems/gas_station.md
-      - "Hand of Straights": problems/hand_of_straights.md
-      - "Merge Triplets to Form Target Triplet": problems/merge_triplets_to_form_target_triplet.md
-      - "Partition Labels": problems/partition_labels.md
-      - "Valid Parenthesis String": problems/valid_parenthesis_string.md
-      - "Non Overlapping Intervals": problems/non_overlapping_intervals.md
-      - "Meeting Rooms": problems/meeting_rooms.md
-      - "Meeting Rooms II": problems/meeting_rooms_ii.md
-      - "Minimum Interval to Include Each Query": problems/minimum_interval_to_include_each_query.md
-      - "Single Number": problems/single_number.md
-      - "Number of 1 Bits": problems/number_of_1_bits.md
-      - "Counting Bits": problems/counting_bits.md
-      - "Reverse Bits": problems/reverse_bits.md
-      - "Missing Number": problems/missing_number.md
-      - "Sum of Two Integers": problems/sum_of_two_integers.md
-      - "Reverse Integer": problems/reverse_integer.md
-      - "Insert Interval": problems/insert_interval.md
-      - "01 Matrix": problems/01_matrix.md
-      - "K Closest Points to Origin": problems/k_closest_points_to_origin.md
-      - "Kth Largest Element In a Stream": problems/kth_largest_element_in_a_stream.md
-      - "Last Stone Weight": problems/last_stone_weight.md
-      - "Kth Largest Element In An Array": problems/kth_largest_element_in_an_array.md
-      - "Design Twitter": problems/design_twitter.md
-      - "Longest Substring Without Repeating Characters": problems/longest_substring_without_repeating_characters.md
-      - "Longest Repeating Character Replacement": problems/longest_repeating_character_replacement.md
-      - "Permutation In String": problems/permutation_in_string.md
-      - "Sliding Window Maximum": problems/sliding_window_maximum.md
-      - "3Sum": problems/3sum.md
-      - "Binary Tree Level Order Traversal": problems/binary_tree_level_order_traversal.md
-      - "Clone Graph": problems/clone_graph.md
-      - "Evaluate Reverse Polish Notation": problems/evaluate_reverse_polish_notation.md
-      - "Course Schedule": problems/course_schedule.md
-      - "Implement Trie (Prefix Tree)": problems/implement_trie_prefix_tree.md
-      - "Design Add And Search Words Data Structure": problems/design_add_and_search_words_data_structure.md
-      - "Word Search II": problems/word_search_ii.md
-      - "Coin Change": problems/coin_change.md
-      - "Product of Array Except Self": problems/product_of_array_except_self.md
-      - "Minimum Stack": problems/min_stack.md
-      - "Validate Binary Search Tree": problems/validate_binary_search_tree.md
-      - "Number of Islands": problems/number_of_islands.md
-      - "Rotting Oranges": problems/rotting_oranges.md
-      - "Search in Rotated Sorted Array": problems/search_in_rotated_sorted_array.md
-      - "Combination Sum": problems/combination_sum.md
-      - "Combination Sum II": problems/combination_sum_ii.md
-      - "Subsets II": problems/subsets_ii.md
-      - "Generate Parentheses": problems/generate_parentheses.md
-      - "Palindrome Partitioning": problems/palindrome_partitioning.md
-      - "N Queens": problems/n_queens.md
-      - "Permutations": problems/permutations.md
-      - "Merge Intervals": problems/merge_intervals.md
-      - "Lowest Common Ancestor of a Binary Tree": problems/lowest_common_ancestor_of_a_binary_tree.md
-      - "Time Based Key-Value Store": problems/time_based_key_value_store.md
-      - "Accounts Merge": problems/accounts_merge.md
-      - "Sort Colors": problems/sort_colors.md
-      - "Word Break": problems/word_break.md
-      - "Partition Equal Subset Sum": problems/partition_equal_subset_sum.md
-      - "String to Integer (atoi)": problems/string_to_integer_atoi.md
-      - "Spiral Matrix": problems/spiral_matrix.md
-      - "Rotate Image": problems/rotate_image.md
-      - "Set Matrix Zeroes": problems/set_matrix_zeroes.md
-      - "Happy Number": problems/happy_number.md
-      - "Plus One": problems/plus_one.md
-      - "Pow(x, n)": problems/powx_n.md
-      - "Multiply Strings": problems/multiply_strings.md
-      - "Detect Squares": problems/detect_squares.md
-      - "Subsets": problems/subsets.md
-      - "Binary Tree Right Side View": problems/binary_tree_right_side_view.md
-      - "Longest Palindromic Substring": problems/longest_palindromic_substring.md
-      - "Unique Paths": problems/unique_paths.md
-      - "Construct Binary Tree from Preorder and Inorder Traversal": problems/construct_binary_tree_from_preorder_and_inorder_traversal.md
-      - "Container With Most Water": problems/container_with_most_water.md
-      - "Letter Combinations of a Phone Number": problems/letter_combinations_of_a_phone_number.md
-      - "Word Search": problems/word_search.md
-      - "Find All Anagrams in a String": problems/find_all_anagrams_in_a_string.md
-      - "Minimum Height Trees": problems/minimum_height_trees.md
-      - "Task Scheduler": problems/task_scheduler.md
-      - "LRU Cache": problems/lru_cache.md
-      - "Kth Smallest Element in a BST": problems/kth_smallest_element_in_a_bst.md
-      - "Minimum Window Substring": problems/minimum_window_substring.md
-      - "Serialize and Deserialize Binary Tree": problems/serialize_and_deserialize_binary_tree.md
-      - "Trapping Rain Water": problems/trapping_rain_water.md
-      - "Find Median from Data Stream": problems/find_median_from_data_stream.md
-      - "Word Ladder": problems/word_ladder.md
-      - "Basic Calculator": problems/basic_calculator.md
-      - "Maximum Profit in Job Scheduling": problems/maximum_profit_in_job_scheduling.md
-      - "Merge k Sorted Lists": problems/merge_k_sorted_lists.md
-      - "Largest Rectangle in Histogram": problems/largest_rectangle_in_histogram.md
-      - "Binary Tree Maximum Path Sum": problems/binary_tree_maximum_path_sum.md
-      - "Longest Common Subsequence": problems/longest_common_subsequence.md
-      - "Best Time to Buy And Sell Stock With Cooldown": problems/best_time_to_buy_and_sell_stock_with_cooldown.md
-      - "Coin Change II": problems/coin_change_ii.md
-      - "Target Sum": problems/target_sum.md
-      - "Interleaving String": problems/interleaving_string.md
-      - "Longest Increasing Path In a Matrix": problems/longest_increasing_path_in_a_matrix.md
-      - "Distinct Subsequences": problems/distinct_subsequences.md
-      - "Edit Distance": problems/edit_distance.md
-      - "Burst Balloons": problems/burst_balloons.md
-      - "Regular Expression Matching": problems/regular_expression_matching.md
-      - "Network Delay Time": problems/network_delay_time.md
-      - "Reconstruct Itinerary": problems/reconstruct_itinerary.md
-      - "Min Cost to Connect All Points": problems/min_cost_to_connect_all_points.md
-      - "Swim In Rising Water": problems/swim_in_rising_water.md
-      - "Alien Dictionary": problems/alien_dictionary.md
-      - "Cheapest Flights Within K Stops": problems/cheapest_flights_within_k_stops.md
-      - "Maximum Frequency Stack": problems/maximum_frequency_stack.md
-    - "Amazon OA":
-      - problems/amazon_oa/index.md
-      - "Concatenated Words": problems/amazon_oa/amazon-concatenated-words-variant.md
-      - "Longest Increasing Subsequence": problems/amazon_oa/amazon-longest-increasing-subsequence-variant.md
-      - "Minimum Moves to Capture the King": problems/amazon_oa/amazon-minimum-moves-to-capture-king.md
-      - "Squirrel Nut Collection Shortest Path": problems/amazon_oa/amazon-squirrel-nut-collection-shortest-path.md
-      - "Maximize Center A Package Benefit": problems/amazon_oa/amazon-center-a-package-benefit.md
-      - "Max Area of Island": problems/amazon_oa/amazon-max-area-of-island.md
-      - "Maximum Rating Threshold Count": problems/amazon_oa/amazon-maximum-rating-threshold-count.md
-      - "Number of Islands": problems/amazon_oa/amazon-number-of-islands.md
-      - "Count Islands from Streaming Rows": problems/amazon_oa/amazon-streaming-island-count.md
-      - "Top K Frequent Elements": problems/amazon_oa/amazon-top-k-frequent-elements.md
-      - "Minimum Merge Conflicts": problems/amazon_oa/amazon-minimum-merge-conflicts.md
-      - "Optimize Package Order by Sorting One Window": problems/amazon_oa/amazon-optimize-package-order-one-window.md
-      - "Largest Binary-String Subset Within Bit Budgets": problems/amazon_oa/amazon-binary-strings-bounded-subset.md
-      - "Lowest Common Ancestor in an Inserted BST": problems/amazon_oa/amazon-bst-lowest-common-ancestor.md
-      - "Maximize K-Element AND with an Increment Budget": problems/amazon_oa/amazon-maximize-k-element-and-with-increment-budget.md
-      - "Evaluate Division": problems/amazon_oa/amazon-evaluate-division.md
-      - "Apply a Reversi Move": problems/amazon_oa/amazon-reversi-move-simulation.md
-      - "Longest Content Window with Bounded Labels": problems/amazon_oa/amazon-streaming-content-label-window.md
-      - "Maximum Stock Profit with At Most Two Transactions": problems/amazon_oa/amazon-best-time-to-buy-and-sell-stock-iii.md
-      - "Currency Conversion Rate": problems/amazon_oa/amazon-currency-conversion-rate.md
-      - "House Robber": problems/amazon_oa/amazon-house-robber.md
-      - "Lisp Expression Parser": problems/amazon_oa/amazon-lisp-expression-parser.md
-      - "Maximize Consecutive Equal Answers": problems/amazon_oa/amazon-maximize-answer-key-confusion.md
-      - "Most Frequent Name": problems/amazon_oa/amazon-most-frequent-name.md
-      - "Minimum Time to Spread Through a Grid": problems/amazon_oa/amazon-rotting-oranges-variation.md
-      - "Group-Relative Policy Advantages": problems/amazon_oa/amazon-group-relative-policy-advantages.md
-      - "Grouped-Query Attention with a KV Cache": problems/amazon_oa/amazon-grouped-query-attention-with-kv-cache.md
-      - "Capacity To Ship Packages Within D Days": problems/amazon_oa/amazon-capacity-to-ship-packages-within-d-days.md
-      - "Get Minimum Amount": problems/amazon_oa/amazon-get-min-amount.md
-      - "Minimum Cost for Roads and Hospitals": problems/amazon_oa/amazon-roads-and-hospitals-minimum-cost.md
-      - "Select K Paired Indices for Maximum Score": problems/amazon_oa/amazon-select-k-paired-array-score.md
-      - "Environment Variable Store and Substitution": problems/amazon_oa/amazon-environment-variable-substitution.md
-      - "Minimum Edge Moves to Connect a Network": problems/amazon_oa/amazon-minimum-edge-moves-to-connect-graph.md
-      - "Simplify a Binary Expression Tree": problems/amazon_oa/amazon-simplify-expression-tree.md
-      - "Path Through an O/X Grid Using Only Right and Down": problems/amazon_oa/amazon-right-down-grid-path.md
-      - "Allocate Minimum Pages": problems/amazon_oa/amazon-allocate-minimum-pages.md
-      - "Edit Distance": problems/amazon_oa/amazon-edit-distance.md
-      - "Longest Subarray with K Distinct Values": problems/amazon_oa/amazon-longest-subarray-with-k-distinct.md
-      - "Trapping Rain Water": problems/amazon_oa/amazon-trapping-rain-water.md
-      - "Word Ladder": problems/amazon_oa/amazon-word-ladder.md
-      - "Maximize Adjacent Difference With One Reversal": problems/amazon_oa/amazon-maximize-adjacent-difference-with-one-reversal.md
-      - "Shortest Grid Path With One Wall Break": problems/amazon_oa/amazon-shortest-grid-path-with-one-wall-break.md
-      - "Course Order and Cycle": problems/amazon_oa/amazon-course-order-and-cycle.md
-      - "Inventory Allocation": problems/amazon_oa/amazon-inventory-allocation.md
-      - "LRU Cache for Query Results": problems/amazon_oa/amazon-lru-query-result-cache.md
-      - "Minimum Stick Connection Cost": problems/amazon_oa/amazon-minimum-stick-connection-cost.md
-      - "First Non-Repeating Character": problems/amazon_oa/amazon-first-non-repeating-character.md
-      - "Root-to-Leaf Paths with a Target Sum": problems/amazon_oa/amazon-root-to-leaf-target-sum-paths.md
-      - "Aggressive Cows": problems/amazon_oa/amazon-aggressive-cows.md
-      - "All Anagram Start Indices": problems/amazon_oa/amazon-anagram-start-indices.md
-      - "Basic Calculator": problems/amazon_oa/amazon-basic-calculator.md
-      - "Binary Tree Cameras": problems/amazon_oa/amazon-binary-tree-cameras.md
-      - "Binary Tree Right View": problems/amazon_oa/amazon-binary-tree-right-view.md
-      - "Calculate Beauty Values": problems/amazon_oa/amazon-calculate-beauty-values.md
-      - "Cheapest Flights Within K Stops": problems/amazon_oa/amazon-cheapest-flights-within-k-stops.md
-      - "Construct a Tree from Level-Order and Inorder Traversals": problems/amazon_oa/amazon-construct-tree-level-inorder.md
-      - "Container With Most Water": problems/amazon_oa/amazon-container-with-most-water.md
-      - "Count Stepping Numbers In Range": problems/amazon_oa/amazon-count-stepping-numbers-in-range.md
-      - "Count Uni-Valued Subtrees": problems/amazon_oa/amazon-count-univalued-subtrees.md
-      - "Course Schedule": problems/amazon_oa/amazon-course-schedule.md
-      - "Course Schedule II": problems/amazon_oa/amazon-course-schedule-ii.md
-      - "Decode an Encoded String": problems/amazon_oa/amazon-decode-encoded-string.md
-      - "Distance Between Two Tree Nodes": problems/amazon_oa/amazon-distance-between-tree-nodes.md
-      - "E-commerce Notification Router": problems/amazon_oa/amazon-ecommerce-notification-router.md
-      - "Employee Ratings Management System": problems/amazon_oa/amazon-employee-ratings-data-structure.md
-      - "Find Median from Data Stream": problems/amazon_oa/amazon-find-median-from-data-stream.md
-      - "Find the Safest Path in a Grid": problems/amazon_oa/amazon-find-safest-path-in-grid.md
-      - "First Missing Positive": problems/amazon_oa/amazon-first-missing-positive.md
-      - "First Unique Character in a Stream": problems/amazon_oa/amazon-first-unique-character-stream.md
-      - "Bit at an Index After Repeated Binary Expansion": problems/amazon_oa/amazon-indexed-bit-after-binary-expansion.md
-      - "Count Islands with Eight-Direction Adjacency": problems/amazon_oa/amazon-islands-eight-direction.md
-      - "K Closest Elements in a Sorted Array": problems/amazon_oa/amazon-k-closest-elements-in-sorted-array.md
-      - "Kth Smallest Sum from Sorted Matrix Rows": problems/amazon_oa/amazon-kth-smallest-row-sum.md
-      - "Remove Duplicate Letters for the Largest Result": problems/amazon_oa/amazon-largest-lexicographic-unique-letters.md
-      - "Longest Common Subsequence Length": problems/amazon_oa/amazon-longest-common-subsequence-length.md
-      - "Longest Happy Prefix": problems/amazon_oa/amazon-longest-happy-prefix.md
-      - "Longest Increasing Subsequence With Bounded Adjacent Difference": problems/amazon_oa/amazon-longest-increasing-subsequence-bounded-difference.md
-      - "Max Consecutive Ones III": problems/amazon_oa/amazon-max-consecutive-ones-iii.md
-      - "Maximize Distance to the Closest Occupied Seat": problems/amazon_oa/amazon-maximize-distance-to-closest-person.md
-      - "Maximum Non-Adjacent House Value": problems/amazon_oa/amazon-maximum-non-adjacent-house-value.md
-      - "Maximum Profit in Job Scheduling": problems/amazon_oa/amazon-maximum-profit-job-scheduling.md
-      - "Maximum Sum BST in a Binary Tree": problems/amazon_oa/amazon-maximum-sum-bst.md
-      - "Meeting Room Scheduler": problems/amazon_oa/amazon-meeting-room-scheduler.md
-      - "Merge Intervals": problems/amazon_oa/amazon-merge-intervals.md
-      - "Merge k Sorted Lists": problems/amazon_oa/amazon-merge-k-sorted-lists.md
-      - "Stack with Constant-Time Middle Queries": problems/amazon_oa/amazon-middle-stack-operations.md
-      - "Minimize Malware Spread in a Facility Network": problems/amazon_oa/amazon-minimize-malware-facility-network.md
-      - "Minimum Window Substring": problems/amazon_oa/amazon-minimum-window-substring.md
-      - "Nodes at a Given N-ary Tree Level": problems/amazon_oa/amazon-nary-tree-nodes-at-level.md
-      - "Next Palindromic Time": problems/amazon_oa/amazon-next-palindromic-time.md
-      - "Next Permutation": problems/amazon_oa/amazon-next-permutation.md
-      - "Product of Array Except Self": problems/amazon_oa/amazon-product-array-except-self.md
-      - "Reorganize a String": problems/amazon_oa/amazon-reorganize-string.md
-      - "Running Delivery Time Medians": problems/amazon_oa/amazon-running-delivery-time-medians.md
-      - "Search in a Rotated Sorted Array": problems/amazon_oa/amazon-search-rotated-sorted-array.md
-      - "Task Scheduler": problems/amazon_oa/amazon-task-scheduler.md
-      - "Three Sum Closest": problems/amazon_oa/amazon-three-sum-closest.md
-      - "Fare Between Stops on a Train Route": problems/amazon_oa/amazon-train-route-fare.md
-      - "Initial and Final Accounts in a Transfer Chain": problems/amazon_oa/amazon-transfer-chain-endpoints.md
-      - "Minimum Moves for Two Knights to Meet": problems/amazon_oa/amazon-two-knights-minimum-meeting-moves.md
-      - "Unique Pairs in a 2D Matrix Summing to Target": problems/amazon_oa/amazon-unique-pairs-2d-target.md
-      - "Unique String Permutations": problems/amazon_oa/amazon-unique-string-permutations.md
-      - "Validate a Two-Color Chessboard": problems/amazon_oa/amazon-validate-two-color-chessboard.md
-      - "Maximum Saw Height for At Least M Cut Length": problems/amazon_oa/amazon-woodcut-saw-height.md
-      - "Word Break": problems/amazon_oa/amazon-word-break.md
-      - "Word Break II": problems/amazon_oa/amazon-word-break-ii.md
-      - "Interleaving String": problems/amazon_oa/amazon-interleaving-string.md
-      - "Dynamic Prefix Search Collection": problems/amazon_oa/amazon-prefix-search-collection.md
-      - "Word Search II": problems/amazon_oa/amazon-word-search-ii.md
-      - "Recent Advertisement Click Counts": problems/amazon_oa/amazon-ad-click-counts-sliding-window.md
-      - "Most Frequent Consecutive Website Pattern": problems/amazon_oa/amazon-consecutive-website-visit-pattern.md
-      - "Longest Substring Without Repeating Characters": problems/amazon_oa/amazon-longest-substring-without-repeating-characters.md
-      - "Page Referrer Reachability": problems/amazon_oa/amazon-page-referrer-reachability.md
-      - "Sliding-Window Rate Limiter": problems/amazon_oa/amazon-sliding-window-rate-limiter.md
-      - "Find Minimum Cost": problems/amazon_oa/amazon-find-minimum-cost.md
-      - "Maximum System Memory Capacity": problems/amazon_oa/amazon-maximum-capacity.md
-      - "Meeting Rooms II": problems/amazon_oa/amazon-meeting-rooms-ii.md
-      - "Next Smaller Ticket Price": problems/amazon_oa/amazon-next-smaller-ticket-price.md
-      - "Remove K Digits": problems/amazon_oa/amazon-remove-k-digits.md
-      - "Get Distinct Pairs": problems/amazon_oa/amazon-get-distinct-pairs.md
-      - "Minimum Adjacent Swaps to Group Binary Values": problems/amazon_oa/amazon-minimum-adjacent-swaps-binary-groups.md
-      - "Maximum Frequency Stack": problems/amazon_oa/amazon-maximum-frequency-stack.md
-      - "Linked-List Queue with Delete and Deduplication": problems/amazon_oa/amazon-linked-list-queue-operations.md
-      - "Minimum Grid Inconvenience": problems/amazon_oa/amazon-minimum-grid-inconvenience.md
-      - "Single Element in a Sorted Array": problems/amazon_oa/amazon-single-element-in-sorted-array.md
-      - "Count the Number of Complete Components": problems/amazon_oa/amazon-count-complete-components.md
-      - "Cousins in Binary Tree II": problems/amazon_oa/amazon-cousins-in-binary-tree-ii.md
-      - "Minimum Operations to Make an Array Continuous": problems/amazon_oa/amazon-minimum-operations-to-make-array-continuous.md
-      - "Vertical Order Traversal of a Binary Tree": problems/amazon_oa/amazon-vertical-order-traversal-of-binary-tree.md
-      - "HTTP Request Redirection": problems/amazon_oa/amazon-http-request-redirection.md
-      - "Resolve Task Dependencies": problems/amazon_oa/amazon-resolve-task-dependencies.md
-      - "Shortest Distance on a Circular Bus Route": problems/amazon_oa/amazon-shortest-distance-circular-bus-route.md
-      - "Sort an Array with Rotate and Flip": problems/amazon_oa/amazon-sort-array-with-rotate-and-flip.md
-      - "Loyal Customers Across Two Days": problems/amazon_oa/amazon-loyal-customers.md
-      - "Smallest Number With a Given Digit Sum": problems/amazon_oa/amazon-smallest-number-with-digit-sum.md
-      - "Group Anagrams": problems/amazon_oa/amazon-group-anagrams.md
-      - "Longest Palindromic Subsequence": problems/amazon_oa/amazon-longest-palindromic-subsequence.md
-      - "Maximal Square": problems/amazon_oa/amazon-maximal-square.md
-      - "Maximum Sum of Heights": problems/amazon_oa/amazon-maximum-sum-of-heights.md
-      - "Number of Islands II": problems/amazon_oa/amazon-number-of-islands-ii.md
-      - "Sliding Window Maximum": problems/amazon_oa/amazon-sliding-window-maximum.md
-      - "Domain Weight Calculation": problems/amazon_oa/amazon-domain-weight-calculation.md
-      - "Minimum Contiguous Replacements": problems/amazon_oa/amazon-minimum-contiguous-replacements.md
-      - "Minimum Redistribution Cost": problems/amazon_oa/amazon-minimum-redistribution-cost.md
-      - "Number of Atoms": problems/amazon_oa/amazon-number-of-atoms.md
-      - "Closest Version Date": problems/amazon_oa/amazon-closest-version-date.md
-      - "Maximum Concurrent Processes (Bar Raiser Round)": problems/amazon_oa/amazon-max-concurrent-processes.md
-      - "Package Dependency Order": problems/amazon_oa/amazon-package-dependency-order.md
-      - "Merge Sorted Array": problems/amazon_oa/amazon-merge-sorted-array.md
-      - "Get Max Servers": problems/amazon_oa/amazon-find-maximum-number-of-servers.md
-      - "Permutation Sorter": problems/amazon_oa/amazon-permutation-sorter.md
-      - "Feasible Indices After Prefix/Suffix Reduction": problems/amazon_oa/amazon-feasible-indices-after-prefix-suffix-reduction.md
-      - "Frequently Bought Together": problems/amazon_oa/amazon-frequently-bought-together.md
-      - "Souvenir Shop Purchases": problems/amazon_oa/amazon-souvenir-shop-purchases.md
-      - "Find Minimum Groups": problems/amazon_oa/amazon-find-minimum-groups.md
-      - "Maximum Equal Parts for Prefixes": problems/amazon_oa/amazon-maximum-equal-parts-for-prefixes.md
-      - "Count Promotional Periods": problems/amazon_oa/amazon-count-promotional-periods.md
-      - "Get Smallest Base Segment": problems/amazon_oa/amazon-get-smallest-base-segment.md
-      - "Select Least Resource Tasks": problems/amazon_oa/amazon-select-least-resource-tasks.md
-      - "Lowest Common Ancestor Implemented with Stack": problems/amazon_oa/amazon-lowest-common-ancestor-implemented-with-stack.md
-      - "Product Category Group Sizes": problems/amazon_oa/amazon-product-category-groups.md
-      - "Count Connected Components": problems/amazon_oa/amazon-count-connected-components.md
-      - "Unique Pairs With Target Sum": problems/amazon_oa/amazon-unique-pairs-with-target-sum.md
-      - "Feasible Indices After Reduction": problems/amazon_oa/amazon-feasible-indices-after-reduction.md
-      - "Count Similar String Groups": problems/amazon_oa/amazon-count-similar-string-groups.md
-      - "Get Min Errors": problems/amazon_oa/amazon-get-min-errors.md
-      - "Maximum Score With Non-Adjacent Values": problems/amazon_oa/amazon-maximum-score-with-non-adjacent-values.md
-      - "Make Value Groups Contiguous": problems/amazon_oa/amazon-make-value-groups-contiguous.md
-      - "Dynamic Kth Largest Queries": problems/amazon_oa/amazon-dynamic-kth-largest-queries.md
-      - "Longest Zero Sum Subarray": problems/amazon_oa/amazon-longest-zero-sum-subarray.md
-      - "Maximize Minimum Machine Power": problems/amazon_oa/amazon-maximize-minimum-machine-power.md
-      - "Maximize Protected City Population": problems/amazon_oa/amazon-maximize-protected-city-population.md
-      - "Minimum Cost to Convert Products to Variant A": problems/amazon_oa/amazon-minimum-cost-to-convert-products-to-variant-a.md
-      - "Minimum Preparation Time for Two Handlers": problems/amazon_oa/amazon-minimum-preparation-time-for-two-handlers.md
-      - "Sum Max Plus Min After Decrement Operations": problems/amazon_oa/amazon-sum-max-plus-min-after-decrement-operations.md
-      - "Sort Error Codes by Frequency": problems/amazon_oa/amazon-sort-error-codes-by-frequency.md
-      - "Lexicographically Smallest After One Substring Rotation": problems/amazon_oa/amazon-lexicographically-smallest-after-one-substring-rotation.md
-      - "Minimum Operations to Sort a Permutation": problems/amazon_oa/amazon-minimum-operations-to-sort-permutation.md
-      - "Lexicographically Maximum Final Sequence": problems/amazon_oa/amazon-lexicographically-maximum-final-sequence.md
-      - "Package Delivery System": problems/amazon_oa/amazon-package-delivery-system.md
-      - "VM Rental Revenue": problems/amazon_oa/amazon-vm-rental-revenue.md
-      - "Longest Arithmetic Subarray After One Change": problems/amazon_oa/amazon-longest-arithmetic-subarray-after-one-change.md
-      - "Replace Values and Return Sums": problems/amazon_oa/amazon-replace-values-and-return-sums.md
-      - "Minimum S3 Storage Cost": problems/amazon_oa/amazon-minimum-s3-storage-cost.md
-      - "Count Picked Items Less Than Queries": problems/amazon_oa/amazon-count-picked-items-less-than-queries.md
-      - "Fair Prize Distribution": problems/amazon_oa/amazon-fair-prize-distribution.md
-      - "Largest Number With Digit Sum": problems/amazon_oa/amazon-largest-number-with-digit-sum.md
-      - "Minimize Binary Subsequence Cost": problems/amazon_oa/amazon-minimize-binary-subsequence-cost.md
-      - "First Valid Word Segmentation": problems/amazon_oa/amazon-first-word-segmentation.md
-      - "Nearby Fulfillment Centers with Inventory": problems/amazon_oa/amazon-nearby-fulfillment-centers.md
-      - "Maximize Pages Before Suspension": problems/amazon_oa/amazon-maximize-pages-before-suspension.md
-      - "Predict Answer": problems/amazon_oa/amazon-predict-answer.md
-      - "Find Security Level": problems/amazon_oa/amazon-find-security-level.md
-      - "Get Min Subsegments": problems/amazon_oa/amazon-get-min-subsegments.md
-      - "Minimize Variation": problems/amazon_oa/amazon-minimize-variation.md
-      - "Find Hash": problems/amazon_oa/amazon-find-hash.md
-      - "Count Special Substrings": problems/amazon_oa/amazon-count-special-substrs.md
-      - "Find Minimum Days": problems/amazon_oa/amazon-find-minimum-days.md
-      - "Find Minimum Machine Sizes": problems/amazon_oa/amazon-find-minimum-machines-size.md
-      - "Get Maximum Count": problems/amazon_oa/amazon-get-maximum-count.md
-      - "Split Prefix Suffix": problems/amazon_oa/amazon-split-prefix-suffix.md
-      - "Determine the Best Skipping Strategy": problems/amazon_oa/amazon-determine-the-best-skipping-strategy.md
-      - "Compute Beauty of Array Products": problems/amazon_oa/amazon-compute-beauty-of-array-products.md
-      - "Find Idle Skill Query": problems/amazon_oa/amazon-find-idle-skills-query.md
-      - "Min Dock Bays": problems/amazon_oa/amazon-get-minimum-dock-bays.md
-      - "Min Num Unique Distribution Hubs": problems/amazon_oa/amazon-get-minimum-number-of-unique-distribution-centers.md
-      - "Next Perfect String": problems/amazon_oa/amazon-next-greater-perfect-string.md
-      - "Use Minimum Tokens": problems/amazon_oa/amazon-use-minimum-tokens.md
-      - "Remove Characters in Frequency Order": problems/amazon_oa/amazon-remove-characters-in-frequency-order.md
-      - "Optimal Utilization": problems/amazon_oa/amazon-optimal-utilization.md
-      - "Buy Servers": problems/amazon_oa/amazon-purchase-servers.md
-      - "Cinema Shows": problems/amazon_oa/amazon-cinema-shows.md
-      - "Min Retailers": problems/amazon_oa/amazon-minimum-retailers.md
-      - "Find Replacement": problems/amazon_oa/amazon-find-min-replacements.md
-      - "Good String": problems/amazon_oa/amazon-convert-to-good-string.md
-      - "Find Min Max Difference": problems/amazon_oa/amazon-find-min-max-difference.md
-      - "Max Sum of Non-overlapping Intervals": problems/amazon_oa/amazon-max-sum-of-non-overlapping-intervals.md
-      - "Get Minimal Cost": problems/amazon_oa/amazon-get-minimal-cost.md
-      - "Find Least Possible Vulnerability": problems/amazon_oa/amazon-find-least-possible-vulnerability.md
-      - "Make Array Distinct": problems/amazon_oa/amazon-make-array-distinct.md
-      - "Ensure Non Zero Load Sum": problems/amazon_oa/amazon-ensure-non-zero-load-sum.md
-      - "Number Of Well Performing Groups": problems/amazon_oa/amazon-number-of-well-performing-groups.md
-      - "Get Max Increments": problems/amazon_oa/amazon-get-max-increments.md
-      - "Password Strength": problems/amazon_oa/amazon-password-strength.md
-      - "Optimal Level": problems/amazon_oa/amazon-find-optimal-level.md
-      - "Min Operation": problems/amazon_oa/amazon-min-operation.md
-      - "Trader Joe Trades": problems/amazon_oa/amazon-trader-joe-trades.md
-      - "All About Rewards": problems/amazon_oa/amazon-all-about-rewards.md
-      - "Inventory Processes Survival Possibility": problems/amazon_oa/amazon-inventory-processes-survival-possibility.md
-      - "All About Medians": problems/amazon_oa/amazon-medians.md
-      - "Get Largest Number": problems/amazon_oa/amazon-find-partition-cost.md
-      - "Get The Most Out Of The Data": problems/amazon_oa/amazon-get-most-out-of-the-data.md
-      - "Maximize Sum of Array Multiplication": problems/amazon_oa/amazon-maximize-sum-of-array-multiplication.md
-      - "Max Number of Products You can Pick": problems/amazon_oa/amazon-maximum-number-of-products-you-can-pick.md
-      - "Get Maximum": problems/amazon_oa/amazon-get-maximum.md
-      - "Sum of Max Subarrys": problems/amazon_oa/amazon-sum-of-max-subarrays.md
-      - "Calculate Max Salary": problems/amazon_oa/amazon-calculate-max-salary.md
-      - "Maximize Product of Sizes of Subtrees": problems/amazon_oa/amazon-maximize-product-of-sizes-of-subtrees.md
-      - "Min Energy Cost": problems/amazon_oa/amazon-minimum-energy-cost.md
-      - "Optimal Interval Difference": problems/amazon_oa/amazon-optimal-interval-difference.md
-      - "Find Max Value": problems/amazon_oa/amazon-find-max-value.md
-      - "Get Max Events": problems/amazon_oa/amazon-get-maximum-events.md
-      - "Calculate Max Profit": problems/amazon_oa/amazon-calculate-max-profit.md
-      - "Get Final Location": problems/amazon_oa/amazon-get-final-locations.md
-      - "Get Stable Periods Count": problems/amazon_oa/amazon-get-stable-periods-count.md
-      - "Max Transfer Rate": problems/amazon_oa/amazon-max-transfer-rate.md
-      - "Get Max Stability": problems/amazon_oa/amazon-get-max-stability.md
-      - "Min Operations": problems/amazon_oa/amazon-make-array-zero-by-subtracting-equal-amounts.md
-      - "Get Max Stability": problems/amazon_oa/amazon-minimum-swaps-to-make-palindrome.md
-      - "Get Max Skill Sum": problems/amazon_oa/amazon-get-max-skill-sum.md
-      - "Get Min Value": problems/amazon_oa/amazon-get-minimum-value.md
-      - "Find Number": problems/amazon_oa/amazon-find-number.md
-      - "Get Min Removal": problems/amazon_oa/amazon-get-min-removal.md
-      - "Find Lexicographically Smallest String": problems/amazon_oa/amazon-find-lexicographically-smallest-string.md
-      - "Find Password Strength": problems/amazon_oa/amazon-find-password-strength.md
-      - "Perform Queries": problems/amazon_oa/amazon-perform-queries.md
-      - "Data Dependence Sum": problems/amazon_oa/amazon-get-data-dependence-sum.md
-      - "Min Operations": problems/amazon_oa/amazon-get-min-operations2.md
-      - "Sum of All Days Numbers on Which the Data of the Xth Will Be Dependent": problems/amazon_oa/amazon-sum-of-all-days-numbers-on-which-the-data-of-the-xth-will-be-dependent.md
-      - "Optimize Identifiers": problems/amazon_oa/amazon-optimize-identifiers.md
-      - "Min Insertions": problems/amazon_oa/amazon-minimum-insertions.md
-      - "Min Chars to Append": problems/amazon_oa/amazon-determine-minimum-characters-to-append.md
-      - "Reduce Memory Usage": problems/amazon_oa/amazon-reduce-memory-usage.md
-      - "Calculate Truck Distance": problems/amazon_oa/amazon-calculate-truck-distance.md
-      - "Get Min Change": problems/amazon_oa/amazon-get-minimum-changes.md
-      - "Find Ideal Days": problems/amazon_oa/amazon-find-ideal-days.md
-      - "Get Min Moves": problems/amazon_oa/amazon-get-min-moves.md
-      - "Minimize Effort": problems/amazon_oa/amazon-minimize-effort.md
-      - "Get Max Discount Pairs": problems/amazon_oa/amazon-get-max-discount-pairs.md
-      - "Rooks Left": problems/amazon_oa/amazon-rooks-left.md
-      - "Optimize Identifiers": problems/amazon_oa/amazon-optimized-identifiers.md
-      - "Cleanup Dataset": problems/amazon_oa/amazon-cleanup-dataset.md
-      - "Find Min Variance": problems/amazon_oa/amazon-find-minimum-possible-variance.md
-      - "Find Min Time Required": problems/amazon_oa/amazon-find-minimum-time-required.md
-      - "Calculate Warehouse Efficiency": problems/amazon_oa/amazon-calculate-warehouse-efficiency.md
-      - "Find Networking Calls": problems/amazon_oa/amazon-find-network-calls.md
-      - "Make All Elements Distinct": problems/amazon_oa/amazon-make-all-elements-distinct.md
-      - "Maximize Similarity": problems/amazon_oa/amazon-maximize-similarity.md
-      - "Get Min Cost of Purchasing Books": problems/amazon_oa/amazon-get-min-cost-book.md
-      - "Get Smaller Items": problems/amazon_oa/amazon-get-smaller-items.md
-      - "About Mortgage": problems/amazon_oa/amazon-maximum-number-of-days-to-survive.md
-      - "Schedule Tasks": problems/amazon_oa/amazon-schedule-tasks.md
-      - "Planning the Campaign": problems/amazon_oa/amazon-minimum-weekly-input.md
-      - "Find Minimum Time": problems/amazon_oa/amazon-find-minimum-time.md
-      - "Get Max Programs": problems/amazon_oa/amazon-get-max-programs.md
-      - "Sort Permutation": problems/amazon_oa/amazon-can-sort-permutation-in-given-moves.md
-      - "Min Time to Create Beautiful Canvas": problems/amazon_oa/amazon-find-minimum-time-to-create-beautiful-canvas.md
-      - "Get Max Charge": problems/amazon_oa/amazon-get-max-charge.md
-      - "Rearrange Binary String": problems/amazon_oa/amazon-rearrange-binary-string.md
-      - "Get Max Alternating Music": problems/amazon_oa/amazon-get-max-alternating-music.md
-      - "Special String": problems/amazon_oa/amazon-get-special-string.md
-      - "Find Days S2 Subsequence of S1": problems/amazon_oa/amazon-find-days-s2-subsequence-of-s1.md
-      - "Find Subarray with Minimum Distinct Integers": problems/amazon_oa/amazon-find-subarray-with-minimum-distinct-integers.md
-      - "Find Maximum Calories": problems/amazon_oa/amazon-find-maximum-calories.md
-      - "Find Sum of Beauties": problems/amazon_oa/amazon-find-sum-of-beauties.md
-      - "Longest Perfect Anagrams": problems/amazon_oa/amazon-longest-perfect-anagrams.md
-      - "Maximum Quality Sum": problems/amazon_oa/amazon-maximum-quality-sum.md
-      - "Minimize Warehouse Transfer Cost": problems/amazon_oa/amazon-minimize-warehouse-transfer-cost.md
-      - "Calculate Total Distrance Travelled": problems/amazon_oa/amazon-calculate-total-distance-travelled.md
-      - "Maximum Possible Racers": problems/amazon_oa/amazon-maximum-possible-racers.md
-      - "Distributed Packages": problems/amazon_oa/amazon-distribute-packages.md
-      - "Find Capable Winners": problems/amazon_oa/amazon-find-capable-winners.md
-      - "Get Max Information Gain": problems/amazon_oa/amazon-get-max-information-gain.md
-      - "Get Min Size": problems/amazon_oa/amazon-get-min-size.md
-      - "Min Operations To Make Zeros": problems/amazon_oa/amazon-find-minimum-number-of-operations.md
-      - "Choose Warehouse Location": problems/amazon_oa/amazon-choose-warehouses-location.md
-      - "Minimize Storage Required": problems/amazon_oa/amazon-minimum-storage-capacity-required.md
-      - "Get Maximum Sum": problems/amazon_oa/amazon-get-maximum-sum.md
-      - "Assign Tasks": problems/amazon_oa/amazon-assign-tasks.md
-      - "Get Active Requests Count": problems/amazon_oa/amazon-get-active-requests-count.md
-      - "Get Operations": problems/amazon_oa/amazon-get-operations.md
-      - "Process Queries On Cart": problems/amazon_oa/amazon-process-queries-on-cart.md
-      - "Get Minimum Boxes": problems/amazon_oa/amazon-get-minimum-boxes.md
-      - "Compute Encoded Product Name": problems/amazon_oa/amazon-compute-encoded-product-name.md
-      - "Get Redundant Substrings": problems/amazon_oa/amazon-get-redundant-substrings.md
-      - "Process Queue": problems/amazon_oa/amazon-process-queue.md
-      - "Max Consecutive ON Servers": problems/amazon_oa/amazon-get-max-consecutive-on.md
-      - "Get Total Requests": problems/amazon_oa/amazon-get-total-requests.md
-      - "Maximize Negative Signs": problems/amazon_oa/maximize-negative-signs.md
-      - "Is Regex Matching": problems/amazon_oa/amazon-is-regex-matching.md
-      - "Maximum Stability": problems/amazon_oa/amazon-maximum-stability.md
-      - "Bring Servers Down": problems/amazon_oa/amazon-bring-servers-down.md
-      - "Maximize Subtree Product": problems/amazon_oa/amazon-maximize-subtree-product.md
-      - "Find K Level Permutation": problems/amazon_oa/amazon-find-k-level-permutation.md
-      - "Optimizing Box Weights": problems/amazon_oa/amazon-minimal-heaviest-set-a.md
-      - "Get Experience": problems/amazon_oa/amazon-get-exp.md
-      - "Ordered Confirguration": problems/amazon_oa/amazon-orda-layout.md
-      - "Find Median Of Subarray Uniqueness": problems/amazon_oa/find-median-of-subarray-uniqueness.md
-      - "Count Pairs": problems/amazon_oa/amazon-count-pairs.md
-      - "Get Max Pairs": problems/amazon_oa/amazon-get-max-pairs.md
-      - "Get Min Time": problems/amazon_oa/amazon-get-min-time.md
-      - "Kth Smallest in Subarray": problems/amazon_oa/amazon-kth-smallest-in-subarray.md
-      - "Max Negation": problems/amazon_oa/amazon-maximize-the-array-sum-after-negating-at-most-k-elements.md
-      - "Channel Max Quality": problems/amazon_oa/amazon-calculate-median-sum.md
-      - "Max Lucky Numbers": problems/amazon_oa/max-lucky-numbers.md
-      - "Find Kth Minimum Vulnerability ": problems/amazon_oa/amazon-find-kth-minimum-vulnerability.md
-      - "Max Aggregate Temp Change": problems/amazon_oa/amazon-get-max-aggregate-temperature-change.md
-      - "Count Faults (Faulty Binding 101 😁)": problems/amazon_oa/amazon-count-faults.md
-      - "Find Max Num": problems/amazon_oa/amazon-find-maximum-num.md
-      - "Minimize Sum of Absolute Differences": problems/amazon_oa/amazon-minimize-sum-of-absolute-differences.md
-      - "Match Strings": problems/amazon_oa/amazon-match-strings.md
-      - "Find Encrypted Password": problems/amazon_oa/amazon-find-encrypted-password.md
-      - "Num of Possible Unique Strings": problems/amazon_oa/amazon-find-number-of-possible-unique-strings.md
-      - "Lexicographically Smallest Palindrome Possible": problems/amazon_oa/amazon-lexicographically-smallest-palindrome-possible.md
-      - "Ways to Group Parcels": problems/amazon_oa/amazon-find-number-of-ways-to-group-parcels.md
-      - "Maxmimum Times Word Removed": problems/amazon_oa/amazon-maximum-times-word-removed.md
-      - "Return Records": problems/amazon_oa/amazon-return-records.md
-      - "Reverse Binary String": problems/amazon_oa/amazon-reverse-binary-string.md
-      - "Get Max Racers": problems/amazon_oa/amazon-get-max-racers.md
-      - "Count Distinct Passwords": problems/amazon_oa/amazon-count-distinct-passwords.md
-      - "Get Min Num Moves": problems/amazon_oa/amazon-get-min-num-moves.md
-      - "Find Min Trips": problems/amazon_oa/amazon-find-min-trips.md
-      - "Max User Traffic": problems/amazon_oa/amazon-maximum-user-traffic.md
-      - "Fortune Telling": problems/amazon_oa/amazon-minimize-the-range.md
-      - "Find Recurring Name": problems/amazon_oa/amazon-find-recurring-names.md
-      - "Find Requests In Queue": problems/amazon_oa/amazon-find-requests-in-queue.md
-      - "Find Largest Set of Onion Bags": problems/amazon_oa/amazon-find-largest-set-of-onion-bags.md
-      - "Minimum Total Errors": problems/amazon_oa/amazon-min-errors.md
-      - "Dropped Requests": problems/amazon_oa/amazon-dropped-requests.md
-      - "Execute Processes": problems/amazon_oa/amazon-execute-processes.md
-      - "Find Unique Values": problems/amazon_oa/amazon-find-unique-values.md
-      - "Group Students": problems/amazon_oa/amazon-group-students.md
-      - "Number of Suitable Locations": problems/amazon_oa/amazon-num-of-suitable-places.md
-      - "Rice Bags": problems/amazon_oa/max-set-size.md
-      - "Get Discount Pairs": problems/amazon_oa/get-discount-pairs.md
-      - "Get Min Cost Data": problems/amazon_oa/get-min-cost-data.md
-      - "Count Maximum Profitable Groups": problems/amazon_oa/count-maximum-profitable-groups.md
-      - "Get Min Distance (AMZ CN)": problems/amazon_oa/amazon-find-minimum-dist.md
-      - "Count Games Won By Group1 (AMZ CN)": problems/amazon_oa/amazon-how-many-games-did-the-team-win.md
-      - "Check Similar Passwords": problems/amazon_oa/check-similar-passwords.md
-      - "Location of Data After Transfers": problems/amazon_oa/location-of-data-after-transfers.md
-      - "Maximum Score in Balanced String": problems/amazon_oa/maximum-score-in-balanced-string.md
-      - "Get Success Value": problems/amazon_oa/get-success-value.md
-      - "Warehouse Distribution": problems/amazon_oa/warehouse-allocation.md
-      - "Erase Pairs": problems/amazon_oa/erase-pairs.md
-      - "Get Priorities After Execution": problems/amazon_oa/get-priorities-after-execution.md
-      - "Count Max Num Teams": problems/amazon_oa/count-max-num-teams.md
-      - "Get Average Standing": problems/amazon_oa/get-average-standing.md
-      - "Minimum Time Spent": problems/amazon_oa/minimum-time-spent.md
-      - "Count Spikes": problems/amazon_oa/count-spikes.md
-      - "Find Minimum Inefficiency": problems/amazon_oa/find-minimum-inefficiency.md
-      - "Cet Mean Rank Count": problems/amazon_oa/get-mean-rank-count.md
-      - "Get Minimum Costs": problems/amazon_oa/get-minimum-cost.md
+      - system-design/case_studies/index.md
+      - URL Shortener: system-design/case_studies/url_shortener.md
+      - Rate Limiter: system-design/case_studies/rate_limiter.md
+      - News Feed: system-design/case_studies/news_feed.md
+      - Chat System: system-design/case_studies/chat_system.md
+      - Web Crawler: system-design/case_studies/web_crawler.md
+  - Leetcode:
+    - leetcode/index.md
+    - "Two Sum": leetcode/two_sum.md
+    - "Group Anagrams": leetcode/group_anagrams.md
+    - "Top K Frequent Elements": leetcode/top_k_frequent_elements.md
+    - "Encode and Decode Strings": leetcode/encode_and_decode_strings.md
+    - "Valid Sudoku": leetcode/valid_sudoku.md
+    - "Longest Consecutive Sequence": leetcode/longest_consecutive_sequence.md
+    - "Valid Parentheses": leetcode/valid_parentheses.md
+    - "Daily Temperatures": leetcode/daily_temperatures.md
+    - "Car Fleet": leetcode/car_fleet.md
+    - "Merge Two Sorted Lists": leetcode/merge_two_sorted_lists.md
+    - "Reorder List": leetcode/reorder_list.md
+    - "Remove Nth Node From End of List": leetcode/remove_nth_node_from_end_of_list.md
+    - "Copy List With Random Pointer": leetcode/copy_list_with_random_pointer.md
+    - "Add Two Numbers": leetcode/add_two_numbers.md
+    - "Find The Duplicate Number": leetcode/find_the_duplicate_number.md
+    - "Reverse Nodes In K Group": leetcode/reverse_nodes_in_k_group.md
+    - "Best Time to Buy and Sell Stock": leetcode/best_time_to_buy_and_sell_stock.md
+    - "Valid Palindrome": leetcode/valid_palindrome.md
+    - "Two Sum II Input Array Is Sorted": leetcode/two_sum_ii_input_array_is_sorted.md
+    - "Invert Binary Tree": leetcode/invert_binary_tree.md
+    - "Same Tree": leetcode/same_tree.md
+    - "Subtree of Another Tree": leetcode/subtree_of_another_tree.md
+    - "Count Good Nodes In Binary Tree": leetcode/count_good_nodes_in_binary_tree.md
+    - "Valid Anagram": leetcode/valid_anagram.md
+    - "Binary Search": leetcode/binary_search.md
+    - "Search a 2D Matrix": leetcode/search_a_2d_matrix.md
+    - "Koko Eating Bananas": leetcode/koko_eating_bananas.md
+    - "Find Minimum In Rotated Sorted Array": leetcode/find_minimum_in_rotated_sorted_array.md
+    - "Median of Two Sorted Arrays": leetcode/median_of_two_sorted_arrays.md
+    - "Flood Fill": leetcode/flood_fill.md
+    - "Max Area of Island": leetcode/max_area_of_island.md
+    - "Walls And Gates": leetcode/walls_and_gates.md
+    - "Pacific Atlantic Water Flow": leetcode/pacific_atlantic_water_flow.md
+    - "Surrounded Regions": leetcode/surrounded_regions.md
+    - "Course Schedule II": leetcode/course_schedule_ii.md
+    - "Graph Valid Tree": leetcode/graph_valid_tree.md
+    - "Number of Connected Components In An Undirected Graph": leetcode/number_of_connected_components_in_an_undirected_graph.md
+    - "Redundant Connection": leetcode/redundant_connection.md
+    - "Lowest Common Ancestor of a BST": leetcode/lowest_common_ancestor_of_a_binary_search_tree.md
+    - "Balanced Binary Tree": leetcode/balanced_binary_tree.md
+    - "Linked List Cycle": leetcode/linked_list_cycle.md
+    - "Implement Queue using Stacks": leetcode/implement_queue_using_stacks.md
+    - "First Bad Version": leetcode/first_bad_version.md
+    - "Ransom Note": leetcode/ransom_note.md
+    - "Climbing Stairs": leetcode/climbing_stairs.md
+    - "Min Cost Climbing Stairs": leetcode/min_cost_climbing_stairs.md
+    - "House Robber": leetcode/house_robber.md
+    - "House Robber II": leetcode/house_robber_ii.md
+    - "Palindromic Substrings": leetcode/palindromic_substrings.md
+    - "Decode Ways": leetcode/decode_ways.md
+    - "Maximum Product Subarray": leetcode/maximum_product_subarray.md
+    - "Longest Increasing Subsequence": leetcode/longest_increasing_subsequence.md
+    - "Longest Palindrome": leetcode/longest_palindrome.md
+    - "Reverse Linked List": leetcode/reverse_linked_list.md
+    - "Majority Element": leetcode/majority_element.md
+    - "Add Binary": leetcode/add_binary.md
+    - "Diameter of Binary Tree": leetcode/diameter_of_binary_tree.md
+    - "Middle of the Linked List": leetcode/middle_of_the_linked_list.md
+    - "Maximum Depth of Binary Tree": leetcode/maximum_depth_of_binary_tree.md
+    - "Contains Duplicate": leetcode/contains_duplicate.md
+    - "Maximum Subarray": leetcode/maximum_subarray.md
+    - "Jump Game": leetcode/jump_game.md
+    - "Jump Game II": leetcode/jump_game_ii.md
+    - "Gas Station": leetcode/gas_station.md
+    - "Hand of Straights": leetcode/hand_of_straights.md
+    - "Merge Triplets to Form Target Triplet": leetcode/merge_triplets_to_form_target_triplet.md
+    - "Partition Labels": leetcode/partition_labels.md
+    - "Valid Parenthesis String": leetcode/valid_parenthesis_string.md
+    - "Non Overlapping Intervals": leetcode/non_overlapping_intervals.md
+    - "Meeting Rooms": leetcode/meeting_rooms.md
+    - "Meeting Rooms II": leetcode/meeting_rooms_ii.md
+    - "Minimum Interval to Include Each Query": leetcode/minimum_interval_to_include_each_query.md
+    - "Single Number": leetcode/single_number.md
+    - "Number of 1 Bits": leetcode/number_of_1_bits.md
+    - "Counting Bits": leetcode/counting_bits.md
+    - "Reverse Bits": leetcode/reverse_bits.md
+    - "Missing Number": leetcode/missing_number.md
+    - "Sum of Two Integers": leetcode/sum_of_two_integers.md
+    - "Reverse Integer": leetcode/reverse_integer.md
+    - "Insert Interval": leetcode/insert_interval.md
+    - "01 Matrix": leetcode/01_matrix.md
+    - "K Closest Points to Origin": leetcode/k_closest_points_to_origin.md
+    - "Kth Largest Element In a Stream": leetcode/kth_largest_element_in_a_stream.md
+    - "Last Stone Weight": leetcode/last_stone_weight.md
+    - "Kth Largest Element In An Array": leetcode/kth_largest_element_in_an_array.md
+    - "Design Twitter": leetcode/design_twitter.md
+    - "Longest Substring Without Repeating Characters": leetcode/longest_substring_without_repeating_characters.md
+    - "Longest Repeating Character Replacement": leetcode/longest_repeating_character_replacement.md
+    - "Permutation In String": leetcode/permutation_in_string.md
+    - "Sliding Window Maximum": leetcode/sliding_window_maximum.md
+    - "3Sum": leetcode/3sum.md
+    - "Binary Tree Level Order Traversal": leetcode/binary_tree_level_order_traversal.md
+    - "Clone Graph": leetcode/clone_graph.md
+    - "Evaluate Reverse Polish Notation": leetcode/evaluate_reverse_polish_notation.md
+    - "Course Schedule": leetcode/course_schedule.md
+    - "Implement Trie (Prefix Tree)": leetcode/implement_trie_prefix_tree.md
+    - "Design Add And Search Words Data Structure": leetcode/design_add_and_search_words_data_structure.md
+    - "Word Search II": leetcode/word_search_ii.md
+    - "Coin Change": leetcode/coin_change.md
+    - "Product of Array Except Self": leetcode/product_of_array_except_self.md
+    - "Minimum Stack": leetcode/min_stack.md
+    - "Validate Binary Search Tree": leetcode/validate_binary_search_tree.md
+    - "Number of Islands": leetcode/number_of_islands.md
+    - "Rotting Oranges": leetcode/rotting_oranges.md
+    - "Search in Rotated Sorted Array": leetcode/search_in_rotated_sorted_array.md
+    - "Combination Sum": leetcode/combination_sum.md
+    - "Combination Sum II": leetcode/combination_sum_ii.md
+    - "Subsets II": leetcode/subsets_ii.md
+    - "Generate Parentheses": leetcode/generate_parentheses.md
+    - "Palindrome Partitioning": leetcode/palindrome_partitioning.md
+    - "N Queens": leetcode/n_queens.md
+    - "Permutations": leetcode/permutations.md
+    - "Merge Intervals": leetcode/merge_intervals.md
+    - "Lowest Common Ancestor of a Binary Tree": leetcode/lowest_common_ancestor_of_a_binary_tree.md
+    - "Time Based Key-Value Store": leetcode/time_based_key_value_store.md
+    - "Accounts Merge": leetcode/accounts_merge.md
+    - "Sort Colors": leetcode/sort_colors.md
+    - "Word Break": leetcode/word_break.md
+    - "Partition Equal Subset Sum": leetcode/partition_equal_subset_sum.md
+    - "String to Integer (atoi)": leetcode/string_to_integer_atoi.md
+    - "Spiral Matrix": leetcode/spiral_matrix.md
+    - "Rotate Image": leetcode/rotate_image.md
+    - "Set Matrix Zeroes": leetcode/set_matrix_zeroes.md
+    - "Happy Number": leetcode/happy_number.md
+    - "Plus One": leetcode/plus_one.md
+    - "Pow(x, n)": leetcode/powx_n.md
+    - "Multiply Strings": leetcode/multiply_strings.md
+    - "Detect Squares": leetcode/detect_squares.md
+    - "Subsets": leetcode/subsets.md
+    - "Binary Tree Right Side View": leetcode/binary_tree_right_side_view.md
+    - "Longest Palindromic Substring": leetcode/longest_palindromic_substring.md
+    - "Unique Paths": leetcode/unique_paths.md
+    - "Construct Binary Tree from Preorder and Inorder Traversal": leetcode/construct_binary_tree_from_preorder_and_inorder_traversal.md
+    - "Container With Most Water": leetcode/container_with_most_water.md
+    - "Letter Combinations of a Phone Number": leetcode/letter_combinations_of_a_phone_number.md
+    - "Word Search": leetcode/word_search.md
+    - "Find All Anagrams in a String": leetcode/find_all_anagrams_in_a_string.md
+    - "Minimum Height Trees": leetcode/minimum_height_trees.md
+    - "Task Scheduler": leetcode/task_scheduler.md
+    - "LRU Cache": leetcode/lru_cache.md
+    - "Kth Smallest Element in a BST": leetcode/kth_smallest_element_in_a_bst.md
+    - "Minimum Window Substring": leetcode/minimum_window_substring.md
+    - "Serialize and Deserialize Binary Tree": leetcode/serialize_and_deserialize_binary_tree.md
+    - "Trapping Rain Water": leetcode/trapping_rain_water.md
+    - "Find Median from Data Stream": leetcode/find_median_from_data_stream.md
+    - "Word Ladder": leetcode/word_ladder.md
+    - "Basic Calculator": leetcode/basic_calculator.md
+    - "Maximum Profit in Job Scheduling": leetcode/maximum_profit_in_job_scheduling.md
+    - "Merge k Sorted Lists": leetcode/merge_k_sorted_lists.md
+    - "Largest Rectangle in Histogram": leetcode/largest_rectangle_in_histogram.md
+    - "Binary Tree Maximum Path Sum": leetcode/binary_tree_maximum_path_sum.md
+    - "Longest Common Subsequence": leetcode/longest_common_subsequence.md
+    - "Best Time to Buy And Sell Stock With Cooldown": leetcode/best_time_to_buy_and_sell_stock_with_cooldown.md
+    - "Coin Change II": leetcode/coin_change_ii.md
+    - "Target Sum": leetcode/target_sum.md
+    - "Interleaving String": leetcode/interleaving_string.md
+    - "Longest Increasing Path In a Matrix": leetcode/longest_increasing_path_in_a_matrix.md
+    - "Distinct Subsequences": leetcode/distinct_subsequences.md
+    - "Edit Distance": leetcode/edit_distance.md
+    - "Burst Balloons": leetcode/burst_balloons.md
+    - "Regular Expression Matching": leetcode/regular_expression_matching.md
+    - "Network Delay Time": leetcode/network_delay_time.md
+    - "Reconstruct Itinerary": leetcode/reconstruct_itinerary.md
+    - "Min Cost to Connect All Points": leetcode/min_cost_to_connect_all_points.md
+    - "Swim In Rising Water": leetcode/swim_in_rising_water.md
+    - "Alien Dictionary": leetcode/alien_dictionary.md
+    - "Cheapest Flights Within K Stops": leetcode/cheapest_flights_within_k_stops.md
+    - "Maximum Frequency Stack": leetcode/maximum_frequency_stack.md
+  - Amazon:
+    - amazon/index.md
+    - "Concatenated Words": amazon/amazon-concatenated-words-variant.md
+    - "Longest Increasing Subsequence": amazon/amazon-longest-increasing-subsequence-variant.md
+    - "Minimum Moves to Capture the King": amazon/amazon-minimum-moves-to-capture-king.md
+    - "Squirrel Nut Collection Shortest Path": amazon/amazon-squirrel-nut-collection-shortest-path.md
+    - "Maximize Center A Package Benefit": amazon/amazon-center-a-package-benefit.md
+    - "Max Area of Island": amazon/amazon-max-area-of-island.md
+    - "Maximum Rating Threshold Count": amazon/amazon-maximum-rating-threshold-count.md
+    - "Number of Islands": amazon/amazon-number-of-islands.md
+    - "Count Islands from Streaming Rows": amazon/amazon-streaming-island-count.md
+    - "Top K Frequent Elements": amazon/amazon-top-k-frequent-elements.md
+    - "Minimum Merge Conflicts": amazon/amazon-minimum-merge-conflicts.md
+    - "Optimize Package Order by Sorting One Window": amazon/amazon-optimize-package-order-one-window.md
+    - "Largest Binary-String Subset Within Bit Budgets": amazon/amazon-binary-strings-bounded-subset.md
+    - "Lowest Common Ancestor in an Inserted BST": amazon/amazon-bst-lowest-common-ancestor.md
+    - "Maximize K-Element AND with an Increment Budget": amazon/amazon-maximize-k-element-and-with-increment-budget.md
+    - "Evaluate Division": amazon/amazon-evaluate-division.md
+    - "Apply a Reversi Move": amazon/amazon-reversi-move-simulation.md
+    - "Longest Content Window with Bounded Labels": amazon/amazon-streaming-content-label-window.md
+    - "Maximum Stock Profit with At Most Two Transactions": amazon/amazon-best-time-to-buy-and-sell-stock-iii.md
+    - "Currency Conversion Rate": amazon/amazon-currency-conversion-rate.md
+    - "House Robber": amazon/amazon-house-robber.md
+    - "Lisp Expression Parser": amazon/amazon-lisp-expression-parser.md
+    - "Maximize Consecutive Equal Answers": amazon/amazon-maximize-answer-key-confusion.md
+    - "Most Frequent Name": amazon/amazon-most-frequent-name.md
+    - "Minimum Time to Spread Through a Grid": amazon/amazon-rotting-oranges-variation.md
+    - "Group-Relative Policy Advantages": amazon/amazon-group-relative-policy-advantages.md
+    - "Grouped-Query Attention with a KV Cache": amazon/amazon-grouped-query-attention-with-kv-cache.md
+    - "Capacity To Ship Packages Within D Days": amazon/amazon-capacity-to-ship-packages-within-d-days.md
+    - "Get Minimum Amount": amazon/amazon-get-min-amount.md
+    - "Minimum Cost for Roads and Hospitals": amazon/amazon-roads-and-hospitals-minimum-cost.md
+    - "Select K Paired Indices for Maximum Score": amazon/amazon-select-k-paired-array-score.md
+    - "Environment Variable Store and Substitution": amazon/amazon-environment-variable-substitution.md
+    - "Minimum Edge Moves to Connect a Network": amazon/amazon-minimum-edge-moves-to-connect-graph.md
+    - "Simplify a Binary Expression Tree": amazon/amazon-simplify-expression-tree.md
+    - "Path Through an O/X Grid Using Only Right and Down": amazon/amazon-right-down-grid-path.md
+    - "Allocate Minimum Pages": amazon/amazon-allocate-minimum-pages.md
+    - "Edit Distance": amazon/amazon-edit-distance.md
+    - "Longest Subarray with K Distinct Values": amazon/amazon-longest-subarray-with-k-distinct.md
+    - "Trapping Rain Water": amazon/amazon-trapping-rain-water.md
+    - "Word Ladder": amazon/amazon-word-ladder.md
+    - "Maximize Adjacent Difference With One Reversal": amazon/amazon-maximize-adjacent-difference-with-one-reversal.md
+    - "Shortest Grid Path With One Wall Break": amazon/amazon-shortest-grid-path-with-one-wall-break.md
+    - "Course Order and Cycle": amazon/amazon-course-order-and-cycle.md
+    - "Inventory Allocation": amazon/amazon-inventory-allocation.md
+    - "LRU Cache for Query Results": amazon/amazon-lru-query-result-cache.md
+    - "Minimum Stick Connection Cost": amazon/amazon-minimum-stick-connection-cost.md
+    - "First Non-Repeating Character": amazon/amazon-first-non-repeating-character.md
+    - "Root-to-Leaf Paths with a Target Sum": amazon/amazon-root-to-leaf-target-sum-paths.md
+    - "Aggressive Cows": amazon/amazon-aggressive-cows.md
+    - "All Anagram Start Indices": amazon/amazon-anagram-start-indices.md
+    - "Basic Calculator": amazon/amazon-basic-calculator.md
+    - "Binary Tree Cameras": amazon/amazon-binary-tree-cameras.md
+    - "Binary Tree Right View": amazon/amazon-binary-tree-right-view.md
+    - "Calculate Beauty Values": amazon/amazon-calculate-beauty-values.md
+    - "Cheapest Flights Within K Stops": amazon/amazon-cheapest-flights-within-k-stops.md
+    - "Construct a Tree from Level-Order and Inorder Traversals": amazon/amazon-construct-tree-level-inorder.md
+    - "Container With Most Water": amazon/amazon-container-with-most-water.md
+    - "Count Stepping Numbers In Range": amazon/amazon-count-stepping-numbers-in-range.md
+    - "Count Uni-Valued Subtrees": amazon/amazon-count-univalued-subtrees.md
+    - "Course Schedule": amazon/amazon-course-schedule.md
+    - "Course Schedule II": amazon/amazon-course-schedule-ii.md
+    - "Decode an Encoded String": amazon/amazon-decode-encoded-string.md
+    - "Distance Between Two Tree Nodes": amazon/amazon-distance-between-tree-nodes.md
+    - "E-commerce Notification Router": amazon/amazon-ecommerce-notification-router.md
+    - "Employee Ratings Management System": amazon/amazon-employee-ratings-data-structure.md
+    - "Find Median from Data Stream": amazon/amazon-find-median-from-data-stream.md
+    - "Find the Safest Path in a Grid": amazon/amazon-find-safest-path-in-grid.md
+    - "First Missing Positive": amazon/amazon-first-missing-positive.md
+    - "First Unique Character in a Stream": amazon/amazon-first-unique-character-stream.md
+    - "Bit at an Index After Repeated Binary Expansion": amazon/amazon-indexed-bit-after-binary-expansion.md
+    - "Count Islands with Eight-Direction Adjacency": amazon/amazon-islands-eight-direction.md
+    - "K Closest Elements in a Sorted Array": amazon/amazon-k-closest-elements-in-sorted-array.md
+    - "Kth Smallest Sum from Sorted Matrix Rows": amazon/amazon-kth-smallest-row-sum.md
+    - "Remove Duplicate Letters for the Largest Result": amazon/amazon-largest-lexicographic-unique-letters.md
+    - "Longest Common Subsequence Length": amazon/amazon-longest-common-subsequence-length.md
+    - "Longest Happy Prefix": amazon/amazon-longest-happy-prefix.md
+    - "Longest Increasing Subsequence With Bounded Adjacent Difference": amazon/amazon-longest-increasing-subsequence-bounded-difference.md
+    - "Max Consecutive Ones III": amazon/amazon-max-consecutive-ones-iii.md
+    - "Maximize Distance to the Closest Occupied Seat": amazon/amazon-maximize-distance-to-closest-person.md
+    - "Maximum Non-Adjacent House Value": amazon/amazon-maximum-non-adjacent-house-value.md
+    - "Maximum Profit in Job Scheduling": amazon/amazon-maximum-profit-job-scheduling.md
+    - "Maximum Sum BST in a Binary Tree": amazon/amazon-maximum-sum-bst.md
+    - "Meeting Room Scheduler": amazon/amazon-meeting-room-scheduler.md
+    - "Merge Intervals": amazon/amazon-merge-intervals.md
+    - "Merge k Sorted Lists": amazon/amazon-merge-k-sorted-lists.md
+    - "Stack with Constant-Time Middle Queries": amazon/amazon-middle-stack-operations.md
+    - "Minimize Malware Spread in a Facility Network": amazon/amazon-minimize-malware-facility-network.md
+    - "Minimum Window Substring": amazon/amazon-minimum-window-substring.md
+    - "Nodes at a Given N-ary Tree Level": amazon/amazon-nary-tree-nodes-at-level.md
+    - "Next Palindromic Time": amazon/amazon-next-palindromic-time.md
+    - "Next Permutation": amazon/amazon-next-permutation.md
+    - "Product of Array Except Self": amazon/amazon-product-array-except-self.md
+    - "Reorganize a String": amazon/amazon-reorganize-string.md
+    - "Running Delivery Time Medians": amazon/amazon-running-delivery-time-medians.md
+    - "Search in a Rotated Sorted Array": amazon/amazon-search-rotated-sorted-array.md
+    - "Task Scheduler": amazon/amazon-task-scheduler.md
+    - "Three Sum Closest": amazon/amazon-three-sum-closest.md
+    - "Fare Between Stops on a Train Route": amazon/amazon-train-route-fare.md
+    - "Initial and Final Accounts in a Transfer Chain": amazon/amazon-transfer-chain-endpoints.md
+    - "Minimum Moves for Two Knights to Meet": amazon/amazon-two-knights-minimum-meeting-moves.md
+    - "Unique Pairs in a 2D Matrix Summing to Target": amazon/amazon-unique-pairs-2d-target.md
+    - "Unique String Permutations": amazon/amazon-unique-string-permutations.md
+    - "Validate a Two-Color Chessboard": amazon/amazon-validate-two-color-chessboard.md
+    - "Maximum Saw Height for At Least M Cut Length": amazon/amazon-woodcut-saw-height.md
+    - "Word Break": amazon/amazon-word-break.md
+    - "Word Break II": amazon/amazon-word-break-ii.md
+    - "Interleaving String": amazon/amazon-interleaving-string.md
+    - "Dynamic Prefix Search Collection": amazon/amazon-prefix-search-collection.md
+    - "Word Search II": amazon/amazon-word-search-ii.md
+    - "Recent Advertisement Click Counts": amazon/amazon-ad-click-counts-sliding-window.md
+    - "Most Frequent Consecutive Website Pattern": amazon/amazon-consecutive-website-visit-pattern.md
+    - "Longest Substring Without Repeating Characters": amazon/amazon-longest-substring-without-repeating-characters.md
+    - "Page Referrer Reachability": amazon/amazon-page-referrer-reachability.md
+    - "Sliding-Window Rate Limiter": amazon/amazon-sliding-window-rate-limiter.md
+    - "Find Minimum Cost": amazon/amazon-find-minimum-cost.md
+    - "Maximum System Memory Capacity": amazon/amazon-maximum-capacity.md
+    - "Meeting Rooms II": amazon/amazon-meeting-rooms-ii.md
+    - "Next Smaller Ticket Price": amazon/amazon-next-smaller-ticket-price.md
+    - "Remove K Digits": amazon/amazon-remove-k-digits.md
+    - "Get Distinct Pairs": amazon/amazon-get-distinct-pairs.md
+    - "Minimum Adjacent Swaps to Group Binary Values": amazon/amazon-minimum-adjacent-swaps-binary-groups.md
+    - "Maximum Frequency Stack": amazon/amazon-maximum-frequency-stack.md
+    - "Linked-List Queue with Delete and Deduplication": amazon/amazon-linked-list-queue-operations.md
+    - "Minimum Grid Inconvenience": amazon/amazon-minimum-grid-inconvenience.md
+    - "Single Element in a Sorted Array": amazon/amazon-single-element-in-sorted-array.md
+    - "Count the Number of Complete Components": amazon/amazon-count-complete-components.md
+    - "Cousins in Binary Tree II": amazon/amazon-cousins-in-binary-tree-ii.md
+    - "Minimum Operations to Make an Array Continuous": amazon/amazon-minimum-operations-to-make-array-continuous.md
+    - "Vertical Order Traversal of a Binary Tree": amazon/amazon-vertical-order-traversal-of-binary-tree.md
+    - "HTTP Request Redirection": amazon/amazon-http-request-redirection.md
+    - "Resolve Task Dependencies": amazon/amazon-resolve-task-dependencies.md
+    - "Shortest Distance on a Circular Bus Route": amazon/amazon-shortest-distance-circular-bus-route.md
+    - "Sort an Array with Rotate and Flip": amazon/amazon-sort-array-with-rotate-and-flip.md
+    - "Loyal Customers Across Two Days": amazon/amazon-loyal-customers.md
+    - "Smallest Number With a Given Digit Sum": amazon/amazon-smallest-number-with-digit-sum.md
+    - "Group Anagrams": amazon/amazon-group-anagrams.md
+    - "Longest Palindromic Subsequence": amazon/amazon-longest-palindromic-subsequence.md
+    - "Maximal Square": amazon/amazon-maximal-square.md
+    - "Maximum Sum of Heights": amazon/amazon-maximum-sum-of-heights.md
+    - "Number of Islands II": amazon/amazon-number-of-islands-ii.md
+    - "Sliding Window Maximum": amazon/amazon-sliding-window-maximum.md
+    - "Domain Weight Calculation": amazon/amazon-domain-weight-calculation.md
+    - "Minimum Contiguous Replacements": amazon/amazon-minimum-contiguous-replacements.md
+    - "Minimum Redistribution Cost": amazon/amazon-minimum-redistribution-cost.md
+    - "Number of Atoms": amazon/amazon-number-of-atoms.md
+    - "Closest Version Date": amazon/amazon-closest-version-date.md
+    - "Maximum Concurrent Processes (Bar Raiser Round)": amazon/amazon-max-concurrent-processes.md
+    - "Package Dependency Order": amazon/amazon-package-dependency-order.md
+    - "Merge Sorted Array": amazon/amazon-merge-sorted-array.md
+    - "Get Max Servers": amazon/amazon-find-maximum-number-of-servers.md
+    - "Permutation Sorter": amazon/amazon-permutation-sorter.md
+    - "Feasible Indices After Prefix/Suffix Reduction": amazon/amazon-feasible-indices-after-prefix-suffix-reduction.md
+    - "Frequently Bought Together": amazon/amazon-frequently-bought-together.md
+    - "Souvenir Shop Purchases": amazon/amazon-souvenir-shop-purchases.md
+    - "Find Minimum Groups": amazon/amazon-find-minimum-groups.md
+    - "Maximum Equal Parts for Prefixes": amazon/amazon-maximum-equal-parts-for-prefixes.md
+    - "Count Promotional Periods": amazon/amazon-count-promotional-periods.md
+    - "Get Smallest Base Segment": amazon/amazon-get-smallest-base-segment.md
+    - "Select Least Resource Tasks": amazon/amazon-select-least-resource-tasks.md
+    - "Lowest Common Ancestor Implemented with Stack": amazon/amazon-lowest-common-ancestor-implemented-with-stack.md
+    - "Product Category Group Sizes": amazon/amazon-product-category-groups.md
+    - "Count Connected Components": amazon/amazon-count-connected-components.md
+    - "Unique Pairs With Target Sum": amazon/amazon-unique-pairs-with-target-sum.md
+    - "Feasible Indices After Reduction": amazon/amazon-feasible-indices-after-reduction.md
+    - "Count Similar String Groups": amazon/amazon-count-similar-string-groups.md
+    - "Get Min Errors": amazon/amazon-get-min-errors.md
+    - "Maximum Score With Non-Adjacent Values": amazon/amazon-maximum-score-with-non-adjacent-values.md
+    - "Make Value Groups Contiguous": amazon/amazon-make-value-groups-contiguous.md
+    - "Dynamic Kth Largest Queries": amazon/amazon-dynamic-kth-largest-queries.md
+    - "Longest Zero Sum Subarray": amazon/amazon-longest-zero-sum-subarray.md
+    - "Maximize Minimum Machine Power": amazon/amazon-maximize-minimum-machine-power.md
+    - "Maximize Protected City Population": amazon/amazon-maximize-protected-city-population.md
+    - "Minimum Cost to Convert Products to Variant A": amazon/amazon-minimum-cost-to-convert-products-to-variant-a.md
+    - "Minimum Preparation Time for Two Handlers": amazon/amazon-minimum-preparation-time-for-two-handlers.md
+    - "Sum Max Plus Min After Decrement Operations": amazon/amazon-sum-max-plus-min-after-decrement-operations.md
+    - "Sort Error Codes by Frequency": amazon/amazon-sort-error-codes-by-frequency.md
+    - "Lexicographically Smallest After One Substring Rotation": amazon/amazon-lexicographically-smallest-after-one-substring-rotation.md
+    - "Minimum Operations to Sort a Permutation": amazon/amazon-minimum-operations-to-sort-permutation.md
+    - "Lexicographically Maximum Final Sequence": amazon/amazon-lexicographically-maximum-final-sequence.md
+    - "Package Delivery System": amazon/amazon-package-delivery-system.md
+    - "VM Rental Revenue": amazon/amazon-vm-rental-revenue.md
+    - "Longest Arithmetic Subarray After One Change": amazon/amazon-longest-arithmetic-subarray-after-one-change.md
+    - "Replace Values and Return Sums": amazon/amazon-replace-values-and-return-sums.md
+    - "Minimum S3 Storage Cost": amazon/amazon-minimum-s3-storage-cost.md
+    - "Count Picked Items Less Than Queries": amazon/amazon-count-picked-items-less-than-queries.md
+    - "Fair Prize Distribution": amazon/amazon-fair-prize-distribution.md
+    - "Largest Number With Digit Sum": amazon/amazon-largest-number-with-digit-sum.md
+    - "Minimize Binary Subsequence Cost": amazon/amazon-minimize-binary-subsequence-cost.md
+    - "First Valid Word Segmentation": amazon/amazon-first-word-segmentation.md
+    - "Nearby Fulfillment Centers with Inventory": amazon/amazon-nearby-fulfillment-centers.md
+    - "Maximize Pages Before Suspension": amazon/amazon-maximize-pages-before-suspension.md
+    - "Predict Answer": amazon/amazon-predict-answer.md
+    - "Find Security Level": amazon/amazon-find-security-level.md
+    - "Get Min Subsegments": amazon/amazon-get-min-subsegments.md
+    - "Minimize Variation": amazon/amazon-minimize-variation.md
+    - "Find Hash": amazon/amazon-find-hash.md
+    - "Count Special Substrings": amazon/amazon-count-special-substrs.md
+    - "Find Minimum Days": amazon/amazon-find-minimum-days.md
+    - "Find Minimum Machine Sizes": amazon/amazon-find-minimum-machines-size.md
+    - "Get Maximum Count": amazon/amazon-get-maximum-count.md
+    - "Split Prefix Suffix": amazon/amazon-split-prefix-suffix.md
+    - "Determine the Best Skipping Strategy": amazon/amazon-determine-the-best-skipping-strategy.md
+    - "Compute Beauty of Array Products": amazon/amazon-compute-beauty-of-array-products.md
+    - "Find Idle Skill Query": amazon/amazon-find-idle-skills-query.md
+    - "Min Dock Bays": amazon/amazon-get-minimum-dock-bays.md
+    - "Min Num Unique Distribution Hubs": amazon/amazon-get-minimum-number-of-unique-distribution-centers.md
+    - "Next Perfect String": amazon/amazon-next-greater-perfect-string.md
+    - "Use Minimum Tokens": amazon/amazon-use-minimum-tokens.md
+    - "Remove Characters in Frequency Order": amazon/amazon-remove-characters-in-frequency-order.md
+    - "Optimal Utilization": amazon/amazon-optimal-utilization.md
+    - "Buy Servers": amazon/amazon-purchase-servers.md
+    - "Cinema Shows": amazon/amazon-cinema-shows.md
+    - "Min Retailers": amazon/amazon-minimum-retailers.md
+    - "Find Replacement": amazon/amazon-find-min-replacements.md
+    - "Good String": amazon/amazon-convert-to-good-string.md
+    - "Find Min Max Difference": amazon/amazon-find-min-max-difference.md
+    - "Max Sum of Non-overlapping Intervals": amazon/amazon-max-sum-of-non-overlapping-intervals.md
+    - "Get Minimal Cost": amazon/amazon-get-minimal-cost.md
+    - "Find Least Possible Vulnerability": amazon/amazon-find-least-possible-vulnerability.md
+    - "Make Array Distinct": amazon/amazon-make-array-distinct.md
+    - "Ensure Non Zero Load Sum": amazon/amazon-ensure-non-zero-load-sum.md
+    - "Number Of Well Performing Groups": amazon/amazon-number-of-well-performing-groups.md
+    - "Get Max Increments": amazon/amazon-get-max-increments.md
+    - "Password Strength": amazon/amazon-password-strength.md
+    - "Optimal Level": amazon/amazon-find-optimal-level.md
+    - "Min Operation": amazon/amazon-min-operation.md
+    - "Trader Joe Trades": amazon/amazon-trader-joe-trades.md
+    - "All About Rewards": amazon/amazon-all-about-rewards.md
+    - "Inventory Processes Survival Possibility": amazon/amazon-inventory-processes-survival-possibility.md
+    - "All About Medians": amazon/amazon-medians.md
+    - "Get Largest Number": amazon/amazon-find-partition-cost.md
+    - "Get The Most Out Of The Data": amazon/amazon-get-most-out-of-the-data.md
+    - "Maximize Sum of Array Multiplication": amazon/amazon-maximize-sum-of-array-multiplication.md
+    - "Max Number of Products You can Pick": amazon/amazon-maximum-number-of-products-you-can-pick.md
+    - "Get Maximum": amazon/amazon-get-maximum.md
+    - "Sum of Max Subarrys": amazon/amazon-sum-of-max-subarrays.md
+    - "Calculate Max Salary": amazon/amazon-calculate-max-salary.md
+    - "Maximize Product of Sizes of Subtrees": amazon/amazon-maximize-product-of-sizes-of-subtrees.md
+    - "Min Energy Cost": amazon/amazon-minimum-energy-cost.md
+    - "Optimal Interval Difference": amazon/amazon-optimal-interval-difference.md
+    - "Find Max Value": amazon/amazon-find-max-value.md
+    - "Get Max Events": amazon/amazon-get-maximum-events.md
+    - "Calculate Max Profit": amazon/amazon-calculate-max-profit.md
+    - "Get Final Location": amazon/amazon-get-final-locations.md
+    - "Get Stable Periods Count": amazon/amazon-get-stable-periods-count.md
+    - "Max Transfer Rate": amazon/amazon-max-transfer-rate.md
+    - "Get Max Stability": amazon/amazon-get-max-stability.md
+    - "Min Operations": amazon/amazon-make-array-zero-by-subtracting-equal-amounts.md
+    - "Get Max Stability": amazon/amazon-minimum-swaps-to-make-palindrome.md
+    - "Get Max Skill Sum": amazon/amazon-get-max-skill-sum.md
+    - "Get Min Value": amazon/amazon-get-minimum-value.md
+    - "Find Number": amazon/amazon-find-number.md
+    - "Get Min Removal": amazon/amazon-get-min-removal.md
+    - "Find Lexicographically Smallest String": amazon/amazon-find-lexicographically-smallest-string.md
+    - "Find Password Strength": amazon/amazon-find-password-strength.md
+    - "Perform Queries": amazon/amazon-perform-queries.md
+    - "Data Dependence Sum": amazon/amazon-get-data-dependence-sum.md
+    - "Min Operations": amazon/amazon-get-min-operations2.md
+    - "Sum of All Days Numbers on Which the Data of the Xth Will Be Dependent": amazon/amazon-sum-of-all-days-numbers-on-which-the-data-of-the-xth-will-be-dependent.md
+    - "Optimize Identifiers": amazon/amazon-optimize-identifiers.md
+    - "Min Insertions": amazon/amazon-minimum-insertions.md
+    - "Min Chars to Append": amazon/amazon-determine-minimum-characters-to-append.md
+    - "Reduce Memory Usage": amazon/amazon-reduce-memory-usage.md
+    - "Calculate Truck Distance": amazon/amazon-calculate-truck-distance.md
+    - "Get Min Change": amazon/amazon-get-minimum-changes.md
+    - "Find Ideal Days": amazon/amazon-find-ideal-days.md
+    - "Get Min Moves": amazon/amazon-get-min-moves.md
+    - "Minimize Effort": amazon/amazon-minimize-effort.md
+    - "Get Max Discount Pairs": amazon/amazon-get-max-discount-pairs.md
+    - "Rooks Left": amazon/amazon-rooks-left.md
+    - "Optimize Identifiers": amazon/amazon-optimized-identifiers.md
+    - "Cleanup Dataset": amazon/amazon-cleanup-dataset.md
+    - "Find Min Variance": amazon/amazon-find-minimum-possible-variance.md
+    - "Find Min Time Required": amazon/amazon-find-minimum-time-required.md
+    - "Calculate Warehouse Efficiency": amazon/amazon-calculate-warehouse-efficiency.md
+    - "Find Networking Calls": amazon/amazon-find-network-calls.md
+    - "Make All Elements Distinct": amazon/amazon-make-all-elements-distinct.md
+    - "Maximize Similarity": amazon/amazon-maximize-similarity.md
+    - "Get Min Cost of Purchasing Books": amazon/amazon-get-min-cost-book.md
+    - "Get Smaller Items": amazon/amazon-get-smaller-items.md
+    - "About Mortgage": amazon/amazon-maximum-number-of-days-to-survive.md
+    - "Schedule Tasks": amazon/amazon-schedule-tasks.md
+    - "Planning the Campaign": amazon/amazon-minimum-weekly-input.md
+    - "Find Minimum Time": amazon/amazon-find-minimum-time.md
+    - "Get Max Programs": amazon/amazon-get-max-programs.md
+    - "Sort Permutation": amazon/amazon-can-sort-permutation-in-given-moves.md
+    - "Min Time to Create Beautiful Canvas": amazon/amazon-find-minimum-time-to-create-beautiful-canvas.md
+    - "Get Max Charge": amazon/amazon-get-max-charge.md
+    - "Rearrange Binary String": amazon/amazon-rearrange-binary-string.md
+    - "Get Max Alternating Music": amazon/amazon-get-max-alternating-music.md
+    - "Special String": amazon/amazon-get-special-string.md
+    - "Find Days S2 Subsequence of S1": amazon/amazon-find-days-s2-subsequence-of-s1.md
+    - "Find Subarray with Minimum Distinct Integers": amazon/amazon-find-subarray-with-minimum-distinct-integers.md
+    - "Find Maximum Calories": amazon/amazon-find-maximum-calories.md
+    - "Find Sum of Beauties": amazon/amazon-find-sum-of-beauties.md
+    - "Longest Perfect Anagrams": amazon/amazon-longest-perfect-anagrams.md
+    - "Maximum Quality Sum": amazon/amazon-maximum-quality-sum.md
+    - "Minimize Warehouse Transfer Cost": amazon/amazon-minimize-warehouse-transfer-cost.md
+    - "Calculate Total Distrance Travelled": amazon/amazon-calculate-total-distance-travelled.md
+    - "Maximum Possible Racers": amazon/amazon-maximum-possible-racers.md
+    - "Distributed Packages": amazon/amazon-distribute-packages.md
+    - "Find Capable Winners": amazon/amazon-find-capable-winners.md
+    - "Get Max Information Gain": amazon/amazon-get-max-information-gain.md
+    - "Get Min Size": amazon/amazon-get-min-size.md
+    - "Min Operations To Make Zeros": amazon/amazon-find-minimum-number-of-operations.md
+    - "Choose Warehouse Location": amazon/amazon-choose-warehouses-location.md
+    - "Minimize Storage Required": amazon/amazon-minimum-storage-capacity-required.md
+    - "Get Maximum Sum": amazon/amazon-get-maximum-sum.md
+    - "Assign Tasks": amazon/amazon-assign-tasks.md
+    - "Get Active Requests Count": amazon/amazon-get-active-requests-count.md
+    - "Get Operations": amazon/amazon-get-operations.md
+    - "Process Queries On Cart": amazon/amazon-process-queries-on-cart.md
+    - "Get Minimum Boxes": amazon/amazon-get-minimum-boxes.md
+    - "Compute Encoded Product Name": amazon/amazon-compute-encoded-product-name.md
+    - "Get Redundant Substrings": amazon/amazon-get-redundant-substrings.md
+    - "Process Queue": amazon/amazon-process-queue.md
+    - "Max Consecutive ON Servers": amazon/amazon-get-max-consecutive-on.md
+    - "Get Total Requests": amazon/amazon-get-total-requests.md
+    - "Maximize Negative Signs": amazon/maximize-negative-signs.md
+    - "Is Regex Matching": amazon/amazon-is-regex-matching.md
+    - "Maximum Stability": amazon/amazon-maximum-stability.md
+    - "Bring Servers Down": amazon/amazon-bring-servers-down.md
+    - "Maximize Subtree Product": amazon/amazon-maximize-subtree-product.md
+    - "Find K Level Permutation": amazon/amazon-find-k-level-permutation.md
+    - "Optimizing Box Weights": amazon/amazon-minimal-heaviest-set-a.md
+    - "Get Experience": amazon/amazon-get-exp.md
+    - "Ordered Confirguration": amazon/amazon-orda-layout.md
+    - "Find Median Of Subarray Uniqueness": amazon/find-median-of-subarray-uniqueness.md
+    - "Count Pairs": amazon/amazon-count-pairs.md
+    - "Get Max Pairs": amazon/amazon-get-max-pairs.md
+    - "Get Min Time": amazon/amazon-get-min-time.md
+    - "Kth Smallest in Subarray": amazon/amazon-kth-smallest-in-subarray.md
+    - "Max Negation": amazon/amazon-maximize-the-array-sum-after-negating-at-most-k-elements.md
+    - "Channel Max Quality": amazon/amazon-calculate-median-sum.md
+    - "Max Lucky Numbers": amazon/max-lucky-numbers.md
+    - "Find Kth Minimum Vulnerability ": amazon/amazon-find-kth-minimum-vulnerability.md
+    - "Max Aggregate Temp Change": amazon/amazon-get-max-aggregate-temperature-change.md
+    - "Count Faults (Faulty Binding 101 😁)": amazon/amazon-count-faults.md
+    - "Find Max Num": amazon/amazon-find-maximum-num.md
+    - "Minimize Sum of Absolute Differences": amazon/amazon-minimize-sum-of-absolute-differences.md
+    - "Match Strings": amazon/amazon-match-strings.md
+    - "Find Encrypted Password": amazon/amazon-find-encrypted-password.md
+    - "Num of Possible Unique Strings": amazon/amazon-find-number-of-possible-unique-strings.md
+    - "Lexicographically Smallest Palindrome Possible": amazon/amazon-lexicographically-smallest-palindrome-possible.md
+    - "Ways to Group Parcels": amazon/amazon-find-number-of-ways-to-group-parcels.md
+    - "Maxmimum Times Word Removed": amazon/amazon-maximum-times-word-removed.md
+    - "Return Records": amazon/amazon-return-records.md
+    - "Reverse Binary String": amazon/amazon-reverse-binary-string.md
+    - "Get Max Racers": amazon/amazon-get-max-racers.md
+    - "Count Distinct Passwords": amazon/amazon-count-distinct-passwords.md
+    - "Get Min Num Moves": amazon/amazon-get-min-num-moves.md
+    - "Find Min Trips": amazon/amazon-find-min-trips.md
+    - "Max User Traffic": amazon/amazon-maximum-user-traffic.md
+    - "Fortune Telling": amazon/amazon-minimize-the-range.md
+    - "Find Recurring Name": amazon/amazon-find-recurring-names.md
+    - "Find Requests In Queue": amazon/amazon-find-requests-in-queue.md
+    - "Find Largest Set of Onion Bags": amazon/amazon-find-largest-set-of-onion-bags.md
+    - "Minimum Total Errors": amazon/amazon-min-errors.md
+    - "Dropped Requests": amazon/amazon-dropped-requests.md
+    - "Execute Processes": amazon/amazon-execute-processes.md
+    - "Find Unique Values": amazon/amazon-find-unique-values.md
+    - "Group Students": amazon/amazon-group-students.md
+    - "Number of Suitable Locations": amazon/amazon-num-of-suitable-places.md
+    - "Rice Bags": amazon/max-set-size.md
+    - "Get Discount Pairs": amazon/get-discount-pairs.md
+    - "Get Min Cost Data": amazon/get-min-cost-data.md
+    - "Count Maximum Profitable Groups": amazon/count-maximum-profitable-groups.md
+    - "Get Min Distance (AMZ CN)": amazon/amazon-find-minimum-dist.md
+    - "Count Games Won By Group1 (AMZ CN)": amazon/amazon-how-many-games-did-the-team-win.md
+    - "Check Similar Passwords": amazon/check-similar-passwords.md
+    - "Location of Data After Transfers": amazon/location-of-data-after-transfers.md
+    - "Maximum Score in Balanced String": amazon/maximum-score-in-balanced-string.md
+    - "Get Success Value": amazon/get-success-value.md
+    - "Warehouse Distribution": amazon/warehouse-allocation.md
+    - "Erase Pairs": amazon/erase-pairs.md
+    - "Get Priorities After Execution": amazon/get-priorities-after-execution.md
+    - "Count Max Num Teams": amazon/count-max-num-teams.md
+    - "Get Average Standing": amazon/get-average-standing.md
+    - "Minimum Time Spent": amazon/minimum-time-spent.md
+    - "Count Spikes": amazon/count-spikes.md
+    - "Find Minimum Inefficiency": amazon/find-minimum-inefficiency.md
+    - "Cet Mean Rank Count": amazon/get-mean-rank-count.md
+    - "Get Minimum Costs": amazon/get-minimum-cost.md

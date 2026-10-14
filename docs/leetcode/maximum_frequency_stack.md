@@ -6,7 +6,7 @@
 
 **Algorithm:** [Hash table](https://en.wikipedia.org/wiki/Hash_table) · [Stack](https://en.wikipedia.org/wiki/Stack_(abstract_data_type)) · [Priority queue](https://en.wikipedia.org/wiki/Priority_queue)
 
-**Practice:** [`practice/maximum_frequency_stack/solution.py`](../../practice/maximum_frequency_stack/solution.py)
+**Practice:** [`practice/leetcode/maximum_frequency_stack/solution.py`](../../practice/leetcode/maximum_frequency_stack/solution.py)
 
 Design a stack-like data structure to push elements to the stack and pop the most frequent element from the stack.
 

@@ -1,7 +1,7 @@
 """Tests for Rotting Oranges: your attempt (solution.py) against both case sets.
 
 cases.json (marker `simple`) is the "Run" set; cases_full.json (marker `full`) is
-the "Submit" gauntlet. The worked approaches live in ../../docs/problems/rotting_oranges.md.
+the "Submit" gauntlet. The worked approaches live in ../../../docs/leetcode/rotting_oranges.md.
 """
 
 import copy

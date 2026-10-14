@@ -1,6 +1,6 @@
 """Tests for Search in a Rotated Sorted Array — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-search-rotated-sorted-array.md.
+The worked approaches live in ../../../docs/amazon/amazon-search-rotated-sorted-array.md.
 """
 
 import pytest

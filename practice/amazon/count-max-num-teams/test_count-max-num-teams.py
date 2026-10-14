@@ -1,6 +1,6 @@
 """Tests for Count Max Num Teams — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/count-max-num-teams.md.
+The worked approaches live in ../../../docs/amazon/count-max-num-teams.md.
 """
 
 import pytest

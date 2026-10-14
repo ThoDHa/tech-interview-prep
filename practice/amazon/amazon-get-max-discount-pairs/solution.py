@@ -1,6 +1,6 @@
 """Get Max Discount Pairs — https://www.fastprep.io/problems/amazon-get-max-discount-pairs
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-get-max-discount-pairs.md
+Write-up & approaches: ../../../docs/amazon/amazon-get-max-discount-pairs.md
 
 It is the third anniversary of Amazon Prime Day, and they have come up with amazing offers yet again! Customers who purchase a pair of products whose prices sum to a power of three receive a 50% disco
 

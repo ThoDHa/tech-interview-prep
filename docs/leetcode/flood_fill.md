@@ -6,7 +6,7 @@
 
 **Algorithm:** [Flood fill](https://en.wikipedia.org/wiki/Flood_fill) · [Depth-first search](https://en.wikipedia.org/wiki/Depth-first_search) · [Breadth-first search](https://en.wikipedia.org/wiki/Breadth-first_search)
 
-**Practice:** [`practice/flood_fill/solution.py`](../../practice/flood_fill/solution.py)
+**Practice:** [`practice/leetcode/flood_fill/solution.py`](../../practice/leetcode/flood_fill/solution.py)
 
 You are given an image represented by an m x n grid of integers `image`, where `image[i][j]` represents the pixel value of the image. You are also given three integers `sr`, `sc`, and `color`. Your task is to perform a flood fill on the image starting from the pixel `image[sr][sc]`.
 

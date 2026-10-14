@@ -1,6 +1,6 @@
 """Walls And Gates — https://leetcode.com/problems/walls-and-gates/
 
-Write-up & approaches: ../../docs/problems/walls_and_gates.md
+Write-up & approaches: ../../../docs/leetcode/walls_and_gates.md
 
 You are given a $m \times n$ 2D `grid` initialized with these three possible values: 1. `-1` - A water cell that *can not* be traversed. 2. `0` - A treasure chest. 3. `INF` - A land cell that *can* be
 

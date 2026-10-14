@@ -1,6 +1,6 @@
 """Tests for Get Largest Number — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-find-partition-cost.md.
+The worked approaches live in ../../../docs/amazon/amazon-find-partition-cost.md.
 """
 
 import pytest

@@ -1,6 +1,6 @@
 """Design Add And Search Words Data Structure — https://leetcode.com/problems/design-add-and-search-words-data-structure/
 
-Write-up & approaches: ../../docs/problems/design_add_and_search_words_data_structure.md
+Write-up & approaches: ../../../docs/leetcode/design_add_and_search_words_data_structure.md
 
 Design a data structure that supports adding new words and searching for existing words. Implement the `WordDictionary` class: * `void addWord(word)` Adds `word` to the data structure. * `bool search(
 

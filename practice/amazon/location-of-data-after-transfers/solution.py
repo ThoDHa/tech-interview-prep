@@ -1,6 +1,6 @@
 """Location of Data After Transfers — https://www.fastprep.io/problems/location-of-data-after-transfers
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/location-of-data-after-transfers.md
+Write-up & approaches: ../../../docs/amazon/location-of-data-after-transfers.md
 
 X stores its data on different servers at different locations. From time to time, due to several factors, X needs to move its data from one location to another. This challenge involved keeping track o
 

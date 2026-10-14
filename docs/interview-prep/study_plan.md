@@ -1,6 +1,6 @@
 # Study Plan and Schedule
 
-Working through a problem bank without a plan stalls around problem 30, when the novelty wears off and the problems stop being easy. This page turns the bank into a budget: how many hours the preparation really takes, which style fits the time you have, and a week-by-week schedule that places the foundations and the Grind 75 track's canonical 75 into the eight weeks the repository promises. The NeetCode-only problems slot into the same weeks beside their closest Grind 75 topic; the [Amazon OA](../problems/amazon_oa/index.md) bank is its own track, paced by its own section.
+Working through a problem bank without a plan stalls around problem 30, when the novelty wears off and the problems stop being easy. This page turns the bank into a budget: how many hours the preparation really takes, which style fits the time you have, and a week-by-week schedule that places the foundations and the Grind 75 track's canonical 75 into the eight weeks the repository promises. The NeetCode-only problems slot into the same weeks beside their closest Grind 75 topic; the [Amazon OA](../amazon/index.md) bank is its own track, paced by its own section.
 
 ## How much time this takes
 
@@ -24,8 +24,8 @@ The totals above assume the coding track dominates, which is true at every level
 | Level | Realistic total | Where the hours go | Schedule adjustment |
 |-------|-----------------|--------------------|---------------------|
 | Junior / new grad | 65 to 80 hours | Nearly all coding: the full Grind 75 track, the [Foundations](../foundations/index.md) read before problem one, light [behavioral](behavioral.md) prep (about three hours) | Run the 8-week table as printed; behavioral stories come from internships, course projects, and side projects |
-| Mid-level | 80 to 100 hours | The full coding track plus [System Design](../system_design/index.md) from week 5, at roughly a 4:1 coding-to-design split | Keep 8 weeks only if you can give 10 or more hours weekly; otherwise stretch to 10 rather than cut the design track |
-| Senior and above | 100 to 120 hours | Coding drops to about half the hours; system design (including the [case studies](../system_design/case_studies/index.md)) and leadership-heavy behavioral stories take the other half | Stretch to 10 or 12 weeks; add one design case study per week from week 4 and rehearse influence stories, not just teamwork ones |
+| Mid-level | 80 to 100 hours | The full coding track plus [System Design](../system-design/index.md) from week 5, at roughly a 4:1 coding-to-design split | Keep 8 weeks only if you can give 10 or more hours weekly; otherwise stretch to 10 rather than cut the design track |
+| Senior and above | 100 to 120 hours | Coding drops to about half the hours; system design (including the [case studies](../system-design/case_studies/index.md)) and leadership-heavy behavioral stories take the other half | Stretch to 10 or 12 weeks; add one design case study per week from week 4 and rehearse influence stories, not just teamwork ones |
 
 The pattern behind the table: the more senior the role, the more the loop scores judgment over recall. Junior loops stay inside data structures and algorithms; senior loops spend real time on design tradeoffs and on behavioral rounds that probe influence, mentoring, and cross-team leadership rather than teamwork basics. The 8-week schedule below stays the backbone at every level; seniority changes the mix around it, not the shape.
 
@@ -50,12 +50,12 @@ First-pass time is the sum of the Time column: one clean attempt each. It is a l
 | Week | Problems | First-pass time | Focus |
 |------|----------|-----------------|-------|
 | 1 | Foundations (about 1 hour), then 1-10 | 2h 55m | Read the four [Foundations](../foundations/index.md) first. Hash maps, two pointers, stacks, linked lists, binary search, first trees |
-| 2 | 11-20 | 3h 05m | More trees and linked lists, queue from stacks, first dynamic programming ([Climbing Stairs](../problems/climbing_stairs.md)) |
+| 2 | 11-20 | 3h 05m | More trees and linked lists, queue from stacks, first dynamic programming ([Climbing Stairs](../leetcode/climbing_stairs.md)) |
 | 3 | 21-30 | 4h 05m | First mediums: tree recursion, intervals, heaps, sliding window |
-| 4 | 31-39 | 3h 55m | BFS and graphs, expression stacks, tries, DP ([Coin Change](../problems/coin_change.md)), design problems |
+| 4 | 31-39 | 3h 55m | BFS and graphs, expression stacks, tries, DP ([Coin Change](../leetcode/coin_change.md)), design problems |
 | 5 | 40-48 | 4h 25m | Graph traversal, binary search variants, backtracking begins, intervals. [Start mock interviews](mock_interviews.md) here |
 | 6 | 49-57 | 3h 50m | The DP cluster, simulation, more backtracking, string DP |
-| 7 | 58-66 | 4h 30m | Tree construction, backtracking on grids, heaps and greedy, design ([LRU Cache](../problems/lru_cache.md)) |
+| 7 | 58-66 | 4h 30m | Tree construction, backtracking on grids, heaps and greedy, design ([LRU Cache](../leetcode/lru_cache.md)) |
 | 8 | 67-75 | 5h 30m | The hard tier: hard window and DP problems, serialization, monotonic stacks, streaming median, k-way merge |
 
 Operating notes:
@@ -75,10 +75,10 @@ Operating notes:
 
 ## After week 8
 
-- Two bonus problems, [Binary Tree Maximum Path Sum](../problems/binary_tree_maximum_path_sum.md)
-  and [Maximum Frequency Stack](../problems/maximum_frequency_stack.md), sit beyond the canonical 75 if you want extra practice on trees and designs.
+- Two bonus problems, [Binary Tree Maximum Path Sum](../leetcode/binary_tree_maximum_path_sum.md)
+  and [Maximum Frequency Stack](../leetcode/maximum_frequency_stack.md), sit beyond the canonical 75 if you want extra practice on trees and designs.
 - Interviewing for mid-level and senior roles? Work through the
-  [System Design section](../system_design/index.md) in parallel from about week 5, not after it.
+  [System Design section](../system-design/index.md) in parallel from about week 5, not after it.
 - Keep the `due` queue running until the offer is signed. The review habit is
   worth more than any single problem.
 

@@ -1,6 +1,6 @@
 """Tests for Get Max Alternating Music — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-get-max-alternating-music.md.
+The worked approaches live in ../../../docs/amazon/amazon-get-max-alternating-music.md.
 """
 
 import pytest

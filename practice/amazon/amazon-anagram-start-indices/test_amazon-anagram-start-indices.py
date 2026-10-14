@@ -1,6 +1,6 @@
 """Tests for All Anagram Start Indices — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-anagram-start-indices.md.
+The worked approaches live in ../../../docs/amazon/amazon-anagram-start-indices.md.
 """
 
 import pytest

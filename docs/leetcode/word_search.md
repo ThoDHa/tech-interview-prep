@@ -6,7 +6,7 @@
 
 **Algorithm:** [Backtracking](https://en.wikipedia.org/wiki/Backtracking) · [Depth-first search](https://en.wikipedia.org/wiki/Depth-first_search)
 
-**Practice:** [`practice/word_search/solution.py`](../../practice/word_search/solution.py)
+**Practice:** [`practice/leetcode/word_search/solution.py`](../../practice/leetcode/word_search/solution.py)
 
 Given an `m x n` grid of characters `board` and a string `word`, return `true` if `word` exists in the grid.
 

@@ -1,6 +1,6 @@
 """Tests for Distributed Packages — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-distribute-packages.md.
+The worked approaches live in ../../../docs/amazon/amazon-distribute-packages.md.
 """
 
 import pytest

@@ -1,6 +1,6 @@
 """Tests for Word Ladder — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-word-ladder.md.
+The worked approaches live in ../../../docs/amazon/amazon-word-ladder.md.
 """
 
 import pytest

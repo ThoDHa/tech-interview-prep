@@ -1,6 +1,6 @@
 """Tests for Car Fleet — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../docs/problems/car_fleet.md.
+The worked approaches live in ../../../docs/leetcode/car_fleet.md.
 """
 
 import pytest

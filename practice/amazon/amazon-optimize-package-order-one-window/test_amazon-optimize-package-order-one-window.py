@@ -1,6 +1,6 @@
 """Tests for Optimize Package Order by Sorting One Window — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-optimize-package-order-one-window.md.
+The worked approaches live in ../../../docs/amazon/amazon-optimize-package-order-one-window.md.
 """
 
 import pytest

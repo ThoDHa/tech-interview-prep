@@ -1,6 +1,6 @@
 """Maximum Product Subarray — https://leetcode.com/problems/maximum-product-subarray/
 
-Write-up & approaches: ../../docs/problems/maximum_product_subarray.md
+Write-up & approaches: ../../../docs/leetcode/maximum_product_subarray.md
 Reference implementation of the write-up's Kadane's Algorithm with Min-Max
 Tracking solution, kept next to the harness so authored cases stay falsifiable.
 Your own attempt lives in solution.py.

@@ -20,7 +20,7 @@ The budget is a guide, not a law. Its real job is to stop the two classic failur
 ## Before the round
 
 - Prepare a self-introduction of about 90 seconds, two minutes at the most,
-  and two or three questions to ask at the end; [Behavioral Interviews](../interview_prep/behavioral.md) has the full preparation method for both.
+  and two or three questions to ask at the end; [Behavioral Interviews](../interview-prep/behavioral.md) has the full preparation method for both.
 - For a virtual round: quiet room, charged laptop, tested audio, and paper or
   a whiteboard app within reach for drawing.
 - For a phone screen: earphones, so both your hands are free to type.

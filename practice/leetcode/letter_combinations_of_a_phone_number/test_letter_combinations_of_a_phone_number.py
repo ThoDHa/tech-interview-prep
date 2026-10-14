@@ -2,7 +2,7 @@
 
 cases.json (marker `simple`) is the "Run" set; cases_full.json (marker `full`) is
 the "Submit" gauntlet. The worked approaches live in
-../../docs/problems/letter_combinations_of_a_phone_number.md.
+../../../docs/leetcode/letter_combinations_of_a_phone_number.md.
 """
 
 import pytest

@@ -1,6 +1,6 @@
 """Tests for Get Smallest Base Segment — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-get-smallest-base-segment.md.
+The worked approaches live in ../../../docs/amazon/amazon-get-smallest-base-segment.md.
 """
 
 import pytest

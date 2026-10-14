@@ -1,6 +1,6 @@
 """Get Max Alternating Music — https://www.fastprep.io/problems/amazon-get-max-alternating-music
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-get-max-alternating-music.md
+Write-up & approaches: ../../../docs/amazon/amazon-get-max-alternating-music.md
 
 Amazon Music is working on harmonizing their music playlist.
 

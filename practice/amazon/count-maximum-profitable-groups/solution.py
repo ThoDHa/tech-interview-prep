@@ -1,6 +1,6 @@
 """Count Maximum Profitable Groups — https://www.fastprep.io/problems/count-maximum-profitable-groups
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/count-maximum-profitable-groups.md
+Write-up & approaches: ../../../docs/amazon/count-maximum-profitable-groups.md
 
 Special thanks: 🍓 1000 thanks to spike for spike's incredible help! 🥑
 

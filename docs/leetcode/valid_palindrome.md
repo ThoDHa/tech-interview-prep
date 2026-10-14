@@ -6,7 +6,7 @@
 
 **Algorithm:** [Two-pointer technique](https://usaco.guide/silver/two-pointers)
 
-**Practice:** [`practice/valid_palindrome/solution.py`](../../practice/valid_palindrome/solution.py)
+**Practice:** [`practice/leetcode/valid_palindrome/solution.py`](../../practice/leetcode/valid_palindrome/solution.py)
 
 A phrase is a palindrome if, after converting all uppercase letters into lowercase letters and removing all non-alphanumeric characters, it reads the same forward and backward. Alphanumeric characters include letters and numbers.
 

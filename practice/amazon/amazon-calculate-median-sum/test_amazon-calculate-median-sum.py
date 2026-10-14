@@ -1,6 +1,6 @@
 """Tests for Channel Max Quality — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-calculate-median-sum.md.
+The worked approaches live in ../../../docs/amazon/amazon-calculate-median-sum.md.
 """
 
 import pytest

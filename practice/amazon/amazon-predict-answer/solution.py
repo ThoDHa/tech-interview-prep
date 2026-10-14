@@ -1,6 +1,6 @@
 """Predict Answer — https://www.fastprep.io/problems/amazon-predict-answer
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-predict-answer.md
+Write-up & approaches: ../../../docs/amazon/amazon-predict-answer.md
 
 In this stock price prediction game, Player 1 provides Player 2 with stock market data for n consecutive days, representing the stock prices on each day, represented by stockData[].
 

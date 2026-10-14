@@ -1,6 +1,6 @@
 """Tests for Happy Number — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../docs/problems/happy_number.md.
+The worked approaches live in ../../../docs/leetcode/happy_number.md.
 """
 
 import pytest

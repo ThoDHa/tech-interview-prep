@@ -1,6 +1,6 @@
 """Sliding-Window Rate Limiter — https://www.fastprep.io/problems/amazon-sliding-window-rate-limiter
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-sliding-window-rate-limiter.md
+Write-up & approaches: ../../../docs/amazon/amazon-sliding-window-rate-limiter.md
 
 You receive requests in nondecreasing timestamp order. Each request has a user ID and an integer timestamp in seconds.
 

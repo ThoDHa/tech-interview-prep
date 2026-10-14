@@ -1,6 +1,6 @@
 """Tests for Get Minimum Boxes — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-get-minimum-boxes.md.
+The worked approaches live in ../../../docs/amazon/amazon-get-minimum-boxes.md.
 """
 
 import pytest

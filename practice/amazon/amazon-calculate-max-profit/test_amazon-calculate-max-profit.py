@@ -1,6 +1,6 @@
 """Tests for Calculate Max Profit — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-calculate-max-profit.md.
+The worked approaches live in ../../../docs/amazon/amazon-calculate-max-profit.md.
 """
 
 import pytest

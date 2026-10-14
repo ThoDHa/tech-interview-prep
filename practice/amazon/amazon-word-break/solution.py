@@ -1,6 +1,6 @@
 """Word Break — https://www.fastprep.io/problems/amazon-word-break
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-word-break.md
+Write-up & approaches: ../../../docs/amazon/amazon-word-break.md
 
 Given a string s and an array of distinct dictionary words wordDict, return true if s can be split into a sequence of one or more dictionary words.
 

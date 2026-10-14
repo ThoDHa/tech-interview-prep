@@ -1,6 +1,6 @@
 """Tests for Get Distinct Pairs — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-get-distinct-pairs.md.
+The worked approaches live in ../../../docs/amazon/amazon-get-distinct-pairs.md.
 """
 
 import pytest

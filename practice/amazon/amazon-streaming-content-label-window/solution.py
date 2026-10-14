@@ -1,6 +1,6 @@
 """Longest Content Window with Bounded Labels — https://www.fastprep.io/problems/amazon-streaming-content-label-window
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-streaming-content-label-window.md
+Write-up & approaches: ../../../docs/amazon/amazon-streaming-content-label-window.md
 
 A content stream arrives in order. Each item carries a non-empty set of labels. Given contentLabels and a limit k, find the longest contiguous window of items whose combined label set contains at most
 

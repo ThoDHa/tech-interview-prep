@@ -6,7 +6,7 @@
 
 **Algorithm:** [Hash table](https://en.wikipedia.org/wiki/Hash_table) · [Linked list](https://en.wikipedia.org/wiki/Linked_list)
 
-**Practice:** [`practice/copy_list_with_random_pointer/solution.py`](../../practice/copy_list_with_random_pointer/solution.py)
+**Practice:** [`practice/leetcode/copy_list_with_random_pointer/solution.py`](../../practice/leetcode/copy_list_with_random_pointer/solution.py)
 
 You are given the head of a linked list of length `n`. Unlike a singly linked list, each node contains an additional pointer `random`, which may point to any node in the list, or `null`.
 
@@ -327,7 +327,7 @@ Beyond the `n` copied nodes every deep copy must produce, only pointer variables
 
 ## Comparison of Solutions
 
-The practice harness's `practice/copy_list_with_random_pointer/reference.py` implements the **Interleaving** solution.
+The practice harness's `practice/leetcode/copy_list_with_random_pointer/reference.py` implements the **Interleaving** solution.
 
 ### Time Complexity
 

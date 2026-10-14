@@ -1,6 +1,6 @@
 """Tests for Get Max Stability — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-get-max-stability.md.
+The worked approaches live in ../../../docs/amazon/amazon-get-max-stability.md.
 """
 
 import pytest

@@ -1,6 +1,6 @@
 """Stack with Constant-Time Middle Queries — https://www.fastprep.io/problems/amazon-middle-stack-operations
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-middle-stack-operations.md
+Write-up & approaches: ../../../docs/amazon/amazon-middle-stack-operations.md
 
 Process a sequence of stack operations. Each operation is ["push", value], ["pop"], ["top"], or ["middle"]. Values are signed decimal integers encoded as strings.
 

@@ -1,6 +1,6 @@
 """Reorder List — https://leetcode.com/problems/reorder-list/
 
-Write-up & approaches: ../../docs/problems/reorder_list.md
+Write-up & approaches: ../../../docs/leetcode/reorder_list.md
 
 You are given the head of a singly linked-list. The positions of a linked list of `length = 7` for example, can intially be represented as: `[0, 1, 2, 3, 4, 5, 6]` Reorder the nodes of the linked list
 

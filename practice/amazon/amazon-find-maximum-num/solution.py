@@ -1,6 +1,6 @@
 """Find Max Num — https://www.fastprep.io/problems/amazon-find-maximum-num
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-find-maximum-num.md
+Write-up & approaches: ../../../docs/amazon/amazon-find-maximum-num.md
 
 Special thanks: whale and spike contributed this problem.
 

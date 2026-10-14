@@ -1,6 +1,6 @@
 """Tests for Get Min Removal — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-get-min-removal.md.
+The worked approaches live in ../../../docs/amazon/amazon-get-min-removal.md.
 """
 
 import pytest

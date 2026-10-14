@@ -1,6 +1,6 @@
 """Non Overlapping Intervals — https://leetcode.com/problems/non-overlapping-intervals/
 
-Write-up & approaches: ../../docs/problems/non_overlapping_intervals.md
+Write-up & approaches: ../../../docs/leetcode/non_overlapping_intervals.md
 
 Given an array of intervals `intervals` where `intervals[i] = [start_i, end_i]`, return the minimum number of intervals you need to remove to make the rest of the intervals non-overlapping. Note: Inte
 

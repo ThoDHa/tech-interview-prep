@@ -1,6 +1,6 @@
 """Path Through an O/X Grid Using Only Right and Down — https://www.fastprep.io/problems/amazon-right-down-grid-path
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-right-down-grid-path.md
+Write-up & approaches: ../../../docs/amazon/amazon-right-down-grid-path.md
 
 Given a rectangular array of strings grid, a zero-based coordinate source = [row, col], and a zero-based coordinate destination = [row, col], return whether the destination is reachable.
 

@@ -1,6 +1,6 @@
 """Tests for Path Through an O/X Grid Using Only Right and Down — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-right-down-grid-path.md.
+The worked approaches live in ../../../docs/amazon/amazon-right-down-grid-path.md.
 """
 
 import pytest

@@ -1,6 +1,6 @@
 """Koko Eating Bananas — https://leetcode.com/problems/koko-eating-bananas/
 
-Write-up & approaches: ../../docs/problems/koko_eating_bananas.md
+Write-up & approaches: ../../../docs/leetcode/koko_eating_bananas.md
 Reference implementation of the write-up's Binary Search on the Answer solution.
 
 You are given an integer array `piles` where `piles[i]` is the number of bananas in the `ith` pile, and an integer `h`, the number of hours you have to eat all the bananas. Each hour you choose a pile and eat `k` bananas from it; you cannot split a pile across hours. Return the minimum integer `k` such that you can eat all the bananas within `h` hours.

@@ -6,7 +6,7 @@
 
 **Algorithm:** [Binary search](https://en.wikipedia.org/wiki/Binary_search_algorithm) · [Dijkstra's algorithm](https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm) · [Disjoint-set (Union-Find)](https://en.wikipedia.org/wiki/Disjoint-set_data_structure)
 
-**Practice:** [`practice/swim_in_rising_water/solution.py`](../../practice/swim_in_rising_water/solution.py)
+**Practice:** [`practice/leetcode/swim_in_rising_water/solution.py`](../../practice/leetcode/swim_in_rising_water/solution.py)
 
 You are given a square 2-D matrix of distinct integers `grid` where each integer `grid[i][j]` represents the elevation at position `(i, j)`.
 

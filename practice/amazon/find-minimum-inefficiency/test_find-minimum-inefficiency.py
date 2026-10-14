@@ -1,6 +1,6 @@
 """Tests for Find Minimum Inefficiency — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/find-minimum-inefficiency.md.
+The worked approaches live in ../../../docs/amazon/find-minimum-inefficiency.md.
 """
 
 import pytest

@@ -1,6 +1,6 @@
 """Tests for Calculate Warehouse Efficiency — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-calculate-warehouse-efficiency.md.
+The worked approaches live in ../../../docs/amazon/amazon-calculate-warehouse-efficiency.md.
 """
 
 import pytest

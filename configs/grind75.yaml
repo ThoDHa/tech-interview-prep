@@ -1,4 +1,4 @@
-# Grind75 LeetCode Study Guide PDF Configuration
+# Grind 75 + NeetCode 150 Study Guide PDF Configuration
 # 
 # This Pandoc configuration file compiles all 75 algorithm problems
 # from the Grind75 study guide into a single comprehensive PDF document.
@@ -11,81 +11,81 @@
 # - DejaVu Sans Mono font for code formatting
 
 input-files:
-  - problems/two_sum.md
-  - problems/valid_parentheses.md
-  - problems/merge_two_sorted_lists.md
-  - problems/best_time_to_buy_and_sell_stock.md
-  - problems/valid_palindrome.md
-  - problems/invert_binary_tree.md
-  - problems/valid_anagram.md
-  - problems/binary_search.md
-  - problems/flood_fill.md
-  - problems/lowest_common_ancestor_of_a_binary_search_tree.md
-  - problems/balanced_binary_tree.md
-  - problems/linked_list_cycle.md
-  - problems/implement_queue_using_stacks.md
-  - problems/first_bad_version.md
-  - problems/ransom_note.md
-  - problems/climbing_stairs.md
-  - problems/longest_palindrome.md
-  - problems/reverse_linked_list.md
-  - problems/majority_element.md
-  - problems/add_binary.md
-  - problems/diameter_of_binary_tree.md
-  - problems/middle_of_the_linked_list.md
-  - problems/maximum_depth_of_binary_tree.md
-  - problems/contains_duplicate.md
-  - problems/maximum_subarray.md
-  - problems/insert_interval.md
-  - problems/01_matrix.md
-  - problems/k_closest_points_to_origin.md
-  - problems/longest_substring_without_repeating_characters.md
-  - problems/3sum.md
-  - problems/binary_tree_level_order_traversal.md
-  - problems/clone_graph.md
-  - problems/evaluate_reverse_polish_notation.md
-  - problems/course_schedule.md
-  - problems/implement_trie_prefix_tree.md
-  - problems/coin_change.md
-  - problems/product_of_array_except_self.md
-  - problems/min_stack.md
-  - problems/validate_binary_search_tree.md
-  - problems/number_of_islands.md
-  - problems/rotting_oranges.md
-  - problems/search_in_rotated_sorted_array.md
-  - problems/combination_sum.md
-  - problems/permutations.md
-  - problems/merge_intervals.md
-  - problems/lowest_common_ancestor_of_a_binary_tree.md
-  - problems/time_based_key_value_store.md
-  - problems/accounts_merge.md
-  - problems/sort_colors.md
-  - problems/word_break.md
-  - problems/partition_equal_subset_sum.md
-  - problems/string_to_integer_atoi.md
-  - problems/spiral_matrix.md
-  - problems/subsets.md
-  - problems/binary_tree_right_side_view.md
-  - problems/longest_palindromic_substring.md
-  - problems/unique_paths.md
-  - problems/construct_binary_tree_from_preorder_and_inorder_traversal.md
-  - problems/container_with_most_water.md
-  - problems/letter_combinations_of_a_phone_number.md
-  - problems/word_search.md
-  - problems/find_all_anagrams_in_a_string.md
-  - problems/minimum_height_trees.md
-  - problems/task_scheduler.md
-  - problems/lru_cache.md
-  - problems/kth_smallest_element_in_a_bst.md
-  - problems/minimum_window_substring.md
-  - problems/serialize_and_deserialize_binary_tree.md
-  - problems/trapping_rain_water.md
-  - problems/find_median_from_data_stream.md
-  - problems/word_ladder.md
-  - problems/basic_calculator.md
-  - problems/maximum_profit_in_job_scheduling.md
-  - problems/merge_k_sorted_lists.md
-  - problems/largest_rectangle_in_histogram.md
+  - leetcode/two_sum.md
+  - leetcode/valid_parentheses.md
+  - leetcode/merge_two_sorted_lists.md
+  - leetcode/best_time_to_buy_and_sell_stock.md
+  - leetcode/valid_palindrome.md
+  - leetcode/invert_binary_tree.md
+  - leetcode/valid_anagram.md
+  - leetcode/binary_search.md
+  - leetcode/flood_fill.md
+  - leetcode/lowest_common_ancestor_of_a_binary_search_tree.md
+  - leetcode/balanced_binary_tree.md
+  - leetcode/linked_list_cycle.md
+  - leetcode/implement_queue_using_stacks.md
+  - leetcode/first_bad_version.md
+  - leetcode/ransom_note.md
+  - leetcode/climbing_stairs.md
+  - leetcode/longest_palindrome.md
+  - leetcode/reverse_linked_list.md
+  - leetcode/majority_element.md
+  - leetcode/add_binary.md
+  - leetcode/diameter_of_binary_tree.md
+  - leetcode/middle_of_the_linked_list.md
+  - leetcode/maximum_depth_of_binary_tree.md
+  - leetcode/contains_duplicate.md
+  - leetcode/maximum_subarray.md
+  - leetcode/insert_interval.md
+  - leetcode/01_matrix.md
+  - leetcode/k_closest_points_to_origin.md
+  - leetcode/longest_substring_without_repeating_characters.md
+  - leetcode/3sum.md
+  - leetcode/binary_tree_level_order_traversal.md
+  - leetcode/clone_graph.md
+  - leetcode/evaluate_reverse_polish_notation.md
+  - leetcode/course_schedule.md
+  - leetcode/implement_trie_prefix_tree.md
+  - leetcode/coin_change.md
+  - leetcode/product_of_array_except_self.md
+  - leetcode/min_stack.md
+  - leetcode/validate_binary_search_tree.md
+  - leetcode/number_of_islands.md
+  - leetcode/rotting_oranges.md
+  - leetcode/search_in_rotated_sorted_array.md
+  - leetcode/combination_sum.md
+  - leetcode/permutations.md
+  - leetcode/merge_intervals.md
+  - leetcode/lowest_common_ancestor_of_a_binary_tree.md
+  - leetcode/time_based_key_value_store.md
+  - leetcode/accounts_merge.md
+  - leetcode/sort_colors.md
+  - leetcode/word_break.md
+  - leetcode/partition_equal_subset_sum.md
+  - leetcode/string_to_integer_atoi.md
+  - leetcode/spiral_matrix.md
+  - leetcode/subsets.md
+  - leetcode/binary_tree_right_side_view.md
+  - leetcode/longest_palindromic_substring.md
+  - leetcode/unique_paths.md
+  - leetcode/construct_binary_tree_from_preorder_and_inorder_traversal.md
+  - leetcode/container_with_most_water.md
+  - leetcode/letter_combinations_of_a_phone_number.md
+  - leetcode/word_search.md
+  - leetcode/find_all_anagrams_in_a_string.md
+  - leetcode/minimum_height_trees.md
+  - leetcode/task_scheduler.md
+  - leetcode/lru_cache.md
+  - leetcode/kth_smallest_element_in_a_bst.md
+  - leetcode/minimum_window_substring.md
+  - leetcode/serialize_and_deserialize_binary_tree.md
+  - leetcode/trapping_rain_water.md
+  - leetcode/find_median_from_data_stream.md
+  - leetcode/word_ladder.md
+  - leetcode/basic_calculator.md
+  - leetcode/maximum_profit_in_job_scheduling.md
+  - leetcode/merge_k_sorted_lists.md
+  - leetcode/largest_rectangle_in_histogram.md
 
 # Output configuration
 output-file: grind75.pdf
@@ -108,7 +108,7 @@ toc: true
 toc-depth: 1
 
 # Resource paths for images and assets
-resource-path: ["./problems/"]
+resource-path: ["./leetcode/"]
 
 # Document metadata
 metadata:

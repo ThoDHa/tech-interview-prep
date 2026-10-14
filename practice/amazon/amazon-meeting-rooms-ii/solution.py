@@ -1,6 +1,6 @@
 """Meeting Rooms II — https://www.fastprep.io/problems/amazon-meeting-rooms-ii
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-meeting-rooms-ii.md
+Write-up & approaches: ../../../docs/amazon/amazon-meeting-rooms-ii.md
 
 Given an array of meeting time intervals intervals, where intervals[i] = [start_i, end_i], return the minimum number of conference rooms required.
 

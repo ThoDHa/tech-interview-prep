@@ -1,6 +1,6 @@
 """Most Frequent Name — https://www.fastprep.io/problems/amazon-most-frequent-name
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-most-frequent-name.md
+Write-up & approaches: ../../../docs/amazon/amazon-most-frequent-name.md
 
 Given a nonempty array of case-sensitive names, return the name that appears most often.
 

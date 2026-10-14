@@ -1,6 +1,6 @@
 """Search in a Rotated Sorted Array — https://www.fastprep.io/problems/amazon-search-rotated-sorted-array
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-search-rotated-sorted-array.md
+Write-up & approaches: ../../../docs/amazon/amazon-search-rotated-sorted-array.md
 
 Given an integer array nums that was sorted in strictly increasing order and then rotated at an unknown pivot, and an integer target, return the index of target.
 

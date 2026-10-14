@@ -6,7 +6,7 @@
 
 **Algorithm:** [Merge algorithm](https://en.wikipedia.org/wiki/Merge_algorithm) · [Linked list](https://en.wikipedia.org/wiki/Linked_list)
 
-**Practice:** [`practice/merge_two_sorted_lists/solution.py`](../../practice/merge_two_sorted_lists/solution.py)
+**Practice:** [`practice/leetcode/merge_two_sorted_lists/solution.py`](../../practice/leetcode/merge_two_sorted_lists/solution.py)
 
 You are given the heads of two sorted linked lists `list1` and `list2`.
 

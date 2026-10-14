@@ -6,7 +6,7 @@
 
 **Algorithm:** [Bitwise operation](https://en.wikipedia.org/wiki/Bitwise_operation)
 
-**Practice:** [`practice/add_binary/solution.py`](../../practice/add_binary/solution.py)
+**Practice:** [`practice/leetcode/add_binary/solution.py`](../../practice/leetcode/add_binary/solution.py)
 
 Given two binary strings `a` and `b`, return their sum as a binary string.
 

@@ -1,6 +1,6 @@
 """Merge Triplets to Form Target Triplet — https://leetcode.com/problems/merge-triplets-to-form-target-triplet/
 
-Write-up & approaches: ../../docs/problems/merge_triplets_to_form_target_triplet.md
+Write-up & approaches: ../../../docs/leetcode/merge_triplets_to_form_target_triplet.md
 Reference implementation of the write-up's Greedy Component Flags solution, kept
 next to the harness so authored cases stay falsifiable. Your own attempt
 lives in solution.py.

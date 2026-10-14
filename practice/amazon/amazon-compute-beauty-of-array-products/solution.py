@@ -1,6 +1,6 @@
 """Compute Beauty of Array Products — https://www.fastprep.io/problems/amazon-compute-beauty-of-array-products
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-compute-beauty-of-array-products.md
+Write-up & approaches: ../../../docs/amazon/amazon-compute-beauty-of-array-products.md
 
 The Amazon distribution center consists of arrays of products, each possessing unique attributes. The task at hand is to compute the beauty of these product arrays, with the goal of achieving an effic
 

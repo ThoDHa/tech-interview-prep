@@ -1,6 +1,6 @@
 """Tests for Partition Labels — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../docs/problems/partition_labels.md.
+The worked approaches live in ../../../docs/leetcode/partition_labels.md.
 """
 
 import pytest

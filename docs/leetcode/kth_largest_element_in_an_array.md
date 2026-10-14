@@ -6,7 +6,7 @@
 
 **Algorithm:** [Quickselect](https://en.wikipedia.org/wiki/Quickselect) · [Heap (data structure)](https://en.wikipedia.org/wiki/Heap_(data_structure)) · [Sorting](https://en.wikipedia.org/wiki/Sorting_algorithm)
 
-**Practice:** [`practice/kth_largest_element_in_an_array/solution.py`](../../practice/kth_largest_element_in_an_array/solution.py)
+**Practice:** [`practice/leetcode/kth_largest_element_in_an_array/solution.py`](../../practice/leetcode/kth_largest_element_in_an_array/solution.py)
 
 Given an unsorted array of integers `nums` and an integer `k`, return the `kth` largest element in the array.
 
@@ -501,7 +501,7 @@ The heap holds `k` decorated tuples (key, order, value), and the final sort runs
 
 ## Comparison of Solutions
 
-The practice harness's `practice/kth_largest_element_in_an_array/reference.py` implements the **Quickselect** solution.
+The practice harness's `practice/leetcode/kth_largest_element_in_an_array/reference.py` implements the **Quickselect** solution.
 
 ### Time Complexity
 

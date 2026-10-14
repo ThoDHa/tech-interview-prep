@@ -6,7 +6,7 @@
 
 **Algorithm:** [Prefix sum](https://en.wikipedia.org/wiki/Prefix_sum)
 
-**Practice:** [`practice/product_of_array_except_self/solution.py`](../../practice/product_of_array_except_self/solution.py)
+**Practice:** [`practice/leetcode/product_of_array_except_self/solution.py`](../../practice/leetcode/product_of_array_except_self/solution.py)
 
 Given an integer array `nums`, return an array `answer` such that `answer[i]` is equal to the product of all the elements of `nums` except `nums[i]`.
 

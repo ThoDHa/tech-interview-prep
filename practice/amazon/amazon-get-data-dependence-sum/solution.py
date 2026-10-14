@@ -1,6 +1,6 @@
 """Data Dependence Sum — https://www.fastprep.io/problems/amazon-get-data-dependence-sum
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-get-data-dependence-sum.md
+Write-up & approaches: ../../../docs/amazon/amazon-get-data-dependence-sum.md
 
 Data analysts at Amazon are analyzing time-series data. It was concluded that the data of the nth item was dependent on the data of some xth day if there is a positive integer k such that floor(n / k)
 

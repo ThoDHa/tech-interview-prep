@@ -2,7 +2,7 @@
 
 Trees are stored in the case files as level-order value arrays plus the integer
 values of `p` and `q`; both are marshalled to TreeNodes here. The worked approaches
-live in ../../docs/problems/lowest_common_ancestor_of_a_binary_search_tree.md.
+live in ../../../docs/leetcode/lowest_common_ancestor_of_a_binary_search_tree.md.
 """
 
 import pytest

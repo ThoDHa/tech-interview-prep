@@ -1,6 +1,6 @@
 """Tests for Max Area of Island — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../docs/problems/max_area_of_island.md.
+The worked approaches live in ../../../docs/leetcode/max_area_of_island.md.
 """
 
 import pytest

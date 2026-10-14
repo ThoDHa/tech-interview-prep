@@ -1,6 +1,6 @@
 """Reverse Bits — https://leetcode.com/problems/reverse-bits/
 
-Write-up & approaches: ../../docs/problems/reverse_bits.md
+Write-up & approaches: ../../../docs/leetcode/reverse_bits.md
 Reference implementation of the write-up's Build-by-Shift Loop solution,
 kept next to the harness so authored cases stay falsifiable. Your own
 attempt lives in solution.py.

@@ -1,6 +1,6 @@
 """Tests for Next Smaller Ticket Price — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-next-smaller-ticket-price.md.
+The worked approaches live in ../../../docs/amazon/amazon-next-smaller-ticket-price.md.
 """
 
 import pytest

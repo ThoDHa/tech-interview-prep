@@ -1,6 +1,6 @@
 """Find Minimum In Rotated Sorted Array — https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/
 
-Write-up & approaches: ../../docs/problems/find_minimum_in_rotated_sorted_array.md
+Write-up & approaches: ../../../docs/leetcode/find_minimum_in_rotated_sorted_array.md
 
 You are given an array of length `n` which was originally sorted in ascending order. It has now been **rotated** between `1` and `n` times. For example, the array `nums = [1,2,3,4,5,6]` might become: 
 

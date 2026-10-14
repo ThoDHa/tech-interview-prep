@@ -6,7 +6,7 @@
 
 **Algorithm:** [Disjoint-set (Union-Find)](https://en.wikipedia.org/wiki/Disjoint-set_data_structure)
 
-**Practice:** [`practice/redundant_connection/solution.py`](../../practice/redundant_connection/solution.py)
+**Practice:** [`practice/leetcode/redundant_connection/solution.py`](../../practice/leetcode/redundant_connection/solution.py)
 
 You are given a connected **undirected graph** with `n` nodes labeled from `1` to `n`. Initially, it contained no cycles and consisted of `n-1` edges.
 

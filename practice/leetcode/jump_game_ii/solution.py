@@ -1,6 +1,6 @@
 """Jump Game II — https://leetcode.com/problems/jump-game-ii/
 
-Write-up & approaches: ../../docs/problems/jump_game_ii.md
+Write-up & approaches: ../../../docs/leetcode/jump_game_ii.md
 
 You are given an array of integers `nums`, where `nums[i]` represents the maximum length of a jump towards the right from index `i`. For example, if you are at `nums[i]`, you can jump to any index `i 
 

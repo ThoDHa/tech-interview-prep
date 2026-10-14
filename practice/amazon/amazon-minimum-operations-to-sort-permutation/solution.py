@@ -1,6 +1,6 @@
 """Minimum Operations to Sort a Permutation — https://www.fastprep.io/problems/amazon-minimum-operations-to-sort-permutation
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-minimum-operations-to-sort-permutation.md
+Write-up & approaches: ../../../docs/amazon/amazon-minimum-operations-to-sort-permutation.md
 
 You are given a permutation arr of size n, containing each integer from 1 to n exactly once.
 

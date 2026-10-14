@@ -6,7 +6,7 @@
 
 **Algorithm:** [Kadane's algorithm](https://en.wikipedia.org/wiki/Maximum_subarray_problem) · [Dynamic programming](https://en.wikipedia.org/wiki/Dynamic_programming) · [Recurrence relation](https://en.wikipedia.org/wiki/Recurrence_relation)
 
-**Practice:** [`practice/maximum_product_subarray/solution.py`](../../practice/maximum_product_subarray/solution.py)
+**Practice:** [`practice/leetcode/maximum_product_subarray/solution.py`](../../practice/leetcode/maximum_product_subarray/solution.py)
 
 Given an integer array `nums`, find a **subarray** that has the largest product, and return the product.
 
@@ -305,7 +305,7 @@ Three scalars, `best_ending`, `worst_ending`, and `answer`, regardless of input 
 
 ## Comparison of Solutions
 
-The practice harness's `practice/maximum_product_subarray/reference.py` implements the **Kadane's Algorithm with Min-Max Tracking** solution.
+The practice harness's `practice/leetcode/maximum_product_subarray/reference.py` implements the **Kadane's Algorithm with Min-Max Tracking** solution.
 
 ### Time Complexity
 

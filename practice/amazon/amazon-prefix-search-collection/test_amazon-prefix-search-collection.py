@@ -1,6 +1,6 @@
 """Tests for Dynamic Prefix Search Collection — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-prefix-search-collection.md.
+The worked approaches live in ../../../docs/amazon/amazon-prefix-search-collection.md.
 """
 
 import pytest

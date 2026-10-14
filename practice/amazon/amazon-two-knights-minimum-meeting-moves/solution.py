@@ -1,6 +1,6 @@
 """Minimum Moves for Two Knights to Meet — https://www.fastprep.io/problems/amazon-two-knights-minimum-meeting-moves
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-two-knights-minimum-meeting-moves.md
+Write-up & approaches: ../../../docs/amazon/amazon-two-knights-minimum-meeting-moves.md
 
 Two knights start at coordinates first = [x1, y1] and second = [x2, y2] on an infinite chessboard. They take turns, with the first knight moving first. On a turn, the chosen knight must make one stand
 

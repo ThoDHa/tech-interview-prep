@@ -1,6 +1,6 @@
 """Design Add And Search Words Data Structure — https://leetcode.com/problems/design-add-and-search-words-data-structure/
 
-Write-up & approaches: ../../docs/problems/design_add_and_search_words_data_structure.md
+Write-up & approaches: ../../../docs/leetcode/design_add_and_search_words_data_structure.md
 Reference implementation of the write-up's Trie with Wildcard DFS solution,
 kept next to the harness so authored cases stay falsifiable. Your own attempt
 lives in solution.py.

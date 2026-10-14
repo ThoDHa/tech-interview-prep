@@ -1,6 +1,6 @@
 """Tests for Souvenir Shop Purchases — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-souvenir-shop-purchases.md.
+The worked approaches live in ../../../docs/amazon/amazon-souvenir-shop-purchases.md.
 """
 
 import pytest

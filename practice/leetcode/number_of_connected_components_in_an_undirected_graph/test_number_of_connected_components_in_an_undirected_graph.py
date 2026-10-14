@@ -1,6 +1,6 @@
 """Tests for Number of Connected Components In An Undirected Graph — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../docs/problems/number_of_connected_components_in_an_undirected_graph.md.
+The worked approaches live in ../../../docs/leetcode/number_of_connected_components_in_an_undirected_graph.md.
 """
 
 import pytest

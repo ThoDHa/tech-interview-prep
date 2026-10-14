@@ -1,6 +1,6 @@
 """Tests for Top K Frequent Elements — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../docs/problems/top_k_frequent_elements.md.
+The worked approaches live in ../../../docs/leetcode/top_k_frequent_elements.md.
 """
 
 import pytest

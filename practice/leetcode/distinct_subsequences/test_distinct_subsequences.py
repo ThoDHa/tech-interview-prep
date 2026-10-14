@@ -1,6 +1,6 @@
 """Tests for Distinct Subsequences — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../docs/problems/distinct_subsequences.md.
+The worked approaches live in ../../../docs/leetcode/distinct_subsequences.md.
 """
 
 import pytest

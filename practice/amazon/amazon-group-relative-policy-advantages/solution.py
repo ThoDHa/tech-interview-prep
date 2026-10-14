@@ -1,6 +1,6 @@
 """Group-Relative Policy Advantages — https://www.fastprep.io/problems/amazon-group-relative-policy-advantages
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-group-relative-policy-advantages.md
+Write-up & approaches: ../../../docs/amazon/amazon-group-relative-policy-advantages.md
 
 Compute group-relative advantages for sampled policy responses. Response i belongs to groupIds[i] and receives the integer reward correctnessRewards[i] + formatRewards[i].
 

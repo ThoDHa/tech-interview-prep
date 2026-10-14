@@ -1,6 +1,6 @@
 """Tests for Generate Parentheses — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../docs/problems/generate_parentheses.md.
+The worked approaches live in ../../../docs/leetcode/generate_parentheses.md.
 """
 
 import pytest

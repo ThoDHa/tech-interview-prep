@@ -6,7 +6,7 @@
 
 **Algorithm:** [Sliding window](https://usaco.guide/gold/sliding-window) · [Two-pointer technique](https://usaco.guide/silver/two-pointers) · [Hash table](https://en.wikipedia.org/wiki/Hash_table)
 
-**Practice:** [`practice/minimum_window_substring/solution.py`](../../practice/minimum_window_substring/solution.py)
+**Practice:** [`practice/leetcode/minimum_window_substring/solution.py`](../../practice/leetcode/minimum_window_substring/solution.py)
 
 Given two strings s and t of lengths m and n respectively, return the **minimum window substring** of s such that every character in t (including duplicates) is included in the window. If there is no such substring, return the empty string "".
 

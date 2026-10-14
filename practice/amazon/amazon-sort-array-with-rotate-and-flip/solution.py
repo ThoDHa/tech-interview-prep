@@ -1,6 +1,6 @@
 """Sort an Array with Rotate and Flip — https://www.fastprep.io/problems/amazon-sort-array-with-rotate-and-flip
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-sort-array-with-rotate-and-flip.md
+Write-up & approaches: ../../../docs/amazon/amazon-sort-array-with-rotate-and-flip.md
 
 You are given an array values containing distinct integers. You may apply either of these operations:
 

@@ -6,7 +6,7 @@
 
 **Algorithm:** [Backtracking](https://en.wikipedia.org/wiki/Backtracking) · [Dynamic programming](https://en.wikipedia.org/wiki/Dynamic_programming)
 
-**Practice:** [`practice/generate_parentheses/solution.py`](../../practice/generate_parentheses/solution.py)
+**Practice:** [`practice/leetcode/generate_parentheses/solution.py`](../../practice/leetcode/generate_parentheses/solution.py)
 
 You are given an integer `n`. Return all well-formed parentheses strings that you can generate with `n` pairs of parentheses.
 

@@ -1,6 +1,6 @@
 """Minimum Interval to Include Each Query — https://leetcode.com/problems/minimum-interval-to-include-each-query/
 
-Write-up & approaches: ../../docs/problems/minimum_interval_to_include_each_query.md
+Write-up & approaches: ../../../docs/leetcode/minimum_interval_to_include_each_query.md
 Reference implementation of the write-up's Min-Heap Sweep solution, kept
 next to the harness so authored cases stay falsifiable. Your own attempt
 lives in solution.py.

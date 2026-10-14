@@ -1,6 +1,6 @@
 """First Valid Word Segmentation — https://www.fastprep.io/problems/amazon-first-word-segmentation
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-first-word-segmentation.md
+Write-up & approaches: ../../../docs/amazon/amazon-first-word-segmentation.md
 
 Given a continuous lowercase string s and an array dictionary representing the words accepted by isWord, split s into a sequence of dictionary words whose concatenation is exactly s.
 

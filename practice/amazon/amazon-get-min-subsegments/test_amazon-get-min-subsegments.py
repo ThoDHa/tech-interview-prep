@@ -1,6 +1,6 @@
 """Tests for Get Min Subsegments — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-get-min-subsegments.md.
+The worked approaches live in ../../../docs/amazon/amazon-get-min-subsegments.md.
 """
 
 import pytest

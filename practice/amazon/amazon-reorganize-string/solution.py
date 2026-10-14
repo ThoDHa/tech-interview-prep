@@ -1,6 +1,6 @@
 """Reorganize a String — https://www.fastprep.io/problems/amazon-reorganize-string
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-reorganize-string.md
+Write-up & approaches: ../../../docs/amazon/amazon-reorganize-string.md
 
 Rearrange a lowercase string so that no two adjacent characters are equal. If no such arrangement exists, return the empty string.
 

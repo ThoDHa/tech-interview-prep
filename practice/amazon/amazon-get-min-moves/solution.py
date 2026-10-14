@@ -1,6 +1,6 @@
 """Get Min Moves — https://www.fastprep.io/problems/amazon-get-min-moves
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-get-min-moves.md
+Write-up & approaches: ../../../docs/amazon/amazon-get-min-moves.md
 
 Developers at Amazon are working on a new algorithm using the Bitwise XOR operation.
 

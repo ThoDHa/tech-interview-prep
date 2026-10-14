@@ -1,6 +1,6 @@
 """Tests for Find Min Time Required — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-find-minimum-time-required.md.
+The worked approaches live in ../../../docs/amazon/amazon-find-minimum-time-required.md.
 """
 
 import pytest

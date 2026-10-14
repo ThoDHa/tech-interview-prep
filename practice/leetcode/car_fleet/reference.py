@@ -1,6 +1,6 @@
 """Car Fleet — https://leetcode.com/problems/car-fleet/
 
-Write-up & approaches: ../../docs/problems/car_fleet.md
+Write-up & approaches: ../../../docs/leetcode/car_fleet.md
 Reference implementation of the write-up's Single-Pass Counter solution.
 
 There are `n` cars traveling to the same destination on a one-lane highway. You are given two arrays of integers `position` and `speed`, both of length `n`, and the `target` position. A car can not pass another car ahead of it; a car fleet is a non-empty set of cars driving at the same position and same speed. Return the number of different car fleets that will arrive at the destination.

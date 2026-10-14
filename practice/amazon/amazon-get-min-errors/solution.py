@@ -1,6 +1,6 @@
 """Get Min Errors — https://www.fastprep.io/problems/amazon-get-min-errors
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-get-min-errors.md
+Write-up & approaches: ../../../docs/amazon/amazon-get-min-errors.md
 
 Amazon's database doesn’t support very large numbers, so numbers are stored as a string of binary characters, '0' and '1'. Accidentally, a '!' was entered at some positions and it is unknown whether t
 

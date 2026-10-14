@@ -1,6 +1,6 @@
 """Minimum Cost for Roads and Hospitals — https://www.fastprep.io/problems/amazon-roads-and-hospitals-minimum-cost
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-roads-and-hospitals-minimum-cost.md
+Write-up & approaches: ../../../docs/amazon/amazon-roads-and-hospitals-minimum-cost.md
 
 Cities are labeled from 0 to cityCount - 1. A hospital can be built in any city for hospitalCost, and any listed undirected road can be built for roadCost.
 

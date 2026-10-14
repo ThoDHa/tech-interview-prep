@@ -1,6 +1,6 @@
 """Task Scheduler — https://www.fastprep.io/problems/amazon-task-scheduler
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-task-scheduler.md
+Write-up & approaches: ../../../docs/amazon/amazon-task-scheduler.md
 
 Special thanks: ( ˶ˆᗜˆ˵ ) Many Manyy Manyyy thanks to spike!ᯓᡣ𐭩
 

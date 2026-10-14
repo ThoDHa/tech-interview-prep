@@ -1,6 +1,6 @@
 """Tests for Minimum Edge Moves to Connect a Network — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-minimum-edge-moves-to-connect-graph.md.
+The worked approaches live in ../../../docs/amazon/amazon-minimum-edge-moves-to-connect-graph.md.
 """
 
 import pytest

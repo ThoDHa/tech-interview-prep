@@ -1,6 +1,6 @@
 """Tests for Gas Station — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../docs/problems/gas_station.md.
+The worked approaches live in ../../../docs/leetcode/gas_station.md.
 """
 
 import pytest

@@ -1,6 +1,6 @@
 """Lowest Common Ancestor Implemented with Stack — https://www.fastprep.io/problems/amazon-lowest-common-ancestor-implemented-with-stack
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-lowest-common-ancestor-implemented-with-stack.md
+Write-up & approaches: ../../../docs/amazon/amazon-lowest-common-ancestor-implemented-with-stack.md
 
 This question was reported for Amazon Fall Intern onsite.
 

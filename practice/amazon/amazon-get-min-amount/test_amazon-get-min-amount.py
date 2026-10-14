@@ -1,6 +1,6 @@
 """Tests for Get Minimum Amount — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-get-min-amount.md.
+The worked approaches live in ../../../docs/amazon/amazon-get-min-amount.md.
 """
 
 import pytest

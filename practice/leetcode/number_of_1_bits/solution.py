@@ -1,6 +1,6 @@
 """Number of 1 Bits — https://leetcode.com/problems/number-of-1-bits/
 
-Write-up & approaches: ../../docs/problems/number_of_1_bits.md
+Write-up & approaches: ../../../docs/leetcode/number_of_1_bits.md
 
 You are given an unsigned integer `n`. Return the number of `1` bits in its binary representation. You may assume `n` is a non-negative integer which fits within 32-bits.
 

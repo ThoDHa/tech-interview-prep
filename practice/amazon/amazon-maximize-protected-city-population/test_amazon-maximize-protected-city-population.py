@@ -1,6 +1,6 @@
 """Tests for Maximize Protected City Population — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-maximize-protected-city-population.md.
+The worked approaches live in ../../../docs/amazon/amazon-maximize-protected-city-population.md.
 """
 
 import pytest

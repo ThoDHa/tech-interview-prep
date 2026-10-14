@@ -1,6 +1,6 @@
 """Tests for Koko Eating Bananas — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../docs/problems/koko_eating_bananas.md.
+The worked approaches live in ../../../docs/leetcode/koko_eating_bananas.md.
 """
 
 import pytest

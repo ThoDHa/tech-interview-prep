@@ -1,6 +1,6 @@
 """Tests for First Valid Word Segmentation — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-first-word-segmentation.md.
+The worked approaches live in ../../../docs/amazon/amazon-first-word-segmentation.md.
 """
 
 import pytest

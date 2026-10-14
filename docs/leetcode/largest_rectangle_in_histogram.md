@@ -6,7 +6,7 @@
 
 **Algorithm:** [Monotonic stack](https://usaco.guide/gold/stacks) · [Divide and conquer](https://en.wikipedia.org/wiki/Divide-and-conquer_algorithm)
 
-**Practice:** [`practice/largest_rectangle_in_histogram/solution.py`](../../practice/largest_rectangle_in_histogram/solution.py)
+**Practice:** [`practice/leetcode/largest_rectangle_in_histogram/solution.py`](../../practice/leetcode/largest_rectangle_in_histogram/solution.py)
 
 Given an array of integers `heights` representing the histogram's bar height where the width of each bar is `1`, return the area of the largest rectangle in the histogram.
 

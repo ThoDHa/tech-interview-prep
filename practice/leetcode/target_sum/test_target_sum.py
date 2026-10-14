@@ -1,6 +1,6 @@
 """Tests for Target Sum — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../docs/problems/target_sum.md.
+The worked approaches live in ../../../docs/leetcode/target_sum.md.
 """
 
 import pytest

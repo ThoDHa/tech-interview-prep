@@ -1,6 +1,6 @@
 """Tests for Minimum Moves for Two Knights to Meet — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-two-knights-minimum-meeting-moves.md.
+The worked approaches live in ../../../docs/amazon/amazon-two-knights-minimum-meeting-moves.md.
 """
 
 import pytest

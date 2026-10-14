@@ -1,6 +1,6 @@
 """Lexicographically Smallest Palindrome Possible — https://www.fastprep.io/problems/amazon-lexicographically-smallest-palindrome-possible
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-lexicographically-smallest-palindrome-possible.md
+Write-up & approaches: ../../../docs/amazon/amazon-lexicographically-smallest-palindrome-possible.md
 
 Given a String, return the lexicographically smallest palindrome possible or -1.
 

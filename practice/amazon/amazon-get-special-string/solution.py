@@ -1,6 +1,6 @@
 """Special String — https://www.fastprep.io/problems/amazon-get-special-string
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-get-special-string.md
+Write-up & approaches: ../../../docs/amazon/amazon-get-special-string.md
 
 Special thanks: Agnes and spike contributed this problem.
 

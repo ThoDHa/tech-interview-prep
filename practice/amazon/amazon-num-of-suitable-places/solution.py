@@ -1,6 +1,6 @@
 """Number of Suitable Locations — https://www.fastprep.io/problems/amazon-num-of-suitable-places
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-num-of-suitable-places.md
+Write-up & approaches: ../../../docs/amazon/amazon-num-of-suitable-places.md
 
 Amazon has multiple delivery centers across the world, represented by a number line from -10^9 to 10^9. There are n delivery centers, the ith one located at position center[i].
 

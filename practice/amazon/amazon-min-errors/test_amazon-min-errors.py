@@ -1,6 +1,6 @@
 """Tests for Minimum Total Errors — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-min-errors.md.
+The worked approaches live in ../../../docs/amazon/amazon-min-errors.md.
 """
 
 import pytest

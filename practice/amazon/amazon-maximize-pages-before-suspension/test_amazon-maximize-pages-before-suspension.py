@@ -1,6 +1,6 @@
 """Tests for Maximize Pages Before Suspension — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-maximize-pages-before-suspension.md.
+The worked approaches live in ../../../docs/amazon/amazon-maximize-pages-before-suspension.md.
 """
 
 import pytest

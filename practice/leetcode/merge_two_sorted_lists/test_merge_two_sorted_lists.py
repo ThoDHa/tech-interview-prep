@@ -1,7 +1,7 @@
 """Tests for Merge Two Sorted Lists: your attempt (solution.py) against both sets.
 
 Linked lists are stored in the case files as plain value arrays and marshalled to
-ListNode here. The worked approaches live in ../../docs/problems/merge_two_sorted_lists.md.
+ListNode here. The worked approaches live in ../../../docs/leetcode/merge_two_sorted_lists.md.
 """
 
 import pytest

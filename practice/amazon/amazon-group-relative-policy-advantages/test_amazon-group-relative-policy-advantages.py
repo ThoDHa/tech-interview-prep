@@ -1,6 +1,6 @@
 """Tests for Group-Relative Policy Advantages — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-group-relative-policy-advantages.md.
+The worked approaches live in ../../../docs/amazon/amazon-group-relative-policy-advantages.md.
 """
 
 import pytest

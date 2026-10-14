@@ -1,6 +1,6 @@
 """Frequently Bought Together — https://www.fastprep.io/problems/amazon-frequently-bought-together
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-frequently-bought-together.md
+Write-up & approaches: ../../../docs/amazon/amazon-frequently-bought-together.md
 
 Amazon's Retail Analytics team wants to discover which pairs of items are most often bought together so they can create Frequently Bought Together bundles.
 

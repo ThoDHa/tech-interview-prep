@@ -6,7 +6,7 @@
 
 **Algorithm:** [Hash table](https://en.wikipedia.org/wiki/Hash_table) · [Linked list](https://en.wikipedia.org/wiki/Linked_list)
 
-**Practice:** [`practice/lru_cache/solution.py`](../../practice/lru_cache/solution.py)
+**Practice:** [`practice/leetcode/lru_cache/solution.py`](../../practice/leetcode/lru_cache/solution.py)
 
 Design a data structure that follows the constraints of a Least Recently Used (LRU) cache.
 

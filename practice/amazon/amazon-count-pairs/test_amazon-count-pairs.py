@@ -1,6 +1,6 @@
 """Tests for Count Pairs — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-count-pairs.md.
+The worked approaches live in ../../../docs/amazon/amazon-count-pairs.md.
 """
 
 import pytest

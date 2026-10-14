@@ -1,6 +1,6 @@
 """Tests for Stack with Constant-Time Middle Queries — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-middle-stack-operations.md.
+The worked approaches live in ../../../docs/amazon/amazon-middle-stack-operations.md.
 """
 
 import pytest

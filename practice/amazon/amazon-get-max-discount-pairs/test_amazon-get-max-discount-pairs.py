@@ -1,6 +1,6 @@
 """Tests for Get Max Discount Pairs — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-get-max-discount-pairs.md.
+The worked approaches live in ../../../docs/amazon/amazon-get-max-discount-pairs.md.
 """
 
 import pytest

@@ -1,6 +1,6 @@
 """Largest Rectangle in Histogram: https://leetcode.com/problems/largest-rectangle-in-histogram/
 
-Write-up & approaches: ../../docs/problems/largest_rectangle_in_histogram.md
+Write-up & approaches: ../../../docs/leetcode/largest_rectangle_in_histogram.md
 
 Given an array of integers `heights` representing a histogram's bar heights where
 each bar has width `1`, return the area of the largest rectangle in the histogram.

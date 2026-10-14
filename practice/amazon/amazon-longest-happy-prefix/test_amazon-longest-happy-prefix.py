@@ -1,6 +1,6 @@
 """Tests for Longest Happy Prefix — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-longest-happy-prefix.md.
+The worked approaches live in ../../../docs/amazon/amazon-longest-happy-prefix.md.
 """
 
 import pytest

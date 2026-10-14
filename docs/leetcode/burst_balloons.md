@@ -6,7 +6,7 @@
 
 **Algorithm:** [Dynamic programming](https://en.wikipedia.org/wiki/Dynamic_programming) · [Memoization](https://en.wikipedia.org/wiki/Memoization) · [Recurrence relation](https://en.wikipedia.org/wiki/Recurrence_relation)
 
-**Practice:** [`practice/burst_balloons/solution.py`](../../practice/burst_balloons/solution.py)
+**Practice:** [`practice/leetcode/burst_balloons/solution.py`](../../practice/leetcode/burst_balloons/solution.py)
 
 You are given an array of integers `nums` of size `n`. The `ith` element represents a balloon with an integer value of `nums[i]`. You must burst all of the balloons.
 
@@ -445,7 +445,7 @@ class Solution:
 
 ## Comparison of Solutions
 
-The practice harness's `practice/burst_balloons/reference.py` implements the **Top-Down Memoization** solution.
+The practice harness's `practice/leetcode/burst_balloons/reference.py` implements the **Top-Down Memoization** solution.
 
 ### Time Complexity
 

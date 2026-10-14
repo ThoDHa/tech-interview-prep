@@ -1,6 +1,6 @@
 """Tests for Longest Subarray with K Distinct Values — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-longest-subarray-with-k-distinct.md.
+The worked approaches live in ../../../docs/amazon/amazon-longest-subarray-with-k-distinct.md.
 """
 
 import pytest

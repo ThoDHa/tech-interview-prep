@@ -1,6 +1,6 @@
 """Tests for Fare Between Stops on a Train Route — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-train-route-fare.md.
+The worked approaches live in ../../../docs/amazon/amazon-train-route-fare.md.
 """
 
 import pytest

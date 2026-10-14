@@ -1,6 +1,6 @@
 """Minimum Operations to Make an Array Continuous — https://www.fastprep.io/problems/amazon-minimum-operations-to-make-array-continuous
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-minimum-operations-to-make-array-continuous.md
+Write-up & approaches: ../../../docs/amazon/amazon-minimum-operations-to-make-array-continuous.md
 
 You are given a non-empty integer array nums of length n. In one operation, you may replace any one element with any integer.
 

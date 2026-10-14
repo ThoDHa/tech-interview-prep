@@ -1,6 +1,6 @@
 """Tests for Count Games Won By Group1 (AMZ CN) — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-how-many-games-did-the-team-win.md.
+The worked approaches live in ../../../docs/amazon/amazon-how-many-games-did-the-team-win.md.
 """
 
 import pytest

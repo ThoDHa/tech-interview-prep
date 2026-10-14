@@ -6,7 +6,7 @@
 
 **Algorithm:** [Popcount](https://en.wikipedia.org/wiki/Hamming_weight) · [Bitwise operation](https://en.wikipedia.org/wiki/Bitwise_operation)
 
-**Practice:** [`practice/number_of_1_bits/solution.py`](../../practice/number_of_1_bits/solution.py)
+**Practice:** [`practice/leetcode/number_of_1_bits/solution.py`](../../practice/leetcode/number_of_1_bits/solution.py)
 
 You are given an unsigned integer `n`. Return the number of `1` bits in its binary representation.
 
@@ -284,7 +284,7 @@ The rendered bit string holds one character per bit before it is counted, which 
 
 ## Comparison of Solutions
 
-The practice harness's `practice/number_of_1_bits/reference.py` implements the **Brian Kernighan Erase Loop** solution.
+The practice harness's `practice/leetcode/number_of_1_bits/reference.py` implements the **Brian Kernighan Erase Loop** solution.
 
 ### Time Complexity
 

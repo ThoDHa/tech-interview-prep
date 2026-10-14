@@ -1,6 +1,6 @@
 """Unique Paths: https://leetcode.com/problems/unique-paths/
 
-Write-up & approaches: ../../docs/problems/unique_paths.md
+Write-up & approaches: ../../../docs/leetcode/unique_paths.md
 
 A robot starts at the top-left of an `m x n` grid and may move only down or
 right. Return the number of unique paths to reach the bottom-right corner.

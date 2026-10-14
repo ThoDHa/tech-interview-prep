@@ -1,6 +1,6 @@
 """Page Referrer Reachability — https://www.fastprep.io/problems/amazon-page-referrer-reachability
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-page-referrer-reachability.md
+Write-up & approaches: ../../../docs/amazon/amazon-page-referrer-reachability.md
 
 You are given a list of web traffic records. Each record is represented as a two-element string array [url, referrer]:
 

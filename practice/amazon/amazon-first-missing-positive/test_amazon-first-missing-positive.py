@@ -1,6 +1,6 @@
 """Tests for First Missing Positive — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-first-missing-positive.md.
+The worked approaches live in ../../../docs/amazon/amazon-first-missing-positive.md.
 """
 
 import pytest

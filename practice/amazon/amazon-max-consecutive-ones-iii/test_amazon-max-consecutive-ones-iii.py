@@ -1,6 +1,6 @@
 """Tests for Max Consecutive Ones III — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-max-consecutive-ones-iii.md.
+The worked approaches live in ../../../docs/amazon/amazon-max-consecutive-ones-iii.md.
 """
 
 import pytest

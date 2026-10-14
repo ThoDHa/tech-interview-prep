@@ -1,6 +1,6 @@
 """Process Queries On Cart — https://www.fastprep.io/problems/amazon-process-queries-on-cart
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-process-queries-on-cart.md
+Write-up & approaches: ../../../docs/amazon/amazon-process-queries-on-cart.md
 
 As an aspiring developer at Amazon, you are building a prototype for a cart management service.
 

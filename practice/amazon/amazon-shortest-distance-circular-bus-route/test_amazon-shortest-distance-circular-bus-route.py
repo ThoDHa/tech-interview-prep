@@ -1,6 +1,6 @@
 """Tests for Shortest Distance on a Circular Bus Route — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-shortest-distance-circular-bus-route.md.
+The worked approaches live in ../../../docs/amazon/amazon-shortest-distance-circular-bus-route.md.
 """
 
 import pytest

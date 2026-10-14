@@ -1,6 +1,6 @@
 """Daily Temperatures — https://leetcode.com/problems/daily-temperatures/
 
-Write-up & approaches: ../../docs/problems/daily_temperatures.md
+Write-up & approaches: ../../../docs/leetcode/daily_temperatures.md
 
 You are given an array of integers `temperatures` where `temperatures[i]` represents the daily temperatures on the `ith` day. Return an array `result` where `result[i]` is the number of days after the
 

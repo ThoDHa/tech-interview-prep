@@ -6,7 +6,7 @@
 
 **Algorithm:** [Hash table](https://en.wikipedia.org/wiki/Hash_table) · [Sorting](https://en.wikipedia.org/wiki/Sorting_algorithm) · [Python `collections.Counter`](https://docs.python.org/3/library/collections.html#collections.Counter)
 
-**Practice:** [`practice/group_anagrams/solution.py`](../../practice/group_anagrams/solution.py)
+**Practice:** [`practice/leetcode/group_anagrams/solution.py`](../../practice/leetcode/group_anagrams/solution.py)
 
 Given an array of strings `strs`, group all *anagrams* together into sublists. You may return the output in **any order**.
 

@@ -1,6 +1,6 @@
 """Tests for Maximize Distance to the Closest Occupied Seat — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-maximize-distance-to-closest-person.md.
+The worked approaches live in ../../../docs/amazon/amazon-maximize-distance-to-closest-person.md.
 """
 
 import pytest

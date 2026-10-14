@@ -1,6 +1,6 @@
 """Tests for Minimum Contiguous Replacements — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-minimum-contiguous-replacements.md.
+The worked approaches live in ../../../docs/amazon/amazon-minimum-contiguous-replacements.md.
 """
 
 import pytest

@@ -1,6 +1,6 @@
 """Minimum Edge Moves to Connect a Network — https://www.fastprep.io/problems/amazon-minimum-edge-moves-to-connect-graph
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-minimum-edge-moves-to-connect-graph.md
+Write-up & approaches: ../../../docs/amazon/amazon-minimum-edge-moves-to-connect-graph.md
 
 You manage an undirected network with nodes 0 through n - 1. In one move, you may remove one existing cable and reconnect that cable between any two nodes.
 

@@ -1,6 +1,6 @@
 """Meeting Rooms — https://leetcode.com/problems/meeting-rooms/
 
-Write-up & approaches: ../../docs/problems/meeting_rooms.md
+Write-up & approaches: ../../../docs/leetcode/meeting_rooms.md
 Reference implementation of the write-up's Sort and Adjacent Scan solution,
 kept next to the harness so authored cases stay falsifiable. Your own attempt
 lives in solution.py.

@@ -1,6 +1,6 @@
 """Merge k Sorted Lists — https://www.fastprep.io/problems/amazon-merge-k-sorted-lists
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-merge-k-sorted-lists.md
+Write-up & approaches: ../../../docs/amazon/amazon-merge-k-sorted-lists.md
 
 You are given an array lists containing k linked-list heads. Every linked list is sorted in ascending order.
 

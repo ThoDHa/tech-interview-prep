@@ -1,6 +1,6 @@
 """Redundant Connection — https://leetcode.com/problems/redundant-connection/
 
-Write-up & approaches: ../../docs/problems/redundant_connection.md
+Write-up & approaches: ../../../docs/leetcode/redundant_connection.md
 Reference implementation of the write-up's Union-Find with Early Exit solution.
 
 You are given a connected **undirected graph** with `n` nodes labeled from `1` to `n`. Initially, it contained no cycles and consisted of `n-1` edges. We have now added one additional edge to the graph. The edge has two **different** vertices chosen from `1` to `n`, and was not an edge that previously existed in the graph. The graph is represented as an array `edges` of length `n` where `edges[i] = [ai, bi]` represents an edge between nodes `ai` and `bi` in the graph. Return an edge that can be removed so that the graph is still a connected non-cyclical graph. If there are multiple answers, return the edge that appears last in the input `edges`.

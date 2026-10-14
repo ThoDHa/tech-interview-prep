@@ -1,6 +1,6 @@
 """Walls And Gates — https://leetcode.com/problems/walls-and-gates/
 
-Write-up & approaches: ../../docs/problems/walls_and_gates.md
+Write-up & approaches: ../../../docs/leetcode/walls_and_gates.md
 Reference implementation of the write-up's Multi-Source BFS solution, kept
 next to the harness so authored cases stay falsifiable. Your own attempt
 lives in solution.py.

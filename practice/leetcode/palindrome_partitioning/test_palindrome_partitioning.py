@@ -1,6 +1,6 @@
 """Tests for Palindrome Partitioning — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../docs/problems/palindrome_partitioning.md.
+The worked approaches live in ../../../docs/leetcode/palindrome_partitioning.md.
 """
 
 import pytest

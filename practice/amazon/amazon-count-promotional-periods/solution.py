@@ -1,6 +1,6 @@
 """Count Promotional Periods — https://www.fastprep.io/problems/amazon-count-promotional-periods
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-count-promotional-periods.md
+Write-up & approaches: ../../../docs/amazon/amazon-count-promotional-periods.md
 
 Data analysts at Amazon are studying product order patterns. They classify a period of at least three consecutive days as a promotional period when the order counts on the first and last days are both
 

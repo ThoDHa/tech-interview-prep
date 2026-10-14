@@ -8,7 +8,7 @@
 
 **Algorithm:** [Breadth-first search](https://en.wikipedia.org/wiki/Breadth-first_search) · [Flood fill](https://en.wikipedia.org/wiki/Flood_fill)
 
-**Practice:** [`practice/walls_and_gates/solution.py`](../../practice/walls_and_gates/solution.py)
+**Practice:** [`practice/leetcode/walls_and_gates/solution.py`](../../practice/leetcode/walls_and_gates/solution.py)
 
 You are given a $m \times n$ 2D `grid` initialized with these three possible values:
 

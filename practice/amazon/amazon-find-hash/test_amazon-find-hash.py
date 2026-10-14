@@ -1,6 +1,6 @@
 """Tests for Find Hash — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-find-hash.md.
+The worked approaches live in ../../../docs/amazon/amazon-find-hash.md.
 """
 
 import pytest

@@ -1,6 +1,6 @@
 """Tests for Distance Between Two Tree Nodes — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-distance-between-tree-nodes.md.
+The worked approaches live in ../../../docs/amazon/amazon-distance-between-tree-nodes.md.
 """
 
 import pytest

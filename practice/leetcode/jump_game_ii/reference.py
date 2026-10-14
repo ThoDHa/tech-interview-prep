@@ -1,6 +1,6 @@
 """Jump Game II — https://leetcode.com/problems/jump-game-ii/
 
-Write-up & approaches: ../../docs/problems/jump_game_ii.md
+Write-up & approaches: ../../../docs/leetcode/jump_game_ii.md
 Reference implementation of the write-up's Greedy solution, kept next to the
 harness so authored cases stay falsifiable. Your own attempt lives in
 solution.py.

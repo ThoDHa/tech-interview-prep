@@ -1,6 +1,6 @@
 """Tests for Min Retailers — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-minimum-retailers.md.
+The worked approaches live in ../../../docs/amazon/amazon-minimum-retailers.md.
 """
 
 import pytest

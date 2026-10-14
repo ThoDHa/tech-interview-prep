@@ -1,6 +1,6 @@
 """Count Connected Components — https://www.fastprep.io/problems/amazon-count-connected-components
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-count-connected-components.md
+Write-up & approaches: ../../../docs/amazon/amazon-count-connected-components.md
 
 You are given an undirected graph with n nodes and a list of edges. Each edge connects two nodes in the graph.
 

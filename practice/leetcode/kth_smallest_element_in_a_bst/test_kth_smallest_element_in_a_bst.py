@@ -2,7 +2,7 @@
 
 Trees are stored in the case files as LeetCode level-order arrays (null = missing)
 and marshalled to TreeNode here. The worked approaches live in
-../../docs/problems/kth_smallest_element_in_a_bst.md.
+../../../docs/leetcode/kth_smallest_element_in_a_bst.md.
 """
 
 import pytest

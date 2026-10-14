@@ -1,6 +1,6 @@
 """Get Smallest Base Segment — https://www.fastprep.io/problems/amazon-get-smallest-base-segment
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-get-smallest-base-segment.md
+Write-up & approaches: ../../../docs/amazon/amazon-get-smallest-base-segment.md
 
 In Amazon's distributed storage network, some critical data segments are missing. They are represented by a string missingData. The system restores data by choosing a base segment of length segmentSiz
 

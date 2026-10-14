@@ -1,6 +1,6 @@
 """Tests for Find Subarray with Minimum Distinct Integers — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-find-subarray-with-minimum-distinct-integers.md.
+The worked approaches live in ../../../docs/amazon/amazon-find-subarray-with-minimum-distinct-integers.md.
 """
 
 import pytest

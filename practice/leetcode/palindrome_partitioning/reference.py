@@ -1,6 +1,6 @@
 """Palindrome Partitioning — https://leetcode.com/problems/palindrome-partitioning/
 
-Write-up & approaches: ../../docs/problems/palindrome_partitioning.md
+Write-up & approaches: ../../../docs/leetcode/palindrome_partitioning.md
 Reference implementation of the write-up's Backtracking solution, kept next
 to the harness so authored cases stay falsifiable. Your own attempt lives in
 solution.py.

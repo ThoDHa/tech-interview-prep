@@ -134,7 +134,7 @@ def canonical_order(problems: list[str]) -> list[str]:
     table, so they sort alphabetically after the tabled problems. Any
     problem missing from the table is appended alphabetically. Falls back
     to alphabetical order if the table cannot be read or has no rows. The
-    pre-move landing (docs/problems/index.md) is read when the post-move
+    pre-move landing (docs/leetcode/index.md) is read when the post-move
     one does not exist yet, so the transition does not degrade the board.
     """
     known = set(problems)

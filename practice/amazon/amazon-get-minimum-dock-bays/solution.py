@@ -1,6 +1,6 @@
 """Min Dock Bays — https://www.fastprep.io/problems/amazon-get-minimum-dock-bays
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-get-minimum-dock-bays.md
+Write-up & approaches: ../../../docs/amazon/amazon-get-minimum-dock-bays.md
 
 You are managing operations at a large Amazon warehouse. Loaded trucks arrive at the warehouse sequentially and must be unloaded within a specific timeframe to ensure timely delivery. Your task is to 
 

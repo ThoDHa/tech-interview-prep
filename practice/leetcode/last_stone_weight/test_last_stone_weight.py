@@ -1,6 +1,6 @@
 """Tests for Last Stone Weight — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../docs/problems/last_stone_weight.md.
+The worked approaches live in ../../../docs/leetcode/last_stone_weight.md.
 """
 
 import pytest

@@ -6,7 +6,7 @@
 
 **Algorithm:** [Cycle detection](https://en.wikipedia.org/wiki/Cycle_detection) · [Floyd's cycle detection](https://en.wikipedia.org/wiki/Cycle_detection#Floyd's_tortoise_and_hare) · [Hash table](https://en.wikipedia.org/wiki/Hash_table)
 
-**Practice:** [`practice/happy_number/solution.py`](../../practice/happy_number/solution.py)
+**Practice:** [`practice/leetcode/happy_number/solution.py`](../../practice/leetcode/happy_number/solution.py)
 
 A **non-cyclical number** is an integer defined by the following algorithm:
 
@@ -215,7 +215,7 @@ Two integer variables; the chain's past is never stored.
 
 ## Comparison of Solutions
 
-The practice harness's `practice/happy_number/reference.py` implements the **Floyd's Cycle Detection** solution.
+The practice harness's `practice/leetcode/happy_number/reference.py` implements the **Floyd's Cycle Detection** solution.
 
 ### Time Complexity
 

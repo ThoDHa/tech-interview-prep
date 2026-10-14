@@ -1,6 +1,6 @@
 """Calculate Warehouse Efficiency — https://www.fastprep.io/problems/amazon-calculate-warehouse-efficiency
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-calculate-warehouse-efficiency.md
+Write-up & approaches: ../../../docs/amazon/amazon-calculate-warehouse-efficiency.md
 
 The supply chain manager at one of Amazon's warehouses wants to measure the efficiency of the way parcels are shipped. The volume of each parcel is represented in the array parcelWeights. Each day, th
 

@@ -1,6 +1,6 @@
 """Tests for Max Negation — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-maximize-the-array-sum-after-negating-at-most-k-elements.md.
+The worked approaches live in ../../../docs/amazon/amazon-maximize-the-array-sum-after-negating-at-most-k-elements.md.
 """
 
 import pytest

@@ -1,6 +1,6 @@
 """Product of Array Except Self — https://www.fastprep.io/problems/amazon-product-array-except-self
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-product-array-except-self.md
+Write-up & approaches: ../../../docs/amazon/amazon-product-array-except-self.md
 
 Given an integer array nums, return an array answer where answer[i] equals the product of every element of nums except nums[i].
 

@@ -6,7 +6,7 @@
 
 **Algorithm:** [Linked list](https://en.wikipedia.org/wiki/Linked_list) · [Recursion](https://en.wikipedia.org/wiki/Recursion_(computer_science))
 
-**Practice:** [`practice/reverse_linked_list/solution.py`](../../practice/reverse_linked_list/solution.py)
+**Practice:** [`practice/leetcode/reverse_linked_list/solution.py`](../../practice/leetcode/reverse_linked_list/solution.py)
 
 Given the `head` of a singly linked list, reverse the list, and return the reversed list.
 

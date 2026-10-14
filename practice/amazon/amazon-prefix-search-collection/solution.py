@@ -1,6 +1,6 @@
 """Dynamic Prefix Search Collection — https://www.fastprep.io/problems/amazon-prefix-search-collection
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-prefix-search-collection.md
+Write-up & approaches: ../../../docs/amazon/amazon-prefix-search-collection.md
 
 Implement a dynamic collection of lowercase words. Process the finite array operations from left to right.
 

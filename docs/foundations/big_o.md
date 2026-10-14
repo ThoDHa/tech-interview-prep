@@ -34,7 +34,7 @@ A quick note on notation: prose math keeps its superscripts (`O(n²)`, `O(2ⁿ)`
 
 `O(1)` and `O(log n)` are excellent. `O(n)` and `O(n log n)` are the usual targets for a good solution. `O(n²)` is often the brute force you start from. `O(2ⁿ)` is usually only acceptable when `n` is tiny.
 
-The two less common classes have specific shapes. `O(√n)` appears whenever you can stop at the square root: divisors of `n` come in pairs, so checking candidates up to `√n` covers all of them. `O(n·m)` is what a nested loop becomes when the two loops run over *different* inputs rather than the same one: a grid with `m` rows and `n` columns has `m × n` cells, and [Number of Islands](../problems/number_of_islands.md) has to touch every one of them.
+The two less common classes have specific shapes. `O(√n)` appears whenever you can stop at the square root: divisors of `n` come in pairs, so checking candidates up to `√n` covers all of them. `O(n·m)` is what a nested loop becomes when the two loops run over *different* inputs rather than the same one: a grid with `m` rows and `n` columns has `m × n` cells, and [Number of Islands](../leetcode/number_of_islands.md) has to touch every one of them.
 
 ## Why the halving classes are so fast
 
@@ -73,7 +73,7 @@ When several parts run one after another, the largest one wins: an `O(n)` pass f
 
 Everything above measures *time* (steps). **Space complexity** measures *extra memory* the same way. A solution that builds a hash map of every element uses `O(n)` extra space. One that uses a handful of variables uses `O(1)` extra space. The input itself is usually not counted, only the additional memory your approach allocates.
 
-Many problems offer a time-space trade: spend `O(n)` memory to cut time from `O(n²)` down to `O(n)`. [Two Sum](../problems/two_sum.md) is the classic example, and the [Hashing guide](../patterns/hashing/intuition.md) is built entirely on that trade.
+Many problems offer a time-space trade: spend `O(n)` memory to cut time from `O(n²)` down to `O(n)`. [Two Sum](../leetcode/two_sum.md) is the classic example, and the [Hashing guide](../patterns/hashing/intuition.md) is built entirely on that trade.
 
 ## The one-sentence summary
 

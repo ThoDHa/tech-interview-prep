@@ -1,6 +1,6 @@
 """Tests for Erase Pairs — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/erase-pairs.md.
+The worked approaches live in ../../../docs/amazon/erase-pairs.md.
 """
 
 import pytest

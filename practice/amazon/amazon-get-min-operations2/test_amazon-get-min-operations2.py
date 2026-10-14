@@ -1,6 +1,6 @@
 """Tests for Min Operations — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-get-min-operations2.md.
+The worked approaches live in ../../../docs/amazon/amazon-get-min-operations2.md.
 """
 
 import pytest

@@ -1,6 +1,6 @@
 """Closest Version Date — https://www.fastprep.io/problems/amazon-closest-version-date
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-closest-version-date.md
+Write-up & approaches: ../../../docs/amazon/amazon-closest-version-date.md
 
 2026-07-02 •ᴗ• Practice note: This version should match the core of the reported interview question by about 85%-90%. It was reported for SDE II. It may not be word-for-word identical, but the main id
 

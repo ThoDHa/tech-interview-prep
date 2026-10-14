@@ -1,6 +1,6 @@
 """Basic Calculator — https://www.fastprep.io/problems/amazon-basic-calculator
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-basic-calculator.md
+Write-up & approaches: ../../../docs/amazon/amazon-basic-calculator.md
 
 Given a valid arithmetic expression s, return its evaluated integer value.
 

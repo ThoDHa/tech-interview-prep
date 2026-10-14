@@ -1,12 +1,14 @@
 # Tech Interview Prep Solutions
 
-A study guide spanning three curated problem banks: the [Grind 75](https://www.techinterviewhandbook.org/grind75) and the [NeetCode 150](https://neetcode.io/practice/practice/neetcode150) LeetCode lists, merged into one unified [problem catalog](problems/index.md), and the [Amazon OA](problems/amazon_oa/index.md) bank. Problems on both LeetCode tracks appear once, credited to each. Each problem page covers the statement and examples, with constraints where available. The [pattern intuition guides](patterns/index.md) explain the mental models behind the recurring algorithm patterns, and the `practice/` workspace lets you implement and test each solution yourself.
+A study guide spanning three curated problem banks: the [Grind 75](https://www.techinterviewhandbook.org/grind75) and the [NeetCode 150](https://neetcode.io/practice/practice/neetcode150) LeetCode lists, merged into one unified [problem catalog](leetcode/index.md), and the growing [Amazon OA](amazon/index.md) bank. Every unified problem carries a full worked write-up, deriving each approach from brute force to optimal with walkthroughs, complexity analysis, and trade-off comparisons; the Amazon write-ups are landing in waves. Problems on both LeetCode tracks appear once, credited to each.
+
+The [pattern intuition guides](patterns/index.md) explain the mental models behind the recurring algorithm patterns, the [system design](system-design/index.md) section covers the architecture canon with worked case studies, and the `practice/` workspace lets you implement and test each solution yourself.
 
 !!! tip "New to algorithms or interviews?"
 
-    Start with the [Foundations](foundations/index.md) section. It teaches the prerequisites the problem pages assume, Big-O notation, recursion, the core data structures, and a method for approaching any problem, all from zero. For the plan around the problems, time budgeting, and the non-coding rounds, see the [Interview Prep](interview_prep/index.md) section.
+    Start with the [Foundations](foundations/index.md) section. It teaches the prerequisites the problem pages assume, Big-O notation, recursion, the core data structures, and a method for approaching any problem, all from zero. For the plan around the problems, time budgeting, and the non-coding rounds, see the [Interview Prep](interview-prep/index.md) section.
 
-Browse every problem in the [Problems catalog](problems/index.md), or use the navigation sidebar.
+Browse every problem in the [unified catalog](leetcode/index.md) or the [Amazon bank](amazon/index.md), or use the navigation sidebar.
 
 ## Pattern Intuition
 

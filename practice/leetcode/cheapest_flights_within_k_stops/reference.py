@@ -1,6 +1,6 @@
 """Cheapest Flights Within K Stops — https://leetcode.com/problems/cheapest-flights-within-k-stops/
 
-Write-up & approaches: ../../docs/problems/cheapest_flights_within_k_stops.md
+Write-up & approaches: ../../../docs/leetcode/cheapest_flights_within_k_stops.md
 Reference implementation of the write-up's Bellman-Ford Relaxation Sweeps solution.
 
 There are `n` airports, labeled from `0` to `n - 1`, which are connected by some flights. You are given an array `flights` where `flights[i] = [from_i, to_i, price_i]` represents a one-way flight from airport `from_i` to airport `to_i` with cost `price_i`. You may assume there are no duplicate flights and no flights from an airport to itself.

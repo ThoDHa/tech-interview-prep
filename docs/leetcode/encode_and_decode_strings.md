@@ -6,7 +6,7 @@
 
 **Algorithm:** [Delimiter](https://en.wikipedia.org/wiki/Delimiter) · [Escape character](https://en.wikipedia.org/wiki/Escape_character) · [Netstring](https://en.wikipedia.org/wiki/Netstring)
 
-**Practice:** [`practice/encode_and_decode_strings/solution.py`](../../practice/encode_and_decode_strings/solution.py)
+**Practice:** [`practice/leetcode/encode_and_decode_strings/solution.py`](../../practice/leetcode/encode_and_decode_strings/solution.py)
 
 > This problem is locked behind [LeetCode Premium](https://leetcode.com/problems/encode-and-decode-strings/); read it free on [NeetCode](https://neetcode.io/problems/string-encode-and-decode).
 

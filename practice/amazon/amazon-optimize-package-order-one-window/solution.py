@@ -1,6 +1,6 @@
 """Optimize Package Order by Sorting One Window — https://www.fastprep.io/problems/amazon-optimize-package-order-one-window
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-optimize-package-order-one-window.md
+Write-up & approaches: ../../../docs/amazon/amazon-optimize-package-order-one-window.md
 
 Given an integer array of package priorities and a window size k, choose exactly one contiguous window of length k and sort only that window in ascending order.
 

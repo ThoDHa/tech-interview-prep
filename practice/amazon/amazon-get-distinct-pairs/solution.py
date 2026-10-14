@@ -1,6 +1,6 @@
 """Get Distinct Pairs — https://www.fastprep.io/problems/amazon-get-distinct-pairs
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-get-distinct-pairs.md
+Write-up & approaches: ../../../docs/amazon/amazon-get-distinct-pairs.md
 
 A financial strategist at Amazon Web Services (AWS) is analyzing a collection of profitable investments, each represented by an integer array. Every value in the array indicates the annual gain of a p
 

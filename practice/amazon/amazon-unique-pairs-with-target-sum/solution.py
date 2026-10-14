@@ -1,6 +1,6 @@
 """Unique Pairs With Target Sum — https://www.fastprep.io/problems/amazon-unique-pairs-with-target-sum
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-unique-pairs-with-target-sum.md
+Write-up & approaches: ../../../docs/amazon/amazon-unique-pairs-with-target-sum.md
 
 Complete the function below. The function receives the full standard input as a single string and returns the exact standard output lines.
 

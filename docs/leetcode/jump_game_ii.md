@@ -6,7 +6,7 @@
 
 **Algorithm:** [Recursion](https://en.wikipedia.org/wiki/Recursion_(computer_science)) · [Dynamic programming](https://en.wikipedia.org/wiki/Dynamic_programming) · [Greedy algorithm](https://en.wikipedia.org/wiki/Greedy_algorithm) · [Breadth-first search](https://en.wikipedia.org/wiki/Breadth-first_search)
 
-**Practice:** [`practice/jump_game_ii/solution.py`](../../practice/jump_game_ii/solution.py)
+**Practice:** [`practice/leetcode/jump_game_ii/solution.py`](../../practice/leetcode/jump_game_ii/solution.py)
 
 You are given an array of integers `nums`, where `nums[i]` represents the maximum length of a jump towards the right from index `i`. For example, if you are at `nums[i]`, you can jump to any index `i + j` where:
 
@@ -375,7 +375,7 @@ Three integers of state, regardless of input length.
 
 ## Comparison of Solutions
 
-The practice harness's `practice/jump_game_ii/reference.py` implements the **Greedy** solution.
+The practice harness's `practice/leetcode/jump_game_ii/reference.py` implements the **Greedy** solution.
 
 ### Time Complexity
 

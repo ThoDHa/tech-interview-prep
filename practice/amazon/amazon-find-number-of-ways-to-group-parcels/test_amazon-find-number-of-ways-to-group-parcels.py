@@ -1,6 +1,6 @@
 """Tests for Ways to Group Parcels — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-find-number-of-ways-to-group-parcels.md.
+The worked approaches live in ../../../docs/amazon/amazon-find-number-of-ways-to-group-parcels.md.
 """
 
 import pytest

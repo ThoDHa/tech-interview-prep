@@ -1,6 +1,6 @@
 """Tests for House Robber — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-house-robber.md.
+The worked approaches live in ../../../docs/amazon/amazon-house-robber.md.
 """
 
 import pytest

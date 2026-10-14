@@ -1,6 +1,6 @@
 """Tests for Squirrel Nut Collection Shortest Path — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-squirrel-nut-collection-shortest-path.md.
+The worked approaches live in ../../../docs/amazon/amazon-squirrel-nut-collection-shortest-path.md.
 """
 
 import pytest

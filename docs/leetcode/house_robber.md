@@ -6,7 +6,7 @@
 
 **Algorithm:** [Dynamic programming](https://en.wikipedia.org/wiki/Dynamic_programming) · [Memoization](https://en.wikipedia.org/wiki/Memoization) · [Recurrence relation](https://en.wikipedia.org/wiki/Recurrence_relation)
 
-**Practice:** [`practice/house_robber/solution.py`](../../practice/house_robber/solution.py)
+**Practice:** [`practice/leetcode/house_robber/solution.py`](../../practice/leetcode/house_robber/solution.py)
 
 You are given an integer array `nums` where `nums[i]` represents the amount of money the `i`th house has. The houses are arranged in a straight line, i.e. the `i`th house is the neighbor of the `(i-1)`th and `(i+1)`th house.
 

@@ -1,6 +1,6 @@
 """Tests for Get Final Location — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-get-final-locations.md.
+The worked approaches live in ../../../docs/amazon/amazon-get-final-locations.md.
 """
 
 import pytest

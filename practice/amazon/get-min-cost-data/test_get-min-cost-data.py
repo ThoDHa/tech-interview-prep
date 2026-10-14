@@ -1,6 +1,6 @@
 """Tests for Get Min Cost Data — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/get-min-cost-data.md.
+The worked approaches live in ../../../docs/amazon/get-min-cost-data.md.
 """
 
 import pytest

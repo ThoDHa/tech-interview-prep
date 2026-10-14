@@ -1,6 +1,6 @@
 """Tests for Walls And Gates — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../docs/problems/walls_and_gates.md.
+The worked approaches live in ../../../docs/leetcode/walls_and_gates.md.
 """
 
 import pytest

@@ -1,6 +1,6 @@
 """Tests for Closest Version Date — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-closest-version-date.md.
+The worked approaches live in ../../../docs/amazon/amazon-closest-version-date.md.
 """
 
 import pytest

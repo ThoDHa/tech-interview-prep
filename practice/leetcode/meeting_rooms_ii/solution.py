@@ -1,6 +1,6 @@
 """Meeting Rooms II — https://leetcode.com/problems/meeting-rooms-ii/
 
-Write-up & approaches: ../../docs/problems/meeting_rooms_ii.md
+Write-up & approaches: ../../../docs/leetcode/meeting_rooms_ii.md
 
 Given an array of meeting time interval objects consisting of start and end times `[[start_1,end_1],[start_2,end_2],...] (start_i < end_i)`, find the minimum number of rooms required to schedule all m
 

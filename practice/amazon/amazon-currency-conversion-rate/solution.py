@@ -1,6 +1,6 @@
 """Currency Conversion Rate — https://www.fastprep.io/problems/amazon-currency-conversion-rate
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-currency-conversion-rate.md
+Write-up & approaches: ../../../docs/amazon/amazon-currency-conversion-rate.md
 
 You are given currency conversion rates. Each row contains a source currency, a target currency, and the value of one unit of the source currency in the target currency.
 

@@ -6,7 +6,7 @@
 
 **Algorithm:** [Depth-first search](https://en.wikipedia.org/wiki/Depth-first_search) · [Flood fill](https://en.wikipedia.org/wiki/Flood_fill)
 
-**Practice:** [`practice/surrounded_regions/solution.py`](../../practice/surrounded_regions/solution.py)
+**Practice:** [`practice/leetcode/surrounded_regions/solution.py`](../../practice/leetcode/surrounded_regions/solution.py)
 
 You are given an `m x n` matrix `board` containing letters `'X'` and `'O'`, capture regions that are surrounded:
 

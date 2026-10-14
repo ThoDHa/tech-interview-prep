@@ -1,6 +1,6 @@
 """Compute Encoded Product Name — https://www.fastprep.io/problems/amazon-compute-encoded-product-name
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-compute-encoded-product-name.md
+Write-up & approaches: ../../../docs/amazon/amazon-compute-encoded-product-name.md
 
 Amazon's software team utilizes several algorithms to maintain data integrity, one of which targets the encoding of symmetrical names. Symmetrical names are unique in that they read identically in bot
 

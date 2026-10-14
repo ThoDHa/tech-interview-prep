@@ -1,6 +1,6 @@
 """Tests for Minimum Time to Spread Through a Grid — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-rotting-oranges-variation.md.
+The worked approaches live in ../../../docs/amazon/amazon-rotting-oranges-variation.md.
 """
 
 import pytest

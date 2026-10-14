@@ -1,6 +1,6 @@
 """Word Ladder: https://leetcode.com/problems/word-ladder/
 
-Write-up & approaches: ../../docs/problems/word_ladder.md
+Write-up & approaches: ../../../docs/leetcode/word_ladder.md
 
 Given `beginWord`, `endWord`, and a dictionary `wordList`, return the number of
 words in the shortest transformation sequence from `beginWord` to `endWord`

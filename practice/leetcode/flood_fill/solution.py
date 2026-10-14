@@ -1,6 +1,6 @@
 """Flood Fill: https://leetcode.com/problems/flood-fill/
 
-Write-up & approaches: ../../docs/problems/flood_fill.md
+Write-up & approaches: ../../../docs/leetcode/flood_fill.md
 
 You are given an `m x n` grid `image` of pixel values plus a start pixel
 `(sr, sc)` and a new `color`. Recolor the start pixel and every pixel

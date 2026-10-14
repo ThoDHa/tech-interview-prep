@@ -1,6 +1,6 @@
 """Get Minimum Boxes — https://www.fastprep.io/problems/amazon-get-minimum-boxes
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-get-minimum-boxes.md
+Write-up & approaches: ../../../docs/amazon/amazon-get-minimum-boxes.md
 
 The supply chain manager at one of Amazon's warehouses is shipping the last container of the day. All n boxes have been loaded into the truck with their sizes represented in the array boxes. The truck
 

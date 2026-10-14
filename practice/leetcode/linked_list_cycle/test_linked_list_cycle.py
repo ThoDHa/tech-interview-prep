@@ -2,7 +2,7 @@
 
 Cases store the list as `[values, pos]` (pos = cycle-entry index, -1 = none) and
 are marshalled to a possibly cyclic ListNode here; a cyclic list is never
-serialized. The worked approaches live in ../../docs/problems/linked_list_cycle.md.
+serialized. The worked approaches live in ../../../docs/leetcode/linked_list_cycle.md.
 """
 
 import pytest

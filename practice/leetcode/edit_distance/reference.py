@@ -1,6 +1,6 @@
 """Edit Distance — https://leetcode.com/problems/edit-distance/
 
-Write-up & approaches: ../../docs/problems/edit_distance.md
+Write-up & approaches: ../../../docs/leetcode/edit_distance.md
 Reference implementation of the write-up's Space-Optimized Two-Row DP solution.
 
 You are given two strings `word1` and `word2`, each consisting of lowercase English letters. You may insert, delete, or replace characters any number of times; return the minimum number of operations to make `word1` equal `word2`.

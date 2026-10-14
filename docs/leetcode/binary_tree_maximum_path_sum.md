@@ -6,7 +6,7 @@
 
 **Algorithm:** [Depth-first search](https://en.wikipedia.org/wiki/Depth-first_search) · [Dynamic programming](https://en.wikipedia.org/wiki/Dynamic_programming)
 
-**Practice:** [`practice/binary_tree_maximum_path_sum/solution.py`](../../practice/binary_tree_maximum_path_sum/solution.py)
+**Practice:** [`practice/leetcode/binary_tree_maximum_path_sum/solution.py`](../../practice/leetcode/binary_tree_maximum_path_sum/solution.py)
 
 A **path** in a binary tree is a sequence of nodes where each pair of adjacent nodes in the sequence has an edge connecting them. A node can only appear in the sequence **at most once**. Note that the path does not need to pass through the root.
 

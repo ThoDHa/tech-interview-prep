@@ -1,6 +1,6 @@
 """Tests for Smallest Number With a Given Digit Sum — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-smallest-number-with-digit-sum.md.
+The worked approaches live in ../../../docs/amazon/amazon-smallest-number-with-digit-sum.md.
 """
 
 import pytest

@@ -1,6 +1,6 @@
 """Tests for Meeting Room Scheduler — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-meeting-room-scheduler.md.
+The worked approaches live in ../../../docs/amazon/amazon-meeting-room-scheduler.md.
 """
 
 import pytest

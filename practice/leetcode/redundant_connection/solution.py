@@ -1,6 +1,6 @@
 """Redundant Connection — https://leetcode.com/problems/redundant-connection/
 
-Write-up & approaches: ../../docs/problems/redundant_connection.md
+Write-up & approaches: ../../../docs/leetcode/redundant_connection.md
 
 You are given a connected **undirected graph** with `n` nodes labeled from `1` to `n`. Initially, it contained no cycles and consisted of `n-1` edges. We have now added one additional edge to the grap
 

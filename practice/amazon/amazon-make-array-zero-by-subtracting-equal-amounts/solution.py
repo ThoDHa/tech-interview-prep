@@ -1,6 +1,6 @@
 """Min Operations — https://www.fastprep.io/problems/amazon-make-array-zero-by-subtracting-equal-amounts
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-make-array-zero-by-subtracting-equal-amounts.md
+Write-up & approaches: ../../../docs/amazon/amazon-make-array-zero-by-subtracting-equal-amounts.md
 
 You are given a non-negative integer array nums. In one operation, you must:
 

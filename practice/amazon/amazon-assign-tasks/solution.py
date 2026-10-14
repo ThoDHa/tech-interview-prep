@@ -1,6 +1,6 @@
 """Assign Tasks — https://www.fastprep.io/problems/amazon-assign-tasks
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-assign-tasks.md
+Write-up & approaches: ../../../docs/amazon/amazon-assign-tasks.md
 
 You have an integer servers, which denote the number of servers, and you have a list called requests which denote the servers that this request is allowed to be scheduled to. You have to schedule each
 

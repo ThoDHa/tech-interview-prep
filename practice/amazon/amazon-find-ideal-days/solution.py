@@ -1,6 +1,6 @@
 """Find Ideal Days — https://www.fastprep.io/problems/amazon-find-ideal-days
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-find-ideal-days.md
+Write-up & approaches: ../../../docs/amazon/amazon-find-ideal-days.md
 
 A virtual assistant is being given a feature that recommends ideal days for fishing from a rainfall forecast.
 

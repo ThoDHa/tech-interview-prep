@@ -1,6 +1,6 @@
 """Max Area of Island — https://leetcode.com/problems/max-area-of-island/
 
-Write-up & approaches: ../../docs/problems/max_area_of_island.md
+Write-up & approaches: ../../../docs/leetcode/max_area_of_island.md
 
 You are given a matrix `grid` where `grid[i]` is either a `0` (representing water) or `1` (representing land). An island is defined as a group of `1`'s connected horizontally or vertically. You may as
 

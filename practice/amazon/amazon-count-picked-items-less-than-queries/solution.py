@@ -1,6 +1,6 @@
 """Count Picked Items Less Than Queries — https://www.fastprep.io/problems/amazon-count-picked-items-less-than-queries
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-count-picked-items-less-than-queries.md
+Write-up & approaches: ../../../docs/amazon/amazon-count-picked-items-less-than-queries.md
 
 A warehouse has items represented by an array items, where items[i] is the value of the i-th item.
 

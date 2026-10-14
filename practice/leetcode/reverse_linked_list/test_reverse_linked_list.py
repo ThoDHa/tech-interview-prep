@@ -1,7 +1,7 @@
 """Tests for Reverse Linked List: your attempt (solution.py) against both sets.
 
 Linked lists are stored in the case files as plain value arrays and marshalled to
-ListNode here. The worked approaches live in ../../docs/problems/reverse_linked_list.md.
+ListNode here. The worked approaches live in ../../../docs/leetcode/reverse_linked_list.md.
 """
 
 import pytest

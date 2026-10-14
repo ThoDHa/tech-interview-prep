@@ -6,7 +6,7 @@
 
 **Algorithm:** [Breadth-first search](https://en.wikipedia.org/wiki/Breadth-first_search) · [Depth-first search](https://en.wikipedia.org/wiki/Depth-first_search) · [Bidirectional search](https://en.wikipedia.org/wiki/Bidirectional_search)
 
-**Practice:** [`practice/word_ladder/solution.py`](../../practice/word_ladder/solution.py)
+**Practice:** [`practice/leetcode/word_ladder/solution.py`](../../practice/leetcode/word_ladder/solution.py)
 
 A **transformation sequence** from word `beginWord` to word `endWord` using a dictionary `wordList` is a sequence of words `beginWord -> s1 -> s2 -> ... -> sk` such that:
 

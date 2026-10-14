@@ -1,6 +1,6 @@
 """Tests for Shortest Grid Path With One Wall Break — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-shortest-grid-path-with-one-wall-break.md.
+The worked approaches live in ../../../docs/amazon/amazon-shortest-grid-path-with-one-wall-break.md.
 """
 
 import pytest

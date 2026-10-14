@@ -1,6 +1,6 @@
 """Minimum Window Substring — https://www.fastprep.io/problems/amazon-minimum-window-substring
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-minimum-window-substring.md
+Write-up & approaches: ../../../docs/amazon/amazon-minimum-window-substring.md
 
 Given non-empty strings s and t, return the shortest contiguous substring of s that contains every character of t, including duplicate occurrences.
 

@@ -6,7 +6,7 @@
 
 **Algorithm:** [Minimum spanning tree](https://en.wikipedia.org/wiki/Minimum_spanning_tree) · [Prim's algorithm](https://en.wikipedia.org/wiki/Prim%27s_algorithm) · [Kruskal's algorithm](https://en.wikipedia.org/wiki/Kruskal%27s_algorithm) · [Disjoint-set (Union-Find)](https://en.wikipedia.org/wiki/Disjoint-set_data_structure)
 
-**Practice:** [`practice/min_cost_to_connect_all_points/solution.py`](../../practice/min_cost_to_connect_all_points/solution.py)
+**Practice:** [`practice/leetcode/min_cost_to_connect_all_points/solution.py`](../../practice/leetcode/min_cost_to_connect_all_points/solution.py)
 
 You are given a 2-D integer array `points`, where `points[i] = [xi, yi]`. Each `points[i]` represents a distinct point on a 2-D plane.
 

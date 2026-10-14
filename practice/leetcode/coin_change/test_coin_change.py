@@ -1,7 +1,7 @@
 """Tests for Coin Change: your attempt (solution.py) against both case sets.
 
 cases.json (marker `simple`) is the "Run" set; cases_full.json (marker `full`) is
-the "Submit" gauntlet. The worked approaches live in ../../docs/problems/coin_change.md.
+the "Submit" gauntlet. The worked approaches live in ../../../docs/leetcode/coin_change.md.
 """
 
 import pytest

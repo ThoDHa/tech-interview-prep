@@ -1,6 +1,6 @@
 """Insert Interval — https://leetcode.com/problems/insert-interval/
 
-Write-up & approaches: ../../docs/problems/insert_interval.md
+Write-up & approaches: ../../../docs/leetcode/insert_interval.md
 
 Given a sorted list of non-overlapping intervals and a new interval, insert the
 new interval and merge any overlaps so the result stays sorted and disjoint.

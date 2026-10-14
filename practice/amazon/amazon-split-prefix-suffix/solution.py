@@ -1,6 +1,6 @@
 """Split Prefix Suffix — https://www.fastprep.io/problems/amazon-split-prefix-suffix
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-split-prefix-suffix.md
+Write-up & approaches: ../../../docs/amazon/amazon-split-prefix-suffix.md
 
 Amazon Prime Day is a day where many items are put on sale for Amazon Prime members. A list of sale items is assembled where each item is assigned a category denoted by a lowercase English letter.
 

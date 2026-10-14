@@ -6,7 +6,7 @@
 
 **Algorithm:** [Dynamic programming](https://en.wikipedia.org/wiki/Dynamic_programming) · [Memoization](https://en.wikipedia.org/wiki/Memoization)
 
-**Practice:** [`practice/distinct_subsequences/solution.py`](../../practice/distinct_subsequences/solution.py)
+**Practice:** [`practice/leetcode/distinct_subsequences/solution.py`](../../practice/leetcode/distinct_subsequences/solution.py)
 
 You are given two strings `s` and `t`, both consisting of english letters.
 

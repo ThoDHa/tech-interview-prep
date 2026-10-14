@@ -3,7 +3,7 @@
 Trees are stored in the case files as level-order value arrays plus the `p` and
 `q` target values; they are marshalled to TreeNodes here, and the target nodes are
 located by value before calling lowestCommonAncestor. The worked approaches live
-in ../../docs/problems/lowest_common_ancestor_of_a_binary_tree.md.
+in ../../../docs/leetcode/lowest_common_ancestor_of_a_binary_tree.md.
 """
 
 import pytest

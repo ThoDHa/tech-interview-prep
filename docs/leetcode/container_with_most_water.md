@@ -6,7 +6,7 @@
 
 **Algorithm:** [Two-pointer technique](https://usaco.guide/silver/two-pointers)
 
-**Practice:** [`practice/container_with_most_water/solution.py`](../../practice/container_with_most_water/solution.py)
+**Practice:** [`practice/leetcode/container_with_most_water/solution.py`](../../practice/leetcode/container_with_most_water/solution.py)
 
 You are given an integer array `height` of length `n`. There are `n` vertical lines drawn such that the two endpoints of the `i`th line are `(i, 0)` and `(i, height[i])`.
 

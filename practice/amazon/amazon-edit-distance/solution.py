@@ -1,6 +1,6 @@
 """Edit Distance — https://www.fastprep.io/problems/amazon-edit-distance
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-edit-distance.md
+Write-up & approaches: ../../../docs/amazon/amazon-edit-distance.md
 
 Given two strings word1 and word2, return the minimum number of single-character operations needed to transform word1 into word2.
 

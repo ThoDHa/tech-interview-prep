@@ -6,7 +6,7 @@
 
 **Algorithm:** [Sorting](https://en.wikipedia.org/wiki/Sorting_algorithm) · [Stack (abstract data type)](https://en.wikipedia.org/wiki/Stack_(abstract_data_type))
 
-**Practice:** [`practice/car_fleet/solution.py`](../../practice/car_fleet/solution.py)
+**Practice:** [`practice/leetcode/car_fleet/solution.py`](../../practice/leetcode/car_fleet/solution.py)
 
 There are `n` cars traveling to the same destination on a one-lane highway.
 

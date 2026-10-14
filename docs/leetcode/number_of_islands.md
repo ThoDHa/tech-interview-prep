@@ -6,7 +6,7 @@
 
 **Algorithm:** [Depth-first search](https://en.wikipedia.org/wiki/Depth-first_search) · [Breadth-first search](https://en.wikipedia.org/wiki/Breadth-first_search) · [Disjoint-set / Union-Find](https://en.wikipedia.org/wiki/Disjoint-set_data_structure)
 
-**Practice:** [`practice/number_of_islands/solution.py`](../../practice/number_of_islands/solution.py)
+**Practice:** [`practice/leetcode/number_of_islands/solution.py`](../../practice/leetcode/number_of_islands/solution.py)
 
 Given an `m x n` 2D binary grid `grid` which represents a map of `'1'`s (land) and `'0'`s (water), return the number of islands.
 

@@ -1,6 +1,6 @@
 """Count Max Num Teams — https://www.fastprep.io/problems/count-max-num-teams
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/count-max-num-teams.md
+Write-up & approaches: ../../../docs/amazon/count-max-num-teams.md
 
 Amazon OA problem.
 

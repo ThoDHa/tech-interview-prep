@@ -1,6 +1,6 @@
 """Tests for Maximize Similarity — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-maximize-similarity.md.
+The worked approaches live in ../../../docs/amazon/amazon-maximize-similarity.md.
 """
 
 import pytest

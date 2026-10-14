@@ -1,6 +1,6 @@
 """Tests for Longest Increasing Subsequence — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-longest-increasing-subsequence-variant.md.
+The worked approaches live in ../../../docs/amazon/amazon-longest-increasing-subsequence-variant.md.
 """
 
 import pytest

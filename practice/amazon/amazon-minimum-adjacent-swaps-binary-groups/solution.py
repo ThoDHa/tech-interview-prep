@@ -1,6 +1,6 @@
 """Minimum Adjacent Swaps to Group Binary Values — https://www.fastprep.io/problems/amazon-minimum-adjacent-swaps-binary-groups
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-minimum-adjacent-swaps-binary-groups.md
+Write-up & approaches: ../../../docs/amazon/amazon-minimum-adjacent-swaps-binary-groups.md
 
 You are given a binary array bits. Using adjacent swaps, rearrange it so that equal values form two contiguous groups.
 

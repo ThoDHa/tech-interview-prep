@@ -1,6 +1,6 @@
 """Get Total Requests — https://www.fastprep.io/problems/amazon-get-total-requests
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-get-total-requests.md
+Write-up & approaches: ../../../docs/amazon/amazon-get-total-requests.md
 
 Developers at Amazon have their applications deployed on n servers. Initially, the ith server has an id server[i] and can handle server[i] requests at a time.
 

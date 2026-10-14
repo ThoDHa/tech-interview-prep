@@ -1,6 +1,6 @@
 """Next Perfect String — https://www.fastprep.io/problems/amazon-next-greater-perfect-string
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-next-greater-perfect-string.md
+Write-up & approaches: ../../../docs/amazon/amazon-next-greater-perfect-string.md
 
 A perfect string is a string in which no two adjacent characters are the same.
 

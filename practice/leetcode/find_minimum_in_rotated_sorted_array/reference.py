@@ -1,6 +1,6 @@
 """Find Minimum In Rotated Sorted Array — https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/
 
-Write-up & approaches: ../../docs/problems/find_minimum_in_rotated_sorted_array.md
+Write-up & approaches: ../../../docs/leetcode/find_minimum_in_rotated_sorted_array.md
 Reference implementation of the write-up's Binary Search on Right Slope solution.
 
 You are given an array of length `n` which was originally sorted in ascending order and has now been rotated between `1` and `n` times. Assuming all elements in the rotated sorted array `nums` are **unique**, return the minimum element of this array.

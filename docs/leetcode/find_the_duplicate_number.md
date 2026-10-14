@@ -6,7 +6,7 @@
 
 **Algorithm:** [Floyd's cycle detection](https://en.wikipedia.org/wiki/Cycle_detection) · [Binary search](https://en.wikipedia.org/wiki/Binary_search_algorithm) · [Hash table](https://en.wikipedia.org/wiki/Hash_table) · [Sorting](https://en.wikipedia.org/wiki/Sorting_algorithm)
 
-**Practice:** [`practice/find_the_duplicate_number/solution.py`](../../practice/find_the_duplicate_number/solution.py)
+**Practice:** [`practice/leetcode/find_the_duplicate_number/solution.py`](../../practice/leetcode/find_the_duplicate_number/solution.py)
 
 You are given an array of integers `nums` containing `n + 1` integers. Each integer in `nums` is in the range `[1, n]` inclusive.
 

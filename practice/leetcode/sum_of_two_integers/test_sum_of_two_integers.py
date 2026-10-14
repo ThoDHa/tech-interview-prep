@@ -1,6 +1,6 @@
 """Tests for Sum of Two Integers — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../docs/problems/sum_of_two_integers.md.
+The worked approaches live in ../../../docs/leetcode/sum_of_two_integers.md.
 """
 
 import pytest

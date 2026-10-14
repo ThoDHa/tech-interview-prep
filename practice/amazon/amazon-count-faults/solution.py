@@ -1,6 +1,6 @@
 """Count Faults (Faulty Binding 101 😁) — https://www.fastprep.io/problems/amazon-count-faults
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-count-faults.md
+Write-up & approaches: ../../../docs/amazon/amazon-count-faults.md
 
 There are n servers with IDs s1, s2, ..., sn. You are given an array logs in chronological order. Each entry has the form "<server_id> <status>", where status is either success or error.
 

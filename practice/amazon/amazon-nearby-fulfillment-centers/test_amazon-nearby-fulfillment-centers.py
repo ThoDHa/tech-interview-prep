@@ -1,6 +1,6 @@
 """Tests for Nearby Fulfillment Centers with Inventory — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-nearby-fulfillment-centers.md.
+The worked approaches live in ../../../docs/amazon/amazon-nearby-fulfillment-centers.md.
 """
 
 import pytest

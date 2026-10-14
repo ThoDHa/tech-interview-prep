@@ -1,6 +1,6 @@
 """Tests for Initial and Final Accounts in a Transfer Chain — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-transfer-chain-endpoints.md.
+The worked approaches live in ../../../docs/amazon/amazon-transfer-chain-endpoints.md.
 """
 
 import pytest

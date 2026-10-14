@@ -1,6 +1,6 @@
 """Interleaving String — https://leetcode.com/problems/interleaving-string/
 
-Write-up & approaches: ../../docs/problems/interleaving_string.md
+Write-up & approaches: ../../../docs/leetcode/interleaving_string.md
 
 You are given three strings `s1`, `s2`, and `s3`. Return `true` if `s3` is formed by **interleaving** `s1` and `s2` together or `false` otherwise. **Interleaving** two strings `s` and `t` is done by d
 

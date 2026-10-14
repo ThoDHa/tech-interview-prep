@@ -1,6 +1,6 @@
 """Tests for Count Picked Items Less Than Queries — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-count-picked-items-less-than-queries.md.
+The worked approaches live in ../../../docs/amazon/amazon-count-picked-items-less-than-queries.md.
 """
 
 import pytest

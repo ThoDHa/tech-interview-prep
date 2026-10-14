@@ -1,6 +1,6 @@
 """Find Median from Data Stream: https://leetcode.com/problems/find-median-from-data-stream/
 
-Write-up & approaches: ../../docs/problems/find_median_from_data_stream.md
+Write-up & approaches: ../../../docs/leetcode/find_median_from_data_stream.md
 
 Design a MedianFinder that supports adding integers from a stream and querying
 the median of all elements added so far.

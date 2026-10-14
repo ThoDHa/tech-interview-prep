@@ -6,7 +6,7 @@
 
 **Algorithm:** [Trie](https://en.wikipedia.org/wiki/Trie)
 
-**Practice:** [`practice/design_add_and_search_words_data_structure/solution.py`](../../practice/design_add_and_search_words_data_structure/solution.py)
+**Practice:** [`practice/leetcode/design_add_and_search_words_data_structure/solution.py`](../../practice/leetcode/design_add_and_search_words_data_structure/solution.py)
 
 Design a data structure that supports adding new words and searching for existing words.
 

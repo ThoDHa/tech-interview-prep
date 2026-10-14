@@ -1,6 +1,6 @@
 """Find Median from Data Stream — https://www.fastprep.io/problems/amazon-find-median-from-data-stream
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-find-median-from-data-stream.md
+Write-up & approaches: ../../../docs/amazon/amazon-find-median-from-data-stream.md
 
 Process a finite sequence of operations while maintaining every integer added so far. Each row in operations has one of these forms:
 

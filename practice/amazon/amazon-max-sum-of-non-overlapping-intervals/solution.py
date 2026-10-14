@@ -1,6 +1,6 @@
 """Max Sum of Non-overlapping Intervals — https://www.fastprep.io/problems/amazon-max-sum-of-non-overlapping-intervals
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-max-sum-of-non-overlapping-intervals.md
+Write-up & approaches: ../../../docs/amazon/amazon-max-sum-of-non-overlapping-intervals.md
 
 AMZ Interval Collection (A group of problems focused on operations involving intervals :) - 
 

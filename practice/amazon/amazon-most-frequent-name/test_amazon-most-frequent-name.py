@@ -1,6 +1,6 @@
 """Tests for Most Frequent Name — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-most-frequent-name.md.
+The worked approaches live in ../../../docs/amazon/amazon-most-frequent-name.md.
 """
 
 import pytest

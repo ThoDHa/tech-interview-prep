@@ -1,6 +1,6 @@
 """Tests for Plus One — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../docs/problems/plus_one.md.
+The worked approaches live in ../../../docs/leetcode/plus_one.md.
 """
 
 import pytest

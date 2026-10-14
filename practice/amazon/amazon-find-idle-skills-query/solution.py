@@ -1,6 +1,6 @@
 """Find Idle Skill Query — https://www.fastprep.io/problems/amazon-find-idle-skills-query
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-find-idle-skills-query.md
+Write-up & approaches: ../../../docs/amazon/amazon-find-idle-skills-query.md
 
 The Amazon Alexa development team needs to analyze request logs across numSkills skills.
 

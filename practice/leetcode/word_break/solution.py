@@ -1,6 +1,6 @@
 """Word Break: https://leetcode.com/problems/word-break/
 
-Write-up & approaches: ../../docs/problems/word_break.md
+Write-up & approaches: ../../../docs/leetcode/word_break.md
 
 Given a string `s` and a dictionary of strings `wordDict`, return `True` if `s`
 can be segmented into a space-separated sequence of one or more dictionary

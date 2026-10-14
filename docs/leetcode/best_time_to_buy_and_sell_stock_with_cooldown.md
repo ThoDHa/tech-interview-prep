@@ -6,7 +6,7 @@
 
 **Algorithm:** [Dynamic programming](https://en.wikipedia.org/wiki/Dynamic_programming) · [Memoization](https://en.wikipedia.org/wiki/Memoization) · [Recursion (computer science)](https://en.wikipedia.org/wiki/Recursion_(computer_science))
 
-**Practice:** [`practice/best_time_to_buy_and_sell_stock_with_cooldown/solution.py`](../../practice/best_time_to_buy_and_sell_stock_with_cooldown/solution.py)
+**Practice:** [`practice/leetcode/best_time_to_buy_and_sell_stock_with_cooldown/solution.py`](../../practice/leetcode/best_time_to_buy_and_sell_stock_with_cooldown/solution.py)
 
 You are given an integer array `prices` where `prices[i]` is the price of NeetCoin on the `ith` day.
 

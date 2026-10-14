@@ -1,6 +1,6 @@
 """Tests for Remove Nth Node From End of List — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../docs/problems/remove_nth_node_from_end_of_list.md.
+The worked approaches live in ../../../docs/leetcode/remove_nth_node_from_end_of_list.md.
 """
 
 import pytest

@@ -1,6 +1,6 @@
 """Single Number — https://leetcode.com/problems/single-number/
 
-Write-up & approaches: ../../docs/problems/single_number.md
+Write-up & approaches: ../../../docs/leetcode/single_number.md
 
 You are given a **non-empty** array of integers `nums`. Every integer appears twice except for one. Return the integer that appears only once. You must implement a solution with $O(n)$ runtime complex
 

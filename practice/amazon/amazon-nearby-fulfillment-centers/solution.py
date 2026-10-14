@@ -1,6 +1,6 @@
 """Nearby Fulfillment Centers with Inventory — https://www.fastprep.io/problems/amazon-nearby-fulfillment-centers
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-nearby-fulfillment-centers.md
+Write-up & approaches: ../../../docs/amazon/amazon-nearby-fulfillment-centers.md
 
 A delivery must be fulfilled near a destination center. The fulfillment network is an undirected graph whose edges are given by connections. Each row [u, v] connects centers u and v in both directions
 

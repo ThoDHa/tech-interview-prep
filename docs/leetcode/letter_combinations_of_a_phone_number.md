@@ -6,7 +6,7 @@
 
 **Algorithm:** [Backtracking](https://en.wikipedia.org/wiki/Backtracking)
 
-**Practice:** [`practice/letter_combinations_of_a_phone_number/solution.py`](../../practice/letter_combinations_of_a_phone_number/solution.py)
+**Practice:** [`practice/leetcode/letter_combinations_of_a_phone_number/solution.py`](../../practice/leetcode/letter_combinations_of_a_phone_number/solution.py)
 
 Given a string containing digits from `2-9` inclusive, return all possible letter combinations that the number could represent. Return the answer in **any order**.
 

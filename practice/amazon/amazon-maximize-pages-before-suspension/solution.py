@@ -1,6 +1,6 @@
 """Maximize Pages Before Suspension — https://www.fastprep.io/problems/amazon-maximize-pages-before-suspension
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-maximize-pages-before-suspension.md
+Write-up & approaches: ../../../docs/amazon/amazon-maximize-pages-before-suspension.md
 
 The engineering team at an Amazon fulfillment center is optimizing n high-performance printers, where each printer i can print pages[i] number of pages.
 

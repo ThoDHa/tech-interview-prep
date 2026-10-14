@@ -1,6 +1,6 @@
 """Tests for Count Promotional Periods — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-count-promotional-periods.md.
+The worked approaches live in ../../../docs/amazon/amazon-count-promotional-periods.md.
 """
 
 import pytest

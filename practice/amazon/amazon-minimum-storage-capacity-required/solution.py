@@ -1,6 +1,6 @@
 """Minimize Storage Required — https://www.fastprep.io/problems/amazon-minimum-storage-capacity-required
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-minimum-storage-capacity-required.md
+Write-up & approaches: ../../../docs/amazon/amazon-minimum-storage-capacity-required.md
 
 Need to efficiently distribute a collection of computer games among k different children. Each game is characterized by its size, denoted by gameSize[i] for 1 ≤ i ≤ n.
 

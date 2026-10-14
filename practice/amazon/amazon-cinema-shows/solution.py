@@ -1,6 +1,6 @@
 """Cinema Shows — https://www.fastprep.io/problems/amazon-cinema-shows
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-cinema-shows.md
+Write-up & approaches: ../../../docs/amazon/amazon-cinema-shows.md
 
 Amazon OA problem.
 

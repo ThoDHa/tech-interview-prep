@@ -6,7 +6,7 @@
 
 **Algorithm:** [Power set](https://en.wikipedia.org/wiki/Power_set) · [Backtracking](https://en.wikipedia.org/wiki/Backtracking)
 
-**Practice:** [`practice/subsets/solution.py`](../../practice/subsets/solution.py)
+**Practice:** [`practice/leetcode/subsets/solution.py`](../../practice/leetcode/subsets/solution.py)
 
 Given an integer array `nums` of unique elements, return all possible subsets (the power set).
 

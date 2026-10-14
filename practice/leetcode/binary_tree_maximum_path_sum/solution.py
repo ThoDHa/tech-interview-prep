@@ -1,6 +1,6 @@
 """Binary Tree Maximum Path Sum: https://leetcode.com/problems/binary-tree-maximum-path-sum/
 
-Write-up & approaches: ../../docs/problems/binary_tree_maximum_path_sum.md
+Write-up & approaches: ../../../docs/leetcode/binary_tree_maximum_path_sum.md
 
 Given the `root` of a binary tree, return the maximum path sum of any non-empty
 path. A path is a sequence of nodes connected by edges, each node used at most

@@ -1,6 +1,6 @@
 """About Mortgage — https://www.fastprep.io/problems/amazon-maximum-number-of-days-to-survive
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-maximum-number-of-days-to-survive.md
+Write-up & approaches: ../../../docs/amazon/amazon-maximum-number-of-days-to-survive.md
 
 A lender lent money to a borrower, each day a different lender lent the money to the borrower.
 

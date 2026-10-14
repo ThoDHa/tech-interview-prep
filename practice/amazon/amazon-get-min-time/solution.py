@@ -1,6 +1,6 @@
 """Get Min Time — https://www.fastprep.io/problems/amazon-get-min-time
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-get-min-time.md
+Write-up & approaches: ../../../docs/amazon/amazon-get-min-time.md
 
 Developers at Amazon have deployed an application with a distributed database. It is stored on total_servers different servers numbered from 1 to total_servers that are connected in a circular fashion
 

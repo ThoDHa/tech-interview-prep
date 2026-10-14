@@ -1,6 +1,6 @@
 """Cet Mean Rank Count — https://www.fastprep.io/problems/get-mean-rank-count
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/get-mean-rank-count.md
+Write-up & approaches: ../../../docs/amazon/get-mean-rank-count.md
 
 Special thanks: precurewalker contributed this problem.
 

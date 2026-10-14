@@ -1,6 +1,6 @@
 """Rooks Left — https://www.fastprep.io/problems/amazon-rooks-left
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-rooks-left.md
+Write-up & approaches: ../../../docs/amazon/amazon-rooks-left.md
 
 You are given a 2D grid board that represents a chessboard. The board contains multiple cells, where:
 

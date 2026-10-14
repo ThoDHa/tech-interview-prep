@@ -1,6 +1,6 @@
 """Count Games Won By Group1 (AMZ CN) — https://www.fastprep.io/problems/amazon-how-many-games-did-the-team-win
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-how-many-games-did-the-team-win.md
+Write-up & approaches: ../../../docs/amazon/amazon-how-many-games-did-the-team-win.md
 
 Amazon Games is organizing a tournament of pair games. There are two groups, firstTeam and secondTeam, each containing n players. The skill level of the i-th player in each group is firstTeam[i] and s
 

@@ -1,6 +1,6 @@
 """Letter Combinations of a Phone Number: https://leetcode.com/problems/letter-combinations-of-a-phone-number/
 
-Write-up & approaches: ../../docs/problems/letter_combinations_of_a_phone_number.md
+Write-up & approaches: ../../../docs/leetcode/letter_combinations_of_a_phone_number.md
 
 Given a string containing digits from `2-9`, return all letter combinations the
 number could represent (telephone keypad mapping). Return the answer in any order.

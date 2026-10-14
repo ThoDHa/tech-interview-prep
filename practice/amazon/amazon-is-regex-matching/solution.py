@@ -1,6 +1,6 @@
 """Is Regex Matching — https://www.fastprep.io/problems/amazon-is-regex-matching
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-is-regex-matching.md
+Write-up & approaches: ../../../docs/amazon/amazon-is-regex-matching.md
 
 Special thanks: Alex contributed this problem.
 

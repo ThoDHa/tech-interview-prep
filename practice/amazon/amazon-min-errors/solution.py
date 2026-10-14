@@ -1,6 +1,6 @@
 """Minimum Total Errors — https://www.fastprep.io/problems/amazon-min-errors
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-min-errors.md
+Write-up & approaches: ../../../docs/amazon/amazon-min-errors.md
 
 See the Image Source section for the original statement :)
 

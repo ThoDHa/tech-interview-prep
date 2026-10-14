@@ -1,6 +1,6 @@
 """Tests for Running Delivery Time Medians — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-running-delivery-time-medians.md.
+The worked approaches live in ../../../docs/amazon/amazon-running-delivery-time-medians.md.
 """
 
 import pytest

@@ -1,6 +1,6 @@
 """Tests for Find Days S2 Subsequence of S1 — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-find-days-s2-subsequence-of-s1.md.
+The worked approaches live in ../../../docs/amazon/amazon-find-days-s2-subsequence-of-s1.md.
 """
 
 import pytest

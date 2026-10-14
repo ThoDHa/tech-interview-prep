@@ -1,6 +1,6 @@
 """Tests for Minimum Merge Conflicts — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-minimum-merge-conflicts.md.
+The worked approaches live in ../../../docs/amazon/amazon-minimum-merge-conflicts.md.
 """
 
 import pytest

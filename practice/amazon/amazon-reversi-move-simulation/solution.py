@@ -1,6 +1,6 @@
 """Apply a Reversi Move — https://www.fastprep.io/problems/amazon-reversi-move-simulation
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-reversi-move-simulation.md
+Write-up & approaches: ../../../docs/amazon/amazon-reversi-move-simulation.md
 
 Given a Reversi board board, a zero-based target cell row, col, and a player player equal to B or W, apply exactly one move.
 

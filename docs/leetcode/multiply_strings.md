@@ -6,7 +6,7 @@
 
 **Algorithm:** [Multiplication algorithm](https://en.wikipedia.org/wiki/Multiplication_algorithm) · [Positional notation](https://en.wikipedia.org/wiki/Positional_notation) · [Carry (arithmetic)](https://en.wikipedia.org/wiki/Carry_(arithmetic))
 
-**Practice:** [`practice/multiply_strings/solution.py`](../../practice/multiply_strings/solution.py)
+**Practice:** [`practice/leetcode/multiply_strings/solution.py`](../../practice/leetcode/multiply_strings/solution.py)
 
 You are given two strings `num1` and `num2` that represent non-negative integers.
 
@@ -286,7 +286,7 @@ The bucket array; buckets temporarily hold values up to `81` plus carries, which
 
 ## Comparison of Solutions
 
-The practice harness's `practice/multiply_strings/reference.py` implements the **Position Accumulator** solution.
+The practice harness's `practice/leetcode/multiply_strings/reference.py` implements the **Position Accumulator** solution.
 
 ### Time Complexity
 

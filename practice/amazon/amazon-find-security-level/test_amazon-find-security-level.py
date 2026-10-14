@@ -1,6 +1,6 @@
 """Tests for Find Security Level — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-find-security-level.md.
+The worked approaches live in ../../../docs/amazon/amazon-find-security-level.md.
 """
 
 import pytest

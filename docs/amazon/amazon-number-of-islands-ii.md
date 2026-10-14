@@ -36,7 +36,7 @@ Interview follow-upThe rest of the discussion covered the DSU approach, how unio
 
 #### Derivation
 
-The most literal reading of the statement: after each addition the grid changes by one cell, and the current island count is wanted. Recompute it from scratch every time: build the grid, turn the added positions into land one by one, and after each addition run the standard flood-fill count over the whole grid, the same traversal as [Number of Islands](../number_of_islands.md):
+The most literal reading of the statement: after each addition the grid changes by one cell, and the current island count is wanted. Recompute it from scratch every time: build the grid, turn the added positions into land one by one, and after each addition run the standard flood-fill count over the whole grid, the same traversal as [Number of Islands](../leetcode/number_of_islands.md):
 
 1. Allocate `land`, an `m × n` matrix of `False`.
 2. For each `(row, col)` in `positions`: set `land[row][col] = True`, then count

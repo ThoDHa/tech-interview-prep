@@ -1,6 +1,6 @@
 """Find Subarray with Minimum Distinct Integers — https://www.fastprep.io/problems/amazon-find-subarray-with-minimum-distinct-integers
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-find-subarray-with-minimum-distinct-integers.md
+Write-up & approaches: ../../../docs/amazon/amazon-find-subarray-with-minimum-distinct-integers.md
 
 Given an array of integers and two specified numbers, find a subarray from the original array that contains both of these specified numbers, with the requirement that the subarray contains the minimum
 

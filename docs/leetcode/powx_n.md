@@ -6,7 +6,7 @@
 
 **Algorithm:** [Exponentiation by squaring](https://en.wikipedia.org/wiki/Exponentiation_by_squaring) · [Divide-and-conquer](https://en.wikipedia.org/wiki/Divide-and-conquer_algorithm) · [Binary exponentiation](https://en.wikipedia.org/wiki/Modular_exponentiation#Binary_method)
 
-**Practice:** [`practice/powx_n/solution.py`](../../practice/powx_n/solution.py)
+**Practice:** [`practice/leetcode/powx_n/solution.py`](../../practice/leetcode/powx_n/solution.py)
 
 `Pow(x, n)` is a mathematical function to calculate the value of `x` raised to the power of `n` (i.e., `x^n`).
 
@@ -267,7 +267,7 @@ Two variables and no call stack, the recursion's log-depth frames flattened away
 
 ## Comparison of Solutions
 
-The practice harness's `practice/powx_n/reference.py` implements the **Iterative Binary Exponentiation** solution.
+The practice harness's `practice/leetcode/powx_n/reference.py` implements the **Iterative Binary Exponentiation** solution.
 
 ### Time Complexity
 

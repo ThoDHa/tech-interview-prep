@@ -1,6 +1,6 @@
 """Get Max Information Gain — https://www.fastprep.io/problems/amazon-get-max-information-gain
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-get-max-information-gain.md
+Write-up & approaches: ../../../docs/amazon/amazon-get-max-information-gain.md
 
 Data analysts at Amazon are analyzing a data set of n strings in the array 
 

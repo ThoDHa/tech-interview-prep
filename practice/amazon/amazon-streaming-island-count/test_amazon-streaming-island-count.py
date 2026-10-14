@@ -1,6 +1,6 @@
 """Tests for Count Islands from Streaming Rows — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-streaming-island-count.md.
+The worked approaches live in ../../../docs/amazon/amazon-streaming-island-count.md.
 """
 
 import pytest

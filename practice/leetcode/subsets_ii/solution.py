@@ -1,6 +1,6 @@
 """Subsets II — https://leetcode.com/problems/subsets-ii/
 
-Write-up & approaches: ../../docs/problems/subsets_ii.md
+Write-up & approaches: ../../../docs/leetcode/subsets_ii.md
 
 You are given an array `nums` of integers, which may contain duplicates. Return all possible subsets. The solution must **not** contain duplicate subsets. You may return the solution in **any order**.
 

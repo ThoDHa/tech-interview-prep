@@ -1,6 +1,6 @@
 """Search in Rotated Sorted Array: https://leetcode.com/problems/search-in-rotated-sorted-array/
 
-Write-up & approaches: ../../docs/problems/search_in_rotated_sorted_array.md
+Write-up & approaches: ../../../docs/leetcode/search_in_rotated_sorted_array.md
 
 An ascending array of distinct values is rotated at an unknown pivot. Given the
 rotated `nums` and a `target`, return the index of `target`, or `-1` if it is

@@ -1,6 +1,6 @@
 """Tests for Optimize Identifiers — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-optimize-identifiers.md.
+The worked approaches live in ../../../docs/amazon/amazon-optimize-identifiers.md.
 """
 
 import pytest

@@ -1,6 +1,6 @@
 """3Sum: https://leetcode.com/problems/3sum/
 
-Write-up & approaches: ../../docs/problems/3sum.md
+Write-up & approaches: ../../../docs/leetcode/3sum.md
 
 Given an integer array `nums`, return all unique triplets
 `[nums[i], nums[j], nums[k]]` with distinct indices such that they sum to zero.

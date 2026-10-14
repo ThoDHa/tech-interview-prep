@@ -1,6 +1,6 @@
 """Tests for Cousins in Binary Tree II — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-cousins-in-binary-tree-ii.md.
+The worked approaches live in ../../../docs/amazon/amazon-cousins-in-binary-tree-ii.md.
 """
 
 import pytest

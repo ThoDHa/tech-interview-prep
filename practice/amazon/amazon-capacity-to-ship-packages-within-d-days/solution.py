@@ -1,6 +1,6 @@
 """Capacity To Ship Packages Within D Days — https://www.fastprep.io/problems/amazon-capacity-to-ship-packages-within-d-days
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-capacity-to-ship-packages-within-d-days.md
+Write-up & approaches: ../../../docs/amazon/amazon-capacity-to-ship-packages-within-d-days.md
 
 A conveyor belt has packages that must be shipped from one port to another within days days.
 

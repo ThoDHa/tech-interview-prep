@@ -1,6 +1,6 @@
 """Word Break II — https://www.fastprep.io/problems/amazon-word-break-ii
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-word-break-ii.md
+Write-up & approaches: ../../../docs/amazon/amazon-word-break-ii.md
 
 Given a string s and an array of unique dictionary words wordDict, insert spaces into s so that every resulting token is a dictionary word.
 

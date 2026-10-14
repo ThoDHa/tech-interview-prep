@@ -1,6 +1,6 @@
 """Tests for Longest Substring Without Repeating Characters — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-longest-substring-without-repeating-characters.md.
+The worked approaches live in ../../../docs/amazon/amazon-longest-substring-without-repeating-characters.md.
 """
 
 import pytest

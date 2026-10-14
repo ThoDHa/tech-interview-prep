@@ -1,6 +1,6 @@
 """Tests for Maximum Stock Profit with At Most Two Transactions — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-best-time-to-buy-and-sell-stock-iii.md.
+The worked approaches live in ../../../docs/amazon/amazon-best-time-to-buy-and-sell-stock-iii.md.
 """
 
 import pytest

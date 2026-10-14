@@ -1,6 +1,6 @@
 """Select K Paired Indices for Maximum Score — https://www.fastprep.io/problems/amazon-select-k-paired-array-score
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-select-k-paired-array-score.md
+Write-up & approaches: ../../../docs/amazon/amazon-select-k-paired-array-score.md
 
 Select exactly k shared indices from two equal-length arrays. The score is the sum of selected values from first multiplied by the minimum selected value from second.
 

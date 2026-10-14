@@ -6,7 +6,7 @@
 
 **Algorithm:** [Tree traversal](https://en.wikipedia.org/wiki/Tree_traversal) · [Depth-first search](https://en.wikipedia.org/wiki/Depth-first_search)
 
-**Practice:** [`practice/balanced_binary_tree/solution.py`](../../practice/balanced_binary_tree/solution.py)
+**Practice:** [`practice/leetcode/balanced_binary_tree/solution.py`](../../practice/leetcode/balanced_binary_tree/solution.py)
 
 Given a binary tree, determine if it is height-balanced.
 

@@ -6,7 +6,7 @@
 
 **Algorithm:** [Binary search](https://en.wikipedia.org/wiki/Binary_search_algorithm)
 
-**Practice:** [`practice/time_based_key_value_store/solution.py`](../../practice/time_based_key_value_store/solution.py)
+**Practice:** [`practice/leetcode/time_based_key_value_store/solution.py`](../../practice/leetcode/time_based_key_value_store/solution.py)
 
 Design a time-based key-value data structure that can store multiple values for the same key at different time stamps and retrieve the key's value at a certain timestamp.
 

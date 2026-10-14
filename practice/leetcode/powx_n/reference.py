@@ -1,6 +1,6 @@
 """Pow(x, n) — https://leetcode.com/problems/powx-n/
 
-Write-up & approaches: ../../docs/problems/powx_n.md
+Write-up & approaches: ../../../docs/leetcode/powx_n.md
 Canonical reference implementation: the write-up's Iterative Binary
 Exponentiation solution (exponentiation by squaring). Your own attempt
 lives in solution.py.

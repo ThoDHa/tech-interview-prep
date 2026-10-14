@@ -1,6 +1,6 @@
 """Tests for Interleaving String — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../docs/problems/interleaving_string.md.
+The worked approaches live in ../../../docs/leetcode/interleaving_string.md.
 """
 
 import pytest

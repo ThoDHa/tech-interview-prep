@@ -6,7 +6,7 @@
 
 **Algorithm:** [Backtracking](https://en.wikipedia.org/wiki/Backtracking) · [Dynamic programming](https://en.wikipedia.org/wiki/Dynamic_programming)
 
-**Practice:** [`practice/combination_sum/solution.py`](../../practice/combination_sum/solution.py)
+**Practice:** [`practice/leetcode/combination_sum/solution.py`](../../practice/leetcode/combination_sum/solution.py)
 
 Given an array of **distinct** integers `candidates` and a target integer `target`, return a list of all **unique combinations** of `candidates` where the chosen numbers sum to `target`. You may return the combinations in **any order**.
 

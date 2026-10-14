@@ -2,7 +2,7 @@
 
 cases.json (marker `simple`) is the "Run" set; cases_full.json (marker `full`) is
 the "Submit" gauntlet. The worked approaches live in
-../../docs/problems/trapping_rain_water.md.
+../../../docs/leetcode/trapping_rain_water.md.
 """
 
 import pytest

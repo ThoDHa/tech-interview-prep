@@ -1,6 +1,6 @@
 """Tests for Median of Two Sorted Arrays — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../docs/problems/median_of_two_sorted_arrays.md.
+The worked approaches live in ../../../docs/leetcode/median_of_two_sorted_arrays.md.
 """
 
 import pytest

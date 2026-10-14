@@ -1,6 +1,6 @@
 """Reorder List — https://leetcode.com/problems/reorder-list/
 
-Write-up & approaches: ../../docs/problems/reorder_list.md
+Write-up & approaches: ../../../docs/leetcode/reorder_list.md
 Reference implementation of the write-up's Reverse-and-Merge solution.
 
 Reorder the nodes of a singly linked list to alternate first, last, second,

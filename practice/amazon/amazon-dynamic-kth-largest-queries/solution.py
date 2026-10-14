@@ -1,6 +1,6 @@
 """Dynamic Kth Largest Queries — https://www.fastprep.io/problems/amazon-dynamic-kth-largest-queries
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-dynamic-kth-largest-queries.md
+Write-up & approaches: ../../../docs/amazon/amazon-dynamic-kth-largest-queries.md
 
 You are given an initial list of integer values and a stream of operations. The list changes over time as values are inserted.
 

@@ -1,6 +1,6 @@
 """Kth Smallest in Subarray — https://www.fastprep.io/problems/amazon-kth-smallest-in-subarray
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-kth-smallest-in-subarray.md
+Write-up & approaches: ../../../docs/amazon/amazon-kth-smallest-in-subarray.md
 
 Given an array arr, return the kth smallest integer for each subarray of size m.
 

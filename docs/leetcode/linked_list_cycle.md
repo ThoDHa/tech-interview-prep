@@ -6,7 +6,7 @@
 
 **Algorithm:** [Floyd's cycle detection](https://en.wikipedia.org/wiki/Cycle_detection) · [Hash table](https://en.wikipedia.org/wiki/Hash_table)
 
-**Practice:** [`practice/linked_list_cycle/solution.py`](../../practice/linked_list_cycle/solution.py)
+**Practice:** [`practice/leetcode/linked_list_cycle/solution.py`](../../practice/leetcode/linked_list_cycle/solution.py)
 
 Given `head`, the head of a linked list, determine if the linked list has a cycle in it.
 

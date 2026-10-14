@@ -1,6 +1,6 @@
 """Tests for Maximum Equal Parts for Prefixes — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-maximum-equal-parts-for-prefixes.md.
+The worked approaches live in ../../../docs/amazon/amazon-maximum-equal-parts-for-prefixes.md.
 """
 
 import pytest

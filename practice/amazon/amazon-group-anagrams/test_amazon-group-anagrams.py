@@ -1,6 +1,6 @@
 """Tests for Group Anagrams — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-group-anagrams.md.
+The worked approaches live in ../../../docs/amazon/amazon-group-anagrams.md.
 """
 
 import pytest

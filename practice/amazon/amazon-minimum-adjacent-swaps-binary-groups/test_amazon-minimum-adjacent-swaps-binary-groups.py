@@ -1,6 +1,6 @@
 """Tests for Minimum Adjacent Swaps to Group Binary Values — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-minimum-adjacent-swaps-binary-groups.md.
+The worked approaches live in ../../../docs/amazon/amazon-minimum-adjacent-swaps-binary-groups.md.
 """
 
 import pytest

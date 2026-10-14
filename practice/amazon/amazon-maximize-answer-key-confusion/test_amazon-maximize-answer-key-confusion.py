@@ -1,6 +1,6 @@
 """Tests for Maximize Consecutive Equal Answers — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-maximize-answer-key-confusion.md.
+The worked approaches live in ../../../docs/amazon/amazon-maximize-answer-key-confusion.md.
 """
 
 import pytest

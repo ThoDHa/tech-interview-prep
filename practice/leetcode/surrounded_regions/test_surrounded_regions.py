@@ -1,6 +1,6 @@
 """Tests for Surrounded Regions — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../docs/problems/surrounded_regions.md.
+The worked approaches live in ../../../docs/leetcode/surrounded_regions.md.
 """
 
 import pytest

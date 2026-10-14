@@ -1,6 +1,6 @@
 """Feasible Indices After Prefix/Suffix Reduction — https://www.fastprep.io/problems/amazon-feasible-indices-after-prefix-suffix-reduction
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-feasible-indices-after-prefix-suffix-reduction.md
+Write-up & approaches: ../../../docs/amazon/amazon-feasible-indices-after-prefix-suffix-reduction.md
 
 Note: This problem is a duplicate of Feasible Indices After Reduction. The sighting dates have been merged into that version.
 

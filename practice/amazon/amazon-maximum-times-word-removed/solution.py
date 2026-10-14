@@ -1,6 +1,6 @@
 """Maxmimum Times Word Removed — https://www.fastprep.io/problems/amazon-maximum-times-word-removed
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-maximum-times-word-removed.md
+Write-up & approaches: ../../../docs/amazon/amazon-maximum-times-word-removed.md
 
 Special thanks: kcho and ketchup contributed this problem and example.
 

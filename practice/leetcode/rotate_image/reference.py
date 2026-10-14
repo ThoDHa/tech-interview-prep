@@ -1,6 +1,6 @@
 """Rotate Image — https://leetcode.com/problems/rotate-image/
 
-Write-up & approaches: ../../docs/problems/rotate_image.md
+Write-up & approaches: ../../../docs/leetcode/rotate_image.md
 Canonical reference implementation: the write-up's Transpose then Reverse
 Rows solution (in-place, two passes). Your own attempt lives in solution.py.
 

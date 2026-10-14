@@ -1,6 +1,6 @@
 """Tests for LRU Cache for Query Results — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-lru-query-result-cache.md.
+The worked approaches live in ../../../docs/amazon/amazon-lru-query-result-cache.md.
 """
 
 import pytest

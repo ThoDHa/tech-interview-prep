@@ -1,6 +1,6 @@
 """Tests for Find Min Trips — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-find-min-trips.md.
+The worked approaches live in ../../../docs/amazon/amazon-find-min-trips.md.
 """
 
 import pytest

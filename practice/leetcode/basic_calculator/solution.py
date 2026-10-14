@@ -1,6 +1,6 @@
 """Basic Calculator: https://leetcode.com/problems/basic-calculator/
 
-Write-up & approaches: ../../docs/problems/basic_calculator.md
+Write-up & approaches: ../../../docs/leetcode/basic_calculator.md
 
 Given a string `s` representing a valid expression of integers, `+`, `-`,
 parentheses, and spaces, evaluate it and return the result without using `eval`.

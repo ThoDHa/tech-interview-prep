@@ -1,6 +1,6 @@
 """Maximum Equal Parts for Prefixes — https://www.fastprep.io/problems/amazon-maximum-equal-parts-for-prefixes
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-maximum-equal-parts-for-prefixes.md
+Write-up & approaches: ../../../docs/amazon/amazon-maximum-equal-parts-for-prefixes.md
 
 A team at Amazon is working to ensure all packages are correctly sorted for delivery. Each package has a label represented by an uppercase English letter. The full list of labels is given as the strin
 

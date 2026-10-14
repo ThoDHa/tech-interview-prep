@@ -1,6 +1,6 @@
 """Find Security Level — https://www.fastprep.io/problems/amazon-find-security-level
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-find-security-level.md
+Write-up & approaches: ../../../docs/amazon/amazon-find-security-level.md
 
 Source said that the other problem 👇 in the same batch was for Newe Grad, so I assume this problem is for New Grad as well.  
 

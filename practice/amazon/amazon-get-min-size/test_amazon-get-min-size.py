@@ -1,6 +1,6 @@
 """Tests for Get Min Size — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-get-min-size.md.
+The worked approaches live in ../../../docs/amazon/amazon-get-min-size.md.
 """
 
 import pytest

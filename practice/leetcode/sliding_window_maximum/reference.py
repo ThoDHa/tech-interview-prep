@@ -1,6 +1,6 @@
 """Sliding Window Maximum — https://leetcode.com/problems/sliding-window-maximum/
 
-Write-up & approaches: ../../docs/problems/sliding_window_maximum.md
+Write-up & approaches: ../../../docs/leetcode/sliding_window_maximum.md
 Reference implementation of the write-up's Monotonic Deque solution.
 
 You are given an array of integers `nums` and an integer `k`. There is a sliding window of size `k` that starts at the left edge of the array. The window slides one position to the right until it reaches the right edge of the array.

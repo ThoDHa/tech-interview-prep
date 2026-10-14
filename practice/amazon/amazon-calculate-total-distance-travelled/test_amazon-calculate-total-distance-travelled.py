@@ -1,6 +1,6 @@
 """Tests for Calculate Total Distrance Travelled — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-calculate-total-distance-travelled.md.
+The worked approaches live in ../../../docs/amazon/amazon-calculate-total-distance-travelled.md.
 """
 
 import pytest

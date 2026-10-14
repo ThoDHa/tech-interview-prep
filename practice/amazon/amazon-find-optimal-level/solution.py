@@ -1,6 +1,6 @@
 """Optimal Level — https://www.fastprep.io/problems/amazon-find-optimal-level
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-find-optimal-level.md
+Write-up & approaches: ../../../docs/amazon/amazon-find-optimal-level.md
 
 Amazon is dedicated to leveraging advanced methods to streamline stock movement across its distribution centers. In this scenario, you are assigned a challenge involving a specific process with a sequ
 

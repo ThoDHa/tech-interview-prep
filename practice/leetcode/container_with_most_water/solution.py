@@ -1,6 +1,6 @@
 """Container With Most Water: https://leetcode.com/problems/container-with-most-water/
 
-Write-up & approaches: ../../docs/problems/container_with_most_water.md
+Write-up & approaches: ../../../docs/leetcode/container_with_most_water.md
 
 Given an integer array `height` of `n` vertical lines, find two lines that with
 the x-axis form a container holding the most water, and return that maximum area.

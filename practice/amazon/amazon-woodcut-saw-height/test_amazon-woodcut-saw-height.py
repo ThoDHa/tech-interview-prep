@@ -1,6 +1,6 @@
 """Tests for Maximum Saw Height for At Least M Cut Length — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-woodcut-saw-height.md.
+The worked approaches live in ../../../docs/amazon/amazon-woodcut-saw-height.md.
 """
 
 import pytest

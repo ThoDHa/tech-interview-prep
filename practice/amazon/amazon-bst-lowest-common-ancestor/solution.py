@@ -1,6 +1,6 @@
 """Lowest Common Ancestor in an Inserted BST — https://www.fastprep.io/problems/amazon-bst-lowest-common-ancestor
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-bst-lowest-common-ancestor.md
+Write-up & approaches: ../../../docs/amazon/amazon-bst-lowest-common-ancestor.md
 
 Build a binary search tree by inserting the distinct values of insertionOrder from left to right. For each insertion, values smaller than the current node go left and larger values go right.
 

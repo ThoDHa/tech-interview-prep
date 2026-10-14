@@ -1,6 +1,6 @@
 """Tests for Find Recurring Name — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-find-recurring-names.md.
+The worked approaches live in ../../../docs/amazon/amazon-find-recurring-names.md.
 """
 
 import pytest

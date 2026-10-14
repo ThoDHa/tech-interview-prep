@@ -1,6 +1,6 @@
 """Tests for Redundant Connection — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../docs/problems/redundant_connection.md.
+The worked approaches live in ../../../docs/leetcode/redundant_connection.md.
 """
 
 import pytest

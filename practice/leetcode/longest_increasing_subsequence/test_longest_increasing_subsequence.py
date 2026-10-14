@@ -1,6 +1,6 @@
 """Tests for Longest Increasing Subsequence — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../docs/problems/longest_increasing_subsequence.md.
+The worked approaches live in ../../../docs/leetcode/longest_increasing_subsequence.md.
 """
 
 import pytest

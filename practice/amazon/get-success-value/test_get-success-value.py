@@ -1,6 +1,6 @@
 """Tests for Get Success Value — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/get-success-value.md.
+The worked approaches live in ../../../docs/amazon/get-success-value.md.
 """
 
 import pytest

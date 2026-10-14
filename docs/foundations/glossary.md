@@ -4,7 +4,7 @@ Plain-language definitions of the terms that recur across the problem pages and 
 
 **Adjacency list**: the usual way to store a [graph](data_structures.md): a map from each node to the list of its neighbors. Compact when most nodes have few connections.
 
-**Amortized**: an average cost per operation guaranteed over a sequence of operations. A single operation may occasionally be slow, but spread across a long run the average stays low. In the two-stack queue from [Implement Queue using Stacks](../problems/implement_queue_using_stacks.md), each element is moved at most twice, so every operation is `O(1)` amortized; Python's `list.append` is amortized `O(1)` the same way. This differs from *average case*, which is an expectation over inputs rather than a guarantee over a sequence: hash-map lookups are `O(1)` on average, not amortized.
+**Amortized**: an average cost per operation guaranteed over a sequence of operations. A single operation may occasionally be slow, but spread across a long run the average stays low. In the two-stack queue from [Implement Queue using Stacks](../leetcode/implement_queue_using_stacks.md), each element is moved at most twice, so every operation is `O(1)` amortized; Python's `list.append` is amortized `O(1)` the same way. This differs from *average case*, which is an expectation over inputs rather than a guarantee over a sequence: hash-map lookups are `O(1)` on average, not amortized.
 
 **Backtracking**: building a solution one choice at a time, and undoing the last choice when it leads nowhere, to try the next option. Developed in the [Backtracking guide](../patterns/backtracking_exploration/intuition.md).
 
@@ -20,7 +20,7 @@ Plain-language definitions of the terms that recur across the problem pages and 
 
 **Call stack**: the computer's record of paused function calls, used to return to the right place after each call finishes. Central to how [recursion](recursion.md) works.
 
-**Complement**: the value you still need. In [Two Sum](../problems/two_sum.md), for a target `t` and current value `x`, the complement is `t - x`, the partner that completes the pair.
+**Complement**: the value you still need. In [Two Sum](../leetcode/two_sum.md), for a target `t` and current value `x`, the complement is `t - x`, the partner that completes the pair.
 
 **DAG (directed acyclic graph)**: a directed graph with no cycles, so following edges can never bring you back to where you started. The only kind of graph that admits a [topological sort](../patterns/topological_sort/intuition.md).
 
@@ -44,7 +44,7 @@ Plain-language definitions of the terms that recur across the problem pages and 
 
 **Pruning**: skipping branches of a search that can no longer lead to a valid or better answer, cutting the work without changing the result. A core move in [backtracking](../patterns/backtracking_exploration/intuition.md).
 
-**Sentinel**: a dummy node or boundary value added to remove special cases. [LRU Cache](../problems/lru_cache.md) uses sentinel head and tail nodes so that inserting and removing never has to check for the empty-list corner case.
+**Sentinel**: a dummy node or boundary value added to remove special cases. [LRU Cache](../leetcode/lru_cache.md) uses sentinel head and tail nodes so that inserting and removing never has to check for the empty-list corner case.
 
 **Sliding window**: a moving range over a sequence whose two ends advance to keep a condition satisfied. See the [Sliding Window guide](../patterns/sliding_window/intuition.md).
 

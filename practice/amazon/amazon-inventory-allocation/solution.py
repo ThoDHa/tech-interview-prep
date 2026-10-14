@@ -1,6 +1,6 @@
 """Inventory Allocation — https://www.fastprep.io/problems/amazon-inventory-allocation
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-inventory-allocation.md
+Write-up & approaches: ../../../docs/amazon/amazon-inventory-allocation.md
 
 You are given a list of inventory requests. Each request is represented as [customerId, quantity, bidAmount, timestamp].
 

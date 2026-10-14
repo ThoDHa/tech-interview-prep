@@ -1,6 +1,6 @@
 """Find Number — https://www.fastprep.io/problems/amazon-find-number
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-find-number.md
+Write-up & approaches: ../../../docs/amazon/amazon-find-number.md
 
 In order to ensure maximum security, the developers at Amazon employ multiple encryption methods to keep user data protected.
 

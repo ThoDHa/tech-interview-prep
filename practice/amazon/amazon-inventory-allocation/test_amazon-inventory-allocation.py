@@ -1,6 +1,6 @@
 """Tests for Inventory Allocation — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-inventory-allocation.md.
+The worked approaches live in ../../../docs/amazon/amazon-inventory-allocation.md.
 """
 
 import pytest

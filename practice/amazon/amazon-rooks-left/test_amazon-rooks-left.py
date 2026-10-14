@@ -1,6 +1,6 @@
 """Tests for Rooks Left — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-rooks-left.md.
+The worked approaches live in ../../../docs/amazon/amazon-rooks-left.md.
 """
 
 import pytest

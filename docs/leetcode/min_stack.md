@@ -6,7 +6,7 @@
 
 **Algorithm:** [Stack](https://en.wikipedia.org/wiki/Stack_(abstract_data_type))
 
-**Practice:** [`practice/min_stack/solution.py`](../../practice/min_stack/solution.py)
+**Practice:** [`practice/leetcode/min_stack/solution.py`](../../practice/leetcode/min_stack/solution.py)
 
 Design a stack that supports push, pop, top, and retrieving the minimum element in constant time.
 

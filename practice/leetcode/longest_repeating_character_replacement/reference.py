@@ -1,6 +1,6 @@
 """Longest Repeating Character Replacement — https://leetcode.com/problems/longest-repeating-character-replacement/
 
-Write-up & approaches: ../../docs/problems/longest-repeating-character-replacement/
+Write-up & approaches: ../../../docs/leetcode/longest-repeating-character-replacement/
 
 Canonical reference implementation: the write-up's optimal approach
 (sliding window with a max-frequency counter), kept next to the harness so

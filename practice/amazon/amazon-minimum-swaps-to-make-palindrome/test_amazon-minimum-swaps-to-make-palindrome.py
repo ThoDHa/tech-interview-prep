@@ -1,6 +1,6 @@
 """Tests for Get Max Stability — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-minimum-swaps-to-make-palindrome.md.
+The worked approaches live in ../../../docs/amazon/amazon-minimum-swaps-to-make-palindrome.md.
 """
 
 import pytest

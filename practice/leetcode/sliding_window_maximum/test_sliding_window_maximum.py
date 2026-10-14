@@ -1,6 +1,6 @@
 """Tests for Sliding Window Maximum — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../docs/problems/sliding_window_maximum.md.
+The worked approaches live in ../../../docs/leetcode/sliding_window_maximum.md.
 """
 
 import pytest

@@ -1,6 +1,6 @@
 """Coin Change: https://leetcode.com/problems/coin-change/
 
-Write-up & approaches: ../../docs/problems/coin_change.md
+Write-up & approaches: ../../../docs/leetcode/coin_change.md
 
 Given an integer array `coins` of different denominations and an integer
 `amount`, return the fewest number of coins needed to make up that amount, or

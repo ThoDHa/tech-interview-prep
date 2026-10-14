@@ -1,6 +1,6 @@
 """Tests for Largest Binary-String Subset Within Bit Budgets — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-binary-strings-bounded-subset.md.
+The worked approaches live in ../../../docs/amazon/amazon-binary-strings-bounded-subset.md.
 """
 
 import pytest

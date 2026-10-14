@@ -1,6 +1,6 @@
 """Max Area of Island — https://leetcode.com/problems/max-area-of-island/
 
-Write-up & approaches: ../../docs/problems/max_area_of_island.md
+Write-up & approaches: ../../../docs/leetcode/max_area_of_island.md
 Reference implementation of the write-up's Recursive DFS solution, kept next
 to the harness so authored cases stay falsifiable. Your own attempt lives in
 solution.py.

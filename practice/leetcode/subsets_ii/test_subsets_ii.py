@@ -1,6 +1,6 @@
 """Tests for Subsets II — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../docs/problems/subsets_ii.md.
+The worked approaches live in ../../../docs/leetcode/subsets_ii.md.
 """
 
 import pytest

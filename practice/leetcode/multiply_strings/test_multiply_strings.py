@@ -1,6 +1,6 @@
 """Tests for Multiply Strings — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../docs/problems/multiply_strings.md.
+The worked approaches live in ../../../docs/leetcode/multiply_strings.md.
 """
 
 import pytest

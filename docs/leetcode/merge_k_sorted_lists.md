@@ -6,7 +6,7 @@
 
 **Algorithm:** [K-way merge](https://en.wikipedia.org/wiki/K-way_merge_algorithm) · [Divide and conquer](https://en.wikipedia.org/wiki/Divide-and-conquer_algorithm) · [Heap (data structure)](https://en.wikipedia.org/wiki/Heap_(data_structure))
 
-**Practice:** [`practice/merge_k_sorted_lists/solution.py`](../../practice/merge_k_sorted_lists/solution.py)
+**Practice:** [`practice/leetcode/merge_k_sorted_lists/solution.py`](../../practice/leetcode/merge_k_sorted_lists/solution.py)
 
 You are given an array of k linked-lists lists, each linked-list is sorted in ascending order.
 

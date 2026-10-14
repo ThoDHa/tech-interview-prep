@@ -3,7 +3,7 @@
 Each case is a LeetCode design-operation sequence (operations + arguments) that
 is replayed against your LRUCache via run_operations. cases.json (marker `simple`)
 is the "Run" set; cases_full.json (marker `full`) is the "Submit" gauntlet. The
-worked approaches live in ../../docs/problems/lru_cache.md.
+worked approaches live in ../../../docs/leetcode/lru_cache.md.
 """
 
 import pytest

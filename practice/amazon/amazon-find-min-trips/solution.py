@@ -1,6 +1,6 @@
 """Find Min Trips — https://www.fastprep.io/problems/amazon-find-min-trips
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-find-min-trips.md
+Write-up & approaches: ../../../docs/amazon/amazon-find-min-trips.md
 
 There were a large number of orders placed on Amazon Prime Day. The orders are packed and are at the warehouse ready to be delivered. The delivery agent needs to deliver them in as few trips as possib
 

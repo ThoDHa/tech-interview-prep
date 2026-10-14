@@ -1,6 +1,6 @@
 """Merge Intervals — https://www.fastprep.io/problems/amazon-merge-intervals
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-merge-intervals.md
+Write-up & approaches: ../../../docs/amazon/amazon-merge-intervals.md
 
 Given an array of closed intervals where intervals[i] = [start_i, end_i], merge every pair of overlapping intervals.
 

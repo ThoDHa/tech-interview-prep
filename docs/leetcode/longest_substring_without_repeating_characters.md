@@ -6,7 +6,7 @@
 
 **Algorithm:** [Sliding window](https://usaco.guide/gold/sliding-window) · [Hash table](https://en.wikipedia.org/wiki/Hash_table)
 
-**Practice:** [`practice/longest_substring_without_repeating_characters/solution.py`](../../practice/longest_substring_without_repeating_characters/solution.py)
+**Practice:** [`practice/leetcode/longest_substring_without_repeating_characters/solution.py`](../../practice/leetcode/longest_substring_without_repeating_characters/solution.py)
 
 Given a string `s`, find the length of the longest substring without repeating characters.
 

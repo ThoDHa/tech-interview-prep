@@ -1,6 +1,6 @@
 """Tests for Sum of All Days Numbers on Which the Data of the Xth Will Be Dependent — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-sum-of-all-days-numbers-on-which-the-data-of-the-xth-will-be-dependent.md.
+The worked approaches live in ../../../docs/amazon/amazon-sum-of-all-days-numbers-on-which-the-data-of-the-xth-will-be-dependent.md.
 """
 
 import pytest

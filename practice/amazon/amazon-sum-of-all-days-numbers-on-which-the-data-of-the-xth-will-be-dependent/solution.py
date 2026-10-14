@@ -1,6 +1,6 @@
 """Sum of All Days Numbers on Which the Data of the Xth Will Be Dependent — https://www.fastprep.io/problems/amazon-sum-of-all-days-numbers-on-which-the-data-of-the-xth-will-be-dependent
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-sum-of-all-days-numbers-on-which-the-data-of-the-xth-will-be-dependent.md
+Write-up & approaches: ../../../docs/amazon/amazon-sum-of-all-days-numbers-on-which-the-data-of-the-xth-will-be-dependent.md
 
 Data analysts at Amazon are analyzing time series data. It was concluded that the data of the nth item was dependent on the data of the some xth day if there is a positive integer k such that the floo
 

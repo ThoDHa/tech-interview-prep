@@ -6,7 +6,7 @@
 
 **Algorithm:** [Linked list](https://en.wikipedia.org/wiki/Linked_list) · [Recursion (computer science)](https://en.wikipedia.org/wiki/Recursion_(computer_science))
 
-**Practice:** [`practice/reverse_nodes_in_k_group/solution.py`](../../practice/reverse_nodes_in_k_group/solution.py)
+**Practice:** [`practice/leetcode/reverse_nodes_in_k_group/solution.py`](../../practice/leetcode/reverse_nodes_in_k_group/solution.py)
 
 You are given the head of a singly linked list `head` and a positive integer `k`.
 

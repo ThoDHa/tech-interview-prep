@@ -6,7 +6,7 @@
 
 **Algorithm:** [Binary search tree](https://en.wikipedia.org/wiki/Binary_search_tree) · [Depth-first search](https://en.wikipedia.org/wiki/Depth-first_search) · [Tree traversal](https://en.wikipedia.org/wiki/Tree_traversal)
 
-**Practice:** [`practice/validate_binary_search_tree/solution.py`](../../practice/validate_binary_search_tree/solution.py)
+**Practice:** [`practice/leetcode/validate_binary_search_tree/solution.py`](../../practice/leetcode/validate_binary_search_tree/solution.py)
 
 Given the `root` of a binary tree, determine if it is a valid binary search tree (BST).
 

@@ -1,6 +1,6 @@
 """Design Twitter — https://leetcode.com/problems/design-twitter/
 
-Write-up & approaches: ../../docs/problems/design_twitter.md
+Write-up & approaches: ../../../docs/leetcode/design_twitter.md
 
 Implement a simplified version of Twitter which allows users to post tweets, follow/unfollow each other, and view the `10` most recent tweets within their own news feed. Users and tweets are uniquely 
 

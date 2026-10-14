@@ -1,6 +1,6 @@
 """Tests for Count Uni-Valued Subtrees — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-count-univalued-subtrees.md.
+The worked approaches live in ../../../docs/amazon/amazon-count-univalued-subtrees.md.
 """
 
 import pytest

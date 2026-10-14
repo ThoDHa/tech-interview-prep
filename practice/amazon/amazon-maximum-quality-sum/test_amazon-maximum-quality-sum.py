@@ -1,6 +1,6 @@
 """Tests for Maximum Quality Sum — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-maximum-quality-sum.md.
+The worked approaches live in ../../../docs/amazon/amazon-maximum-quality-sum.md.
 """
 
 import pytest

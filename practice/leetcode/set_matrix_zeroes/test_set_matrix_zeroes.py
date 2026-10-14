@@ -1,6 +1,6 @@
 """Tests for Set Matrix Zeroes — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../docs/problems/set_matrix_zeroes.md.
+The worked approaches live in ../../../docs/leetcode/set_matrix_zeroes.md.
 """
 
 import pytest

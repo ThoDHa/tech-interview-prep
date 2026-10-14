@@ -1,6 +1,6 @@
 """Tests for Simplify a Binary Expression Tree — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-simplify-expression-tree.md.
+The worked approaches live in ../../../docs/amazon/amazon-simplify-expression-tree.md.
 """
 
 import pytest

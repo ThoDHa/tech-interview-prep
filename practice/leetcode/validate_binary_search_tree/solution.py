@@ -1,6 +1,6 @@
 """Validate Binary Search Tree: https://leetcode.com/problems/validate-binary-search-tree/
 
-Write-up & approaches: ../../docs/problems/validate_binary_search_tree.md
+Write-up & approaches: ../../../docs/leetcode/validate_binary_search_tree.md
 
 Given the `root` of a binary tree, determine whether it is a valid binary search
 tree: every node's value must exceed all values in its left subtree and be less

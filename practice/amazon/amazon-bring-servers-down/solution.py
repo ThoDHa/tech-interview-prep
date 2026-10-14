@@ -1,6 +1,6 @@
 """Bring Servers Down — https://www.fastprep.io/problems/amazon-bring-servers-down
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-bring-servers-down.md
+Write-up & approaches: ../../../docs/amazon/amazon-bring-servers-down.md
 
 The developers at Amazon want to perform a reliability drill on some servers. There are n servers where the ith server can serve request[i] number of requests and has an initial health of health[i] un
 

@@ -1,6 +1,6 @@
 """Optimize Identifiers — https://www.fastprep.io/problems/amazon-optimize-identifiers
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-optimize-identifiers.md
+Write-up & approaches: ../../../docs/amazon/amazon-optimize-identifiers.md
 
 Special thanks: 𓇼 ⋆.˚Manyy Manyyy thanks to Nachos and spike!𓆝 𓆡⋆.˚ 𓇼
 

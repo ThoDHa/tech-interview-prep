@@ -1,6 +1,6 @@
 """Tests for Min Dock Bays — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-get-minimum-dock-bays.md.
+The worked approaches live in ../../../docs/amazon/amazon-get-minimum-dock-bays.md.
 """
 
 import pytest

@@ -1,6 +1,6 @@
 """Tests for Meeting Rooms II — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../docs/problems/meeting_rooms_ii.md.
+The worked approaches live in ../../../docs/leetcode/meeting_rooms_ii.md.
 """
 
 import pytest

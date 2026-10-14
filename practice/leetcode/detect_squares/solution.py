@@ -1,6 +1,6 @@
 """Detect Squares — https://leetcode.com/problems/detect-squares/
 
-Write-up & approaches: ../../docs/problems/detect_squares.md
+Write-up & approaches: ../../../docs/leetcode/detect_squares.md
 
 You are given a stream of points consisting of x-y coordinates on a 2-D plane. Points can be added and queried as follows: * **Add** - new points can be added to the stream into a data structure. Dupl
 

@@ -1,6 +1,6 @@
 """Tests for Fair Prize Distribution — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-fair-prize-distribution.md.
+The worked approaches live in ../../../docs/amazon/amazon-fair-prize-distribution.md.
 """
 
 import pytest

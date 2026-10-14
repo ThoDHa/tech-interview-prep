@@ -1,6 +1,6 @@
 """Tests for Remove Characters in Frequency Order — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-remove-characters-in-frequency-order.md.
+The worked approaches live in ../../../docs/amazon/amazon-remove-characters-in-frequency-order.md.
 """
 
 import pytest

@@ -1,6 +1,6 @@
 """Serialize and Deserialize Binary Tree — https://leetcode.com/problems/serialize-and-deserialize-binary-tree/
 
-Write-up & approaches: ../../docs/problems/serialize_and_deserialize_binary_tree.md
+Write-up & approaches: ../../../docs/leetcode/serialize_and_deserialize_binary_tree.md
 
 Design a codec that serializes a binary tree to a string and deserializes that
 string back into the identical tree (the round-trip must reproduce the tree).

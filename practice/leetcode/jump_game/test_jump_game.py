@@ -1,6 +1,6 @@
 """Tests for Jump Game — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../docs/problems/jump_game.md.
+The worked approaches live in ../../../docs/leetcode/jump_game.md.
 """
 
 import pytest

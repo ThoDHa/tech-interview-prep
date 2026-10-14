@@ -1,6 +1,6 @@
 """Package Dependency Order — https://www.fastprep.io/problems/amazon-package-dependency-order
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-package-dependency-order.md
+Write-up & approaches: ../../../docs/amazon/amazon-package-dependency-order.md
 
 You are given package dependency pairs and a target package. Each pair [package, dependency] means the package depends on that dependency.
 

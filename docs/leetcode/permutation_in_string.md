@@ -6,7 +6,7 @@
 
 **Algorithm:** [Sliding window](https://usaco.guide/gold/sliding-window) · [Hash table](https://en.wikipedia.org/wiki/Hash_table)
 
-**Practice:** [`practice/permutation_in_string/solution.py`](../../practice/permutation_in_string/solution.py)
+**Practice:** [`practice/leetcode/permutation_in_string/solution.py`](../../practice/leetcode/permutation_in_string/solution.py)
 
 You are given two strings `s1` and `s2`.
 

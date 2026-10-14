@@ -1,6 +1,6 @@
 """Tests for Task Scheduler — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-task-scheduler.md.
+The worked approaches live in ../../../docs/amazon/amazon-task-scheduler.md.
 """
 
 import pytest

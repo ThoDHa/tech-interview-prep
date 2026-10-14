@@ -1,6 +1,6 @@
 """Tests for Largest Number With Digit Sum — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-largest-number-with-digit-sum.md.
+The worked approaches live in ../../../docs/amazon/amazon-largest-number-with-digit-sum.md.
 """
 
 import pytest

@@ -1,6 +1,6 @@
 """Tests for Find Largest Set of Onion Bags — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-find-largest-set-of-onion-bags.md.
+The worked approaches live in ../../../docs/amazon/amazon-find-largest-set-of-onion-bags.md.
 """
 
 import pytest

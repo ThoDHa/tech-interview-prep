@@ -1,6 +1,6 @@
 """Maximize Minimum Machine Power — https://www.fastprep.io/problems/amazon-maximize-minimum-machine-power
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-maximize-minimum-machine-power.md
+Write-up & approaches: ../../../docs/amazon/amazon-maximize-minimum-machine-power.md
 
 You are given an integer array sources, where sources[i] is the amount of power available from the i-th power source, and an integer n representing the number of machines.
 

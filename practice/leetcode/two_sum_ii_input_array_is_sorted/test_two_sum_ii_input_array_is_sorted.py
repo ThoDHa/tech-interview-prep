@@ -1,6 +1,6 @@
 """Tests for Two Sum II Input Array Is Sorted — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../docs/problems/two_sum_ii_input_array_is_sorted.md.
+The worked approaches live in ../../../docs/leetcode/two_sum_ii_input_array_is_sorted.md.
 """
 
 import pytest

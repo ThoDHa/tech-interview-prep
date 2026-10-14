@@ -1,6 +1,6 @@
 """Missing Number — https://leetcode.com/problems/missing-number/
 
-Write-up & approaches: ../../docs/problems/missing_number.md
+Write-up & approaches: ../../../docs/leetcode/missing_number.md
 
 Given an array `nums` containing `n` integers in the range `[0, n]` without any duplicates, return the single number in the range that is missing from `nums`. **Follow-up**: Could you implement a solu
 

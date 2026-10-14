@@ -1,6 +1,6 @@
 """Tests for K Closest Elements in a Sorted Array — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-k-closest-elements-in-sorted-array.md.
+The worked approaches live in ../../../docs/amazon/amazon-k-closest-elements-in-sorted-array.md.
 """
 
 import pytest

@@ -6,7 +6,7 @@
 
 **Algorithm:** [Sorting algorithm](https://en.wikipedia.org/wiki/Sorting_algorithm) · [Interval scheduling](https://en.wikipedia.org/wiki/Interval_scheduling)
 
-**Practice:** [`practice/meeting_rooms/solution.py`](../../practice/meeting_rooms/solution.py)
+**Practice:** [`practice/leetcode/meeting_rooms/solution.py`](../../practice/leetcode/meeting_rooms/solution.py)
 
 > This problem is locked behind [LeetCode Premium](https://leetcode.com/problems/meeting-rooms/); read it free on [NeetCode](https://neetcode.io/problems/meeting-schedule).
 
@@ -184,7 +184,7 @@ The sort is in-place and the scan keeps one index.
 
 ## Comparison of Solutions
 
-The practice harness's `practice/meeting_rooms/reference.py` implements the **Sort and Adjacent Scan** solution.
+The practice harness's `practice/leetcode/meeting_rooms/reference.py` implements the **Sort and Adjacent Scan** solution.
 
 ### Time Complexity
 

@@ -1,6 +1,6 @@
 """Course Schedule: https://leetcode.com/problems/course-schedule/
 
-Write-up & approaches: ../../docs/problems/course_schedule.md
+Write-up & approaches: ../../../docs/leetcode/course_schedule.md
 
 There are `numCourses` courses labeled `0` to `numCourses - 1`. Each pair
 `prerequisites[i] = [a, b]` means course `b` must be taken before course `a`.

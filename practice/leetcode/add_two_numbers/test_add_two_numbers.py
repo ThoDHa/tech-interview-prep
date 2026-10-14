@@ -1,6 +1,6 @@
 """Tests for Add Two Numbers — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../docs/problems/add_two_numbers.md.
+The worked approaches live in ../../../docs/leetcode/add_two_numbers.md.
 """
 
 import pytest

@@ -1,6 +1,6 @@
 """Find Maximum Calories — https://www.fastprep.io/problems/amazon-find-maximum-calories
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-find-maximum-calories.md
+Write-up & approaches: ../../../docs/amazon/amazon-find-maximum-calories.md
 
 You start on the ground at height 0. There are n stones, and stone i has height height[i].
 

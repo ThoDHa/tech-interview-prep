@@ -1,6 +1,6 @@
 """Use Minimum Tokens — https://www.fastprep.io/problems/amazon-use-minimum-tokens
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-use-minimum-tokens.md
+Write-up & approaches: ../../../docs/amazon/amazon-use-minimum-tokens.md
 
 Amazon operates a system of n warehouses, each represented by warehouse[i], where warehouse[i] indicates the maximum number of items that particular warehouse can hold. Additionally, there are q shipm
 

@@ -1,6 +1,6 @@
 """Find Days S2 Subsequence of S1 — https://www.fastprep.io/problems/amazon-find-days-s2-subsequence-of-s1
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-find-days-s2-subsequence-of-s1.md
+Write-up & approaches: ../../../docs/amazon/amazon-find-days-s2-subsequence-of-s1.md
 
 Given two strings s1 and s2, find till how many days is s2 a subsequence of s1 if on every day we delete all the strings in s1 from start to end inclusive.
 

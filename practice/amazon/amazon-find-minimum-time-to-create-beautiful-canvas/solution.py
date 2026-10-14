@@ -1,6 +1,6 @@
 """Min Time to Create Beautiful Canvas — https://www.fastprep.io/problems/amazon-find-minimum-time-to-create-beautiful-canvas
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-find-minimum-time-to-create-beautiful-canvas.md
+Write-up & approaches: ../../../docs/amazon/amazon-find-minimum-time-to-create-beautiful-canvas.md
 
 Amazon is introducing an innovative smart canvas display for personalized home decor. The canvas is initially painted white, featuring n rows and m columns, waiting to be transformed into a beautiful 
 

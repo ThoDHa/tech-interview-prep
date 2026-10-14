@@ -1,6 +1,6 @@
 """Tests for Get Discount Pairs — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/get-discount-pairs.md.
+The worked approaches live in ../../../docs/amazon/get-discount-pairs.md.
 """
 
 import pytest

@@ -1,6 +1,6 @@
 """Planning the Campaign — https://www.fastprep.io/problems/amazon-minimum-weekly-input
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-minimum-weekly-input.md
+Write-up & approaches: ../../../docs/amazon/amazon-minimum-weekly-input.md
 
 A company will launch a series of marketing campaigns over several weeks. Each campaign has a certain cost. They want to launch at least one campaign every week, and to plan the campaigns in a way tha
 

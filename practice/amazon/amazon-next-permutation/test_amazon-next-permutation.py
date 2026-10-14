@@ -1,6 +1,6 @@
 """Tests for Next Permutation — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-next-permutation.md.
+The worked approaches live in ../../../docs/amazon/amazon-next-permutation.md.
 """
 
 import pytest

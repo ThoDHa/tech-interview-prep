@@ -1,6 +1,6 @@
 """Jump Game — https://leetcode.com/problems/jump-game/
 
-Write-up & approaches: ../../docs/problems/jump_game.md
+Write-up & approaches: ../../../docs/leetcode/jump_game.md
 
 You are given an integer array `nums` where each element `nums[i]` indicates your maximum jump length at that position. Return `true` if you can reach the last index starting from index `0`, or `false
 

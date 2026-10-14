@@ -1,6 +1,6 @@
 """Maximum Frequency Stack — https://www.fastprep.io/problems/amazon-maximum-frequency-stack
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-maximum-frequency-stack.md
+Write-up & approaches: ../../../docs/amazon/amazon-maximum-frequency-stack.md
 
 Design a stack-like data structure that supports push and pop.
 

@@ -1,6 +1,6 @@
 """Tests for Reverse Nodes In K Group — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../docs/problems/reverse_nodes_in_k_group.md.
+The worked approaches live in ../../../docs/leetcode/reverse_nodes_in_k_group.md.
 """
 
 import pytest

@@ -1,6 +1,6 @@
 """Count Islands with Eight-Direction Adjacency — https://www.fastprep.io/problems/amazon-islands-eight-direction
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-islands-eight-direction.md
+Write-up & approaches: ../../../docs/amazon/amazon-islands-eight-direction.md
 
 Given a rectangular binary matrix grid, return the number of islands.
 

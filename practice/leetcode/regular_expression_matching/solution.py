@@ -1,6 +1,6 @@
 """Regular Expression Matching — https://leetcode.com/problems/regular-expression-matching/
 
-Write-up & approaches: ../../docs/problems/regular_expression_matching.md
+Write-up & approaches: ../../../docs/leetcode/regular_expression_matching.md
 
 You are given an input string `s` consisting of lowercase english letters, and a pattern `p` consisting of lowercase english letters, as well as `'.'`, and `'*'` characters. Return `true` if the patte
 

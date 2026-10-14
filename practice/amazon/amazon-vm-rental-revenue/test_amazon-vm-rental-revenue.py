@@ -1,6 +1,6 @@
 """Tests for VM Rental Revenue — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-vm-rental-revenue.md.
+The worked approaches live in ../../../docs/amazon/amazon-vm-rental-revenue.md.
 """
 
 import pytest

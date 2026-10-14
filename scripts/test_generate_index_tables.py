@@ -2023,15 +2023,15 @@ def test_committed_nav_amazon_subsection_links_the_bank_index_as_its_own_page():
 
 @pre_move_skip
 def test_committed_nav_amazon_children_resolve_to_committed_writeup_pages():
-    # Fixture-isolated: the nav audit runs against a tmp mkdocs.yml so the
-    # suite stays green both pre- and post-move, when the real tree lives
-    # at the moved paths.
-    amazon_dir = gen.AMAZON_WRITEUP_DIR
-    mkdocs_path = mkdocs_shell_new(Path(mkdocs_shell(tmp_path_factory())))
+    # The nav children are rendered from the committed manifest, so every
+    # child must resolve to a committed write-up page at the moved path.
+    mkdocs_path = mkdocs_shell_new(tmp_path_factory())
     gen.write_problems_nav(mkdocs_path=mkdocs_path)
     text = mkdocs_path.read_text(encoding="utf-8")
-    for slug in gen.nav_amazon_children(text):
-        assert (amazon_dir / f"{slug}.md").exists() or True, slug
+    children = gen.nav_amazon_children(text)
+    assert children, "no amazon children rendered"
+    for slug in children:
+        assert (gen.AMAZON_WRITEUP_DIR / f"{slug}.md").exists(), slug
 
 
 def tmp_path_factory():

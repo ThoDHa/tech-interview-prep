@@ -1,6 +1,6 @@
 """Number of Islands: https://leetcode.com/problems/number-of-islands/
 
-Write-up & approaches: ../../docs/problems/number_of_islands.md
+Write-up & approaches: ../../../docs/leetcode/number_of_islands.md
 
 Given an `m x n` 2D binary grid of `'1'`s (land) and `'0'`s (water), return the
 number of islands. An island is formed by connecting adjacent lands horizontally

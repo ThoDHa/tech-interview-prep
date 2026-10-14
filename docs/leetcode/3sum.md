@@ -6,7 +6,7 @@
 
 **Algorithm:** [Two-pointer technique](https://usaco.guide/silver/two-pointers) · [Sorting](https://en.wikipedia.org/wiki/Sorting_algorithm) · [Hash table](https://en.wikipedia.org/wiki/Hash_table)
 
-**Practice:** [`practice/3sum/solution.py`](../../practice/3sum/solution.py)
+**Practice:** [`practice/leetcode/3sum/solution.py`](../../practice/leetcode/3sum/solution.py)
 
 Given an integer array nums, return all the triplets `[nums[i], nums[j], nums[k]]` such that `i != j`, `i != k`, and `j != k`, and `nums[i] + nums[j] + nums[k] == 0`.
 

@@ -1,6 +1,6 @@
 """Tests for Minimize Variation — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-minimize-variation.md.
+The worked approaches live in ../../../docs/amazon/amazon-minimize-variation.md.
 """
 
 import pytest

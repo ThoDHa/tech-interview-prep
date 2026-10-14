@@ -1,6 +1,6 @@
 """Get Discount Pairs — https://www.fastprep.io/problems/get-discount-pairs
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/get-discount-pairs.md
+Write-up & approaches: ../../../docs/amazon/get-discount-pairs.md
 
 Amazon is offering a discount on every purchase of a pair of products whose price sum is divisible by x. Given the prices of n products, count the number of unordered index pairs (i, j) such that 0 <=
 

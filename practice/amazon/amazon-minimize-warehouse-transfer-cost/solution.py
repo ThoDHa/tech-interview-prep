@@ -1,6 +1,6 @@
 """Minimize Warehouse Transfer Cost — https://www.fastprep.io/problems/amazon-minimize-warehouse-transfer-cost
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-minimize-warehouse-transfer-cost.md
+Write-up & approaches: ../../../docs/amazon/amazon-minimize-warehouse-transfer-cost.md
 
 Source note: Confirmed on 2026-06-23 as a duplicate of Find Minimum Cost. The linked version is more complete and is the recommended practice version.
 

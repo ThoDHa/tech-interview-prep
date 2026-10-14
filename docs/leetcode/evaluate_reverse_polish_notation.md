@@ -6,7 +6,7 @@
 
 **Algorithm:** [Stack](https://en.wikipedia.org/wiki/Stack_(abstract_data_type)) · [Tree traversal](https://en.wikipedia.org/wiki/Tree_traversal)
 
-**Practice:** [`practice/evaluate_reverse_polish_notation/solution.py`](../../practice/evaluate_reverse_polish_notation/solution.py)
+**Practice:** [`practice/leetcode/evaluate_reverse_polish_notation/solution.py`](../../practice/leetcode/evaluate_reverse_polish_notation/solution.py)
 
 You are given an array of strings `tokens` that represents an arithmetic expression in Reverse Polish Notation (RPN).
 

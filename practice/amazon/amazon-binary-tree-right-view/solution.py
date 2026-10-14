@@ -1,6 +1,6 @@
 """Binary Tree Right View — https://www.fastprep.io/problems/amazon-binary-tree-right-view
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-binary-tree-right-view.md
+Write-up & approaches: ../../../docs/amazon/amazon-binary-tree-right-view.md
 
 Given the root of a binary tree, imagine viewing the tree from its right side.
 

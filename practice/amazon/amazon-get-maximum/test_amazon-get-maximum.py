@@ -1,6 +1,6 @@
 """Tests for Get Maximum — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-get-maximum.md.
+The worked approaches live in ../../../docs/amazon/amazon-get-maximum.md.
 """
 
 import pytest

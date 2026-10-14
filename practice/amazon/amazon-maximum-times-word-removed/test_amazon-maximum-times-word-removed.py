@@ -1,6 +1,6 @@
 """Tests for Maxmimum Times Word Removed — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-maximum-times-word-removed.md.
+The worked approaches live in ../../../docs/amazon/amazon-maximum-times-word-removed.md.
 """
 
 import pytest

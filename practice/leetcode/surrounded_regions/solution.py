@@ -1,6 +1,6 @@
 """Surrounded Regions — https://leetcode.com/problems/surrounded-regions/
 
-Write-up & approaches: ../../docs/problems/surrounded_regions.md
+Write-up & approaches: ../../../docs/leetcode/surrounded_regions.md
 
 You are given an `m x n` matrix `board` containing letters `'X'` and `'O'`, capture regions that are surrounded: * **Connect:** A cell is connected to adjacent cells horizontally or vertically. * **Re
 

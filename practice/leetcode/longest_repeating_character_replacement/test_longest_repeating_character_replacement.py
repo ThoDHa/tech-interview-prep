@@ -1,6 +1,6 @@
 """Tests for Longest Repeating Character Replacement — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../docs/problems/longest_repeating_character_replacement.md.
+The worked approaches live in ../../../docs/leetcode/longest_repeating_character_replacement.md.
 """
 
 import pytest

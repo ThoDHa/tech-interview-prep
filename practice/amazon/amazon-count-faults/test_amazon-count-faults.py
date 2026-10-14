@@ -1,6 +1,6 @@
 """Tests for Count Faults (Faulty Binding 101 😁) — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-count-faults.md.
+The worked approaches live in ../../../docs/amazon/amazon-count-faults.md.
 """
 
 import pytest

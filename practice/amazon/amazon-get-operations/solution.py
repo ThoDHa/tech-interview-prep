@@ -1,6 +1,6 @@
 """Get Operations — https://www.fastprep.io/problems/amazon-get-operations
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-get-operations.md
+Write-up & approaches: ../../../docs/amazon/amazon-get-operations.md
 
 There are n processes. The i-th process has resource[i] number of resources. All the resource[i] are distinct. The CPU wants the processes to be arranged in increasing order of their resource[i]. The 
 

@@ -1,6 +1,6 @@
 """Tests for Lowest Common Ancestor in an Inserted BST — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-bst-lowest-common-ancestor.md.
+The worked approaches live in ../../../docs/amazon/amazon-bst-lowest-common-ancestor.md.
 """
 
 import pytest

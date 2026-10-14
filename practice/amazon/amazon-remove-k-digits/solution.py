@@ -1,6 +1,6 @@
 """Remove K Digits — https://www.fastprep.io/problems/amazon-remove-k-digits
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-remove-k-digits.md
+Write-up & approaches: ../../../docs/amazon/amazon-remove-k-digits.md
 
 You are given a string num that represents a non-negative integer, and an integer k.
 

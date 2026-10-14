@@ -1,6 +1,6 @@
 """Simplify a Binary Expression Tree — https://www.fastprep.io/problems/amazon-simplify-expression-tree
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-simplify-expression-tree.md
+Write-up & approaches: ../../../docs/amazon/amazon-simplify-expression-tree.md
 
 A valid binary expression tree is serialized in prefix order. Each token is +, -, *, a variable name, or a signed integer.
 

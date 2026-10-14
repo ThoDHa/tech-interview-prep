@@ -1,6 +1,6 @@
 """Tests for Select Least Resource Tasks — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-select-least-resource-tasks.md.
+The worked approaches live in ../../../docs/amazon/amazon-select-least-resource-tasks.md.
 """
 
 import pytest

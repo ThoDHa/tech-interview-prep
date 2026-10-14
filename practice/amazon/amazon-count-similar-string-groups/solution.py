@@ -1,6 +1,6 @@
 """Count Similar String Groups — https://www.fastprep.io/problems/amazon-count-similar-string-groups
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-count-similar-string-groups.md
+Write-up & approaches: ../../../docs/amazon/amazon-count-similar-string-groups.md
 
 You are given an array of strings strs. All strings are anagrams of each other.
 

@@ -1,6 +1,6 @@
 """Tests for Most Frequent Consecutive Website Pattern — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-consecutive-website-visit-pattern.md.
+The worked approaches live in ../../../docs/amazon/amazon-consecutive-website-visit-pattern.md.
 """
 
 import pytest

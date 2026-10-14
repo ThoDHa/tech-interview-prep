@@ -1,6 +1,6 @@
 """Top K Frequent Elements — https://leetcode.com/problems/top-k-frequent-elements/
 
-Write-up & approaches: ../../docs/problems/top_k_frequent_elements.md
+Write-up & approaches: ../../../docs/leetcode/top_k_frequent_elements.md
 
 Given an integer array `nums` and an integer `k`, return the `k` most frequent elements within the array. The test cases are generated such that the answer is always **unique**. You may return the out
 

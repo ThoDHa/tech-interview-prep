@@ -1,6 +1,6 @@
 """Max Area of Island — https://www.fastprep.io/problems/amazon-max-area-of-island
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-max-area-of-island.md
+Write-up & approaches: ../../../docs/amazon/amazon-max-area-of-island.md
 
 Given a binary matrix grid, return the maximum area of an island.
 

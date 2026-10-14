@@ -1,6 +1,6 @@
 """Minimum Preparation Time for Two Handlers — https://www.fastprep.io/problems/amazon-minimum-preparation-time-for-two-handlers
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-minimum-preparation-time-for-two-handlers.md
+Write-up & approaches: ../../../docs/amazon/amazon-minimum-preparation-time-for-two-handlers.md
 
 A work queue workList must be processed in order by two handlers. Each value in workList is a work type from 1 through m.
 

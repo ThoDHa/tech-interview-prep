@@ -6,7 +6,7 @@
 
 **Algorithm:** [Tree traversal](https://en.wikipedia.org/wiki/Tree_traversal) · [Depth-first search](https://en.wikipedia.org/wiki/Depth-first_search) · [Hash function](https://en.wikipedia.org/wiki/Hash_function) · [String-searching algorithm](https://en.wikipedia.org/wiki/String-searching_algorithm)
 
-**Practice:** [`practice/subtree_of_another_tree/solution.py`](../../practice/subtree_of_another_tree/solution.py)
+**Practice:** [`practice/leetcode/subtree_of_another_tree/solution.py`](../../practice/leetcode/subtree_of_another_tree/solution.py)
 
 Given the roots of two binary trees `root` and `subRoot`, return `true` if there is a subtree of `root` with the same structure and node values of `subRoot` and `false` otherwise.
 
@@ -337,7 +337,7 @@ Two serializations: one token per node plus one per missing child. The serialize
 
 ## Comparison of Solutions
 
-The practice harness's `practice/subtree_of_another_tree/reference.py` implements the **Subtree Serialization Set** solution.
+The practice harness's `practice/leetcode/subtree_of_another_tree/reference.py` implements the **Subtree Serialization Set** solution.
 
 ### Time Complexity
 

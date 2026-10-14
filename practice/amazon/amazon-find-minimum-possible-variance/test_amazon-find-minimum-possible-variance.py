@@ -1,6 +1,6 @@
 """Tests for Find Min Variance — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-find-minimum-possible-variance.md.
+The worked approaches live in ../../../docs/amazon/amazon-find-minimum-possible-variance.md.
 """
 
 import pytest

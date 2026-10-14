@@ -1,6 +1,6 @@
 """Interleaving String — https://www.fastprep.io/problems/amazon-interleaving-string
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-interleaving-string.md
+Write-up & approaches: ../../../docs/amazon/amazon-interleaving-string.md
 
 Given strings s1, s2, and s3, return whether s3 can be formed by interleaving s1 and s2.
 

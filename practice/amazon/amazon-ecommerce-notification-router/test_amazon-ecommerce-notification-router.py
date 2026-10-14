@@ -1,6 +1,6 @@
 """Tests for E-commerce Notification Router — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-ecommerce-notification-router.md.
+The worked approaches live in ../../../docs/amazon/amazon-ecommerce-notification-router.md.
 """
 
 import pytest

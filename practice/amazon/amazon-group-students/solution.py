@@ -1,6 +1,6 @@
 """Group Students — https://www.fastprep.io/problems/amazon-group-students
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-group-students.md
+Write-up & approaches: ../../../docs/amazon/amazon-group-students.md
 
 Amazon Technical Academy (ATA) provides in-demand, technical training to current Amazon employees looking to broaden their skill sets. ATA has admitted a group of n prospective trainees with varying s
 

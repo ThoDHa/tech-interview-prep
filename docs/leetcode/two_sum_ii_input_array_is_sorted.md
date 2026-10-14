@@ -6,7 +6,7 @@
 
 **Algorithm:** [Two-pointer technique](https://usaco.guide/silver/two-pointers) · [Binary search](https://en.wikipedia.org/wiki/Binary_search_algorithm)
 
-**Practice:** [`practice/two_sum_ii_input_array_is_sorted/solution.py`](../../practice/two_sum_ii_input_array_is_sorted/solution.py)
+**Practice:** [`practice/leetcode/two_sum_ii_input_array_is_sorted/solution.py`](../../practice/leetcode/two_sum_ii_input_array_is_sorted/solution.py)
 
 Given an array of integers `numbers` that is sorted in **non-decreasing order**.
 

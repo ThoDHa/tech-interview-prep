@@ -1,6 +1,6 @@
 """Maximum Profit in Job Scheduling — https://www.fastprep.io/problems/amazon-maximum-profit-job-scheduling
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-maximum-profit-job-scheduling.md
+Write-up & approaches: ../../../docs/amazon/amazon-maximum-profit-job-scheduling.md
 
 You are given equal-length arrays startTime, endTime, and profit. Job i runs on the half-open interval from its start time to its end time and earns its profit.
 

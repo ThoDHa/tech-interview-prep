@@ -1,6 +1,6 @@
 """Tests for Get Priorities After Execution — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/get-priorities-after-execution.md.
+The worked approaches live in ../../../docs/amazon/get-priorities-after-execution.md.
 """
 
 import pytest

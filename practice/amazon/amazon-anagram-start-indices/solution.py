@@ -1,6 +1,6 @@
 """All Anagram Start Indices — https://www.fastprep.io/problems/amazon-anagram-start-indices
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-anagram-start-indices.md
+Write-up & approaches: ../../../docs/amazon/amazon-anagram-start-indices.md
 
 Given lowercase strings s and p, return every starting index where a substring of s is an anagram of p.
 

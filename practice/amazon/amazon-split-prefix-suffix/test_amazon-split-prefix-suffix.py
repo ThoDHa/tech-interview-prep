@@ -1,6 +1,6 @@
 """Tests for Split Prefix Suffix — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-split-prefix-suffix.md.
+The worked approaches live in ../../../docs/amazon/amazon-split-prefix-suffix.md.
 """
 
 import pytest

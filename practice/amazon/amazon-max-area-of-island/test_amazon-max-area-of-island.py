@@ -1,6 +1,6 @@
 """Tests for Max Area of Island — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-max-area-of-island.md.
+The worked approaches live in ../../../docs/amazon/amazon-max-area-of-island.md.
 """
 
 import pytest

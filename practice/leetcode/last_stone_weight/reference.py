@@ -1,6 +1,6 @@
 """Last Stone Weight — https://leetcode.com/problems/last-stone-weight/
 
-Write-up & approaches: ../../docs/problems/last_stone_weight.md
+Write-up & approaches: ../../../docs/leetcode/last_stone_weight.md
 
 Canonical reference implementation: the write-up's optimal approach (a max-heap
 simulation via negated weights), kept next to the harness so authored cases

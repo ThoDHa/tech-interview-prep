@@ -1,6 +1,6 @@
 """Tests for Validate a Two-Color Chessboard — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-validate-two-color-chessboard.md.
+The worked approaches live in ../../../docs/amazon/amazon-validate-two-color-chessboard.md.
 """
 
 import pytest

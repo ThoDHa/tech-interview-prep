@@ -1,6 +1,6 @@
 """Kth Largest Element In An Array — https://leetcode.com/problems/kth-largest-element-in-an-array/
 
-Write-up & approaches: ../../docs/problems/kth_largest_element_in_an_array.md
+Write-up & approaches: ../../../docs/leetcode/kth_largest_element_in_an_array.md
 Reference implementation of the write-up's Quickselect solution, kept
 next to the harness so authored cases stay falsifiable. Your own attempt
 lives in solution.py.

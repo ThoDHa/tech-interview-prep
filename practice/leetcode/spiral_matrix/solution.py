@@ -1,6 +1,6 @@
 """Spiral Matrix: https://leetcode.com/problems/spiral-matrix/
 
-Write-up & approaches: ../../docs/problems/spiral_matrix.md
+Write-up & approaches: ../../../docs/leetcode/spiral_matrix.md
 
 Given an `m x n` matrix, return all elements of the matrix in spiral order.
 

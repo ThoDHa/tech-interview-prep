@@ -1,6 +1,6 @@
 """Tests for Maximum Profit in Job Scheduling — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-maximum-profit-job-scheduling.md.
+The worked approaches live in ../../../docs/amazon/amazon-maximum-profit-job-scheduling.md.
 """
 
 import pytest

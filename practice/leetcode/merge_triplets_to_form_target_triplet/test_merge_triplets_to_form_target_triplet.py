@@ -1,6 +1,6 @@
 """Tests for Merge Triplets to Form Target Triplet — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../docs/problems/merge_triplets_to_form_target_triplet.md.
+The worked approaches live in ../../../docs/leetcode/merge_triplets_to_form_target_triplet.md.
 """
 
 import pytest

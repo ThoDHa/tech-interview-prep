@@ -24,7 +24,7 @@ For this exercise, assume every string contains only lowercase English letters. 
 
 #### Derivation
 
-The most literal reading of "group the anagrams" keeps a growing list of groups and files each incoming string into the first group it belongs to. Belonging is decided by the anagram test from [Valid Anagram](../valid_anagram.md): two strings are anagrams exactly when their 26-slot character counts cancel to zero:
+The most literal reading of "group the anagrams" keeps a growing list of groups and files each incoming string into the first group it belongs to. Belonging is decided by the anagram test from [Valid Anagram](../leetcode/valid_anagram.md): two strings are anagrams exactly when their 26-slot character counts cancel to zero:
 
 1. Keep an empty list `groups`, where each entry holds the members of one
    anagram class.

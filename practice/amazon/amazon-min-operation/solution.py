@@ -1,6 +1,6 @@
 """Min Operation — https://www.fastprep.io/problems/amazon-min-operation
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-min-operation.md
+Write-up & approaches: ../../../docs/amazon/amazon-min-operation.md
 
 The manager of an Amazon warehouse needs to ship n products from different locations, the location of the ith product is represented by an array locations[i]. The manager is allowed to perform one ope
 

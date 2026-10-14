@@ -1,6 +1,6 @@
 """Counting Bits — https://leetcode.com/problems/counting-bits/
 
-Write-up & approaches: ../../docs/problems/counting_bits.md
+Write-up & approaches: ../../../docs/leetcode/counting_bits.md
 
 Given an integer `n`, count the number of `1`'s in the binary representation of every number in the range `[0, n]`. Return an array `output` where `output[i]` is the number of `1`'s in the binary repr
 

@@ -1,6 +1,6 @@
 """Longest Increasing Subsequence — https://leetcode.com/problems/longest-increasing-subsequence/
 
-Write-up & approaches: ../../docs/problems/longest_increasing_subsequence.md
+Write-up & approaches: ../../../docs/leetcode/longest_increasing_subsequence.md
 
 Given an integer array `nums`, return the *length* of the longest strictly *increasing* subsequence. A **subsequence** is a sequence that can be derived from the given sequence by deleting some or no 
 

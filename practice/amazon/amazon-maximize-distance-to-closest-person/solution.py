@@ -1,6 +1,6 @@
 """Maximize Distance to the Closest Occupied Seat — https://www.fastprep.io/problems/amazon-maximize-distance-to-closest-person
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-maximize-distance-to-closest-person.md
+Write-up & approaches: ../../../docs/amazon/amazon-maximize-distance-to-closest-person.md
 
 You are given an array seats, where seats[i] = 1 means seat i is occupied and seats[i] = 0 means it is empty. At least one seat is empty and at least one seat is occupied.
 

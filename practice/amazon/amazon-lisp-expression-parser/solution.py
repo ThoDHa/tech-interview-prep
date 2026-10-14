@@ -1,6 +1,6 @@
 """Lisp Expression Parser — https://www.fastprep.io/problems/amazon-lisp-expression-parser
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-lisp-expression-parser.md
+Write-up & approaches: ../../../docs/amazon/amazon-lisp-expression-parser.md
 
 Source note: The reported task identifies this algorithmic exercise. The executable interface, bounds, deterministic tie rules, and examples are the documented practice contract.
 

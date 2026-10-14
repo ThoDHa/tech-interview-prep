@@ -1,6 +1,6 @@
 """Tests for Interleaving String — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-interleaving-string.md.
+The worked approaches live in ../../../docs/amazon/amazon-interleaving-string.md.
 """
 
 import pytest

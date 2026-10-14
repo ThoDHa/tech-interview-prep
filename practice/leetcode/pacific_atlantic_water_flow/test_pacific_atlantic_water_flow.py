@@ -1,6 +1,6 @@
 """Tests for Pacific Atlantic Water Flow — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../docs/problems/pacific_atlantic_water_flow.md.
+The worked approaches live in ../../../docs/leetcode/pacific_atlantic_water_flow.md.
 """
 
 import pytest

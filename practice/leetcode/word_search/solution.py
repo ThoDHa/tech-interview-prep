@@ -1,6 +1,6 @@
 """Word Search: https://leetcode.com/problems/word-search/
 
-Write-up & approaches: ../../docs/problems/word_search.md
+Write-up & approaches: ../../../docs/leetcode/word_search.md
 
 Given an `m x n` grid of characters `board` and a string `word`, return `True` if
 `word` can be spelled out by a path of horizontally/vertically adjacent cells,

@@ -1,6 +1,6 @@
 """Multiply Strings — https://leetcode.com/problems/multiply-strings/
 
-Write-up & approaches: ../../docs/problems/multiply_strings.md
+Write-up & approaches: ../../../docs/leetcode/multiply_strings.md
 
 You are given two strings `num1` and `num2` that represent non-negative integers. Return the product of `num1` and `num2` in the form of a string. Assume that neither `num1` nor `num2` contain any lea
 

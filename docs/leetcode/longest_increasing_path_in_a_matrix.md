@@ -6,7 +6,7 @@
 
 **Algorithm:** [Depth-first search](https://en.wikipedia.org/wiki/Depth-first_search) · [Memoization](https://en.wikipedia.org/wiki/Memoization) · [Dynamic programming](https://en.wikipedia.org/wiki/Dynamic_programming)
 
-**Practice:** [`practice/longest_increasing_path_in_a_matrix/solution.py`](../../practice/longest_increasing_path_in_a_matrix/solution.py)
+**Practice:** [`practice/leetcode/longest_increasing_path_in_a_matrix/solution.py`](../../practice/leetcode/longest_increasing_path_in_a_matrix/solution.py)
 
 You are given a 2-D grid of integers `matrix`, where each integer is greater than or equal to `0`.
 

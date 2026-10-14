@@ -1,6 +1,6 @@
 """Burst Balloons — https://leetcode.com/problems/burst-balloons/
 
-Write-up & approaches: ../../docs/problems/burst_balloons.md
+Write-up & approaches: ../../../docs/leetcode/burst_balloons.md
 
 You are given an array of integers `nums` of size `n`. The `ith` element represents a balloon with an integer value of `nums[i]`. You must burst all of the balloons. If you burst the `ith` balloon, yo
 

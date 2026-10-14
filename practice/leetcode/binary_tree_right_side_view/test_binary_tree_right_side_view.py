@@ -2,7 +2,7 @@
 
 Trees are stored in the case files as LeetCode level-order arrays (null = missing)
 and marshalled to TreeNode here. The worked approaches live in
-../../docs/problems/binary_tree_right_side_view.md.
+../../../docs/leetcode/binary_tree_right_side_view.md.
 """
 
 import pytest

@@ -1,6 +1,6 @@
 """Tests for Allocate Minimum Pages — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-allocate-minimum-pages.md.
+The worked approaches live in ../../../docs/amazon/amazon-allocate-minimum-pages.md.
 """
 
 import pytest

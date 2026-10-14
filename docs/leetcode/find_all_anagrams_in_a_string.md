@@ -6,7 +6,7 @@
 
 **Algorithm:** [Sliding window](https://usaco.guide/gold/sliding-window)
 
-**Practice:** [`practice/find_all_anagrams_in_a_string/solution.py`](../../practice/find_all_anagrams_in_a_string/solution.py)
+**Practice:** [`practice/leetcode/find_all_anagrams_in_a_string/solution.py`](../../practice/leetcode/find_all_anagrams_in_a_string/solution.py)
 
 Given two strings `s` and `p`, return an array of all the start indices of `p`'s anagrams in `s`. You may return the answer in any order.
 

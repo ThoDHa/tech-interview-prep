@@ -1,6 +1,6 @@
 """Number of Atoms — https://www.fastprep.io/problems/amazon-number-of-atoms
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-number-of-atoms.md
+Write-up & approaches: ../../../docs/amazon/amazon-number-of-atoms.md
 
 You are given a valid chemical formula string. Return the count of each atom as one canonical string.
 

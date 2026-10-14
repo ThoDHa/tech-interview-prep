@@ -1,6 +1,6 @@
 """Find Minimum Inefficiency — https://www.fastprep.io/problems/find-minimum-inefficiency
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/find-minimum-inefficiency.md
+Write-up & approaches: ../../../docs/amazon/find-minimum-inefficiency.md
 
 Special thanks: 💐 1008th thank you to spike! 👏
 

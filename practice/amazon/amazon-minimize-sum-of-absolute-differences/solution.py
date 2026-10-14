@@ -1,6 +1,6 @@
 """Minimize Sum of Absolute Differences — https://www.fastprep.io/problems/amazon-minimize-sum-of-absolute-differences
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-minimize-sum-of-absolute-differences.md
+Write-up & approaches: ../../../docs/amazon/amazon-minimize-sum-of-absolute-differences.md
 
 Given two arrays a[] and b[] of equal length n. The task is to pair each element of array a to an element in array b, such that sum S of absolute differences of all the pairs is minimum.
 

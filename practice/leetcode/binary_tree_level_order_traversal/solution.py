@@ -1,6 +1,6 @@
 """Binary Tree Level Order Traversal: https://leetcode.com/problems/binary-tree-level-order-traversal/
 
-Write-up & approaches: ../../docs/problems/binary_tree_level_order_traversal.md
+Write-up & approaches: ../../../docs/leetcode/binary_tree_level_order_traversal.md
 
 Given the `root` of a binary tree, return the level order traversal of its nodes'
 values (from left to right, level by level).

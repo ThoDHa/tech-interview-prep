@@ -1,6 +1,6 @@
 """Maximize Product of Sizes of Subtrees — https://www.fastprep.io/problems/amazon-maximize-product-of-sizes-of-subtrees
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-maximize-product-of-sizes-of-subtrees.md
+Write-up & approaches: ../../../docs/amazon/amazon-maximize-product-of-sizes-of-subtrees.md
 
 BREAKING! Its sister question was found --> Checkout LC 343. Integer Break <-- 
 

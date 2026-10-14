@@ -2,7 +2,7 @@
 
 Trees are stored in the case files as LeetCode level-order arrays (null = missing
 node) and marshalled to TreeNode here. The worked approaches live in
-../../docs/problems/invert_binary_tree.md.
+../../../docs/leetcode/invert_binary_tree.md.
 """
 
 import pytest

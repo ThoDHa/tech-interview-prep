@@ -1,6 +1,6 @@
 """Domain Weight Calculation — https://www.fastprep.io/problems/amazon-domain-weight-calculation
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-domain-weight-calculation.md
+Write-up & approaches: ../../../docs/amazon/amazon-domain-weight-calculation.md
 
 Source note: This came from a real onsite interview report. The original report shared the core domain-score task and a concrete example, and FastPrep filled in the runnable function format, ordering 
 

@@ -1,6 +1,6 @@
 """Valid Parenthesis String — https://leetcode.com/problems/valid-parenthesis-string/
 
-Write-up & approaches: ../../docs/problems/valid_parenthesis_string.md
+Write-up & approaches: ../../../docs/leetcode/valid_parenthesis_string.md
 Reference implementation of the write-up's Greedy Range Tracking solution, kept
 next to the harness so authored cases stay falsifiable. Your own attempt
 lives in solution.py.

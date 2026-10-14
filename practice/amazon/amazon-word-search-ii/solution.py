@@ -1,6 +1,6 @@
 """Word Search II — https://www.fastprep.io/problems/amazon-word-search-ii
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-word-search-ii.md
+Write-up & approaches: ../../../docs/amazon/amazon-word-search-ii.md
 
 Given an m x n board of lowercase English letters and an array of distinct lowercase words, return every word that can be formed on the board.
 

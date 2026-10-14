@@ -131,7 +131,7 @@ capacity can only merge day loads, `shipping_days` never grows as `capacity` gro
 the capacities that finish within `days` form a suffix of the line
 `[max(weights), sum(weights)]`. Finding the left edge of a monotone suffix is exactly
 what [binary search](https://en.wikipedia.org/wiki/Binary_search_algorithm) does, the
-same move [Koko Eating Bananas](../koko_eating_bananas.md) makes over eating rates:
+same move [Koko Eating Bananas](../leetcode/koko_eating_bananas.md) makes over eating rates:
 
 1. Bracket the answer: `left = max(weights)` (the smallest meaningful capacity) and
    `right = sum(weights)` (always feasible: one day carries everything).
@@ -218,7 +218,7 @@ Only the bracket boundaries and the probe's running load are stored.
 - `max(weights)` and not `1` is the honest lower bracket: the heaviest package has to
   fit somewhere, no matter how many days are available.
 - This is the same binary search on a monotone predicate as
-  [Koko Eating Bananas](../koko_eating_bananas.md): a threshold hides in the problem, a
+  [Koko Eating Bananas](../leetcode/koko_eating_bananas.md): a threshold hides in the problem, a
   greedy test reads it, and the search halves the candidate line per probe.
 
 ## Comparison of Solutions

@@ -1,6 +1,6 @@
 """Number of 1 Bits — https://leetcode.com/problems/number-of-1-bits/
 
-Write-up & approaches: ../../docs/problems/number_of_1_bits.md
+Write-up & approaches: ../../../docs/leetcode/number_of_1_bits.md
 Reference implementation of the write-up's Brian Kernighan Erase Loop
 solution, kept next to the harness so authored cases stay falsifiable.
 Your own attempt lives in solution.py.

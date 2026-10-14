@@ -1,6 +1,6 @@
 """Get Success Value — https://www.fastprep.io/problems/get-success-value
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/get-success-value.md
+Write-up & approaches: ../../../docs/amazon/get-success-value.md
 
 Amazon Prime Video has recently released an exclusive series on its platform. They collected the number of viewers from n
 

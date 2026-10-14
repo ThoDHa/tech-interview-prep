@@ -1,6 +1,6 @@
 """Tests for Kth Smallest in Subarray — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-kth-smallest-in-subarray.md.
+The worked approaches live in ../../../docs/amazon/amazon-kth-smallest-in-subarray.md.
 """
 
 import pytest

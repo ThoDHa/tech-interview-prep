@@ -4,7 +4,7 @@ Each case stores a binary tree as a level-order array. The contract is a
 round-trip: serialize the tree to a string, deserialize it back, and confirm the
 restored tree matches the original array. cases.json (marker `simple`) is the
 "Run" set; cases_full.json (marker `full`) is the "Submit" gauntlet. The worked
-approaches live in ../../docs/problems/serialize_and_deserialize_binary_tree.md.
+approaches live in ../../../docs/leetcode/serialize_and_deserialize_binary_tree.md.
 """
 
 import pytest

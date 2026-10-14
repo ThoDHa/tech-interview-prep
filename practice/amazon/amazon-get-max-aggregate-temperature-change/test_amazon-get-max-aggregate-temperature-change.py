@@ -1,6 +1,6 @@
 """Tests for Max Aggregate Temp Change — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-get-max-aggregate-temperature-change.md.
+The worked approaches live in ../../../docs/amazon/amazon-get-max-aggregate-temperature-change.md.
 """
 
 import pytest

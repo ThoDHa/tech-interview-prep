@@ -1,6 +1,6 @@
 """Find Max Value — https://www.fastprep.io/problems/amazon-find-max-value
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-find-max-value.md
+Write-up & approaches: ../../../docs/amazon/amazon-find-max-value.md
 
 Amazon’s engineering team is developing a tool designed to minimize the size of an n x n grid named matrix, based on a compression ratio described by the array limit. Their challenge is to compute the
 

@@ -1,6 +1,6 @@
 """Tests for Maximum Non-Adjacent House Value — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-maximum-non-adjacent-house-value.md.
+The worked approaches live in ../../../docs/amazon/amazon-maximum-non-adjacent-house-value.md.
 """
 
 import pytest

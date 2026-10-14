@@ -1,6 +1,6 @@
 """Unique String Permutations — https://www.fastprep.io/problems/amazon-unique-string-permutations
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-unique-string-permutations.md
+Write-up & approaches: ../../../docs/amazon/amazon-unique-string-permutations.md
 
 Given a lowercase string s, return every distinct permutation of its characters exactly once.
 

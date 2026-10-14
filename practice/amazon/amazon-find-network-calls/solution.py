@@ -1,6 +1,6 @@
 """Find Networking Calls — https://www.fastprep.io/problems/amazon-find-network-calls
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-find-network-calls.md
+Write-up & approaches: ../../../docs/amazon/amazon-find-network-calls.md
 
 Source note: Example 2 was added on 2025-03-31; its relevant source image is included in Problem Source.
 

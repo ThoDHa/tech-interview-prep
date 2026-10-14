@@ -1,6 +1,6 @@
 """Tests for Min Operations — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-make-array-zero-by-subtracting-equal-amounts.md.
+The worked approaches live in ../../../docs/amazon/amazon-make-array-zero-by-subtracting-equal-amounts.md.
 """
 
 import pytest

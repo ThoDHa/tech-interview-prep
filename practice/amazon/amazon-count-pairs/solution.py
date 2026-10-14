@@ -1,6 +1,6 @@
 """Count Pairs — https://www.fastprep.io/problems/amazon-count-pairs
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-count-pairs.md
+Write-up & approaches: ../../../docs/amazon/amazon-count-pairs.md
 
 You are given an integer array numbers and a nonnegative integer k. Count the number of distinct value pairs (a, b) for which both values occur in numbers and a + k = b.
 

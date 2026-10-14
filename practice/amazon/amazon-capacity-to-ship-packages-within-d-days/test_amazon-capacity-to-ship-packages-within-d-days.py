@@ -1,6 +1,6 @@
 """Tests for Capacity To Ship Packages Within D Days — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-capacity-to-ship-packages-within-d-days.md.
+The worked approaches live in ../../../docs/amazon/amazon-capacity-to-ship-packages-within-d-days.md.
 """
 
 import pytest

@@ -1,6 +1,6 @@
 """First Bad Version: https://leetcode.com/problems/first-bad-version/
 
-Write-up & approaches: ../../docs/problems/first_bad_version.md
+Write-up & approaches: ../../../docs/leetcode/first_bad_version.md
 
 Versions `[1, 2, ..., n]` turn bad from some point on; given the API
 `isBadVersion(version)`, find the first bad version with the fewest calls.

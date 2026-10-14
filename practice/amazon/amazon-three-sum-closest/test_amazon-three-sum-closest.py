@@ -1,6 +1,6 @@
 """Tests for Three Sum Closest — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-three-sum-closest.md.
+The worked approaches live in ../../../docs/amazon/amazon-three-sum-closest.md.
 """
 
 import pytest

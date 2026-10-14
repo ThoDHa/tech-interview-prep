@@ -1,6 +1,6 @@
 """Find The Duplicate Number — https://leetcode.com/problems/find-the-duplicate-number/
 
-Write-up & approaches: ../../docs/problems/find_the_duplicate_number.md
+Write-up & approaches: ../../../docs/leetcode/find_the_duplicate_number.md
 Reference implementation of the write-up's Floyd's Cycle Detection solution.
 
 You are given an array of integers `nums` containing `n + 1` integers. Each integer in `nums` is in the range `[1, n]` inclusive. There is exactly one repeated integer in `nums`, and every other integer appears at most once. Return the repeated integer.

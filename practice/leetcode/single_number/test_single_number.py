@@ -1,6 +1,6 @@
 """Tests for Single Number — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../docs/problems/single_number.md.
+The worked approaches live in ../../../docs/leetcode/single_number.md.
 """
 
 import pytest

@@ -1,6 +1,6 @@
 """Tests for Same Tree — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../docs/problems/same_tree.md.
+The worked approaches live in ../../../docs/leetcode/same_tree.md.
 """
 
 import pytest

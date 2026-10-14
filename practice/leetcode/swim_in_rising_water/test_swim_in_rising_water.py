@@ -1,6 +1,6 @@
 """Tests for Swim In Rising Water — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../docs/problems/swim_in_rising_water.md.
+The worked approaches live in ../../../docs/leetcode/swim_in_rising_water.md.
 """
 
 import pytest

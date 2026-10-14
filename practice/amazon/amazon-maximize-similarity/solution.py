@@ -1,6 +1,6 @@
 """Maximize Similarity — https://www.fastprep.io/problems/amazon-maximize-similarity
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-maximize-similarity.md
+Write-up & approaches: ../../../docs/amazon/amazon-maximize-similarity.md
 
 In the world of Amazon's vast inventory management, you face a challenge of optimizing two inventories, inv1 and inv2, each containing n elements.
 

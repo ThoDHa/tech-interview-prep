@@ -1,6 +1,6 @@
 """Tests for Count Connected Components — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-count-connected-components.md.
+The worked approaches live in ../../../docs/amazon/amazon-count-connected-components.md.
 """
 
 import pytest

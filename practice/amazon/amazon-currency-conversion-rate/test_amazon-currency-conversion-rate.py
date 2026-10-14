@@ -1,6 +1,6 @@
 """Tests for Currency Conversion Rate — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-currency-conversion-rate.md.
+The worked approaches live in ../../../docs/amazon/amazon-currency-conversion-rate.md.
 """
 
 import pytest

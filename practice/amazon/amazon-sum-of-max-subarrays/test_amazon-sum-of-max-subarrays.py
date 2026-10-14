@@ -1,6 +1,6 @@
 """Tests for Sum of Max Subarrys — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-sum-of-max-subarrays.md.
+The worked approaches live in ../../../docs/amazon/amazon-sum-of-max-subarrays.md.
 """
 
 import pytest

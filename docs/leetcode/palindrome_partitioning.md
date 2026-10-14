@@ -6,7 +6,7 @@
 
 **Algorithm:** [Backtracking](https://en.wikipedia.org/wiki/Backtracking) · [Dynamic programming](https://en.wikipedia.org/wiki/Dynamic_programming) · [Longest palindromic substring](https://en.wikipedia.org/wiki/Longest_palindromic_substring)
 
-**Practice:** [`practice/palindrome_partitioning/solution.py`](../../practice/palindrome_partitioning/solution.py)
+**Practice:** [`practice/leetcode/palindrome_partitioning/solution.py`](../../practice/leetcode/palindrome_partitioning/solution.py)
 
 Given a string `s`, split `s` into substrings where every substring is a palindrome. Return all possible lists of palindromic substrings.
 

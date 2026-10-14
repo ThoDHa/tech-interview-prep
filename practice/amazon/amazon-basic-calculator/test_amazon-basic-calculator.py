@@ -1,6 +1,6 @@
 """Tests for Basic Calculator — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-basic-calculator.md.
+The worked approaches live in ../../../docs/amazon/amazon-basic-calculator.md.
 """
 
 import pytest

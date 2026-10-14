@@ -1,6 +1,6 @@
 """Detect Squares — https://leetcode.com/problems/detect-squares/
 
-Write-up & approaches: ../../docs/problems/detect_squares.md
+Write-up & approaches: ../../../docs/leetcode/detect_squares.md
 Canonical reference implementation: the write-up's Count Map with Diagonal
 Scan solution. Your own attempt lives in solution.py.
 

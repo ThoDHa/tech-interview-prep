@@ -6,7 +6,7 @@
 
 **Algorithm:** [Longest increasing subsequence](https://en.wikipedia.org/wiki/Longest_increasing_subsequence) · [Dynamic programming](https://en.wikipedia.org/wiki/Dynamic_programming) · [Binary search algorithm](https://en.wikipedia.org/wiki/Binary_search_algorithm)
 
-**Practice:** [`practice/longest_increasing_subsequence/solution.py`](../../practice/longest_increasing_subsequence/solution.py)
+**Practice:** [`practice/leetcode/longest_increasing_subsequence/solution.py`](../../practice/leetcode/longest_increasing_subsequence/solution.py)
 
 Given an integer array `nums`, return the *length* of the longest strictly *increasing* subsequence.
 
@@ -521,7 +521,7 @@ The `tails` list holds at most one entry per chain length.
 
 ## Comparison of Solutions
 
-The practice harness's `practice/longest_increasing_subsequence/reference.py` implements the **Patience Sorting with Binary Search** solution.
+The practice harness's `practice/leetcode/longest_increasing_subsequence/reference.py` implements the **Patience Sorting with Binary Search** solution.
 
 ### Time Complexity
 

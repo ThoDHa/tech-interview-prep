@@ -1,6 +1,6 @@
 """Tests for Design Twitter — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../docs/problems/design_twitter.md.
+The worked approaches live in ../../../docs/leetcode/design_twitter.md.
 """
 
 import pytest

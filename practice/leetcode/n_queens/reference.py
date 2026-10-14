@@ -1,6 +1,6 @@
 """N Queens — https://leetcode.com/problems/n-queens/
 
-Write-up & approaches: ../../docs/problems/n_queens.md
+Write-up & approaches: ../../../docs/leetcode/n_queens.md
 Canonical reference implementation of the write-up's Row-by-Row Backtracking
 solution, kept next to the harness so authored cases stay falsifiable. Your
 own attempt lives in solution.py.

@@ -1,6 +1,6 @@
 """Tests for Maximize Adjacent Difference With One Reversal — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-maximize-adjacent-difference-with-one-reversal.md.
+The worked approaches live in ../../../docs/amazon/amazon-maximize-adjacent-difference-with-one-reversal.md.
 """
 
 import pytest

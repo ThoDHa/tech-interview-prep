@@ -1,6 +1,6 @@
 """House Robber — https://leetcode.com/problems/house-robber/
 
-Write-up & approaches: ../../docs/problems/house_robber.md
+Write-up & approaches: ../../../docs/leetcode/house_robber.md
 Reference implementation of the write-up's Space-Optimized DP solution, kept
 next to the harness so authored cases stay falsifiable. Your own attempt
 lives in solution.py.

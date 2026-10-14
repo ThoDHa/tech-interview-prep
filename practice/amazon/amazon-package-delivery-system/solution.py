@@ -1,6 +1,6 @@
 """Package Delivery System — https://www.fastprep.io/problems/amazon-package-delivery-system
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-package-delivery-system.md
+Write-up & approaches: ../../../docs/amazon/amazon-package-delivery-system.md
 
 Each shipment scenario has a list of truck capacities and a list of package weights.
 

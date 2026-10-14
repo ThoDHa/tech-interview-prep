@@ -1,6 +1,6 @@
 """Tests for Process Queue — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-process-queue.md.
+The worked approaches live in ../../../docs/amazon/amazon-process-queue.md.
 """
 
 import pytest

@@ -1,6 +1,6 @@
 """Palindromic Substrings — https://leetcode.com/problems/palindromic-substrings/
 
-Write-up & approaches: ../../docs/problems/palindromic_substrings.md
+Write-up & approaches: ../../../docs/leetcode/palindromic_substrings.md
 
 Given a string `s`, return the number of substrings within `s` that are palindromes. A **palindrome** is a string that reads the same forward and backward.
 

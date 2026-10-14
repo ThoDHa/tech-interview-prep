@@ -1,6 +1,6 @@
 """Partition Labels — https://leetcode.com/problems/partition-labels/
 
-Write-up & approaches: ../../docs/problems/partition_labels.md
+Write-up & approaches: ../../../docs/leetcode/partition_labels.md
 Reference implementation of the write-up's Last-Occurrence Sweep solution, kept
 next to the harness so authored cases stay falsifiable. Your own attempt
 lives in solution.py.

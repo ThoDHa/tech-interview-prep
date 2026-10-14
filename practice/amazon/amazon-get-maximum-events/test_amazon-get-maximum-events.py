@@ -1,6 +1,6 @@
 """Tests for Get Max Events — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-get-maximum-events.md.
+The worked approaches live in ../../../docs/amazon/amazon-get-maximum-events.md.
 """
 
 import pytest

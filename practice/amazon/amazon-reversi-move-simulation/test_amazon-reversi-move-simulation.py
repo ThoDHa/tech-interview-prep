@@ -1,6 +1,6 @@
 """Tests for Apply a Reversi Move — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-reversi-move-simulation.md.
+The worked approaches live in ../../../docs/amazon/amazon-reversi-move-simulation.md.
 """
 
 import pytest

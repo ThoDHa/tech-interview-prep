@@ -1,6 +1,6 @@
 """Get Priorities After Execution — https://www.fastprep.io/problems/get-priorities-after-execution
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/get-priorities-after-execution.md
+Write-up & approaches: ../../../docs/amazon/get-priorities-after-execution.md
 
 Several processes are scheduled for execution on an AWS server.
 

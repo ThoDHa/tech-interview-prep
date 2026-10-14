@@ -1,6 +1,6 @@
 """Find Minimum Cost — https://www.fastprep.io/problems/amazon-find-minimum-cost
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-find-minimum-cost.md
+Write-up & approaches: ../../../docs/amazon/amazon-find-minimum-cost.md
 
 A warehouse has n identical containers arranged in a circle. Adjacent containers are one unit apart, and the goal is to make every container hold the same number of products.
 

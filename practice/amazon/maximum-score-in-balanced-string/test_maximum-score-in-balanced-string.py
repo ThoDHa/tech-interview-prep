@@ -1,6 +1,6 @@
 """Tests for Maximum Score in Balanced String — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/maximum-score-in-balanced-string.md.
+The worked approaches live in ../../../docs/amazon/maximum-score-in-balanced-string.md.
 """
 
 import pytest

@@ -1,7 +1,7 @@
 """Tests for 01 Matrix: your attempt (solution.py) against both case sets.
 
 cases.json (marker `simple`) is the "Run" set; cases_full.json (marker `full`) is
-the "Submit" gauntlet. The worked approaches live in ../../docs/problems/01_matrix.md.
+the "Submit" gauntlet. The worked approaches live in ../../../docs/leetcode/01_matrix.md.
 """
 
 import pytest

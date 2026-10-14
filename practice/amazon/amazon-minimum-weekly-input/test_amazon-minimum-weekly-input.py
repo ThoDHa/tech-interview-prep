@@ -1,6 +1,6 @@
 """Tests for Planning the Campaign — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-minimum-weekly-input.md.
+The worked approaches live in ../../../docs/amazon/amazon-minimum-weekly-input.md.
 """
 
 import pytest

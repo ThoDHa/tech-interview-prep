@@ -1,6 +1,6 @@
 """Tests for Find Max Value — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-find-max-value.md.
+The worked approaches live in ../../../docs/amazon/amazon-find-max-value.md.
 """
 
 import pytest

@@ -1,6 +1,6 @@
 """Reverse Binary String — https://www.fastprep.io/problems/amazon-reverse-binary-string
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-reverse-binary-string.md
+Write-up & approaches: ../../../docs/amazon/amazon-reverse-binary-string.md
 
 You are given a binary string. Find the minimum number of operations required to reverse it. An operation is defined as:
 

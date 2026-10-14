@@ -1,6 +1,6 @@
 """Employee Ratings Management System — https://www.fastprep.io/problems/amazon-employee-ratings-data-structure
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-employee-ratings-data-structure.md
+Write-up & approaches: ../../../docs/amazon/amazon-employee-ratings-data-structure.md
 
 Process a sequence of operations on an initially empty ordered list of employee ratings. Operation [1, rating] appends a rating. Operation [2, index] deletes the rating at the current zero-based index
 

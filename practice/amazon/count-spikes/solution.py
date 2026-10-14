@@ -1,6 +1,6 @@
 """Count Spikes — https://www.fastprep.io/problems/count-spikes
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/count-spikes.md
+Write-up & approaches: ../../../docs/amazon/count-spikes.md
 
 A k-Spike is an element that satisfies both the following conditions: 
 

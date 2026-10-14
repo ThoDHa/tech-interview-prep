@@ -1,6 +1,6 @@
 """Tests for Count Special Substrings — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-count-special-substrs.md.
+The worked approaches live in ../../../docs/amazon/amazon-count-special-substrs.md.
 """
 
 import pytest

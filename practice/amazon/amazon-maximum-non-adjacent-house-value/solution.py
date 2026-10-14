@@ -1,6 +1,6 @@
 """Maximum Non-Adjacent House Value — https://www.fastprep.io/problems/amazon-maximum-non-adjacent-house-value
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-maximum-non-adjacent-house-value.md
+Write-up & approaches: ../../../docs/amazon/amazon-maximum-non-adjacent-house-value.md
 
 You are given an array values where values[i] is the amount available in the ith house arranged in a line.
 

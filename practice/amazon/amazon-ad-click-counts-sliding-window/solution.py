@@ -1,6 +1,6 @@
 """Recent Advertisement Click Counts — https://www.fastprep.io/problems/amazon-ad-click-counts-sliding-window
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-ad-click-counts-sliding-window.md
+Write-up & approaches: ../../../docs/amazon/amazon-ad-click-counts-sliding-window.md
 
 You receive a finite sequence of advertisement click and count operations. Each operation is one of:
 

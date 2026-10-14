@@ -1,6 +1,6 @@
 """Tests for Kth Largest Element In An Array — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../docs/problems/kth_largest_element_in_an_array.md.
+The worked approaches live in ../../../docs/leetcode/kth_largest_element_in_an_array.md.
 """
 
 import pytest

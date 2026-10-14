@@ -1,6 +1,6 @@
 """Surrounded Regions — https://leetcode.com/problems/surrounded-regions/
 
-Write-up & approaches: ../../docs/problems/surrounded_regions.md
+Write-up & approaches: ../../../docs/leetcode/surrounded_regions.md
 Reference implementation of the write-up's Border DFS + Capture solution,
 kept next to the harness so authored cases stay falsifiable. Your own attempt
 lives in solution.py.

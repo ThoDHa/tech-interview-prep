@@ -1,6 +1,6 @@
 """Swim In Rising Water — https://leetcode.com/problems/swim-in-rising-water/
 
-Write-up & approaches: ../../docs/problems/swim_in_rising_water.md
+Write-up & approaches: ../../../docs/leetcode/swim_in_rising_water.md
 
 You are given a square 2-D matrix of distinct integers `grid` where each integer `grid[i][j]` represents the elevation at position `(i, j)`. Rain starts to fall at time = `0`, which causes the water l
 

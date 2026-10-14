@@ -1,6 +1,6 @@
 """Select Least Resource Tasks — https://www.fastprep.io/problems/amazon-select-least-resource-tasks
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-select-least-resource-tasks.md
+Write-up & approaches: ../../../docs/amazon/amazon-select-least-resource-tasks.md
 
 Amazon's Elastic Container Service schedules tasks dynamically. You are given an integer array resourceConsumption, where resourceConsumption[i] is the resource consumption of one task.
 

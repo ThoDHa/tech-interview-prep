@@ -1,6 +1,6 @@
 """Tests for Minimum Cost for Roads and Hospitals — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-roads-and-hospitals-minimum-cost.md.
+The worked approaches live in ../../../docs/amazon/amazon-roads-and-hospitals-minimum-cost.md.
 """
 
 import pytest

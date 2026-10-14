@@ -1,6 +1,6 @@
 """Tests for Process Queries On Cart — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-process-queries-on-cart.md.
+The worked approaches live in ../../../docs/amazon/amazon-process-queries-on-cart.md.
 """
 
 import pytest

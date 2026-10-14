@@ -1,6 +1,6 @@
 """Tests for Minimize Storage Required — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-minimum-storage-capacity-required.md.
+The worked approaches live in ../../../docs/amazon/amazon-minimum-storage-capacity-required.md.
 """
 
 import pytest

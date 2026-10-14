@@ -214,19 +214,19 @@ Space is typically O(n) for the output array, O(1) additional.
 ## Practice Progression
 
 ### Level 1: Core Patterns
-1. **[LC 56 - Merge Intervals](../../problems/merge_intervals.md)** (Merge, Sort by start)
-2. **[LC 435 - Non-overlapping Intervals](../../problems/non_overlapping_intervals.md)** (Schedule, Sort by end)
+1. **[LC 56 - Merge Intervals](../../leetcode/merge_intervals.md)** (Merge, Sort by start)
+2. **[LC 435 - Non-overlapping Intervals](../../leetcode/non_overlapping_intervals.md)** (Schedule, Sort by end)
 
 ### Level 2: Variants
-3. **[LC 57 - Insert Interval](../../problems/insert_interval.md)** (Three-phase)
+3. **[LC 57 - Insert Interval](../../leetcode/insert_interval.md)** (Three-phase)
 4. **LC 452 - Minimum Arrows** (Group counting)
 
 ### Level 3: Two Lists
 5. **LC 986 - Interval List Intersections** (Two-pointer)
 
 ### Level 4: Advanced
-6. **[LC 253 - Meeting Rooms II](../../problems/meeting_rooms_ii.md)** (Concurrent intervals)
-7. **[LC 1235 - Maximum Profit in Job Scheduling](../../problems/maximum_profit_in_job_scheduling.md)** (Weighted scheduling)
+6. **[LC 253 - Meeting Rooms II](../../leetcode/meeting_rooms_ii.md)** (Concurrent intervals)
+7. **[LC 1235 - Maximum Profit in Job Scheduling](../../leetcode/maximum_profit_in_job_scheduling.md)** (Weighted scheduling)
 
 ---
 

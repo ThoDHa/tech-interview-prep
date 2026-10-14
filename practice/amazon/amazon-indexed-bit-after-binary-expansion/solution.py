@@ -1,6 +1,6 @@
 """Bit at an Index After Repeated Binary Expansion — https://www.fastprep.io/problems/amazon-indexed-bit-after-binary-expansion
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-indexed-bit-after-binary-expansion.md
+Write-up & approaches: ../../../docs/amazon/amazon-indexed-bit-after-binary-expansion.md
 
 Start with a binary string bits. In one expansion round, replace every character independently:
 

@@ -1,6 +1,6 @@
 """Maximum Stock Profit with At Most Two Transactions — https://www.fastprep.io/problems/amazon-best-time-to-buy-and-sell-stock-iii
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-best-time-to-buy-and-sell-stock-iii.md
+Write-up & approaches: ../../../docs/amazon/amazon-best-time-to-buy-and-sell-stock-iii.md
 
 You are given an array prices, where prices[i] is the price of one stock on day i. Return the maximum profit you can earn by completing at most two transactions.
 

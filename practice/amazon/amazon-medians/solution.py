@@ -1,6 +1,6 @@
 """All About Medians — https://www.fastprep.io/problems/amazon-medians
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-medians.md
+Write-up & approaches: ../../../docs/amazon/amazon-medians.md
 
 A new Amazon intern encountered a challenging task. Currently, the intern has n integers, where the value of the ith element is represented by the array element nums[i]. The intern is curious to play 
 

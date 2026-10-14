@@ -6,7 +6,7 @@
 
 **Algorithm:** [Tree traversal](https://en.wikipedia.org/wiki/Tree_traversal) · [Depth-first search](https://en.wikipedia.org/wiki/Depth-first_search) · [Breadth-first search](https://en.wikipedia.org/wiki/Breadth-first_search)
 
-**Practice:** [`practice/invert_binary_tree/solution.py`](../../practice/invert_binary_tree/solution.py)
+**Practice:** [`practice/leetcode/invert_binary_tree/solution.py`](../../practice/leetcode/invert_binary_tree/solution.py)
 
 Given the `root` of a binary tree, invert the tree, and return its root.
 

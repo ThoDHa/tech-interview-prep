@@ -6,7 +6,7 @@
 
 **Algorithm:** [Levenshtein distance](https://en.wikipedia.org/wiki/Levenshtein_distance) · [Dynamic programming](https://en.wikipedia.org/wiki/Dynamic_programming) · [Memoization](https://en.wikipedia.org/wiki/Memoization)
 
-**Practice:** [`practice/edit_distance/solution.py`](../../practice/edit_distance/solution.py)
+**Practice:** [`practice/leetcode/edit_distance/solution.py`](../../practice/leetcode/edit_distance/solution.py)
 
 You are given two strings `word1` and `word2`, each consisting of lowercase English letters.
 

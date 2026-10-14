@@ -1,6 +1,6 @@
 """Process Queue — https://www.fastprep.io/problems/amazon-process-queue
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-process-queue.md
+Write-up & approaches: ../../../docs/amazon/amazon-process-queue.md
 
 You are given an array wait with elements that represent processes where each element in the array denotes the amount on time that process can wait before needing to be removed. Each second, the next 
 

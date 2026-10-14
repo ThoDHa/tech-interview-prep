@@ -2,7 +2,7 @@
 
 cases.json (marker `simple`) is the "Run" set; cases_full.json (marker `full`) is
 the "Submit" gauntlet. The worked approaches live in
-../../docs/problems/minimum_height_trees.md.
+../../../docs/leetcode/minimum_height_trees.md.
 """
 
 import pytest

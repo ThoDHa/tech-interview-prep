@@ -6,7 +6,7 @@
 
 **Algorithm:** [Hash table](https://en.wikipedia.org/wiki/Hash_table)
 
-**Practice:** [`practice/valid_sudoku/solution.py`](../../practice/valid_sudoku/solution.py)
+**Practice:** [`practice/leetcode/valid_sudoku/solution.py`](../../practice/leetcode/valid_sudoku/solution.py)
 
 You are given a `9 x 9` Sudoku board `board`. A Sudoku board is valid if the following rules are followed:
 

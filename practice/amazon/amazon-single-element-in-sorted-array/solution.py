@@ -1,6 +1,6 @@
 """Single Element in a Sorted Array — https://www.fastprep.io/problems/amazon-single-element-in-sorted-array
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-single-element-in-sorted-array.md
+Write-up & approaches: ../../../docs/amazon/amazon-single-element-in-sorted-array.md
 
 Given a sorted integer array nums, every value appears exactly twice except for one value that appears exactly once.
 

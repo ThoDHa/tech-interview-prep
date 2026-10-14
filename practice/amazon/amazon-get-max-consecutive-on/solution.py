@@ -1,6 +1,6 @@
 """Max Consecutive ON Servers — https://www.fastprep.io/problems/amazon-get-max-consecutive-on
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-get-max-consecutive-on.md
+Write-up & approaches: ../../../docs/amazon/amazon-get-max-consecutive-on.md
 
 Special thanks: Barry contributed this problem.
 

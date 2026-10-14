@@ -1,6 +1,6 @@
 """Tests for Make Value Groups Contiguous — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-make-value-groups-contiguous.md.
+The worked approaches live in ../../../docs/amazon/amazon-make-value-groups-contiguous.md.
 """
 
 import pytest

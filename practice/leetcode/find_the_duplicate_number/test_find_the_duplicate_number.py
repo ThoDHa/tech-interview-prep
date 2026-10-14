@@ -1,6 +1,6 @@
 """Tests for Find The Duplicate Number — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../docs/problems/find_the_duplicate_number.md.
+The worked approaches live in ../../../docs/leetcode/find_the_duplicate_number.md.
 """
 
 import pytest

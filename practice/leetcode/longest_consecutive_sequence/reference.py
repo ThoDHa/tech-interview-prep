@@ -1,6 +1,6 @@
 """Longest Consecutive Sequence — https://leetcode.com/problems/longest-consecutive-sequence/
 
-Write-up & approaches: ../../docs/problems/longest_consecutive_sequence.md
+Write-up & approaches: ../../../docs/leetcode/longest_consecutive_sequence.md
 
 Canonical reference implementation: the write-up's optimal approach (set
 membership with sequence-start detection), kept next to the harness so

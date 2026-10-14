@@ -6,7 +6,7 @@
 
 **Algorithm:** [Greedy algorithm](https://en.wikipedia.org/wiki/Greedy_algorithm) · [Array data structure](https://en.wikipedia.org/wiki/Array_data_structure)
 
-**Practice:** [`practice/merge_triplets_to_form_target_triplet/solution.py`](../../practice/merge_triplets_to_form_target_triplet/solution.py)
+**Practice:** [`practice/leetcode/merge_triplets_to_form_target_triplet/solution.py`](../../practice/leetcode/merge_triplets_to_form_target_triplet/solution.py)
 
 You are given a 2D array of integers `triplets`, where `triplets[i] = [ai, bi, ci]` represents the `ith` **triplet**. You are also given an array of integers `target = [x, y, z]` which is the triplet we want to obtain.
 
@@ -299,7 +299,7 @@ Three booleans, regardless of `n`.
 
 ## Comparison of Solutions
 
-The practice harness's `practice/merge_triplets_to_form_target_triplet/reference.py` implements the **Greedy Component Flags** solution.
+The practice harness's `practice/leetcode/merge_triplets_to_form_target_triplet/reference.py` implements the **Greedy Component Flags** solution.
 
 ### Time Complexity
 

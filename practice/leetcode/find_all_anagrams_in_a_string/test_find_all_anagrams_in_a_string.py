@@ -2,7 +2,7 @@
 
 cases.json (marker `simple`) is the "Run" set; cases_full.json (marker `full`) is
 the "Submit" gauntlet. The worked approaches live in
-../../docs/problems/find_all_anagrams_in_a_string.md.
+../../../docs/leetcode/find_all_anagrams_in_a_string.md.
 """
 
 import pytest

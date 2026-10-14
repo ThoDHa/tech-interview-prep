@@ -1,6 +1,6 @@
 """Get Max Increments — https://www.fastprep.io/problems/amazon-get-max-increments
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-get-max-increments.md
+Write-up & approaches: ../../../docs/amazon/amazon-get-max-increments.md
 
 IMDB, an Amazon-owned company, is a widely used platform for discovering scores of films and television series.
 

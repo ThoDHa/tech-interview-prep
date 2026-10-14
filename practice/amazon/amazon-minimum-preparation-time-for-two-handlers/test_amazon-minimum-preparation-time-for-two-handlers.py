@@ -1,6 +1,6 @@
 """Tests for Minimum Preparation Time for Two Handlers — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-minimum-preparation-time-for-two-handlers.md.
+The worked approaches live in ../../../docs/amazon/amazon-minimum-preparation-time-for-two-handlers.md.
 """
 
 import pytest

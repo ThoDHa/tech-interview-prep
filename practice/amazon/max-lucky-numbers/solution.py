@@ -1,6 +1,6 @@
 """Max Lucky Numbers — https://www.fastprep.io/problems/max-lucky-numbers
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/max-lucky-numbers.md
+Write-up & approaches: ../../../docs/amazon/max-lucky-numbers.md
 
 Amazon.com is distributing coupons in the form of a lottery system for loyal customers. The coupons are called "lucky numbers" and the customer with the largest lucky number gets the best discount. De
 

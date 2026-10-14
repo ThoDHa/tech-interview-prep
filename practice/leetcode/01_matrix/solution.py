@@ -1,6 +1,6 @@
 """01 Matrix: https://leetcode.com/problems/01-matrix/
 
-Write-up & approaches: ../../docs/problems/01_matrix.md
+Write-up & approaches: ../../../docs/leetcode/01_matrix.md
 
 Given an `m x n` binary matrix `mat`, return a matrix of the same size where each
 cell holds the distance to the nearest `0`. Adjacent cells are distance `1` apart.

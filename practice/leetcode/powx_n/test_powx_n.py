@@ -1,6 +1,6 @@
 """Tests for Pow(x, n) — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../docs/problems/powx_n.md.
+The worked approaches live in ../../../docs/leetcode/powx_n.md.
 """
 
 import pytest

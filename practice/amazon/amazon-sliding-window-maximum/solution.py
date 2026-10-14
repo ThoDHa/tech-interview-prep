@@ -1,6 +1,6 @@
 """Sliding Window Maximum — https://www.fastprep.io/problems/amazon-sliding-window-maximum
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-sliding-window-maximum.md
+Write-up & approaches: ../../../docs/amazon/amazon-sliding-window-maximum.md
 
 Given an integer array nums and a window size k, return the maximum value in every contiguous window of length k, from left to right.
 

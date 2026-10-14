@@ -1,6 +1,6 @@
 """Tests for Get Active Requests Count — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-get-active-requests-count.md.
+The worked approaches live in ../../../docs/amazon/amazon-get-active-requests-count.md.
 """
 
 import pytest

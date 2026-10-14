@@ -1,6 +1,6 @@
 """Tests for Get Max Servers — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-find-maximum-number-of-servers.md.
+The worked approaches live in ../../../docs/amazon/amazon-find-maximum-number-of-servers.md.
 """
 
 import pytest

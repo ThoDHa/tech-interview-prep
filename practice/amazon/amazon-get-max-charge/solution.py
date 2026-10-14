@@ -1,6 +1,6 @@
 """Get Max Charge — https://www.fastprep.io/problems/amazon-get-max-charge
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-get-max-charge.md
+Write-up & approaches: ../../../docs/amazon/amazon-get-max-charge.md
 
 A team of engineers at Amazon, using advanced simulation tools, are analyzing a series of interconnected systems, where each system has a charge value represented by charge[i] (which can be positive, 
 

@@ -6,7 +6,7 @@
 
 **Algorithm:** [Recursion](https://en.wikipedia.org/wiki/Recursion_(computer_science)) · [Dynamic programming](https://en.wikipedia.org/wiki/Dynamic_programming) · [Memoization](https://en.wikipedia.org/wiki/Memoization) · [Regular expression](https://en.wikipedia.org/wiki/Regular_expression)
 
-**Practice:** [`practice/regular_expression_matching/solution.py`](../../practice/regular_expression_matching/solution.py)
+**Practice:** [`practice/leetcode/regular_expression_matching/solution.py`](../../practice/leetcode/regular_expression_matching/solution.py)
 
 You are given an input string `s` consisting of lowercase english letters, and a pattern `p` consisting of lowercase english letters, as well as `'.'`, and `'*'` characters.
 
@@ -454,7 +454,7 @@ class Solution:
 
 ## Comparison of Solutions
 
-The practice harness's `practice/regular_expression_matching/reference.py` implements the **Top-Down Memoization** solution.
+The practice harness's `practice/leetcode/regular_expression_matching/reference.py` implements the **Top-Down Memoization** solution.
 
 ### Time Complexity
 

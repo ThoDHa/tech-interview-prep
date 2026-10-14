@@ -6,7 +6,7 @@
 
 **Algorithm:** [Longest common subsequence](https://en.wikipedia.org/wiki/Longest_common_subsequence) · [Dynamic programming](https://en.wikipedia.org/wiki/Dynamic_programming) · [Memoization](https://en.wikipedia.org/wiki/Memoization)
 
-**Practice:** [`practice/longest_common_subsequence/solution.py`](../../practice/longest_common_subsequence/solution.py)
+**Practice:** [`practice/leetcode/longest_common_subsequence/solution.py`](../../practice/leetcode/longest_common_subsequence/solution.py)
 
 Given two strings `text1` and `text2`, return the length of the *longest common subsequence* between the two strings if one exists, otherwise return `0`.
 

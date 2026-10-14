@@ -1,6 +1,6 @@
 """Dropped Requests — https://www.fastprep.io/problems/amazon-dropped-requests
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-dropped-requests.md
+Write-up & approaches: ../../../docs/amazon/amazon-dropped-requests.md
 
 Special thanks: 🥝 1003 thanks to the real MVP spike! 🍉
 

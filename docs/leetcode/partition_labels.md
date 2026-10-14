@@ -6,7 +6,7 @@
 
 **Algorithm:** [Greedy algorithm](https://en.wikipedia.org/wiki/Greedy_algorithm) · [Hash table](https://en.wikipedia.org/wiki/Hash_table) · [Two-pointer technique](https://usaco.guide/silver/two-pointers)
 
-**Practice:** [`practice/partition_labels/solution.py`](../../practice/partition_labels/solution.py)
+**Practice:** [`practice/leetcode/partition_labels/solution.py`](../../practice/leetcode/partition_labels/solution.py)
 
 You are given a string `s` consisting of lowercase english letters.
 
@@ -309,7 +309,7 @@ One counting pass and one cut pass, constant work per position in each.
 
 ## Comparison of Solutions
 
-The practice harness's `practice/partition_labels/reference.py` implements the **Last-Occurrence Sweep** solution.
+The practice harness's `practice/leetcode/partition_labels/reference.py` implements the **Last-Occurrence Sweep** solution.
 
 ### Time Complexity
 

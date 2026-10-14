@@ -1,6 +1,6 @@
 """Tests for Dynamic Kth Largest Queries — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-dynamic-kth-largest-queries.md.
+The worked approaches live in ../../../docs/amazon/amazon-dynamic-kth-largest-queries.md.
 """
 
 import pytest

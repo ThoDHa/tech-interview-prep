@@ -1,6 +1,6 @@
 """Get Max Racers — https://www.fastprep.io/problems/amazon-get-max-racers
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-get-max-racers.md
+Write-up & approaches: ../../../docs/amazon/amazon-get-max-racers.md
 
 HackerLand Sports Club wants to send a team for a relay race. There are n racers in the group indexed from 0 to n - 1. The ith racer has a speed of speed[i] units.
 

@@ -1,6 +1,6 @@
 """Calculate Max Salary — https://www.fastprep.io/problems/amazon-calculate-max-salary
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-calculate-max-salary.md
+Write-up & approaches: ../../../docs/amazon/amazon-calculate-max-salary.md
 
 You work at a company that has 5 offices, each with a distinct salary level and a priority ranking from lowest to highest as follows: Office A ($1)<OfficeB($10)< Office C ($100)<OfficeD($1,000)< Offic
 

@@ -132,7 +132,7 @@ The brute force's suffix question, "what is the best score from `distinct_values
    before the previous, plus the take).
 4. Return the last entry, the best over all distinct values.
 
-A gap of `2` or more (for example values `2` and `4` with no `3` chosen) is conflict-free because choosing `x` blocks only `x - 1` and `x + 1`; this is the same reduction the [House Robber](../house_robber.md) ladder applies, with value points standing in for houses.
+A gap of `2` or more (for example values `2` and `4` with no `3` chosen) is conflict-free because choosing `x` blocks only `x - 1` and `x + 1`; this is the same reduction the [House Robber](../leetcode/house_robber.md) ladder applies, with value points standing in for houses.
 
 #### Recurrence
 
@@ -317,6 +317,6 @@ The frequency table is the only structure left (one entry per distinct value, at
 ### Optimization Notes
 
 - The `gap >= 2` stacking branch is where this recurrence deliberately leaves House Robber's shape: with no forbidden neighbor between the value points, the take stacks straight onto `one_back` instead of falling back two entries. Because `best_through` never decreases, the uniform `max(one_back, two_back + take)` returns the same numbers even on wide gaps; the explicit branch keeps the reasoning tied to the constraint instead of leaning on that monotonicity.
-- Adding a `@functools.cache` on the brute force's `decide` reproduces the memoized run in `O(d)` time and is the quickest bridge from the recursion to the table; the hand-rolled ladder on the [House Robber](../house_robber.md) page shows the technique step by step.
+- Adding a `@functools.cache` on the brute force's `decide` reproduces the memoized run in `O(d)` time and is the quickest bridge from the recursion to the table; the hand-rolled ladder on the [House Robber](../leetcode/house_robber.md) page shows the technique step by step.
 - A common pitfall is iterating raw `nums` positions instead of distinct values: the constraint is on values, so unsorted iteration breaks the "only the neighbor conflicts" property that the sort buys.
 - With values bounded by `V`, a counting sort of the value points would drop the `d log d` sort term to `O(V + n)`; for unbounded values the comparison sort stands.

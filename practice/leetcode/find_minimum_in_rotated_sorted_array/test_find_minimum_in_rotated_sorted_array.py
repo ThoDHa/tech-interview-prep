@@ -1,6 +1,6 @@
 """Tests for Find Minimum In Rotated Sorted Array — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../docs/problems/find_minimum_in_rotated_sorted_array.md.
+The worked approaches live in ../../../docs/leetcode/find_minimum_in_rotated_sorted_array.md.
 """
 
 import pytest

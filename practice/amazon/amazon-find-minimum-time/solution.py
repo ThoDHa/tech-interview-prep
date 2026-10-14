@@ -1,6 +1,6 @@
 """Find Minimum Time — https://www.fastprep.io/problems/amazon-find-minimum-time
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-find-minimum-time.md
+Write-up & approaches: ../../../docs/amazon/amazon-find-minimum-time.md
 
 In the context of an Amazon gaming product involving a snake and apples on a number line, the product simulates a set of unique coordinates representing the positions of the apples. The array named po
 

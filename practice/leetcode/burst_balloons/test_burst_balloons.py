@@ -1,6 +1,6 @@
 """Tests for Burst Balloons — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../docs/problems/burst_balloons.md.
+The worked approaches live in ../../../docs/leetcode/burst_balloons.md.
 """
 
 import pytest

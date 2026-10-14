@@ -6,7 +6,7 @@
 
 **Algorithm:** [Greedy algorithm](https://en.wikipedia.org/wiki/Greedy_algorithm) · [Sorting](https://en.wikipedia.org/wiki/Sorting_algorithm) · [Heap (data structure)](https://en.wikipedia.org/wiki/Heap_(data_structure))
 
-**Practice:** [`practice/hand_of_straights/solution.py`](../../practice/hand_of_straights/solution.py)
+**Practice:** [`practice/leetcode/hand_of_straights/solution.py`](../../practice/leetcode/hand_of_straights/solution.py)
 
 You are given an integer array `hand` where `hand[i]` is the value written on the `ith` card and an integer `groupSize`.
 
@@ -282,7 +282,7 @@ The `Counter` and the heap hold one entry per distinct value.
 
 ## Comparison of Solutions
 
-The practice harness's `practice/hand_of_straights/reference.py` implements the **Greedy** solution.
+The practice harness's `practice/leetcode/hand_of_straights/reference.py` implements the **Greedy** solution.
 
 ### Time Complexity
 

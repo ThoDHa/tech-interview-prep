@@ -2,7 +2,7 @@
 
 cases.json (marker `simple`) is the "Run" set; cases_full.json (marker `full`) is
 the "Submit" gauntlet. The worked approaches live in
-../../docs/problems/k_closest_points_to_origin.md.
+../../../docs/leetcode/k_closest_points_to_origin.md.
 """
 
 import pytest

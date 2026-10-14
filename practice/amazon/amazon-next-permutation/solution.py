@@ -1,6 +1,6 @@
 """Next Permutation — https://www.fastprep.io/problems/amazon-next-permutation
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-next-permutation.md
+Write-up & approaches: ../../../docs/amazon/amazon-next-permutation.md
 
 Return the lexicographically next permutation of nums. If the current ordering is the greatest possible, return the smallest ordering. Duplicate values are allowed.
 

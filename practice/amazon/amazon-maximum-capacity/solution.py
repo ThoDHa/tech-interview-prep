@@ -1,6 +1,6 @@
 """Maximum System Memory Capacity — https://www.fastprep.io/problems/amazon-maximum-capacity
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-maximum-capacity.md
+Write-up & approaches: ../../../docs/amazon/amazon-maximum-capacity.md
 
 Amazon is optimizing the capacity of a cloud system with n servers. The memory capacity of the i-th server is memory[i].
 

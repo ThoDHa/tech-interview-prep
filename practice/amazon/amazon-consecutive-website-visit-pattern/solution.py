@@ -1,6 +1,6 @@
 """Most Frequent Consecutive Website Pattern — https://www.fastprep.io/problems/amazon-consecutive-website-visit-pattern
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-consecutive-website-visit-pattern.md
+Write-up & approaches: ../../../docs/amazon/amazon-consecutive-website-visit-pattern.md
 
 You are given three equal-length arrays describing website visits. Entry i contains a username, an integer timestamp, and a website.
 

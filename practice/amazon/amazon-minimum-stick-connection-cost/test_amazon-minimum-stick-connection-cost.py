@@ -1,6 +1,6 @@
 """Tests for Minimum Stick Connection Cost — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-minimum-stick-connection-cost.md.
+The worked approaches live in ../../../docs/amazon/amazon-minimum-stick-connection-cost.md.
 """
 
 import pytest

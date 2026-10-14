@@ -1,6 +1,6 @@
 """Count Islands from Streaming Rows — https://www.fastprep.io/problems/amazon-streaming-island-count
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-streaming-island-count.md
+Write-up & approaches: ../../../docs/amazon/amazon-streaming-island-count.md
 
 A binary matrix arrives one row at a time from top to bottom. Given those rows as the finite ordered batch rows, return an array where result i is the number of islands present after rows 0 through i 
 

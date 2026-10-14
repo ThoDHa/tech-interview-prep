@@ -1,6 +1,6 @@
 """Non Overlapping Intervals — https://leetcode.com/problems/non-overlapping-intervals/
 
-Write-up & approaches: ../../docs/problems/non_overlapping_intervals.md
+Write-up & approaches: ../../../docs/leetcode/non_overlapping_intervals.md
 Reference implementation of the write-up's Greedy Earliest End solution, kept
 next to the harness so authored cases stay falsifiable. Your own attempt
 lives in solution.py.

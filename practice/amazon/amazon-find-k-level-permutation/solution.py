@@ -1,6 +1,6 @@
 """Find K Level Permutation — https://www.fastprep.io/problems/amazon-find-k-level-permutation
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-find-k-level-permutation.md
+Write-up & approaches: ../../../docs/amazon/amazon-find-k-level-permutation.md
 
 You have an array from 1 to N now you have to find a K-level permutation such that for N-K+1 segments or windows you get the difference between sum of maximum segment sum and minimum segment must be a
 

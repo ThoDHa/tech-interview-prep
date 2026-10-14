@@ -1,6 +1,6 @@
 """Tests for Word Search II — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-word-search-ii.md.
+The worked approaches live in ../../../docs/amazon/amazon-word-search-ii.md.
 """
 
 import pytest

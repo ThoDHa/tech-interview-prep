@@ -1,6 +1,6 @@
 """Median of Two Sorted Arrays — https://leetcode.com/problems/median-of-two-sorted-arrays/
 
-Write-up & approaches: ../../docs/problems/median_of_two_sorted_arrays.md
+Write-up & approaches: ../../../docs/leetcode/median_of_two_sorted_arrays.md
 Reference implementation of the write-up's Partition Binary Search solution.
 
 You are given two integer arrays `nums1` and `nums2` of size `m` and `n` respectively, where each is sorted in ascending order. Return the median value among all elements of the two arrays.

@@ -1,6 +1,6 @@
 """Tests for Find Ideal Days — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-find-ideal-days.md.
+The worked approaches live in ../../../docs/amazon/amazon-find-ideal-days.md.
 """
 
 import pytest

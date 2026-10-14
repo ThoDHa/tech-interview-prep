@@ -1,6 +1,6 @@
 """Tests for Fortune Telling — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-minimize-the-range.md.
+The worked approaches live in ../../../docs/amazon/amazon-minimize-the-range.md.
 """
 
 import pytest

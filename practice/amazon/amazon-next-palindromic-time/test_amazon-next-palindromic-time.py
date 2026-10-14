@@ -1,6 +1,6 @@
 """Tests for Next Palindromic Time — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-next-palindromic-time.md.
+The worked approaches live in ../../../docs/amazon/amazon-next-palindromic-time.md.
 """
 
 import pytest

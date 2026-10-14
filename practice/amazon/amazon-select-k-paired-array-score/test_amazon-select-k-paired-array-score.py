@@ -1,6 +1,6 @@
 """Tests for Select K Paired Indices for Maximum Score — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-select-k-paired-array-score.md.
+The worked approaches live in ../../../docs/amazon/amazon-select-k-paired-array-score.md.
 """
 
 import pytest

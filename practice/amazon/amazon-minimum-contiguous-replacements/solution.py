@@ -1,6 +1,6 @@
 """Minimum Contiguous Replacements — https://www.fastprep.io/problems/amazon-minimum-contiguous-replacements
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-minimum-contiguous-replacements.md
+Write-up & approaches: ../../../docs/amazon/amazon-minimum-contiguous-replacements.md
 
 You are given an array arr of integers. In one operation, choose two distinct values x and y that currently appear in the array, then replace every occurrence of x with y.
 

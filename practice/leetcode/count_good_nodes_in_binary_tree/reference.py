@@ -1,6 +1,6 @@
 """Count Good Nodes In Binary Tree — https://leetcode.com/problems/count-good-nodes-in-binary-tree/
 
-Write-up & approaches: ../../docs/problems/count_good_nodes_in_binary_tree.md
+Write-up & approaches: ../../../docs/leetcode/count_good_nodes_in_binary_tree.md
 
 Canonical reference implementation: the write-up's Recursive DFS solution
 (the path maximum threaded as a parameter). Your own attempt lives in

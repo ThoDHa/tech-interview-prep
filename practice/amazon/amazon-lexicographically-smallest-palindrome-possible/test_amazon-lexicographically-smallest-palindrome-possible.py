@@ -1,6 +1,6 @@
 """Tests for Lexicographically Smallest Palindrome Possible — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-lexicographically-smallest-palindrome-possible.md.
+The worked approaches live in ../../../docs/amazon/amazon-lexicographically-smallest-palindrome-possible.md.
 """
 
 import pytest

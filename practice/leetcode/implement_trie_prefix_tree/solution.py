@@ -1,6 +1,6 @@
 """Implement Trie (Prefix Tree): https://leetcode.com/problems/implement-trie-prefix-tree/
 
-Write-up & approaches: ../../docs/problems/implement_trie_prefix_tree.md
+Write-up & approaches: ../../../docs/leetcode/implement_trie_prefix_tree.md
 
 Implement a `Trie` (prefix tree) supporting `insert(word)`, `search(word)`
 (exact-match lookup), and `startsWith(prefix)` (does any inserted word begin

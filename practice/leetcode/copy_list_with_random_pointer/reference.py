@@ -1,6 +1,6 @@
 """Copy List With Random Pointer — https://leetcode.com/problems/copy-list-with-random-pointer/
 
-Write-up & approaches: ../../docs/problems/copy_list_with_random_pointer.md
+Write-up & approaches: ../../../docs/leetcode/copy_list_with_random_pointer.md
 
 Canonical reference implementation: the write-up's Interleaving solution
 (deep copy in O(1) auxiliary space). Your own attempt lives in solution.py.

@@ -1,6 +1,6 @@
 """Tests for Maximum System Memory Capacity — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-maximum-capacity.md.
+The worked approaches live in ../../../docs/amazon/amazon-maximum-capacity.md.
 """
 
 import pytest

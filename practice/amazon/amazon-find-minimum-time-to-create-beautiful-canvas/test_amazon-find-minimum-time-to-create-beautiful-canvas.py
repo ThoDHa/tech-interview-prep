@@ -1,6 +1,6 @@
 """Tests for Min Time to Create Beautiful Canvas — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-find-minimum-time-to-create-beautiful-canvas.md.
+The worked approaches live in ../../../docs/amazon/amazon-find-minimum-time-to-create-beautiful-canvas.md.
 """
 
 import pytest

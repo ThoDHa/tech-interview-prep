@@ -1,6 +1,6 @@
 """Tests for Counting Bits — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../docs/problems/counting_bits.md.
+The worked approaches live in ../../../docs/leetcode/counting_bits.md.
 """
 
 import pytest

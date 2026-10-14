@@ -1,6 +1,6 @@
 """Shortest Distance on a Circular Bus Route — https://www.fastprep.io/problems/amazon-shortest-distance-circular-bus-route
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-shortest-distance-circular-bus-route.md
+Write-up & approaches: ../../../docs/amazon/amazon-shortest-distance-circular-bus-route.md
 
 For this exercise, assume a bus route has n stops arranged in a circle. The array distance contains the distance from stop i to stop (i + 1) mod n.
 

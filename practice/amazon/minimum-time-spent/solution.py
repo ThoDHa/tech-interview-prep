@@ -1,6 +1,6 @@
 """Minimum Time Spent — https://www.fastprep.io/problems/minimum-time-spent
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/minimum-time-spent.md
+Write-up & approaches: ../../../docs/amazon/minimum-time-spent.md
 
 Amazon Prime Video has movies in category 'comedy' or 'drama'. Determine the earliest time you can finish at least one movie from each category. The release schedule and duration of the movies are pro
 

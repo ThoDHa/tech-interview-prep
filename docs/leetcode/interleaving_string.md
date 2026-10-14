@@ -6,7 +6,7 @@
 
 **Algorithm:** [Dynamic programming](https://en.wikipedia.org/wiki/Dynamic_programming) · [Memoization](https://en.wikipedia.org/wiki/Memoization)
 
-**Practice:** [`practice/interleaving_string/solution.py`](../../practice/interleaving_string/solution.py)
+**Practice:** [`practice/leetcode/interleaving_string/solution.py`](../../practice/leetcode/interleaving_string/solution.py)
 
 You are given three strings `s1`, `s2`, and `s3`. Return `true` if `s3` is formed by **interleaving** `s1` and `s2` together or `false` otherwise.
 

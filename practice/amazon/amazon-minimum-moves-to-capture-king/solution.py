@@ -1,6 +1,6 @@
 """Minimum Moves to Capture the King — https://www.fastprep.io/problems/amazon-minimum-moves-to-capture-king
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-minimum-moves-to-capture-king.md
+Write-up & approaches: ../../../docs/amazon/amazon-minimum-moves-to-capture-king.md
 
 A piece starts at start on an empty rows-by-cols board and must capture the king at king.
 

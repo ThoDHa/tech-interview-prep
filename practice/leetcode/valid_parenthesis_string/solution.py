@@ -1,6 +1,6 @@
 """Valid Parenthesis String — https://leetcode.com/problems/valid-parenthesis-string/
 
-Write-up & approaches: ../../docs/problems/valid_parenthesis_string.md
+Write-up & approaches: ../../../docs/leetcode/valid_parenthesis_string.md
 
 You are given a string `s` which contains only three types of characters: `'('`, `')'` and `'*'`. Return `true` if `s` is **valid**, otherwise return `false`. A string is valid if it follows all of th
 

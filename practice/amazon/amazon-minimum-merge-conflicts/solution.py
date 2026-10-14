@@ -1,6 +1,6 @@
 """Minimum Merge Conflicts — https://www.fastprep.io/problems/amazon-minimum-merge-conflicts
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-minimum-merge-conflicts.md
+Write-up & approaches: ../../../docs/amazon/amazon-minimum-merge-conflicts.md
 
 Special thanks: A special thank you to a lovely, amazing fren who shared that this question appeared again on September 17, 2026! 💜
 

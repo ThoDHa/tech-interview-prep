@@ -1,6 +1,6 @@
 """Climbing Stairs: https://leetcode.com/problems/climbing-stairs/
 
-Write-up & approaches: ../../docs/problems/climbing_stairs.md
+Write-up & approaches: ../../../docs/leetcode/climbing_stairs.md
 
 You climb `n` stairs, 1 or 2 steps at a time. Return how many distinct ways you
 can reach the top.

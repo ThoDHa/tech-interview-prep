@@ -1,6 +1,6 @@
 """Tests for Maximum Concurrent Processes (Bar Raiser Round) — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-max-concurrent-processes.md.
+The worked approaches live in ../../../docs/amazon/amazon-max-concurrent-processes.md.
 """
 
 import pytest

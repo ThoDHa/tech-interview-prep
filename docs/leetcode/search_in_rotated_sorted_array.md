@@ -6,7 +6,7 @@
 
 **Algorithm:** [Binary search](https://en.wikipedia.org/wiki/Binary_search_algorithm)
 
-**Practice:** [`practice/search_in_rotated_sorted_array/solution.py`](../../practice/search_in_rotated_sorted_array/solution.py)
+**Practice:** [`practice/leetcode/search_in_rotated_sorted_array/solution.py`](../../practice/leetcode/search_in_rotated_sorted_array/solution.py)
 
 There is an integer array `nums` sorted in ascending order (with distinct values).
 

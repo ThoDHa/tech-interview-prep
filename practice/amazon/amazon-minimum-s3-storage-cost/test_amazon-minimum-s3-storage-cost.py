@@ -1,6 +1,6 @@
 """Tests for Minimum S3 Storage Cost — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-minimum-s3-storage-cost.md.
+The worked approaches live in ../../../docs/amazon/amazon-minimum-s3-storage-cost.md.
 """
 
 import pytest

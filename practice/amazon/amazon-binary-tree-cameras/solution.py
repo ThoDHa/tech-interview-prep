@@ -1,6 +1,6 @@
 """Binary Tree Cameras — https://www.fastprep.io/problems/amazon-binary-tree-cameras
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-binary-tree-cameras.md
+Write-up & approaches: ../../../docs/amazon/amazon-binary-tree-cameras.md
 
 You are given the root of a binary tree. You may install cameras on its nodes.
 

@@ -1,6 +1,6 @@
 """Tests for Maximize Sum of Array Multiplication — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-maximize-sum-of-array-multiplication.md.
+The worked approaches live in ../../../docs/amazon/amazon-maximize-sum-of-array-multiplication.md.
 """
 
 import pytest

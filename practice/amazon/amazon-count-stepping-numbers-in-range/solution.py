@@ -1,6 +1,6 @@
 """Count Stepping Numbers In Range — https://www.fastprep.io/problems/amazon-count-stepping-numbers-in-range
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-count-stepping-numbers-in-range.md
+Write-up & approaches: ../../../docs/amazon/amazon-count-stepping-numbers-in-range.md
 
 A stepping number is an integer whose adjacent digits differ by exactly 1. Every one-digit integer, including 0, is a stepping number.
 

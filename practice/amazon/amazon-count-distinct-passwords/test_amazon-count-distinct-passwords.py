@@ -1,6 +1,6 @@
 """Tests for Count Distinct Passwords — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-count-distinct-passwords.md.
+The worked approaches live in ../../../docs/amazon/amazon-count-distinct-passwords.md.
 """
 
 import pytest

@@ -1,6 +1,6 @@
 """Tests for Get Min Distance (AMZ CN) — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-find-minimum-dist.md.
+The worked approaches live in ../../../docs/amazon/amazon-find-minimum-dist.md.
 """
 
 import pytest

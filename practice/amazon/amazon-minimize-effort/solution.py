@@ -1,6 +1,6 @@
 """Minimize Effort — https://www.fastprep.io/problems/amazon-minimize-effort
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-minimize-effort.md
+Write-up & approaches: ../../../docs/amazon/amazon-minimize-effort.md
 
 Source note: 2026-07-17 — The EffiBin era is over. Long live Minimum Total Batch Expense. The problem has returned to the Circle of Source Fidelity, with its terminology, function signature, example, 
 

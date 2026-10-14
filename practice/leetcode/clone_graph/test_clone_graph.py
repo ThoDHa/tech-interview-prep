@@ -2,7 +2,7 @@
 
 Graphs are stored in the case files as LeetCode adjacency lists (1-indexed) and
 marshalled to GraphNode here. The cloned graph is serialized back to an adjacency
-list for comparison. The worked approaches live in ../../docs/problems/clone_graph.md.
+list for comparison. The worked approaches live in ../../../docs/leetcode/clone_graph.md.
 """
 
 import pytest

@@ -6,7 +6,7 @@
 
 **Algorithm:** [Depth-first search](https://en.wikipedia.org/wiki/Depth-first_search) · [Breadth-first search](https://en.wikipedia.org/wiki/Breadth-first_search) · [Hash table](https://en.wikipedia.org/wiki/Hash_table)
 
-**Practice:** [`practice/clone_graph/solution.py`](../../practice/clone_graph/solution.py)
+**Practice:** [`practice/leetcode/clone_graph/solution.py`](../../practice/leetcode/clone_graph/solution.py)
 
 Given a reference of a node in a connected undirected graph, return a deep copy (clone) of the graph. Each node in the graph contains a value (`int`) and a list of its neighbors.
 

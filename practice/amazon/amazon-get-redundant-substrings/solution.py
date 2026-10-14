@@ -1,6 +1,6 @@
 """Get Redundant Substrings — https://www.fastprep.io/problems/amazon-get-redundant-substrings
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-get-redundant-substrings.md
+Write-up & approaches: ../../../docs/amazon/amazon-get-redundant-substrings.md
 
 Data analysts at Amazon are building a utility to identify redundant words in advertisements.
 

@@ -6,7 +6,7 @@
 
 **Algorithm:** [Depth-first search](https://en.wikipedia.org/wiki/Depth-first_search) · [Breadth-first search](https://en.wikipedia.org/wiki/Breadth-first_search) · [Tree traversal](https://en.wikipedia.org/wiki/Tree_traversal)
 
-**Practice:** [`practice/maximum_depth_of_binary_tree/solution.py`](../../practice/maximum_depth_of_binary_tree/solution.py)
+**Practice:** [`practice/leetcode/maximum_depth_of_binary_tree/solution.py`](../../practice/leetcode/maximum_depth_of_binary_tree/solution.py)
 
 Given the `root` of a binary tree, return its maximum depth.
 

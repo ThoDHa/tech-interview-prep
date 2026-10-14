@@ -1,6 +1,6 @@
 """Trapping Rain Water — https://leetcode.com/problems/trapping-rain-water/
 
-Write-up & approaches: ../../docs/problems/trapping_rain_water.md
+Write-up & approaches: ../../../docs/leetcode/trapping_rain_water.md
 
 Given `n` non-negative integers representing an elevation map where the width of
 each bar is `1`, compute how much water it can trap after raining.

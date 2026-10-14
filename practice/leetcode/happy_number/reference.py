@@ -1,6 +1,6 @@
 """Happy Number — https://leetcode.com/problems/happy-number/
 
-Write-up & approaches: ../../docs/problems/happy_number.md
+Write-up & approaches: ../../../docs/leetcode/happy_number.md
 Canonical reference implementation: the write-up's Floyd's Cycle Detection
 solution (tortoise and hare, O(1) space). Your own attempt lives in
 solution.py.

@@ -1,6 +1,6 @@
 """Course Schedule II — https://leetcode.com/problems/course-schedule-ii/
 
-Write-up & approaches: ../../docs/problems/course_schedule_ii.md
+Write-up & approaches: ../../../docs/leetcode/course_schedule_ii.md
 
 You are given an array `prerequisites` where `prerequisites[i] = [a, b]` indicates that you **must** take course `b` first if you want to take course `a`. * For example, the pair `[0, 1]`, indicates t
 

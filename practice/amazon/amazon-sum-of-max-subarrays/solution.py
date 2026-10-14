@@ -1,6 +1,6 @@
 """Sum of Max Subarrys — https://www.fastprep.io/problems/amazon-sum-of-max-subarrays
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-sum-of-max-subarrays.md
+Write-up & approaches: ../../../docs/amazon/amazon-sum-of-max-subarrays.md
 
 Find the sum of the maximum of all subarrays multiplied by their length in O(n).
 

@@ -1,6 +1,6 @@
 """Tests for Unique String Permutations — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-unique-string-permutations.md.
+The worked approaches live in ../../../docs/amazon/amazon-unique-string-permutations.md.
 """
 
 import pytest

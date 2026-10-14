@@ -1,6 +1,6 @@
 """Copy List With Random Pointer — https://leetcode.com/problems/copy-list-with-random-pointer/
 
-Write-up & approaches: ../../docs/problems/copy_list_with_random_pointer.md
+Write-up & approaches: ../../../docs/leetcode/copy_list_with_random_pointer.md
 
 You are given the head of a linked list of length `n`. Unlike a singly linked list, each node contains an additional pointer `random`, which may point to any node in the list, or `null`. Create a **de
 

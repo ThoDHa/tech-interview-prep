@@ -1,6 +1,6 @@
 """Longest Increasing Subsequence — https://leetcode.com/problems/longest-increasing-subsequence/
 
-Write-up & approaches: ../../docs/problems/longest_increasing_subsequence.md
+Write-up & approaches: ../../../docs/leetcode/longest_increasing_subsequence.md
 Reference implementation of the write-up's Patience Sorting with Binary Search
 solution, kept next to the harness so authored cases stay falsifiable. Your own
 attempt lives in solution.py.

@@ -1,6 +1,6 @@
 """Get Min Num Moves — https://www.fastprep.io/problems/amazon-get-min-num-moves
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-get-min-num-moves.md
+Write-up & approaches: ../../../docs/amazon/amazon-get-min-num-moves.md
 
 Imagine you are shopping on Amazon.com for some good weight lifting equipment. The equipment you want has blocks of many different weights that you can combine to lift.
 

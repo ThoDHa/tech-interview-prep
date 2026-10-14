@@ -6,7 +6,7 @@
 
 **Algorithm:** [Breadth-first search](https://en.wikipedia.org/wiki/Breadth-first_search) · [Depth-first search](https://en.wikipedia.org/wiki/Depth-first_search)
 
-**Practice:** [`practice/binary_tree_right_side_view/solution.py`](../../practice/binary_tree_right_side_view/solution.py)
+**Practice:** [`practice/leetcode/binary_tree_right_side_view/solution.py`](../../practice/leetcode/binary_tree_right_side_view/solution.py)
 
 Given the `root` of a binary tree, imagine yourself standing on the **right side** of it, return the values of the nodes you can see ordered from top to bottom.
 

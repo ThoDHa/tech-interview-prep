@@ -6,7 +6,7 @@
 
 **Algorithm:** [Greedy algorithm](https://en.wikipedia.org/wiki/Greedy_algorithm) · [Heap (data structure)](https://en.wikipedia.org/wiki/Heap_(data_structure))
 
-**Practice:** [`practice/task_scheduler/solution.py`](../../practice/task_scheduler/solution.py)
+**Practice:** [`practice/leetcode/task_scheduler/solution.py`](../../practice/leetcode/task_scheduler/solution.py)
 
 Given a characters array `tasks`, representing the tasks a CPU needs to do, where each letter represents a different task. Tasks could be done in any order. Each task is done in one unit of time. For each unit of time, the CPU could complete either one task or just be idle.
 

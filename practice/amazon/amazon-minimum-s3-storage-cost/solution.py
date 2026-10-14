@@ -1,6 +1,6 @@
 """Minimum S3 Storage Cost — https://www.fastprep.io/problems/amazon-minimum-s3-storage-cost
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-minimum-s3-storage-cost.md
+Write-up & approaches: ../../../docs/amazon/amazon-minimum-s3-storage-cost.md
 
 A batch contains files numbered from 1 to 2^n. Some files are sensitive and require encryption; their indices are given in sensitiveFiles.
 

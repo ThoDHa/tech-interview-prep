@@ -1,6 +1,6 @@
 """Tests for Cheapest Flights Within K Stops — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-cheapest-flights-within-k-stops.md.
+The worked approaches live in ../../../docs/amazon/amazon-cheapest-flights-within-k-stops.md.
 """
 
 import pytest

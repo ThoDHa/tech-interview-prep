@@ -1,6 +1,6 @@
 """Distributed Packages — https://www.fastprep.io/problems/amazon-distribute-packages
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-distribute-packages.md
+Write-up & approaches: ../../../docs/amazon/amazon-distribute-packages.md
 
 Amazon has to distribute multiple packages across all of their delivery trucks. Given an array of trucks where trucks[i] represents the ith truck quantity. We also have another input to_distribute whi
 

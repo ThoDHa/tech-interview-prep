@@ -1,6 +1,6 @@
 """Tests for Evaluate Division — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-evaluate-division.md.
+The worked approaches live in ../../../docs/amazon/amazon-evaluate-division.md.
 """
 
 import pytest

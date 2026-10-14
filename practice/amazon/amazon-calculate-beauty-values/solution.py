@@ -1,6 +1,6 @@
 """Calculate Beauty Values — https://www.fastprep.io/problems/amazon-calculate-beauty-values
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-calculate-beauty-values.md
+Write-up & approaches: ../../../docs/amazon/amazon-calculate-beauty-values.md
 
 Source note: The judged core task matches the visible source at about 100%. The source images do not show numeric bounds or the original callable signature.
 

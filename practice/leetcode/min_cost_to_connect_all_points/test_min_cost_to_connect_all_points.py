@@ -1,6 +1,6 @@
 """Tests for Min Cost to Connect All Points — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../docs/problems/min_cost_to_connect_all_points.md.
+The worked approaches live in ../../../docs/leetcode/min_cost_to_connect_all_points.md.
 """
 
 import pytest

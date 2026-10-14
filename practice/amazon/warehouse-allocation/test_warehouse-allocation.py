@@ -1,6 +1,6 @@
 """Tests for Warehouse Distribution — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/warehouse-allocation.md.
+The worked approaches live in ../../../docs/amazon/warehouse-allocation.md.
 """
 
 import pytest

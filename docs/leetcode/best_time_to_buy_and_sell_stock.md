@@ -6,7 +6,7 @@
 
 **Algorithm:** [Kadane's algorithm](https://en.wikipedia.org/wiki/Maximum_subarray_problem)
 
-**Practice:** [`practice/best_time_to_buy_and_sell_stock/solution.py`](../../practice/best_time_to_buy_and_sell_stock/solution.py)
+**Practice:** [`practice/leetcode/best_time_to_buy_and_sell_stock/solution.py`](../../practice/leetcode/best_time_to_buy_and_sell_stock/solution.py)
 
 You are given an array `prices` where `prices[i]` is the price of a given stock on the `i`th day.
 

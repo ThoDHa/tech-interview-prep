@@ -1,6 +1,6 @@
 """Partition Labels — https://leetcode.com/problems/partition-labels/
 
-Write-up & approaches: ../../docs/problems/partition_labels.md
+Write-up & approaches: ../../../docs/leetcode/partition_labels.md
 
 You are given a string `s` consisting of lowercase english letters. We want to split the string into as many substrings as possible, while ensuring that each letter appears in at most one substring. R
 

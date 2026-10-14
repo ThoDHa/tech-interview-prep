@@ -6,7 +6,7 @@
 
 **Algorithm:** [Tree traversal](https://en.wikipedia.org/wiki/Tree_traversal) · [Depth-first search](https://en.wikipedia.org/wiki/Depth-first_search) · [Breadth-first search](https://en.wikipedia.org/wiki/Breadth-first_search)
 
-**Practice:** [`practice/count_good_nodes_in_binary_tree/solution.py`](../../practice/count_good_nodes_in_binary_tree/solution.py)
+**Practice:** [`practice/leetcode/count_good_nodes_in_binary_tree/solution.py`](../../practice/leetcode/count_good_nodes_in_binary_tree/solution.py)
 
 Within a binary tree, a node `x` is considered **good** if the path from the root of the tree to the node `x` contains no nodes with a value greater than the value of node `x`
 

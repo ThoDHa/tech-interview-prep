@@ -1,6 +1,6 @@
 """Tests for Reconstruct Itinerary — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../docs/problems/reconstruct_itinerary.md.
+The worked approaches live in ../../../docs/leetcode/reconstruct_itinerary.md.
 """
 
 import pytest

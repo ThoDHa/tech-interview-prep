@@ -1,6 +1,6 @@
 """Reverse Linked List: https://leetcode.com/problems/reverse-linked-list/
 
-Write-up & approaches: ../../docs/problems/reverse_linked_list.md
+Write-up & approaches: ../../../docs/leetcode/reverse_linked_list.md
 
 Reverse a singly linked list and return the new head.
 

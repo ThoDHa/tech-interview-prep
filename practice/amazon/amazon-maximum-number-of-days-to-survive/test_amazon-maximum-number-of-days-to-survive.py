@@ -1,6 +1,6 @@
 """Tests for About Mortgage — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-maximum-number-of-days-to-survive.md.
+The worked approaches live in ../../../docs/amazon/amazon-maximum-number-of-days-to-survive.md.
 """
 
 import pytest

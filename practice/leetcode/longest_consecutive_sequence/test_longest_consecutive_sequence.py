@@ -1,6 +1,6 @@
 """Tests for Longest Consecutive Sequence — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../docs/problems/longest_consecutive_sequence.md.
+The worked approaches live in ../../../docs/leetcode/longest_consecutive_sequence.md.
 """
 
 import pytest

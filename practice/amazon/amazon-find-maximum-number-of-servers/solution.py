@@ -1,6 +1,6 @@
 """Get Max Servers — https://www.fastprep.io/problems/amazon-find-maximum-number-of-servers
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-find-maximum-number-of-servers.md
+Write-up & approaches: ../../../docs/amazon/amazon-find-maximum-number-of-servers.md
 
 Source note: 2026-07-02 — This problem duplicates Server Selection. Sighting dates were merged into this fuller official-source version, which remains the recommended practice page.
 

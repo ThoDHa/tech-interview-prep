@@ -1,6 +1,6 @@
 """Tests for First Unique Character in a Stream — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-first-unique-character-stream.md.
+The worked approaches live in ../../../docs/amazon/amazon-first-unique-character-stream.md.
 """
 
 import pytest

@@ -1,6 +1,6 @@
 """Tests for Package Dependency Order — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-package-dependency-order.md.
+The worked approaches live in ../../../docs/amazon/amazon-package-dependency-order.md.
 """
 
 import pytest

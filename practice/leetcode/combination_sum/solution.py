@@ -1,6 +1,6 @@
 """Combination Sum: https://leetcode.com/problems/combination-sum/
 
-Write-up & approaches: ../../docs/problems/combination_sum.md
+Write-up & approaches: ../../../docs/leetcode/combination_sum.md
 
 Given an array of distinct integers `candidates` and a target integer `target`,
 return all unique combinations of `candidates` whose numbers sum to `target`. The

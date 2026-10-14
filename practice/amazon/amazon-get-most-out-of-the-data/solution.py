@@ -1,6 +1,6 @@
 """Get The Most Out Of The Data — https://www.fastprep.io/problems/amazon-get-most-out-of-the-data
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-get-most-out-of-the-data.md
+Write-up & approaches: ../../../docs/amazon/amazon-get-most-out-of-the-data.md
 
 DAs at TomTom Global are deeply engaged in the analysis of the info gained when the company's re-inforcement learning AI model named Supa Helo is trained with different arrangements of exact the same 
 

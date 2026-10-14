@@ -1,6 +1,6 @@
 """Tests for Subtree of Another Tree — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../docs/problems/subtree_of_another_tree.md.
+The worked approaches live in ../../../docs/leetcode/subtree_of_another_tree.md.
 """
 
 import pytest

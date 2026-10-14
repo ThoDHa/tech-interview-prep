@@ -1,6 +1,6 @@
 """String to Integer (atoi): https://leetcode.com/problems/string-to-integer-atoi/
 
-Write-up & approaches: ../../docs/problems/string_to_integer_atoi.md
+Write-up & approaches: ../../../docs/leetcode/string_to_integer_atoi.md
 
 Convert a string to a 32-bit signed integer (like C's atoi): skip leading
 spaces, read an optional sign, read consecutive digits, then clamp the result to

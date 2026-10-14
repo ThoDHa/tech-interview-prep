@@ -1,6 +1,6 @@
 """Kth Largest Element In a Stream — https://leetcode.com/problems/kth-largest-element-in-a-stream/
 
-Write-up & approaches: ../../docs/problems/kth_largest_element_in_a_stream.md
+Write-up & approaches: ../../../docs/leetcode/kth_largest_element_in_a_stream.md
 
 Design a class to find the `kth` largest integer in a stream of values, including duplicates. E.g. the `2nd` largest from [1, 2, 3, 3] is `3`. The stream is not necessarily sorted. Implement the follo
 

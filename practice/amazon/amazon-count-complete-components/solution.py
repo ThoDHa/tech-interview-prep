@@ -1,6 +1,6 @@
 """Count the Number of Complete Components — https://www.fastprep.io/problems/amazon-count-complete-components
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-count-complete-components.md
+Write-up & approaches: ../../../docs/amazon/amazon-count-complete-components.md
 
 You are given an integer n and an undirected graph whose vertices are numbered from 0 through n - 1. The array edges contains each undirected edge [u, v].
 

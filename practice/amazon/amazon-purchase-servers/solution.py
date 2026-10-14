@@ -1,6 +1,6 @@
 """Buy Servers — https://www.fastprep.io/problems/amazon-purchase-servers
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-purchase-servers.md
+Write-up & approaches: ../../../docs/amazon/amazon-purchase-servers.md
 
 AWS provides a range of servers to meet their clients' deployment and computation needs. One AWS client wants to purchase servers to deploy their application.
 

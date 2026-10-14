@@ -1,6 +1,6 @@
 """Longest Zero Sum Subarray — https://www.fastprep.io/problems/amazon-longest-zero-sum-subarray
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-longest-zero-sum-subarray.md
+Write-up & approaches: ../../../docs/amazon/amazon-longest-zero-sum-subarray.md
 
 You are given an integer array nums containing positive and negative integers.
 

@@ -6,7 +6,7 @@
 
 **Algorithm:** [Popcount](https://en.wikipedia.org/wiki/Hamming_weight) · [Dynamic programming](https://en.wikipedia.org/wiki/Dynamic_programming) · [Bitwise operation](https://en.wikipedia.org/wiki/Bitwise_operation)
 
-**Practice:** [`practice/counting_bits/solution.py`](../../practice/counting_bits/solution.py)
+**Practice:** [`practice/leetcode/counting_bits/solution.py`](../../practice/leetcode/counting_bits/solution.py)
 
 Given an integer `n`, count the number of `1`'s in the binary representation of every number in the range `[0, n]`.
 
@@ -381,7 +381,7 @@ The output list, which the problem requires.
 
 ## Comparison of Solutions
 
-The practice harness's `practice/counting_bits/reference.py` implements the **Bottom-Up DP with Lowest Set Bit** solution.
+The practice harness's `practice/leetcode/counting_bits/reference.py` implements the **Bottom-Up DP with Lowest Set Bit** solution.
 
 ### Time Complexity
 

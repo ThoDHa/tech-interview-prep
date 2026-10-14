@@ -1,6 +1,6 @@
 """Make Value Groups Contiguous — https://www.fastprep.io/problems/amazon-make-value-groups-contiguous
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-make-value-groups-contiguous.md
+Write-up & approaches: ../../../docs/amazon/amazon-make-value-groups-contiguous.md
 
 You are given an integer array arr. In one operation, choose two values x and y (where y may be any value, including an existing value in the array), and replace every occurrence of x in the array wit
 

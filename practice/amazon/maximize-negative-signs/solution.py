@@ -1,6 +1,6 @@
 """Maximize Negative Signs — https://www.fastprep.io/problems/maximize-negative-signs
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/maximize-negative-signs.md
+Write-up & approaches: ../../../docs/amazon/maximize-negative-signs.md
 
 Given a sequence of n natural numbers a_1, a_2, ..., a_n, you are to assign a sign (+ or -) to each a_i such that the cumulative sum of the signed a_1 + a_2 + ... + a_i remains positive for each i in 
 

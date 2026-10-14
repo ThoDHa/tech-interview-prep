@@ -1,6 +1,6 @@
 """Lexicographically Smallest After One Substring Rotation — https://www.fastprep.io/problems/amazon-lexicographically-smallest-after-one-substring-rotation
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-lexicographically-smallest-after-one-substring-rotation.md
+Write-up & approaches: ../../../docs/amazon/amazon-lexicographically-smallest-after-one-substring-rotation.md
 
 You are given a string s. You must choose one non-empty contiguous substring of s and rotate that substring to the right by one position exactly once.
 

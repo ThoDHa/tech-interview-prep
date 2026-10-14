@@ -1,6 +1,6 @@
 """Tests for Course Schedule — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-course-schedule.md.
+The worked approaches live in ../../../docs/amazon/amazon-course-schedule.md.
 """
 
 import pytest

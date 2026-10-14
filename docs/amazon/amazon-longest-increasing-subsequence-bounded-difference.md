@@ -44,7 +44,7 @@ The selected values are strictly increasing.The difference between every pair of
 
 #### Derivation
 
-The classic [longest increasing subsequence](../longest_increasing_subsequence.md) question transfers with one extra clause. Anchor on the last element: any valid chain has a last value, and the chain ending at index `i` must extend some shorter valid chain whose last value `arr[j]` sits strictly below `arr[i]` and within reach of the difference bound. Both demands fold into one window: `arr[j] >= arr[i] - k` and `arr[j] <= arr[i] - 1`. Since every chain ending at `i` only builds on chains ending earlier, the answers fill left to right with a plain double loop:
+The classic [longest increasing subsequence](../leetcode/longest_increasing_subsequence.md) question transfers with one extra clause. Anchor on the last element: any valid chain has a last value, and the chain ending at index `i` must extend some shorter valid chain whose last value `arr[j]` sits strictly below `arr[i]` and within reach of the difference bound. Both demands fold into one window: `arr[j] >= arr[i] - k` and `arr[j] <= arr[i] - 1`. Since every chain ending at `i` only builds on chains ending earlier, the answers fill left to right with a plain double loop:
 
 1. Let `dp[i]` be the length of the longest valid chain ending at index `i`;
    seed every entry at `1`, the element alone.

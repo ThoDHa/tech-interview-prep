@@ -1,6 +1,6 @@
 """Tests for Container With Most Water — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-container-with-most-water.md.
+The worked approaches live in ../../../docs/amazon/amazon-container-with-most-water.md.
 """
 
 import pytest

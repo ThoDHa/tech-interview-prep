@@ -6,7 +6,7 @@
 
 **Algorithm:** [Breadth-first search](https://en.wikipedia.org/wiki/Breadth-first_search)
 
-**Practice:** [`practice/rotting_oranges/solution.py`](../../practice/rotting_oranges/solution.py)
+**Practice:** [`practice/leetcode/rotting_oranges/solution.py`](../../practice/leetcode/rotting_oranges/solution.py)
 
 You are given an `m x n` grid where each cell can have one of three values:
 

@@ -1,6 +1,6 @@
 """Tests for Maximize Minimum Machine Power — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-maximize-minimum-machine-power.md.
+The worked approaches live in ../../../docs/amazon/amazon-maximize-minimum-machine-power.md.
 """
 
 import pytest

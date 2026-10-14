@@ -1,6 +1,6 @@
 """Tests for Password Strength — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-password-strength.md.
+The worked approaches live in ../../../docs/amazon/amazon-password-strength.md.
 """
 
 import pytest

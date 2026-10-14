@@ -1,6 +1,6 @@
 """Tests for Count Stepping Numbers In Range — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-count-stepping-numbers-in-range.md.
+The worked approaches live in ../../../docs/amazon/amazon-count-stepping-numbers-in-range.md.
 """
 
 import pytest

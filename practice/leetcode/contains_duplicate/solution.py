@@ -1,6 +1,6 @@
 """Contains Duplicate: https://leetcode.com/problems/contains-duplicate/
 
-Write-up & approaches: ../../docs/problems/contains_duplicate.md
+Write-up & approaches: ../../../docs/leetcode/contains_duplicate.md
 
 Given an integer array `nums`, return `true` if any value appears at least
 twice in the array, and `false` if every element is distinct.

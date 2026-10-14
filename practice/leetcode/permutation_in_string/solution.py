@@ -1,6 +1,6 @@
 """Permutation In String — https://leetcode.com/problems/permutation-in-string/
 
-Write-up & approaches: ../../docs/problems/permutation_in_string.md
+Write-up & approaches: ../../../docs/leetcode/permutation_in_string.md
 
 You are given two strings `s1` and `s2`. Return `true` if `s2` contains a permutation of `s1`, or `false` otherwise. That means if a permutation of `s1` exists as a substring of `s2`, then return `tru
 

@@ -2,7 +2,7 @@
 
 cases.json (marker `simple`) is the "Run" set; cases_full.json (marker `full`) is
 the "Submit" gauntlet. The worked approaches live in
-../../docs/problems/partition_equal_subset_sum.md.
+../../../docs/leetcode/partition_equal_subset_sum.md.
 """
 
 import pytest

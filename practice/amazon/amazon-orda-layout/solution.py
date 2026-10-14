@@ -1,6 +1,6 @@
 """Ordered Confirguration — https://www.fastprep.io/problems/amazon-orda-layout
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-orda-layout.md
+Write-up & approaches: ../../../docs/amazon/amazon-orda-layout.md
 
 Note - Feel free to checkout the source image for the original statement :) 🐳
 

@@ -6,7 +6,7 @@
 
 **Algorithm:** [Boyer-Moore majority vote](https://en.wikipedia.org/wiki/Boyer%E2%80%93Moore_majority_vote_algorithm) · [Hash table](https://en.wikipedia.org/wiki/Hash_table) · [Sorting algorithm](https://en.wikipedia.org/wiki/Sorting_algorithm)
 
-**Practice:** [`practice/majority_element/solution.py`](../../practice/majority_element/solution.py)
+**Practice:** [`practice/leetcode/majority_element/solution.py`](../../practice/leetcode/majority_element/solution.py)
 
 Given an array `nums` of size `n`, return the majority element.
 

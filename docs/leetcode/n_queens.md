@@ -6,7 +6,7 @@
 
 **Algorithm:** [Backtracking](https://en.wikipedia.org/wiki/Backtracking) · [Bitwise operation](https://en.wikipedia.org/wiki/Bitwise_operation)
 
-**Practice:** [`practice/n_queens/solution.py`](../../practice/n_queens/solution.py)
+**Practice:** [`practice/leetcode/n_queens/solution.py`](../../practice/leetcode/n_queens/solution.py)
 
 The **n-queens** puzzle is the problem of placing `n` queens on an `n x n` chessboard so that no two queens can attack each other.
 

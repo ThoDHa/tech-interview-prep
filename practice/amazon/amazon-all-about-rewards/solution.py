@@ -1,6 +1,6 @@
 """All About Rewards — https://www.fastprep.io/problems/amazon-all-about-rewards
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-all-about-rewards.md
+Write-up & approaches: ../../../docs/amazon/amazon-all-about-rewards.md
 
 Amazon OA problem.
 

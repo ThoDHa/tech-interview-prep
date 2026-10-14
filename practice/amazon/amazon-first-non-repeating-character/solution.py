@@ -1,6 +1,6 @@
 """First Non-Repeating Character — https://www.fastprep.io/problems/amazon-first-non-repeating-character
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-first-non-repeating-character.md
+Write-up & approaches: ../../../docs/amazon/amazon-first-non-repeating-character.md
 
 Given a non-empty string s, return the first character whose total frequency in the string is exactly one.
 

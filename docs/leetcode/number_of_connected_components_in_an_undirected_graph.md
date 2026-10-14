@@ -8,7 +8,7 @@
 
 **Algorithm:** [Depth-first search](https://en.wikipedia.org/wiki/Depth-first_search) · [Breadth-first search](https://en.wikipedia.org/wiki/Breadth-first_search) · [Disjoint-set (Union-Find)](https://en.wikipedia.org/wiki/Disjoint-set_data_structure)
 
-**Practice:** [`practice/number_of_connected_components_in_an_undirected_graph/solution.py`](../../practice/number_of_connected_components_in_an_undirected_graph/solution.py)
+**Practice:** [`practice/leetcode/number_of_connected_components_in_an_undirected_graph/solution.py`](../../practice/leetcode/number_of_connected_components_in_an_undirected_graph/solution.py)
 
 You have an undirected graph of `n` nodes labeled from `0` to `n - 1`. You are given an integer `n` and an array `edges` where `edges[i] = [aᵢ, bᵢ]` indicates that there is an edge between `aᵢ` and `bᵢ` in the graph.
 
@@ -280,7 +280,7 @@ The `parent` and `rank` arrays; no adjacency structure is built at all, and the 
 
 ## Comparison of Solutions
 
-The practice harness's `practice/number_of_connected_components_in_an_undirected_graph/reference.py` implements the **Union-Find** solution.
+The practice harness's `practice/leetcode/number_of_connected_components_in_an_undirected_graph/reference.py` implements the **Union-Find** solution.
 
 ### Time Complexity
 

@@ -1,6 +1,6 @@
 """Tests for Calculate Max Salary — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-calculate-max-salary.md.
+The worked approaches live in ../../../docs/amazon/amazon-calculate-max-salary.md.
 """
 
 import pytest

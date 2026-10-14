@@ -1,6 +1,6 @@
 """Maximize Center A Package Benefit — https://www.fastprep.io/problems/amazon-center-a-package-benefit
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-center-a-package-benefit.md
+Write-up & approaches: ../../../docs/amazon/amazon-center-a-package-benefit.md
 
 Two distribution centers, A and B, must allocate n packages. Package i is worth benefitA[i] to Center A and benefitB[i] to Center B.
 

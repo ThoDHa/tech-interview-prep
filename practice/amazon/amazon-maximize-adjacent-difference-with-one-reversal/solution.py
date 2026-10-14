@@ -1,6 +1,6 @@
 """Maximize Adjacent Difference With One Reversal — https://www.fastprep.io/problems/amazon-maximize-adjacent-difference-with-one-reversal
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-maximize-adjacent-difference-with-one-reversal.md
+Write-up & approaches: ../../../docs/amazon/amazon-maximize-adjacent-difference-with-one-reversal.md
 
 Given an integer array values, define its score as the sum of abs(values[i] - values[i + 1]) over every adjacent pair.
 

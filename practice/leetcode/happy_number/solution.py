@@ -1,6 +1,6 @@
 """Happy Number — https://leetcode.com/problems/happy-number/
 
-Write-up & approaches: ../../docs/problems/happy_number.md
+Write-up & approaches: ../../../docs/leetcode/happy_number.md
 
 A **non-cyclical number** is an integer defined by the following algorithm: * Given a positive integer, replace it with the sum of the squares of its digits. * Repeat the above step until the number e
 

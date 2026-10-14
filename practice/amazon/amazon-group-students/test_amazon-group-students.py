@@ -1,6 +1,6 @@
 """Tests for Group Students — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-group-students.md.
+The worked approaches live in ../../../docs/amazon/amazon-group-students.md.
 """
 
 import pytest

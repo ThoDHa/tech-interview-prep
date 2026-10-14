@@ -1,6 +1,6 @@
 """Tests for Longest Common Subsequence Length — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-longest-common-subsequence-length.md.
+The worked approaches live in ../../../docs/amazon/amazon-longest-common-subsequence-length.md.
 """
 
 import pytest

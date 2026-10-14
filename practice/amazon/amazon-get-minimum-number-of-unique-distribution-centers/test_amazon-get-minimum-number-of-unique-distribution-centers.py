@@ -1,6 +1,6 @@
 """Tests for Min Num Unique Distribution Hubs — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-get-minimum-number-of-unique-distribution-centers.md.
+The worked approaches live in ../../../docs/amazon/amazon-get-minimum-number-of-unique-distribution-centers.md.
 """
 
 import pytest

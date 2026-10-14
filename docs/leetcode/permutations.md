@@ -6,7 +6,7 @@
 
 **Algorithm:** [Backtracking](https://en.wikipedia.org/wiki/Backtracking) · [Permutation](https://en.wikipedia.org/wiki/Permutation) · [Heap's algorithm](https://en.wikipedia.org/wiki/Heap%27s_algorithm)
 
-**Practice:** [`practice/permutations/solution.py`](../../practice/permutations/solution.py)
+**Practice:** [`practice/leetcode/permutations/solution.py`](../../practice/leetcode/permutations/solution.py)
 
 Given an array `nums` of distinct integers, return all the possible permutations. You can return the answer in any order.
 

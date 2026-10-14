@@ -6,7 +6,7 @@
 
 **Algorithm:** [Interval scheduling](https://en.wikipedia.org/wiki/Interval_scheduling) · [Dynamic programming](https://en.wikipedia.org/wiki/Dynamic_programming) · [Binary search](https://en.wikipedia.org/wiki/Binary_search_algorithm)
 
-**Practice:** [`practice/maximum_profit_in_job_scheduling/solution.py`](../../practice/maximum_profit_in_job_scheduling/solution.py)
+**Practice:** [`practice/leetcode/maximum_profit_in_job_scheduling/solution.py`](../../practice/leetcode/maximum_profit_in_job_scheduling/solution.py)
 
 We have `n` jobs, where every job is scheduled to be done from `startTime[i]` to `endTime[i]`, obtaining a profit of `profit[i]`.
 

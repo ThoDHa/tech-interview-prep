@@ -1,6 +1,6 @@
 """Tests for Minimize Binary Subsequence Cost — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-minimize-binary-subsequence-cost.md.
+The worked approaches live in ../../../docs/amazon/amazon-minimize-binary-subsequence-cost.md.
 """
 
 import pytest

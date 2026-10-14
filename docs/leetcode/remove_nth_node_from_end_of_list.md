@@ -6,7 +6,7 @@
 
 **Algorithm:** [Linked list](https://en.wikipedia.org/wiki/Linked_list) · [Two-pointer technique](https://usaco.guide/silver/two-pointers)
 
-**Practice:** [`practice/remove_nth_node_from_end_of_list/solution.py`](../../practice/remove_nth_node_from_end_of_list/solution.py)
+**Practice:** [`practice/leetcode/remove_nth_node_from_end_of_list/solution.py`](../../practice/leetcode/remove_nth_node_from_end_of_list/solution.py)
 
 Given the `head` of a linked list and an integer `n`, remove the `nth` node from the end of the list and return its head.
 

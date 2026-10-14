@@ -1,6 +1,6 @@
 """Longest Happy Prefix — https://www.fastprep.io/problems/amazon-longest-happy-prefix
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-longest-happy-prefix.md
+Write-up & approaches: ../../../docs/amazon/amazon-longest-happy-prefix.md
 
 A string is a happy prefix of s when it is a non-empty proper prefix of s and is also a suffix of s.
 

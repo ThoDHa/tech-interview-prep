@@ -1,6 +1,6 @@
 """Combination Sum II — https://leetcode.com/problems/combination-sum-ii/
 
-Write-up & approaches: ../../docs/problems/combination_sum_ii.md
+Write-up & approaches: ../../../docs/leetcode/combination_sum_ii.md
 Canonical reference implementation of the write-up's Sorted Backtracking with
 Duplicate Skipping solution, kept next to the harness so authored cases stay
 falsifiable. Your own attempt lives in solution.py.

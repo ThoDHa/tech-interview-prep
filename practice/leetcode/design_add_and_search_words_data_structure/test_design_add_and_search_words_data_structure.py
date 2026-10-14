@@ -1,6 +1,6 @@
 """Tests for Design Add And Search Words Data Structure — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../docs/problems/design_add_and_search_words_data_structure.md.
+The worked approaches live in ../../../docs/leetcode/design_add_and_search_words_data_structure.md.
 """
 
 import pytest

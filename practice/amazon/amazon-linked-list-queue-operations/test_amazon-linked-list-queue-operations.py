@@ -1,6 +1,6 @@
 """Tests for Linked-List Queue with Delete and Deduplication — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-linked-list-queue-operations.md.
+The worked approaches live in ../../../docs/amazon/amazon-linked-list-queue-operations.md.
 """
 
 import pytest

@@ -1,6 +1,6 @@
 """Regular Expression Matching — https://leetcode.com/problems/regular-expression-matching/
 
-Write-up & approaches: ../../docs/problems/regular_expression_matching.md
+Write-up & approaches: ../../../docs/leetcode/regular_expression_matching.md
 Reference implementation of the write-up's Top-Down Memoization solution, kept
 next to the harness so authored cases stay falsifiable. Your own attempt
 lives in solution.py.

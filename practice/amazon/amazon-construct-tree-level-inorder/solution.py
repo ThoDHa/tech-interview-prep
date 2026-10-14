@@ -1,6 +1,6 @@
 """Construct a Tree from Level-Order and Inorder Traversals — https://www.fastprep.io/problems/amazon-construct-tree-level-inorder
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-construct-tree-level-inorder.md
+Write-up & approaches: ../../../docs/amazon/amazon-construct-tree-level-inorder.md
 
 Given the levelOrder and inorder traversals of the same binary tree, reconstruct and return its root.
 

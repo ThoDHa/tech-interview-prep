@@ -1,6 +1,6 @@
 """Get Active Requests Count — https://www.fastprep.io/problems/amazon-get-active-requests-count
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-get-active-requests-count.md
+Write-up & approaches: ../../../docs/amazon/amazon-get-active-requests-count.md
 
 You are given an integer, requests which denotes the number of requests, and a list wait_time, where wait_time[i] denote the maximum wait time of the i'th request. The requests in the list are served 
 

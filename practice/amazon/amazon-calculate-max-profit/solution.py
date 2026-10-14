@@ -1,6 +1,6 @@
 """Calculate Max Profit — https://www.fastprep.io/problems/amazon-calculate-max-profit
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-calculate-max-profit.md
+Write-up & approaches: ../../../docs/amazon/amazon-calculate-max-profit.md
 
 Amazon OA problem.
 

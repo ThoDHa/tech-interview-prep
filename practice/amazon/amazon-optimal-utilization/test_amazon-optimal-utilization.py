@@ -1,6 +1,6 @@
 """Tests for Optimal Utilization — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-optimal-utilization.md.
+The worked approaches live in ../../../docs/amazon/amazon-optimal-utilization.md.
 """
 
 import pytest

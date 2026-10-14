@@ -1,6 +1,6 @@
 """Ensure Non Zero Load Sum — https://www.fastprep.io/problems/amazon-ensure-non-zero-load-sum
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-ensure-non-zero-load-sum.md
+Write-up & approaches: ../../../docs/amazon/amazon-ensure-non-zero-load-sum.md
 
 You are given an integer array queueMessages. Positive values represent messages sent by producers, and negative values represent messages retrieved by consumers. The processing load of a contiguous s
 

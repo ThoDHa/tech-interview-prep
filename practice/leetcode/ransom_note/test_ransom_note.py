@@ -1,7 +1,7 @@
 """Tests for Ransom Note: your attempt (solution.py) against both case sets.
 
 cases.json (marker `simple`) is the "Run" set; cases_full.json (marker `full`) is
-the "Submit" gauntlet. The worked approaches live in ../../docs/problems/ransom_note.md.
+the "Submit" gauntlet. The worked approaches live in ../../../docs/leetcode/ransom_note.md.
 """
 
 import pytest

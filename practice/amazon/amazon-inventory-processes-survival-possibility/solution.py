@@ -1,6 +1,6 @@
 """Inventory Processes Survival Possibility — https://www.fastprep.io/problems/amazon-inventory-processes-survival-possibility
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-inventory-processes-survival-possibility.md
+Write-up & approaches: ../../../docs/amazon/amazon-inventory-processes-survival-possibility.md
 
 There are n inventory processes. Process i initially controls bots[i] bots.
 

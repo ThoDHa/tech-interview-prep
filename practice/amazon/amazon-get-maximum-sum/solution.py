@@ -1,6 +1,6 @@
 """Get Maximum Sum — https://www.fastprep.io/problems/amazon-get-maximum-sum
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-get-maximum-sum.md
+Write-up & approaches: ../../../docs/amazon/amazon-get-maximum-sum.md
 
 Note 📝 - might be a sister problem of  🦥 Get Max Sum
 

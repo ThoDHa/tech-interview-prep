@@ -1,6 +1,6 @@
 """Get Final Location — https://www.fastprep.io/problems/amazon-get-final-locations
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-get-final-locations.md
+Write-up & approaches: ../../../docs/amazon/amazon-get-final-locations.md
 
 Amazon stores its data on different servers at different locations. From time to time, due to several factors, Amazon needs to move its data from one location to another. This challenge involves keepi
 

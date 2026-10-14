@@ -1,6 +1,6 @@
 """Largest Binary-String Subset Within Bit Budgets — https://www.fastprep.io/problems/amazon-binary-strings-bounded-subset
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-binary-strings-bounded-subset.md
+Write-up & approaches: ../../../docs/amazon/amazon-binary-strings-bounded-subset.md
 
 Given an array of binary strings strs and two budgets, maxOnes and maxZeroes, return the maximum number of strings you can select.
 

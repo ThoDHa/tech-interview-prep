@@ -1,6 +1,6 @@
 """Tests for Binary Tree Right View — your attempt (solution.py) against cases.json.
 
-The worked approaches live in ../../../docs/problems/amazon_oa/amazon-binary-tree-right-view.md.
+The worked approaches live in ../../../docs/amazon/amazon-binary-tree-right-view.md.
 """
 
 import pytest

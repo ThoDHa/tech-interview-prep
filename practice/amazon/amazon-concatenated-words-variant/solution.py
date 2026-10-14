@@ -1,6 +1,6 @@
 """Concatenated Words — https://www.fastprep.io/problems/amazon-concatenated-words-variant
 
-Write-up & approaches: ../../../docs/problems/amazon_oa/amazon-concatenated-words-variant.md
+Write-up & approaches: ../../../docs/amazon/amazon-concatenated-words-variant.md
 
 Return every word in words that can be formed by concatenating at least two shorter words from the same input.
 

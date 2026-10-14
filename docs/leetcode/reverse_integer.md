@@ -6,7 +6,7 @@
 
 **Algorithm:** [Integer overflow](https://en.wikipedia.org/wiki/Integer_overflow) · [Two's complement](https://en.wikipedia.org/wiki/Two%27s_complement) · [Modular arithmetic](https://en.wikipedia.org/wiki/Modular_arithmetic)
 
-**Practice:** [`practice/reverse_integer/solution.py`](../../practice/reverse_integer/solution.py)
+**Practice:** [`practice/leetcode/reverse_integer/solution.py`](../../practice/leetcode/reverse_integer/solution.py)
 
 You are given a signed 32-bit integer `x`.
 
@@ -231,7 +231,7 @@ The sign flag and the two working integers.
 
 ## Comparison of Solutions
 
-The practice harness's `practice/reverse_integer/reference.py` implements the **Pop-and-Push with Pre-Check** solution.
+The practice harness's `practice/leetcode/reverse_integer/reference.py` implements the **Pop-and-Push with Pre-Check** solution.
 
 ### Time Complexity
 

@@ -6,7 +6,7 @@
 
 **Algorithm:** [Dynamic programming](https://en.wikipedia.org/wiki/Dynamic_programming) · [Memoization](https://en.wikipedia.org/wiki/Memoization) · [Fibonacci sequence](https://en.wikipedia.org/wiki/Fibonacci_sequence) · [Exponentiation by squaring](https://en.wikipedia.org/wiki/Exponentiation_by_squaring) · [Binet's formula](https://en.wikipedia.org/wiki/Fibonacci_sequence#Closed-form_expression)
 
-**Practice:** [`practice/climbing_stairs/solution.py`](../../practice/climbing_stairs/solution.py)
+**Practice:** [`practice/leetcode/climbing_stairs/solution.py`](../../practice/leetcode/climbing_stairs/solution.py)
 
 You are climbing a staircase. It takes `n` steps to reach the top.
 
