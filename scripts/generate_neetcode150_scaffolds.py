@@ -46,7 +46,7 @@ import urllib.error
 import urllib.request
 from dataclasses import dataclass
 from pathlib import Path
-from typing import Any, Dict, List, Optional, Sequence
+from typing import Any, Dict, List, Optional, Sequence, Tuple
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 MANIFEST_PATH = REPO_ROOT / "scripts" / "neetcode150_manifest.json"
@@ -419,7 +419,7 @@ def strip_accordions(description: str) -> str:
     return text.strip()
 
 
-def fenced_regions(text: str) -> List[tuple]:
+def fenced_regions(text: str) -> List[Tuple[int, int]]:
     """Return the character spans fenced code blocks occupy in `text`.
 
     Fence delimiter lines pair up in source order (opening, closing); an
