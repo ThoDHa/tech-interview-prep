@@ -1,6 +1,9 @@
 # MkDocs build output
 site/
 
+# PDF compile outputs (see configs/all-problems.yaml)
+*.pdf
+
 # Python build artifacts
 __pycache__/
 *.pyc

@@ -1705,9 +1705,11 @@ def test_write_sections_requires_a_landing_anchor_when_markers_are_absent(tmp_pa
 
 
 @pre_move_skip
-def test_check_passes_after_emission(tmp_path):
+def test_check_passes_after_emission(tmp_path, monkeypatch):
     landing_path = fresh_landing(tmp_path)
+    redirect_pandoc_config_paths(tmp_path, monkeypatch)
     gen.write_sections(landing_path=landing_path)
+    gen.write_pandoc_configs()
     assert gen.check(landing_path=landing_path) == 0
 
 
@@ -1735,6 +1737,7 @@ def test_check_fails_when_markers_are_missing(tmp_path):
 def test_main_emits_sections_and_exits_zero(tmp_path, monkeypatch, capsys):
     landing_path = fresh_landing(tmp_path)
     mkdocs_path = mkdocs_shell(tmp_path)
+    redirect_pandoc_config_paths(tmp_path, monkeypatch)
     monkeypatch.setattr(gen, "PROBLEMS_INDEX_PATH", landing_path)
     monkeypatch.setattr(gen, "MKDOCS_PATH", mkdocs_path)
     assert gen.main([]) == 0
@@ -1745,7 +1748,9 @@ def test_main_emits_sections_and_exits_zero(tmp_path, monkeypatch, capsys):
 @pre_move_skip
 def test_main_check_mode_is_read_only_and_exits_zero(tmp_path, monkeypatch):
     landing_path = fresh_landing(tmp_path)
+    redirect_pandoc_config_paths(tmp_path, monkeypatch)
     gen.write_sections(landing_path=landing_path)
+    gen.write_pandoc_configs()
     before = landing_path.read_text(encoding="utf-8")
     monkeypatch.setattr(gen, "PROBLEMS_INDEX_PATH", landing_path)
     assert gen.main(["--check"]) == 0
@@ -1758,6 +1763,7 @@ def test_main_check_mode_fails_on_drift(tmp_path, monkeypatch):
     text = landing_path.read_text(encoding="utf-8")
     landing_path.write_text(text.replace("## Sources", "## Credits"), encoding="utf-8")
     monkeypatch.setattr(gen, "PROBLEMS_INDEX_PATH", landing_path)
+    redirect_pandoc_config_paths(tmp_path, monkeypatch)
     assert gen.main(["--check"]) == 1
 
 
@@ -1773,6 +1779,11 @@ def test_committed_landing_page_lives_at_docs_problems_index_md():
 @pre_move_skip
 def test_committed_landing_page_satisfies_the_check_gate():
     assert gen.check() == 0
+
+
+@pre_move_skip
+def test_committed_pandoc_configs_satisfy_the_check_gate():
+    assert gen.check_pandoc_configs() == 0
 
 
 # ---------------------------------------------------------------------------
@@ -2102,6 +2113,7 @@ def test_check_problems_nav_fails_when_an_amazon_child_drifts_in_order(tmp_path)
 def test_main_emits_landing_sections_and_nav(tmp_path, monkeypatch, capsys):
     landing_path = fresh_landing(tmp_path)
     mkdocs_path = mkdocs_shell(tmp_path)
+    redirect_pandoc_config_paths(tmp_path, monkeypatch)
     monkeypatch.setattr(gen, "PROBLEMS_INDEX_PATH", landing_path)
     monkeypatch.setattr(gen, "MKDOCS_PATH", mkdocs_path)
     assert gen.main([]) == 0
@@ -2116,8 +2128,10 @@ def test_main_emits_landing_sections_and_nav(tmp_path, monkeypatch, capsys):
 def test_main_check_mode_covers_landing_and_nav(tmp_path, monkeypatch):
     landing_path = fresh_landing(tmp_path)
     mkdocs_path = mkdocs_shell(tmp_path)
+    redirect_pandoc_config_paths(tmp_path, monkeypatch)
     gen.write_sections(landing_path=landing_path)
     gen.write_problems_nav(mkdocs_path=mkdocs_path)
+    gen.write_pandoc_configs()
     before_landing = landing_path.read_text(encoding="utf-8")
     before_mkdocs = mkdocs_path.read_text(encoding="utf-8")
     monkeypatch.setattr(gen, "PROBLEMS_INDEX_PATH", landing_path)
@@ -2125,3 +2139,270 @@ def test_main_check_mode_covers_landing_and_nav(tmp_path, monkeypatch):
     assert gen.main(["--check"]) == 0
     assert landing_path.read_text(encoding="utf-8") == before_landing
     assert mkdocs_path.read_text(encoding="utf-8") == before_mkdocs
+
+
+# ---------------------------------------------------------------------------
+# The pandoc config emission (configs/all-problems.yaml + the two dividers)
+# ---------------------------------------------------------------------------
+
+
+LEETCODE_DIVIDER_POSITION = 1
+AMAZON_DIVIDER_POSITION = gen.UNIQUE_PROBLEM_COUNT + 2
+
+
+def pandoc_config_input_entries(config_text):
+    """The input-files entries of a rendered pandoc config, in order."""
+    lines = config_text.splitlines()
+    start = lines.index("input-files:") + 1
+    entries = []
+    for line in lines[start:]:
+        if not line.startswith("  - "):
+            break
+        entries.append(line[len("  - ") :])
+    return entries
+
+
+def pandoc_config_shell(tmp_path):
+    """The three redirected config paths for emission tests under tmp_path."""
+    return (
+        tmp_path / "all-problems.yaml",
+        tmp_path / "part-leetcode.md",
+        tmp_path / "part-amazon.md",
+    )
+
+
+def redirect_pandoc_config_paths(tmp_path, monkeypatch):
+    """Point the generator's config path constants into tmp_path."""
+    config_path, leetcode_divider_path, amazon_divider_path = pandoc_config_shell(tmp_path)
+    monkeypatch.setattr(gen, "PANDOC_CONFIG_PATH", config_path)
+    monkeypatch.setattr(gen, "LEETCODE_DIVIDER_PATH", leetcode_divider_path)
+    monkeypatch.setattr(gen, "AMAZON_DIVIDER_PATH", amazon_divider_path)
+
+
+def fixture_merged_rows():
+    """The interleaved study order over the small synthetic fixtures."""
+    neetcode = fixture_neetcode()
+    return gen.interleave_study_order(gen.merge_tracks(fixture_grind(), neetcode), neetcode)
+
+
+def test_render_pandoc_config_orders_dividers_around_both_collections():
+    merged = fixture_merged_rows()
+    amazon = fixture_amazon()
+    config_text = gen.render_pandoc_config(merged, amazon)
+    inputs = pandoc_config_input_entries(config_text)
+    expected = (
+        [gen.LEETCODE_DIVIDER_INPUT]
+        + [f"leetcode/{row['dirSlug']}.md" for row in merged]
+        + [gen.AMAZON_DIVIDER_INPUT]
+        + [f"amazon/{entry['slug']}.md" for entry in amazon]
+    )
+    assert inputs == expected
+
+
+def test_render_pandoc_config_carries_the_legacy_formatting_block():
+    config_text = gen.render_pandoc_config(fixture_merged_rows(), fixture_amazon())
+    assert f"output-file: {gen.PANDOC_OUTPUT_FILE}" in config_text
+    assert "pdf-engine: xelatex" in config_text
+    assert "  papersize: letter" in config_text
+    assert "    - margin=1in" in config_text
+    assert '  monofont: "DejaVu Sans Mono"' in config_text
+    assert "    - Scale=0.85" in config_text
+    assert "  linkcolor: blue" in config_text
+    assert "  listings: true" in config_text
+    assert "  breaklines: true" in config_text
+    assert "toc: true" in config_text
+    assert "toc-depth: 1" in config_text
+    assert f"resource-path: {gen.PANDOC_RESOURCE_PATH}" in config_text
+
+
+def test_render_pandoc_config_titles_the_combined_document():
+    config_text = gen.render_pandoc_config(fixture_merged_rows(), fixture_amazon())
+    assert 'metadata:\n' in config_text
+    assert f'  title: "{gen.PANDOC_DOCUMENT_TITLE}"' in config_text
+
+
+def test_render_pandoc_config_opens_with_the_generator_ownership_comment():
+    config_text = gen.render_pandoc_config(fixture_merged_rows(), fixture_amazon())
+    assert config_text.startswith(gen.PANDOC_CONFIG_HEADER + "\ninput-files:")
+
+
+def test_render_pandoc_config_ends_after_the_metadata_block():
+    config_text = gen.render_pandoc_config(fixture_merged_rows(), fixture_amazon())
+    assert config_text.endswith(f'  title: "{gen.PANDOC_DOCUMENT_TITLE}"\n')
+
+
+def test_render_leetcode_divider_opens_with_the_collection_h1_title():
+    divider = gen.render_leetcode_divider(fixture_merged_rows())
+    assert divider.startswith(f"# {gen.LEETCODE_DIVIDER_TITLE}\n\n")
+    assert divider.endswith("\n")
+
+
+def test_render_leetcode_divider_orients_the_reader_with_one_paragraph():
+    divider = gen.render_leetcode_divider(fixture_merged_rows())
+    body_blocks = divider.split("\n\n")
+    assert len(body_blocks) == 2
+    assert str(len(fixture_merged_rows())) in body_blocks[1]
+    assert "Grind 75" in body_blocks[1]
+    assert "NeetCode 150" in body_blocks[1]
+
+
+def test_render_amazon_divider_opens_with_the_collection_h1_title():
+    divider = gen.render_amazon_divider(fixture_amazon())
+    assert divider.startswith(f"# {gen.AMAZON_DIVIDER_TITLE}\n\n")
+    assert divider.endswith("\n")
+
+
+def test_render_amazon_divider_orients_the_reader_with_one_paragraph():
+    divider = gen.render_amazon_divider(fixture_amazon())
+    body_blocks = divider.split("\n\n")
+    assert len(body_blocks) == 2
+    assert str(len(fixture_amazon())) in body_blocks[1]
+    assert "most recently updated first" in body_blocks[1]
+
+
+def committed_pandoc_inputs():
+    """The committed catalog's input list from a fresh config render."""
+    return pandoc_config_input_entries(
+        gen.render_pandoc_config(committed_nav_rows(), committed_amazon_entries())
+    )
+
+
+def test_committed_pandoc_config_carries_exactly_the_combined_input_total():
+    inputs = committed_pandoc_inputs()
+    assert len(inputs) == gen.UNIQUE_PROBLEM_COUNT + gen.AMAZON_ROW_COUNT + 2
+    assert gen.PANDOC_INPUT_TOTAL == len(inputs)
+
+
+def test_committed_pandoc_config_puts_the_dividers_at_the_collection_boundaries():
+    inputs = committed_pandoc_inputs()
+    assert inputs[LEETCODE_DIVIDER_POSITION - 1] == gen.LEETCODE_DIVIDER_INPUT
+    assert inputs[AMAZON_DIVIDER_POSITION - 1] == gen.AMAZON_DIVIDER_INPUT
+    assert inputs[LEETCODE_DIVIDER_POSITION] == (
+        f"leetcode/{committed_nav_rows()[0]['dirSlug']}.md"
+    )
+    assert inputs[AMAZON_DIVIDER_POSITION] == (
+        f"amazon/{committed_amazon_entries()[0]['slug']}.md"
+    )
+    assert inputs[AMAZON_DIVIDER_POSITION - 2] == (
+        f"leetcode/{committed_nav_rows()[-1]['dirSlug']}.md"
+    )
+
+
+def test_committed_pandoc_config_orders_leetcode_pages_by_the_study_order():
+    inputs = committed_pandoc_inputs()
+    leetcode_inputs = inputs[LEETCODE_DIVIDER_POSITION : AMAZON_DIVIDER_POSITION - 1]
+    assert len(leetcode_inputs) == gen.UNIQUE_PROBLEM_COUNT
+    assert leetcode_inputs == [
+        f"leetcode/{row['dirSlug']}.md" for row in committed_nav_rows()
+    ]
+    assert leetcode_inputs[0] == "leetcode/two_sum.md"
+
+
+def test_committed_pandoc_config_orders_amazon_pages_newest_first():
+    inputs = committed_pandoc_inputs()
+    amazon_inputs = inputs[AMAZON_DIVIDER_POSITION:]
+    amazon = committed_amazon_entries()
+    assert len(amazon_inputs) == gen.AMAZON_ROW_COUNT
+    assert amazon_inputs == [f"amazon/{entry['slug']}.md" for entry in amazon]
+    updated_dates = [entry["updated"] for entry in amazon]
+    assert updated_dates == sorted(updated_dates, reverse=True)
+
+
+def test_committed_pandoc_dividers_open_with_their_collection_titles():
+    leetcode_divider = gen.render_leetcode_divider(committed_nav_rows())
+    amazon_divider = gen.render_amazon_divider(committed_amazon_entries())
+    assert gen.LEETCODE_DIVIDER_TITLE == "Part One: The LeetCode Track"
+    assert gen.AMAZON_DIVIDER_TITLE == "Part Two: The Amazon OA Bank"
+    assert leetcode_divider.startswith(f"# {gen.LEETCODE_DIVIDER_TITLE}\n\n")
+    assert amazon_divider.startswith(f"# {gen.AMAZON_DIVIDER_TITLE}\n\n")
+    assert f"{gen.UNIQUE_PROBLEM_COUNT} problems" in leetcode_divider
+    assert f"{gen.AMAZON_ROW_COUNT} problem pages" in amazon_divider
+
+
+def test_write_pandoc_configs_emits_all_three_artifacts(tmp_path, monkeypatch):
+    redirect_pandoc_config_paths(tmp_path, monkeypatch)
+    assert gen.write_pandoc_configs() is True
+    assert gen.PANDOC_CONFIG_PATH.read_text(encoding="utf-8") == gen.render_pandoc_config(
+        committed_nav_rows(), committed_amazon_entries()
+    )
+    assert gen.LEETCODE_DIVIDER_PATH.read_text(encoding="utf-8") == (
+        gen.render_leetcode_divider(committed_nav_rows())
+    )
+    assert gen.AMAZON_DIVIDER_PATH.read_text(encoding="utf-8") == (
+        gen.render_amazon_divider(committed_amazon_entries())
+    )
+
+
+def test_write_pandoc_configs_is_byte_stable_on_regeneration(tmp_path, monkeypatch):
+    redirect_pandoc_config_paths(tmp_path, monkeypatch)
+    gen.write_pandoc_configs()
+    artifacts = (gen.PANDOC_CONFIG_PATH, gen.LEETCODE_DIVIDER_PATH, gen.AMAZON_DIVIDER_PATH)
+    before = {path: path.read_text(encoding="utf-8") for path in artifacts}
+    assert gen.write_pandoc_configs() is False
+    assert {path: path.read_text(encoding="utf-8") for path in artifacts} == before
+
+
+def test_write_pandoc_configs_repairs_a_tampered_artifact(tmp_path, monkeypatch):
+    redirect_pandoc_config_paths(tmp_path, monkeypatch)
+    gen.write_pandoc_configs()
+    tampered = gen.LEETCODE_DIVIDER_PATH.read_text(encoding="utf-8").replace(
+        gen.LEETCODE_DIVIDER_TITLE, "Wrong Heading"
+    )
+    gen.LEETCODE_DIVIDER_PATH.write_text(tampered, encoding="utf-8")
+    assert gen.write_pandoc_configs() is True
+    assert gen.LEETCODE_DIVIDER_PATH.read_text(encoding="utf-8") == (
+        gen.render_leetcode_divider(committed_nav_rows())
+    )
+
+
+def test_check_pandoc_configs_passes_after_emission(tmp_path, monkeypatch):
+    redirect_pandoc_config_paths(tmp_path, monkeypatch)
+    gen.write_pandoc_configs()
+    assert gen.check_pandoc_configs() == 0
+
+
+def test_check_pandoc_configs_fails_when_an_artifact_drifts(tmp_path, monkeypatch):
+    redirect_pandoc_config_paths(tmp_path, monkeypatch)
+    gen.write_pandoc_configs()
+    tampered = gen.AMAZON_DIVIDER_PATH.read_text(encoding="utf-8") + "rogue line\n"
+    gen.AMAZON_DIVIDER_PATH.write_text(tampered, encoding="utf-8")
+    assert gen.check_pandoc_configs() == 1
+
+
+def test_check_pandoc_configs_fails_when_an_artifact_is_missing(tmp_path, monkeypatch):
+    redirect_pandoc_config_paths(tmp_path, monkeypatch)
+    assert gen.check_pandoc_configs() == 1
+
+
+def test_main_emits_the_pandoc_configs_with_the_landing_and_nav(tmp_path, monkeypatch, capsys):
+    landing_path = fresh_landing(tmp_path)
+    mkdocs_path = mkdocs_shell(tmp_path)
+    redirect_pandoc_config_paths(tmp_path, monkeypatch)
+    monkeypatch.setattr(gen, "PROBLEMS_INDEX_PATH", landing_path)
+    monkeypatch.setattr(gen, "MKDOCS_PATH", mkdocs_path)
+    assert gen.main([]) == 0
+    assert gen.PANDOC_CONFIG_PATH.exists()
+    assert gen.LEETCODE_DIVIDER_PATH.exists()
+    assert gen.AMAZON_DIVIDER_PATH.exists()
+    assert "pandoc" in capsys.readouterr().out
+
+
+def test_main_check_mode_covers_the_pandoc_configs(tmp_path, monkeypatch):
+    landing_path = fresh_landing(tmp_path)
+    mkdocs_path = mkdocs_shell(tmp_path)
+    redirect_pandoc_config_paths(tmp_path, monkeypatch)
+    monkeypatch.setattr(gen, "PROBLEMS_INDEX_PATH", landing_path)
+    monkeypatch.setattr(gen, "MKDOCS_PATH", mkdocs_path)
+    gen.write_sections(landing_path=landing_path)
+    gen.write_problems_nav(mkdocs_path=mkdocs_path)
+    gen.write_pandoc_configs()
+    before_landing = landing_path.read_text(encoding="utf-8")
+    before_mkdocs = mkdocs_path.read_text(encoding="utf-8")
+    before_config = gen.PANDOC_CONFIG_PATH.read_text(encoding="utf-8")
+    assert gen.main(["--check"]) == 0
+    assert landing_path.read_text(encoding="utf-8") == before_landing
+    assert mkdocs_path.read_text(encoding="utf-8") == before_mkdocs
+    assert gen.PANDOC_CONFIG_PATH.read_text(encoding="utf-8") == before_config
+    drifted = before_config.replace(gen.PANDOC_OUTPUT_FILE, "drifted-output.pdf")
+    gen.PANDOC_CONFIG_PATH.write_text(drifted, encoding="utf-8")
+    assert gen.main(["--check"]) == 1
