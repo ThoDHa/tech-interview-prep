@@ -2,8 +2,6 @@
 
 **Medium** | **NN minutes** | **String, Two Pointers**
 
-Special thanks: 𓇼 ⋆.˚Manyy Manyyy thanks to Nachos and spike!𓆝 𓆡⋆.˚ 𓇼
-
 
 In an Amazon inventory management, an operations analyst is dealing with a set of initial product identifiers represented by strings. The type of a product identifier is determined by the first and last letters in the identifier string, for example, the type of the identifier string "abddac" is "ac".
 

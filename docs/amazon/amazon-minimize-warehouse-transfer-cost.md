@@ -4,8 +4,6 @@
 
 Source note: Confirmed on 2026-06-23 as a duplicate of Find Minimum Cost. The linked version is more complete and is the recommended practice version.
 
-Special thanks: A solution contributor helped identify the duplicate.
-
 
 Basically, Amazon has its warehouses lined up in a circle, you can start from any warehouse move in either clockwise or anti-clockwise direction, the direction must remain the same throughout the remaining moves.
 

@@ -2,8 +2,6 @@
 
 **Easy** | **NN minutes** | **Array, Greedy, Sorting**
 
-Special thanks: whale and spike contributed this problem.
-
 
 Your team at AmzAn is building a quiz-style application to help students prepare for certification exams. Each quiz module tests one or more subjects and limits the number of review attempts each student has been asked to examine. To do this, please review each of the certification exams provide. You have within quiz modules answered[i] questions in each allows students to "pass" certain subjects with a total of q more questions overall. For each answer the following: Imagine a student has already answered needed[i] in order to pass. For each of the n subjects, and still has answered has to be at least pass if the q additional answered of the subject, the number of questions the student can pass determine the maximum number among the subjects. The questions are optimally distributed.
 

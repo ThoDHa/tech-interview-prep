@@ -28,8 +28,6 @@ Find the sum of the beauties of all the elements in the array arr.
 
 ## Constraints
 
-- `🥑`
-
 ## Solutions
 
 <!-- Scaffold placeholder: the worked derivation and write-up land

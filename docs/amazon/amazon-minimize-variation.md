@@ -4,8 +4,6 @@
 
 Source note: Examples 3 through 5 were added on 2025-06-25, with relevant source images included in Problem Source. The original poster said Example 5 failed but did not clarify whether the testcase itself was incorrect or merely failed during their attempt, so treat that example with caution.
 
-Special thanks: My deepest thanks to the incredible friend who helped bring the problem to completion. 🐳
-
 
 As an operations engineer at Amazon, you are responsible for organizing the distribution of n different items in the warehouse. The size of each product is provided in an array productSize, where productSize[i] represents the size of the ith product.
 

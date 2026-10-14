@@ -2,8 +2,6 @@
 
 **Hard** | **NN minutes** | **String, Sliding Window**
 
-Special thanks: Barry contributed this problem.
-
 
 Amazon operates a network of n machines. Some are currently inactive, while others are active. The engineers managing the infrastructure have access to a specific procedure that allows toggling the states of machines. In one use of this operation, they can select a continuous segment of machines and invert their statuses—turning active to inactive, and inactive to active. Due to certain restrictions, this procedure can be used at most k times.
 
