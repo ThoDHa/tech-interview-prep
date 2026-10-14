@@ -59,7 +59,7 @@ You can compile the Grind 75 track's problem pages into a single PDF with the in
 
 ### Generating the PDF
 
-Run the following command from the terminal in the `docs/` directory (the `problems/` paths in the configuration resolve relative to it):
+Run the following command from the terminal in the `docs/` directory (the `leetcode/` paths in the configuration resolve relative to it):
 
 ```bash
 pandoc --defaults ../configs/grind75.yaml

@@ -45,14 +45,14 @@ Match the per-directory prefix exactly:
 | --- | --- |
 | `docs/leetcode/<slug>.md` | `two_sum.md` |
 | `docs/amazon/<slug>.md` | `../two_sum.md` |
-| `docs/patterns/<pattern>/intuition.md` | `../../problems/two_sum.md` |
-| `docs/foundations/*.md`, `docs/interview-prep/*.md` | `../problems/two_sum.md` |
+| `docs/patterns/<pattern>/intuition.md` | `../../leetcode/two_sum.md` |
+| `docs/foundations/*.md`, `docs/interview-prep/*.md` | `../leetcode/two_sum.md` |
 | `README.md` (repo root) | `docs/leetcode/two_sum.md` |
 
 The `practice/` tree sits outside the mkdocs docs tree: refer to practice paths
 in docs prose as inline code, never as hyperlinks (the built site cannot reach
 them). The generated `**Practice:**` line on problem pages is the one
-exception; `hooks/strip_practice.py` removes it at build time.
+exception; `scripts/mkdocs-hooks/strip_practice.py` removes it at build time.
 
 ## Generator ownership
 

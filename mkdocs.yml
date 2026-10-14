@@ -65,7 +65,7 @@ plugins:
   - search
 
 extra_css:
-  - problems/stylesheets/extra.css
+  - leetcode/stylesheets/extra.css
 
 extra_javascript:
   - javascripts/mathjax.js
