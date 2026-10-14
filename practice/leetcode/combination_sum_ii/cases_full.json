@@ -1,0 +1,13 @@
+[
+  {"id": "neetcode_example", "args": [[10, 1, 2, 7, 6, 1, 5], 8], "expected": [[1, 1, 6], [1, 2, 5], [1, 7], [2, 6]]},
+  {"id": "three_duplicate_twos", "args": [[2, 5, 2, 1, 2], 5], "expected": [[1, 2, 2], [5]]},
+  {"id": "four_ones", "args": [[1, 1, 1, 1], 3], "expected": [[1, 1, 1]]},
+  {"id": "all_equal_exact_pair", "args": [[3, 3, 3], 6], "expected": [[3, 3]]},
+  {"id": "single_candidate_hit", "args": [[1], 1], "expected": [[1]]},
+  {"id": "single_candidate_miss", "args": [[1], 2], "expected": []},
+  {"id": "all_candidates_too_small", "args": [[1, 2], 4], "expected": []},
+  {"id": "six_candidates", "args": [[4, 5, 2, 1, 3, 6], 8], "expected": [[1, 2, 5], [1, 3, 4], [2, 6], [3, 5]]},
+  {"id": "descending_input", "args": [[7, 6, 3, 2], 7], "expected": [[7]]},
+  {"id": "ascending_run", "args": [[1, 2, 3, 4, 5, 6, 7], 10], "expected": [[1, 2, 3, 4], [1, 2, 7], [1, 3, 6], [1, 4, 5], [2, 3, 5], [3, 7], [4, 6]]},
+  {"id": "pairs_from_twos", "args": [[2, 2, 2], 4], "expected": [[2, 2]]}
+]

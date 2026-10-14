@@ -1,0 +1,12 @@
+[
+  {"id": "neetcode_example", "args": ["aab"], "expected": [["a", "a", "b"], ["aa", "b"]]},
+  {"id": "single_character", "args": ["a"], "expected": [["a"]]},
+  {"id": "all_palindromic_pair", "args": ["aa"], "expected": [["a", "a"], ["aa"]]},
+  {"id": "all_palindromic_triple", "args": ["aaa"], "expected": [["a", "a", "a"], ["a", "aa"], ["a", "aa"], ["aaa"]]},
+  {"id": "no_palindromic_pair", "args": ["ab"], "expected": [["a", "b"]]},
+  {"id": "odd_full_palindrome", "args": ["abcba"], "expected": [["a", "a", "b", "b", "c"], ["a", "a", "bcb"], ["abcba"]]},
+  {"id": "interleaved_palindromes", "args": ["abacdc"], "expected": [["a", "a", "b", "c", "c", "d"], ["a", "a", "b", "cdc"], ["aba", "c", "c", "d"], ["aba", "cdc"]]},
+  {"id": "doubled_letters", "args": ["aabb"], "expected": [["a", "a", "b", "b"], ["a", "a", "bb"], ["aa", "b", "b"], ["aa", "bb"]]},
+  {"id": "all_distinct_letters", "args": ["abcde"], "expected": [["a", "b", "c", "d", "e"]]},
+  {"id": "long_full_palindrome", "args": ["racecar"], "expected": [["a", "a", "c", "c", "e", "r", "r"], ["a", "a", "cec", "r", "r"], ["aceca", "r", "r"], ["racecar"]]}
+]
