@@ -276,13 +276,11 @@ Amazon-tagged coding problems from the [Tech-OA-Interview-Questions](https://git
 | 2024-11-12 | [Rooks Left](amazon-rooks-left.md) | Medium | Matrix, Union Find, Graph | 25 minutes | Amazon |
 | 2024-11-09 | [Optimize Identifiers](amazon-optimized-identifiers.md) | Medium | String, Two Pointers | 25 minutes | Amazon |
 | 2024-10-30 | [Cleanup Dataset](amazon-cleanup-dataset.md) | Medium | Greedy, Hash Table | 25 minutes | Amazon |
-| 2024-10-30 | [Find Min Variance](amazon-find-minimum-possible-variance.md) | - | - | - | Amazon |
 | 2024-10-30 | [Find Min Time Required](amazon-find-minimum-time-required.md) | Medium | String, Greedy, Hash Table | 25 minutes | Amazon |
 | 2024-10-28 | [Calculate Warehouse Efficiency](amazon-calculate-warehouse-efficiency.md) | Medium | Array, Greedy, Prefix Sum | 25 minutes | Amazon |
 | 2024-10-28 | [Find Networking Calls](amazon-find-network-calls.md) | Medium | Array, Sorting, Prefix Sum | 25 minutes | Amazon |
 | 2024-10-28 | [Make All Elements Distinct](amazon-make-all-elements-distinct.md) | Easy | Array, Hash Table | 15 minutes | Amazon |
 | 2024-10-28 | [Maximize Similarity](amazon-maximize-similarity.md) | Easy | Array, Greedy, Math | 15 minutes | Amazon |
-| 2024-10-22 | [Get Min Cost of Purchasing Books](amazon-get-min-cost-book.md) | - | - | - | Amazon |
 | 2024-10-22 | [Get Smaller Items](amazon-get-smaller-items.md) | Hard | Prefix Sum, Binary Search, Sorting | 40 minutes | Amazon |
 | 2024-10-22 | [About Mortgage](amazon-maximum-number-of-days-to-survive.md) | Medium | Greedy, Sorting | 25 minutes | Amazon |
 | 2024-10-22 | [Schedule Tasks](amazon-schedule-tasks.md) | Medium | Greedy, Sorting, Two Pointers | 25 minutes | Amazon |
@@ -308,7 +306,6 @@ Amazon-tagged coding problems from the [Tech-OA-Interview-Questions](https://git
 | 2024-09-03 | [Find Capable Winners](amazon-find-capable-winners.md) | Hard | Sorting, Greedy, Array | 40 minutes | Amazon |
 | 2024-09-03 | [Get Max Information Gain](amazon-get-max-information-gain.md) | Easy | String, Hash Table, Sorting | 15 minutes | Amazon |
 | 2024-08-30 | [Get Min Size](amazon-get-min-size.md) | Medium | Binary Search, Greedy, Sorting | 25 minutes | Amazon |
-| 2024-08-28 | [Min Operations To Make Zeros](amazon-find-minimum-number-of-operations.md) | - | - | - | Amazon |
 | 2024-08-25 | [Choose Warehouse Location](amazon-choose-warehouses-location.md) | Medium | Array, Dynamic Programming, Prefix Sum | 25 minutes | Amazon |
 | 2024-08-23 | [Minimize Storage Required](amazon-minimum-storage-capacity-required.md) | Medium | Array, Binary Search, Greedy, Two Pointers | 25 minutes | Amazon |
 | 2024-08-10 | [Get Maximum Sum](amazon-get-maximum-sum.md) | Easy | Hash Table, Sorting, Greedy | 15 minutes | Amazon |

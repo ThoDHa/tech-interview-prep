@@ -642,14 +642,7 @@ def test_committed_amazon_rows_dash_exactly_the_unsourced_rows():
         )
         == gen.UNKNOWN_TIME_CELL
     ]
-    assert len(dashed) == 23
-    # The three dead-link pages (unfetchable or under maintenance) must stay
-    # dashed rather than guessed.
-    assert {
-        "amazon-find-minimum-possible-variance",
-        "amazon-get-min-cost-book",
-        "amazon-find-minimum-number-of-operations",
-    } <= set(dashed)
+    assert len(dashed) == 20
 
 
 EXPECTED_AMAZON_DIFFICULTY_SAMPLES = {
@@ -674,7 +667,7 @@ def test_amazon_writeup_difficulty_reads_every_committed_header_offline():
         gen.amazon_writeup_difficulty(entry["slug"]) for entry in amazon
     )
     assert counts == collections.Counter(
-        {"Easy": 69, "Medium": 204, "Hard": 86, None: 24}
+        {"Easy": 69, "Medium": 204, "Hard": 86, None: 21}
     )
 
 
