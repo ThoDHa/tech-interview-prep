@@ -44,32 +44,35 @@ Coding rounds are only half the interview loop. The [System Design section](docs
 
 The [`practice/`](practice/) directory is a `pytest` workspace for solving the problems yourself rather than just reading them. Each problem has its own folder with a `solution.py` to implement, two test sets that mirror LeetCode's Run (the examples) and Submit (a full corner-case gauntlet), and a `__main__` block for stepping through a single case in a debugger. An unsolved `solution.py` raises `NotSolved` so its tests skip until you fill it in. A progress tracker (`practice/progress.py`) derives solved status from the test suite, records your confidence per problem, and maintains a spaced-repetition review queue. See [`practice/README.md`](practice/README.md) for setup and the full workflow.
 
-## Creating a PDF of the Grind 75 Track with Pandoc
+## Creating a PDF of All Problems with Pandoc
 
-You can compile the Grind 75 track's problem pages into a single PDF with the included configuration. `configs/grind75.yaml` lists the 75 canonical problems (the two bonus problems are not part of it), so the PDF compiles the full write-ups exactly as they ship on `main`.
+You can compile every problem page in the repository into a single PDF with the included configuration. `configs/all-problems.yaml` lists all 551 problem pages (as of October 2026): the 168 LeetCode track pages in study order, then the 383 Amazon OA bank pages newest-first, with a divider introducing each collection.
 
 ### Prerequisites
 
 1. Install [Pandoc](https://pandoc.org/installing.html) - universal document converter
    - On Debian/Ubuntu: `sudo apt-get install pandoc`
    - On macOS: `brew install pandoc`
-2. Install [LaTeX](https://www.latex-project.org/get/) distribution (like TeX Live, MiKTeX, or MacTeX)
+2. Install a [LaTeX](https://www.latex-project.org/get/) distribution with the XeLaTeX engine (like TeX Live, MiKTeX, or MacTeX)
    - On Debian/Ubuntu: `sudo apt-get install texlive-xetex texlive-fonts-recommended texlive-plain-generic`
    - On macOS: `brew install --cask mactex`
+3. Install the [DejaVu Sans Mono](https://www.dejavu-fonts.org/) font, which the configuration uses for code blocks
+   - On Debian/Ubuntu: `sudo apt-get install fonts-dejavu`
+   - On macOS: `brew install --cask font-dejavu-mono`
 
 ### Generating the PDF
 
-Run the following command from the terminal in the `docs/` directory (the `leetcode/` paths in the configuration resolve relative to it):
+Run the following command from the terminal in the repository root (the `leetcode/` and `amazon/` page paths in the configuration resolve relative to `docs/`):
 
 ```bash
-pandoc --defaults ../configs/grind75.yaml
+cd docs && pandoc --defaults ../configs/all-problems.yaml
 ```
 
 This will:
 
-- Read configuration from `configs/grind75.yaml`
-- Combine the Grind 75 track's problem pages (`two_sum.md`, `valid_parentheses.md`, etc.)
+- Read configuration from `configs/all-problems.yaml`
+- Combine all 551 problem pages (`two_sum.md`, `amazon-concatenated-words-variant.md`, etc.)
 - Create a table of contents
-- Generate a PDF file named `grind75.pdf` using the XeLaTeX engine
+- Generate `docs/all-problems.pdf` using the XeLaTeX engine (the PDF is gitignored)
 
-To customize the output, edit the `configs/grind75.yaml` file. You can add more input files (for example, the two bonus problems), change metadata, adjust the table of contents, or modify the PDF engine settings.
+To customize the output, do not edit `configs/all-problems.yaml`: the file is generated whole by `scripts/generate_index_tables.py` from the committed manifests, and hand edits are lost on the next regeneration. Adjust the generator or the manifests it reads (`scripts/neetcode150_manifest.json`, `scripts/amazon_oa_manifest.json`, `scripts/grind75_table.json`) and regenerate with `python3 scripts/generate_index_tables.py`.
