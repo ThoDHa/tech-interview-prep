@@ -2211,8 +2211,13 @@ def test_render_pandoc_config_carries_the_legacy_formatting_block():
     assert "  listings: true" in config_text
     assert "  breaklines: true" in config_text
     assert "toc: true" in config_text
-    assert "toc-depth: 1" in config_text
+    assert "toc-depth: 2" in config_text
     assert f"resource-path: {gen.PANDOC_RESOURCE_PATH}" in config_text
+
+
+def test_render_pandoc_config_reads_latex_delimited_inline_math():
+    config_text = gen.render_pandoc_config(fixture_merged_rows(), fixture_amazon())
+    assert f"from: {gen.PANDOC_INPUT_FORMAT}" in config_text
 
 
 def test_render_pandoc_config_titles_the_combined_document():
@@ -2231,9 +2236,10 @@ def test_render_pandoc_config_ends_after_the_metadata_block():
     assert config_text.endswith(f'  title: "{gen.PANDOC_DOCUMENT_TITLE}"\n')
 
 
-def test_render_leetcode_divider_opens_with_the_collection_h1_title():
+def test_render_leetcode_divider_opens_with_the_raw_latex_part():
     divider = gen.render_leetcode_divider(fixture_merged_rows())
-    assert divider.startswith(f"# {gen.LEETCODE_DIVIDER_TITLE}\n\n")
+    latex_part = f"\\part{{{gen.LEETCODE_DIVIDER_TITLE}}}"
+    assert divider.startswith(f"```{{=latex}}\n{latex_part}\n```\n\n")
     assert divider.endswith("\n")
 
 
@@ -2246,9 +2252,10 @@ def test_render_leetcode_divider_orients_the_reader_with_one_paragraph():
     assert "NeetCode 150" in body_blocks[1]
 
 
-def test_render_amazon_divider_opens_with_the_collection_h1_title():
+def test_render_amazon_divider_opens_with_the_raw_latex_part():
     divider = gen.render_amazon_divider(fixture_amazon())
-    assert divider.startswith(f"# {gen.AMAZON_DIVIDER_TITLE}\n\n")
+    latex_part = f"\\part{{{gen.AMAZON_DIVIDER_TITLE}}}"
+    assert divider.startswith(f"```{{=latex}}\n{latex_part}\n```\n\n")
     assert divider.endswith("\n")
 
 
@@ -2313,8 +2320,10 @@ def test_committed_pandoc_dividers_open_with_their_collection_titles():
     amazon_divider = gen.render_amazon_divider(committed_amazon_entries())
     assert gen.LEETCODE_DIVIDER_TITLE == "Part One: The LeetCode Track"
     assert gen.AMAZON_DIVIDER_TITLE == "Part Two: The Amazon OA Bank"
-    assert leetcode_divider.startswith(f"# {gen.LEETCODE_DIVIDER_TITLE}\n\n")
-    assert amazon_divider.startswith(f"# {gen.AMAZON_DIVIDER_TITLE}\n\n")
+    latex_part_leetcode = f"\\part{{{gen.LEETCODE_DIVIDER_TITLE}}}"
+    latex_part_amazon = f"\\part{{{gen.AMAZON_DIVIDER_TITLE}}}"
+    assert leetcode_divider.startswith(f"```{{=latex}}\n{latex_part_leetcode}\n```\n\n")
+    assert amazon_divider.startswith(f"```{{=latex}}\n{latex_part_amazon}\n```\n\n")
     assert f"{gen.UNIQUE_PROBLEM_COUNT} problems" in leetcode_divider
     assert f"{gen.AMAZON_ROW_COUNT} problem pages" in amazon_divider
 
