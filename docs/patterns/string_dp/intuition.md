@@ -238,15 +238,15 @@ if p[j-2] == s[i-1]:
 
 Build string DP skill through this sequence:
 
-1. **[Longest Common Subsequence](../../problems/longest_common_subsequence.md)**: the canonical two-string grid. Match means diagonal plus one; mismatch means the best of skipping either character.
+1. **[Longest Common Subsequence](../../leetcode/longest_common_subsequence.md)**: the canonical two-string grid. Match means diagonal plus one; mismatch means the best of skipping either character.
 
-2. **[Longest Palindromic Substring](../../problems/longest_palindromic_substring.md)**: one string against itself, as interval DP. Endpoints match and the inside is a palindrome; fill by increasing length.
+2. **[Longest Palindromic Substring](../../leetcode/longest_palindromic_substring.md)**: one string against itself, as interval DP. Endpoints match and the inside is a palindrome; fill by increasing length.
 
 3. **Longest Palindromic Subsequence** (LC 516): reuse LCS by comparing the string with its own reverse.
 
-4. **[Edit Distance](../../problems/edit_distance.md)**: three operations become three neighbor cells; take the minimum and add one.
+4. **[Edit Distance](../../leetcode/edit_distance.md)**: three operations become three neighbor cells; take the minimum and add one.
 
-5. **[Regular Expression Matching](../../problems/regular_expression_matching.md)**: the hardest transition. Each `*` branches into "use zero" and "use one more" of the preceding character.
+5. **[Regular Expression Matching](../../leetcode/regular_expression_matching.md)**: the hardest transition. Each `*` branches into "use zero" and "use one more" of the preceding character.
 
 ## Quick Pattern Recognition
 

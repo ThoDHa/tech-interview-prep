@@ -1,16 +1,16 @@
 # Tech Interview Prep
 
-This repository is a structured study guide for algorithmic problem solving built on three curated problem banks: the [Grind 75](https://www.techinterviewhandbook.org/grind75) list of LeetCode questions from the [Tech Interview Handbook](https://www.techinterviewhandbook.org/) team, the [NeetCode 150](https://neetcode.io/practice/practice/neetcode150) track from the [NeetCode](https://neetcode.io/) team, and an [Amazon OA](docs/problems/amazon_oa/index.md) bank collected from the [Tech-OA-Interview-Questions](https://github.com/perixtar/Tech-OA-Interview-Questions) repository. All credit for the curated problem lists goes to them for their excellent work in creating these focused interview preparation resources.
+This repository is a structured study guide for algorithmic problem solving built on three curated problem banks: the [Grind 75](https://www.techinterviewhandbook.org/grind75) list of LeetCode questions from the [Tech Interview Handbook](https://www.techinterviewhandbook.org/) team, the [NeetCode 150](https://neetcode.io/practice/practice/neetcode150) track from the [NeetCode](https://neetcode.io/) team, and an [Amazon OA](docs/amazon/index.md) bank collected from the [Tech-OA-Interview-Questions](https://github.com/perixtar/Tech-OA-Interview-Questions) repository. All credit for the curated problem lists goes to them for their excellent work in creating these focused interview preparation resources.
 
 **Read it as a website:** the full guide, including worked solution write-ups for every Grind 75 and NeetCode 150 problem and a growing share of the Amazon OA bank, is published at [thodha.github.io/tech-interview-prep](https://thodha.github.io/tech-interview-prep/).
 
 ## The three problem banks
 
-- **Grind 75** is the core track: the canonical 75 problems in study order, plus two bonus problems ([Binary Tree Maximum Path Sum](docs/problems/binary_tree_maximum_path_sum.md) and [Maximum Frequency Stack](docs/problems/maximum_frequency_stack.md)).
+- **Grind 75** is the core track: the canonical 75 problems in study order, plus two bonus problems ([Binary Tree Maximum Path Sum](docs/leetcode/binary_tree_maximum_path_sum.md) and [Maximum Frequency Stack](docs/leetcode/maximum_frequency_stack.md)).
 - **NeetCode 150** extends the LeetCode track to 150 problems in NeetCode's section order; 59 of them overlap with Grind 75 and share their pages and write-ups.
-- **Amazon OA** is a growing bank of Amazon-tagged online-assessment questions (383 problems as of October 2026, tracked against its upstream sources), with its own [bank index](docs/problems/amazon_oa/index.md), most recently updated first, and practice stubs under `practice/amazon_oa/`.
+- **Amazon OA** is a growing bank of Amazon-tagged online-assessment questions (383 problems as of October 2026, tracked against its upstream sources), with its own [bank index](docs/amazon/index.md), most recently updated first, and practice stubs under `practice/amazon/`.
 
-All three banks are presented through one generated catalog, the [Problems page](docs/problems/index.md): the Grind 75 and NeetCode 150 tracks merge into a single unified table of 168 unique problems (each problem appears once, credited to every track it belongs to), and the Amazon OA bank gets its own table on the same page.
+All three banks are presented through one generated catalog, the [Problems page](docs/leetcode/index.md): the Grind 75 and NeetCode 150 tracks merge into a single unified table of 168 unique problems (each problem appears once, credited to every track it belongs to), and the Amazon OA bank gets its own table on the same page.
 
 Every problem, regardless of track, has the same core page structure (statement and examples, with constraints where available) and a matching practice folder under `practice/` with stubs and tests; the Grind 75 and NeetCode 150 pages (not the Amazon OA pages) also link the **Pattern** guide behind the technique.
 
@@ -30,7 +30,7 @@ New to algorithms or interview prep? Start with the [Foundations](docs/foundatio
 4. [How to Approach a Problem](docs/foundations/how_to_approach.md): a repeatable method from problem statement to working solution.
 5. [Glossary](docs/foundations/glossary.md): the jargon the guides lean on, defined in plain language.
 
-Then work the problems in the [Problems catalog](docs/problems/index.md)'s unified study order, reading each one's linked **Pattern** guide for the *why* behind the technique. The [8-week schedule](docs/interview_prep/study_plan.md#the-8-week-schedule) paces that order into eight weeks, easier to harder with related problem types grouped together. For the plan around the problems, how to budget your time, and what the non-coding rounds require, see the [Interview Prep](docs/interview_prep/index.md) section. To record what you have solved as you go, use the practice progress tracker (`practice/progress.py`, described under [Practice Workspace](#practice-workspace)).
+Then work the problems in the [Problems catalog](docs/leetcode/index.md)'s unified study order, reading each one's linked **Pattern** guide for the *why* behind the technique. The [8-week schedule](docs/interview-prep/study_plan.md#the-8-week-schedule) paces that order into eight weeks, easier to harder with related problem types grouped together. For the plan around the problems, how to budget your time, and what the non-coding rounds require, see the [Interview Prep](docs/interview-prep/index.md) section. To record what you have solved as you go, use the practice progress tracker (`practice/progress.py`, described under [Practice Workspace](#practice-workspace)).
 
 ## Pattern Intuition
 
@@ -38,7 +38,7 @@ Beyond the individual problems, the guide includes [algorithm pattern intuition 
 
 ## System Design
 
-Coding rounds are only half the interview loop. The [System Design section](docs/system_design/index.md) is a growing scaffold for the other half: a repeatable [interview method](docs/system_design/method.md) with a 45-minute time budget, [back-of-envelope estimation](docs/system_design/estimation.md) skills, a [building-blocks vocabulary](docs/system_design/building_blocks.md) from load balancers to consistency models, and [guided case studies](docs/system_design/case_studies/index.md) (URL shortener, rate limiter, news feed, chat, web crawler) that walk the method with collapsible answers and extension checklists.
+Coding rounds are only half the interview loop. The [System Design section](docs/system-design/index.md) is a growing scaffold for the other half: a repeatable [interview method](docs/system-design/method.md) with a 45-minute time budget, [back-of-envelope estimation](docs/system-design/estimation.md) skills, a [building-blocks vocabulary](docs/system-design/building_blocks.md) from load balancers to consistency models, and [guided case studies](docs/system-design/case_studies/index.md) (URL shortener, rate limiter, news feed, chat, web crawler) that walk the method with collapsible answers and extension checklists.
 
 ## Practice Workspace
 
@@ -46,7 +46,7 @@ The [`practice/`](practice/) directory is a `pytest` workspace for solving the p
 
 ## Creating a PDF of the Grind 75 Track with Pandoc
 
-You can compile the Grind 75 track's problem pages into a single PDF with the included configuration. `grind75.yaml` lists the 75 canonical problems (the two bonus problems are not part of it), so the PDF compiles the full write-ups exactly as they ship on `main`.
+You can compile the Grind 75 track's problem pages into a single PDF with the included configuration. `configs/grind75.yaml` lists the 75 canonical problems (the two bonus problems are not part of it), so the PDF compiles the full write-ups exactly as they ship on `main`.
 
 ### Prerequisites
 
@@ -59,17 +59,17 @@ You can compile the Grind 75 track's problem pages into a single PDF with the in
 
 ### Generating the PDF
 
-Run the following command from the terminal in the `docs/` directory (the `problems/` paths in the configuration resolve relative to it):
+Run the following command from the terminal in the `docs/` directory (the `leetcode/` paths in the configuration resolve relative to it):
 
 ```bash
-pandoc --defaults ../grind75.yaml
+pandoc --defaults ../configs/grind75.yaml
 ```
 
 This will:
 
-- Read configuration from `grind75.yaml`
+- Read configuration from `configs/grind75.yaml`
 - Combine the Grind 75 track's problem pages (`two_sum.md`, `valid_parentheses.md`, etc.)
 - Create a table of contents
 - Generate a PDF file named `grind75.pdf` using the XeLaTeX engine
 
-To customize the output, edit the `grind75.yaml` file. You can add more input files (for example, the two bonus problems), change metadata, adjust the table of contents, or modify the PDF engine settings.
+To customize the output, edit the `configs/grind75.yaml` file. You can add more input files (for example, the two bonus problems), change metadata, adjust the table of contents, or modify the PDF engine settings.

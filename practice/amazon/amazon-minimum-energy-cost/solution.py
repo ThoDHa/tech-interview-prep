@@ -1,0 +1,32 @@
+"""Min Energy Cost — https://www.fastprep.io/problems/amazon-minimum-energy-cost
+
+Write-up & approaches: ../../../docs/amazon/amazon-minimum-energy-cost.md
+
+Janet has N bags in a row. Each bag has a weight (Wi). Janet can collect bags from either the leftmost or rightmost position, but there are energy costs:
+
+  uv run python amazon_oa/amazon-minimum-energy-cost/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon_oa/amazon-minimum-energy-cost/              # run the test sets
+"""
+
+from harness import NotSolved, pick_case
+
+
+class Solution:
+    def minimumEnergyCost(self, weights, X, Y, El, Er):
+        """State the time and space complexity of your approach, and explain why.
+
+        Time:  O(?):
+        Space: O(?):
+        """
+        raise NotSolved
+
+
+if __name__ == "__main__":
+    # Debug playground: set a breakpoint in minimumEnergyCost above, then run this file.
+    # Pick a case by id (ids are in cases.json).
+    CASE = "example_1"
+    case = pick_case(__file__, CASE)
+    result = Solution().minimumEnergyCost(*case["args"])
+    print(f"case {case['id']}: args = {case['args']}")
+    print(f"expected: {case['expected']}")
+    print(f"got:      {result}")

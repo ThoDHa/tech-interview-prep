@@ -39,7 +39,7 @@ A hash map stores **key to value** pairs and finds any key almost instantly. A h
 - **No order**: you cannot ask for "the third item"; you ask about specific
   keys.
 
-This is the single most useful structure for interviews, because it turns a repeated `O(n)` search into an `O(1)` lookup. The entire [Hashing pattern](../patterns/hashing/intuition.md) is built on it, and [Two Sum](../problems/two_sum.md) is the canonical first use.
+This is the single most useful structure for interviews, because it turns a repeated `O(n)` search into an `O(1)` lookup. The entire [Hashing pattern](../patterns/hashing/intuition.md) is built on it, and [Two Sum](../leetcode/two_sum.md) is the canonical first use.
 
 ## Stack
 

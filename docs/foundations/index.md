@@ -21,7 +21,7 @@ Read these in order. Each one is short and stands on its own.
 
 A [glossary](glossary.md) defines the recurring jargon (memoization, in-degree, amortized, and the rest) in one place for quick lookup.
 
-The section continues past these four: once you have worked your first batch of problems, [Optimizing a Working Solution](optimizing.md) and [How You Are Scored](interview_rubrics.md) deepen the method as you practice, and [The Coding Interview, Phase by Phase](interview_practices.md) is best read in full just before your first [mock interview](../interview_prep/mock_interviews.md).
+The section continues past these four: once you have worked your first batch of problems, [Optimizing a Working Solution](optimizing.md) and [How You Are Scored](interview_rubrics.md) deepen the method as you practice, and [The Coding Interview, Phase by Phase](interview_practices.md) is best read in full just before your first [mock interview](../interview-prep/mock_interviews.md).
 
 ## A suggested study path
 

@@ -11,13 +11,13 @@ None of it requires a clever idea. It is a short checklist: find the floor, remo
 - Summing a list is `O(n)`. Until you have read every element, the one you
   skipped could have held any value, so no algorithm can be sure of the sum.
 - Deciding whether a list [Contains
-  Duplicate](../problems/contains_duplicate.md) is `O(n)` for the same reason: a duplicate could hide in the last element you have not looked at.
-- Counting [islands](../problems/number_of_islands.md) in an `m × n` grid is
+  Duplicate](../leetcode/contains_duplicate.md) is `O(n)` for the same reason: a duplicate could hide in the last element you have not looked at.
+- Counting [islands](../leetcode/number_of_islands.md) in an `m × n` grid is
   `O(m·n)`: every cell can change the count, so every cell must be visited.
 
 Knowing the floor earns you two things. First, it tells you when to stop: if your approach already meets the floor, hunting for something faster is a waste of the clock. Second, it is a positive interview signal: the sentence "every element must be read at least once, so `O(n)` is the best possible" is exactly what interviewers want to hear.
 
-One warning: **properties change the floor**. On an unsorted array, finding a value costs `O(n)`; on a sorted one, [binary search](../patterns/binary_search/intuition.md) finds it in `O(log n)` ([Search in Rotated Sorted Array](../problems/search_in_rotated_sorted_array.md)) and the minimum or maximum is `O(1)`, because it is sitting at an end. Ask what the input's properties guarantee before you accept a floor.
+One warning: **properties change the floor**. On an unsorted array, finding a value costs `O(n)`; on a sorted one, [binary search](../patterns/binary_search/intuition.md) finds it in `O(log n)` ([Search in Rotated Sorted Array](../leetcode/search_in_rotated_sorted_array.md)) and the minimum or maximum is `O(1)`, because it is sitting at an end. Ask what the input's properties guarantee before you accept a floor.
 
 When you are already at the floor, there are exactly two directions left, and interviewers name them: do *less work* (fewer passes over the data) or use *less space*. The rest of this page is those two directions.
 
@@ -39,11 +39,11 @@ def contains_duplicate(nums):
     return False
 ```
 
-[Valid Palindrome](../problems/valid_palindrome.md) is the same habit: the first mismatched pair settles the answer, so return `False` and stop. In the [Binary Search](../patterns/binary_search/intuition.md) loop, `return mid` is early termination too.
+[Valid Palindrome](../leetcode/valid_palindrome.md) is the same habit: the first mismatched pair settles the answer, so return `False` and stop. In the [Binary Search](../patterns/binary_search/intuition.md) loop, `return mid` is early termination too.
 
 ### 2. Hoist invariant work out of loops
 
-Anything the loop recomputes that does not actually change from one iteration to the next does not belong inside it. Compute it once, before the loop starts. In [Find All Anagrams in a String](../problems/find_all_anagrams_in_a_string.md), every window position is compared against the letter counts of `p`, but `p` itself never changes with the window:
+Anything the loop recomputes that does not actually change from one iteration to the next does not belong inside it. Compute it once, before the loop starts. In [Find All Anagrams in a String](../leetcode/find_all_anagrams_in_a_string.md), every window position is compared against the letter counts of `p`, but `p` itself never changes with the window:
 
 ```python
 # rebuilds the counts of p from scratch, at every window position
@@ -78,7 +78,7 @@ for price in prices:
     min_price = min(min_price, price)
 ```
 
-([Best Time to Buy and Sell Stock](../problems/best_time_to_buy_and_sell_stock.md): the first version is `O(n²)`, the second `O(n)`.) The pattern-scale versions of this habit are the [Hashing](../patterns/hashing/intuition.md) guide, which remembers what you have seen, and the [Prefix Sum](../patterns/prefix_sum/intuition.md) guide, which remembers running totals.
+([Best Time to Buy and Sell Stock](../leetcode/best_time_to_buy_and_sell_stock.md): the first version is `O(n²)`, the second `O(n)`.) The pattern-scale versions of this habit are the [Hashing](../patterns/hashing/intuition.md) guide, which remembers what you have seen, and the [Prefix Sum](../patterns/prefix_sum/intuition.md) guide, which remembers running totals.
 
 ### 4. Order conditions: cheap first, likely first
 
@@ -91,11 +91,11 @@ def is_anagram(s, t):
     return Counter(s) == Counter(t)
 ```
 
-([Valid Anagram](../problems/valid_anagram.md); the same guard applies to [Ransom Note](../problems/ransom_note.md).) The `O(1)` length check settles the common mismatch for free, and the `O(n)` counting runs only when it can succeed.
+([Valid Anagram](../leetcode/valid_anagram.md); the same guard applies to [Ransom Note](../leetcode/ransom_note.md).) The `O(1)` length check settles the common mismatch for free, and the `O(n)` counting runs only when it can succeed.
 
 ### 5. Be lazy
 
-Do not do work before you know it is needed. Skip setup for empty inputs, and when the remainder of a job is "everything that is left", take it whole instead of processing it item by item. [Merge Two Sorted Lists](../problems/merge_two_sorted_lists.md):
+Do not do work before you know it is needed. Skip setup for empty inputs, and when the remainder of a job is "everything that is left", take it whole instead of processing it item by item. [Merge Two Sorted Lists](../leetcode/merge_two_sorted_lists.md):
 
 ```python
 # eager: walk the remaining nodes one at a time, re-pointing each
@@ -109,7 +109,7 @@ tail.next = current
 
 ### 6. Delete redundant conditions
 
-Conditions that can never change the outcome are not safety nets, they are noise, and every extra branch is a place for a future bug to hide. This is all [Invert Binary Tree](../problems/invert_binary_tree.md) needs:
+Conditions that can never change the outcome are not safety nets, they are noise, and every extra branch is a place for a future bug to hide. This is all [Invert Binary Tree](../leetcode/invert_binary_tree.md) needs:
 
 ```python
 def invert_tree(node):
@@ -130,10 +130,10 @@ The cheapest extra memory is memory you do not allocate: reuse the input as your
 - [Two Pointers](../patterns/two_pointers/intuition.md): the writer-pointer
   form compacts a list in place, no second array.
 - [Backtracking](../patterns/backtracking_exploration/intuition.md): visited
-  cells are marked directly in the grid ([Word Search](../problems/word_search.md)).
+  cells are marked directly in the grid ([Word Search](../leetcode/word_search.md)).
 - [Grid DP](../patterns/grid_dp/intuition.md): the `m × n` table collapses
   into one row that is overwritten as you go.
-- [Sort Colors](../problems/sort_colors.md): three value classes swap into
+- [Sort Colors](../leetcode/sort_colors.md): three value classes swap into
   position inside the original array.
 
 One caution, and it matters: overwriting the input destroys the caller's data. Interviews accept this (the input is disposable); production code usually does not (callers expect their arguments back unharmed). So say it out loud: "this mutates the input; I'd copy it first outside an interview." Naming the trade is the signal, not avoiding the trick. Whether the input may be modified is worth settling while you [clarify the question](interview_practices.md#2-clarify-the-question).
@@ -143,11 +143,11 @@ One caution, and it matters: overwriting the input destroys the caller's data. I
 The other way to cut both time and space is to hold the data in a structure where the expensive operation is cheap:
 
 - A [Trie](../patterns/trie/intuition.md) stores shared prefixes once, so
-  repeated prefix walks become short descents ([Implement Trie](../problems/implement_trie_prefix_tree.md), [Word Break](../problems/word_break.md)).
+  repeated prefix walks become short descents ([Implement Trie](../leetcode/implement_trie_prefix_tree.md), [Word Break](../leetcode/word_break.md)).
 - A [Heap](../patterns/heap/intuition.md) answers "the `k` largest" without
-  fully sorting: [K Closest Points to Origin](../problems/k_closest_points_to_origin.md) drops from `O(n log n)` to `O(n log k)`.
+  fully sorting: [K Closest Points to Origin](../leetcode/k_closest_points_to_origin.md) drops from `O(n log n)` to `O(n log k)`.
 - A [Hashing](../patterns/hashing/intuition.md) set trades `O(n)` memory for
-  `O(1)` lookups ([Two Sum](../problems/two_sum.md)), and a set holding the characters seen an odd number of times so far settles [Longest Palindrome](../problems/longest_palindrome.md) in a single pass.
+  `O(1)` lookups ([Two Sum](../leetcode/two_sum.md)), and a set holding the characters seen an odd number of times so far settles [Longest Palindrome](../leetcode/longest_palindrome.md) in a single pass.
 
 ## When to stop
 

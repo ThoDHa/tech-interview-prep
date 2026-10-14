@@ -342,11 +342,11 @@ The iterative versions are strictly O(1) space because we only use a fixed numbe
 
 ## Practice Progression
 
-1. **[Reverse Linked List (LC 206)](../../problems/reverse_linked_list.md)**: the full three-pointer dance on the whole list. Master this first.
+1. **[Reverse Linked List (LC 206)](../../leetcode/reverse_linked_list.md)**: the full three-pointer dance on the whole list. Master this first.
 2. **Reverse Linked List II (LC 92)**: segment reversal. Add the dummy node and the bookmark reconnection.
-3. **[Reverse Nodes in k-Group (LC 25)](../../problems/reverse_nodes_in_k_group.md)**: repeated segment reversal, with an availability check before each group.
-4. **[Linked List Cycle (LC 141, Grind 75 #12)](../../problems/linked_list_cycle.md)**: fast/slow cycle detection; the lap-and-collide argument in action.
-5. **[Middle of the Linked List (LC 876, Grind 75 #22)](../../problems/middle_of_the_linked_list.md)**: the same gap used as a measuring tape; when fast exits, slow stands at the middle.
+3. **[Reverse Nodes in k-Group (LC 25)](../../leetcode/reverse_nodes_in_k_group.md)**: repeated segment reversal, with an availability check before each group.
+4. **[Linked List Cycle (LC 141, Grind 75 #12)](../../leetcode/linked_list_cycle.md)**: fast/slow cycle detection; the lap-and-collide argument in action.
+5. **[Middle of the Linked List (LC 876, Grind 75 #22)](../../leetcode/middle_of_the_linked_list.md)**: the same gap used as a measuring tape; when fast exits, slow stands at the middle.
 
 ---
 

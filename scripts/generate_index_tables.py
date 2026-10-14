@@ -1165,6 +1165,29 @@ def _generated_nav_span_start(text: str) -> tuple[int, str]:
     return -1, ""
 
 
+def _generated_nav_span_end(text: str, section_at: int) -> int:
+    """Return the offset where the generated nav span ends.
+
+    The span covers both generated subsections (Leetcode then Amazon), so a
+    top-level line only terminates the span when it is neither subsection
+    header; the Amazon header sits inside the span, not after it.
+
+    Args:
+        text: The full mkdocs.yml text.
+        section_at: Offset just past the span-opening marker.
+
+    Returns:
+        The offset of the first line after the generated span, or the text
+        length when the span runs to the end of the file.
+    """
+    for match in NAV_NEXT_TOP_PATTERN.finditer(text[section_at:]):
+        candidate = section_at + match.start()
+        if text[candidate:].startswith(NAV_AMAZON_MARKER):
+            continue
+        return candidate
+    return len(text)
+
+
 def render_generated_nav(merged: Sequence[dict], amazon: Sequence[dict]) -> str:
     """Render the generated nav: the Leetcode and Amazon top-level sections.
 
@@ -1228,10 +1251,7 @@ def write_problems_nav(mkdocs_path: Optional[Path] = None) -> bool:
             "mkdocs.yml has no Leetcode or Problems nav section to replace"
         )
     section_at = marker_at + len(marker)
-    next_top_at = len(text)
-    for match in NAV_NEXT_TOP_PATTERN.finditer(text[section_at:]):
-        next_top_at = section_at + match.start()
-        break
+    next_top_at = _generated_nav_span_end(text, section_at)
     _grind, _neetcode, _amazon = load_validated_sources()
     merged = study_order_rows(_grind, _neetcode)
     updated = text[:marker_at] + render_generated_nav(merged, _amazon) + text[next_top_at:]
@@ -1319,10 +1339,7 @@ def check_problems_nav(mkdocs_path: Optional[Path] = None) -> int:
         stale.append("mkdocs.yml (nav section marker not found exactly once)")
     else:
         section_at = marker_at + len(marker)
-        next_top_at = len(text)
-        for match in NAV_NEXT_TOP_PATTERN.finditer(text[section_at:]):
-            next_top_at = section_at + match.start()
-            break
+        next_top_at = _generated_nav_span_end(text, section_at)
         if text[marker_at:next_top_at] != fresh:
             stale.append(
                 "mkdocs.yml (nav drift: "
