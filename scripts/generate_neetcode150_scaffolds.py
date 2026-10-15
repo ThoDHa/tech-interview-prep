@@ -46,7 +46,7 @@ import urllib.error
 import urllib.request
 from dataclasses import dataclass
 from pathlib import Path
-from typing import Any, Dict, List, Optional, Sequence
+from typing import Any, Dict, List, Optional, Sequence, Tuple
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 MANIFEST_PATH = REPO_ROOT / "scripts" / "neetcode150_manifest.json"
@@ -112,6 +112,13 @@ ANY_ORDER_PATTERNS = (
     "multiple valid answers",
     "would still be accepted",
     "all words that are present in the grid",
+)
+# Explanations only flip the any-order class on judge-acceptance phrasings;
+# broad terms there ("traversed in any order") describe an algorithm, not a
+# non-unique output.
+ANY_ORDER_ACCEPTANCE_PATTERNS = (
+    "multiple valid answers",
+    "would still be accepted",
 )
 HINT_ACCORDION_PATTERN = re.compile(r"<details\s+class=\"hint-accordion\".*?</details>", re.S)
 COMPANY_ACCORDION_PATTERN = re.compile(r"<details\s+class=\"company-tags-accordion\".*?</details>", re.S)
@@ -412,6 +419,33 @@ def strip_accordions(description: str) -> str:
     return text.strip()
 
 
+def fenced_regions(text: str) -> List[Tuple[int, int]]:
+    """Return the character spans fenced code blocks occupy in `text`.
+
+    Fence delimiter lines pair up in source order (opening, closing); an
+    unterminated trailing delimiter yields no region.
+    """
+    delimiters = list(FENCE_PATTERN.finditer(text))
+    return [
+        (opening.end(), closing.start())
+        for opening, closing in zip(delimiters[0::2], delimiters[1::2])
+    ]
+
+
+def header_match_outside_fences(pattern: re.Pattern, text: str) -> Optional[re.Match]:
+    """Find the first `pattern` match that sits outside a fenced code block.
+
+    A `**Follow-up:**` line inside an example fence is example content, not
+    the description's own follow-up header; splicing it would cut the
+    statement mid-fence.
+    """
+    regions = fenced_regions(text)
+    for candidate in pattern.finditer(text):
+        if not any(start <= candidate.start() < end for start, end in regions):
+            return candidate
+    return None
+
+
 def parse_description(description: str) -> dict:
     """Decompose a NeetCode `description` into statement, examples, and constraints.
 
@@ -434,7 +468,7 @@ def parse_description(description: str) -> dict:
         return {"statement": "", "examples": [], "constraints": [], "follow_up": ""}
 
     follow_up = ""
-    follow_match = FOLLOW_UP_HEADER_PATTERN.search(text)
+    follow_match = header_match_outside_fences(FOLLOW_UP_HEADER_PATTERN, text)
     if follow_match:
         # Bound the capture at the next structural marker (**Example N:** or
         # **Constraints:**); some descriptions place the Follow-up before
@@ -761,12 +795,26 @@ def declares_any_order(parsed: dict) -> bool:
     any spelling makes the example output one of many valid answers, which
     `==` must not pin. The word-search shape ("return all words present in
     the grid") also admits several outputs, so its phrasing is included.
+    The statement and the example outputs take the full pattern list; an
+    example's explanation counts only on the acceptance phrasings, so a
+    walkthrough that merely discusses order-invariant traversal keeps its
+    unique output assertable.
     """
-    texts = [parsed["statement"].lower()]
-    texts.extend(example["output"].lower() for example in parsed["examples"])
-    texts.extend(example["explanation"].lower() for example in parsed["examples"])
-    texts = [text.replace("*", "") for text in texts]
-    return any(pattern in text for text in texts for pattern in ANY_ORDER_PATTERNS)
+    statement_and_outputs = [parsed["statement"].lower()]
+    statement_and_outputs.extend(example["output"].lower() for example in parsed["examples"])
+    plain_statement_and_outputs = [text.replace("*", "") for text in statement_and_outputs]
+    plain_explanations = [
+        example["explanation"].lower().replace("*", "") for example in parsed["examples"]
+    ]
+    return any(
+        pattern in text
+        for text in plain_statement_and_outputs
+        for pattern in ANY_ORDER_PATTERNS
+    ) or any(
+        pattern in text
+        for text in plain_explanations
+        for pattern in ANY_ORDER_ACCEPTANCE_PATTERNS
+    )
 
 
 def parse_input_values(input_text: str) -> List[Any]:

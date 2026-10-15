@@ -408,6 +408,30 @@ def test_parse_description_extracts_follow_up_when_present():
     assert clean["follow_up"] == ""
 
 
+def test_parse_description_fenced_follow_up_mention_is_not_spliced():
+    description = (
+        "Given a board, mark its regions.\n"
+        "\n"
+        "```text\n"
+        "**Follow-up:** what if the board is too large to fit in memory?\n"
+        "```\n"
+        "\n"
+        "**Example 1:**\n"
+        "\n"
+        "```java\n"
+        'Input: board = [["X"]]\n'
+        "\n"
+        "Output: true\n"
+        "```\n"
+        "\n"
+        "**Constraints:**\n"
+        "* `1 <= board.length <= 200`"
+    )
+    parsed = gen.parse_description(description)
+    assert parsed["follow_up"] == ""
+    assert "**Follow-up:** what if the board is too large to fit in memory?" in parsed["statement"]
+
+
 def test_parse_description_preserves_the_latex_subset():
     parsed = gen.parse_description(LATEX_METADATA["data"]["description"])
     assert "$m \\times n$" in parsed["statement"]
@@ -450,6 +474,67 @@ def test_cases_skips_any_order_outputs_naming_the_slug():
     result = gen.cases_from_metadata(gen.parse_metadata(CLEAN_METADATA), "group_anagrams")
     assert result.cases == []
     assert "group_anagrams" in result.skip_reason
+    assert "any-order" in result.skip_reason
+
+
+def test_cases_explanation_order_prose_keeps_unique_outputs_assertable():
+    metadata = dict(
+        gen.parse_metadata(CLEAN_METADATA),
+        description=(
+            "Given an integer array `nums`, return the sum of its values.\n"
+            "\n"
+            "**Example 1:**\n"
+            "\n"
+            "```java\n"
+            "Input: nums = [1,2,3]\n"
+            "\n"
+            "Output: 6\n"
+            "```\n"
+            "\n"
+            "Explanation: The array may be traversed in any order because every\n"
+            "element is visited exactly once no matter which traversal order\n"
+            "is chosen.\n"
+            "\n"
+            "**Constraints:**\n"
+            "* `1 <= nums.length <= 10^5`"
+        ),
+        starterCode={
+            "python": "class Solution:\n    def arraySum(self, nums: List[int]) -> int:\n"
+        },
+    )
+    result = gen.cases_from_metadata(metadata, "array_sum")
+    assert result.skip_reason is None
+    assert result.cases == [
+        {"id": "example_1", "args": [[1, 2, 3]], "expected": 6},
+    ]
+
+
+def test_cases_explanation_acceptance_phrasing_still_skips_naming_the_slug():
+    metadata = dict(
+        gen.parse_metadata(CLEAN_METADATA),
+        description=(
+            "Given an integer array `nums`, return a permutation of it.\n"
+            "\n"
+            "**Example 1:**\n"
+            "\n"
+            "```java\n"
+            "Input: nums = [1,2,3]\n"
+            "\n"
+            "Output: [1,2,3]\n"
+            "```\n"
+            "\n"
+            "Explanation: There are multiple valid answers and every one of them\n"
+            "would still be accepted.\n"
+            "\n"
+            "**Constraints:**\n"
+            "* `1 <= nums.length <= 10^5`"
+        ),
+        starterCode={
+            "python": "class Solution:\n    def permute(self, nums: List[int]) -> List[int]:\n"
+        },
+    )
+    result = gen.cases_from_metadata(metadata, "permutation")
+    assert result.cases == []
     assert "any-order" in result.skip_reason
 
 
