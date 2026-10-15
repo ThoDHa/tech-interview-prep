@@ -3,7 +3,7 @@
 Each problem lives in its own directory with a `solution.py` (your attempt, also
 runnable directly for debugging), a `cases.json` / `cases_full.json` (test cases),
 and a `test_<slug>.py`. The canonical worked solutions live in the matching
-`../problems/<slug>.md` write-up, not here. The helpers below marshal
+`../docs/leetcode/<slug>.md` write-up, not here. The helpers below marshal
 LeetCode-style inputs/outputs (linked lists, binary trees, graphs, design-operation
 sequences) and load each problem's `solution.py` under a unique module name so
 identically named files never collide.

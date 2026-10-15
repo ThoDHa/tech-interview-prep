@@ -1,15 +1,15 @@
-// Sortable problem tables, scoped to the problems landing page.
+// Sortable problem tables, scoped to the bank landing pages.
 //
-// Material 9.7.6 free ships no table sorting, so the two problem tables on
-// the problems landing (docs/problems/index.md) use tristen/tablesort,
-// loaded from the unpkg entry above this file in mkdocs.yml. Per the
-// theme's customization guidance, per-page JavaScript subscribes to the
-// document$ observable so it re-runs on every page swap under
-// navigation.instant. The subscription is gated on the current page being
-// the landing itself: the pathname check runs inside the subscription
-// because instant navigation swaps the pathname per page, and other pages
-// (pattern guides, write-ups, the bank index) keep plain, unsortable
-// markdown tables.
+// Material 9.7.6 free ships no table sorting, so the problem tables on the
+// bank landing pages (docs/leetcode/index.md and docs/amazon/index.md) use
+// tristen/tablesort, loaded from the unpkg entry above this file in
+// mkdocs.yml. Per the theme's customization guidance, per-page JavaScript
+// subscribes to the document$ observable so it re-runs on every page swap
+// under navigation.instant. The subscription is gated on the current page
+// being one of the landings themselves: the pathname check runs inside the
+// subscription because instant navigation swaps the pathname per page, and
+// other pages (pattern guides, write-ups, foundations, sources) keep plain,
+// unsortable markdown tables.
 //
 // Tablesort's default comparator treats "-" as an ordinary string, so dash
 // cells (an unknown Time or Difficulty) sort first ascending. The "minutes"
@@ -102,16 +102,17 @@ const installResetControl = (table) => {
   table.before(resetButton);
 };
 
-// True when the current page is the problems landing: directory URLs end
-// the path with /problems/, while servers without them append index.html,
-// and the deployed site prefixes a base path, so all three shapes pass.
-const isProblemsLandingPage = () =>
-  window.location.pathname
-    .replace(/index\.html$/, "")
-    .endsWith("/problems/");
+// True when the current page is a bank landing page: directory URLs end
+// the path with /leetcode/ or /amazon/, while servers without them append
+// index.html, and the deployed site prefixes a base path, so all three
+// shapes pass.
+const isBankLandingPage = () => {
+  const pathname = window.location.pathname.replace(/index\.html$/, "");
+  return pathname.endsWith("/leetcode/") || pathname.endsWith("/amazon/");
+};
 
 document$.subscribe(() => {
-  if (typeof Tablesort === "undefined" || !isProblemsLandingPage()) {
+  if (typeof Tablesort === "undefined" || !isBankLandingPage()) {
     return;
   }
   for (const table of document.querySelectorAll("article table:not([data-tablesort])")) {

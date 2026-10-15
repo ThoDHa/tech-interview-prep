@@ -5,8 +5,6 @@ repo_url: https://github.com/ThoDHa/tech-interview-prep
 repo_name: ThoDHa/tech-interview-prep
 edit_uri: edit/main/docs/
 docs_dir: docs
-exclude_docs: |
-  _TEMPLATE.md
 
 # The practice/ workspace is for local repo use, not the deployed site. A build
 # hook strips the per-problem "Practice:" line from rendered pages (it stays in

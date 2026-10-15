@@ -858,19 +858,19 @@ def test_render_index_orders_the_catalog_columns():
         "categories": "Array, Greedy, Math",
     }
     text = gen.render_index([entry], difficulty_overrides={})
-    header = next(line for line in text.splitlines() if line.startswith("| Updated"))
+    header = next(line for line in text.splitlines() if line.startswith("| Problem"))
     assert [name.strip() for name in header.strip("|").split("|")] == [
-        "Updated",
         "Problem",
         "Difficulty",
         "Category",
         "Time",
         "Companies",
+        "Updated",
     ]
-    row = next(line for line in text.splitlines() if line.startswith("| 2026"))
+    row = next(line for line in text.splitlines() if line.startswith("| [X]"))
     assert row == (
-        "| 2026-09-19 | [X](amazon-x.md) | Hard | Array, Greedy, Math"
-        " | 40 minutes | Amazon, Google |"
+        "| [X](amazon-x.md) | Hard | Array, Greedy, Math"
+        " | 40 minutes | Amazon, Google | 2026-09-19 |"
     )
 
 
@@ -890,8 +890,9 @@ def test_render_index_estimates_time_from_the_difficulty():
         ),
     ]
     text = gen.render_index(entries, difficulty_overrides={})
-    rows = [line for line in text.splitlines() if line.startswith("| 2026")]
-    assert [row.rsplit("|", 3)[1].strip() for row in rows] == [
+    rows = [line for line in text.splitlines() if line.startswith("| [")]
+    time_cells = [row.strip("|").split("|")[-3].strip() for row in rows]
+    assert time_cells == [
         "15 minutes",
         "25 minutes",
     ]
@@ -902,7 +903,7 @@ def test_render_index_applies_the_difficulty_overrides():
     text = gen.render_index(
         [entry], difficulty_overrides={entry["slug"]: "Easy"}
     )
-    row = next(line for line in text.splitlines() if line.startswith("| 2026"))
+    row = next(line for line in text.splitlines() if line.startswith("| [X]"))
     assert "| Easy |" in row
     assert "| 15 minutes |" in row
 
@@ -910,8 +911,8 @@ def test_render_index_applies_the_difficulty_overrides():
 def test_render_index_dashes_the_unknown_rows():
     entry = dict(INDEX_INDEX_ENTRY, difficulty=None, categories=None)
     text = gen.render_index([entry], difficulty_overrides={})
-    row = next(line for line in text.splitlines() if line.startswith("| 2026"))
-    assert row.endswith("| - | - | - | Amazon |")
+    row = next(line for line in text.splitlines() if line.startswith("| [X]"))
+    assert row.endswith("| - | - | - | Amazon | 2026-09-19 |")
 
 
 INDEX_INDEX_ENTRY = {
