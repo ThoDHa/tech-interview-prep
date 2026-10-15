@@ -38,6 +38,7 @@ If your loop is the OOD or front end format instead, treat this section as backg
 | [Back-of-Envelope Estimation](estimation.md) | Latency numbers, powers of two, QPS and storage arithmetic, worked examples | Second: step 2 of the method depends on it |
 | [Building Blocks](building_blocks.md) | The component vocabulary: load balancers, caches, databases, queues, and the rest | Third, or as a reference while doing case studies |
 | [Case Studies](case_studies/index.md) | Five guided workthroughs (URL shortener, rate limiter, news feed, chat, web crawler) with answers hidden behind collapsible blocks | Last: this is where the method becomes muscle memory |
+| [Exercises](exercises/index.md) | Design briefs with the answers held back entirely: run them against the mock interviewer under the clock | After the case studies: delivery practice, not comprehension |
 
 ## A suggested study path
 
@@ -51,6 +52,9 @@ If your loop is the OOD or front end format instead, treat this section as backg
    prompt yourself before opening the collapsed answers, and finish the "extend this scaffold" checklist for at least one of them (2 to 3 hours each, so 10 to 15 hours total).
 5. Repeat a case study cold a week later, out loud, with a 45-minute timer.
    Talking through a design is a different skill from reading one.
+6. Move to the [exercise bank](exercises/index.md): a design brief, the
+   [mock interviewer](mock_interview.md), and the clock. The case studies
+   taught the vocabulary; the bank is where delivery gets rehearsed.
 
 That is roughly 15 to 22 hours for a solid baseline. Senior-level depth comes from extending the scaffolds and from reading about real systems, not from rereading these pages.
 
@@ -74,7 +78,7 @@ At every level, the fastest way to fail is the same: silence, hand-waved numbers
 
 ## This section is growing
 
-The five case studies are scaffolded workthroughs with intentional gaps, and the [roadmap](case_studies/index.md#roadmap-case-studies-not-yet-written) lists classics that are not yet written. If a topic you need is missing, the building blocks page plus the method are usually enough to attempt it yourself, which is better practice anyway.
+The five case studies are scaffolded workthroughs with intentional gaps, and the [roadmap](case_studies/index.md#roadmap-case-studies-not-yet-written) lists classics that are not yet written. The [exercise bank](exercises/index.md) grows alongside it: batch one carries five briefs, and the same brief format scales to new exercises without new machinery. If a topic you need is missing, the building blocks page plus the method are usually enough to attempt it yourself, which is better practice anyway.
 
 ## Further resources
 
