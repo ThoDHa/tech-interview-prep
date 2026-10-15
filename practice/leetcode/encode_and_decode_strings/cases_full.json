@@ -1,0 +1,480 @@
+[
+  {
+    "id": "encode_empty_list",
+    "operations": [
+      "Solution",
+      "encode"
+    ],
+    "arguments": [
+      [],
+      [
+        []
+      ]
+    ],
+    "expected": [
+      null,
+      ""
+    ]
+  },
+  {
+    "id": "decode_empty_list",
+    "operations": [
+      "Solution",
+      "decode"
+    ],
+    "arguments": [
+      [],
+      [
+        ""
+      ]
+    ],
+    "expected": [
+      null,
+      []
+    ]
+  },
+  {
+    "id": "encode_single_empty_string",
+    "operations": [
+      "Solution",
+      "encode"
+    ],
+    "arguments": [
+      [],
+      [
+        [
+          ""
+        ]
+      ]
+    ],
+    "expected": [
+      null,
+      "0#"
+    ]
+  },
+  {
+    "id": "decode_single_empty_string",
+    "operations": [
+      "Solution",
+      "decode"
+    ],
+    "arguments": [
+      [],
+      [
+        "0#"
+      ]
+    ],
+    "expected": [
+      null,
+      [
+        ""
+      ]
+    ]
+  },
+  {
+    "id": "encode_single_word",
+    "operations": [
+      "Solution",
+      "encode"
+    ],
+    "arguments": [
+      [],
+      [
+        [
+          "hello"
+        ]
+      ]
+    ],
+    "expected": [
+      null,
+      "5#hello"
+    ]
+  },
+  {
+    "id": "decode_single_word",
+    "operations": [
+      "Solution",
+      "decode"
+    ],
+    "arguments": [
+      [],
+      [
+        "5#hello"
+      ]
+    ],
+    "expected": [
+      null,
+      [
+        "hello"
+      ]
+    ]
+  },
+  {
+    "id": "encode_two_words",
+    "operations": [
+      "Solution",
+      "encode"
+    ],
+    "arguments": [
+      [],
+      [
+        [
+          "Hello",
+          "World"
+        ]
+      ]
+    ],
+    "expected": [
+      null,
+      "5#Hello5#World"
+    ]
+  },
+  {
+    "id": "decode_two_words",
+    "operations": [
+      "Solution",
+      "decode"
+    ],
+    "arguments": [
+      [],
+      [
+        "5#Hello5#World"
+      ]
+    ],
+    "expected": [
+      null,
+      [
+        "Hello",
+        "World"
+      ]
+    ]
+  },
+  {
+    "id": "encode_payload_with_hash_and_digits",
+    "operations": [
+      "Solution",
+      "encode"
+    ],
+    "arguments": [
+      [],
+      [
+        [
+          "3#ab",
+          "#",
+          "12"
+        ]
+      ]
+    ],
+    "expected": [
+      null,
+      "4#3#ab1##2#12"
+    ]
+  },
+  {
+    "id": "decode_payload_with_hash_and_digits",
+    "operations": [
+      "Solution",
+      "decode"
+    ],
+    "arguments": [
+      [],
+      [
+        "4#3#ab1##2#12"
+      ]
+    ],
+    "expected": [
+      null,
+      [
+        "3#ab",
+        "#",
+        "12"
+      ]
+    ]
+  },
+  {
+    "id": "encode_numeric_lookalike_prefix",
+    "operations": [
+      "Solution",
+      "encode"
+    ],
+    "arguments": [
+      [],
+      [
+        [
+          "99#99",
+          "##"
+        ]
+      ]
+    ],
+    "expected": [
+      null,
+      "5#99#992###"
+    ]
+  },
+  {
+    "id": "decode_numeric_lookalike_prefix",
+    "operations": [
+      "Solution",
+      "decode"
+    ],
+    "arguments": [
+      [],
+      [
+        "5#99#992###"
+      ]
+    ],
+    "expected": [
+      null,
+      [
+        "99#99",
+        "##"
+      ]
+    ]
+  },
+  {
+    "id": "encode_empty_and_short_mixed",
+    "operations": [
+      "Solution",
+      "encode"
+    ],
+    "arguments": [
+      [],
+      [
+        [
+          "",
+          "a",
+          ""
+        ]
+      ]
+    ],
+    "expected": [
+      null,
+      "0#1#a0#"
+    ]
+  },
+  {
+    "id": "decode_empty_and_short_mixed",
+    "operations": [
+      "Solution",
+      "decode"
+    ],
+    "arguments": [
+      [],
+      [
+        "0#1#a0#"
+      ]
+    ],
+    "expected": [
+      null,
+      [
+        "",
+        "a",
+        ""
+      ]
+    ]
+  },
+  {
+    "id": "encode_spaces_and_punctuation",
+    "operations": [
+      "Solution",
+      "encode"
+    ],
+    "arguments": [
+      [],
+      [
+        [
+          "a b c!",
+          " x ",
+          "?!."
+        ]
+      ]
+    ],
+    "expected": [
+      null,
+      "6#a b c!3# x 3#?!."
+    ]
+  },
+  {
+    "id": "decode_spaces_and_punctuation",
+    "operations": [
+      "Solution",
+      "decode"
+    ],
+    "arguments": [
+      [],
+      [
+        "6#a b c!3# x 3#?!."
+      ]
+    ],
+    "expected": [
+      null,
+      [
+        "a b c!",
+        " x ",
+        "?!."
+      ]
+    ]
+  },
+  {
+    "id": "encode_repeated_words",
+    "operations": [
+      "Solution",
+      "encode"
+    ],
+    "arguments": [
+      [],
+      [
+        [
+          "lint",
+          "code",
+          "lint",
+          "love",
+          "lint"
+        ]
+      ]
+    ],
+    "expected": [
+      null,
+      "4#lint4#code4#lint4#love4#lint"
+    ]
+  },
+  {
+    "id": "decode_repeated_words",
+    "operations": [
+      "Solution",
+      "decode"
+    ],
+    "arguments": [
+      [],
+      [
+        "4#lint4#code4#lint4#love4#lint"
+      ]
+    ],
+    "expected": [
+      null,
+      [
+        "lint",
+        "code",
+        "lint",
+        "love",
+        "lint"
+      ]
+    ]
+  },
+  {
+    "id": "encode_large_stress",
+    "operations": [
+      "Solution",
+      "encode"
+    ],
+    "arguments": [
+      [],
+      [
+        [
+          "alpha",
+          "bravo#",
+          "charlie",
+          "##delta",
+          "echo",
+          "foxtrot",
+          "golf golf",
+          "hotel123",
+          "India#",
+          "#juliet",
+          "kilo",
+          "lima",
+          "mike",
+          "november",
+          "oscar",
+          "papa",
+          "quebec",
+          "romeo",
+          "sierra",
+          "tango",
+          "uniform",
+          "victor",
+          "whiskey",
+          "x-ray",
+          "yankee",
+          "zulu",
+          "",
+          "",
+          "0#1",
+          "2#3",
+          "same",
+          "same",
+          "same",
+          "longer payload with spaces inside",
+          "digits 007",
+          "trailing#",
+          "#leading",
+          "both#hashes#here",
+          "tiny",
+          "end"
+        ]
+      ]
+    ],
+    "expected": [
+      null,
+      "5#alpha6#bravo#7#charlie7###delta4#echo7#foxtrot9#golf golf8#hotel1236#India#7##juliet4#kilo4#lima4#mike8#november5#oscar4#papa6#quebec5#romeo6#sierra5#tango7#uniform6#victor7#whiskey5#x-ray6#yankee4#zulu0#0#3#0#13#2#34#same4#same4#same33#longer payload with spaces inside10#digits 0079#trailing#8##leading16#both#hashes#here4#tiny3#end"
+    ]
+  },
+  {
+    "id": "decode_large_stress",
+    "operations": [
+      "Solution",
+      "decode"
+    ],
+    "arguments": [
+      [],
+      [
+        "5#alpha6#bravo#7#charlie7###delta4#echo7#foxtrot9#golf golf8#hotel1236#India#7##juliet4#kilo4#lima4#mike8#november5#oscar4#papa6#quebec5#romeo6#sierra5#tango7#uniform6#victor7#whiskey5#x-ray6#yankee4#zulu0#0#3#0#13#2#34#same4#same4#same33#longer payload with spaces inside10#digits 0079#trailing#8##leading16#both#hashes#here4#tiny3#end"
+      ]
+    ],
+    "expected": [
+      null,
+      [
+        "alpha",
+        "bravo#",
+        "charlie",
+        "##delta",
+        "echo",
+        "foxtrot",
+        "golf golf",
+        "hotel123",
+        "India#",
+        "#juliet",
+        "kilo",
+        "lima",
+        "mike",
+        "november",
+        "oscar",
+        "papa",
+        "quebec",
+        "romeo",
+        "sierra",
+        "tango",
+        "uniform",
+        "victor",
+        "whiskey",
+        "x-ray",
+        "yankee",
+        "zulu",
+        "",
+        "",
+        "0#1",
+        "2#3",
+        "same",
+        "same",
+        "same",
+        "longer payload with spaces inside",
+        "digits 007",
+        "trailing#",
+        "#leading",
+        "both#hashes#here",
+        "tiny",
+        "end"
+      ]
+    ]
+  }
+]
