@@ -3264,18 +3264,6 @@
     "categories": "Greedy, Hash Table"
   },
   {
-    "slug": "amazon-find-minimum-possible-variance",
-    "title": "Find Min Variance",
-    "url": "https://www.fastprep.io/problems/amazon-find-minimum-possible-variance",
-    "companies": [
-      "Amazon"
-    ],
-    "updated": "2024-10-30",
-    "parse_status": "page-unparseable",
-    "difficulty": null,
-    "categories": null
-  },
-  {
     "slug": "amazon-find-minimum-time-required",
     "title": "Find Min Time Required",
     "url": "https://www.fastprep.io/problems/amazon-find-minimum-time-required",
@@ -3334,18 +3322,6 @@
     "parse_status": "parsed-with-cases",
     "difficulty": "Easy",
     "categories": "Array, Greedy, Math"
-  },
-  {
-    "slug": "amazon-get-min-cost-book",
-    "title": "Get Min Cost of Purchasing Books",
-    "url": "https://www.fastprep.io/problems/amazon-get-min-cost-book",
-    "companies": [
-      "Amazon"
-    ],
-    "updated": "2024-10-22",
-    "parse_status": "page-unparseable",
-    "difficulty": null,
-    "categories": null
   },
   {
     "slug": "amazon-get-smaller-items",
@@ -3646,18 +3622,6 @@
     "parse_status": "parsed-with-cases",
     "difficulty": "Medium",
     "categories": "Binary Search, Greedy, Sorting"
-  },
-  {
-    "slug": "amazon-find-minimum-number-of-operations",
-    "title": "Min Operations To Make Zeros",
-    "url": "https://www.fastprep.io/problems/amazon-find-minimum-number-of-operations",
-    "companies": [
-      "Amazon"
-    ],
-    "updated": "2024-08-28",
-    "parse_status": "page-unparseable",
-    "difficulty": null,
-    "categories": null
   },
   {
     "slug": "amazon-choose-warehouses-location",
