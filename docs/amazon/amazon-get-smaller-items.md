@@ -2,8 +2,6 @@
 
 **Hard** | **NN minutes** | **Prefix Sum, Binary Search, Sorting**
 
-Special thanks: 🐳 Manyyy thanks to the GG of Error-Free Excellence 👉 ✨ spike ✨! 🐝
-
 
 An Amazon fulfillment center receives a large number of orders each day. Each order is associated with a range of prices of items that need to be picked from the warehouse and packed into a box. There are n items in the warehouse, which are represented as an array items[n]. The value of items[i] represents the value of ith item in the warehouse, and subsequently there are m orders. The start_index and end_index for the order are represented in the arrays start[i] and end[i]. Also start[i] and end[i] are 0-index based. For each order, all the items are picked from the inclusive range from start[i] through end[i].
 

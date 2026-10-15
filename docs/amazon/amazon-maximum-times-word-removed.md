@@ -2,8 +2,6 @@
 
 **Easy** | **NN minutes** | **String, Hash Table**
 
-Special thanks: kcho and ketchup contributed this problem and example.
-
 
 Amazon Engineering maintains a large number of logs of operations across all products. A software engineer is debugging an issue in a product. An efficient way to analyze logs is to write automated scripts to check for patterns. The engineer wants to find the maximum number of times a target word can be obtained by rearranging a subset of characters in a log entry.
 

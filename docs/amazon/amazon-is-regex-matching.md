@@ -2,8 +2,6 @@
 
 **Hard** | **NN minutes** | **Dynamic Programming, String, Parsing**
 
-Special thanks: Alex contributed this problem.
-
 
 The developers at Amazon are developing a regex matching library for their NLP use cases. A prototype regex matching has the following requirements:
 

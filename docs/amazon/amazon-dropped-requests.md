@@ -2,11 +2,6 @@
 
 **Medium** | **NN minutes** | **Sliding Window, Array**
 
-Special thanks: 🥝 1003 thanks to the real MVP spike! 🍉
-
-enigma contributed this example.
-
-
 On Amazon Prime Day, non-critical requests for a transaction system are routed through a throttling gateway to ensure that the network is not choked by non-essential requests. The gateway has the following limits:
 
 

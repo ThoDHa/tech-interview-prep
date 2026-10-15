@@ -2,8 +2,6 @@
 
 **Easy** | **NN minutes** | **String, Two Pointers**
 
-Special thanks: MasterKhan contributed this problem.
-
 
 Amazon is developing an efficient string matching library. Develop a prototype service that matches a simple pattern with a text. There are two arrays of strings, text, and pat, each of size n. Each string in pat is a regex expression that contains exactly one wildcard character (*).
 

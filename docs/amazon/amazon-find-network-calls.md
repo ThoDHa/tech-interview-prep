@@ -4,8 +4,6 @@
 
 Source note: Example 2 was added on 2025-03-31; its relevant source image is included in Problem Source.
 
-Special thanks: interested_max shared this problem.
-
 
 A digital commerce platform is conducting an experiment on the number of customer feedback entries associated with each item in its catalog.
 

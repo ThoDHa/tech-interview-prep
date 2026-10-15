@@ -2,22 +2,20 @@
 
 **Hard** | **NN minutes** | **Array, Hash Table, Prefix Sum**
 
-Special thanks: precurewalker contributed this problem.
-
 
 Amazon Academy recently organized a scholaship test on its platform.
 
 
 
-There are nstudents with roll numbers 1, 2, ..., n who appeared for the test, where the rank secured by the ithstudent is denoted 
+There are n students with roll numbers 1, 2, ..., n who appeared for the test, where the rank secured by the i-th student is denoted 
 by rank[i]. Thus, the array rank is a permutation of length n. Groups can only be formed with students having consecutive roll numbers,
 in other words, a subarray of the original array. For each value x (1 <= x <= n), find the number of groups that can be formed such that they have a 
 mean rank equal to x.
 
 
 
-More formally, given a permutaion of length n, find the number of subarrays of the given array having a mean value equal to x, for each 
-xin the range [1, n].
+More formally, given a permutaion of length n, find the number of subarrays of the given array having a mean value equal to x, for each
+x in the range [1, n].
 
 
 
@@ -25,8 +23,8 @@ Notes
 
 
 
-1. The mean value of an array of kelements is defined as the sum of elements divided by k.
-2. A permutation of leangth nis a sequence where each number from qtonappears exactly once.
+1. The mean value of an array of k elements is defined as the sum of elements divided by k.
+2. A permutation of length n is a sequence where each number from 1 to n appears exactly once.
 3. A subarray of an array is a contiguous section of the array.
 
 ## Examples

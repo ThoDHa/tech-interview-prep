@@ -2,8 +2,6 @@
 
 **unknown difficulty** | **NN minutes** | **unknown categories**
 
-Special thanks: A special thank you to a lovely, amazing fren who shared that this question appeared again on September 21, 2026! 💜
-
 The manager of the Amazon warehouse has decided to make changes to the inventory. Currently, the inventory has n products, where the quality of the ith product after quality checks is represented by the array element quality[i].
 
 The manager wants to create an optimal inventory, where the array of products quality follows the following property:

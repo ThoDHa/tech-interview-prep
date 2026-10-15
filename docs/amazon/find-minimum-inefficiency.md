@@ -2,8 +2,6 @@
 
 **Medium** | **NN minutes** | **Dynamic Programming, String**
 
-Special thanks: 💐 1008th thank you to spike! 👏
-
 
 Amazon Web Service has n servers, each of them either has high fault tolerance or high reliability. 
 A system works better if all the servers have the same attributes. The inefficiency of a group of 

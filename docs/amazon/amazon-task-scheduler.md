@@ -2,8 +2,6 @@
 
 **Medium** | **NN minutes** | **Greedy, Heap**
 
-Special thanks: ( ˶ˆᗜˆ˵ ) Many Manyy Manyyy thanks to spike!ᯓᡣ𐭩
-
 
 AMZ Interval Collection (A group of problems focused on operations involving intervals :) - 
 
