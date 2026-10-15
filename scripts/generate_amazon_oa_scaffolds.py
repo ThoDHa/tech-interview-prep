@@ -12,8 +12,8 @@ Pipeline:
         - practice/amazon/<slug>/solution.py     (NotSolved stub)
         - practice/amazon/<slug>/cases.json      (parseable examples, else [])
         - practice/amazon/<slug>/test_<slug>.py  (harness-driven tests)
-        - docs/amazon/index.md   (bank table: Updated, Problem, Difficulty,
-          Category, Time, Companies)
+        - docs/amazon/index.md   (bank table: Problem, Difficulty, Category,
+          Time, Companies, Updated)
 
 Cases contract: a case is emitted only when every example value parses to a
 JSON-representable literal assertable with `==` against the method's return
@@ -844,8 +844,9 @@ def render_index(
 ) -> str:
     """Render docs/amazon/index.md, most-recent first.
 
-    Columns follow the unified catalog's conventions: `Updated`, `Problem`,
-    `Difficulty`, `Category`, `Time`, `Companies`. The Difficulty cell
+    Columns follow the unified catalog's conventions: `Problem`,
+    `Difficulty`, `Category`, `Time`, `Companies`, with the `Updated`
+    date trailing last. The Difficulty cell
     reads the manifest entry's difficulty (backfilled from the write-up
     headers), corrected by `difficulty_overrides` where one addresses the
     slug; the unknown-difficulty rows dash. `Time` reuses the shared
@@ -879,18 +880,19 @@ def render_index(
         " is unknown), corrected by the committed difficulty overrides where"
         " present.",
         "",
-        "| Updated | Problem | Difficulty | Category | Time | Companies |",
-        "|---------|---------|-----------|----------|------|-----------|",
+        "| Problem | Difficulty | Category | Time | Companies | Updated |",
+        "|---------|-----------|----------|------|-----------|---------|",
     ]
     for entry in manifest:
         title = f"[{entry['title']}]({entry['slug']}.md)"
         companies = ", ".join(entry["companies"])
         difficulty = overrides.get(entry["slug"]) or entry.get("difficulty")
         lines.append(
-            f"| {entry['updated']} | {title} |"
+            f"| {title} |"
             f" {difficulty or index_tables.UNKNOWN_TIME_CELL} |"
             f" {entry.get('categories') or index_tables.UNKNOWN_TIME_CELL} |"
             f" {index_tables.estimated_time_cell(difficulty)} | {companies} |"
+            f" {entry['updated']} |"
         )
     return "\n".join(lines) + "\n"
 
