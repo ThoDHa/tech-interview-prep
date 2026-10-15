@@ -33,9 +33,9 @@ MKDOCS_CONFIG_PATH = REPO_ROOT / "mkdocs.yml"
 
 # Path spellings the reorg retired: the docs problems/ tree moved to
 # leetcode/, and the underscore directory names became hyphenated.
-RETIRED_JS_TOKENS = ("/problems/", "amazon_oa", "interview_prep", "system_design")
-RETIRED_LINK_TOKENS = ("problems/", "amazon_oa", "interview_prep", "system_design")
 RETIRED_TEXT_TOKENS = ("amazon_oa", "interview_prep", "system_design")
+RETIRED_JS_TOKENS = ("/problems/", *RETIRED_TEXT_TOKENS)
+RETIRED_LINK_TOKENS = ("problems/", *RETIRED_TEXT_TOKENS)
 LIVE_GATE_TOKENS = ("/leetcode/", "/amazon/")
 
 # The pages the bank-landing gate in tablesort-init.js serves, spelled
