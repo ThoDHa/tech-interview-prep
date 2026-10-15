@@ -1,0 +1,13 @@
+[
+  {"id": "neetcode_example", "args": [[["a", "b", "c", "d"], ["s", "a", "a", "t"], ["a", "c", "k", "e"], ["a", "c", "d", "n"]], ["bat", "cat", "back", "backend", "stack"]], "expected": ["back", "backend", "cat"]},
+  {"id": "three_words_two_found", "args": [[["o", "a", "a", "n"], ["e", "t", "a", "e"], ["i", "h", "k", "r"], ["i", "f", "l", "v"]], ["oath", "eat", "rain"]], "expected": ["eat", "oath"]},
+  {"id": "serpentine_path_only", "args": [[["a", "b", "c"], ["d", "e", "f"]], ["abcfed", "abcdef"]], "expected": ["abcfed"]},
+  {"id": "uniform_board_overlapping_words", "args": [[["a", "a"], ["a", "a"]], ["aaaa", "aaaaa", "aaa"]], "expected": ["aaa", "aaaa"]},
+  {"id": "branching_paths", "args": [[["a", "b"], ["c", "a"]], ["aba", "abca"]], "expected": ["aba"]},
+  {"id": "single_cell_hit", "args": [[["a"]], ["a"]], "expected": ["a"]},
+  {"id": "reuse_prevention", "args": [[["a", "a"]], ["aaa"]], "expected": []},
+  {"id": "no_words_present", "args": [[["o", "a", "a", "n"], ["e", "t", "a", "e"], ["i", "h", "k", "r"], ["i", "f", "l", "v"]], ["xmzz", "qqr"]], "expected": []},
+  {"id": "nested_prefixes", "args": [[["a", "b", "c"], ["d", "e", "f"]], ["a", "ab", "abc", "abcfe"]], "expected": ["a", "ab", "abc", "abcfe"]},
+  {"id": "word_longer_than_cells", "args": [[["a", "a"], ["a", "a"]], ["aaaaaaaaaa"]], "expected": []},
+  {"id": "requires_upward_step", "args": [[["a", "a", "a"], ["a", "a", "b"]], ["baaa"]], "expected": ["baaa"]}
+]

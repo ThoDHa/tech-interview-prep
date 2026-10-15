@@ -1,0 +1,13 @@
+[
+  {"id": "classic_tie_free", "args": [[1, 1, 1, 2, 2, 3], 2], "expected": [2, 3]},
+  {"id": "single_element", "args": [[1], 1], "expected": [1]},
+  {"id": "neetcode_example", "args": [[1, 2, 2, 3, 3, 3], 2], "expected": [2, 3]},
+  {"id": "three_distinct_frequencies", "args": [[4, 4, 4, 4, 5, 5, 5, 6, 6, 7], 3], "expected": [2, 3, 4]},
+  {"id": "frequency_tie_pair", "args": [[1, 1, 2, 2, 3], 2], "expected": [2, 2]},
+  {"id": "three_way_frequency_tie", "args": [[1, 1, 2, 2, 3, 3, 4], 3], "expected": [2, 2, 2]},
+  {"id": "one_value_one_slot", "args": [[5, 5, 5, 5, 5], 1], "expected": [5]},
+  {"id": "negative_values_tie", "args": [[-1, -1, 2, 2, 3], 2], "expected": [2, 2]},
+  {"id": "all_tied_singletons", "args": [[1, 2, 3, 4, 5, 6, 7], 3], "expected": [1, 1, 1]},
+  {"id": "tied_top_pair", "args": [[3, 3, 3, 1, 1, 2, 2, 2], 2], "expected": [3, 3]},
+  {"id": "four_slots_from_five_frequencies", "args": [[9, 8, 8, 7, 7, 7, 6, 6, 6, 6, 5, 5, 5, 5, 4], 4], "expected": [2, 3, 4, 4]}
+]

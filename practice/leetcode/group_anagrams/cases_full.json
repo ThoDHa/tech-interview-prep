@@ -1,0 +1,13 @@
+[
+  {"id": "neetcode_example", "args": [["act", "pots", "tops", "cat", "stop", "hat"]], "expected": [["act", "cat"], ["hat"], ["pots", "stop", "tops"]]},
+  {"id": "empty_input", "args": [[]], "expected": []},
+  {"id": "single_word", "args": [["listen"]], "expected": [["listen"]]},
+  {"id": "all_distinct", "args": [["abc", "def", "ghi"]], "expected": [["abc"], ["def"], ["ghi"]]},
+  {"id": "identical_words", "args": [["loop", "loop", "loop"]], "expected": [["loop", "loop", "loop"]]},
+  {"id": "duplicate_word_in_input", "args": [["ab", "ba", "ab", "cd"]], "expected": [["ab", "ab", "ba"], ["cd"]]},
+  {"id": "single_letters", "args": [["a", "b", "a", "c", "b"]], "expected": [["a", "a"], ["b", "b"], ["c"]]},
+  {"id": "reverse_pairs", "args": [["cat", "tac", "act", "dog", "god"]], "expected": [["act", "cat", "tac"], ["dog", "god"]]},
+  {"id": "two_groups_of_two", "args": [["stale", "least", "steal", "tales", "dusty", "study"]], "expected": [["dusty", "study"], ["least", "stale", "steal", "tales"]]},
+  {"id": "three_groups_of_two", "args": [["eat", "tea", "tan", "ate", "nat", "bat"]], "expected": [["ate", "eat", "tea"], ["bat"], ["nat", "tan"]]},
+  {"id": "a_vs_double_a", "args": [["a", "aa", "b"]], "expected": [["a"], ["aa"], ["b"]]}
+]

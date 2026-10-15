@@ -1,0 +1,15 @@
+[
+  {"id": "neetcode_example", "args": [["hrn", "hrf", "er", "enn", "rfnn"]], "expected": "hernf"},
+  {"id": "classic_example", "args": [["wrt", "wrf", "er", "ett", "rftt"]], "expected": "wertf"},
+  {"id": "two_letters", "args": [["z", "x"]], "expected": "zx"},
+  {"id": "direct_cycle", "args": [["z", "x", "z"]], "expected": ""},
+  {"id": "prefix_violation", "args": [["abc", "ab"]], "expected": ""},
+  {"id": "valid_prefix_pair", "args": [["ab", "abc"]], "expected": "abc"},
+  {"id": "single_word", "args": [["a"]], "expected": "a"},
+  {"id": "duplicate_words", "args": [["aa", "aa"]], "expected": "a"},
+  {"id": "two_letter_swap", "args": [["aba", "bab"]], "expected": "ab"},
+  {"id": "partial_order", "args": [["ac", "ab", "b"]], "expected": "acb"},
+  {"id": "longer_before_prefix", "args": [["wrtkj", "wrt"]], "expected": ""},
+  {"id": "cyclic_pair", "args": [["ab", "ba", "ab"]], "expected": ""},
+  {"id": "cycle_with_free_letter", "args": [["ab", "ba", "az"]], "expected": ""}
+]
