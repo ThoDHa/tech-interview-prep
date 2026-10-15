@@ -145,6 +145,8 @@ nav:
       - News Feed: system-design/case_studies/news_feed.md
       - Chat System: system-design/case_studies/chat_system.md
       - Web Crawler: system-design/case_studies/web_crawler.md
+    - Exercises:
+      - system-design/exercises/index.md
   - Leetcode:
     - leetcode/index.md
     - "Two Sum": leetcode/two_sum.md
