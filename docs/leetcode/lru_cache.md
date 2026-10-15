@@ -234,7 +234,7 @@ class Node:
     def __init__(self, key: int = 0, value: int = 0):
         self.key = key
         self.value = value
-        self.prev: "Node | None" = None
+        self.previous_node: "Node | None" = None
         self.next: "Node | None" = None
 
 
@@ -249,21 +249,21 @@ class LRUCache:
         self.head = Node()
         self.tail = Node()
         self.head.next = self.tail
-        self.tail.prev = self.head
+        self.tail.previous_node = self.head
 
     def _remove(self, node: Node) -> None:
         # Unlink a node from its current position.
-        prev_node, next_node = node.prev, node.next
+        prev_node, next_node = node.previous_node, node.next
         prev_node.next = next_node
-        next_node.prev = prev_node
+        next_node.previous_node = prev_node
 
     def _add_to_back(self, node: Node) -> None:
         # Insert just before the tail sentinel (most recently used end).
-        prev_node = self.tail.prev
+        prev_node = self.tail.previous_node
         prev_node.next = node
-        node.prev = prev_node
+        node.previous_node = prev_node
         node.next = self.tail
-        self.tail.prev = node
+        self.tail.previous_node = node
 
     def get(self, key: int) -> int:
         if key not in self.cache:

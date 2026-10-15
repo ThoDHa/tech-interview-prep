@@ -306,14 +306,14 @@ layer 0 (no strings)                     [0, 0, 0, 0]
 layer 1  "100" cost (1,2)  skipped       [0, 0, 0, 0]
 layer 2  "10"  cost (1,1)  skipped       [0, 0, 0, 0]
 layer 3  "1"   cost (1,0)  take reads previous layer at o - 1:
-           o=1: max(0, 1 + prev[0]) = 1
-           o=2: max(0, 1 + prev[1]) = 1
-           o=3: max(0, 1 + prev[2]) = 1  -> [0, 1, 1, 1]
+           o=1: max(0, 1 + previous[0]) = 1
+           o=2: max(0, 1 + previous[1]) = 1
+           o=3: max(0, 1 + previous[2]) = 1  -> [0, 1, 1, 1]
 layer 4  "11"  cost (2,0):
-           o=2: max(1, 1 + prev[0]) = 1
-           o=3: max(1, 1 + prev[1]) = 2  -> [0, 1, 1, 2]
+           o=2: max(1, 1 + previous[0]) = 1
+           o=3: max(1, 1 + previous[1]) = 2  -> [0, 1, 1, 2]
 layer 5  "111" cost (3,0):
-           o=3: max(2, 1 + prev[0]) = 2  -> [0, 1, 1, 2]
+           o=3: max(2, 1 + previous[0]) = 2  -> [0, 1, 1, 2]
 ```
 
 The decisive update is layer 4 at `o = 3`: taking `"11"` adds one to the

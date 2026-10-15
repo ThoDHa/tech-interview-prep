@@ -428,13 +428,13 @@ Every approach so far answers "how many islands?" by walking each island. [Union
 The tailored two-island grid from the earlier walkthroughs, `grid = ["110", "100", "001"]`, keeps the component arithmetic small: 9 cells indexed `0` to `8` by `get_index(row, col) = row * 3 + col`, with land at indices `0`, `1`, `3`, `8`. `components` starts at `9`, and the scan visits cells in row-major order:
 
 ```text
-(0,0) idx 0   land: right (0,1) land -> union(0, 1), components 9 -> 8
+(0,0) index 0   land: right (0,1) land -> union(0, 1), components 9 -> 8
               down (1,0) land -> union(0, 3), components 8 -> 7
-(0,1) idx 1   land: right (0,2) water, down (1,1) water -> no unions
+(0,1) index 1   land: right (0,2) water, down (1,1) water -> no unions
 (0,2)         water, water_cells = 1
-(1,0) idx 3   land: right (1,1) water, down (2,0) water -> no unions
+(1,0) index 3   land: right (1,1) water, down (2,0) water -> no unions
 (1,1)..(2,1)  water, water_cells = 2, 3, 4, 5
-(2,2) idx 8   land: right and down out of bounds -> no unions
+(2,2) index 8   land: right and down out of bounds -> no unions
 ```
 
 Inside the first union, `find(0)` and `find(1)` return distinct roots of equal rank, so `parent[1] = 0` and `rank[0]` rises to `1`; the second union then hangs index `3` under the higher-ranked root `0`. After the scan, the surviving components are `{0, 1, 3}` (the merged top-left island), `{8}` (the lone corner), and five water singletons: `7` components in all. Returning `uf.components - water_cells = 7 - 5 = 2` counts exactly the two islands. (For Example 1, the same process returns `1`, matching its expected Output.)

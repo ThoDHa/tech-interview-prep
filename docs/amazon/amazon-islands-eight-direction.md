@@ -348,19 +348,19 @@ Every approach so far answers "how many islands?" by walking each island. [Union
 
 #### Walkthrough
 
-Example 2, `grid = [[1,1,0],[0,0,0],[0,1,1]]`, keeps the arithmetic small: 9 cells indexed `0` to `8` by `get_index(row, col) = row * 3 + col`, land at indices `0`, `1`, `7`, `8`. `components` starts at `9`, and the scan visits cells in row-major order (trace legend: `idx` is the flattened `get_index` value shown only where the union arithmetic needs it):
+Example 2, `grid = [[1,1,0],[0,0,0],[0,1,1]]`, keeps the arithmetic small: 9 cells indexed `0` to `8` by `get_index(row, col) = row * 3 + col`, land at indices `0`, `1`, `7`, `8`. `components` starts at `9`, and the scan visits cells in row-major order (trace legend: `index` is the flattened `get_index` value shown only where the union arithmetic needs it):
 
 ```text
-(0,0) idx 0   land: right (0,1) land      -> union(0, 1), components 9 -> 8
+(0,0) index 0   land: right (0,1) land      -> union(0, 1), components 9 -> 8
               down (1,0) water; down-right (1,1) water; down-left out
-(0,1) idx 1   land: right (0,2) water; down (1,1) water
+(0,1) index 1   land: right (0,2) water; down (1,1) water
               down-right (1,2) water; down-left (1,0) water -> no unions
 (0,2)         water, water_cells = 1
 row 1         all water, water_cells = 2, 3, 4
-(2,0) idx 6   water, water_cells = 5
-(2,1) idx 7   land: right (2,2) land      -> union(7, 8), components 8 -> 7
+(2,0) index 6   water, water_cells = 5
+(2,1) index 7   land: right (2,2) land      -> union(7, 8), components 8 -> 7
               down, down-right, down-left: out of bounds
-(2,2) idx 8   land: all four forward neighbors out of bounds -> no unions
+(2,2) index 8   land: all four forward neighbors out of bounds -> no unions
 ```
 
 No union ever bridges the middle row: the down offsets from row 0 all land in water, which is the geometric fact that the two land pairs are separate islands. Surviving components are `{0, 1}`, `{7, 8}`, and five water singletons, `7` in all; `uf.components - water_cells = 7 - 5 = 2` matches the expected Output. Note index `1`'s scan needs no union with index `7` or `8`: under eight-direction adjacency `(0, 1)` and `(2, 1)` are two rows apart and genuinely not adjacent, so the water row decides the count, not the direction rule.

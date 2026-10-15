@@ -83,9 +83,9 @@ class Solution:
                     continue
                 for offset in range(k):
                     if window[offset] == 1:
-                        nxt = list(state)
-                        nxt[start + offset] = 0
-                        explore(nxt, total + window_cost)
+                        next_node = list(state)
+                        next_node[start + offset] = 0
+                        explore(next_node, total + window_cost)
 
         explore(product, 0)
         return int(best[0])
