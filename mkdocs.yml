@@ -137,6 +137,7 @@ nav:
     - The Interview Method: system-design/method.md
     - Back-of-Envelope Estimation: system-design/estimation.md
     - Building Blocks: system-design/building_blocks.md
+    - The LLM Mock Interviewer: system-design/mock_interview.md
     - Case Studies:
       - system-design/case_studies/index.md
       - URL Shortener: system-design/case_studies/url_shortener.md
