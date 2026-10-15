@@ -34,7 +34,7 @@ Peer mocks give you volume and also make you a better interviewer, and interview
 This repository is built for this. The candidate works in the `practice/` workspace where write-ups stay out of sight until deliberately opened, so the separation is one of discipline:
 
 1. **The interviewer picks a problem the candidate has not seen** from the
-   [problem list](../index.md), roughly at the candidate's current level: problems from week 4 to 5 of the schedule are a good mid-plan target.
+   [problem list](../leetcode/index.md), roughly at the candidate's current level: problems from week 4 to 5 of the schedule are a good mid-plan target.
 2. **The interviewer prepares from the published site**, so they know the
    expected approaches and can judge the ladder rather than just the final answer.
 3. **Budget it like a real round:** five minutes of introductions, 30 to 40

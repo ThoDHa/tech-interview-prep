@@ -45,10 +45,7 @@ from typing import Optional
 
 PRACTICE_DIR = Path(__file__).resolve().parent
 STATE_FILE = PRACTICE_DIR / ".progress.json"
-# The post-move landing is docs/leetcode/index.md; until wave B moves the
-# tree the pre-move landing is used when the new one is absent.
 DOCS_INDEX = PRACTICE_DIR.parent / "docs" / "leetcode" / "index.md"
-DOCS_INDEX_PRE_MOVE = PRACTICE_DIR.parent / "docs" / "problems" / "index.md"
 
 STATUS_SOLVED = "solved"
 STATUS_ATTEMPTED = "attempted"
@@ -133,12 +130,10 @@ def canonical_order(problems: list[str]) -> list[str]:
     rows live in the amazon bank's own index and never appear in this
     table, so they sort alphabetically after the tabled problems. Any
     problem missing from the table is appended alphabetically. Falls back
-    to alphabetical order if the table cannot be read or has no rows. The
-    pre-move landing (docs/leetcode/index.md) is read when the post-move
-    one does not exist yet, so the transition does not degrade the board.
+    to alphabetical order if the table cannot be read or has no rows.
     """
     known = set(problems)
-    landing = DOCS_INDEX if DOCS_INDEX.exists() else DOCS_INDEX_PRE_MOVE
+    landing = DOCS_INDEX
     row = re.compile(r"^\|\s*\[[^\]]+\]\((?:problems/)?([A-Za-z0-9_]+)\.md\)")
     ordered_rows: list[str] = []
     try:

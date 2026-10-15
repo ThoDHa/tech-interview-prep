@@ -44,7 +44,7 @@ Match the per-directory prefix exactly:
 | Page location | Link to a problem page as |
 | --- | --- |
 | `docs/leetcode/<slug>.md` | `two_sum.md` |
-| `docs/amazon/<slug>.md` | `../two_sum.md` |
+| `docs/amazon/<slug>.md` | `../leetcode/two_sum.md` |
 | `docs/patterns/<pattern>/intuition.md` | `../../leetcode/two_sum.md` |
 | `docs/foundations/*.md`, `docs/interview-prep/*.md` | `../leetcode/two_sum.md` |
 | `README.md` (repo root) | `docs/leetcode/two_sum.md` |
@@ -76,8 +76,8 @@ all three after touching a generator, its data sources, or generated output.
   `test_<slug>.py` under `practice/amazon/<slug>/`; the write-up body is
   hand-editable.
 - `scripts/generate_index_tables.py` owns the marker-bounded sections of
-  `docs/leetcode/index.md` (`unified-leetcode`, `amazon-oa`, `sources`) and the
-  `Problems` nav in `mkdocs.yml`.
+  `docs/leetcode/index.md` (`unified-leetcode`, `sources`) and the `Leetcode`
+  and `Amazon` nav sections in `mkdocs.yml`.
 - Hand-editable: solved problem write-ups, pattern guides, foundations,
   interview prep, system design, `cases_full.json` files, and the committed
   data sources (`scripts/neetcode150_manifest.json`,
