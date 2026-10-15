@@ -1,23 +1,22 @@
 // Control-row filtering for the problem tables.
 //
-// Companion to tablesort-init.js: the two problem tables on the problems
-// landing get a slim control row directly above the table - a funnel toggle
-// and a reset-sort icon, right-aligned - and the funnel drops a compact
-// filter panel between the row and the table:
-// a case-insensitive problem-name search input, a Difficulty select (on the
-// Amazon OA table the Time cell is the difficulty source, so its select
-// offers the estimate-derived Unknown), a Category select where that
-// column exists (its options are the distinct tags the column's
+// Companion to tablesort-init.js: the problem tables on the two bank
+// landings (docs/leetcode/index.md and docs/amazon/index.md) get a slim
+// control row directly above the table - a funnel toggle and a reset-sort
+// icon, right-aligned - and the funnel drops a compact filter panel between
+// the row and the table:
+// a case-insensitive problem-name search input, a Difficulty select (both
+// landing tables carry a real Difficulty column), a Category select where
+// that column exists (its options are the distinct tags the column's
 // comma-separated cells contain, and a row matches on exact tag equality
 // after split and trim), and a Tracks select where that column exists,
 // plus a Clear button. Escape inside the panel empties every
 // filter and closes it, and Escape on the funnel closes an open panel. The
 // funnel carries a small dot badge while any
 // filter is non-default. A table counts as filterable when its header row
-// has a Problem column and a Difficulty or Time column - the columns the
+// has a Problem column and a Difficulty column - the columns the
 // filters can actually work on - so every other article table (pattern
-// guides, sources, the Amazon OA bank index, whose Problem/Updated/Companies
-// header offers no difficulty source) stays untouched. Like
+// guides, sources) stays untouched. Like
 // tablesort-init.js, per-page work subscribes to document$ for instant
 // navigation: each swap delivers fresh tables, and the data attribute guard
 // keeps repeat emissions from stacking duplicate control rows over the same
@@ -44,15 +43,6 @@
 // and Clear filters leaves sort state (aria-sort and row order) alone, while
 // Reset sort leaves filter state alone.
 
-// The Amazon OA table has no Difficulty column; its Time cell carries the
-// difficulty-based estimates the table prose documents (Easy 15 / Medium 25 /
-// Hard 40 minutes), with a dash where the difficulty is unknown.
-const TIME_TO_DIFFICULTY = {
-  "15 minutes": "Easy",
-  "25 minutes": "Medium",
-  "40 minutes": "Hard",
-};
-const UNKNOWN_DIFFICULTY = "Unknown";
 const DIFFICULTY_OPTIONS = ["Easy", "Medium", "Hard"];
 const TRACK_OPTIONS = ["Grind 75", "NeetCode 150", "Amazon OA"];
 const ALL_OPTION_VALUE = "";
@@ -98,7 +88,6 @@ const columnMap = (table) => {
     difficulty: -1,
     category: -1,
     tracks: -1,
-    time: -1,
   };
   Array.from(headerRowOf(table).cells).forEach((cell, index) => {
     const name = cell.textContent.trim().toLowerCase();
@@ -109,17 +98,15 @@ const columnMap = (table) => {
   return columns;
 };
 
-/** True when the column map has the problem-table shape: a Problem column plus a Difficulty or Time column. */
+/** True when the column map has the problem-table shape: a Problem column plus a Difficulty column. */
 const isFilterable = (columns) =>
-  columns.problem !== -1 && (columns.difficulty !== -1 || columns.time !== -1);
+  columns.problem !== -1 && columns.difficulty !== -1;
 
 /** Indices applyFilters reads from a row; a short row missing any of them degrades to unfiltered. */
 const requiredColumns = (columns) => {
   const indices = [columns.problem];
   if (columns.difficulty !== -1) {
     indices.push(columns.difficulty);
-  } else if (columns.time !== -1) {
-    indices.push(columns.time);
   }
   if (columns.tracks !== -1) {
     indices.push(columns.tracks);
@@ -137,13 +124,8 @@ const rowCoversColumns = (row, requiredIndices) =>
 /** Trimmed text of the row's cell at the column index. */
 const cellText = (row, columnIndex) => row.cells[columnIndex].textContent.trim();
 
-/** Difficulty label for a row: its Difficulty cell, or the estimate derived from its Time cell. */
-const difficultyOf = (row, columns) => {
-  if (columns.difficulty !== -1) {
-    return cellText(row, columns.difficulty);
-  }
-  return TIME_TO_DIFFICULTY[cellText(row, columns.time)] ?? UNKNOWN_DIFFICULTY;
-};
+/** Difficulty label for a row: its Difficulty cell. */
+const difficultyOf = (row, columns) => cellText(row, columns.difficulty);
 
 /** The row's Category cell split into its trimmed, non-empty tags. */
 const categoryTagsOf = (row, columns) =>
@@ -396,13 +378,11 @@ const installFilterControls = (table, columns) => {
     badge: null,
     panel: null,
   };
-  if (columns.difficulty !== -1 || columns.time !== -1) {
-    const optionLabels =
-      columns.difficulty === -1 ? [...DIFFICULTY_OPTIONS, UNKNOWN_DIFFICULTY] : DIFFICULTY_OPTIONS;
+  if (columns.difficulty !== -1) {
     controls.difficulty = buildSelect(
       "Filter by difficulty",
       ALL_OPTION_LABEL,
-      optionLabels
+      DIFFICULTY_OPTIONS
     );
     controls.selects.push(controls.difficulty);
   }
