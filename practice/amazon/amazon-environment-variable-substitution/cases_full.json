@@ -1,0 +1,1112 @@
+[
+  {
+    "id": "example_1",
+    "operations": [
+      "EnvironmentStore",
+      "set",
+      "parse"
+    ],
+    "arguments": [
+      [],
+      [
+        "NAME",
+        "Tom"
+      ],
+      [
+        "Hello I am %NAME%"
+      ]
+    ],
+    "expected": [
+      null,
+      null,
+      "Hello I am Tom"
+    ]
+  },
+  {
+    "id": "example_2_missing_paths",
+    "operations": [
+      "EnvironmentStore",
+      "get",
+      "parse"
+    ],
+    "arguments": [
+      [],
+      [
+        "MISSING"
+      ],
+      [
+        "%MISSING%"
+      ]
+    ],
+    "expected": [
+      null,
+      null,
+      "%MISSING%"
+    ]
+  },
+  {
+    "id": "set_overwrite",
+    "operations": [
+      "EnvironmentStore",
+      "set",
+      "set",
+      "get"
+    ],
+    "arguments": [
+      [],
+      [
+        "NAME",
+        "Tom"
+      ],
+      [
+        "NAME",
+        "Andy"
+      ],
+      [
+        "NAME"
+      ]
+    ],
+    "expected": [
+      null,
+      null,
+      null,
+      "Andy"
+    ]
+  },
+  {
+    "id": "get_on_empty_store",
+    "operations": [
+      "EnvironmentStore",
+      "get"
+    ],
+    "arguments": [
+      [],
+      [
+        "ANY"
+      ]
+    ],
+    "expected": [
+      null,
+      null
+    ]
+  },
+  {
+    "id": "parse_empty_text",
+    "operations": [
+      "EnvironmentStore",
+      "parse"
+    ],
+    "arguments": [
+      [],
+      [
+        ""
+      ]
+    ],
+    "expected": [
+      null,
+      ""
+    ]
+  },
+  {
+    "id": "parse_plain_text_no_placeholder",
+    "operations": [
+      "EnvironmentStore",
+      "parse"
+    ],
+    "arguments": [
+      [],
+      [
+        "nothing here"
+      ]
+    ],
+    "expected": [
+      null,
+      "nothing here"
+    ]
+  },
+  {
+    "id": "multiple_placeholders",
+    "operations": [
+      "EnvironmentStore",
+      "set",
+      "set",
+      "parse"
+    ],
+    "arguments": [
+      [],
+      [
+        "A",
+        "1"
+      ],
+      [
+        "B",
+        "2"
+      ],
+      [
+        "x%A%y%B%z"
+      ]
+    ],
+    "expected": [
+      null,
+      null,
+      null,
+      "x1y2z"
+    ]
+  },
+  {
+    "id": "adjacent_percent_then_placeholder",
+    "operations": [
+      "EnvironmentStore",
+      "set",
+      "parse"
+    ],
+    "arguments": [
+      [],
+      [
+        "NAME",
+        "Tom"
+      ],
+      [
+        "%%NAME%"
+      ]
+    ],
+    "expected": [
+      null,
+      null,
+      "%Tom"
+    ]
+  },
+  {
+    "id": "unclosed_percent",
+    "operations": [
+      "EnvironmentStore",
+      "set",
+      "parse"
+    ],
+    "arguments": [
+      [],
+      [
+        "NAME",
+        "Tom"
+      ],
+      [
+        "%NAME"
+      ]
+    ],
+    "expected": [
+      null,
+      null,
+      "%NAME"
+    ]
+  },
+  {
+    "id": "missing_key_kept_whole",
+    "operations": [
+      "EnvironmentStore",
+      "parse"
+    ],
+    "arguments": [
+      [],
+      [
+        "%MISSING% tail"
+      ]
+    ],
+    "expected": [
+      null,
+      "%MISSING% tail"
+    ]
+  },
+  {
+    "id": "one_pass_no_reexpansion",
+    "operations": [
+      "EnvironmentStore",
+      "set",
+      "set",
+      "parse"
+    ],
+    "arguments": [
+      [],
+      [
+        "NAME",
+        "%USER%"
+      ],
+      [
+        "USER",
+        "bob"
+      ],
+      [
+        "%NAME%"
+      ]
+    ],
+    "expected": [
+      null,
+      null,
+      null,
+      "%USER%"
+    ]
+  },
+  {
+    "id": "self_referential_value",
+    "operations": [
+      "EnvironmentStore",
+      "set",
+      "parse"
+    ],
+    "arguments": [
+      [],
+      [
+        "X",
+        "%X%y"
+      ],
+      [
+        "%X%"
+      ]
+    ],
+    "expected": [
+      null,
+      null,
+      "%X%y"
+    ]
+  },
+  {
+    "id": "placeholder_positions",
+    "operations": [
+      "EnvironmentStore",
+      "set",
+      "parse",
+      "parse",
+      "parse"
+    ],
+    "arguments": [
+      [],
+      [
+        "K",
+        "v"
+      ],
+      [
+        "%K% leading"
+      ],
+      [
+        "middle %K% spot"
+      ],
+      [
+        "trailing %K%"
+      ]
+    ],
+    "expected": [
+      null,
+      null,
+      "v leading",
+      "middle v spot",
+      "trailing v"
+    ]
+  },
+  {
+    "id": "key_with_digits_and_underscore",
+    "operations": [
+      "EnvironmentStore",
+      "set",
+      "parse",
+      "get"
+    ],
+    "arguments": [
+      [],
+      [
+        "A_1",
+        "v"
+      ],
+      [
+        "%A_1%"
+      ],
+      [
+        "A_1"
+      ]
+    ],
+    "expected": [
+      null,
+      null,
+      "v",
+      "v"
+    ]
+  },
+  {
+    "id": "repeated_same_placeholder",
+    "operations": [
+      "EnvironmentStore",
+      "set",
+      "parse"
+    ],
+    "arguments": [
+      [],
+      [
+        "N",
+        "7"
+      ],
+      [
+        "%N% and %N%"
+      ]
+    ],
+    "expected": [
+      null,
+      null,
+      "7 and 7"
+    ]
+  },
+  {
+    "id": "value_with_trailing_percent",
+    "operations": [
+      "EnvironmentStore",
+      "set",
+      "parse"
+    ],
+    "arguments": [
+      [],
+      [
+        "X",
+        "a%"
+      ],
+      [
+        "%X%"
+      ]
+    ],
+    "expected": [
+      null,
+      null,
+      "a%"
+    ]
+  },
+  {
+    "id": "null_then_set_then_get",
+    "operations": [
+      "EnvironmentStore",
+      "get",
+      "set",
+      "get"
+    ],
+    "arguments": [
+      [],
+      [
+        "G"
+      ],
+      [
+        "G",
+        "gg"
+      ],
+      [
+        "G"
+      ]
+    ],
+    "expected": [
+      null,
+      null,
+      null,
+      "gg"
+    ]
+  },
+  {
+    "id": "malformed_then_valid_chain",
+    "operations": [
+      "EnvironmentStore",
+      "set",
+      "parse"
+    ],
+    "arguments": [
+      [],
+      [
+        "A",
+        "ay"
+      ],
+      [
+        "%%A%%B%"
+      ]
+    ],
+    "expected": [
+      null,
+      null,
+      "%ay%B%"
+    ]
+  },
+  {
+    "id": "case_sensitive_keys",
+    "operations": [
+      "EnvironmentStore",
+      "set",
+      "parse",
+      "parse"
+    ],
+    "arguments": [
+      [],
+      [
+        "name",
+        "Tom"
+      ],
+      [
+        "%NAME%"
+      ],
+      [
+        "%name%"
+      ]
+    ],
+    "expected": [
+      null,
+      null,
+      "%NAME%",
+      "Tom"
+    ]
+  },
+  {
+    "id": "cached_segments_new_value",
+    "operations": [
+      "EnvironmentStore",
+      "set",
+      "set",
+      "parse",
+      "set",
+      "parse"
+    ],
+    "arguments": [
+      [],
+      [
+        "WHO",
+        "sam"
+      ],
+      [
+        "greeting",
+        "hi %WHO%"
+      ],
+      [
+        "%greeting%"
+      ],
+      [
+        "WHO",
+        "alex"
+      ],
+      [
+        "%greeting%"
+      ]
+    ],
+    "expected": [
+      null,
+      null,
+      null,
+      "hi %WHO%",
+      null,
+      "hi %WHO%"
+    ]
+  },
+  {
+    "id": "underscore_only_key",
+    "operations": [
+      "EnvironmentStore",
+      "set",
+      "parse"
+    ],
+    "arguments": [
+      [],
+      [
+        "_",
+        "v"
+      ],
+      [
+        "%_%"
+      ]
+    ],
+    "expected": [
+      null,
+      null,
+      "v"
+    ]
+  },
+  {
+    "id": "placeholder_in_value_stays_after_parse",
+    "operations": [
+      "EnvironmentStore",
+      "set",
+      "parse",
+      "set",
+      "parse"
+    ],
+    "arguments": [
+      [],
+      [
+        "N",
+        "9"
+      ],
+      [
+        "a%N%b%N%c"
+      ],
+      [
+        "N",
+        "8"
+      ],
+      [
+        "a%N%b%N%c"
+      ]
+    ],
+    "expected": [
+      null,
+      null,
+      "a9b9c",
+      null,
+      "a8b8c"
+    ]
+  },
+  {
+    "id": "seeded_40ops_mixed",
+    "operations": [
+      "EnvironmentStore",
+      "parse",
+      "get",
+      "set",
+      "get",
+      "set",
+      "set",
+      "get",
+      "get",
+      "parse",
+      "get",
+      "get",
+      "set",
+      "set",
+      "parse",
+      "set",
+      "parse",
+      "set",
+      "parse",
+      "parse",
+      "get",
+      "set",
+      "parse",
+      "set",
+      "parse",
+      "parse",
+      "parse",
+      "parse",
+      "parse",
+      "parse",
+      "parse",
+      "parse",
+      "get",
+      "get",
+      "get",
+      "set",
+      "set",
+      "get",
+      "set",
+      "set",
+      "set"
+    ],
+    "arguments": [
+      [],
+      [
+        "no marks"
+      ],
+      [
+        "A9"
+      ],
+      [
+        "K2",
+        "a%"
+      ],
+      [
+        "K2"
+      ],
+      [
+        "K_4",
+        "plain"
+      ],
+      [
+        "K2",
+        "plain"
+      ],
+      [
+        "A9"
+      ],
+      [
+        "K_4"
+      ],
+      [
+        "%K3%%K1%"
+      ],
+      [
+        "K1"
+      ],
+      [
+        "K3"
+      ],
+      [
+        "A9",
+        ""
+      ],
+      [
+        "K3",
+        "%%"
+      ],
+      [
+        "%K3%%K1%"
+      ],
+      [
+        "K_4",
+        "plain"
+      ],
+      [
+        "%K2% and %K3%"
+      ],
+      [
+        "K1",
+        "a%"
+      ],
+      [
+        "%MISSING%"
+      ],
+      [
+        "%K1%"
+      ],
+      [
+        "K3"
+      ],
+      [
+        "K2",
+        "%%"
+      ],
+      [
+        "tail %"
+      ],
+      [
+        "A9",
+        "a%"
+      ],
+      [
+        "%K1%"
+      ],
+      [
+        "%K1%"
+      ],
+      [
+        "tail %"
+      ],
+      [
+        "tail %"
+      ],
+      [
+        "prefix %K_4% suffix"
+      ],
+      [
+        "tail %"
+      ],
+      [
+        "%K2% and %K3%"
+      ],
+      [
+        "no marks"
+      ],
+      [
+        "K1"
+      ],
+      [
+        "K3"
+      ],
+      [
+        "K2"
+      ],
+      [
+        "K3",
+        "plain"
+      ],
+      [
+        "K2",
+        "a%"
+      ],
+      [
+        "K_4"
+      ],
+      [
+        "K3",
+        "x%K1%y"
+      ],
+      [
+        "K2",
+        "plain"
+      ],
+      [
+        "K_4",
+        "%K2% tail"
+      ]
+    ],
+    "expected": [
+      null,
+      "no marks",
+      null,
+      null,
+      "a%",
+      null,
+      null,
+      null,
+      "plain",
+      "%K3%%K1%",
+      null,
+      null,
+      null,
+      null,
+      "%%%K1%",
+      null,
+      "plain and %%",
+      null,
+      "%MISSING%",
+      "a%",
+      "%%",
+      null,
+      "tail %",
+      null,
+      "a%",
+      "a%",
+      "tail %",
+      "tail %",
+      "prefix plain suffix",
+      "tail %",
+      "%% and %%",
+      "no marks",
+      "a%",
+      "%%",
+      "%%",
+      null,
+      null,
+      "plain",
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "id": "seeded_60ops_parse_heavy",
+    "operations": [
+      "EnvironmentStore",
+      "set",
+      "set",
+      "get",
+      "get",
+      "set",
+      "parse",
+      "parse",
+      "set",
+      "parse",
+      "parse",
+      "get",
+      "parse",
+      "parse",
+      "parse",
+      "parse",
+      "set",
+      "set",
+      "parse",
+      "parse",
+      "parse",
+      "parse",
+      "get",
+      "parse",
+      "get",
+      "get",
+      "set",
+      "set",
+      "parse",
+      "set",
+      "parse",
+      "set",
+      "get",
+      "set",
+      "set",
+      "set",
+      "set",
+      "parse",
+      "parse",
+      "get",
+      "parse",
+      "set",
+      "get",
+      "set",
+      "get",
+      "parse",
+      "parse",
+      "set",
+      "parse",
+      "parse",
+      "parse",
+      "get",
+      "get",
+      "parse",
+      "get",
+      "parse",
+      "set",
+      "set",
+      "set",
+      "parse",
+      "get"
+    ],
+    "arguments": [
+      [],
+      [
+        "A9",
+        "a%"
+      ],
+      [
+        "A9",
+        "x%K1%y"
+      ],
+      [
+        "A9"
+      ],
+      [
+        "A9"
+      ],
+      [
+        "A9",
+        "%K2% tail"
+      ],
+      [
+        "prefix %K_4% suffix"
+      ],
+      [
+        "tail %"
+      ],
+      [
+        "K2",
+        "plain"
+      ],
+      [
+        "tail %"
+      ],
+      [
+        "prefix %K_4% suffix"
+      ],
+      [
+        "K_4"
+      ],
+      [
+        "%%K1%"
+      ],
+      [
+        "%K3%%K1%"
+      ],
+      [
+        "%K3%%K1%"
+      ],
+      [
+        "%K3%%K1%"
+      ],
+      [
+        "K2",
+        "a%"
+      ],
+      [
+        "A9",
+        "x%K1%y"
+      ],
+      [
+        "prefix %K_4% suffix"
+      ],
+      [
+        "%MISSING%"
+      ],
+      [
+        "tail %"
+      ],
+      [
+        "%%K1%"
+      ],
+      [
+        "K2"
+      ],
+      [
+        "prefix %K_4% suffix"
+      ],
+      [
+        "K3"
+      ],
+      [
+        "K_4"
+      ],
+      [
+        "K_4",
+        "x%K1%y"
+      ],
+      [
+        "A9",
+        "%%"
+      ],
+      [
+        "prefix %K_4% suffix"
+      ],
+      [
+        "K_4",
+        "x%K1%y"
+      ],
+      [
+        "%K3%%K1%"
+      ],
+      [
+        "A9",
+        "%%"
+      ],
+      [
+        "K1"
+      ],
+      [
+        "K_4",
+        "a%"
+      ],
+      [
+        "K1",
+        "x%K1%y"
+      ],
+      [
+        "K3",
+        "a%"
+      ],
+      [
+        "K_4",
+        "%%"
+      ],
+      [
+        "%%K1%"
+      ],
+      [
+        "%K1%"
+      ],
+      [
+        "K_4"
+      ],
+      [
+        "%%K1%"
+      ],
+      [
+        "K2",
+        ""
+      ],
+      [
+        "K_4"
+      ],
+      [
+        "K3",
+        "a%"
+      ],
+      [
+        "K2"
+      ],
+      [
+        "prefix %K_4% suffix"
+      ],
+      [
+        "tail %"
+      ],
+      [
+        "K2",
+        "a%"
+      ],
+      [
+        "prefix %K_4% suffix"
+      ],
+      [
+        "%%K1%"
+      ],
+      [
+        "prefix %K_4% suffix"
+      ],
+      [
+        "A9"
+      ],
+      [
+        "K1"
+      ],
+      [
+        "prefix %K_4% suffix"
+      ],
+      [
+        "K_4"
+      ],
+      [
+        "%K1%"
+      ],
+      [
+        "K3",
+        "%K2% tail"
+      ],
+      [
+        "K_4",
+        "x%K1%y"
+      ],
+      [
+        "A9",
+        "x%K1%y"
+      ],
+      [
+        "%MISSING%"
+      ],
+      [
+        "A9"
+      ]
+    ],
+    "expected": [
+      null,
+      null,
+      null,
+      "x%K1%y",
+      "x%K1%y",
+      null,
+      "prefix %K_4% suffix",
+      "tail %",
+      null,
+      "tail %",
+      "prefix %K_4% suffix",
+      null,
+      "%%K1%",
+      "%K3%%K1%",
+      "%K3%%K1%",
+      "%K3%%K1%",
+      null,
+      null,
+      "prefix %K_4% suffix",
+      "%MISSING%",
+      "tail %",
+      "%%K1%",
+      "a%",
+      "prefix %K_4% suffix",
+      null,
+      null,
+      null,
+      null,
+      "prefix x%K1%y suffix",
+      null,
+      "%K3%%K1%",
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      "%x%K1%y",
+      "x%K1%y",
+      "%%",
+      "%x%K1%y",
+      null,
+      "%%",
+      null,
+      "",
+      "prefix %% suffix",
+      "tail %",
+      null,
+      "prefix %% suffix",
+      "%x%K1%y",
+      "prefix %% suffix",
+      "%%",
+      "x%K1%y",
+      "prefix %% suffix",
+      "%%",
+      "x%K1%y",
+      null,
+      null,
+      null,
+      "%MISSING%",
+      "x%K1%y"
+    ]
+  }
+]

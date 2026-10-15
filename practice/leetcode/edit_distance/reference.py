@@ -16,9 +16,9 @@ class Solution:
     def minDistance(self, word1, word2):
         """Return the minimum number of insert/delete/replace operations.
 
-        Walks the classic prefix table: `previous[j]` is the edit distance
+        Walks the classic prefix table: `previous_row[j]` is the edit distance
         between the first `i - 1` characters of `word1` and the first `j`
-        of `word2`; `current[j]` is built for the first `i`. Matching ends are
+        of `word2`; `current_row[j]` is built for the first `i`. Matching ends are
         free; otherwise the cell takes one plus the best of deleting,
         inserting, or replacing. Only two rows are alive at any time.
 
@@ -34,20 +34,20 @@ class Solution:
         Space: O(n): the two live rows.
         """
         m, n = len(word1), len(word2)
-        previous = list(range(n + 1))
+        previous_row = list(range(n + 1))
         for i in range(1, m + 1):
-            current = [i] + [0] * n
+            current_row = [i] + [0] * n
             for j in range(1, n + 1):
                 if word1[i - 1] == word2[j - 1]:
-                    current[j] = previous[j - 1]
+                    current_row[j] = previous_row[j - 1]
                 else:
-                    current[j] = 1 + min(
-                        previous[j],      # delete word1[i-1]
-                        current[j - 1],   # insert word2[j-1]
-                        previous[j - 1],  # replace word1[i-1] with word2[j-1]
+                    current_row[j] = 1 + min(
+                        previous_row[j],      # delete word1[i-1]
+                        current_row[j - 1],   # insert word2[j-1]
+                        previous_row[j - 1],  # replace word1[i-1] with word2[j-1]
                     )
-            previous = current
-        return previous[n]
+            previous_row = current_row
+        return previous_row[n]
 
 
 if __name__ == "__main__":

@@ -137,6 +137,7 @@ nav:
     - The Interview Method: system-design/method.md
     - Back-of-Envelope Estimation: system-design/estimation.md
     - Building Blocks: system-design/building_blocks.md
+    - The LLM Mock Interviewer: system-design/mock_interview.md
     - Case Studies:
       - system-design/case_studies/index.md
       - URL Shortener: system-design/case_studies/url_shortener.md
@@ -144,6 +145,13 @@ nav:
       - News Feed: system-design/case_studies/news_feed.md
       - Chat System: system-design/case_studies/chat_system.md
       - Web Crawler: system-design/case_studies/web_crawler.md
+    - Exercises:
+      - system-design/exercises/index.md
+      - Search Typeahead: system-design/exercises/search_typeahead.md
+      - Notification System: system-design/exercises/notification_system.md
+      - Seat Booking: system-design/exercises/seat_booking.md
+      - Nearby Friends: system-design/exercises/nearby_friends.md
+      - Metrics Monitoring: system-design/exercises/metrics_monitoring.md
   - Leetcode:
     - leetcode/index.md
     - "Two Sum": leetcode/two_sum.md

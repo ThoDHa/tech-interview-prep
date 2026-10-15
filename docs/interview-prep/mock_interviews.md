@@ -58,6 +58,8 @@ A solo mock cannot grade your communication the way a partner can, but it still 
 5. Afterwards, read the solution ladder and note what a partner would have
    flagged.
 
+For the system design round with no partner available, [The LLM Mock Interviewer](../system-design/mock_interview.md) turns any chat model into a stand-in design interviewer that runs this repo's 45-minute method against a paste-ready brief.
+
 ## How to debrief
 
 Within a day of any mock, answer four questions in writing:

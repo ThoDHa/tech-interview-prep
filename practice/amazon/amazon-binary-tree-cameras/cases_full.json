@@ -1,0 +1,317 @@
+[
+  {
+    "id": "case_1",
+    "args": [
+      [
+        0,
+        0,
+        null,
+        0,
+        0
+      ]
+    ],
+    "expected": 1
+  },
+  {
+    "id": "case_2",
+    "args": [
+      [
+        0,
+        0,
+        null,
+        0,
+        null,
+        0,
+        null,
+        null,
+        0
+      ]
+    ],
+    "expected": 2
+  },
+  {
+    "id": "case_3",
+    "args": [
+      [
+        0
+      ]
+    ],
+    "expected": 1
+  },
+  {
+    "id": "case_4",
+    "args": [
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "expected": 2
+  },
+  {
+    "id": "case_5",
+    "args": [
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "expected": 1
+  },
+  {
+    "id": "case_6",
+    "args": [
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "expected": 1
+  },
+  {
+    "id": "case_7",
+    "args": [
+      [
+        0,
+        0
+      ]
+    ],
+    "expected": 1
+  },
+  {
+    "id": "case_8",
+    "args": [
+      [
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "expected": 2
+  },
+  {
+    "id": "case_9",
+    "args": [
+      [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "expected": 2
+  },
+  {
+    "id": "case_10",
+    "args": [
+      []
+    ],
+    "expected": 0
+  },
+  {
+    "id": "case_11",
+    "args": [
+      [
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "expected": 2
+  },
+  {
+    "id": "case_12",
+    "args": [
+      []
+    ],
+    "expected": 0
+  },
+  {
+    "id": "case_13",
+    "args": [
+      [
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "expected": 2
+  },
+  {
+    "id": "case_14",
+    "args": [
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "expected": 3
+  },
+  {
+    "id": "case_15",
+    "args": [
+      [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "expected": 2
+  },
+  {
+    "id": "case_16",
+    "args": [
+      []
+    ],
+    "expected": 0
+  },
+  {
+    "id": "case_17",
+    "args": [
+      [
+        0,
+        0
+      ]
+    ],
+    "expected": 1
+  },
+  {
+    "id": "case_18",
+    "args": [
+      [
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "expected": 2
+  },
+  {
+    "id": "case_19",
+    "args": [
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "expected": 2
+  },
+  {
+    "id": "case_20",
+    "args": [
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "expected": 3
+  },
+  {
+    "id": "case_21",
+    "args": [
+      [
+        0
+      ]
+    ],
+    "expected": 1
+  },
+  {
+    "id": "case_22",
+    "args": [
+      [
+        0
+      ]
+    ],
+    "expected": 1
+  },
+  {
+    "id": "case_23",
+    "args": [
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "expected": 1
+  },
+  {
+    "id": "case_24",
+    "args": [
+      [
+        0,
+        0,
+        null,
+        0,
+        null,
+        0,
+        null,
+        null,
+        0
+      ]
+    ],
+    "expected": 2
+  },
+  {
+    "id": "case_25",
+    "args": [
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "expected": 2
+  },
+  {
+    "id": "case_26",
+    "args": [
+      [
+        0,
+        null,
+        0,
+        null,
+        0,
+        null,
+        0
+      ]
+    ],
+    "expected": 2
+  }
+]
