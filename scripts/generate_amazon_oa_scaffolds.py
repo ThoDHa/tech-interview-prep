@@ -104,6 +104,11 @@ STATEMENT_SECTION_END = "</section>"
 # (katex markup consumed the prose, e.g. the literal "$23"); the statement is
 # then recovered from the server-rendered page instead.
 MIN_PLAUSIBLE_STATEMENT_LENGTH = 40
+# FastPrep prepends contributor-credit lines ("Special thanks: Nick
+# contributed this problem.") to the statement; they are chrome, not problem
+# content, so extraction drops them and regenerations never re-introduce the
+# residue hand cleanups remove.
+CONTRIBUTOR_CHROME_PATTERN = re.compile(r"^Special thanks:.*(?:\n|$)", re.M)
 NEXT_FLIGHT_CHUNK_PATTERN = re.compile(
     r'self\.__next_f\.push\(\[1,("(?:[^"\\]|\\.)*")\]\)'
 )
@@ -536,7 +541,7 @@ def resolve_statement(problem: Optional[dict], page_html: str) -> str:
         renders the statement placeholder).
     """
     raw = str((problem or {}).get("problemStatement") or "")
-    if len(html_to_markdown(raw)) >= MIN_PLAUSIBLE_STATEMENT_LENGTH:
+    if len(rendered_statement_text(raw)) >= MIN_PLAUSIBLE_STATEMENT_LENGTH:
         return raw
     recovered = extract_statement_from_page(page_html or "")
     return recovered or raw
@@ -557,7 +562,7 @@ def render_writeup(entry: dict, problem: Optional[dict], statement_html: Optiona
     """
     if statement_html is None:
         statement_html = str((problem or {}).get("problemStatement") or "")
-    statement = html_to_markdown(statement_html)
+    statement = rendered_statement_text(statement_html)
     if len(statement) < MIN_PLAUSIBLE_STATEMENT_LENGTH:
         # Shredded flight-data statements render as meaningless fragments;
         # the explicit placeholder beats garbage.
@@ -640,6 +645,27 @@ def render_constraints(problem: Optional[dict], slug: str) -> List[str]:
     return lines + [""]
 
 
+def strip_contributor_chrome(statement: str) -> str:
+    """Drop contributor-credit chrome lines from a statement.
+
+    Args:
+        statement: Statement text after HTML-to-markdown conversion.
+
+    Returns:
+        The statement with every `Special thanks:` line and its trailing
+        blank line removed; a leading removal never leaves a blank first
+        line.
+    """
+    stripped = CONTRIBUTOR_CHROME_PATTERN.sub("", statement)
+    collapsed = re.sub(r"\n{3,}", "\n\n", stripped)
+    return re.sub(r"^\n+", "", collapsed).strip()
+
+
+def rendered_statement_text(statement_html: str) -> str:
+    """Convert statement HTML to markdown without contributor-credit chrome."""
+    return strip_contributor_chrome(html_to_markdown(statement_html))
+
+
 def html_to_markdown(fragment: str) -> str:
     """Convert the small HTML subset FastPrep uses to plain markdown text."""
     text = re.sub(r"<!--.*?-->", "", fragment, flags=re.S)
@@ -675,7 +701,7 @@ def render_solution_stub(
     """Render the NotSolved practice stub in the two_sum house style."""
     if statement_html is None:
         statement_html = str((problem or {}).get("problemStatement") or "")
-    rendered_summary = html_to_markdown(statement_html).split("\n")[0]
+    rendered_summary = rendered_statement_text(statement_html).split("\n")[0]
     summary = (
         rendered_summary[:200] if len(rendered_summary) >= MIN_PLAUSIBLE_STATEMENT_LENGTH else ""
     ) or "Amazon OA problem."

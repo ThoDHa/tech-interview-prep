@@ -2,8 +2,6 @@
 
 **Easy** | **NN minutes** | **Prefix Sum, Sorting**
 
-Special thanks: Nick contributed this problem.
-
 
 In order to ensure a hassle-free user experience during the festive season, Amazon maintains logs of the days when its users use the Amazon Shopping app.
 

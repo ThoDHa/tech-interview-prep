@@ -5,7 +5,7 @@ Pipeline:
   1. Validate the three committed data sources: scripts/grind75_table.json
      (the 77 hand-maintained Grind 75 rows extracted from the original hand
      table), scripts/neetcode150_manifest.json (the 150-entry NeetCode
-     track), and scripts/amazon_oa_manifest.json (the 383-entry Amazon OA
+     track), and scripts/amazon_oa_manifest.json (the 380-entry Amazon OA
      bank, most recently updated first).
   2. Merge the two LeetCode tracks into one unified table: 168 unique
      problems, 59 of them on both tracks (one row, both credited). The
@@ -27,12 +27,12 @@ Pipeline:
   5. Emit the mkdocs.yml generated nav: two top-level sections, Leetcode
      (the landing page as section parent via navigation.indexes, with all
      168 problem pages at one level in the interleaved study order) and
-     Amazon (the bank index as section parent, with all 383 problem pages
+     Amazon (the bank index as section parent, with all 380 problem pages
      at one level, most recently updated first). --check verifies the nav
      shape, so both sections stay generator-owned and refreshable.
   6. Emit the combined pandoc PDF config: configs/all-problems.yaml
      compiles every problem page in the repository into one all-problems.pdf
-     (the 168 unified pages in the interleaved study order, then the 383
+     (the 168 unified pages in the interleaved study order, then the 380
      bank pages most recently updated first), opened and closed by the two
      generated collection divider pages configs/part-leetcode.md and
      configs/part-amazon.md so the PDF's table of contents carries
@@ -101,7 +101,7 @@ NAV_LEGACY_PROBLEMS_MARKER = "  - Problems:\n"
 GRIND_ROW_COUNT = 77
 NUMBERED_GRIND_COUNT = 75
 NEETCODE_TRACK_SIZE = 150
-AMAZON_ROW_COUNT = 383
+AMAZON_ROW_COUNT = 380
 GRIND_ONLY_COUNT = 18
 OVERLAP_COUNT = 59
 NEETCODE_ONLY_COUNT = 91
@@ -425,7 +425,7 @@ def load_amazon_manifest(path: Path = AMAZON_MANIFEST_PATH) -> List[dict]:
         path: Path to amazon_oa_manifest.json (default: scripts/amazon_oa_manifest.json).
 
     Returns:
-        The 383 entries, most recently updated first.
+        The 380 entries, most recently updated first.
 
     Raises:
         SourceError: When the file is missing or not a JSON list.
@@ -1567,9 +1567,9 @@ def render_amazon_divider(amazon: Sequence[dict]) -> str:
 def render_pandoc_config(merged: Sequence[dict], amazon: Sequence[dict]) -> str:
     """Render the combined pandoc defaults file for the all-problems PDF.
 
-    The 553-entry input list runs from docs/: the LeetCode divider, the
+    The 551-entry input list runs from docs/: the LeetCode divider, the
     168 unified pages in the interleaved study order, the Amazon divider,
-    then the 383 bank pages most recently updated first. The formatting
+    then the 380 bank pages most recently updated first. The formatting
     block carries over the legacy XeLaTeX settings the 75-page compile
     proved: letter paper, 1in margins, DejaVu Sans Mono at Scale 0.85,
     listings with breaklines, blue links, and a depth-2 table of contents

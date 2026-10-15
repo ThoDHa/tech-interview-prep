@@ -2,8 +2,6 @@
 
 **Medium** | **NN minutes** | **Array, Stack**
 
-Special thanks: 🍓 1000 thanks to spike for spike's incredible help! 🥑
-
 
 A team of analysts at Amazon needs to analyze the stock prices of Amazon over a period of several months.
 

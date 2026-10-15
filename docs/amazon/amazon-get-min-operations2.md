@@ -2,10 +2,6 @@
 
 **Medium** | **NN minutes** | **Sorting, Greedy**
 
-🍊 Following is the original prompt - 🥑
-
-
-
 Devs at AMZ are working on a new sorting algorithm for points on the x-axis of the coordinate system.
 
 
@@ -19,7 +15,7 @@ Given weight and dist, find the minimum number of operations required to sort th
 
 
 
-Function Description 🥑
+Function Description
 
 
 

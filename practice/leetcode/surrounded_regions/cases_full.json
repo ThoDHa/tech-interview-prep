@@ -1,0 +1,14 @@
+[
+  {"id": "example_1", "args": [[["X", "X", "X", "X"], ["X", "O", "O", "X"], ["X", "X", "O", "X"], ["X", "O", "X", "X"]]], "expected": [["X", "X", "X", "X"], ["X", "X", "X", "X"], ["X", "X", "X", "X"], ["X", "O", "X", "X"]]},
+  {"id": "single_inner_region_captured", "args": [[["X", "X", "X"], ["X", "O", "X"], ["X", "X", "X"]]], "expected": [["X", "X", "X"], ["X", "X", "X"], ["X", "X", "X"]]},
+  {"id": "single_cell_x", "args": [[["X"]]], "expected": [["X"]]},
+  {"id": "single_cell_o_untouched", "args": [[["O"]]], "expected": [["O"]]},
+  {"id": "single_row_all_border", "args": [[["X", "O", "X", "O"]]], "expected": [["X", "O", "X", "O"]]},
+  {"id": "single_column_all_border", "args": [[["X"], ["O"], ["X"]]], "expected": [["X"], ["O"], ["X"]]},
+  {"id": "all_o_untouched", "args": [[["O", "O", "O"], ["O", "O", "O"], ["O", "O", "O"]]], "expected": [["O", "O", "O"], ["O", "O", "O"], ["O", "O", "O"]]},
+  {"id": "all_x_untouched", "args": [[["X", "X"], ["X", "X"]]], "expected": [["X", "X"], ["X", "X"]]},
+  {"id": "channel_region_touches_border", "args": [[["X", "O", "X", "X"], ["X", "O", "X", "O"], ["X", "O", "O", "X"], ["X", "X", "X", "X"]]], "expected": [["X", "O", "X", "X"], ["X", "O", "X", "O"], ["X", "O", "O", "X"], ["X", "X", "X", "X"]]},
+  {"id": "two_isolated_inner_regions", "args": [[["X", "X", "X", "X", "X"], ["X", "O", "X", "O", "X"], ["X", "X", "X", "X", "X"]]], "expected": [["X", "X", "X", "X", "X"], ["X", "X", "X", "X", "X"], ["X", "X", "X", "X", "X"]]},
+  {"id": "corner_o_cells_untouched", "args": [[["O", "X"], ["X", "O"]]], "expected": [["O", "X"], ["X", "O"]]},
+  {"id": "inner_block_with_border_o", "args": [[["X", "X", "X", "X"], ["X", "O", "O", "X"], ["X", "O", "O", "X"], ["X", "X", "X", "O"]]], "expected": [["X", "X", "X", "X"], ["X", "X", "X", "X"], ["X", "X", "X", "X"], ["X", "X", "X", "O"]]}
+]

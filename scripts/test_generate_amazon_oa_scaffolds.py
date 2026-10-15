@@ -502,6 +502,56 @@ def test_html_to_markdown_strips_leading_indentation_from_every_line():
     assert rendered == "First paragraph\n\nSecond paragraph\ncontinues on an indented source line"
 
 
+def test_strip_contributor_chrome_removes_leading_special_thanks_line():
+    statement = (
+        "Special thanks: A special thank you to a lovely, amazing fren who "
+        "shared that this question appeared again on September 21, 2026! 💜\n"
+        "\n"
+        "The manager of the Amazon warehouse has decided to make changes to "
+        "the inventory."
+    )
+    assert gen.strip_contributor_chrome(statement) == (
+        "The manager of the Amazon warehouse has decided to make changes to "
+        "the inventory."
+    )
+
+
+def test_strip_contributor_chrome_removes_mid_statement_credit():
+    statement = (
+        "Balance the quality across products.\n"
+        "\n"
+        "Special thanks: 🍓 1000 thanks to spike for spike's incredible help! 🥑\n"
+        "\n"
+        "Return the minimum number of moves."
+    )
+    assert gen.strip_contributor_chrome(statement) == (
+        "Balance the quality across products.\n\nReturn the minimum number of moves."
+    )
+
+
+def test_strip_contributor_chrome_keeps_plain_statements_untouched():
+    statement = (
+        "Given an array of integers, find the longest strictly increasing\n"
+        "subsequence and return its length. A contributing factor is the\n"
+        "choice of starting element."
+    )
+    assert gen.strip_contributor_chrome(statement) == statement
+
+
+def test_render_writeup_strips_contributor_chrome_from_the_statement():
+    problem = dict(
+        gen.extract_problem_record(FASTPREP_PAGE),
+        problemStatement=(
+            "<p>Special thanks: Nick contributed this problem.</p>"
+            "<p>Amazon would like to enforce a password policy.</p>"
+        ),
+    )
+    entry = {"slug": problem["id"], "title": problem["title"], "url": "https://x", "companies": ["Amazon"], "updated": "2026-09-19"}
+    text = gen.render_writeup(entry, problem)
+    assert "Special thanks" not in text
+    assert "Amazon would like to enforce a password policy." in text
+
+
 def test_resolve_statement_recovers_statement_from_rendered_page():
     record = {"problemStatement": "$23"}
     page = (
