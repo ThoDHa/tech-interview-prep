@@ -33,14 +33,14 @@ Every exercise instantiates the same six-field template. The fields carry fixed 
 
 ## The exercises
 
-Batch one, listed with the core concern each brief is built to surface. Links are wired as the walkthroughs land.
+Batch one, listed with the core concern each brief is built to surface. Each brief is the full exercise: the walkthrough checklist opens only after your session.
 
 | Exercise | Central concern |
 |----------|-----------------|
-| Search Typeahead | Read-heavy fan-out with freshness pressure and prefix-shape queries |
-| Notification System | Delivery semantics under fan-out, retry, and deduplication |
-| Seat Booking | Contention on a hot inventory row; consistency versus availability at checkout |
-| Nearby Friends | High-frequency location writes and geo-sharded reads with privacy bounds |
-| Metrics Monitoring | Write-heavy time-series ingestion, downsampling, and windowed aggregation reads |
+| [Search Typeahead](search_typeahead.md) | Read-heavy fan-out with freshness pressure and prefix-shape queries |
+| [Notification System](notification_system.md) | Delivery semantics under fan-out, retry, and deduplication |
+| [Seat Booking](seat_booking.md) | Contention on a hot inventory row; consistency versus availability at checkout |
+| [Nearby Friends](nearby_friends.md) | High-frequency location writes and geo-sharded reads with privacy bounds |
+| [Metrics Monitoring](metrics_monitoring.md) | Write-heavy time-series ingestion, downsampling, and windowed aggregation reads |
 
 Pointers for a session: [the interviewer prompt](../mock_interview.md), [the method](../method.md) it enforces, and the [case studies](../case_studies/index.md) whose scaffolds taught the vocabulary.

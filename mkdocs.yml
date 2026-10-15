@@ -147,6 +147,11 @@ nav:
       - Web Crawler: system-design/case_studies/web_crawler.md
     - Exercises:
       - system-design/exercises/index.md
+      - Search Typeahead: system-design/exercises/search_typeahead.md
+      - Notification System: system-design/exercises/notification_system.md
+      - Seat Booking: system-design/exercises/seat_booking.md
+      - Nearby Friends: system-design/exercises/nearby_friends.md
+      - Metrics Monitoring: system-design/exercises/metrics_monitoring.md
   - Leetcode:
     - leetcode/index.md
     - "Two Sum": leetcode/two_sum.md

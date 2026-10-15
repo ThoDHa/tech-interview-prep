@@ -6,7 +6,7 @@ Reading the [Interview Method](method.md) and the [case studies](case_studies/in
 
 1. Open a fresh chat with any capable model. A fresh chat matters: context from earlier conversations bleeds into how the interviewer behaves.
 2. Copy the prompt in the block below and paste it as your first message.
-3. Pick an exercise from the exercises bank. Each exercise page carries a paste-ready design brief; when the interviewer asks for the brief, copy that block and paste it in.
+3. Pick an exercise from the [exercise bank](exercises/index.md). Each exercise page carries a paste-ready design brief; when the interviewer asks for the brief, copy that block and paste it in.
 4. Run the honest 45 minutes. Say your answers out loud, follow the stages as the interviewer calls them, and when it pushes back, engage the pushback instead of steering around it.
 5. When the session ends, the interviewer hands you a list of unasked questions. Open the exercise's "Walkthrough: what a strong answer covered" checklist and compare: the gaps on the list are your study queue, and the checklist is the standard you were practicing against.
 

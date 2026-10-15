@@ -27,19 +27,19 @@ Ordered by difficulty; each introduces concerns the previous one did not.
 
 ## Roadmap: case studies not yet written
 
-This section is a scaffold, and this list is the honest edge of it. These classics are planned but not yet written; each name links to nothing yet on purpose. Until they exist, attempting them yourself with the [method](../method.md) and the [building blocks](../building_blocks.md) is exactly the right exercise.
+This section is a scaffold, and this list is the honest edge of it. Five of these classics now exist as exercise briefs in the [exercise bank](../exercises/index.md): those topics link straight to their briefs, and running one against the [mock interviewer](../mock_interview.md) is the strongest way to practice them. The two deferred topics stay unlinked until their briefs exist. Until a case study exists for any of them, attempting the topic yourself with the [method](../method.md) and the [building blocks](../building_blocks.md) remains exactly the right exercise.
 
-- **Search typeahead / autocomplete**: prefix data structures
+- **[Search typeahead / autocomplete](../exercises/search_typeahead.md)**: prefix data structures
   ([tries](../../patterns/trie/intuition.md) at scale), precomputed top-k, extreme read QPS on tiny payloads.
-- **Notification system**: multi-channel delivery (push, SMS, email),
+- **[Notification system](../exercises/notification_system.md)**: multi-channel delivery (push, SMS, email),
   batching and rate limits per user, at-least-once plus idempotency in the wild.
-- **Ticketmaster / seat booking**: the strong-consistency counterexample to
+- **[Ticketmaster / seat booking](../exercises/seat_booking.md)**: the strong-consistency counterexample to
   every feed system: contention on hot rows, holds and expiry, no overselling.
-- **Nearby friends / proximity**: geospatial indexing (geohash, quadtrees),
+- **[Nearby friends / proximity](../exercises/nearby_friends.md)**: geospatial indexing (geohash, quadtrees),
   moving data with short TTLs, privacy boundaries.
 - **Video streaming**: upload pipelines, transcoding as async work, chunked
   delivery and adaptive bitrate, CDN economics at their most extreme.
 - **Distributed key-value store**: build the database instead of using one;
   consistent hashing, replication, and quorums from the inside.
-- **Metrics / monitoring system**: time-series write floods, downsampling
+- **[Metrics / monitoring system](../exercises/metrics_monitoring.md)**: time-series write floods, downsampling
   and retention, and why you never read raw points at query time.
