@@ -14,7 +14,7 @@ You can perform the deletion operation as many times as you prefer::
 
 
 
-Pick any group of consecutive chars in the string, with a group size s ranging from 1 up to the curr len of the string. Delete them only when all the chars in this group are the same.
+Pick any group of consecutive chars in the string, with a group size s ranging from 1 up to the current len of the string. Delete them only when all the chars in this group are the same.
 Function Description 
 Complete the function minimumOperationsToRemove in the editor.
 

@@ -81,12 +81,12 @@ class Solution:
             node = insertionOrder[0]
             while node != value:
                 side = 0 if value < node else 1
-                nxt = children[node][side]
-                if nxt is None:
+                next_node = children[node][side]
+                if next_node is None:
                     children[node][side] = value
                     parent[value] = node
                     break
-                node = nxt
+                node = next_node
         p_ancestors = {p}
         current = p
         while current in parent:
@@ -149,11 +149,11 @@ class Solution:
                 node = root_value
                 while True:
                     side = 0 if value < node else 1
-                    nxt = children.get(node, [None, None])[side]
-                    if nxt is None:
+                    next_node = children.get(node, [None, None])[side]
+                    if next_node is None:
                         children.setdefault(node, [None, None])[side] = value
                         break
-                    node = nxt
+                    node = next_node
             children[value] = children.get(value, [None, None])
         node = root_value
         while True:

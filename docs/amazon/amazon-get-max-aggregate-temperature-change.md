@@ -34,7 +34,7 @@ For day 2, consider [6, -2] -> 6 + (-2) = 4, and [-2, 5] -> (-2) + 5 = 3. The ma
 
 For day 3,consider [6, -2, 5] -> 6 + (-2) + 5  = 9, and [5]. The maximum of 9 and 5 is 9.
 
-The max aggregate temp change is max (9, 4, 9) = 9.
+The max aggregate temperature change is max (9, 4, 9) = 9.
 
 ### Example 2
 

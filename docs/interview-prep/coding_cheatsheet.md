@@ -43,7 +43,7 @@ The thresholds above are a conservative version of the mapping in [Big-O Notatio
 | [1-D DP](../patterns/dp_1d_linear/intuition.md) | max/min with no adjacent picks, counting ways | `dp[i]` from a fixed lookback (`dp[i-1]`, `dp[i-2]`), then compress to two variables | [House Robber](../leetcode/house_robber.md) | `dp[i] = max(dp[i-1], dp[i-2] + nums[i])`: dropping the skip branch maxes wrong; set `dp[0]`, `dp[1]` first |
 | [2-D DP](../patterns/string_dp/intuition.md) | two sequences compared: edit distance, LCS | fill a grid from diagonal (match/replace), up (delete), left (insert) | [Edit Distance](../leetcode/edit_distance.md) | `dp[i][j]` is `s[:i]` vs `t[:j]`, so the characters are `s[i-1]`, `t[j-1]`; seed the empty row and column |
 | Bit tricks | O(1) space on pairs and parity | XOR: `a ^ a == 0` and `a ^ 0 == a`; fold everything, pairs cancel | [Single Number](../leetcode/single_number.md) | XOR cancels exact pairs only: "each appears twice but one" is the shape it solves |
-| [Linked-list in-place reversal](../patterns/linked_list_in_place_reversal/intuition.md) | reverse a list or a segment with no extra memory | three pointers: save next, flip `curr.next`, step prev and curr forward | [Reverse Linked List](../leetcode/reverse_linked_list.md) | save `curr.next` before flipping it away, and return `prev`, not `head` |
+| [Linked-list in-place reversal](../patterns/linked_list_in_place_reversal/intuition.md) | reverse a list or a segment with no extra memory | three pointers: save next, flip `current.next`, step prev and current forward | [Reverse Linked List](../leetcode/reverse_linked_list.md) | save `current.next` before flipping it away, and return `prev`, not `head` |
 | [Tree DFS recursion](../patterns/tree/intuition.md) | tree property from subtrees: depth, diameter, balance | recurse on children, combine at the node (postorder thinking) | [Maximum Depth of Binary Tree](../leetcode/maximum_depth_of_binary_tree.md) | return the single-branch value (`1 + max`); through-node answers also need a global update |
 
 ## Warm-up set
@@ -60,7 +60,7 @@ Rule of thumb: redo each from a blank file, no peeking; if a solve takes more th
 | [Valid Palindrome](../leetcode/valid_palindrome.md) ★ | Two pointers | 15 min | Did you loop on `left < right`, not `<=`? |
 | [Kth Largest Element In a Stream](../leetcode/kth_largest_element_in_a_stream.md) ★ | Heap / top-K | 15 min | Did you keep a size-k min-heap whose root is the answer? |
 | [Valid Parentheses](../leetcode/valid_parentheses.md) | Stack | 20 min | Did you pop-match every closer and require an empty stack at the end? |
-| [Reverse Linked List](../leetcode/reverse_linked_list.md) | Linked-list in-place reversal | 20 min | Did you save `curr.next` before flipping it away? |
+| [Reverse Linked List](../leetcode/reverse_linked_list.md) | Linked-list in-place reversal | 20 min | Did you save `current.next` before flipping it away? |
 | [Find Minimum In Rotated Sorted Array](../leetcode/find_minimum_in_rotated_sorted_array.md) | Rotated-array binary search | 25 min | Did you identify the sorted half before discarding the other? |
 | [Number of Islands](../leetcode/number_of_islands.md) | Graph BFS/DFS | 25 min | Did you count traversal starts, marking visited when pushing? |
 | [Course Schedule II](../leetcode/course_schedule_ii.md) | Topological sort | 25 min | Did you orient every edge prerequisite-first (`[1, 0]` means `0 → 1`)? |

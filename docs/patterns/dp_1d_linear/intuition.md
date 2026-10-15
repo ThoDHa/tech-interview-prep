@@ -171,10 +171,10 @@ return dp[n]
 
 **After (O(1) space)**:
 ```python
-prev2, prev1 = 1, 1
+two_back, one_back = 1, 1
 for i in range(2, n + 1):
-    prev2, prev1 = prev1, prev2 + prev1
-return prev1
+    two_back, one_back = one_back, two_back + one_back
+return one_back
 ```
 
 **When to optimize**:

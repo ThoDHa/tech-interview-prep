@@ -182,7 +182,7 @@ class Node:
     def __init__(self, key: int = 0, value: int = 0) -> None:
         self.key = key
         self.value = value
-        self.prev: "Node | None" = None
+        self.previous_node: "Node | None" = None
         self.next: "Node | None" = None
 
 
@@ -192,20 +192,20 @@ class Solution:
         head = Node()
         tail = Node()
         head.next = tail
-        tail.prev = head
+        tail.previous_node = head
         results: List[str] = []
 
         def unlink(node: Node) -> None:
-            previous_node, next_node = node.prev, node.next
+            previous_node, next_node = node.previous_node, node.next
             previous_node.next = next_node
-            next_node.prev = previous_node
+            next_node.previous_node = previous_node
 
         def append_to_back(node: Node) -> None:
-            last_node = tail.prev
+            last_node = tail.previous_node
             last_node.next = node
-            node.prev = last_node
+            node.previous_node = last_node
             node.next = tail
-            tail.prev = node
+            tail.previous_node = node
 
         def get(key: int) -> str:
             if key not in nodes:

@@ -54,10 +54,10 @@ class Solution:
         while queue:
             letter = queue.popleft()
             order.append(letter)
-            for nxt in sorted(adjacency[letter]):
-                indegree[nxt] -= 1
-                if indegree[nxt] == 0:
-                    queue.append(nxt)
+            for next_letter in sorted(adjacency[letter]):
+                indegree[next_letter] -= 1
+                if indegree[next_letter] == 0:
+                    queue.append(next_letter)
         if len(order) != len(adjacency):
             # A cycle among the extracted edges: no valid order exists.
             return ""
