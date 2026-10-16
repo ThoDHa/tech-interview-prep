@@ -6,11 +6,13 @@
 // icon, right-aligned - and the funnel drops a compact filter panel between
 // the row and the table:
 // a case-insensitive problem-name search input, a Difficulty select (both
-// landing tables carry a real Difficulty column), a Category select where
-// that column exists (its options are the distinct tags the column's
-// comma-separated cells contain, and a row matches on exact tag equality
-// after split and trim), and a Tracks select where that column exists,
-// plus a Clear button. Escape inside the panel empties every
+// landing tables carry a real Difficulty column), a Category checkbox group
+// where that column exists (one checkbox per distinct tag the column's
+// comma-separated cells contain; a row matches when its cell contains every
+// checked tag), and a Tracks checkbox group where that column exists (one
+// checkbox per track, same AND-across-checks containment rule against the
+// cell's separators), plus a Clear button. An axis with nothing checked
+// filters nothing on that axis. Escape inside the panel empties every
 // filter and closes it, and Escape on the funnel closes an open panel. The
 // funnel carries a small dot badge while any
 // filter is non-default. A table counts as filterable when its header row
@@ -227,7 +229,7 @@ const buildTextInput = () => {
   return input;
 };
 
-/** Builds a filter select: an all-option with an empty value followed by one option per label. */
+/** Builds a single-select filter: an all-option with an empty value followed by one option per label. */
 const buildSelect = (label, allOptionLabel, optionLabels) => {
   const select = document.createElement("select");
   select.className = "md-input";
@@ -240,6 +242,35 @@ const buildSelect = (label, allOptionLabel, optionLabels) => {
   });
   return select;
 };
+
+/** Builds a checkbox group: one visible-label checkbox per distinct value, wrapped labels keeping the pair associated. */
+const buildCheckboxGroup = (groupLabel, optionLabels) => {
+  const group = document.createElement("span");
+  group.setAttribute("role", "group");
+  group.setAttribute("aria-label", groupLabel);
+  group.style.display = "inline-flex";
+  group.style.flexWrap = "wrap";
+  group.style.alignItems = "center";
+  group.style.columnGap = BUTTON_GAP;
+  const checkboxes = optionLabels.map((optionLabel) => {
+    const checkbox = document.createElement("input");
+    checkbox.type = "checkbox";
+    checkbox.value = optionLabel;
+    const label = document.createElement("label");
+    label.style.display = "inline-flex";
+    label.style.alignItems = "center";
+    label.append(checkbox, document.createTextNode(optionLabel));
+    group.append(label);
+    return checkbox;
+  });
+  return { group, checkboxes };
+};
+
+/** Values carried by the checked boxes of a checkbox group. */
+const checkedValuesOf = (checkboxes) =>
+  checkboxes
+    .filter((checkbox) => checkbox.checked)
+    .map((checkbox) => checkbox.value);
 
 /** Builds the small clear button emptying every control without touching sort state. */
 const buildClearButton = (table, controls) => {
@@ -285,28 +316,43 @@ const removeStandaloneReset = (table) => {
 /** True when any control holds a non-default value, judged the way applyFilters judges it (trimmed). */
 const isFilterActive = (controls) =>
   controls.text.value.trim() !== "" ||
-  controls.selects.some((select) => select.value !== ALL_OPTION_VALUE);
+  controls.selects.some((select) => select.value !== ALL_OPTION_VALUE) ||
+  controls.checkboxGroups.some((checkboxGroup) =>
+    checkboxGroup.checkboxes.some((checkbox) => checkbox.checked)
+  );
 
 /** Hides non-matching rows and mirrors the funnel badge. */
 const applyFilters = (table, controls) => {
   const query = controls.text.value.trim().toLowerCase();
   const difficulty = controls.difficulty.value;
-  const category = controls.category ? controls.category.value : "";
-  const track = controls.tracks ? controls.tracks.value.toLowerCase() : "";
+  const checkedCategories = controls.category
+    ? checkedValuesOf(controls.category.checkboxes)
+    : [];
+  const checkedTracks = controls.tracks
+    ? checkedValuesOf(controls.tracks.checkboxes).map((track) =>
+        track.toLowerCase()
+      )
+    : [];
   const requiredIndices = requiredColumns(controls.columns);
   for (const body of table.tBodies) {
     for (const row of body.rows) {
       if (!rowCoversColumns(row, requiredIndices)) {
         continue;
       }
-      const rowCategoryTags = category ? categoryTagsOf(row, controls.columns) : [];
+      const rowCategoryTags =
+        checkedCategories.length > 0 ? categoryTagsOf(row, controls.columns) : [];
+      const rowTracksText =
+        checkedTracks.length > 0
+          ? cellText(row, controls.columns.tracks).toLowerCase()
+          : "";
       const matches =
         (!query ||
           cellText(row, controls.columns.problem).toLowerCase().includes(query)) &&
         (!difficulty || difficultyOf(row, controls.columns) === difficulty) &&
-        (!category || rowCategoryTags.includes(category)) &&
-        (!track ||
-          cellText(row, controls.columns.tracks).toLowerCase().includes(track));
+        checkedCategories.every((category) =>
+          rowCategoryTags.includes(category)
+        ) &&
+        checkedTracks.every((track) => rowTracksText.includes(track));
       row.style.display = matches ? "" : "none";
     }
   }
@@ -318,6 +364,11 @@ const clearFilters = (table, controls) => {
   controls.text.value = "";
   for (const select of controls.selects) {
     select.value = ALL_OPTION_VALUE;
+  }
+  for (const checkboxGroup of controls.checkboxGroups) {
+    for (const checkbox of checkboxGroup.checkboxes) {
+      checkbox.checked = false;
+    }
   }
   applyFilters(table, controls);
 };
@@ -355,7 +406,12 @@ const buildFilterPanel = (table, controls) => {
   panel.style.marginTop = PANEL_MARGIN_TOP;
   panel.style.border = PANEL_BORDER;
   panel.style.borderRadius = PANEL_BORDER_RADIUS;
-  panel.append(controls.text, ...controls.selects, buildClearButton(table, controls));
+  panel.append(
+    controls.text,
+    ...controls.selects,
+    ...controls.checkboxGroups.map((checkboxGroup) => checkboxGroup.group),
+    buildClearButton(table, controls)
+  );
   panel.addEventListener("keydown", (event) => {
     if (event.key === "Escape") {
       clearFilters(table, controls);
@@ -374,6 +430,7 @@ const installFilterControls = (table, columns) => {
     category: null,
     tracks: null,
     selects: [],
+    checkboxGroups: [],
     funnelButton: null,
     badge: null,
     panel: null,
@@ -387,16 +444,15 @@ const installFilterControls = (table, columns) => {
     controls.selects.push(controls.difficulty);
   }
   if (columns.category !== -1) {
-    controls.category = buildSelect(
+    controls.category = buildCheckboxGroup(
       "Filter by category",
-      ALL_OPTION_LABEL,
       categoryOptionsOf(table, columns)
     );
-    controls.selects.push(controls.category);
+    controls.checkboxGroups.push(controls.category);
   }
   if (columns.tracks !== -1) {
-    controls.tracks = buildSelect("Filter by tracks", ALL_OPTION_LABEL, TRACK_OPTIONS);
-    controls.selects.push(controls.tracks);
+    controls.tracks = buildCheckboxGroup("Filter by tracks", TRACK_OPTIONS);
+    controls.checkboxGroups.push(controls.tracks);
   }
   controls.funnelButton = buildIconButton("Toggle filters", FILTER_ICON);
   controls.funnelButton.style.position = "relative";
@@ -420,6 +476,11 @@ const installFilterControls = (table, columns) => {
   controls.text.addEventListener("input", () => applyFilters(table, controls));
   for (const select of controls.selects) {
     select.addEventListener("change", () => applyFilters(table, controls));
+  }
+  for (const checkboxGroup of controls.checkboxGroups) {
+    for (const checkbox of checkboxGroup.checkboxes) {
+      checkbox.addEventListener("change", () => applyFilters(table, controls));
+    }
   }
 
   const buttons = document.createElement("span");
