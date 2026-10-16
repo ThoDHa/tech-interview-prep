@@ -317,8 +317,8 @@ const removeStandaloneReset = (table) => {
 const isFilterActive = (controls) =>
   controls.text.value.trim() !== "" ||
   controls.selects.some((select) => select.value !== ALL_OPTION_VALUE) ||
-  controls.checkboxGroups.some((checkboxes) =>
-    checkboxes.some((checkbox) => checkbox.checked)
+  controls.checkboxGroups.some((checkboxGroup) =>
+    checkboxGroup.checkboxes.some((checkbox) => checkbox.checked)
   );
 
 /** Hides non-matching rows and mirrors the funnel badge. */
@@ -365,8 +365,8 @@ const clearFilters = (table, controls) => {
   for (const select of controls.selects) {
     select.value = ALL_OPTION_VALUE;
   }
-  for (const checkboxes of controls.checkboxGroups) {
-    for (const checkbox of checkboxes) {
+  for (const checkboxGroup of controls.checkboxGroups) {
+    for (const checkbox of checkboxGroup.checkboxes) {
       checkbox.checked = false;
     }
   }
@@ -448,11 +448,11 @@ const installFilterControls = (table, columns) => {
       "Filter by category",
       categoryOptionsOf(table, columns)
     );
-    controls.checkboxGroups.push(controls.category.checkboxes);
+    controls.checkboxGroups.push(controls.category);
   }
   if (columns.tracks !== -1) {
     controls.tracks = buildCheckboxGroup("Filter by tracks", TRACK_OPTIONS);
-    controls.checkboxGroups.push(controls.tracks.checkboxes);
+    controls.checkboxGroups.push(controls.tracks);
   }
   controls.funnelButton = buildIconButton("Toggle filters", FILTER_ICON);
   controls.funnelButton.style.position = "relative";
@@ -477,8 +477,8 @@ const installFilterControls = (table, columns) => {
   for (const select of controls.selects) {
     select.addEventListener("change", () => applyFilters(table, controls));
   }
-  for (const checkboxes of controls.checkboxGroups) {
-    for (const checkbox of checkboxes) {
+  for (const checkboxGroup of controls.checkboxGroups) {
+    for (const checkbox of checkboxGroup.checkboxes) {
       checkbox.addEventListener("change", () => applyFilters(table, controls));
     }
   }
