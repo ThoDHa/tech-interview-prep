@@ -1,4 +1,4 @@
-# Tech Interview Prep Solutions
+# Tech Interview Prep
 
 A study guide spanning three curated problem banks: the [Grind 75](https://www.techinterviewhandbook.org/grind75) and the [NeetCode 150](https://neetcode.io/practice/practice/neetcode150) LeetCode lists, merged into one unified [problem catalog](leetcode/index.md), and the growing [Amazon OA](amazon/index.md) bank. Every unified problem carries a full worked write-up, deriving each approach from brute force to optimal with walkthroughs, complexity analysis, and trade-off comparisons; the Amazon write-ups are landing in waves. Problems on both LeetCode tracks appear once, credited to each.
 
