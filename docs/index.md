@@ -16,4 +16,4 @@ The [pattern intuition guides](patterns/index.md) explain the *why* behind each 
 
 ## Practice Workspace
 
-The `practice/` directory is a `pytest` workspace for solving the problems yourself. Each problem has a `solution.py` to implement plus two test sets that mirror LeetCode's Run (the examples) and Submit (a full corner-case gauntlet). See `practice/README.md` for setup and the practice loop.
+The `practice/` directory is a `pytest` workspace for solving the problems yourself. Each problem has a `solution.py` to implement plus case sets that mirror LeetCode's Run (the examples) and Submit (a full corner-case gauntlet), and a progress tracker records what you have solved and what is due for review. For the full path from fork to first green test, see [The Practice Workspace](interview-prep/practice_workspace.md); `practice/README.md` is the workspace's own reference.
