@@ -6,8 +6,8 @@ Given a string `s` and a dictionary of strings `wordDict`, return `True` if `s`
 can be segmented into a space-separated sequence of one or more dictionary
 words. The same word may be reused multiple times.
 
-  uv run python word_break/solution.py     # debug one case (see CASE below)
-  uv run pytest word_break/                # run the test sets
+  uv run python leetcode/word_break/solution.py   # debug one case (see CASE below)
+  uv run pytest leetcode/word_break/              # run the test sets
 """
 
 from typing import List

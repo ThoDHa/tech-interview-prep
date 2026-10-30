@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-permutation-sorter.md
 
 Amazon engineers are testing a new tool, the Permutation Sorter, built to reorder sequences using limited operations.
 
-  uv run python amazon_oa/amazon-permutation-sorter/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-permutation-sorter/              # run the test sets
+  uv run python amazon/amazon-permutation-sorter/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-permutation-sorter/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

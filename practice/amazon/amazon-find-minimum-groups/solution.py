@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-find-minimum-groups.md
 
 A financial services company has requested AWS for a private deployment of its cloud network. Considering the sensitive nature of the company's business, AWS has also advised them to add a specific ty
 
-  uv run python amazon_oa/amazon-find-minimum-groups/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-find-minimum-groups/              # run the test sets
+  uv run python amazon/amazon-find-minimum-groups/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-find-minimum-groups/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

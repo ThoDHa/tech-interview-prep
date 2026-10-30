@@ -6,8 +6,8 @@ Given an array `prices` where `prices[i]` is the stock price on day `i`, choose 
 single day to buy and a later day to sell to maximize profit. Return the maximum
 profit achievable, or `0` if no profitable transaction exists.
 
-  uv run python best_time_to_buy_and_sell_stock/solution.py     # debug one case (see CASE below)
-  uv run pytest best_time_to_buy_and_sell_stock/                # run the test sets
+  uv run python leetcode/best_time_to_buy_and_sell_stock/solution.py   # debug one case (see CASE below)
+  uv run pytest leetcode/best_time_to_buy_and_sell_stock/              # run the test sets
 """
 
 from typing import List

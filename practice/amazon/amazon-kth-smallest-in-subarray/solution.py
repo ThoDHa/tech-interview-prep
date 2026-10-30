@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-kth-smallest-in-subarray.md
 
 Given an array arr, return the kth smallest integer for each subarray of size m.
 
-  uv run python amazon_oa/amazon-kth-smallest-in-subarray/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-kth-smallest-in-subarray/              # run the test sets
+  uv run python amazon/amazon-kth-smallest-in-subarray/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-kth-smallest-in-subarray/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

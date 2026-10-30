@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-compute-encoded-product-name.
 
 Amazon's software team utilizes several algorithms to maintain data integrity, one of which targets the encoding of symmetrical names. Symmetrical names are unique in that they read identically in bot
 
-  uv run python amazon_oa/amazon-compute-encoded-product-name/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-compute-encoded-product-name/              # run the test sets
+  uv run python amazon/amazon-compute-encoded-product-name/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-compute-encoded-product-name/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

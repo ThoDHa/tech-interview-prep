@@ -7,8 +7,8 @@ return all unique combinations of `candidates` whose numbers sum to `target`. Th
 same number may be reused an unlimited number of times. Combinations may be
 returned in any order.
 
-  uv run python combination_sum/solution.py     # debug one case (see CASE below)
-  uv run pytest combination_sum/                # run the test sets
+  uv run python leetcode/combination_sum/solution.py   # debug one case (see CASE below)
+  uv run pytest leetcode/combination_sum/              # run the test sets
 """
 
 from typing import List

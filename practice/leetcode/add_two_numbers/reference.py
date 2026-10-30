@@ -8,8 +8,8 @@ lives in solution.py.
 
 You are given two non-empty linked lists, `l1` and `l2`, where each represents a non-negative integer with digits stored in reverse order. Each node contains a single digit. Return the sum of the two numbers as a linked list.
 
-  uv run python add_two_numbers/reference.py   # debug one case (see below)
-  uv run pytest add_two_numbers/               # run the test sets
+  uv run python leetcode/add_two_numbers/reference.py   # debug one case (see below)
+  uv run pytest leetcode/add_two_numbers/               # run the test sets
 """
 
 from typing import Optional

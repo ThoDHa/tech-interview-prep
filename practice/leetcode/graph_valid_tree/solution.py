@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/leetcode/graph_valid_tree.md
 
 Given `n` nodes labeled from `0` to `n - 1` and a list of **undirected** edges (each edge is a pair of nodes), write a function to check whether these edges make up a valid tree.
 
-  uv run python graph_valid_tree/solution.py   # debug one case (see CASE below)
-  uv run pytest graph_valid_tree/              # run the test sets
+  uv run python leetcode/graph_valid_tree/solution.py   # debug one case (see CASE below)
+  uv run pytest leetcode/graph_valid_tree/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-frequently-bought-together.md
 
 Amazon's Retail Analytics team wants to discover which pairs of items are most often bought together so they can create Frequently Bought Together bundles.
 
-  uv run python amazon_oa/amazon-frequently-bought-together/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-frequently-bought-together/              # run the test sets
+  uv run python amazon/amazon-frequently-bought-together/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-frequently-bought-together/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

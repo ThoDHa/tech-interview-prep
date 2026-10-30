@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-lru-query-result-cache.md
 
 Maintain a cache with positive integer capacity. Process each operation atomically in the supplied completed serialization order:
 
-  uv run python amazon_oa/amazon-lru-query-result-cache/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-lru-query-result-cache/              # run the test sets
+  uv run python amazon/amazon-lru-query-result-cache/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-lru-query-result-cache/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-number-of-atoms.md
 
 You are given a valid chemical formula string. Return the count of each atom as one canonical string.
 
-  uv run python amazon_oa/amazon-number-of-atoms/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-number-of-atoms/              # run the test sets
+  uv run python amazon/amazon-number-of-atoms/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-number-of-atoms/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

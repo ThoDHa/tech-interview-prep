@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/leetcode/alien_dictionary.md
 
 There is a new alien language that uses the English alphabet, but the order of the letters is unknown. You are given a list of strings `words` from the alien language's dictionary. It is claimed that 
 
-  uv run python alien_dictionary/solution.py   # debug one case (see CASE below)
-  uv run pytest alien_dictionary/              # run the test sets
+  uv run python leetcode/alien_dictionary/solution.py   # debug one case (see CASE below)
+  uv run pytest leetcode/alien_dictionary/              # run the test sets
 """
 
 from harness import NotSolved, pick_case
@@ -24,7 +24,7 @@ class Solution:
 if __name__ == "__main__":
     # Debug playground: set a breakpoint in solve above, then run this file.
     # Pick a case by id (ids are in cases.json).
-    CASE = "example_1"
+    CASE = "neetcode_example"
     case = pick_case(__file__, CASE)
     result = Solution().solve(*case["args"])
     print(f"case {case['id']}: args = {case['args']}")

@@ -10,8 +10,8 @@ integers. Return the product of `num1` and `num2` in the form of a string.
 Neither input contains any leading zero, unless it is the number `0` itself,
 and built-in big-integer conversion is off limits.
 
-  uv run python multiply_strings/reference.py   # replay the example cases
-  uv run pytest multiply_strings/               # run the test sets
+  uv run python leetcode/multiply_strings/reference.py   # replay the example cases
+  uv run pytest leetcode/multiply_strings/               # run the test sets
 """
 
 from harness import pick_case

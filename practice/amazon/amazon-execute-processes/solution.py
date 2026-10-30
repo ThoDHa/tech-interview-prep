@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-execute-processes.md
 
 Amazon Web Services (AWS) has several processors for executing processes scheduled on its servers.
 
-  uv run python amazon_oa/amazon-execute-processes/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-execute-processes/              # run the test sets
+  uv run python amazon/amazon-execute-processes/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-execute-processes/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

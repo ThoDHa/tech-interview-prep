@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/leetcode/reconstruct_itinerary.md
 
 You are given a list of flight tickets `tickets` where `tickets[i] = [from_i, to_i]` represent the source airport and the destination airport. Each `from_i` and `to_i` consists of three uppercase Engl
 
-  uv run python reconstruct_itinerary/solution.py   # debug one case (see CASE below)
-  uv run pytest reconstruct_itinerary/              # run the test sets
+  uv run python leetcode/reconstruct_itinerary/solution.py   # debug one case (see CASE below)
+  uv run pytest leetcode/reconstruct_itinerary/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

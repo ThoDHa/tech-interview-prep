@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-longest-zero-sum-subarray.md
 
 You are given an integer array nums containing positive and negative integers.
 
-  uv run python amazon_oa/amazon-longest-zero-sum-subarray/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-longest-zero-sum-subarray/              # run the test sets
+  uv run python amazon/amazon-longest-zero-sum-subarray/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-longest-zero-sum-subarray/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

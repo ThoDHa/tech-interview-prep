@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/leetcode/find_minimum_in_rotated_sorted_arr
 
 You are given an array of length `n` which was originally sorted in ascending order. It has now been **rotated** between `1` and `n` times. For example, the array `nums = [1,2,3,4,5,6]` might become: 
 
-  uv run python find_minimum_in_rotated_sorted_array/solution.py   # debug one case (see CASE below)
-  uv run pytest find_minimum_in_rotated_sorted_array/              # run the test sets
+  uv run python leetcode/find_minimum_in_rotated_sorted_array/solution.py   # debug one case (see CASE below)
+  uv run pytest leetcode/find_minimum_in_rotated_sorted_array/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

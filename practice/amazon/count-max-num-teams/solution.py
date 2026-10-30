@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/count-max-num-teams.md
 
 Amazon OA problem.
 
-  uv run python amazon_oa/count-max-num-teams/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/count-max-num-teams/              # run the test sets
+  uv run python amazon/count-max-num-teams/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/count-max-num-teams/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

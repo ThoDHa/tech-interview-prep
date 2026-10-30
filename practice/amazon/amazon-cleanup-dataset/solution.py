@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-cleanup-dataset.md
 
 Data Scientists at Amazon are working on cleansing a machine learning dataset. The dataset is represented as a string dataset consisting of an even number of lowercase English letters. The goal is to 
 
-  uv run python amazon_oa/amazon-cleanup-dataset/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-cleanup-dataset/              # run the test sets
+  uv run python amazon/amazon-cleanup-dataset/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-cleanup-dataset/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

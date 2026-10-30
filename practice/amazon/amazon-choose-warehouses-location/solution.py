@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-choose-warehouses-location.md
 
 Amazon has recently established n distribution centers in a new location. They want to set up 2 warehouses to serve these distribution centers. Note that the centers and warehouses are all built along
 
-  uv run python amazon_oa/amazon-choose-warehouses-location/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-choose-warehouses-location/              # run the test sets
+  uv run python amazon/amazon-choose-warehouses-location/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-choose-warehouses-location/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

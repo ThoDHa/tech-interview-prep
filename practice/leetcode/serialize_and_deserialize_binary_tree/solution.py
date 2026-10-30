@@ -5,8 +5,8 @@ Write-up & approaches: ../../../docs/leetcode/serialize_and_deserialize_binary_t
 Design a codec that serializes a binary tree to a string and deserializes that
 string back into the identical tree (the round-trip must reproduce the tree).
 
-  uv run python serialize_and_deserialize_binary_tree/solution.py   # debug one case (see CASE below)
-  uv run pytest serialize_and_deserialize_binary_tree/              # run the test sets
+  uv run python leetcode/serialize_and_deserialize_binary_tree/solution.py   # debug one case (see CASE below)
+  uv run pytest leetcode/serialize_and_deserialize_binary_tree/              # run the test sets
 """
 
 from typing import Optional

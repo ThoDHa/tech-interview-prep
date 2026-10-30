@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-linked-list-queue-operations.
 
 Source note: The source omits whether deletion removes one or all matches, which duplicate occurrence survives, and the callable batch format. The judged core task matches the visible report at about 
 
-  uv run python amazon_oa/amazon-linked-list-queue-operations/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-linked-list-queue-operations/              # run the test sets
+  uv run python amazon/amazon-linked-list-queue-operations/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-linked-list-queue-operations/              # run the test sets
 """
 
 from harness import NotSolved, pick_case
@@ -24,7 +24,7 @@ class Solution:
 if __name__ == "__main__":
     # Debug playground: set a breakpoint in processLinkedQueue above, then run this file.
     # Pick a case by id (ids are in cases.json).
-    CASE = "example_1"
+    CASE = "example_1_dedup_delete"
     case = pick_case(__file__, CASE)
     result = Solution().processLinkedQueue(*case["args"])
     print(f"case {case['id']}: args = {case['args']}")

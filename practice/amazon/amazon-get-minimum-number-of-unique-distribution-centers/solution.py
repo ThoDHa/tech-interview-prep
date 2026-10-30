@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-get-minimum-number-of-unique-
 
 A well-known consumer brand selling everyday products on Amazon is facing a supply issue due to daily changes in product demand. To manage this, Amazon has set up n distribution hubs, each labeled wit
 
-  uv run python amazon_oa/amazon-get-minimum-number-of-unique-distribution-centers/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-get-minimum-number-of-unique-distribution-centers/              # run the test sets
+  uv run python amazon/amazon-get-minimum-number-of-unique-distribution-centers/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-get-minimum-number-of-unique-distribution-centers/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

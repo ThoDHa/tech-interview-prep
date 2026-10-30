@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-interleaving-string.md
 
 Given strings s1, s2, and s3, return whether s3 can be formed by interleaving s1 and s2.
 
-  uv run python amazon_oa/amazon-interleaving-string/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-interleaving-string/              # run the test sets
+  uv run python amazon/amazon-interleaving-string/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-interleaving-string/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

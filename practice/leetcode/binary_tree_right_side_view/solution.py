@@ -5,8 +5,8 @@ Write-up & approaches: ../../../docs/leetcode/binary_tree_right_side_view.md
 Given the `root` of a binary tree, return the values of the nodes visible from
 the right side, ordered from top to bottom.
 
-  uv run python binary_tree_right_side_view/solution.py   # debug one case (see CASE below)
-  uv run pytest binary_tree_right_side_view/              # run the test sets
+  uv run python leetcode/binary_tree_right_side_view/solution.py   # debug one case (see CASE below)
+  uv run pytest leetcode/binary_tree_right_side_view/              # run the test sets
 """
 
 from typing import List, Optional

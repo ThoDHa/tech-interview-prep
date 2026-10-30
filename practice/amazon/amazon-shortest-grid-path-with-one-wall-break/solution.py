@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-shortest-grid-path-with-one-w
 
 Given a rectangular binary matrix grid, a cell containing 1 is open and a cell containing 0 is a wall.
 
-  uv run python amazon_oa/amazon-shortest-grid-path-with-one-wall-break/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-shortest-grid-path-with-one-wall-break/              # run the test sets
+  uv run python amazon/amazon-shortest-grid-path-with-one-wall-break/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-shortest-grid-path-with-one-wall-break/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

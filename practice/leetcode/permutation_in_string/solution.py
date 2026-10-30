@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/leetcode/permutation_in_string.md
 
 You are given two strings `s1` and `s2`. Return `true` if `s2` contains a permutation of `s1`, or `false` otherwise. That means if a permutation of `s1` exists as a substring of `s2`, then return `tru
 
-  uv run python permutation_in_string/solution.py   # debug one case (see CASE below)
-  uv run pytest permutation_in_string/              # run the test sets
+  uv run python leetcode/permutation_in_string/solution.py   # debug one case (see CASE below)
+  uv run pytest leetcode/permutation_in_string/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

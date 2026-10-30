@@ -6,8 +6,8 @@ Convert a string to a 32-bit signed integer (like C's atoi): skip leading
 spaces, read an optional sign, read consecutive digits, then clamp the result to
 the range [-2^31, 2^31 - 1].
 
-  uv run python string_to_integer_atoi/solution.py     # debug one case (see CASE below)
-  uv run pytest string_to_integer_atoi/                # run the test sets
+  uv run python leetcode/string_to_integer_atoi/solution.py   # debug one case (see CASE below)
+  uv run pytest leetcode/string_to_integer_atoi/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

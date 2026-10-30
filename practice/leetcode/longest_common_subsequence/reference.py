@@ -5,8 +5,8 @@ Reference implementation of the write-up's Space-Optimized Two-Row DP solution.
 
 Given two strings `text1` and `text2`, return the length of the longest common subsequence between the two strings if one exists, otherwise return `0`. A subsequence is a sequence derived by deleting some or no elements without changing the relative order of the remaining characters.
 
-  uv run python longest_common_subsequence/reference.py   # debug one case (see CASE below)
-  uv run pytest longest_common_subsequence/              # run the test sets
+  uv run python leetcode/longest_common_subsequence/reference.py   # debug one case (see CASE below)
+  uv run pytest leetcode/longest_common_subsequence/              # run the test sets
 """
 
 from harness import pick_case

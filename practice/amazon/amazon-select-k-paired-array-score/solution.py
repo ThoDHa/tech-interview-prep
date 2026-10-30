@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-select-k-paired-array-score.m
 
 Select exactly k shared indices from two equal-length arrays. The score is the sum of selected values from first multiplied by the minimum selected value from second.
 
-  uv run python amazon_oa/amazon-select-k-paired-array-score/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-select-k-paired-array-score/              # run the test sets
+  uv run python amazon/amazon-select-k-paired-array-score/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-select-k-paired-array-score/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

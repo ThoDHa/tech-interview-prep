@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-sliding-window-rate-limiter.m
 
 You receive requests in nondecreasing timestamp order. Each request has a user ID and an integer timestamp in seconds.
 
-  uv run python amazon_oa/amazon-sliding-window-rate-limiter/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-sliding-window-rate-limiter/              # run the test sets
+  uv run python amazon/amazon-sliding-window-rate-limiter/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-sliding-window-rate-limiter/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

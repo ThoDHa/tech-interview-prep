@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-search-rotated-sorted-array.m
 
 Given an integer array nums that was sorted in strictly increasing order and then rotated at an unknown pivot, and an integer target, return the index of target.
 
-  uv run python amazon_oa/amazon-search-rotated-sorted-array/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-search-rotated-sorted-array/              # run the test sets
+  uv run python amazon/amazon-search-rotated-sorted-array/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-search-rotated-sorted-array/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

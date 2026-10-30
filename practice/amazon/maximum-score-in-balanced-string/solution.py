@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/maximum-score-in-balanced-string.md
 
 Given a string s consisting of parentheses, you need to find the maximum score possible in a balanced substring of s. The score of a substring is calculated by choosing two indices i and j (0 <= i < j
 
-  uv run python amazon_oa/maximum-score-in-balanced-string/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/maximum-score-in-balanced-string/              # run the test sets
+  uv run python amazon/maximum-score-in-balanced-string/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/maximum-score-in-balanced-string/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

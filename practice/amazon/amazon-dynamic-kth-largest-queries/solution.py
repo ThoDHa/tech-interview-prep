@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-dynamic-kth-largest-queries.m
 
 You are given an initial list of integer values and a stream of operations. The list changes over time as values are inserted.
 
-  uv run python amazon_oa/amazon-dynamic-kth-largest-queries/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-dynamic-kth-largest-queries/              # run the test sets
+  uv run python amazon/amazon-dynamic-kth-largest-queries/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-dynamic-kth-largest-queries/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

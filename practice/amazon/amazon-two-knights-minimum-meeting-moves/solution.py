@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-two-knights-minimum-meeting-m
 
 Two knights start at coordinates first = [x1, y1] and second = [x2, y2] on an infinite chessboard. They take turns, with the first knight moving first. On a turn, the chosen knight must make one stand
 
-  uv run python amazon_oa/amazon-two-knights-minimum-meeting-moves/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-two-knights-minimum-meeting-moves/              # run the test sets
+  uv run python amazon/amazon-two-knights-minimum-meeting-moves/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-two-knights-minimum-meeting-moves/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/leetcode/partition_labels.md
 
 You are given a string `s` consisting of lowercase english letters. We want to split the string into as many substrings as possible, while ensuring that each letter appears in at most one substring. R
 
-  uv run python partition_labels/solution.py   # debug one case (see CASE below)
-  uv run pytest partition_labels/              # run the test sets
+  uv run python leetcode/partition_labels/solution.py   # debug one case (see CASE below)
+  uv run pytest leetcode/partition_labels/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

@@ -9,8 +9,8 @@ Your own attempt lives in solution.py.
 You must reverse the first `k` nodes in the linked list, then the next `k`,
 and so on; a trailing group smaller than `k` stays as it is.
 
-  uv run python reverse_nodes_in_k_group/reference.py   # debug one case (see below)
-  uv run pytest reverse_nodes_in_k_group/               # run the test sets
+  uv run python leetcode/reverse_nodes_in_k_group/reference.py   # debug one case (see below)
+  uv run pytest leetcode/reverse_nodes_in_k_group/               # run the test sets
 """
 
 from typing import Optional, Tuple

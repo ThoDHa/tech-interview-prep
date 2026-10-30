@@ -5,8 +5,8 @@ Write-up & approaches: ../../../docs/leetcode/container_with_most_water.md
 Given an integer array `height` of `n` vertical lines, find two lines that with
 the x-axis form a container holding the most water, and return that maximum area.
 
-  uv run python container_with_most_water/solution.py     # debug one case (see CASE below)
-  uv run pytest container_with_most_water/                # run the test sets
+  uv run python leetcode/container_with_most_water/solution.py   # debug one case (see CASE below)
+  uv run pytest leetcode/container_with_most_water/              # run the test sets
 """
 
 from typing import List

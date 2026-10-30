@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-maximum-number-of-days-to-sur
 
 A lender lent money to a borrower, each day a different lender lent the money to the borrower.
 
-  uv run python amazon_oa/amazon-maximum-number-of-days-to-survive/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-maximum-number-of-days-to-survive/              # run the test sets
+  uv run python amazon/amazon-maximum-number-of-days-to-survive/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-maximum-number-of-days-to-survive/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

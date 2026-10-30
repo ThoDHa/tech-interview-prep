@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-next-palindromic-time.md
 
 Given a valid 24-hour time time in HH:MM format, return the first strictly later time whose four digits form a palindrome.
 
-  uv run python amazon_oa/amazon-next-palindromic-time/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-next-palindromic-time/              # run the test sets
+  uv run python amazon/amazon-next-palindromic-time/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-next-palindromic-time/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

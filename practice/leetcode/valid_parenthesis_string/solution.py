@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/leetcode/valid_parenthesis_string.md
 
 You are given a string `s` which contains only three types of characters: `'('`, `')'` and `'*'`. Return `true` if `s` is **valid**, otherwise return `false`. A string is valid if it follows all of th
 
-  uv run python valid_parenthesis_string/solution.py   # debug one case (see CASE below)
-  uv run pytest valid_parenthesis_string/              # run the test sets
+  uv run python leetcode/valid_parenthesis_string/solution.py   # debug one case (see CASE below)
+  uv run pytest leetcode/valid_parenthesis_string/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

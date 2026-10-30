@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/leetcode/longest_repeating_character_replac
 
 You are given a string `s` consisting of only uppercase english characters and an integer `k`. You can choose up to `k` characters of the string and replace them with any other uppercase English chara
 
-  uv run python longest_repeating_character_replacement/solution.py   # debug one case (see CASE below)
-  uv run pytest longest_repeating_character_replacement/              # run the test sets
+  uv run python leetcode/longest_repeating_character_replacement/solution.py   # debug one case (see CASE below)
+  uv run pytest leetcode/longest_repeating_character_replacement/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

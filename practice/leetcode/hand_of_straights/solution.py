@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/leetcode/hand_of_straights.md
 
 You are given an integer array `hand` where `hand[i]` is the value written on the `ith` card and an integer `groupSize`. You want to rearrange the cards into groups so that each group is of size `grou
 
-  uv run python hand_of_straights/solution.py   # debug one case (see CASE below)
-  uv run pytest hand_of_straights/              # run the test sets
+  uv run python leetcode/hand_of_straights/solution.py   # debug one case (see CASE below)
+  uv run pytest leetcode/hand_of_straights/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

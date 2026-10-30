@@ -5,8 +5,8 @@ Write-up & approaches: ../../../docs/leetcode/merge_k_sorted_lists.md
 You are given an array of `k` linked lists, each sorted in ascending order. Merge
 all the linked lists into one sorted linked list and return its head.
 
-  uv run python merge_k_sorted_lists/solution.py   # debug one case (see CASE below)
-  uv run pytest merge_k_sorted_lists/              # run the test sets
+  uv run python leetcode/merge_k_sorted_lists/solution.py   # debug one case (see CASE below)
+  uv run pytest leetcode/merge_k_sorted_lists/              # run the test sets
 """
 
 from typing import List, Optional

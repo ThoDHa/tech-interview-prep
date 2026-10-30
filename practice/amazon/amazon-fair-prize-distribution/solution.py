@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-fair-prize-distribution.md
 
 A coding challenge has n participants. Participant i earned score points[i]. There are m available prizes, and values[j] is the value of the j-th prize.
 
-  uv run python amazon_oa/amazon-fair-prize-distribution/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-fair-prize-distribution/              # run the test sets
+  uv run python amazon/amazon-fair-prize-distribution/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-fair-prize-distribution/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

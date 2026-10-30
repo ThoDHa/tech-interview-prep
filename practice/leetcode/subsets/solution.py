@@ -6,8 +6,8 @@ Given an integer array `nums` of unique elements, return all possible subsets
 (the power set). The solution set must not contain duplicate subsets, and may be
 returned in any order.
 
-  uv run python subsets/solution.py     # debug one case (see CASE below)
-  uv run pytest subsets/                # run the test sets
+  uv run python leetcode/subsets/solution.py   # debug one case (see CASE below)
+  uv run pytest leetcode/subsets/              # run the test sets
 """
 
 from typing import List

@@ -9,8 +9,8 @@ digit of a large integer. It is ordered from most significant to least
 significant digit, and it will not contain any leading zero. Return the
 digits of the given integer after incrementing it by one.
 
-  uv run python plus_one/reference.py   # replay the example cases
-  uv run pytest plus_one/               # run the test sets
+  uv run python leetcode/plus_one/reference.py   # replay the example cases
+  uv run pytest leetcode/plus_one/               # run the test sets
 """
 
 from typing import List

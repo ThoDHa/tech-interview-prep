@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-roads-and-hospitals-minimum-c
 
 Cities are labeled from 0 to cityCount - 1. A hospital can be built in any city for hospitalCost, and any listed undirected road can be built for roadCost.
 
-  uv run python amazon_oa/amazon-roads-and-hospitals-minimum-cost/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-roads-and-hospitals-minimum-cost/              # run the test sets
+  uv run python amazon/amazon-roads-and-hospitals-minimum-cost/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-roads-and-hospitals-minimum-cost/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

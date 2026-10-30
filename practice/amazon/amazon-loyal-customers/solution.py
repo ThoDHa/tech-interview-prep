@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-loyal-customers.md
 
 You are given two arrays of website logs, dayOneLogs and dayTwoLogs. Each log entry contains exactly three strings in this order: timestamp, customerId, and pageId.
 
-  uv run python amazon_oa/amazon-loyal-customers/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-loyal-customers/              # run the test sets
+  uv run python amazon/amazon-loyal-customers/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-loyal-customers/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

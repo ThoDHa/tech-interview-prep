@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/max-set-size.md
 
 You are shopping on Amazon.com for some bags of rice. Each listing displays the number of grains of rice that the bag contains. You want to buy a perfect set of rice bags chosen from the entire search
 
-  uv run python amazon_oa/max-set-size/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/max-set-size/              # run the test sets
+  uv run python amazon/max-set-size/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/max-set-size/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

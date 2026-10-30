@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-grouped-query-attention-with-
 
 Compute one projection-free grouped-query scaled dot-product attention pass using an existing key-value cache plus newly generated key and value rows.
 
-  uv run python amazon_oa/amazon-grouped-query-attention-with-kv-cache/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-grouped-query-attention-with-kv-cache/              # run the test sets
+  uv run python amazon/amazon-grouped-query-attention-with-kv-cache/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-grouped-query-attention-with-kv-cache/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

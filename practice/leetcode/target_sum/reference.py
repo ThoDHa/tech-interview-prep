@@ -5,8 +5,8 @@ Reference implementation of the write-up's Space-Optimized 1-D DP solution.
 
 You are given an array of integers `nums` and an integer `target`. For each number you choose to either add or subtract it, building an expression; return the number of different expressions whose total equals `target`.
 
-  uv run python target_sum/reference.py   # debug one case (see CASE below)
-  uv run pytest target_sum/              # run the test sets
+  uv run python leetcode/target_sum/reference.py   # debug one case (see CASE below)
+  uv run pytest leetcode/target_sum/              # run the test sets
 """
 
 from harness import pick_case

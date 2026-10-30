@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-number-of-islands-ii.md
 
 Start with an m by n grid containing only water. For each distinct position [row, col] in positions, turn that cell into land and append the current number of islands to the result.
 
-  uv run python amazon_oa/amazon-number-of-islands-ii/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-number-of-islands-ii/              # run the test sets
+  uv run python amazon/amazon-number-of-islands-ii/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-number-of-islands-ii/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

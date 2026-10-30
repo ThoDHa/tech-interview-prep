@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-validate-two-color-chessboard
 
 You are given a nonempty rectangular integer matrix board. Every cell is one of two colors, encoded as 0 or 1.
 
-  uv run python amazon_oa/amazon-validate-two-color-chessboard/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-validate-two-color-chessboard/              # run the test sets
+  uv run python amazon/amazon-validate-two-color-chessboard/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-validate-two-color-chessboard/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

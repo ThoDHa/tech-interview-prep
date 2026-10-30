@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-inventory-allocation.md
 
 You are given a list of inventory requests. Each request is represented as [customerId, quantity, bidAmount, timestamp].
 
-  uv run python amazon_oa/amazon-inventory-allocation/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-inventory-allocation/              # run the test sets
+  uv run python amazon/amazon-inventory-allocation/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-inventory-allocation/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

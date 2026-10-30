@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-make-array-zero-by-subtractin
 
 You are given a non-negative integer array nums. In one operation, you must:
 
-  uv run python amazon_oa/amazon-make-array-zero-by-subtracting-equal-amounts/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-make-array-zero-by-subtracting-equal-amounts/              # run the test sets
+  uv run python amazon/amazon-make-array-zero-by-subtracting-equal-amounts/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-make-array-zero-by-subtracting-equal-amounts/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

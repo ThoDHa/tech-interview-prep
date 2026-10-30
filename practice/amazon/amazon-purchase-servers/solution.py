@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-purchase-servers.md
 
 AWS provides a range of servers to meet their clients' deployment and computation needs. One AWS client wants to purchase servers to deploy their application.
 
-  uv run python amazon_oa/amazon-purchase-servers/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-purchase-servers/              # run the test sets
+  uv run python amazon/amazon-purchase-servers/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-purchase-servers/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

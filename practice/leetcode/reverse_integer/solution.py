@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/leetcode/reverse_integer.md
 
 You are given a signed 32-bit integer `x`. Return `x` after reversing each of its digits. After reversing, if `x` goes outside the signed 32-bit integer range `[-2^31, 2^31 - 1]`, then return `0` inst
 
-  uv run python reverse_integer/solution.py   # debug one case (see CASE below)
-  uv run pytest reverse_integer/              # run the test sets
+  uv run python leetcode/reverse_integer/solution.py   # debug one case (see CASE below)
+  uv run pytest leetcode/reverse_integer/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

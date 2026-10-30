@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-find-number-of-ways-to-group-
 
 In one of the warehouses of Amazon, a pan balance is used to weigh and load the parcels for delivery.
 
-  uv run python amazon_oa/amazon-find-number-of-ways-to-group-parcels/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-find-number-of-ways-to-group-parcels/              # run the test sets
+  uv run python amazon/amazon-find-number-of-ways-to-group-parcels/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-find-number-of-ways-to-group-parcels/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

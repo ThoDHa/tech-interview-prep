@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-get-max-information-gain.md
 
 Data analysts at Amazon are analyzing a data set of n strings in the array 
 
-  uv run python amazon_oa/amazon-get-max-information-gain/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-get-max-information-gain/              # run the test sets
+  uv run python amazon/amazon-get-max-information-gain/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-get-max-information-gain/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

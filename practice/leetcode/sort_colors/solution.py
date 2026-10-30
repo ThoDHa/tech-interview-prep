@@ -6,8 +6,8 @@ Given an array `nums` with `n` objects colored red, white, or blue (encoded as
 `0`, `1`, `2`), sort them in-place so the colors appear in the order red, white,
 then blue. You may not use the library's sort function.
 
-  uv run python sort_colors/solution.py   # debug one case (see CASE below)
-  uv run pytest sort_colors/              # run the test sets
+  uv run python leetcode/sort_colors/solution.py   # debug one case (see CASE below)
+  uv run pytest leetcode/sort_colors/              # run the test sets
 """
 
 from typing import List

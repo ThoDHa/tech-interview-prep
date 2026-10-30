@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-distance-between-tree-nodes.m
 
 You are given a rooted tree whose nodes are numbered from 1 through treeNodes. The arrays treeFrom and treeTo describe the undirected edges of the tree, and root identifies its root.
 
-  uv run python amazon_oa/amazon-distance-between-tree-nodes/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-distance-between-tree-nodes/              # run the test sets
+  uv run python amazon/amazon-distance-between-tree-nodes/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-distance-between-tree-nodes/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

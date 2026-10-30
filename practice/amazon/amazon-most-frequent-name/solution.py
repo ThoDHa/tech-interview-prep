@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-most-frequent-name.md
 
 Given a nonempty array of case-sensitive names, return the name that appears most often.
 
-  uv run python amazon_oa/amazon-most-frequent-name/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-most-frequent-name/              # run the test sets
+  uv run python amazon/amazon-most-frequent-name/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-most-frequent-name/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

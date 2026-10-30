@@ -5,8 +5,8 @@ Write-up & approaches: ../../../docs/leetcode/kth_smallest_element_in_a_bst.md
 Given the `root` of a binary search tree and an integer `k`, return the `kth`
 smallest value (1-indexed) of all the node values in the tree.
 
-  uv run python kth_smallest_element_in_a_bst/solution.py   # debug one case (see CASE below)
-  uv run pytest kth_smallest_element_in_a_bst/              # run the test sets
+  uv run python leetcode/kth_smallest_element_in_a_bst/solution.py   # debug one case (see CASE below)
+  uv run pytest leetcode/kth_smallest_element_in_a_bst/              # run the test sets
 """
 
 from typing import Optional

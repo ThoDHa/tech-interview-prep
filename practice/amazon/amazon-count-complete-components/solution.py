@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-count-complete-components.md
 
 You are given an integer n and an undirected graph whose vertices are numbered from 0 through n - 1. The array edges contains each undirected edge [u, v].
 
-  uv run python amazon_oa/amazon-count-complete-components/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-count-complete-components/              # run the test sets
+  uv run python amazon/amazon-count-complete-components/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-count-complete-components/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

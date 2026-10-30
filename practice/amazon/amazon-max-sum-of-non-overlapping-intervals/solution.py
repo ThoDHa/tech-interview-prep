@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-max-sum-of-non-overlapping-in
 
 AMZ Interval Collection (A group of problems focused on operations involving intervals :) - 
 
-  uv run python amazon_oa/amazon-max-sum-of-non-overlapping-intervals/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-max-sum-of-non-overlapping-intervals/              # run the test sets
+  uv run python amazon/amazon-max-sum-of-non-overlapping-intervals/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-max-sum-of-non-overlapping-intervals/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

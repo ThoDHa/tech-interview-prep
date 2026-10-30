@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-lexicographically-maximum-fin
 
 You are given a binary string shipmentData consisting only of '0' and '1'.
 
-  uv run python amazon_oa/amazon-lexicographically-maximum-final-sequence/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-lexicographically-maximum-final-sequence/              # run the test sets
+  uv run python amazon/amazon-lexicographically-maximum-final-sequence/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-lexicographically-maximum-final-sequence/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

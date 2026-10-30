@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-islands-eight-direction.md
 
 Given a rectangular binary matrix grid, return the number of islands.
 
-  uv run python amazon_oa/amazon-islands-eight-direction/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-islands-eight-direction/              # run the test sets
+  uv run python amazon/amazon-islands-eight-direction/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-islands-eight-direction/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

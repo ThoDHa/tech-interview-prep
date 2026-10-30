@@ -6,8 +6,8 @@ Canonical reference implementation: the write-up's optimal approach (a max-heap
 simulation via negated weights), kept next to the harness so authored cases
 stay falsifiable. Your own attempt lives in solution.py.
 
-  uv run python last_stone_weight/reference.py   # debug one case (see CASE below)
-  uv run pytest last_stone_weight/               # run the test sets
+  uv run python leetcode/last_stone_weight/reference.py   # debug one case (see CASE below)
+  uv run pytest leetcode/last_stone_weight/               # run the test sets
 """
 
 import heapq

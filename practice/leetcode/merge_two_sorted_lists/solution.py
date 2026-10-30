@@ -5,8 +5,8 @@ Write-up & approaches: ../../../docs/leetcode/merge_two_sorted_lists.md
 You are given the heads of two sorted linked lists `list1` and `list2`. Splice
 their nodes together into one sorted list and return the head of the merged list.
 
-  uv run python merge_two_sorted_lists/solution.py   # debug one case (see CASE below)
-  uv run pytest merge_two_sorted_lists/              # run the test sets
+  uv run python leetcode/merge_two_sorted_lists/solution.py   # debug one case (see CASE below)
+  uv run pytest leetcode/merge_two_sorted_lists/              # run the test sets
 """
 
 from typing import Optional

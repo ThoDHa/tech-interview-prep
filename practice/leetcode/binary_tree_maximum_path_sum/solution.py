@@ -6,8 +6,8 @@ Given the `root` of a binary tree, return the maximum path sum of any non-empty
 path. A path is a sequence of nodes connected by edges, each node used at most
 once, and it need not pass through the root.
 
-  uv run python binary_tree_maximum_path_sum/solution.py     # debug one case (see CASE below)
-  uv run pytest binary_tree_maximum_path_sum/                # run the test sets
+  uv run python leetcode/binary_tree_maximum_path_sum/solution.py   # debug one case (see CASE below)
+  uv run pytest leetcode/binary_tree_maximum_path_sum/              # run the test sets
 """
 
 from typing import Optional

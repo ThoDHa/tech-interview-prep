@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-get-minimum-boxes.md
 
 The supply chain manager at one of Amazon's warehouses is shipping the last container of the day. All n boxes have been loaded into the truck with their sizes represented in the array boxes. The truck
 
-  uv run python amazon_oa/amazon-get-minimum-boxes/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-get-minimum-boxes/              # run the test sets
+  uv run python amazon/amazon-get-minimum-boxes/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-get-minimum-boxes/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

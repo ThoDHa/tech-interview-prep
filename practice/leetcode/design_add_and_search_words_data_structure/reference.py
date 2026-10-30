@@ -5,8 +5,8 @@ Reference implementation of the write-up's Trie with Wildcard DFS solution,
 kept next to the harness so authored cases stay falsifiable. Your own attempt
 lives in solution.py.
 
-  uv run python design_add_and_search_words_data_structure/reference.py   # debug one case (see below)
-  uv run pytest design_add_and_search_words_data_structure/               # run the test sets
+  uv run python leetcode/design_add_and_search_words_data_structure/reference.py   # debug one case (see below)
+  uv run pytest leetcode/design_add_and_search_words_data_structure/               # run the test sets
 """
 
 from typing import List

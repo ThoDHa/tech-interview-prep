@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-is-regex-matching.md
 
 Special thanks: Alex contributed this problem.
 
-  uv run python amazon_oa/amazon-is-regex-matching/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-is-regex-matching/              # run the test sets
+  uv run python amazon/amazon-is-regex-matching/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-is-regex-matching/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-maximize-subtree-product.md
 
 You are given a mystical tree with n nodes. Each node is connected to at least one other node by an edge. Your task is to sever one or more edges in the tree to split it into subtrees. The goal is to 
 
-  uv run python amazon_oa/amazon-maximize-subtree-product/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-maximize-subtree-product/              # run the test sets
+  uv run python amazon/amazon-maximize-subtree-product/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-maximize-subtree-product/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

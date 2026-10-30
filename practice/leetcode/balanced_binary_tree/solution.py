@@ -5,8 +5,8 @@ Write-up & approaches: ../../../docs/leetcode/balanced_binary_tree.md
 Given a binary tree, determine if it is height-balanced (the left and right
 subtrees of every node differ in height by no more than 1).
 
-  uv run python balanced_binary_tree/solution.py   # debug one case (see CASE below)
-  uv run pytest balanced_binary_tree/              # run the test sets
+  uv run python leetcode/balanced_binary_tree/solution.py   # debug one case (see CASE below)
+  uv run pytest leetcode/balanced_binary_tree/              # run the test sets
 """
 
 from typing import Optional

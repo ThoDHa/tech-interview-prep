@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-cousins-in-binary-tree-ii.md
 
 You are given a non-empty binary tree serialized as a level-order string array levelOrder. Each non-null token is a decimal integer, and "null" denotes a missing child.
 
-  uv run python amazon_oa/amazon-cousins-in-binary-tree-ii/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-cousins-in-binary-tree-ii/              # run the test sets
+  uv run python amazon/amazon-cousins-in-binary-tree-ii/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-cousins-in-binary-tree-ii/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

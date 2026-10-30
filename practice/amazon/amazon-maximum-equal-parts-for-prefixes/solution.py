@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-maximum-equal-parts-for-prefi
 
 A team at Amazon is working to ensure all packages are correctly sorted for delivery. Each package has a label represented by an uppercase English letter. The full list of labels is given as the strin
 
-  uv run python amazon_oa/amazon-maximum-equal-parts-for-prefixes/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-maximum-equal-parts-for-prefixes/              # run the test sets
+  uv run python amazon/amazon-maximum-equal-parts-for-prefixes/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-maximum-equal-parts-for-prefixes/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

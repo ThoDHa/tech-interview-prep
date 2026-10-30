@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-trapping-rain-water.md
 
 You are given an integer array height of length n. n vertical bars stand on the x-axis. The i-th bar has width 1 and height height[i].
 
-  uv run python amazon_oa/amazon-trapping-rain-water/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-trapping-rain-water/              # run the test sets
+  uv run python amazon/amazon-trapping-rain-water/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-trapping-rain-water/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

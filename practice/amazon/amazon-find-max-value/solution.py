@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-find-max-value.md
 
 Amazon’s engineering team is developing a tool designed to minimize the size of an n x n grid named matrix, based on a compression ratio described by the array limit. Their challenge is to compute the
 
-  uv run python amazon_oa/amazon-find-max-value/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-find-max-value/              # run the test sets
+  uv run python amazon/amazon-find-max-value/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-find-max-value/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

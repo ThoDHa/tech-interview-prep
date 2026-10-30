@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/location-of-data-after-transfers.md
 
 X stores its data on different servers at different locations. From time to time, due to several factors, X needs to move its data from one location to another. This challenge involved keeping track o
 
-  uv run python amazon_oa/location-of-data-after-transfers/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/location-of-data-after-transfers/              # run the test sets
+  uv run python amazon/location-of-data-after-transfers/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/location-of-data-after-transfers/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

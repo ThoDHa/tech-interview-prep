@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-get-active-requests-count.md
 
 You are given an integer, requests which denotes the number of requests, and a list wait_time, where wait_time[i] denote the maximum wait time of the i'th request. The requests in the list are served 
 
-  uv run python amazon_oa/amazon-get-active-requests-count/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-get-active-requests-count/              # run the test sets
+  uv run python amazon/amazon-get-active-requests-count/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-get-active-requests-count/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

@@ -5,8 +5,8 @@ Reference implementation of the write-up's Min-Heap of Size K solution, kept
 next to the harness so authored cases stay falsifiable. Your own attempt
 lives in solution.py.
 
-  uv run python kth_largest_element_in_a_stream/reference.py   # replay the example
-  uv run pytest kth_largest_element_in_a_stream/               # run the test sets
+  uv run python leetcode/kth_largest_element_in_a_stream/reference.py   # replay the example
+  uv run pytest leetcode/kth_largest_element_in_a_stream/               # run the test sets
 """
 
 import heapq

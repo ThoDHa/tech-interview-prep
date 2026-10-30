@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-minimum-cost-to-convert-produ
 
 An inventory array product contains only 0 and 1, where 0 represents variant A and 1 represents variant B.
 
-  uv run python amazon_oa/amazon-minimum-cost-to-convert-products-to-variant-a/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-minimum-cost-to-convert-products-to-variant-a/              # run the test sets
+  uv run python amazon/amazon-minimum-cost-to-convert-products-to-variant-a/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-minimum-cost-to-convert-products-to-variant-a/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

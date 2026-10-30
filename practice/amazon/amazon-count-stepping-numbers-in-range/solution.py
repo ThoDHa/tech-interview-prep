@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-count-stepping-numbers-in-ran
 
 A stepping number is an integer whose adjacent digits differ by exactly 1. Every one-digit integer, including 0, is a stepping number.
 
-  uv run python amazon_oa/amazon-count-stepping-numbers-in-range/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-count-stepping-numbers-in-range/              # run the test sets
+  uv run python amazon/amazon-count-stepping-numbers-in-range/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-count-stepping-numbers-in-range/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

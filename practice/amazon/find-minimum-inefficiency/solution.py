@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/find-minimum-inefficiency.md
 
 Special thanks: 💐 1008th thank you to spike! 👏
 
-  uv run python amazon_oa/find-minimum-inefficiency/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/find-minimum-inefficiency/              # run the test sets
+  uv run python amazon/find-minimum-inefficiency/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/find-minimum-inefficiency/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

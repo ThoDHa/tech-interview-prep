@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-get-exp.md
 
 Note --> Feel free to check the source image below for the original problem statement :)
 
-  uv run python amazon_oa/amazon-get-exp/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-get-exp/              # run the test sets
+  uv run python amazon/amazon-get-exp/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-get-exp/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

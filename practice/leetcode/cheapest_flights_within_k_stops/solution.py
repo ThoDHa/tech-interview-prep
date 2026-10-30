@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/leetcode/cheapest_flights_within_k_stops.md
 
 There are `n` airports, labeled from `0` to `n - 1`, which are connected by some flights. You are given an array `flights` where `flights[i] = [from_i, to_i, price_i]` represents a one-way flight from
 
-  uv run python cheapest_flights_within_k_stops/solution.py   # debug one case (see CASE below)
-  uv run pytest cheapest_flights_within_k_stops/              # run the test sets
+  uv run python leetcode/cheapest_flights_within_k_stops/solution.py   # debug one case (see CASE below)
+  uv run pytest leetcode/cheapest_flights_within_k_stops/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

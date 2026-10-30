@@ -5,8 +5,8 @@ Write-up & approaches: ../../../docs/leetcode/invert_binary_tree.md
 Given the `root` of a binary tree, invert it (swap every node's children) and
 return the root.
 
-  uv run python invert_binary_tree/solution.py   # debug one case (see CASE below)
-  uv run pytest invert_binary_tree/              # run the test sets
+  uv run python leetcode/invert_binary_tree/solution.py   # debug one case (see CASE below)
+  uv run pytest leetcode/invert_binary_tree/              # run the test sets
 """
 
 from typing import Optional

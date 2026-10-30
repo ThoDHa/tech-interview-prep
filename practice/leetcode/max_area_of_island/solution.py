@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/leetcode/max_area_of_island.md
 
 You are given a matrix `grid` where `grid[i]` is either a `0` (representing water) or `1` (representing land). An island is defined as a group of `1`'s connected horizontally or vertically. You may as
 
-  uv run python max_area_of_island/solution.py   # debug one case (see CASE below)
-  uv run pytest max_area_of_island/              # run the test sets
+  uv run python leetcode/max_area_of_island/solution.py   # debug one case (see CASE below)
+  uv run pytest leetcode/max_area_of_island/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

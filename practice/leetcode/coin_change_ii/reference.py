@@ -5,8 +5,8 @@ Reference implementation of the write-up's Space-Optimized 1-D DP solution.
 
 You are given an integer array `coins` representing coins of different denominations and an integer `amount` representing a target amount of money. Return the number of distinct combinations that total up to `amount`, or `0` when it is impossible. You have an unlimited number of each coin and each value in `coins` is unique.
 
-  uv run python coin_change_ii/reference.py   # debug one case (see CASE below)
-  uv run pytest coin_change_ii/              # run the test sets
+  uv run python leetcode/coin_change_ii/reference.py   # debug one case (see CASE below)
+  uv run pytest leetcode/coin_change_ii/              # run the test sets
 """
 
 from harness import pick_case

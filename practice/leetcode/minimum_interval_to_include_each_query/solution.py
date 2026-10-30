@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/leetcode/minimum_interval_to_include_each_q
 
 You are given a 2D integer array `intervals`, where `intervals[i] = [left_i, right_i]` represents the `ith` interval starting at `left_i` and ending at `right_i` **(inclusive)**. You are also given an
 
-  uv run python minimum_interval_to_include_each_query/solution.py   # debug one case (see CASE below)
-  uv run pytest minimum_interval_to_include_each_query/              # run the test sets
+  uv run python leetcode/minimum_interval_to_include_each_query/solution.py   # debug one case (see CASE below)
+  uv run pytest leetcode/minimum_interval_to_include_each_query/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

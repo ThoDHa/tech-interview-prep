@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/maximize-negative-signs.md
 
 Given a sequence of n natural numbers a_1, a_2, ..., a_n, you are to assign a sign (+ or -) to each a_i such that the cumulative sum of the signed a_1 + a_2 + ... + a_i remains positive for each i in 
 
-  uv run python amazon_oa/maximize-negative-signs/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/maximize-negative-signs/              # run the test sets
+  uv run python amazon/maximize-negative-signs/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/maximize-negative-signs/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-minimum-moves-to-capture-king
 
 A piece starts at start on an empty rows-by-cols board and must capture the king at king.
 
-  uv run python amazon_oa/amazon-minimum-moves-to-capture-king/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-minimum-moves-to-capture-king/              # run the test sets
+  uv run python amazon/amazon-minimum-moves-to-capture-king/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-minimum-moves-to-capture-king/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

@@ -6,8 +6,8 @@ Given an array of `intervals` where `intervals[i] = [start_i, end_i]`, merge all
 overlapping intervals and return an array of the non-overlapping intervals that
 cover all the intervals in the input. The answer may be returned in any order.
 
-  uv run python merge_intervals/solution.py     # debug one case (see CASE below)
-  uv run pytest merge_intervals/                # run the test sets
+  uv run python leetcode/merge_intervals/solution.py   # debug one case (see CASE below)
+  uv run pytest leetcode/merge_intervals/              # run the test sets
 """
 
 from typing import List

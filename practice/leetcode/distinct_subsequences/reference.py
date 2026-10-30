@@ -5,8 +5,8 @@ Reference implementation of the write-up's Space-Optimized One-Row DP solution.
 
 You are given two strings `s` and `t`, both consisting of english letters. Return the number of distinct subsequences of `s` which are equal to `t`.
 
-  uv run python distinct_subsequences/reference.py   # debug one case (see CASE below)
-  uv run pytest distinct_subsequences/              # run the test sets
+  uv run python leetcode/distinct_subsequences/reference.py   # debug one case (see CASE below)
+  uv run pytest leetcode/distinct_subsequences/              # run the test sets
 """
 
 from harness import pick_case

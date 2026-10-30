@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/leetcode/last_stone_weight.md
 
 You are given an array of integers `stones` where `stones[i]` represents the weight of the `ith` stone. We want to run a simulation on the stones as follows: * At each step we choose the **two heavies
 
-  uv run python last_stone_weight/solution.py   # debug one case (see CASE below)
-  uv run pytest last_stone_weight/              # run the test sets
+  uv run python leetcode/last_stone_weight/solution.py   # debug one case (see CASE below)
+  uv run pytest leetcode/last_stone_weight/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/leetcode/missing_number.md
 
 Given an array `nums` containing `n` integers in the range `[0, n]` without any duplicates, return the single number in the range that is missing from `nums`. **Follow-up**: Could you implement a solu
 
-  uv run python missing_number/solution.py   # debug one case (see CASE below)
-  uv run pytest missing_number/              # run the test sets
+  uv run python leetcode/missing_number/solution.py   # debug one case (see CASE below)
+  uv run pytest leetcode/missing_number/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

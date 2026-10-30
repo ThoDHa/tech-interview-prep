@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-ad-click-counts-sliding-windo
 
 You receive a finite sequence of advertisement click and count operations. Each operation is one of:
 
-  uv run python amazon_oa/amazon-ad-click-counts-sliding-window/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-ad-click-counts-sliding-window/              # run the test sets
+  uv run python amazon/amazon-ad-click-counts-sliding-window/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-ad-click-counts-sliding-window/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

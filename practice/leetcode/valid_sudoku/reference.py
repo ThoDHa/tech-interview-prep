@@ -7,8 +7,8 @@ pass with per-row, per-column, and per-box seen sets), kept next to the
 harness so authored cases stay falsifiable. Your own attempt lives in
 solution.py.
 
-  uv run python valid_sudoku/reference.py   # debug one case (see CASE below)
-  uv run pytest valid_sudoku/               # run the test sets
+  uv run python leetcode/valid_sudoku/reference.py   # debug one case (see CASE below)
+  uv run pytest leetcode/valid_sudoku/               # run the test sets
 """
 
 from harness import pick_case

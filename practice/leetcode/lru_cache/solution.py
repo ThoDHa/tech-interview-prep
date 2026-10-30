@@ -5,8 +5,8 @@ Write-up & approaches: ../../../docs/leetcode/lru_cache.md
 Design a data structure that follows the constraints of a Least Recently Used
 (LRU) cache, with O(1) average time for both get and put.
 
-  uv run python lru_cache/solution.py     # debug one case (see CASE below)
-  uv run pytest lru_cache/                # run the test sets
+  uv run python leetcode/lru_cache/solution.py   # debug one case (see CASE below)
+  uv run pytest leetcode/lru_cache/              # run the test sets
 """
 
 from harness import NotSolved, pick_case, run_operations

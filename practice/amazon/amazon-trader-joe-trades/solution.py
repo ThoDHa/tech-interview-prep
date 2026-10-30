@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-trader-joe-trades.md
 
 In the Amazon Trade Optimization System, a financial strategist named Joe the trader is assigned the task of maximizing revenue while following the execution rules for trade operations. The trading sy
 
-  uv run python amazon_oa/amazon-trader-joe-trades/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-trader-joe-trades/              # run the test sets
+  uv run python amazon/amazon-trader-joe-trades/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-trader-joe-trades/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

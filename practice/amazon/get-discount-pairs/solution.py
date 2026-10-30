@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/get-discount-pairs.md
 
 Amazon is offering a discount on every purchase of a pair of products whose price sum is divisible by x. Given the prices of n products, count the number of unordered index pairs (i, j) such that 0 <=
 
-  uv run python amazon_oa/get-discount-pairs/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/get-discount-pairs/              # run the test sets
+  uv run python amazon/get-discount-pairs/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/get-discount-pairs/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

@@ -6,8 +6,8 @@ Given an `m x n` 2D binary grid of `'1'`s (land) and `'0'`s (water), return the
 number of islands. An island is formed by connecting adjacent lands horizontally
 or vertically and is surrounded by water.
 
-  uv run python number_of_islands/solution.py     # debug one case (see CASE below)
-  uv run pytest number_of_islands/                # run the test sets
+  uv run python leetcode/number_of_islands/solution.py   # debug one case (see CASE below)
+  uv run pytest leetcode/number_of_islands/              # run the test sets
 """
 
 from typing import List

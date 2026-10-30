@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/leetcode/merge_triplets_to_form_target_trip
 
 You are given a 2D array of integers `triplets`, where `triplets[i] = [ai, bi, ci]` represents the `ith` **triplet**. You are also given an array of integers `target = [x, y, z]` which is the triplet 
 
-  uv run python merge_triplets_to_form_target_triplet/solution.py   # debug one case (see CASE below)
-  uv run pytest merge_triplets_to_form_target_triplet/              # run the test sets
+  uv run python leetcode/merge_triplets_to_form_target_triplet/solution.py   # debug one case (see CASE below)
+  uv run pytest leetcode/merge_triplets_to_form_target_triplet/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/leetcode/sliding_window_maximum.md
 
 You are given an array of integers `nums` and an integer `k`. There is a sliding window of size `k` that starts at the left edge of the array. The window slides one position to the right until it reac
 
-  uv run python sliding_window_maximum/solution.py   # debug one case (see CASE below)
-  uv run pytest sliding_window_maximum/              # run the test sets
+  uv run python leetcode/sliding_window_maximum/solution.py   # debug one case (see CASE below)
+  uv run pytest leetcode/sliding_window_maximum/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

@@ -5,8 +5,8 @@ Reference implementation of the write-up's Pop-and-Push with Pre-Check
 solution, kept next to the harness so authored cases stay falsifiable.
 Your own attempt lives in solution.py.
 
-  uv run python reverse_integer/reference.py   # replay the example cases
-  uv run pytest reverse_integer/               # run the test sets
+  uv run python leetcode/reverse_integer/reference.py   # replay the example cases
+  uv run pytest leetcode/reverse_integer/               # run the test sets
 """
 
 from harness import pick_case

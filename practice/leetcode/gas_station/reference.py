@@ -5,8 +5,8 @@ Reference implementation of the write-up's Greedy solution, kept next to the
 harness so authored cases stay falsifiable. Your own attempt lives in
 solution.py.
 
-  uv run python gas_station/reference.py   # replay the example cases
-  uv run pytest gas_station/               # run the test sets
+  uv run python leetcode/gas_station/reference.py   # replay the example cases
+  uv run pytest leetcode/gas_station/               # run the test sets
 """
 
 from typing import List

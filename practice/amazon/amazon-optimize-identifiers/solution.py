@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-optimize-identifiers.md
 
 Special thanks: 𓇼 ⋆.˚Manyy Manyyy thanks to Nachos and spike!𓆝 𓆡⋆.˚ 𓇼
 
-  uv run python amazon_oa/amazon-optimize-identifiers/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-optimize-identifiers/              # run the test sets
+  uv run python amazon/amazon-optimize-identifiers/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-optimize-identifiers/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

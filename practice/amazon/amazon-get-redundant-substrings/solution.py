@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-get-redundant-substrings.md
 
 Data analysts at Amazon are building a utility to identify redundant words in advertisements.
 
-  uv run python amazon_oa/amazon-get-redundant-substrings/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-get-redundant-substrings/              # run the test sets
+  uv run python amazon/amazon-get-redundant-substrings/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-get-redundant-substrings/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

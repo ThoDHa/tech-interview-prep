@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-password-strength.md
 
 Sup! I might be a sister question of Password Strength 🐣
 
-  uv run python amazon_oa/amazon-password-strength/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-password-strength/              # run the test sets
+  uv run python amazon/amazon-password-strength/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-password-strength/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

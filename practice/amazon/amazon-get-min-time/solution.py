@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-get-min-time.md
 
 Developers at Amazon have deployed an application with a distributed database. It is stored on total_servers different servers numbered from 1 to total_servers that are connected in a circular fashion
 
-  uv run python amazon_oa/amazon-get-min-time/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-get-min-time/              # run the test sets
+  uv run python amazon/amazon-get-min-time/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-get-min-time/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-calculate-warehouse-efficienc
 
 The supply chain manager at one of Amazon's warehouses wants to measure the efficiency of the way parcels are shipped. The volume of each parcel is represented in the array parcelWeights. Each day, th
 
-  uv run python amazon_oa/amazon-calculate-warehouse-efficiency/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-calculate-warehouse-efficiency/              # run the test sets
+  uv run python amazon/amazon-calculate-warehouse-efficiency/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-calculate-warehouse-efficiency/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

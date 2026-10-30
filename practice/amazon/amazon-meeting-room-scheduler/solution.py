@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-meeting-room-scheduler.md
 
 Implement a scheduler for roomCount meeting rooms numbered from 0 to roomCount - 1.
 
-  uv run python amazon_oa/amazon-meeting-room-scheduler/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-meeting-room-scheduler/              # run the test sets
+  uv run python amazon/amazon-meeting-room-scheduler/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-meeting-room-scheduler/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

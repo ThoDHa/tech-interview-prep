@@ -5,8 +5,8 @@ Write-up & approaches: ../../../docs/leetcode/basic_calculator.md
 Given a string `s` representing a valid expression of integers, `+`, `-`,
 parentheses, and spaces, evaluate it and return the result without using `eval`.
 
-  uv run python basic_calculator/solution.py   # debug one case (see CASE below)
-  uv run pytest basic_calculator/              # run the test sets
+  uv run python leetcode/basic_calculator/solution.py   # debug one case (see CASE below)
+  uv run pytest leetcode/basic_calculator/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

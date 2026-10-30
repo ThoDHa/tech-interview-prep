@@ -5,8 +5,8 @@ Write-up & approaches: ../../../docs/leetcode/letter_combinations_of_a_phone_num
 Given a string containing digits from `2-9`, return all letter combinations the
 number could represent (telephone keypad mapping). Return the answer in any order.
 
-  uv run python letter_combinations_of_a_phone_number/solution.py   # debug one case (see CASE below)
-  uv run pytest letter_combinations_of_a_phone_number/              # run the test sets
+  uv run python leetcode/letter_combinations_of_a_phone_number/solution.py   # debug one case (see CASE below)
+  uv run pytest leetcode/letter_combinations_of_a_phone_number/              # run the test sets
 """
 
 from typing import List

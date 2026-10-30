@@ -5,8 +5,8 @@ Reference implementation of the write-up's Recursive DFS solution, kept next
 to the harness so authored cases stay falsifiable. Your own attempt lives in
 solution.py.
 
-  uv run python max_area_of_island/reference.py   # debug one case (see CASE below)
-  uv run pytest max_area_of_island/               # run the test sets
+  uv run python leetcode/max_area_of_island/reference.py   # debug one case (see CASE below)
+  uv run pytest leetcode/max_area_of_island/               # run the test sets
 """
 
 from harness import pick_case

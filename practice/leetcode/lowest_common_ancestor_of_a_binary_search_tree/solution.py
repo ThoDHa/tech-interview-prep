@@ -6,8 +6,8 @@ Given a binary search tree (BST) and two existing nodes `p` and `q`, return thei
 lowest common ancestor: the lowest node that has both `p` and `q` as descendants
 (a node may be a descendant of itself).
 
-  uv run python lowest_common_ancestor_of_a_binary_search_tree/solution.py   # debug one case (see CASE below)
-  uv run pytest lowest_common_ancestor_of_a_binary_search_tree/              # run the test sets
+  uv run python leetcode/lowest_common_ancestor_of_a_binary_search_tree/solution.py   # debug one case (see CASE below)
+  uv run pytest leetcode/lowest_common_ancestor_of_a_binary_search_tree/              # run the test sets
 """
 
 from harness import NotSolved, TreeNode, build_tree, find_tree_node, pick_case

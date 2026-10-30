@@ -5,8 +5,8 @@ Reference implementation of the write-up's Space-Optimized Two-Row DP solution.
 
 You are given two strings `word1` and `word2`, each consisting of lowercase English letters. You may insert, delete, or replace characters any number of times; return the minimum number of operations to make `word1` equal `word2`.
 
-  uv run python edit_distance/reference.py   # debug one case (see CASE below)
-  uv run pytest edit_distance/              # run the test sets
+  uv run python leetcode/edit_distance/reference.py   # debug one case (see CASE below)
+  uv run pytest leetcode/edit_distance/              # run the test sets
 """
 
 from harness import pick_case

@@ -5,8 +5,8 @@ Reference implementation of the write-up's Kahn's Algorithm solution, kept
 next to the harness so authored cases stay falsifiable. Your own attempt
 lives in solution.py.
 
-  uv run python course_schedule_ii/reference.py   # debug one case (see CASE below)
-  uv run pytest course_schedule_ii/               # run the test sets
+  uv run python leetcode/course_schedule_ii/reference.py   # debug one case (see CASE below)
+  uv run pytest leetcode/course_schedule_ii/               # run the test sets
 """
 
 from collections import deque

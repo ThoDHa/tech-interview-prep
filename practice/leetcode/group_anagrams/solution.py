@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/leetcode/group_anagrams.md
 
 Given an array of strings `strs`, group all *anagrams* together into sublists. You may return the output in **any order**. An **anagram** is a string that contains the exact same characters as another
 
-  uv run python group_anagrams/solution.py   # debug one case (see CASE below)
-  uv run pytest group_anagrams/              # run the test sets
+  uv run python leetcode/group_anagrams/solution.py   # debug one case (see CASE below)
+  uv run pytest leetcode/group_anagrams/              # run the test sets
 """
 
 from harness import NotSolved, pick_case
@@ -24,7 +24,7 @@ class Solution:
 if __name__ == "__main__":
     # Debug playground: set a breakpoint in solve above, then run this file.
     # Pick a case by id (ids are in cases.json).
-    CASE = "example_1"
+    CASE = "neetcode_example"
     case = pick_case(__file__, CASE)
     result = Solution().solve(*case["args"])
     print(f"case {case['id']}: args = {case['args']}")

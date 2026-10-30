@@ -5,8 +5,8 @@ Write-up & approaches: ../../../docs/leetcode/binary_tree_level_order_traversal.
 Given the `root` of a binary tree, return the level order traversal of its nodes'
 values (from left to right, level by level).
 
-  uv run python binary_tree_level_order_traversal/solution.py   # debug one case (see CASE below)
-  uv run pytest binary_tree_level_order_traversal/              # run the test sets
+  uv run python leetcode/binary_tree_level_order_traversal/solution.py   # debug one case (see CASE below)
+  uv run pytest leetcode/binary_tree_level_order_traversal/              # run the test sets
 """
 
 from typing import List, Optional

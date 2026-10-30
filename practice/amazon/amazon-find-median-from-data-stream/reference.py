@@ -5,8 +5,8 @@ Reference implementation of the write-up's recommended Two Heaps solution,
 kept next to the harness so authored cases stay falsifiable. Your own
 attempt lives in solution.py.
 
-  uv run python amazon-find-median-from-data-stream/reference.py   # replay the example
-  uv run pytest amazon-find-median-from-data-stream/               # run the test sets
+  uv run python amazon/amazon-find-median-from-data-stream/reference.py   # replay the example
+  uv run pytest amazon/amazon-find-median-from-data-stream/               # run the test sets
 """
 
 import heapq

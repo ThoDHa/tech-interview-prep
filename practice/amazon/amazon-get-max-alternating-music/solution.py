@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-get-max-alternating-music.md
 
 Amazon Music is working on harmonizing their music playlist.
 
-  uv run python amazon_oa/amazon-get-max-alternating-music/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-get-max-alternating-music/              # run the test sets
+  uv run python amazon/amazon-get-max-alternating-music/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-get-max-alternating-music/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

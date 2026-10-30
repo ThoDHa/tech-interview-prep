@@ -5,8 +5,8 @@ Reference implementation of the write-up's Greedy Component Flags solution, kept
 next to the harness so authored cases stay falsifiable. Your own attempt
 lives in solution.py.
 
-  uv run python merge_triplets_to_form_target_triplet/reference.py   # replay the example cases
-  uv run pytest merge_triplets_to_form_target_triplet/               # run the test sets
+  uv run python leetcode/merge_triplets_to_form_target_triplet/reference.py   # replay the example cases
+  uv run pytest leetcode/merge_triplets_to_form_target_triplet/               # run the test sets
 """
 
 from typing import List

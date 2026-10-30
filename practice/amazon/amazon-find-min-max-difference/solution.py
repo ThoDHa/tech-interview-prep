@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-find-min-max-difference.md
 
 Given one unsorted array of size n and integer k.
 
-  uv run python amazon_oa/amazon-find-min-max-difference/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-find-min-max-difference/              # run the test sets
+  uv run python amazon/amazon-find-min-max-difference/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-find-min-max-difference/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

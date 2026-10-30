@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-employee-ratings-data-structu
 
 Process a sequence of operations on an initially empty ordered list of employee ratings. Operation [1, rating] appends a rating. Operation [2, index] deletes the rating at the current zero-based index
 
-  uv run python amazon_oa/amazon-employee-ratings-data-structure/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-employee-ratings-data-structure/              # run the test sets
+  uv run python amazon/amazon-employee-ratings-data-structure/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-employee-ratings-data-structure/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

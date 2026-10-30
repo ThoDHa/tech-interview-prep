@@ -5,8 +5,8 @@ Write-up & approaches: ../../../docs/leetcode/minimum_window_substring.md
 Given two strings `s` and `t`, return the shortest substring of `s` that contains
 every character of `t` (including duplicates), or `""` if no such window exists.
 
-  uv run python minimum_window_substring/solution.py   # debug one case (see CASE below)
-  uv run pytest minimum_window_substring/              # run the test sets
+  uv run python leetcode/minimum_window_substring/solution.py   # debug one case (see CASE below)
+  uv run pytest leetcode/minimum_window_substring/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-maximize-minimum-machine-powe
 
 You are given an integer array sources, where sources[i] is the amount of power available from the i-th power source, and an integer n representing the number of machines.
 
-  uv run python amazon_oa/amazon-maximize-minimum-machine-power/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-maximize-minimum-machine-power/              # run the test sets
+  uv run python amazon/amazon-maximize-minimum-machine-power/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-maximize-minimum-machine-power/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

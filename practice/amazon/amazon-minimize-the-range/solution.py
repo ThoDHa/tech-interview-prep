@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-minimize-the-range.md
 
 Given a collection of n cards. The i-th card (1 ≤ i ≤ n) has a number Ai on its front and a number Bi on its back. At the start, all the cards are facing upwards. He wants to minimize the range of num
 
-  uv run python amazon_oa/amazon-minimize-the-range/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-minimize-the-range/              # run the test sets
+  uv run python amazon/amazon-minimize-the-range/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-minimize-the-range/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

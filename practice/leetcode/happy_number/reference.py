@@ -13,8 +13,8 @@ A **non-cyclical number** is an integer defined by the following algorithm:
   in a cycle** which does not include `1`.
 * If it stops at `1`, then the number is a **non-cyclical number**.
 
-  uv run python happy_number/reference.py   # replay the example cases
-  uv run pytest happy_number/               # run the test sets
+  uv run python leetcode/happy_number/reference.py   # replay the example cases
+  uv run pytest leetcode/happy_number/               # run the test sets
 """
 
 from harness import pick_case

@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-currency-conversion-rate.md
 
 You are given currency conversion rates. Each row contains a source currency, a target currency, and the value of one unit of the source currency in the target currency.
 
-  uv run python amazon_oa/amazon-currency-conversion-rate/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-currency-conversion-rate/              # run the test sets
+  uv run python amazon/amazon-currency-conversion-rate/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-currency-conversion-rate/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

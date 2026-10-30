@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/leetcode/two_sum_ii_input_array_is_sorted.m
 
 Given an array of integers `numbers` that is sorted in **non-decreasing order**. Return the indices (**1-indexed**) of two numbers, `[index1, index2]`, such that they add up to a given target number `
 
-  uv run python two_sum_ii_input_array_is_sorted/solution.py   # debug one case (see CASE below)
-  uv run pytest two_sum_ii_input_array_is_sorted/              # run the test sets
+  uv run python leetcode/two_sum_ii_input_array_is_sorted/solution.py   # debug one case (see CASE below)
+  uv run pytest leetcode/two_sum_ii_input_array_is_sorted/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

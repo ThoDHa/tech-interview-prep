@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-find-number-of-possible-uniqu
 
 Given a string of lowercase characters, pick substring of any length in it and reverse them. Find the number of possible unique strings.
 
-  uv run python amazon_oa/amazon-find-number-of-possible-unique-strings/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-find-number-of-possible-unique-strings/              # run the test sets
+  uv run python amazon/amazon-find-number-of-possible-unique-strings/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-find-number-of-possible-unique-strings/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-find-capable-winners.md
 
 Amazon games have recently launched a new multi-player tournament on the platform. Each game of the tournament has 3 rounds. The players are provided with exactly three power boosters at the start of 
 
-  uv run python amazon_oa/amazon-find-capable-winners/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-find-capable-winners/              # run the test sets
+  uv run python amazon/amazon-find-capable-winners/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-find-capable-winners/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

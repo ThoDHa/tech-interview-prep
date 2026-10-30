@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-squirrel-nut-collection-short
 
 A squirrel, a tree, and several nuts occupy distinct cells on a rectangular Manhattan grid. The squirrel can carry one nut at a time. Every nut must be delivered to the tree.
 
-  uv run python amazon_oa/amazon-squirrel-nut-collection-shortest-path/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-squirrel-nut-collection-shortest-path/              # run the test sets
+  uv run python amazon/amazon-squirrel-nut-collection-shortest-path/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-squirrel-nut-collection-shortest-path/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

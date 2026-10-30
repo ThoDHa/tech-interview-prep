@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-calculate-truck-distance.md
 
 Trucks dispatch packages in a city. There are n trucks numbered 0, 1, ..., n - 1 used for dispatching goods. Assuming the trucks are parked along the x-coordinate axis, the coordinates of these trucks
 
-  uv run python amazon_oa/amazon-calculate-truck-distance/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-calculate-truck-distance/              # run the test sets
+  uv run python amazon/amazon-calculate-truck-distance/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-calculate-truck-distance/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

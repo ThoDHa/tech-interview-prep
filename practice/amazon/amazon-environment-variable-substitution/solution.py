@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-environment-variable-substitu
 
 Process a sequence of environment-variable operations:
 
-  uv run python amazon_oa/amazon-environment-variable-substitution/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-environment-variable-substitution/              # run the test sets
+  uv run python amazon/amazon-environment-variable-substitution/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-environment-variable-substitution/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

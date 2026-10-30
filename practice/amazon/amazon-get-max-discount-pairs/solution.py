@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-get-max-discount-pairs.md
 
 It is the third anniversary of Amazon Prime Day, and they have come up with amazing offers yet again! Customers who purchase a pair of products whose prices sum to a power of three receive a 50% disco
 
-  uv run python amazon_oa/amazon-get-max-discount-pairs/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-get-max-discount-pairs/              # run the test sets
+  uv run python amazon/amazon-get-max-discount-pairs/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-get-max-discount-pairs/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

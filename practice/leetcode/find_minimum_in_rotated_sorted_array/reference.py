@@ -5,8 +5,8 @@ Reference implementation of the write-up's Binary Search on Right Slope solution
 
 You are given an array of length `n` which was originally sorted in ascending order and has now been rotated between `1` and `n` times. Assuming all elements in the rotated sorted array `nums` are **unique**, return the minimum element of this array.
 
-  uv run python find_minimum_in_rotated_sorted_array/reference.py   # debug one case (see CASE below)
-  uv run pytest find_minimum_in_rotated_sorted_array/              # run the test sets
+  uv run python leetcode/find_minimum_in_rotated_sorted_array/reference.py   # debug one case (see CASE below)
+  uv run pytest leetcode/find_minimum_in_rotated_sorted_array/              # run the test sets
 """
 
 from harness import pick_case

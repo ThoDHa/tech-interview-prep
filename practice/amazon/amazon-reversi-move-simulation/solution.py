@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-reversi-move-simulation.md
 
 Given a Reversi board board, a zero-based target cell row, col, and a player player equal to B or W, apply exactly one move.
 
-  uv run python amazon_oa/amazon-reversi-move-simulation/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-reversi-move-simulation/              # run the test sets
+  uv run python amazon/amazon-reversi-move-simulation/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-reversi-move-simulation/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

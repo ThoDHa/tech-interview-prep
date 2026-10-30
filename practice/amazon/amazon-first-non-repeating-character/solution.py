@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-first-non-repeating-character
 
 Given a non-empty string s, return the first character whose total frequency in the string is exactly one.
 
-  uv run python amazon_oa/amazon-first-non-repeating-character/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-first-non-repeating-character/              # run the test sets
+  uv run python amazon/amazon-first-non-repeating-character/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-first-non-repeating-character/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

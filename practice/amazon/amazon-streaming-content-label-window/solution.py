@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-streaming-content-label-windo
 
 A content stream arrives in order. Each item carries a non-empty set of labels. Given contentLabels and a limit k, find the longest contiguous window of items whose combined label set contains at most
 
-  uv run python amazon_oa/amazon-streaming-content-label-window/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-streaming-content-label-window/              # run the test sets
+  uv run python amazon/amazon-streaming-content-label-window/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-streaming-content-label-window/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

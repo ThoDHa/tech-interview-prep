@@ -6,8 +6,8 @@ Implement a `Trie` (prefix tree) supporting `insert(word)`, `search(word)`
 (exact-match lookup), and `startsWith(prefix)` (does any inserted word begin
 with this prefix). Words and prefixes consist of lowercase English letters.
 
-  uv run python implement_trie_prefix_tree/solution.py     # debug one case (see CASE below)
-  uv run pytest implement_trie_prefix_tree/                # run the test sets
+  uv run python leetcode/implement_trie_prefix_tree/solution.py   # debug one case (see CASE below)
+  uv run pytest leetcode/implement_trie_prefix_tree/              # run the test sets
 """
 
 from harness import NotSolved, pick_case, run_operations

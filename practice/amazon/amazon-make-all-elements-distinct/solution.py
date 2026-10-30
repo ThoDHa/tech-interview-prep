@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-make-all-elements-distinct.md
 
 An Amazon warehouse manager is responsible for managing inventory and ensuring that each product has a unique identifier. There are n products in the warehouse, where the identifier of the i-th item i
 
-  uv run python amazon_oa/amazon-make-all-elements-distinct/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-make-all-elements-distinct/              # run the test sets
+  uv run python amazon/amazon-make-all-elements-distinct/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-make-all-elements-distinct/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

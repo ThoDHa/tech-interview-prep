@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-select-least-resource-tasks.m
 
 Amazon's Elastic Container Service schedules tasks dynamically. You are given an integer array resourceConsumption, where resourceConsumption[i] is the resource consumption of one task.
 
-  uv run python amazon_oa/amazon-select-least-resource-tasks/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-select-least-resource-tasks/              # run the test sets
+  uv run python amazon/amazon-select-least-resource-tasks/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-select-least-resource-tasks/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

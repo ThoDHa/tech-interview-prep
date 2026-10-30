@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-feasible-indices-after-reduct
 
 You are given an integer array arr of size n. All elements of arr are distinct.
 
-  uv run python amazon_oa/amazon-feasible-indices-after-reduction/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-feasible-indices-after-reduction/              # run the test sets
+  uv run python amazon/amazon-feasible-indices-after-reduction/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-feasible-indices-after-reduction/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

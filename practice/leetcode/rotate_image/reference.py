@@ -7,8 +7,8 @@ Rows solution (in-place, two passes). Your own attempt lives in solution.py.
 Given a square `n x n` matrix of integers `matrix`, rotate it by 90 degrees
 clockwise, in place: column `i` read bottom-up becomes row `i`.
 
-  uv run python rotate_image/reference.py   # replay the example cases
-  uv run pytest rotate_image/               # run the test sets
+  uv run python leetcode/rotate_image/reference.py   # replay the example cases
+  uv run pytest leetcode/rotate_image/               # run the test sets
 """
 
 from typing import List

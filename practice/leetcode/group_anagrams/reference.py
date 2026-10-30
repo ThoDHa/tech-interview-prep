@@ -6,8 +6,8 @@ Canonical reference implementation: the write-up's optimal approach (the
 26-slot character-count key), kept next to the harness so authored cases stay
 falsifiable. Your own attempt lives in solution.py.
 
-  uv run python group_anagrams/reference.py   # debug one case (see below)
-  uv run pytest group_anagrams/               # run the test sets
+  uv run python leetcode/group_anagrams/reference.py   # debug one case (see below)
+  uv run pytest leetcode/group_anagrams/               # run the test sets
 """
 
 

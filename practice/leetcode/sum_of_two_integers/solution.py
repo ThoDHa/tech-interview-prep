@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/leetcode/sum_of_two_integers.md
 
 Given two integers `a` and `b`, return the sum of the two integers without using the `+` and `-` operators.
 
-  uv run python sum_of_two_integers/solution.py   # debug one case (see CASE below)
-  uv run pytest sum_of_two_integers/              # run the test sets
+  uv run python leetcode/sum_of_two_integers/solution.py   # debug one case (see CASE below)
+  uv run pytest leetcode/sum_of_two_integers/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

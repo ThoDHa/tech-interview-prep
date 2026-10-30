@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-find-idle-skills-query.md
 
 The Amazon Alexa development team needs to analyze request logs across numSkills skills.
 
-  uv run python amazon_oa/amazon-find-idle-skills-query/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-find-idle-skills-query/              # run the test sets
+  uv run python amazon/amazon-find-idle-skills-query/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-find-idle-skills-query/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

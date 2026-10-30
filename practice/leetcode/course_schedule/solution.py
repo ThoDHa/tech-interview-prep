@@ -6,8 +6,8 @@ There are `numCourses` courses labeled `0` to `numCourses - 1`. Each pair
 `prerequisites[i] = [a, b]` means course `b` must be taken before course `a`.
 Return `True` if you can finish every course, otherwise `False`.
 
-  uv run python course_schedule/solution.py     # debug one case (see CASE below)
-  uv run pytest course_schedule/                # run the test sets
+  uv run python leetcode/course_schedule/solution.py   # debug one case (see CASE below)
+  uv run pytest leetcode/course_schedule/              # run the test sets
 """
 
 from typing import List

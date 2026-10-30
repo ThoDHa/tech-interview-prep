@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-transfer-chain-endpoints.md
 
 You are given directed account-transfer pairs [from, to] in arbitrary order. Together they form one non-branching chain containing every pair exactly once.
 
-  uv run python amazon_oa/amazon-transfer-chain-endpoints/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-transfer-chain-endpoints/              # run the test sets
+  uv run python amazon/amazon-transfer-chain-endpoints/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-transfer-chain-endpoints/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

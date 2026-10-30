@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/get-mean-rank-count.md
 
 Special thanks: precurewalker contributed this problem.
 
-  uv run python amazon_oa/get-mean-rank-count/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/get-mean-rank-count/              # run the test sets
+  uv run python amazon/get-mean-rank-count/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/get-mean-rank-count/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

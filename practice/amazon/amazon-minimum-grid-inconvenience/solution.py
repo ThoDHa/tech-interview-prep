@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-minimum-grid-inconvenience.md
 
 A city is represented by a binary grid. A cell marked 1 is a delivery center, and a cell marked 0 is any other place.
 
-  uv run python amazon_oa/amazon-minimum-grid-inconvenience/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-minimum-grid-inconvenience/              # run the test sets
+  uv run python amazon/amazon-minimum-grid-inconvenience/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-minimum-grid-inconvenience/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/leetcode/number_of_1_bits.md
 
 You are given an unsigned integer `n`. Return the number of `1` bits in its binary representation. You may assume `n` is a non-negative integer which fits within 32-bits.
 
-  uv run python number_of_1_bits/solution.py   # debug one case (see CASE below)
-  uv run pytest number_of_1_bits/              # run the test sets
+  uv run python leetcode/number_of_1_bits/solution.py   # debug one case (see CASE below)
+  uv run pytest leetcode/number_of_1_bits/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

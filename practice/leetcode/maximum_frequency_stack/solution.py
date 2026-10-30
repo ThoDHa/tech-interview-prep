@@ -5,8 +5,8 @@ Write-up & approaches: ../../../docs/leetcode/maximum_frequency_stack.md
 Design a stack-like structure: push elements, and pop the most frequent element.
 If several elements share the highest frequency, pop the one pushed most recently.
 
-  uv run python maximum_frequency_stack/solution.py     # debug one case (see CASE below)
-  uv run pytest maximum_frequency_stack/                # run the test sets
+  uv run python leetcode/maximum_frequency_stack/solution.py   # debug one case (see CASE below)
+  uv run pytest leetcode/maximum_frequency_stack/              # run the test sets
 """
 
 from harness import NotSolved, pick_case, run_operations

@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-calculate-median-sum.md
 
 You are given a list of packets of varying sizes and there are n channels.
 
-  uv run python amazon_oa/amazon-calculate-median-sum/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-calculate-median-sum/              # run the test sets
+  uv run python amazon/amazon-calculate-median-sum/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-calculate-median-sum/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-page-referrer-reachability.md
 
 You are given a list of web traffic records. Each record is represented as a two-element string array [url, referrer]:
 
-  uv run python amazon_oa/amazon-page-referrer-reachability/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-page-referrer-reachability/              # run the test sets
+  uv run python amazon/amazon-page-referrer-reachability/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-page-referrer-reachability/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

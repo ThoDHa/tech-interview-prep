@@ -6,8 +6,8 @@ Canonical reference implementation: the write-up's optimal approach (bucket
 sort by frequency), kept next to the harness so authored cases stay
 falsifiable. Your own attempt lives in solution.py.
 
-  uv run python top_k_frequent_elements/reference.py   # debug one case (see below)
-  uv run pytest top_k_frequent_elements/               # run the test sets
+  uv run python leetcode/top_k_frequent_elements/reference.py   # debug one case (see below)
+  uv run pytest leetcode/top_k_frequent_elements/               # run the test sets
 """
 
 

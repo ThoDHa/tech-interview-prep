@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/leetcode/kth_largest_element_in_a_stream.md
 
 Design a class to find the `kth` largest integer in a stream of values, including duplicates. E.g. the `2nd` largest from [1, 2, 3, 3] is `3`. The stream is not necessarily sorted. Implement the follo
 
-  uv run python kth_largest_element_in_a_stream/solution.py   # debug one case (see CASE below)
-  uv run pytest kth_largest_element_in_a_stream/              # run the test sets
+  uv run python leetcode/kth_largest_element_in_a_stream/solution.py   # debug one case (see CASE below)
+  uv run pytest leetcode/kth_largest_element_in_a_stream/              # run the test sets
 """
 
 from harness import NotSolved, pick_case
@@ -24,7 +24,7 @@ class Solution:
 if __name__ == "__main__":
     # Debug playground: set a breakpoint in solve above, then run this file.
     # Pick a case by id (ids are in cases.json).
-    CASE = "example_1"
+    CASE = "empty_stream_rank_one"
     case = pick_case(__file__, CASE)
     result = Solution().solve(*case["args"])
     print(f"case {case['id']}: args = {case['args']}")

@@ -5,8 +5,8 @@ Write-up & approaches: ../../../docs/leetcode/largest_rectangle_in_histogram.md
 Given an array of integers `heights` representing a histogram's bar heights where
 each bar has width `1`, return the area of the largest rectangle in the histogram.
 
-  uv run python largest_rectangle_in_histogram/solution.py     # debug one case (see CASE below)
-  uv run pytest largest_rectangle_in_histogram/                # run the test sets
+  uv run python leetcode/largest_rectangle_in_histogram/solution.py   # debug one case (see CASE below)
+  uv run pytest leetcode/largest_rectangle_in_histogram/              # run the test sets
 """
 
 from typing import List

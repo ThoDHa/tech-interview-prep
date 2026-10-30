@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-single-element-in-sorted-arra
 
 Given a sorted integer array nums, every value appears exactly twice except for one value that appears exactly once.
 
-  uv run python amazon_oa/amazon-single-element-in-sorted-array/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-single-element-in-sorted-array/              # run the test sets
+  uv run python amazon/amazon-single-element-in-sorted-array/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-single-element-in-sorted-array/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

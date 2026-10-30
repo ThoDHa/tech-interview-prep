@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-next-greater-perfect-string.m
 
 A perfect string is a string in which no two adjacent characters are the same.
 
-  uv run python amazon_oa/amazon-next-greater-perfect-string/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-next-greater-perfect-string/              # run the test sets
+  uv run python amazon/amazon-next-greater-perfect-string/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-next-greater-perfect-string/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

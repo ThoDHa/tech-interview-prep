@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-find-partition-cost.md
 
 The database specialists at Amazon are engaged in segmenting their sequence of interconnected servers. There exists a consecutive sequence of m servers, labeled from 1 to m, where the expense metric l
 
-  uv run python amazon_oa/amazon-find-partition-cost/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-find-partition-cost/              # run the test sets
+  uv run python amazon/amazon-find-partition-cost/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-find-partition-cost/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

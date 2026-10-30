@@ -6,8 +6,8 @@ Given a list of accounts where each `accounts[i]` is `[name, email1, email2, ...
 merge accounts that share any common email and return each merged account as the
 name followed by its emails in sorted order (accounts in any order).
 
-  uv run python accounts_merge/solution.py     # debug one case (see CASE below)
-  uv run pytest accounts_merge/                # run the test sets
+  uv run python leetcode/accounts_merge/solution.py   # debug one case (see CASE below)
+  uv run pytest leetcode/accounts_merge/              # run the test sets
 """
 
 from typing import List

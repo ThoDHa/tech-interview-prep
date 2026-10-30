@@ -6,8 +6,8 @@ Canonical reference implementation: the write-up's optimal approach (two
 pointers converging on the sorted array), kept next to the harness so
 authored cases stay falsifiable. Your own attempt lives in solution.py.
 
-  uv run python two_sum_ii_input_array_is_sorted/reference.py   # debug one case (see CASE below)
-  uv run pytest two_sum_ii_input_array_is_sorted/               # run the test sets
+  uv run python leetcode/two_sum_ii_input_array_is_sorted/reference.py   # debug one case (see CASE below)
+  uv run pytest leetcode/two_sum_ii_input_array_is_sorted/               # run the test sets
 """
 
 from harness import pick_case

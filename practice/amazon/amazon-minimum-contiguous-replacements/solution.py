@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-minimum-contiguous-replacemen
 
 You are given an array arr of integers. In one operation, choose two distinct values x and y that currently appear in the array, then replace every occurrence of x with y.
 
-  uv run python amazon_oa/amazon-minimum-contiguous-replacements/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-minimum-contiguous-replacements/              # run the test sets
+  uv run python amazon/amazon-minimum-contiguous-replacements/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-minimum-contiguous-replacements/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

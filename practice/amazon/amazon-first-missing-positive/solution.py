@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-first-missing-positive.md
 
 Given an unsorted integer array nums, return the smallest positive integer that does not appear in the array.
 
-  uv run python amazon_oa/amazon-first-missing-positive/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-first-missing-positive/              # run the test sets
+  uv run python amazon/amazon-first-missing-positive/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-first-missing-positive/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

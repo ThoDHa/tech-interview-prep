@@ -5,8 +5,8 @@ Reference implementation of the write-up's Kadane's Algorithm with Min-Max
 Tracking solution, kept next to the harness so authored cases stay falsifiable.
 Your own attempt lives in solution.py.
 
-  uv run python maximum_product_subarray/reference.py   # replay the example cases
-  uv run pytest maximum_product_subarray/               # run the test sets
+  uv run python leetcode/maximum_product_subarray/reference.py   # replay the example cases
+  uv run pytest leetcode/maximum_product_subarray/               # run the test sets
 """
 
 from typing import List

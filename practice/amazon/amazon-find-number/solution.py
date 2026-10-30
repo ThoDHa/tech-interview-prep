@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-find-number.md
 
 In order to ensure maximum security, the developers at Amazon employ multiple encryption methods to keep user data protected.
 
-  uv run python amazon_oa/amazon-find-number/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-find-number/              # run the test sets
+  uv run python amazon/amazon-find-number/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-find-number/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

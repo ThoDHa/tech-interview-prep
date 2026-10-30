@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-capacity-to-ship-packages-wit
 
 A conveyor belt has packages that must be shipped from one port to another within days days.
 
-  uv run python amazon_oa/amazon-capacity-to-ship-packages-within-d-days/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-capacity-to-ship-packages-within-d-days/              # run the test sets
+  uv run python amazon/amazon-capacity-to-ship-packages-within-d-days/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-capacity-to-ship-packages-within-d-days/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

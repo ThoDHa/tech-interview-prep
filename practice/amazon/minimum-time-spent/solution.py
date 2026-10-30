@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/minimum-time-spent.md
 
 Amazon Prime Video has movies in category 'comedy' or 'drama'. Determine the earliest time you can finish at least one movie from each category. The release schedule and duration of the movies are pro
 
-  uv run python amazon_oa/minimum-time-spent/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/minimum-time-spent/              # run the test sets
+  uv run python amazon/minimum-time-spent/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/minimum-time-spent/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

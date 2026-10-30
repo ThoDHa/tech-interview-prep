@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/leetcode/subtree_of_another_tree.md
 
 Given the roots of two binary trees `root` and `subRoot`, return `true` if there is a subtree of `root` with the same structure and node values of `subRoot` and `false` otherwise. A subtree of a binar
 
-  uv run python subtree_of_another_tree/solution.py   # debug one case (see CASE below)
-  uv run pytest subtree_of_another_tree/              # run the test sets
+  uv run python leetcode/subtree_of_another_tree/solution.py   # debug one case (see CASE below)
+  uv run pytest leetcode/subtree_of_another_tree/              # run the test sets
 """
 
 from harness import NotSolved, pick_case
@@ -24,7 +24,7 @@ class Solution:
 if __name__ == "__main__":
     # Debug playground: set a breakpoint in solve above, then run this file.
     # Pick a case by id (ids are in cases.json).
-    CASE = "example_1"
+    CASE = "case_1"
     case = pick_case(__file__, CASE)
     result = Solution().solve(*case["args"])
     print(f"case {case['id']}: args = {case['args']}")

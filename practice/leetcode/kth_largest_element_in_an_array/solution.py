@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/leetcode/kth_largest_element_in_an_array.md
 
 Given an unsorted array of integers `nums` and an integer `k`, return the `kth` largest element in the array. By `kth` largest element, we mean the `kth` largest element in the sorted order, not the `
 
-  uv run python kth_largest_element_in_an_array/solution.py   # debug one case (see CASE below)
-  uv run pytest kth_largest_element_in_an_array/              # run the test sets
+  uv run python leetcode/kth_largest_element_in_an_array/solution.py   # debug one case (see CASE below)
+  uv run pytest leetcode/kth_largest_element_in_an_array/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

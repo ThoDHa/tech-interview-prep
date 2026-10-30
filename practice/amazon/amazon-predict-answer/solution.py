@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-predict-answer.md
 
 In this stock price prediction game, Player 1 provides Player 2 with stock market data for n consecutive days, representing the stock prices on each day, represented by stockData[].
 
-  uv run python amazon_oa/amazon-predict-answer/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-predict-answer/              # run the test sets
+  uv run python amazon/amazon-predict-answer/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-predict-answer/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

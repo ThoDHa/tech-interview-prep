@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/leetcode/maximum_product_subarray.md
 
 Given an integer array `nums`, find a **subarray** that has the largest product, and return the product. A **subarray** is a contiguous non-empty sequence of elements within an array. You can assume t
 
-  uv run python maximum_product_subarray/solution.py   # debug one case (see CASE below)
-  uv run pytest maximum_product_subarray/              # run the test sets
+  uv run python leetcode/maximum_product_subarray/solution.py   # debug one case (see CASE below)
+  uv run pytest leetcode/maximum_product_subarray/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

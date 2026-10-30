@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-find-optimal-level.md
 
 Amazon is dedicated to leveraging advanced methods to streamline stock movement across its distribution centers. In this scenario, you are assigned a challenge involving a specific process with a sequ
 
-  uv run python amazon_oa/amazon-find-optimal-level/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-find-optimal-level/              # run the test sets
+  uv run python amazon/amazon-find-optimal-level/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-find-optimal-level/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

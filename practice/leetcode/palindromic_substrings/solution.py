@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/leetcode/palindromic_substrings.md
 
 Given a string `s`, return the number of substrings within `s` that are palindromes. A **palindrome** is a string that reads the same forward and backward.
 
-  uv run python palindromic_substrings/solution.py   # debug one case (see CASE below)
-  uv run pytest palindromic_substrings/              # run the test sets
+  uv run python leetcode/palindromic_substrings/solution.py   # debug one case (see CASE below)
+  uv run pytest leetcode/palindromic_substrings/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

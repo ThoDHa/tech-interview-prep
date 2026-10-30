@@ -5,8 +5,8 @@ Reference implementation of the write-up's Min-Heap K-Way Merge solution, kept
 next to the harness so authored cases stay falsifiable. Your own attempt
 lives in solution.py.
 
-  uv run python design_twitter/reference.py   # replay the example
-  uv run pytest design_twitter/               # run the test sets
+  uv run python leetcode/design_twitter/reference.py   # replay the example
+  uv run pytest leetcode/design_twitter/               # run the test sets
 """
 
 import heapq

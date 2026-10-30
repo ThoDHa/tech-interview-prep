@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-reduce-memory-usage.md
 
 You are working on an Amazon Data Center where you are required to reduce the amount of main memory consumption by the processes.
 
-  uv run python amazon_oa/amazon-reduce-memory-usage/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-reduce-memory-usage/              # run the test sets
+  uv run python amazon/amazon-reduce-memory-usage/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-reduce-memory-usage/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

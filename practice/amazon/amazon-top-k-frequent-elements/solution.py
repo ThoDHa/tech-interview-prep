@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-top-k-frequent-elements.md
 
 Given a nonempty integer array nums and an integer k, return the k distinct values that occur most frequently.
 
-  uv run python amazon_oa/amazon-top-k-frequent-elements/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-top-k-frequent-elements/              # run the test sets
+  uv run python amazon/amazon-top-k-frequent-elements/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-top-k-frequent-elements/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

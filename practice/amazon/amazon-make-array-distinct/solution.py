@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-make-array-distinct.md
 
 Amazon OA problem.
 
-  uv run python amazon_oa/amazon-make-array-distinct/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-make-array-distinct/              # run the test sets
+  uv run python amazon/amazon-make-array-distinct/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-make-array-distinct/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

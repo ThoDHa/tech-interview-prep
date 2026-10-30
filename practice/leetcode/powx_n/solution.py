@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/leetcode/powx_n.md
 
 `Pow(x, n)` is a mathematical function to calculate the value of `x` raised to the power of `n` (i.e., `x^n`). Given a floating-point value `x` and an integer value `n`, implement the `myPow(x, n)` fu
 
-  uv run python powx_n/solution.py   # debug one case (see CASE below)
-  uv run pytest powx_n/              # run the test sets
+  uv run python leetcode/powx_n/solution.py   # debug one case (see CASE below)
+  uv run pytest leetcode/powx_n/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

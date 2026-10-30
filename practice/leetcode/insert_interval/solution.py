@@ -5,8 +5,8 @@ Write-up & approaches: ../../../docs/leetcode/insert_interval.md
 Given a sorted list of non-overlapping intervals and a new interval, insert the
 new interval and merge any overlaps so the result stays sorted and disjoint.
 
-  uv run python insert_interval/solution.py   # debug one case (see CASE below)
-  uv run pytest insert_interval/              # run the test sets
+  uv run python leetcode/insert_interval/solution.py   # debug one case (see CASE below)
+  uv run pytest leetcode/insert_interval/              # run the test sets
 """
 
 from typing import List

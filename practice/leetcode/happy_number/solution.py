@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/leetcode/happy_number.md
 
 A **non-cyclical number** is an integer defined by the following algorithm: * Given a positive integer, replace it with the sum of the squares of its digits. * Repeat the above step until the number e
 
-  uv run python happy_number/solution.py   # debug one case (see CASE below)
-  uv run pytest happy_number/              # run the test sets
+  uv run python leetcode/happy_number/solution.py   # debug one case (see CASE below)
+  uv run pytest leetcode/happy_number/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

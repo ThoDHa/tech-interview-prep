@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-find-min-replacements.md
 
 In Amazon's distribution network, there are several drones with varying capacities, ranging from 1 to 10^9. Each j-th drone has a carrying capacity of j. The company needs to dispatch n packages, wher
 
-  uv run python amazon_oa/amazon-find-min-replacements/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-find-min-replacements/              # run the test sets
+  uv run python amazon/amazon-find-min-replacements/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-find-min-replacements/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

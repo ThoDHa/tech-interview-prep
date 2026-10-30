@@ -5,8 +5,8 @@ Reference implementation of the write-up's Hierholzer's Algorithm solution.
 
 You are given a list of flight tickets `tickets` where `tickets[i] = [from_i, to_i]` represent the source airport and the destination airport. Each `from_i` and `to_i` consists of three uppercase English letters. Reconstruct the itinerary in order and return it. All of the tickets belong to someone who originally departed from `"JFK"`. Your objective is to reconstruct the flight path that this person took, assuming each ticket was used exactly once. If there are multiple valid flight paths, return the lexicographically smallest one. You may assume all the tickets form at least one valid flight path.
 
-  uv run python reconstruct_itinerary/reference.py   # debug one case (see CASE below)
-  uv run pytest reconstruct_itinerary/              # run the test sets
+  uv run python leetcode/reconstruct_itinerary/reference.py   # debug one case (see CASE below)
+  uv run pytest leetcode/reconstruct_itinerary/              # run the test sets
 """
 
 import heapq

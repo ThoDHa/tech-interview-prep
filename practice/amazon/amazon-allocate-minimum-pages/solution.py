@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-allocate-minimum-pages.md
 
 You are given an array pages, where pages[i] is the number of pages in the i-th book, and an integer students.
 
-  uv run python amazon_oa/amazon-allocate-minimum-pages/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-allocate-minimum-pages/              # run the test sets
+  uv run python amazon/amazon-allocate-minimum-pages/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-allocate-minimum-pages/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

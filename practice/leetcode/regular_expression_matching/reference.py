@@ -5,8 +5,8 @@ Reference implementation of the write-up's Top-Down Memoization solution, kept
 next to the harness so authored cases stay falsifiable. Your own attempt
 lives in solution.py.
 
-  uv run python regular_expression_matching/reference.py   # replay the example cases
-  uv run pytest regular_expression_matching/               # run the test sets
+  uv run python leetcode/regular_expression_matching/reference.py   # replay the example cases
+  uv run pytest leetcode/regular_expression_matching/               # run the test sets
 """
 
 from harness import pick_case

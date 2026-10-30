@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-maximize-k-element-and-with-i
 
 You are given an array nums, an integer k, and a nonnegative increment budget budget. You may increase array elements by nonnegative integer amounts whose total is at most budget.
 
-  uv run python amazon_oa/amazon-maximize-k-element-and-with-increment-budget/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-maximize-k-element-and-with-increment-budget/              # run the test sets
+  uv run python amazon/amazon-maximize-k-element-and-with-increment-budget/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-maximize-k-element-and-with-increment-budget/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

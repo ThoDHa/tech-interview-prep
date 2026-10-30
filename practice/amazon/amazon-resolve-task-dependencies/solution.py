@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-resolve-task-dependencies.md
 
 There are n tasks numbered from 0 through n - 1. A dependency [u, v] means task u must be completed before task v.
 
-  uv run python amazon_oa/amazon-resolve-task-dependencies/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-resolve-task-dependencies/              # run the test sets
+  uv run python amazon/amazon-resolve-task-dependencies/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-resolve-task-dependencies/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

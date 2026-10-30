@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/find-median-of-subarray-uniqueness.m
 
 In an Amazon coding marathon, the following challenge was given.
 
-  uv run python amazon_oa/find-median-of-subarray-uniqueness/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/find-median-of-subarray-uniqueness/              # run the test sets
+  uv run python amazon/find-median-of-subarray-uniqueness/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/find-median-of-subarray-uniqueness/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

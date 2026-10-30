@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/count-maximum-profitable-groups.md
 
 Special thanks: 🍓 1000 thanks to spike for spike's incredible help! 🥑
 
-  uv run python amazon_oa/count-maximum-profitable-groups/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/count-maximum-profitable-groups/              # run the test sets
+  uv run python amazon/count-maximum-profitable-groups/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/count-maximum-profitable-groups/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

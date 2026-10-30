@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/leetcode/search_a_2d_matrix.md
 
 You are given an `m x n` 2-D integer array `matrix` and an integer `target`. * Each row in `matrix` is sorted in *non-decreasing* order. * The first integer of every row is greater than the last integ
 
-  uv run python search_a_2d_matrix/solution.py   # debug one case (see CASE below)
-  uv run pytest search_a_2d_matrix/              # run the test sets
+  uv run python leetcode/search_a_2d_matrix/solution.py   # debug one case (see CASE below)
+  uv run pytest leetcode/search_a_2d_matrix/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

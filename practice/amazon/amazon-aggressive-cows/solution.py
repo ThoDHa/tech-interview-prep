@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-aggressive-cows.md
 
 Given distinct integer stall positions stalls and an integer cows, place exactly cows cows in different stalls.
 
-  uv run python amazon_oa/amazon-aggressive-cows/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-aggressive-cows/              # run the test sets
+  uv run python amazon/amazon-aggressive-cows/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-aggressive-cows/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

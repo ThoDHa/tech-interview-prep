@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-optimal-utilization.md
 
 You are given a device with a limited amount of memory. Each device must run two applications at the same time: one foreground application and one background application. Each application is identifie
 
-  uv run python amazon_oa/amazon-optimal-utilization/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-optimal-utilization/              # run the test sets
+  uv run python amazon/amazon-optimal-utilization/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-optimal-utilization/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

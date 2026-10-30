@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/erase-pairs.md
 
 You are given a string S. In one move you can erase from S a pair of identical letters. Find the shortest possible string that can be created this way. 
 
-  uv run python amazon_oa/erase-pairs/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/erase-pairs/              # run the test sets
+  uv run python amazon/erase-pairs/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/erase-pairs/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

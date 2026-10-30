@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-calculate-beauty-values.md
 
 Source note: The judged core task matches the visible source at about 100%. The source images do not show numeric bounds or the original callable signature.
 
-  uv run python amazon_oa/amazon-calculate-beauty-values/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-calculate-beauty-values/              # run the test sets
+  uv run python amazon/amazon-calculate-beauty-values/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-calculate-beauty-values/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

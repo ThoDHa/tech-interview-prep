@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-reverse-binary-string.md
 
 You are given a binary string. Find the minimum number of operations required to reverse it. An operation is defined as:
 
-  uv run python amazon_oa/amazon-reverse-binary-string/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-reverse-binary-string/              # run the test sets
+  uv run python amazon/amazon-reverse-binary-string/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-reverse-binary-string/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

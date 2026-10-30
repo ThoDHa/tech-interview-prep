@@ -6,8 +6,8 @@ via BFS) solution.
 
 There is a new alien language that uses the English alphabet, but the order of the letters is unknown. You are given a list of strings `words` from the alien language's dictionary. It is claimed that the strings in `words` are sorted lexicographically by the rules of this new language. If this claim is incorrect, and the given arrangement of strings in `words` cannot correspond to any order of letters, return `""`. Otherwise, return a string of the unique letters in the new alien language sorted in lexicographically increasing order by the new language's rules. If there are multiple solutions, return **any** of them.
 
-  uv run python alien_dictionary/reference.py   # debug one case (see below)
-  uv run pytest alien_dictionary/               # run the test sets
+  uv run python leetcode/alien_dictionary/reference.py   # debug one case (see below)
+  uv run pytest leetcode/alien_dictionary/               # run the test sets
 """
 
 from collections import deque

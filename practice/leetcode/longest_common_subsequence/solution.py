@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/leetcode/longest_common_subsequence.md
 
 Given two strings `text1` and `text2`, return the length of the *longest common subsequence* between the two strings if one exists, otherwise return `0`. A **subsequence** is a sequence that can be de
 
-  uv run python longest_common_subsequence/solution.py   # debug one case (see CASE below)
-  uv run pytest longest_common_subsequence/              # run the test sets
+  uv run python leetcode/longest_common_subsequence/solution.py   # debug one case (see CASE below)
+  uv run pytest leetcode/longest_common_subsequence/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-get-min-removal.md
 
 There are n products in an Amazon catalogue, where the category of the i^th product is represented by the array catalogue.
 
-  uv run python amazon_oa/amazon-get-min-removal/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-get-min-removal/              # run the test sets
+  uv run python amazon/amazon-get-min-removal/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-get-min-removal/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

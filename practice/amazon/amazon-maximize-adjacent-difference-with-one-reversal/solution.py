@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-maximize-adjacent-difference-
 
 Given an integer array values, define its score as the sum of abs(values[i] - values[i + 1]) over every adjacent pair.
 
-  uv run python amazon_oa/amazon-maximize-adjacent-difference-with-one-reversal/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-maximize-adjacent-difference-with-one-reversal/              # run the test sets
+  uv run python amazon/amazon-maximize-adjacent-difference-with-one-reversal/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-maximize-adjacent-difference-with-one-reversal/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-unique-pairs-2d-target.md
 
 Given a rectangular integer matrix matrix whose values are globally unique and an integer target, return the number of unordered pairs of values whose sum is target.
 
-  uv run python amazon_oa/amazon-unique-pairs-2d-target/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-unique-pairs-2d-target/              # run the test sets
+  uv run python amazon/amazon-unique-pairs-2d-target/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-unique-pairs-2d-target/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

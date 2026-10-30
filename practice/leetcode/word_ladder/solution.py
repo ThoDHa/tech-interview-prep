@@ -7,8 +7,8 @@ words in the shortest transformation sequence from `beginWord` to `endWord`
 (changing one letter at a time, each intermediate word in `wordList`), or `0` if
 no such sequence exists.
 
-  uv run python word_ladder/solution.py     # debug one case (see CASE below)
-  uv run pytest word_ladder/                # run the test sets
+  uv run python leetcode/word_ladder/solution.py   # debug one case (see CASE below)
+  uv run pytest leetcode/word_ladder/              # run the test sets
 """
 
 from typing import List

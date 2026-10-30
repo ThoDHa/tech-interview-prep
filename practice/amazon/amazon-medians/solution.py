@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-medians.md
 
 A new Amazon intern encountered a challenging task. Currently, the intern has n integers, where the value of the ith element is represented by the array element nums[i]. The intern is curious to play 
 
-  uv run python amazon_oa/amazon-medians/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-medians/              # run the test sets
+  uv run python amazon/amazon-medians/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-medians/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

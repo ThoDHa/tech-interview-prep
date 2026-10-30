@@ -5,8 +5,8 @@ Write-up & approaches: ../../../docs/leetcode/evaluate_reverse_polish_notation.m
 Evaluate an arithmetic expression given in Reverse Polish Notation and return its
 integer value (division truncates toward zero).
 
-  uv run python evaluate_reverse_polish_notation/solution.py   # debug one case (see CASE below)
-  uv run pytest evaluate_reverse_polish_notation/              # run the test sets
+  uv run python leetcode/evaluate_reverse_polish_notation/solution.py   # debug one case (see CASE below)
+  uv run pytest leetcode/evaluate_reverse_polish_notation/              # run the test sets
 """
 
 from typing import List

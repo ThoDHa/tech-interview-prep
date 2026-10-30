@@ -6,8 +6,8 @@ Given the `root` of a binary tree, determine whether it is a valid binary search
 tree: every node's value must exceed all values in its left subtree and be less
 than all values in its right subtree, recursively.
 
-  uv run python validate_binary_search_tree/solution.py   # debug one case (see CASE below)
-  uv run pytest validate_binary_search_tree/              # run the test sets
+  uv run python leetcode/validate_binary_search_tree/solution.py   # debug one case (see CASE below)
+  uv run pytest leetcode/validate_binary_search_tree/              # run the test sets
 """
 
 from typing import Optional

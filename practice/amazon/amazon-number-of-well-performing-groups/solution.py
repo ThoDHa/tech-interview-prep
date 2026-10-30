@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-number-of-well-performing-gro
 
 Amazon aims to review its network of m servers deployed across different regions globally. The workloads on these servers are stored in the array workloads. A collection of servers is labeled as perfo
 
-  uv run python amazon_oa/amazon-number-of-well-performing-groups/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-number-of-well-performing-groups/              # run the test sets
+  uv run python amazon/amazon-number-of-well-performing-groups/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-number-of-well-performing-groups/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

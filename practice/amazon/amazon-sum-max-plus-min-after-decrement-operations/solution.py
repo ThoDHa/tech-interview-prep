@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-sum-max-plus-min-after-decrem
 
 You are given an integer array arr and an integer requests.
 
-  uv run python amazon_oa/amazon-sum-max-plus-min-after-decrement-operations/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-sum-max-plus-min-after-decrement-operations/              # run the test sets
+  uv run python amazon/amazon-sum-max-plus-min-after-decrement-operations/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-sum-max-plus-min-after-decrement-operations/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-decode-encoded-string.md
 
 An encoded string uses positive repeat counts followed by bracketed segments. Decode it using these rules:
 
-  uv run python amazon_oa/amazon-decode-encoded-string/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-decode-encoded-string/              # run the test sets
+  uv run python amazon/amazon-decode-encoded-string/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-decode-encoded-string/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

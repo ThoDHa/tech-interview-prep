@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/leetcode/decode_ways.md
 
 A string consisting of uppercase english characters can be encoded to a number using the following mapping: ```java 'A' -> "1" 'B' -> "2" ... 'Z' -> "26" ``` To **decode** a message, digits must be gr
 
-  uv run python decode_ways/solution.py   # debug one case (see CASE below)
-  uv run pytest decode_ways/              # run the test sets
+  uv run python leetcode/decode_ways/solution.py   # debug one case (see CASE below)
+  uv run pytest leetcode/decode_ways/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

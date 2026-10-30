@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-split-prefix-suffix.md
 
 Amazon Prime Day is a day where many items are put on sale for Amazon Prime members. A list of sale items is assembled where each item is assigned a category denoted by a lowercase English letter.
 
-  uv run python amazon_oa/amazon-split-prefix-suffix/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-split-prefix-suffix/              # run the test sets
+  uv run python amazon/amazon-split-prefix-suffix/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-split-prefix-suffix/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

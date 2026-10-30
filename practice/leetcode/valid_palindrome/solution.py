@@ -5,8 +5,8 @@ Write-up & approaches: ../../../docs/leetcode/valid_palindrome.md
 Given a string `s`, return `true` if it is a palindrome after lowercasing every
 letter and dropping every non-alphanumeric character, or `false` otherwise.
 
-  uv run python valid_palindrome/solution.py     # debug one case (see CASE below)
-  uv run pytest valid_palindrome/                # run the test sets
+  uv run python leetcode/valid_palindrome/solution.py   # debug one case (see CASE below)
+  uv run pytest leetcode/valid_palindrome/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-longest-arithmetic-subarray-a
 
 You are given an integer array deviation.
 
-  uv run python amazon_oa/amazon-longest-arithmetic-subarray-after-one-change/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-longest-arithmetic-subarray-after-one-change/              # run the test sets
+  uv run python amazon/amazon-longest-arithmetic-subarray-after-one-change/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-longest-arithmetic-subarray-after-one-change/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/leetcode/multiply_strings.md
 
 You are given two strings `num1` and `num2` that represent non-negative integers. Return the product of `num1` and `num2` in the form of a string. Assume that neither `num1` nor `num2` contain any lea
 
-  uv run python multiply_strings/solution.py   # debug one case (see CASE below)
-  uv run pytest multiply_strings/              # run the test sets
+  uv run python leetcode/multiply_strings/solution.py   # debug one case (see CASE below)
+  uv run pytest leetcode/multiply_strings/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

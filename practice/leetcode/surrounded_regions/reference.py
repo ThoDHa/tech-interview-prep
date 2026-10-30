@@ -5,8 +5,8 @@ Reference implementation of the write-up's Border DFS + Capture solution,
 kept next to the harness so authored cases stay falsifiable. Your own attempt
 lives in solution.py.
 
-  uv run python surrounded_regions/reference.py   # debug one case (see CASE below)
-  uv run pytest surrounded_regions/               # run the test sets
+  uv run python leetcode/surrounded_regions/reference.py   # debug one case (see CASE below)
+  uv run pytest leetcode/surrounded_regions/               # run the test sets
 """
 
 

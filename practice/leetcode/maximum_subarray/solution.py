@@ -5,8 +5,8 @@ Write-up & approaches: ../../../docs/leetcode/maximum_subarray.md
 Given an integer array `nums`, find the contiguous subarray (containing at least
 one number) which has the largest sum and return its sum.
 
-  uv run python maximum_subarray/solution.py     # debug one case (see CASE below)
-  uv run pytest maximum_subarray/                # run the test sets
+  uv run python leetcode/maximum_subarray/solution.py   # debug one case (see CASE below)
+  uv run pytest leetcode/maximum_subarray/              # run the test sets
 """
 
 from typing import List

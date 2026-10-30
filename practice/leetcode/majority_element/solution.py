@@ -5,8 +5,8 @@ Write-up & approaches: ../../../docs/leetcode/majority_element.md
 Given an array `nums` of size `n`, return the majority element: the element that
 appears more than `⌊n / 2⌋` times. You may assume it always exists.
 
-  uv run python majority_element/solution.py   # debug one case (see CASE below)
-  uv run pytest majority_element/              # run the test sets
+  uv run python leetcode/majority_element/solution.py   # debug one case (see CASE below)
+  uv run pytest leetcode/majority_element/              # run the test sets
 """
 
 from typing import List

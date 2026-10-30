@@ -6,8 +6,8 @@ Given an `m x n` grid of cells (`0` empty, `1` fresh, `2` rotten), each minute
 every fresh orange 4-directionally adjacent to a rotten one rots. Return the
 minimum minutes until no fresh orange remains, or `-1` if some never rot.
 
-  uv run python rotting_oranges/solution.py     # debug one case (see CASE below)
-  uv run pytest rotting_oranges/                # run the test sets
+  uv run python leetcode/rotting_oranges/solution.py   # debug one case (see CASE below)
+  uv run pytest leetcode/rotting_oranges/              # run the test sets
 """
 
 from typing import List

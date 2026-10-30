@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/leetcode/burst_balloons.md
 
 You are given an array of integers `nums` of size `n`. The `ith` element represents a balloon with an integer value of `nums[i]`. You must burst all of the balloons. If you burst the `ith` balloon, yo
 
-  uv run python burst_balloons/solution.py   # debug one case (see CASE below)
-  uv run pytest burst_balloons/              # run the test sets
+  uv run python leetcode/burst_balloons/solution.py   # debug one case (see CASE below)
+  uv run pytest leetcode/burst_balloons/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

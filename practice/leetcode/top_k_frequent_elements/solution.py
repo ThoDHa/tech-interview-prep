@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/leetcode/top_k_frequent_elements.md
 
 Given an integer array `nums` and an integer `k`, return the `k` most frequent elements within the array. The test cases are generated such that the answer is always **unique**. You may return the out
 
-  uv run python top_k_frequent_elements/solution.py   # debug one case (see CASE below)
-  uv run pytest top_k_frequent_elements/              # run the test sets
+  uv run python leetcode/top_k_frequent_elements/solution.py   # debug one case (see CASE below)
+  uv run pytest leetcode/top_k_frequent_elements/              # run the test sets
 """
 
 from harness import NotSolved, pick_case
@@ -24,7 +24,7 @@ class Solution:
 if __name__ == "__main__":
     # Debug playground: set a breakpoint in solve above, then run this file.
     # Pick a case by id (ids are in cases.json).
-    CASE = "example_1"
+    CASE = "classic_tie_free"
     case = pick_case(__file__, CASE)
     result = Solution().solve(*case["args"])
     print(f"case {case['id']}: args = {case['args']}")

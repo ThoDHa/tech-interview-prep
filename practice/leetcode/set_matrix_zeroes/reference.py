@@ -8,8 +8,8 @@ solution.py.
 Given an `m x n` matrix of integers `matrix`, if an element is `0`, set its
 entire row and column to `0`'s, in place.
 
-  uv run python set_matrix_zeroes/reference.py   # replay the example cases
-  uv run pytest set_matrix_zeroes/               # run the test sets
+  uv run python leetcode/set_matrix_zeroes/reference.py   # replay the example cases
+  uv run pytest leetcode/set_matrix_zeroes/               # run the test sets
 """
 
 from typing import List

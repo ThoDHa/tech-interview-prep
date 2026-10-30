@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-binary-strings-bounded-subset
 
 Given an array of binary strings strs and two budgets, maxOnes and maxZeroes, return the maximum number of strings you can select.
 
-  uv run python amazon_oa/amazon-binary-strings-bounded-subset/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-binary-strings-bounded-subset/              # run the test sets
+  uv run python amazon/amazon-binary-strings-bounded-subset/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-binary-strings-bounded-subset/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

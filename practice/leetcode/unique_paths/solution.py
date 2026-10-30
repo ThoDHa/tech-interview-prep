@@ -5,8 +5,8 @@ Write-up & approaches: ../../../docs/leetcode/unique_paths.md
 A robot starts at the top-left of an `m x n` grid and may move only down or
 right. Return the number of unique paths to reach the bottom-right corner.
 
-  uv run python unique_paths/solution.py     # debug one case (see CASE below)
-  uv run pytest unique_paths/                # run the test sets
+  uv run python leetcode/unique_paths/solution.py   # debug one case (see CASE below)
+  uv run pytest leetcode/unique_paths/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

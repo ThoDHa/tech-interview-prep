@@ -5,8 +5,8 @@ Reference implementation of the write-up's Space-Optimized Two-Row DP solution.
 
 You are given three strings `s1`, `s2`, and `s3`. Return `true` if `s3` is formed by interleaving `s1` and `s2` together or `false` otherwise: the characters of `s1` and `s2` are merged so that each keeps its own relative order.
 
-  uv run python interleaving_string/reference.py   # debug one case (see CASE below)
-  uv run pytest interleaving_string/              # run the test sets
+  uv run python leetcode/interleaving_string/reference.py   # debug one case (see CASE below)
+  uv run pytest leetcode/interleaving_string/              # run the test sets
 """
 
 from harness import pick_case

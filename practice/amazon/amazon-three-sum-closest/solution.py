@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-three-sum-closest.md
 
 Given an integer array nums and an integer target, choose three distinct indices and return the sum of their values that is closest to target.
 
-  uv run python amazon_oa/amazon-three-sum-closest/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-three-sum-closest/              # run the test sets
+  uv run python amazon/amazon-three-sum-closest/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-three-sum-closest/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

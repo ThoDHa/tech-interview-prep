@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/leetcode/median_of_two_sorted_arrays.md
 
 You are given two integer arrays `nums1` and `nums2` of size `m` and `n` respectively, where each is sorted in ascending order. Return the [median](https://en.wikipedia.org/wiki/Median) value among al
 
-  uv run python median_of_two_sorted_arrays/solution.py   # debug one case (see CASE below)
-  uv run pytest median_of_two_sorted_arrays/              # run the test sets
+  uv run python leetcode/median_of_two_sorted_arrays/solution.py   # debug one case (see CASE below)
+  uv run pytest leetcode/median_of_two_sorted_arrays/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

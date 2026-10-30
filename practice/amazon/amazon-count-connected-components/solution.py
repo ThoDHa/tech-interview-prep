@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-count-connected-components.md
 
 You are given an undirected graph with n nodes and a list of edges. Each edge connects two nodes in the graph.
 
-  uv run python amazon_oa/amazon-count-connected-components/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-count-connected-components/              # run the test sets
+  uv run python amazon/amazon-count-connected-components/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-count-connected-components/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

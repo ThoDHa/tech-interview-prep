@@ -5,8 +5,8 @@ Canonical reference implementation of the write-up's Row-by-Row Backtracking
 solution, kept next to the harness so authored cases stay falsifiable. Your
 own attempt lives in solution.py.
 
-  uv run python n_queens/reference.py   # debug one case (see below)
-  uv run pytest n_queens/               # run the test sets
+  uv run python leetcode/n_queens/reference.py   # debug one case (see below)
+  uv run pytest leetcode/n_queens/               # run the test sets
 """
 
 from typing import List, Set

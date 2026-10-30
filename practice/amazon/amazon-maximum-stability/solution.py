@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-maximum-stability.md
 
 AWS provides servers for client deployments. Each server has an availability factor and a reliability factor. You are given two arrays, availability and reliability, where availability[i] and reliabil
 
-  uv run python amazon_oa/amazon-maximum-stability/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-maximum-stability/              # run the test sets
+  uv run python amazon/amazon-maximum-stability/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-maximum-stability/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

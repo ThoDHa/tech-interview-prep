@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-number-of-islands.md
 
 Given an array of equal-length strings grid, where '1' represents land and '0' represents water, return the number of islands.
 
-  uv run python amazon_oa/amazon-number-of-islands/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-number-of-islands/              # run the test sets
+  uv run python amazon/amazon-number-of-islands/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-number-of-islands/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

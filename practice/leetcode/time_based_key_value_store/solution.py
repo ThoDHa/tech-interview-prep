@@ -6,8 +6,8 @@ Design a TimeMap that stores multiple values for the same key at different
 timestamps; `get(key, t)` returns the value with the largest timestamp `<= t`
 (or `""` if none). Timestamps passed to `set` are strictly increasing.
 
-  uv run python time_based_key_value_store/solution.py     # debug one case (see CASE below)
-  uv run pytest time_based_key_value_store/                # run the test sets
+  uv run python leetcode/time_based_key_value_store/solution.py   # debug one case (see CASE below)
+  uv run pytest leetcode/time_based_key_value_store/              # run the test sets
 """
 
 from harness import NotSolved, pick_case, run_operations

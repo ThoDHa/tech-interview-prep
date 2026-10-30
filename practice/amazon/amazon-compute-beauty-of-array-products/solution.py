@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-compute-beauty-of-array-produ
 
 The Amazon distribution center consists of arrays of products, each possessing unique attributes. The task at hand is to compute the beauty of these product arrays, with the goal of achieving an effic
 
-  uv run python amazon_oa/amazon-compute-beauty-of-array-products/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-compute-beauty-of-array-products/              # run the test sets
+  uv run python amazon/amazon-compute-beauty-of-array-products/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-compute-beauty-of-array-products/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

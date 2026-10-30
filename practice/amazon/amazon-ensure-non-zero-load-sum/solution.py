@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-ensure-non-zero-load-sum.md
 
 You are given an integer array queueMessages. Positive values represent messages sent by producers, and negative values represent messages retrieved by consumers. The processing load of a contiguous s
 
-  uv run python amazon_oa/amazon-ensure-non-zero-load-sum/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-ensure-non-zero-load-sum/              # run the test sets
+  uv run python amazon/amazon-ensure-non-zero-load-sum/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-ensure-non-zero-load-sum/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

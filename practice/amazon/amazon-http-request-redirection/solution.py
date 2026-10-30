@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-http-request-redirection.md
 
 Amazon engineers are investigating an HTTP request that is redirected among servers.
 
-  uv run python amazon_oa/amazon-http-request-redirection/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-http-request-redirection/              # run the test sets
+  uv run python amazon/amazon-http-request-redirection/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-http-request-redirection/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

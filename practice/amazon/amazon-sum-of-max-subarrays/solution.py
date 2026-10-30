@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-sum-of-max-subarrays.md
 
 Find the sum of the maximum of all subarrays multiplied by their length in O(n).
 
-  uv run python amazon_oa/amazon-sum-of-max-subarrays/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-sum-of-max-subarrays/              # run the test sets
+  uv run python amazon/amazon-sum-of-max-subarrays/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-sum-of-max-subarrays/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

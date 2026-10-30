@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-find-safest-path-in-grid.md
 
 You are given an n x n binary matrix grid. A cell containing 1 contains a thief, and a cell containing 0 is empty.
 
-  uv run python amazon_oa/amazon-find-safest-path-in-grid/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-find-safest-path-in-grid/              # run the test sets
+  uv run python amazon/amazon-find-safest-path-in-grid/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-find-safest-path-in-grid/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

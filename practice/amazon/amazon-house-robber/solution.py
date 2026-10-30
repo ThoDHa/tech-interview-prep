@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-house-robber.md
 
 You are given an array nums, where nums[i] is the amount of money in house i.
 
-  uv run python amazon_oa/amazon-house-robber/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-house-robber/              # run the test sets
+  uv run python amazon/amazon-house-robber/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-house-robber/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

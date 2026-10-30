@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/max-lucky-numbers.md
 
 Amazon.com is distributing coupons in the form of a lottery system for loyal customers. The coupons are called "lucky numbers" and the customer with the largest lucky number gets the best discount. De
 
-  uv run python amazon_oa/max-lucky-numbers/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/max-lucky-numbers/              # run the test sets
+  uv run python amazon/max-lucky-numbers/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/max-lucky-numbers/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

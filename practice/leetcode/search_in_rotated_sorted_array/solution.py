@@ -6,8 +6,8 @@ An ascending array of distinct values is rotated at an unknown pivot. Given the
 rotated `nums` and a `target`, return the index of `target`, or `-1` if it is
 absent. The algorithm must run in `O(log n)` time.
 
-  uv run python search_in_rotated_sorted_array/solution.py   # debug one case (see CASE below)
-  uv run pytest search_in_rotated_sorted_array/              # run the test sets
+  uv run python leetcode/search_in_rotated_sorted_array/solution.py   # debug one case (see CASE below)
+  uv run pytest leetcode/search_in_rotated_sorted_array/              # run the test sets
 """
 
 from typing import List

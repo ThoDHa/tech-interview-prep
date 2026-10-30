@@ -5,8 +5,8 @@ Reference implementation of the write-up's Union-Find solution.
 
 You have an undirected graph of `n` nodes labeled from `0` to `n - 1`. You are given an integer `n` and an array `edges` where `edges[i] = [aᵢ, bᵢ]` indicates that there is an edge between `aᵢ` and `bᵢ` in the graph. Return the number of connected components in the graph.
 
-  uv run python number_of_connected_components_in_an_undirected_graph/reference.py   # debug one case (see CASE below)
-  uv run pytest number_of_connected_components_in_an_undirected_graph/              # run the test sets
+  uv run python leetcode/number_of_connected_components_in_an_undirected_graph/reference.py   # debug one case (see CASE below)
+  uv run pytest leetcode/number_of_connected_components_in_an_undirected_graph/              # run the test sets
 """
 
 from harness import pick_case

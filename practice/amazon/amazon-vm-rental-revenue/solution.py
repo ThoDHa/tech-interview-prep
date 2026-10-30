@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-vm-rental-revenue.md
 
 There are multiple VM types, each with an initial stock count. A sequence of customers rent one VM at a time.
 
-  uv run python amazon_oa/amazon-vm-rental-revenue/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-vm-rental-revenue/              # run the test sets
+  uv run python amazon/amazon-vm-rental-revenue/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-vm-rental-revenue/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

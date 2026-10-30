@@ -7,8 +7,8 @@ You are given an `m x n` grid `image` of pixel values plus a start pixel
 4-directionally connected to it that shares the start pixel's original color.
 Return the modified image.
 
-  uv run python flood_fill/solution.py     # debug one case (see CASE below)
-  uv run pytest flood_fill/                # run the test sets
+  uv run python leetcode/flood_fill/solution.py   # debug one case (see CASE below)
+  uv run pytest leetcode/flood_fill/              # run the test sets
 """
 
 from typing import List

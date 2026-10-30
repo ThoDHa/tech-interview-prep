@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-minimum-adjacent-swaps-binary
 
 You are given a binary array bits. Using adjacent swaps, rearrange it so that equal values form two contiguous groups.
 
-  uv run python amazon_oa/amazon-minimum-adjacent-swaps-binary-groups/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-minimum-adjacent-swaps-binary-groups/              # run the test sets
+  uv run python amazon/amazon-minimum-adjacent-swaps-binary-groups/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-minimum-adjacent-swaps-binary-groups/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

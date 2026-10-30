@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/get-success-value.md
 
 Amazon Prime Video has recently released an exclusive series on its platform. They collected the number of viewers from n
 
-  uv run python amazon_oa/get-success-value/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/get-success-value/              # run the test sets
+  uv run python amazon/get-success-value/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/get-success-value/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

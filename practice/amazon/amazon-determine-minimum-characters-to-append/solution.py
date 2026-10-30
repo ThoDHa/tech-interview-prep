@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-determine-minimum-characters-
 
 You are given two strings, searchWord and resultWord. You may append characters only to the end of searchWord. Return the minimum number of characters that must be appended so that resultWord is a sub
 
-  uv run python amazon_oa/amazon-determine-minimum-characters-to-append/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-determine-minimum-characters-to-append/              # run the test sets
+  uv run python amazon/amazon-determine-minimum-characters-to-append/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-determine-minimum-characters-to-append/              # run the test sets
 """
 
 from harness import NotSolved, pick_case
