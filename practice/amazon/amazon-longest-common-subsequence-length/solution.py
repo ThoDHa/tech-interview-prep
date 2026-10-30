@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-longest-common-subsequence-le
 
 Given two lowercase strings first and second, return the length of their longest common subsequence.
 
-  uv run python amazon_oa/amazon-longest-common-subsequence-length/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-longest-common-subsequence-length/              # run the test sets
+  uv run python amazon/amazon-longest-common-subsequence-length/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-longest-common-subsequence-length/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

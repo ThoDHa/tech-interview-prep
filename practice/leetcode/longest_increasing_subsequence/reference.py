@@ -5,8 +5,8 @@ Reference implementation of the write-up's Patience Sorting with Binary Search
 solution, kept next to the harness so authored cases stay falsifiable. Your own
 attempt lives in solution.py.
 
-  uv run python longest_increasing_subsequence/reference.py   # replay the example cases
-  uv run pytest longest_increasing_subsequence/               # run the test sets
+  uv run python leetcode/longest_increasing_subsequence/reference.py   # replay the example cases
+  uv run pytest leetcode/longest_increasing_subsequence/               # run the test sets
 """
 
 from typing import List

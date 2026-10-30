@@ -5,8 +5,8 @@ Write-up & approaches: ../../../docs/leetcode/permutations.md
 Given an array `nums` of distinct integers, return all the possible
 permutations. You can return the answer in any order.
 
-  uv run python permutations/solution.py     # debug one case (see CASE below)
-  uv run pytest permutations/                # run the test sets
+  uv run python leetcode/permutations/solution.py   # debug one case (see CASE below)
+  uv run pytest leetcode/permutations/              # run the test sets
 """
 
 from typing import List

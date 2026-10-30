@@ -5,8 +5,8 @@ Write-up & approaches: ../../../docs/leetcode/min_stack.md
 Design a stack that supports push, pop, top, and retrieving the minimum element
 in constant time.
 
-  uv run python min_stack/solution.py     # debug one case (see CASE below)
-  uv run pytest min_stack/                # run the test sets
+  uv run python leetcode/min_stack/solution.py   # debug one case (see CASE below)
+  uv run pytest leetcode/min_stack/              # run the test sets
 """
 
 from harness import NotSolved, pick_case, run_operations

@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-running-delivery-time-medians
 
 Given an array deliveryTimes, process the values from left to right. After each new delivery time arrives, output the median of all delivery times seen so far.
 
-  uv run python amazon_oa/amazon-running-delivery-time-medians/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-running-delivery-time-medians/              # run the test sets
+  uv run python amazon/amazon-running-delivery-time-medians/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-running-delivery-time-medians/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

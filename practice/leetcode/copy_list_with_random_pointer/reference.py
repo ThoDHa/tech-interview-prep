@@ -7,8 +7,8 @@ Canonical reference implementation: the write-up's Interleaving solution
 
 You are given the head of a linked list of length `n`. Unlike a singly linked list, each node contains an additional pointer `random`, which may point to any node in the list, or `null`. Create a deep copy of the list and return its head.
 
-  uv run python copy_list_with_random_pointer/reference.py   # debug one case (see below)
-  uv run pytest copy_list_with_random_pointer/               # run the test sets
+  uv run python leetcode/copy_list_with_random_pointer/reference.py   # debug one case (see below)
+  uv run pytest leetcode/copy_list_with_random_pointer/               # run the test sets
 """
 
 from typing import List, Optional

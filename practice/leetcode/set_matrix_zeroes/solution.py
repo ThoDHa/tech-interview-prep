@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/leetcode/set_matrix_zeroes.md
 
 Given an `m x n` matrix of integers `matrix`, if an element is `0`, set its entire row and column to `0`'s. You must update the matrix *in-place*.
 
-  uv run python set_matrix_zeroes/solution.py   # debug one case (see CASE below)
-  uv run pytest set_matrix_zeroes/              # run the test sets
+  uv run python leetcode/set_matrix_zeroes/solution.py   # debug one case (see CASE below)
+  uv run pytest leetcode/set_matrix_zeroes/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

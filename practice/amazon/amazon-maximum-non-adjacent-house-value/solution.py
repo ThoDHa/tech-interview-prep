@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-maximum-non-adjacent-house-va
 
 You are given an array values where values[i] is the amount available in the ith house arranged in a line.
 
-  uv run python amazon_oa/amazon-maximum-non-adjacent-house-value/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-maximum-non-adjacent-house-value/              # run the test sets
+  uv run python amazon/amazon-maximum-non-adjacent-house-value/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-maximum-non-adjacent-house-value/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-find-unique-values.md
 
 There are n developers working at Amazon where the ith developer has the experience points experience[i]. The company decided to pair the developers by iteratively pairing the developers with the high
 
-  uv run python amazon_oa/amazon-find-unique-values/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-find-unique-values/              # run the test sets
+  uv run python amazon/amazon-find-unique-values/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-find-unique-values/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

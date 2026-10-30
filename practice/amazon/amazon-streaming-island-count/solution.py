@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-streaming-island-count.md
 
 A binary matrix arrives one row at a time from top to bottom. Given those rows as the finite ordered batch rows, return an array where result i is the number of islands present after rows 0 through i 
 
-  uv run python amazon_oa/amazon-streaming-island-count/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-streaming-island-count/              # run the test sets
+  uv run python amazon/amazon-streaming-island-count/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-streaming-island-count/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

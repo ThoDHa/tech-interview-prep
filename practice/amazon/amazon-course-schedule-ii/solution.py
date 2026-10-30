@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-course-schedule-ii.md
 
 There are numCourses courses labeled from 0 to numCourses - 1. Each pair [course, prerequisite] means the prerequisite must be completed before the course.
 
-  uv run python amazon_oa/amazon-course-schedule-ii/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-course-schedule-ii/              # run the test sets
+  uv run python amazon/amazon-course-schedule-ii/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-course-schedule-ii/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

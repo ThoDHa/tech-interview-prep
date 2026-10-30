@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/leetcode/add_binary.md
 
 Given two binary strings `a` and `b`, return their sum as a binary string.
 
-  uv run python add_binary/solution.py     # debug one case (see CASE below)
-  uv run pytest add_binary/                # run the test sets
+  uv run python leetcode/add_binary/solution.py   # debug one case (see CASE below)
+  uv run pytest leetcode/add_binary/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

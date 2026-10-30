@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-minimum-edge-moves-to-connect
 
 You manage an undirected network with nodes 0 through n - 1. In one move, you may remove one existing cable and reconnect that cable between any two nodes.
 
-  uv run python amazon_oa/amazon-minimum-edge-moves-to-connect-graph/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-minimum-edge-moves-to-connect-graph/              # run the test sets
+  uv run python amazon/amazon-minimum-edge-moves-to-connect-graph/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-minimum-edge-moves-to-connect-graph/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

@@ -5,8 +5,8 @@ Write-up & approaches: ../../../docs/leetcode/partition_equal_subset_sum.md
 Given an integer array `nums`, return `True` if it can be partitioned into two
 subsets with equal sum.
 
-  uv run python partition_equal_subset_sum/solution.py   # debug one case (see CASE below)
-  uv run pytest partition_equal_subset_sum/              # run the test sets
+  uv run python leetcode/partition_equal_subset_sum/solution.py   # debug one case (see CASE below)
+  uv run pytest leetcode/partition_equal_subset_sum/              # run the test sets
 """
 
 from typing import List

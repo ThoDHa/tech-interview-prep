@@ -6,8 +6,8 @@ Given a tree of `n` nodes labelled `0..n-1` and its `n - 1` undirected edges,
 return the labels of every root that yields a tree of minimum height. Answer may
 be returned in any order.
 
-  uv run python minimum_height_trees/solution.py   # debug one case (see CASE below)
-  uv run pytest minimum_height_trees/              # run the test sets
+  uv run python leetcode/minimum_height_trees/solution.py   # debug one case (see CASE below)
+  uv run pytest leetcode/minimum_height_trees/              # run the test sets
 """
 from collections import deque
 

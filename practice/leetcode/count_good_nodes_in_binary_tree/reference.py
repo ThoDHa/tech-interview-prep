@@ -8,8 +8,8 @@ solution.py.
 
 Within a binary tree, a node `x` is considered good if the path from the root to `x` contains no nodes with a value greater than `x`'s. Return the number of good nodes.
 
-  uv run python count_good_nodes_in_binary_tree/reference.py   # debug one case (see below)
-  uv run pytest count_good_nodes_in_binary_tree/               # run the test sets
+  uv run python leetcode/count_good_nodes_in_binary_tree/reference.py   # debug one case (see below)
+  uv run pytest leetcode/count_good_nodes_in_binary_tree/               # run the test sets
 """
 
 from typing import Optional

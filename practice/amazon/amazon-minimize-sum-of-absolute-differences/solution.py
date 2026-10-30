@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-minimize-sum-of-absolute-diff
 
 Given two arrays a[] and b[] of equal length n. The task is to pair each element of array a to an element in array b, such that sum S of absolute differences of all the pairs is minimum.
 
-  uv run python amazon_oa/amazon-minimize-sum-of-absolute-differences/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-minimize-sum-of-absolute-differences/              # run the test sets
+  uv run python amazon/amazon-minimize-sum-of-absolute-differences/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-minimize-sum-of-absolute-differences/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

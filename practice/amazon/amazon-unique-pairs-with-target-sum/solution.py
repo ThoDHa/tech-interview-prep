@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-unique-pairs-with-target-sum.
 
 Complete the function below. The function receives the full standard input as a single string and returns the exact standard output lines.
 
-  uv run python amazon_oa/amazon-unique-pairs-with-target-sum/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-unique-pairs-with-target-sum/              # run the test sets
+  uv run python amazon/amazon-unique-pairs-with-target-sum/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-unique-pairs-with-target-sum/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

@@ -5,8 +5,8 @@ Write-up & approaches: ../../../docs/leetcode/contains_duplicate.md
 Given an integer array `nums`, return `true` if any value appears at least
 twice in the array, and `false` if every element is distinct.
 
-  uv run python contains_duplicate/solution.py     # debug one case (see CASE below)
-  uv run pytest contains_duplicate/                # run the test sets
+  uv run python leetcode/contains_duplicate/solution.py   # debug one case (see CASE below)
+  uv run pytest leetcode/contains_duplicate/              # run the test sets
 """
 
 from typing import List

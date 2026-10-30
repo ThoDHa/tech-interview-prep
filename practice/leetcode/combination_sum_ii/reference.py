@@ -5,8 +5,8 @@ Canonical reference implementation of the write-up's Sorted Backtracking with
 Duplicate Skipping solution, kept next to the harness so authored cases stay
 falsifiable. Your own attempt lives in solution.py.
 
-  uv run python combination_sum_ii/reference.py   # debug one case (see below)
-  uv run pytest combination_sum_ii/               # run the test sets
+  uv run python leetcode/combination_sum_ii/reference.py   # debug one case (see below)
+  uv run pytest leetcode/combination_sum_ii/               # run the test sets
 """
 
 from typing import List

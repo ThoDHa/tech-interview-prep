@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-indexed-bit-after-binary-expa
 
 Start with a binary string bits. In one expansion round, replace every character independently:
 
-  uv run python amazon_oa/amazon-indexed-bit-after-binary-expansion/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-indexed-bit-after-binary-expansion/              # run the test sets
+  uv run python amazon/amazon-indexed-bit-after-binary-expansion/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-indexed-bit-after-binary-expansion/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

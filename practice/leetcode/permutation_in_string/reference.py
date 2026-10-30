@@ -7,8 +7,8 @@ Canonical reference implementation: the write-up's optimal approach
 harness so authored cases stay falsifiable. Your own attempt lives in
 solution.py.
 
-  uv run python permutation_in_string/reference.py   # debug one case (see CASE below)
-  uv run pytest permutation_in_string/               # run the test sets
+  uv run python leetcode/permutation_in_string/reference.py   # debug one case (see CASE below)
+  uv run pytest leetcode/permutation_in_string/               # run the test sets
 """
 
 from harness import pick_case

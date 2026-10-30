@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-longest-increasing-subsequenc
 
 Given a non-empty integer array arr and a non-negative integer k, return the maximum length of a subsequence that satisfies all of the following:
 
-  uv run python amazon_oa/amazon-longest-increasing-subsequence-bounded-difference/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-longest-increasing-subsequence-bounded-difference/              # run the test sets
+  uv run python amazon/amazon-longest-increasing-subsequence-bounded-difference/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-longest-increasing-subsequence-bounded-difference/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

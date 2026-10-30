@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-smallest-number-with-digit-su
 
 Given integers digitSum and numberOfDigits, construct the smallest non-negative decimal number that:
 
-  uv run python amazon_oa/amazon-smallest-number-with-digit-sum/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-smallest-number-with-digit-sum/              # run the test sets
+  uv run python amazon/amazon-smallest-number-with-digit-sum/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-smallest-number-with-digit-sum/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/get-priorities-after-execution.md
 
 Several processes are scheduled for execution on an AWS server.
 
-  uv run python amazon_oa/get-priorities-after-execution/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/get-priorities-after-execution/              # run the test sets
+  uv run python amazon/get-priorities-after-execution/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/get-priorities-after-execution/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

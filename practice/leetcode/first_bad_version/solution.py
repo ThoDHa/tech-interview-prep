@@ -5,8 +5,8 @@ Write-up & approaches: ../../../docs/leetcode/first_bad_version.md
 Versions `[1, 2, ..., n]` turn bad from some point on; given the API
 `isBadVersion(version)`, find the first bad version with the fewest calls.
 
-  uv run python first_bad_version/solution.py   # debug one case (see CASE below)
-  uv run pytest first_bad_version/              # run the test sets
+  uv run python leetcode/first_bad_version/solution.py   # debug one case (see CASE below)
+  uv run pytest leetcode/first_bad_version/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

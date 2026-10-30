@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/leetcode/koko_eating_bananas.md
 
 You are given an integer array `piles` where `piles[i]` is the number of bananas in the `ith` pile. You are also given an integer `h`, which represents the number of hours you have to eat all the bana
 
-  uv run python koko_eating_bananas/solution.py   # debug one case (see CASE below)
-  uv run pytest koko_eating_bananas/              # run the test sets
+  uv run python leetcode/koko_eating_bananas/solution.py   # debug one case (see CASE below)
+  uv run pytest leetcode/koko_eating_bananas/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

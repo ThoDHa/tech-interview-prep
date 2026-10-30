@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-get-min-size.md
 
 Within the Amazon Gaming Distribution System, a logistics coordinator is faced with the task of efficiently distributing n games among k different children. Each game is characterized by its size, den
 
-  uv run python amazon_oa/amazon-get-min-size/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-get-min-size/              # run the test sets
+  uv run python amazon/amazon-get-min-size/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-get-min-size/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

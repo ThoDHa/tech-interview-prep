@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/leetcode/meeting_rooms.md
 
 Given an array of meeting time interval objects consisting of start and end times `[[start_1,end_1],[start_2,end_2],...] (start_i < end_i)`, determine if a person could add all meetings to their sched
 
-  uv run python meeting_rooms/solution.py   # debug one case (see CASE below)
-  uv run pytest meeting_rooms/              # run the test sets
+  uv run python leetcode/meeting_rooms/solution.py   # debug one case (see CASE below)
+  uv run pytest leetcode/meeting_rooms/              # run the test sets
 """
 
 from harness import NotSolved, pick_case
@@ -24,7 +24,7 @@ class Solution:
 if __name__ == "__main__":
     # Debug playground: set a breakpoint in solve above, then run this file.
     # Pick a case by id (ids are in cases.json).
-    CASE = "example_1"
+    CASE = "empty_schedule"
     case = pick_case(__file__, CASE)
     result = Solution().solve(*case["args"])
     print(f"case {case['id']}: args = {case['args']}")

@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-sort-array-with-rotate-and-fl
 
 You are given an array values containing distinct integers. You may apply either of these operations:
 
-  uv run python amazon_oa/amazon-sort-array-with-rotate-and-flip/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-sort-array-with-rotate-and-flip/              # run the test sets
+  uv run python amazon/amazon-sort-array-with-rotate-and-flip/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-sort-array-with-rotate-and-flip/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

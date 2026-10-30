@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-optimize-package-order-one-wi
 
 Given an integer array of package priorities and a window size k, choose exactly one contiguous window of length k and sort only that window in ascending order.
 
-  uv run python amazon_oa/amazon-optimize-package-order-one-window/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-optimize-package-order-one-window/              # run the test sets
+  uv run python amazon/amazon-optimize-package-order-one-window/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-optimize-package-order-one-window/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

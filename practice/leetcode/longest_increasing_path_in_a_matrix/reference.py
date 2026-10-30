@@ -5,8 +5,8 @@ Reference implementation of the write-up's DFS with Memoization solution.
 
 You are given a 2-D grid of integers `matrix`, where each integer is greater than or equal to `0`. Return the length of the longest strictly increasing path within `matrix`; moves are horizontal or vertical only, never diagonal.
 
-  uv run python longest_increasing_path_in_a_matrix/reference.py   # debug one case (see CASE below)
-  uv run pytest longest_increasing_path_in_a_matrix/              # run the test sets
+  uv run python leetcode/longest_increasing_path_in_a_matrix/reference.py   # debug one case (see CASE below)
+  uv run pytest leetcode/longest_increasing_path_in_a_matrix/              # run the test sets
 """
 
 import sys

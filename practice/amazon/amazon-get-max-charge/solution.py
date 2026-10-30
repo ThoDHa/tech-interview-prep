@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-get-max-charge.md
 
 A team of engineers at Amazon, using advanced simulation tools, are analyzing a series of interconnected systems, where each system has a charge value represented by charge[i] (which can be positive, 
 
-  uv run python amazon_oa/amazon-get-max-charge/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-get-max-charge/              # run the test sets
+  uv run python amazon/amazon-get-max-charge/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-get-max-charge/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

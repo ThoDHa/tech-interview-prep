@@ -7,8 +7,8 @@ There are `n` airports, labeled from `0` to `n - 1`, which are connected by some
 
 You are also given three integers `src`, `dst`, and `k` where `src` is the starting airport, `dst` is the destination airport, `src != dst`, and `k` is the maximum number of stops you can make (not including `src` and `dst`). Return **the cheapest price** from `src` to `dst` with at most `k` stops, or return `-1` if it is impossible.
 
-  uv run python cheapest_flights_within_k_stops/reference.py   # debug one case (see CASE below)
-  uv run pytest cheapest_flights_within_k_stops/               # run the test sets
+  uv run python leetcode/cheapest_flights_within_k_stops/reference.py   # debug one case (see CASE below)
+  uv run pytest leetcode/cheapest_flights_within_k_stops/               # run the test sets
 """
 
 from harness import pick_case

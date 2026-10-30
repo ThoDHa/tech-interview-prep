@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/leetcode/detect_squares.md
 
 You are given a stream of points consisting of x-y coordinates on a 2-D plane. Points can be added and queried as follows: * **Add** - new points can be added to the stream into a data structure. Dupl
 
-  uv run python detect_squares/solution.py   # debug one case (see CASE below)
-  uv run pytest detect_squares/              # run the test sets
+  uv run python leetcode/detect_squares/solution.py   # debug one case (see CASE below)
+  uv run pytest leetcode/detect_squares/              # run the test sets
 """
 
 from harness import NotSolved, pick_case
@@ -24,7 +24,7 @@ class Solution:
 if __name__ == "__main__":
     # Debug playground: set a breakpoint in solve above, then run this file.
     # Pick a case by id (ids are in cases.json).
-    CASE = "example_1"
+    CASE = "empty_count_is_zero"
     case = pick_case(__file__, CASE)
     result = Solution().solve(*case["args"])
     print(f"case {case['id']}: args = {case['args']}")

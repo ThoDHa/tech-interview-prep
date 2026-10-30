@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-maximize-pages-before-suspens
 
 The engineering team at an Amazon fulfillment center is optimizing n high-performance printers, where each printer i can print pages[i] number of pages.
 
-  uv run python amazon_oa/amazon-maximize-pages-before-suspension/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-maximize-pages-before-suspension/              # run the test sets
+  uv run python amazon/amazon-maximize-pages-before-suspension/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-maximize-pages-before-suspension/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

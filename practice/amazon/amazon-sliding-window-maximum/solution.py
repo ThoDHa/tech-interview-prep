@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-sliding-window-maximum.md
 
 Given an integer array nums and a window size k, return the maximum value in every contiguous window of length k, from left to right.
 
-  uv run python amazon_oa/amazon-sliding-window-maximum/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-sliding-window-maximum/              # run the test sets
+  uv run python amazon/amazon-sliding-window-maximum/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-sliding-window-maximum/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

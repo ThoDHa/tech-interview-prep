@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-count-picked-items-less-than-
 
 A warehouse has items represented by an array items, where items[i] is the value of the i-th item.
 
-  uv run python amazon_oa/amazon-count-picked-items-less-than-queries/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-count-picked-items-less-than-queries/              # run the test sets
+  uv run python amazon/amazon-count-picked-items-less-than-queries/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-count-picked-items-less-than-queries/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

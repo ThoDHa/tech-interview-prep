@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-concatenated-words-variant.md
 
 Return every word in words that can be formed by concatenating at least two shorter words from the same input.
 
-  uv run python amazon_oa/amazon-concatenated-words-variant/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-concatenated-words-variant/              # run the test sets
+  uv run python amazon/amazon-concatenated-words-variant/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-concatenated-words-variant/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

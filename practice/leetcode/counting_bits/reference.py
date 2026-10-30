@@ -5,8 +5,8 @@ Reference implementation of the write-up's Bottom-Up DP with Lowest Set Bit
 solution, kept next to the harness so authored cases stay falsifiable. Your
 own attempt lives in solution.py.
 
-  uv run python counting_bits/reference.py   # replay the example cases
-  uv run pytest counting_bits/               # run the test sets
+  uv run python leetcode/counting_bits/reference.py   # replay the example cases
+  uv run pytest leetcode/counting_bits/               # run the test sets
 """
 
 from typing import List

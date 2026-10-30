@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-convert-to-good-string.md
 
 Given A String Containing Integers, A Good String Is One Not Containing A Subsequence With The Patterns "010" Or "101". You Can Perform Operations To Convert 0 To 1 Or 1 To 0. Return The Number Of Ope
 
-  uv run python amazon_oa/amazon-convert-to-good-string/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-convert-to-good-string/              # run the test sets
+  uv run python amazon/amazon-convert-to-good-string/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-convert-to-good-string/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-minimum-operations-to-make-ar
 
 You are given a non-empty integer array nums of length n. In one operation, you may replace any one element with any integer.
 
-  uv run python amazon_oa/amazon-minimum-operations-to-make-array-continuous/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-minimum-operations-to-make-array-continuous/              # run the test sets
+  uv run python amazon/amazon-minimum-operations-to-make-array-continuous/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-minimum-operations-to-make-array-continuous/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

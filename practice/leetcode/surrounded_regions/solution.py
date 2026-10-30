@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/leetcode/surrounded_regions.md
 
 You are given an `m x n` matrix `board` containing letters `'X'` and `'O'`, capture regions that are surrounded: * **Connect:** A cell is connected to adjacent cells horizontally or vertically. * **Re
 
-  uv run python surrounded_regions/solution.py   # debug one case (see CASE below)
-  uv run pytest surrounded_regions/              # run the test sets
+  uv run python leetcode/surrounded_regions/solution.py   # debug one case (see CASE below)
+  uv run pytest leetcode/surrounded_regions/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

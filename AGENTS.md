@@ -61,7 +61,7 @@ sources instead. Each generator has a read-only, offline `--check` mode; run
 all three after touching a generator, its data sources, or generated output.
 
 - `scripts/generate_neetcode150_scaffolds.py` emits `docs/leetcode/<dirSlug>.md`
-  and `practice/<dirSlug>/` (`solution.py`, `cases.json`, `test_<dirSlug>.py`)
+  and `practice/leetcode/<dirSlug>/` (`solution.py`, `cases.json`, `test_<dirSlug>.py`)
   whole-file, for delta problems only: a problem with both a write-up and a
   practice folder is never touched, and a half-state (exactly one of the two)
   aborts the run. `cases_full.json` is never generated.

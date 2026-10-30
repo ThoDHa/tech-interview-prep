@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-calculate-max-profit.md
 
 Amazon OA problem.
 
-  uv run python amazon_oa/amazon-calculate-max-profit/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-calculate-max-profit/              # run the test sets
+  uv run python amazon/amazon-calculate-max-profit/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-calculate-max-profit/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

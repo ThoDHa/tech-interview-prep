@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-closest-version-date.md
 
 2026-07-02 •ᴗ• Practice note: This version should match the core of the reported interview question by about 85%-90%. It was reported for SDE II. It may not be word-for-word identical, but the main id
 
-  uv run python amazon_oa/amazon-closest-version-date/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-closest-version-date/              # run the test sets
+  uv run python amazon/amazon-closest-version-date/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-closest-version-date/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

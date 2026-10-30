@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-use-minimum-tokens.md
 
 Amazon operates a system of n warehouses, each represented by warehouse[i], where warehouse[i] indicates the maximum number of items that particular warehouse can hold. Additionally, there are q shipm
 
-  uv run python amazon_oa/amazon-use-minimum-tokens/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-use-minimum-tokens/              # run the test sets
+  uv run python amazon/amazon-use-minimum-tokens/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-use-minimum-tokens/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

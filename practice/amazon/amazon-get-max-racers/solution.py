@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-get-max-racers.md
 
 HackerLand Sports Club wants to send a team for a relay race. There are n racers in the group indexed from 0 to n - 1. The ith racer has a speed of speed[i] units.
 
-  uv run python amazon_oa/amazon-get-max-racers/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-get-max-racers/              # run the test sets
+  uv run python amazon/amazon-get-max-racers/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-get-max-racers/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

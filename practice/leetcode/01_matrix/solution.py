@@ -5,8 +5,8 @@ Write-up & approaches: ../../../docs/leetcode/01_matrix.md
 Given an `m x n` binary matrix `mat`, return a matrix of the same size where each
 cell holds the distance to the nearest `0`. Adjacent cells are distance `1` apart.
 
-  uv run python 01_matrix/solution.py   # debug one case (see CASE below)
-  uv run pytest 01_matrix/              # run the test sets
+  uv run python leetcode/01_matrix/solution.py   # debug one case (see CASE below)
+  uv run pytest leetcode/01_matrix/              # run the test sets
 """
 
 from typing import List

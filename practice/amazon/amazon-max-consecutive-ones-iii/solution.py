@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-max-consecutive-ones-iii.md
 
 Given a binary array nums and an integer k, return the maximum number of consecutive ones obtainable by flipping at most k zeros to ones.
 
-  uv run python amazon_oa/amazon-max-consecutive-ones-iii/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-max-consecutive-ones-iii/              # run the test sets
+  uv run python amazon/amazon-max-consecutive-ones-iii/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-max-consecutive-ones-iii/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

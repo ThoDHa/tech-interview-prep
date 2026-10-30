@@ -5,8 +5,8 @@ Reference implementation of the write-up's Masked Half-Adder Loop solution,
 kept next to the harness so authored cases stay falsifiable. Your own
 attempt lives in solution.py.
 
-  uv run python sum_of_two_integers/reference.py   # replay the example cases
-  uv run pytest sum_of_two_integers/               # run the test sets
+  uv run python leetcode/sum_of_two_integers/reference.py   # replay the example cases
+  uv run pytest leetcode/sum_of_two_integers/               # run the test sets
 """
 
 from harness import pick_case

@@ -6,8 +6,8 @@ Given `startTime`, `endTime`, and `profit` arrays describing `n` jobs, return th
 maximum profit obtainable from a subset of non-overlapping jobs (a job ending at
 time `X` may be followed by another starting at `X`).
 
-  uv run python maximum_profit_in_job_scheduling/solution.py   # debug one case (see CASE below)
-  uv run pytest maximum_profit_in_job_scheduling/              # run the test sets
+  uv run python leetcode/maximum_profit_in_job_scheduling/solution.py   # debug one case (see CASE below)
+  uv run pytest leetcode/maximum_profit_in_job_scheduling/              # run the test sets
 """
 
 from typing import List

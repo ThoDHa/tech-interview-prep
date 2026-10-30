@@ -5,8 +5,8 @@ Reference implementation of the write-up's Union-Find with Early Exit solution.
 
 You are given a connected **undirected graph** with `n` nodes labeled from `1` to `n`. Initially, it contained no cycles and consisted of `n-1` edges. We have now added one additional edge to the graph. The edge has two **different** vertices chosen from `1` to `n`, and was not an edge that previously existed in the graph. The graph is represented as an array `edges` of length `n` where `edges[i] = [ai, bi]` represents an edge between nodes `ai` and `bi` in the graph. Return an edge that can be removed so that the graph is still a connected non-cyclical graph. If there are multiple answers, return the edge that appears last in the input `edges`.
 
-  uv run python redundant_connection/reference.py   # debug one case (see CASE below)
-  uv run pytest redundant_connection/              # run the test sets
+  uv run python leetcode/redundant_connection/reference.py   # debug one case (see CASE below)
+  uv run pytest leetcode/redundant_connection/              # run the test sets
 """
 
 from harness import pick_case

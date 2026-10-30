@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-sum-of-all-days-numbers-on-wh
 
 Data analysts at Amazon are analyzing time series data. It was concluded that the data of the nth item was dependent on the data of the some xth day if there is a positive integer k such that the floo
 
-  uv run python amazon_oa/amazon-sum-of-all-days-numbers-on-which-the-data-of-the-xth-will-be-dependent/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-sum-of-all-days-numbers-on-which-the-data-of-the-xth-will-be-dependent/              # run the test sets
+  uv run python amazon/amazon-sum-of-all-days-numbers-on-which-the-data-of-the-xth-will-be-dependent/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-sum-of-all-days-numbers-on-which-the-data-of-the-xth-will-be-dependent/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

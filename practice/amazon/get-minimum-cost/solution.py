@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/get-minimum-cost.md
 
 In Amazon Go Store, there are nitems, each associated with two positive
 
-  uv run python amazon_oa/get-minimum-cost/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/get-minimum-cost/              # run the test sets
+  uv run python amazon/get-minimum-cost/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/get-minimum-cost/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

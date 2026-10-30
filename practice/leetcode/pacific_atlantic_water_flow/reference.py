@@ -5,8 +5,8 @@ Reference implementation of the write-up's Reverse Two-Ocean DFS solution,
 kept next to the harness so authored cases stay falsifiable. Your own attempt
 lives in solution.py.
 
-  uv run python pacific_atlantic_water_flow/reference.py   # debug one case (see CASE below)
-  uv run pytest pacific_atlantic_water_flow/               # run the test sets
+  uv run python leetcode/pacific_atlantic_water_flow/reference.py   # debug one case (see CASE below)
+  uv run pytest leetcode/pacific_atlantic_water_flow/               # run the test sets
 """
 
 from typing import List

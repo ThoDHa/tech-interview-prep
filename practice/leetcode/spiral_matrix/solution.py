@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/leetcode/spiral_matrix.md
 
 Given an `m x n` matrix, return all elements of the matrix in spiral order.
 
-  uv run python spiral_matrix/solution.py   # debug one case (see CASE below)
-  uv run pytest spiral_matrix/              # run the test sets
+  uv run python leetcode/spiral_matrix/solution.py   # debug one case (see CASE below)
+  uv run pytest leetcode/spiral_matrix/              # run the test sets
 """
 
 from typing import List

@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-meeting-rooms-ii.md
 
 Given an array of meeting time intervals intervals, where intervals[i] = [start_i, end_i], return the minimum number of conference rooms required.
 
-  uv run python amazon_oa/amazon-meeting-rooms-ii/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-meeting-rooms-ii/              # run the test sets
+  uv run python amazon/amazon-meeting-rooms-ii/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-meeting-rooms-ii/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

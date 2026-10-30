@@ -8,8 +8,8 @@ solution.py.
 
 Given the `head` of a linked list and an integer `n`, remove the `nth` node from the end of the list and return its head.
 
-  uv run python remove_nth_node_from_end_of_list/reference.py   # debug one case (see below)
-  uv run pytest remove_nth_node_from_end_of_list/               # run the test sets
+  uv run python leetcode/remove_nth_node_from_end_of_list/reference.py   # debug one case (see below)
+  uv run pytest leetcode/remove_nth_node_from_end_of_list/               # run the test sets
 """
 
 from typing import List, Optional

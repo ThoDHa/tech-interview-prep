@@ -6,8 +6,8 @@ Canonical reference implementation: the write-up's optimal approach
 (length-prefixed encoding), kept next to the harness so authored cases stay
 falsifiable. Your own attempt lives in solution.py.
 
-  uv run python encode_and_decode_strings/reference.py   # debug one case (see below)
-  uv run pytest encode_and_decode_strings/               # run the test sets
+  uv run python leetcode/encode_and_decode_strings/reference.py   # debug one case (see below)
+  uv run pytest leetcode/encode_and_decode_strings/               # run the test sets
 """
 
 from typing import List

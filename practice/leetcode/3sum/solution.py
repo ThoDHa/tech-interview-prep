@@ -6,8 +6,8 @@ Given an integer array `nums`, return all unique triplets
 `[nums[i], nums[j], nums[k]]` with distinct indices such that they sum to zero.
 The solution set must not contain duplicate triplets; order does not matter.
 
-  uv run python 3sum/solution.py     # debug one case (see CASE below)
-  uv run pytest 3sum/                # run the test sets
+  uv run python leetcode/3sum/solution.py   # debug one case (see CASE below)
+  uv run pytest leetcode/3sum/              # run the test sets
 """
 
 from typing import List

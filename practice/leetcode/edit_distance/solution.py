@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/leetcode/edit_distance.md
 
 You are given two strings `word1` and `word2`, each consisting of lowercase English letters. You are allowed to perform three operations on `word1` an unlimited number of times: * Insert a character a
 
-  uv run python edit_distance/solution.py   # debug one case (see CASE below)
-  uv run pytest edit_distance/              # run the test sets
+  uv run python leetcode/edit_distance/solution.py   # debug one case (see CASE below)
+  uv run pytest leetcode/edit_distance/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

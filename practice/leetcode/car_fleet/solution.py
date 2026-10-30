@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/leetcode/car_fleet.md
 
 There are `n` cars traveling to the same destination on a one-lane highway. You are given two arrays of integers `position` and `speed`, both of length `n`. * `position[i]` is the position of the `ith
 
-  uv run python car_fleet/solution.py   # debug one case (see CASE below)
-  uv run pytest car_fleet/              # run the test sets
+  uv run python leetcode/car_fleet/solution.py   # debug one case (see CASE below)
+  uv run pytest leetcode/car_fleet/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

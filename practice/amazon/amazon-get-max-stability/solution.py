@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-get-max-stability.md
 
 AWS provides a range of servers to meet the deployment needs of its clients. A client wants to choose a set of servers to deploy their application. Each server is
 
-  uv run python amazon_oa/amazon-get-max-stability/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-get-max-stability/              # run the test sets
+  uv run python amazon/amazon-get-max-stability/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-get-max-stability/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

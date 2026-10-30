@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/leetcode/generate_parentheses.md
 
 You are given an integer `n`. Return all well-formed parentheses strings that you can generate with `n` pairs of parentheses.
 
-  uv run python generate_parentheses/solution.py   # debug one case (see CASE below)
-  uv run pytest generate_parentheses/              # run the test sets
+  uv run python leetcode/generate_parentheses/solution.py   # debug one case (see CASE below)
+  uv run pytest leetcode/generate_parentheses/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

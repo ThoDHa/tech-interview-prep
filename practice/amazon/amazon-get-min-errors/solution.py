@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-get-min-errors.md
 
 Amazon's database doesn’t support very large numbers, so numbers are stored as a string of binary characters, '0' and '1'. Accidentally, a '!' was entered at some positions and it is unknown whether t
 
-  uv run python amazon_oa/amazon-get-min-errors/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-get-min-errors/              # run the test sets
+  uv run python amazon/amazon-get-min-errors/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-get-min-errors/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

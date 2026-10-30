@@ -5,8 +5,8 @@ Write-up & approaches: ../../../docs/leetcode/find_median_from_data_stream.md
 Design a MedianFinder that supports adding integers from a stream and querying
 the median of all elements added so far.
 
-  uv run python find_median_from_data_stream/solution.py     # debug one case (see CASE below)
-  uv run pytest find_median_from_data_stream/                # run the test sets
+  uv run python leetcode/find_median_from_data_stream/solution.py   # debug one case (see CASE below)
+  uv run pytest leetcode/find_median_from_data_stream/              # run the test sets
 """
 import heapq
 

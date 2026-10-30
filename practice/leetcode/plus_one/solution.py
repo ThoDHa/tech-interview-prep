@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/leetcode/plus_one.md
 
 You are given an integer array `digits`, where each `digits[i]` is the `ith` digit of a large integer. It is ordered from most significant to least significant digit, and it will not contain any leadi
 
-  uv run python plus_one/solution.py   # debug one case (see CASE below)
-  uv run pytest plus_one/              # run the test sets
+  uv run python leetcode/plus_one/solution.py   # debug one case (see CASE below)
+  uv run pytest leetcode/plus_one/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

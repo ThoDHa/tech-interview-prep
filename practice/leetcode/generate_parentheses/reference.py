@@ -7,8 +7,8 @@ lives in solution.py.
 
 You are given an integer `n`. Return all well-formed parentheses strings that you can generate with `n` pairs of parentheses.
 
-  uv run python generate_parentheses/reference.py   # debug one case (see CASE below)
-  uv run pytest generate_parentheses/               # run the test sets
+  uv run python leetcode/generate_parentheses/reference.py   # debug one case (see CASE below)
+  uv run pytest leetcode/generate_parentheses/               # run the test sets
 """
 
 from harness import pick_case

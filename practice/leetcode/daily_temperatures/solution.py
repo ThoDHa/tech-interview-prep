@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/leetcode/daily_temperatures.md
 
 You are given an array of integers `temperatures` where `temperatures[i]` represents the daily temperatures on the `ith` day. Return an array `result` where `result[i]` is the number of days after the
 
-  uv run python daily_temperatures/solution.py   # debug one case (see CASE below)
-  uv run pytest daily_temperatures/              # run the test sets
+  uv run python leetcode/daily_temperatures/solution.py   # debug one case (see CASE below)
+  uv run pytest leetcode/daily_temperatures/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

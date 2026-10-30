@@ -6,8 +6,8 @@ Given an integer array `nums`, return an array `answer` such that `answer[i]` is
 the product of all elements of `nums` except `nums[i]`. Solve it in `O(n)` time
 without using division.
 
-  uv run python product_of_array_except_self/solution.py     # debug one case (see CASE below)
-  uv run pytest product_of_array_except_self/                # run the test sets
+  uv run python leetcode/product_of_array_except_self/solution.py   # debug one case (see CASE below)
+  uv run pytest leetcode/product_of_array_except_self/              # run the test sets
 """
 
 from typing import List

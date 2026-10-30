@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/leetcode/longest_increasing_path_in_a_matri
 
 You are given a 2-D grid of integers `matrix`, where each integer is greater than or equal to `0`. Return the length of the longest strictly increasing path within `matrix`. From each cell within the 
 
-  uv run python longest_increasing_path_in_a_matrix/solution.py   # debug one case (see CASE below)
-  uv run pytest longest_increasing_path_in_a_matrix/              # run the test sets
+  uv run python leetcode/longest_increasing_path_in_a_matrix/solution.py   # debug one case (see CASE below)
+  uv run pytest leetcode/longest_increasing_path_in_a_matrix/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

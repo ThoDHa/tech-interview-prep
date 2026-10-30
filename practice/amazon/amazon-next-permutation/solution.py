@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-next-permutation.md
 
 Return the lexicographically next permutation of nums. If the current ordering is the greatest possible, return the smallest ordering. Duplicate values are allowed.
 
-  uv run python amazon_oa/amazon-next-permutation/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-next-permutation/              # run the test sets
+  uv run python amazon/amazon-next-permutation/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-next-permutation/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-lisp-expression-parser.md
 
 Source note: The reported task identifies this algorithmic exercise. The executable interface, bounds, deterministic tie rules, and examples are the documented practice contract.
 
-  uv run python amazon_oa/amazon-lisp-expression-parser/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-lisp-expression-parser/              # run the test sets
+  uv run python amazon/amazon-lisp-expression-parser/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-lisp-expression-parser/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

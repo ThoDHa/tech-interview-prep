@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-how-many-games-did-the-team-w
 
 Amazon Games is organizing a tournament of pair games. There are two groups, firstTeam and secondTeam, each containing n players. The skill level of the i-th player in each group is firstTeam[i] and s
 
-  uv run python amazon_oa/amazon-how-many-games-did-the-team-win/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-how-many-games-did-the-team-win/              # run the test sets
+  uv run python amazon/amazon-how-many-games-did-the-team-win/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-how-many-games-did-the-team-win/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

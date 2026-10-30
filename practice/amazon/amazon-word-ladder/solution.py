@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-word-ladder.md
 
 You are given beginWord, endWord, and a dictionary wordList. A transformation changes exactly one character, and every transformed word—including endWord—must appear in the dictionary.
 
-  uv run python amazon_oa/amazon-word-ladder/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-word-ladder/              # run the test sets
+  uv run python amazon/amazon-word-ladder/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-word-ladder/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

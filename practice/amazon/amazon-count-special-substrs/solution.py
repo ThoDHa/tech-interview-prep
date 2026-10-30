@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-count-special-substrs.md
 
 Imagine you're working with Amazon's data analysis team, specifically focusing on analyzing customer behavior through clickstream data. This data consists of sequences of user actions on the website, 
 
-  uv run python amazon_oa/amazon-count-special-substrs/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-count-special-substrs/              # run the test sets
+  uv run python amazon/amazon-count-special-substrs/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-count-special-substrs/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

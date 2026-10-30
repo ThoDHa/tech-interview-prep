@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-count-promotional-periods.md
 
 Data analysts at Amazon are studying product order patterns. They classify a period of at least three consecutive days as a promotional period when the order counts on the first and last days are both
 
-  uv run python amazon_oa/amazon-count-promotional-periods/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-count-promotional-periods/              # run the test sets
+  uv run python amazon/amazon-count-promotional-periods/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-count-promotional-periods/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

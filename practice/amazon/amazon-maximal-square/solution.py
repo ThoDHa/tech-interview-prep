@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-maximal-square.md
 
 Given a matrix of characters '0' and '1', return the area of the largest square containing only '1' cells.
 
-  uv run python amazon_oa/amazon-maximal-square/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-maximal-square/              # run the test sets
+  uv run python amazon/amazon-maximal-square/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-maximal-square/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

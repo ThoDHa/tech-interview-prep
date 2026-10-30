@@ -6,8 +6,8 @@ Given `head`, the head of a linked list, determine if the linked list has a
 cycle in it. `pos` denotes the index the tail's `next` connects to (-1 = none)
 and is not passed to your method; the harness builds the cyclic list for you.
 
-  uv run python linked_list_cycle/solution.py   # debug one case (see CASE below)
-  uv run pytest linked_list_cycle/              # run the test sets
+  uv run python leetcode/linked_list_cycle/solution.py   # debug one case (see CASE below)
+  uv run pytest leetcode/linked_list_cycle/              # run the test sets
 """
 
 from typing import Optional

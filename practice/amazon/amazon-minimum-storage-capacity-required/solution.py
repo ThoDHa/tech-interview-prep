@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-minimum-storage-capacity-requ
 
 Need to efficiently distribute a collection of computer games among k different children. Each game is characterized by its size, denoted by gameSize[i] for 1 ≤ i ≤ n.
 
-  uv run python amazon_oa/amazon-minimum-storage-capacity-required/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-minimum-storage-capacity-required/              # run the test sets
+  uv run python amazon/amazon-minimum-storage-capacity-required/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-minimum-storage-capacity-required/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

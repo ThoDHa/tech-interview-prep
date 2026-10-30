@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-nearby-fulfillment-centers.md
 
 A delivery must be fulfilled near a destination center. The fulfillment network is an undirected graph whose edges are given by connections. Each row [u, v] connects centers u and v in both directions
 
-  uv run python amazon_oa/amazon-nearby-fulfillment-centers/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-nearby-fulfillment-centers/              # run the test sets
+  uv run python amazon/amazon-nearby-fulfillment-centers/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-nearby-fulfillment-centers/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

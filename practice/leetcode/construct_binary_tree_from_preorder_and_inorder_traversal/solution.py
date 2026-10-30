@@ -5,8 +5,8 @@ Write-up & approaches: ../../../docs/leetcode/construct_binary_tree_from_preorde
 Given preorder and inorder traversals of a binary tree (with unique values),
 reconstruct and return the tree.
 
-  uv run python construct_binary_tree_from_preorder_and_inorder_traversal/solution.py   # debug one case (see CASE below)
-  uv run pytest construct_binary_tree_from_preorder_and_inorder_traversal/              # run the test sets
+  uv run python leetcode/construct_binary_tree_from_preorder_and_inorder_traversal/solution.py   # debug one case (see CASE below)
+  uv run pytest leetcode/construct_binary_tree_from_preorder_and_inorder_traversal/              # run the test sets
 """
 
 from typing import List, Optional

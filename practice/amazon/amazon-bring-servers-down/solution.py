@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-bring-servers-down.md
 
 The developers at Amazon want to perform a reliability drill on some servers. There are n servers where the ith server can serve request[i] number of requests and has an initial health of health[i] un
 
-  uv run python amazon_oa/amazon-bring-servers-down/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-bring-servers-down/              # run the test sets
+  uv run python amazon/amazon-bring-servers-down/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-bring-servers-down/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-longest-happy-prefix.md
 
 A string is a happy prefix of s when it is a non-empty proper prefix of s and is also a suffix of s.
 
-  uv run python amazon_oa/amazon-longest-happy-prefix/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-longest-happy-prefix/              # run the test sets
+  uv run python amazon/amazon-longest-happy-prefix/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-longest-happy-prefix/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

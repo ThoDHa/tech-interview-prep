@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-optimized-identifiers.md
 
 In an Amazon inventory management, an operations analyst is dealing with a set of initial product identifiers represented by strings. The type of a string product identifier is determined by the first
 
-  uv run python amazon_oa/amazon-optimized-identifiers/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-optimized-identifiers/              # run the test sets
+  uv run python amazon/amazon-optimized-identifiers/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-optimized-identifiers/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

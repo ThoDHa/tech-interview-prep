@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-product-category-groups.md
 
 You are given a list of products and a list of pairs. Each pair means the two products belong to the same category. Category membership is transitive: if product A is in the same category as B, and B 
 
-  uv run python amazon_oa/amazon-product-category-groups/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-product-category-groups/              # run the test sets
+  uv run python amazon/amazon-product-category-groups/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-product-category-groups/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

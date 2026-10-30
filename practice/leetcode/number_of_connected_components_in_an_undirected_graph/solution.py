@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/leetcode/number_of_connected_components_in_
 
 You have an undirected graph of `n` nodes labeled from `0` to `n - 1`. You are given an integer `n` and an array `edges` where `edges[i] = [aᵢ, bᵢ]` indicates that there is an edge between `aᵢ` and `b
 
-  uv run python number_of_connected_components_in_an_undirected_graph/solution.py   # debug one case (see CASE below)
-  uv run pytest number_of_connected_components_in_an_undirected_graph/              # run the test sets
+  uv run python leetcode/number_of_connected_components_in_an_undirected_graph/solution.py   # debug one case (see CASE below)
+  uv run pytest leetcode/number_of_connected_components_in_an_undirected_graph/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

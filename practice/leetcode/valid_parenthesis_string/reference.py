@@ -5,8 +5,8 @@ Reference implementation of the write-up's Greedy Range Tracking solution, kept
 next to the harness so authored cases stay falsifiable. Your own attempt
 lives in solution.py.
 
-  uv run python valid_parenthesis_string/reference.py   # replay the example cases
-  uv run pytest valid_parenthesis_string/               # run the test sets
+  uv run python leetcode/valid_parenthesis_string/reference.py   # replay the example cases
+  uv run pytest leetcode/valid_parenthesis_string/               # run the test sets
 """
 
 from harness import pick_case

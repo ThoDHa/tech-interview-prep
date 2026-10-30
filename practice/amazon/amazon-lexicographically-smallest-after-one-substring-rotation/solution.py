@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-lexicographically-smallest-af
 
 You are given a string s. You must choose one non-empty contiguous substring of s and rotate that substring to the right by one position exactly once.
 
-  uv run python amazon_oa/amazon-lexicographically-smallest-after-one-substring-rotation/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-lexicographically-smallest-after-one-substring-rotation/              # run the test sets
+  uv run python amazon/amazon-lexicographically-smallest-after-one-substring-rotation/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-lexicographically-smallest-after-one-substring-rotation/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

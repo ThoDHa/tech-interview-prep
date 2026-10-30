@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-can-sort-permutation-in-given
 
 Amazon recently conducted interviews where the candidates were asked to sort the permutation p of length n. Then the ith candidate sorted the permutation in moves[i] moves. To verify the result once m
 
-  uv run python amazon_oa/amazon-can-sort-permutation-in-given-moves/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-can-sort-permutation-in-given-moves/              # run the test sets
+  uv run python amazon/amazon-can-sort-permutation-in-given-moves/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-can-sort-permutation-in-given-moves/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

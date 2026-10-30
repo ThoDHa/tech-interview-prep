@@ -6,8 +6,8 @@ Given the `root` of a binary tree, return the length of the diameter of the tree
 the number of edges on the longest path between any two nodes, which may or may
 not pass through the root.
 
-  uv run python diameter_of_binary_tree/solution.py     # debug one case (see CASE below)
-  uv run pytest diameter_of_binary_tree/                # run the test sets
+  uv run python leetcode/diameter_of_binary_tree/solution.py   # debug one case (see CASE below)
+  uv run pytest leetcode/diameter_of_binary_tree/              # run the test sets
 """
 
 from typing import Optional

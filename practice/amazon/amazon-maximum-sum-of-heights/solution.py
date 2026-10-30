@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-maximum-sum-of-heights.md
 
 Given positive maximum heights maxHeights, choose a positive height for every index so that height[i] <= maxHeights[i]. The resulting array must be mountain-shaped: for some peak index, heights do not
 
-  uv run python amazon_oa/amazon-maximum-sum-of-heights/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-maximum-sum-of-heights/              # run the test sets
+  uv run python amazon/amazon-maximum-sum-of-heights/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-maximum-sum-of-heights/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

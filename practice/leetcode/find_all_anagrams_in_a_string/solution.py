@@ -5,8 +5,8 @@ Write-up & approaches: ../../../docs/leetcode/find_all_anagrams_in_a_string.md
 Given two strings `s` and `p`, return an array of all the start indices of `p`'s
 anagrams in `s`. You may return the answer in any order.
 
-  uv run python find_all_anagrams_in_a_string/solution.py     # debug one case (see CASE below)
-  uv run pytest find_all_anagrams_in_a_string/                # run the test sets
+  uv run python leetcode/find_all_anagrams_in_a_string/solution.py   # debug one case (see CASE below)
+  uv run pytest leetcode/find_all_anagrams_in_a_string/              # run the test sets
 """
 
 from typing import Counter, List

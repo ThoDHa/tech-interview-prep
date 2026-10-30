@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-bst-lowest-common-ancestor.md
 
 Build a binary search tree by inserting the distinct values of insertionOrder from left to right. For each insertion, values smaller than the current node go left and larger values go right.
 
-  uv run python amazon_oa/amazon-bst-lowest-common-ancestor/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-bst-lowest-common-ancestor/              # run the test sets
+  uv run python amazon/amazon-bst-lowest-common-ancestor/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-bst-lowest-common-ancestor/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

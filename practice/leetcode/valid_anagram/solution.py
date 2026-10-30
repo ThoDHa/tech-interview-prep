@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/leetcode/valid_anagram.md
 
 Given two strings `s` and `t`, return True if `t` is an anagram of `s`.
 
-  uv run python valid_anagram/solution.py   # debug one case (see CASE below)
-  uv run pytest valid_anagram/              # run the test sets
+  uv run python leetcode/valid_anagram/solution.py   # debug one case (see CASE below)
+  uv run pytest leetcode/valid_anagram/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

@@ -5,8 +5,8 @@ Write-up & approaches: ../../../docs/leetcode/ransom_note.md
 Given two strings `ransomNote` and `magazine`, return `True` if `ransomNote`
 can be constructed using the letters of `magazine` (each letter used once).
 
-  uv run python ransom_note/solution.py   # debug one case (see CASE below)
-  uv run pytest ransom_note/              # run the test sets
+  uv run python leetcode/ransom_note/solution.py   # debug one case (see CASE below)
+  uv run pytest leetcode/ransom_note/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

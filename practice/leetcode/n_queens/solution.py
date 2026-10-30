@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/leetcode/n_queens.md
 
 The **n-queens** puzzle is the problem of placing `n` queens on an `n x n` chessboard so that no two queens can attack each other. A **queen** in a chessboard can attack horizontally, vertically, and 
 
-  uv run python n_queens/solution.py   # debug one case (see CASE below)
-  uv run pytest n_queens/              # run the test sets
+  uv run python leetcode/n_queens/solution.py   # debug one case (see CASE below)
+  uv run pytest leetcode/n_queens/              # run the test sets
 """
 
 from harness import NotSolved, pick_case
@@ -24,7 +24,7 @@ class Solution:
 if __name__ == "__main__":
     # Debug playground: set a breakpoint in solve above, then run this file.
     # Pick a case by id (ids are in cases.json).
-    CASE = "example_1"
+    CASE = "single_queen"
     case = pick_case(__file__, CASE)
     result = Solution().solve(*case["args"])
     print(f"case {case['id']}: args = {case['args']}")

@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/leetcode/house_robber.md
 
 You are given an integer array `nums` where `nums[i]` represents the amount of money the `i`th house has. The houses are arranged in a straight line, i.e. the `i`th house is the neighbor of the `(i-1)
 
-  uv run python house_robber/solution.py   # debug one case (see CASE below)
-  uv run pytest house_robber/              # run the test sets
+  uv run python leetcode/house_robber/solution.py   # debug one case (see CASE below)
+  uv run pytest leetcode/house_robber/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

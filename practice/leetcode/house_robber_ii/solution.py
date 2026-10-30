@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/leetcode/house_robber_ii.md
 
 You are given an integer array `nums` where `nums[i]` represents the amount of money the `i`th house has. The houses are arranged in a circle, i.e. the first house and the last house are neighbors. Yo
 
-  uv run python house_robber_ii/solution.py   # debug one case (see CASE below)
-  uv run pytest house_robber_ii/              # run the test sets
+  uv run python leetcode/house_robber_ii/solution.py   # debug one case (see CASE below)
+  uv run pytest leetcode/house_robber_ii/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

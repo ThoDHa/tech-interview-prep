@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/leetcode/coin_change_ii.md
 
 You are given an integer array `coins` representing coins of different denominations (e.g. 1 dollar, 5 dollars, etc) and an integer `amount` representing a target amount of money. Return the number of
 
-  uv run python coin_change_ii/solution.py   # debug one case (see CASE below)
-  uv run pytest coin_change_ii/              # run the test sets
+  uv run python leetcode/coin_change_ii/solution.py   # debug one case (see CASE below)
+  uv run pytest leetcode/coin_change_ii/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

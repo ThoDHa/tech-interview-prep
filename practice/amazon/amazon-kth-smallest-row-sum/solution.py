@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-kth-smallest-row-sum.md
 
 Given an integer matrix mat whose rows are sorted in nondecreasing order, choose exactly one value from each row and add the chosen values.
 
-  uv run python amazon_oa/amazon-kth-smallest-row-sum/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-kth-smallest-row-sum/              # run the test sets
+  uv run python amazon/amazon-kth-smallest-row-sum/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-kth-smallest-row-sum/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

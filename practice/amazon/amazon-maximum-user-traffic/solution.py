@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-maximum-user-traffic.md
 
 Special thanks: Nick contributed this problem.
 
-  uv run python amazon_oa/amazon-maximum-user-traffic/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-maximum-user-traffic/              # run the test sets
+  uv run python amazon/amazon-maximum-user-traffic/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-maximum-user-traffic/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

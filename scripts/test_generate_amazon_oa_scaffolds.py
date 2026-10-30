@@ -806,7 +806,7 @@ def test_render_test_embeds_python_literals_not_json():
 
 
 # ---------------------------------------------------------------------------
-# Scaffold path depth (from practice/amazon_oa/<slug>/ the write-up sits
+# Scaffold path depth (from practice/amazon/<slug>/ the write-up sits
 # three levels up, not two)
 # ---------------------------------------------------------------------------
 
@@ -1026,10 +1026,23 @@ def test_check_parsed_entry_requires_generator_owned_fragments(tmp_path, monkeyp
 
 def test_expected_parsed_entry_fragments_stay_prefixes_of_the_renderer_output():
     entry = dict(UNPARSEABLE_ENTRY, slug="amazon-parsed", parse_status="parsed-with-cases")
-    fragments = gen.expected_scaffold_fragments(entry)
+    expectations = gen.expected_scaffold_fragments(entry)
     rendered = gen.render_all(entry, None, gen.unparsed_page_cases(entry["slug"]), "")
-    for path, fragment in fragments.items():
-        assert rendered[path].startswith(fragment), path
+    for path, expectation in expectations.items():
+        assert rendered[path].startswith(expectation.prefix), path
+        for fragment in expectation.required:
+            assert fragment in rendered[path], path
+
+
+def test_check_catches_a_retired_command_path_in_a_parsed_stub(tmp_path, monkeypatch):
+    redirect_check_paths(tmp_path, monkeypatch)
+    entry = dict(UNPARSEABLE_ENTRY, slug="amazon-parsed", parse_status="parsed-with-cases")
+    write_scaffold_set(tmp_path, entry)
+    (gen.DOCS_DIR / "index.md").write_text(gen.render_index([entry]), encoding="utf-8")
+    stub = gen.PRACTICE_DIR / "amazon-parsed" / "solution.py"
+    text = stub.read_text(encoding="utf-8")
+    stub.write_text(text.replace("uv run python amazon/amazon-parsed/solution.py", "uv run python amazon_oa/amazon-parsed/solution.py"), encoding="utf-8")
+    assert gen.check([entry]) == 1
 
 
 def test_main_warns_when_bank_pages_are_absent_and_slugs_are_skipped(tmp_path, monkeypatch, capsys):

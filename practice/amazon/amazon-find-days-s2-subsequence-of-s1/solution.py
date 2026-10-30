@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-find-days-s2-subsequence-of-s
 
 Given two strings s1 and s2, find till how many days is s2 a subsequence of s1 if on every day we delete all the strings in s1 from start to end inclusive.
 
-  uv run python amazon_oa/amazon-find-days-s2-subsequence-of-s1/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-find-days-s2-subsequence-of-s1/              # run the test sets
+  uv run python amazon/amazon-find-days-s2-subsequence-of-s1/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-find-days-s2-subsequence-of-s1/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

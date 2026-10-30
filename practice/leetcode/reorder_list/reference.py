@@ -6,8 +6,8 @@ Reference implementation of the write-up's Reverse-and-Merge solution.
 Reorder the nodes of a singly linked list to alternate first, last, second,
 second-to-last, and so on: `[0, 1, 2, 3, 4]` becomes `[0, 4, 1, 3, 2]`.
 
-  uv run python reorder_list/reference.py   # debug one case (see CASE below)
-  uv run pytest reorder_list/              # run the test sets
+  uv run python leetcode/reorder_list/reference.py   # debug one case (see CASE below)
+  uv run pytest leetcode/reorder_list/              # run the test sets
 """
 
 from harness import build_linked_list, linked_list_to_list, pick_case

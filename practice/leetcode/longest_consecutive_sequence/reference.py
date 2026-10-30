@@ -6,8 +6,8 @@ Canonical reference implementation: the write-up's optimal approach (set
 membership with sequence-start detection), kept next to the harness so
 authored cases stay falsifiable. Your own attempt lives in solution.py.
 
-  uv run python longest_consecutive_sequence/reference.py   # debug one case (see CASE below)
-  uv run pytest longest_consecutive_sequence/               # run the test sets
+  uv run python leetcode/longest_consecutive_sequence/reference.py   # debug one case (see CASE below)
+  uv run pytest leetcode/longest_consecutive_sequence/               # run the test sets
 """
 
 from harness import pick_case

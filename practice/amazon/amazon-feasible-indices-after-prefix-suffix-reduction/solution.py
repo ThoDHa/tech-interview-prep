@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-feasible-indices-after-prefix
 
 Note: This problem is a duplicate of Feasible Indices After Reduction. The sighting dates have been merged into that version.
 
-  uv run python amazon_oa/amazon-feasible-indices-after-prefix-suffix-reduction/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-feasible-indices-after-prefix-suffix-reduction/              # run the test sets
+  uv run python amazon/amazon-feasible-indices-after-prefix-suffix-reduction/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-feasible-indices-after-prefix-suffix-reduction/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-domain-weight-calculation.md
 
 Source note: This came from a real onsite interview report. The original report shared the core domain-score task and a concrete example, and FastPrep filled in the runnable function format, ordering 
 
-  uv run python amazon_oa/amazon-domain-weight-calculation/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-domain-weight-calculation/              # run the test sets
+  uv run python amazon/amazon-domain-weight-calculation/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-domain-weight-calculation/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

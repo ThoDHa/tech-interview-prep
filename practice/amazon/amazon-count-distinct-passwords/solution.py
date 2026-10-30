@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-count-distinct-passwords.md
 
 Weak passwords are likely to be hacked and misused. Due to this, developers at Amazon regularly come up with new algorithms to check the health of user passwords. A new algorithm estimates the variabi
 
-  uv run python amazon_oa/amazon-count-distinct-passwords/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-count-distinct-passwords/              # run the test sets
+  uv run python amazon/amazon-count-distinct-passwords/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-count-distinct-passwords/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

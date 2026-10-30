@@ -6,8 +6,8 @@ Given an `m x n` grid of characters `board` and a string `word`, return `True` i
 `word` can be spelled out by a path of horizontally/vertically adjacent cells,
 using each cell at most once.
 
-  uv run python word_search/solution.py   # debug one case (see CASE below)
-  uv run pytest word_search/              # run the test sets
+  uv run python leetcode/word_search/solution.py   # debug one case (see CASE below)
+  uv run pytest leetcode/word_search/              # run the test sets
 """
 
 from typing import List

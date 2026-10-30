@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/leetcode/reverse_linked_list.md
 
 Reverse a singly linked list and return the new head.
 
-  uv run python reverse_linked_list/solution.py   # debug one case (see CASE below)
-  uv run pytest reverse_linked_list/              # run the test sets
+  uv run python leetcode/reverse_linked_list/solution.py   # debug one case (see CASE below)
+  uv run pytest leetcode/reverse_linked_list/              # run the test sets
 """
 
 from typing import Optional

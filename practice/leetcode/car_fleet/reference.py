@@ -5,8 +5,8 @@ Reference implementation of the write-up's Single-Pass Counter solution.
 
 There are `n` cars traveling to the same destination on a one-lane highway. You are given two arrays of integers `position` and `speed`, both of length `n`, and the `target` position. A car can not pass another car ahead of it; a car fleet is a non-empty set of cars driving at the same position and same speed. Return the number of different car fleets that will arrive at the destination.
 
-  uv run python car_fleet/reference.py   # debug one case (see CASE below)
-  uv run pytest car_fleet/              # run the test sets
+  uv run python leetcode/car_fleet/reference.py   # debug one case (see CASE below)
+  uv run pytest leetcode/car_fleet/              # run the test sets
 """
 
 from harness import pick_case

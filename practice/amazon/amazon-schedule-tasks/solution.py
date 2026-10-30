@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-schedule-tasks.md
 
 In managing tasks at analytics platform, the goal is to efficiently schedule both primary and secondary tasks within specified time constraints.
 
-  uv run python amazon_oa/amazon-schedule-tasks/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-schedule-tasks/              # run the test sets
+  uv run python amazon/amazon-schedule-tasks/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-schedule-tasks/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

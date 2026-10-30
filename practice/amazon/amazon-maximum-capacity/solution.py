@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-maximum-capacity.md
 
 Amazon is optimizing the capacity of a cloud system with n servers. The memory capacity of the i-th server is memory[i].
 
-  uv run python amazon_oa/amazon-maximum-capacity/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-maximum-capacity/              # run the test sets
+  uv run python amazon/amazon-maximum-capacity/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-maximum-capacity/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

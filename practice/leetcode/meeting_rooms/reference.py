@@ -5,8 +5,8 @@ Reference implementation of the write-up's Sort and Adjacent Scan solution,
 kept next to the harness so authored cases stay falsifiable. Your own attempt
 lives in solution.py.
 
-  uv run python meeting_rooms/reference.py   # replay the example cases
-  uv run pytest meeting_rooms/               # run the test sets
+  uv run python leetcode/meeting_rooms/reference.py   # replay the example cases
+  uv run pytest leetcode/meeting_rooms/               # run the test sets
 """
 
 from typing import List

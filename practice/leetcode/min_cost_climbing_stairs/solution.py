@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/leetcode/min_cost_climbing_stairs.md
 
 You are given an array of integers `cost` where `cost[i]` is the cost of taking a step from the `ith` floor of a staircase. After paying the cost, you can step to either the `(i + 1)th` floor or the `
 
-  uv run python min_cost_climbing_stairs/solution.py   # debug one case (see CASE below)
-  uv run pytest min_cost_climbing_stairs/              # run the test sets
+  uv run python leetcode/min_cost_climbing_stairs/solution.py   # debug one case (see CASE below)
+  uv run pytest leetcode/min_cost_climbing_stairs/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

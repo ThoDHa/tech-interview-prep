@@ -5,8 +5,8 @@ Write-up & approaches: ../../../docs/leetcode/valid_parentheses.md
 Given a string `s` of just `'()[]{}'`, determine whether every bracket is
 closed by the same type in the correct order.
 
-  uv run python valid_parentheses/solution.py   # debug one case (see CASE below)
-  uv run pytest valid_parentheses/              # run the test sets
+  uv run python leetcode/valid_parentheses/solution.py   # debug one case (see CASE below)
+  uv run pytest leetcode/valid_parentheses/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

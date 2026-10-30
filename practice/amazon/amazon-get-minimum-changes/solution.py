@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-get-minimum-changes.md
 
 Amazon's software developers are working on enhancing their inventory management system with a new pricing adjustment operation on an array of products, where the price of the i^th product is given by
 
-  uv run python amazon_oa/amazon-get-minimum-changes/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-get-minimum-changes/              # run the test sets
+  uv run python amazon/amazon-get-minimum-changes/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-get-minimum-changes/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

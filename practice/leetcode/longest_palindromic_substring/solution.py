@@ -5,8 +5,8 @@ Write-up & approaches: ../../../docs/leetcode/longest_palindromic_substring.md
 Given a string `s`, return the longest palindromic substring in `s`. The answer
 may not be unique; any longest palindromic substring is accepted.
 
-  uv run python longest_palindromic_substring/solution.py   # debug one case (see CASE below)
-  uv run pytest longest_palindromic_substring/              # run the test sets
+  uv run python leetcode/longest_palindromic_substring/solution.py   # debug one case (see CASE below)
+  uv run pytest leetcode/longest_palindromic_substring/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

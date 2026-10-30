@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-maximize-the-array-sum-after-
 
 Given an array A with only positive numbers. We are allowed to negate any entries in the array, 
 
-  uv run python amazon_oa/amazon-maximize-the-array-sum-after-negating-at-most-k-elements/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-maximize-the-array-sum-after-negating-at-most-k-elements/              # run the test sets
+  uv run python amazon/amazon-maximize-the-array-sum-after-negating-at-most-k-elements/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-maximize-the-array-sum-after-negating-at-most-k-elements/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

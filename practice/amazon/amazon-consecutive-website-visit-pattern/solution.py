@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-consecutive-website-visit-pat
 
 You are given three equal-length arrays describing website visits. Entry i contains a username, an integer timestamp, and a website.
 
-  uv run python amazon_oa/amazon-consecutive-website-visit-pattern/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-consecutive-website-visit-pattern/              # run the test sets
+  uv run python amazon/amazon-consecutive-website-visit-pattern/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-consecutive-website-visit-pattern/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

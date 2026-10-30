@@ -5,8 +5,8 @@ Reference implementation of the write-up's Expand Around Center solution, kept
 next to the harness so authored cases stay falsifiable. Your own attempt
 lives in solution.py.
 
-  uv run python palindromic_substrings/reference.py   # replay the example cases
-  uv run pytest palindromic_substrings/               # run the test sets
+  uv run python leetcode/palindromic_substrings/reference.py   # replay the example cases
+  uv run pytest leetcode/palindromic_substrings/               # run the test sets
 """
 
 from harness import pick_case

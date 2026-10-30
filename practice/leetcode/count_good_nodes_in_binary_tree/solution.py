@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/leetcode/count_good_nodes_in_binary_tree.md
 
 Within a binary tree, a node `x` is considered **good** if the path from the root of the tree to the node `x` contains no nodes with a value greater than the value of node `x` Given the root of a bina
 
-  uv run python count_good_nodes_in_binary_tree/solution.py   # debug one case (see CASE below)
-  uv run pytest count_good_nodes_in_binary_tree/              # run the test sets
+  uv run python leetcode/count_good_nodes_in_binary_tree/solution.py   # debug one case (see CASE below)
+  uv run pytest leetcode/count_good_nodes_in_binary_tree/              # run the test sets
 """
 
 from harness import NotSolved, pick_case
@@ -24,7 +24,7 @@ class Solution:
 if __name__ == "__main__":
     # Debug playground: set a breakpoint in solve above, then run this file.
     # Pick a case by id (ids are in cases.json).
-    CASE = "example_1"
+    CASE = "case_1"
     case = pick_case(__file__, CASE)
     result = Solution().solve(*case["args"])
     print(f"case {case['id']}: args = {case['args']}")

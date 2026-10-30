@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-longest-palindromic-subsequen
 
 Given a string s, return the length of its longest subsequence that reads the same from left to right and right to left.
 
-  uv run python amazon_oa/amazon-longest-palindromic-subsequence/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-longest-palindromic-subsequence/              # run the test sets
+  uv run python amazon/amazon-longest-palindromic-subsequence/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-longest-palindromic-subsequence/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

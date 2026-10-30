@@ -9,8 +9,8 @@ You are given a stream of points on a 2-D plane. `add` stores a point
 axis-aligned squares having the query point as one corner, formed with three
 stored points.
 
-  uv run python detect_squares/reference.py   # replay the example stream
-  uv run pytest detect_squares/               # run the test sets
+  uv run python leetcode/detect_squares/reference.py   # replay the example stream
+  uv run pytest leetcode/detect_squares/               # run the test sets
 """
 
 from typing import Dict, List, Tuple

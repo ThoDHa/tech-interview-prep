@@ -5,8 +5,8 @@ Write-up & approaches: ../../../docs/leetcode/climbing_stairs.md
 You climb `n` stairs, 1 or 2 steps at a time. Return how many distinct ways you
 can reach the top.
 
-  uv run python climbing_stairs/solution.py   # debug one case (see CASE below)
-  uv run pytest climbing_stairs/              # run the test sets
+  uv run python leetcode/climbing_stairs/solution.py   # debug one case (see CASE below)
+  uv run pytest leetcode/climbing_stairs/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

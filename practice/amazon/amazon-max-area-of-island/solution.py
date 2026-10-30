@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-max-area-of-island.md
 
 Given a binary matrix grid, return the maximum area of an island.
 
-  uv run python amazon_oa/amazon-max-area-of-island/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-max-area-of-island/              # run the test sets
+  uv run python amazon/amazon-max-area-of-island/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-max-area-of-island/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

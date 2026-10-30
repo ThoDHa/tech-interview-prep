@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/leetcode/best_time_to_buy_and_sell_stock_wi
 
 You are given an integer array `prices` where `prices[i]` is the price of NeetCoin on the `ith` day. You may buy and sell one NeetCoin multiple times with the following restrictions: * After you sell 
 
-  uv run python best_time_to_buy_and_sell_stock_with_cooldown/solution.py   # debug one case (see CASE below)
-  uv run pytest best_time_to_buy_and_sell_stock_with_cooldown/              # run the test sets
+  uv run python leetcode/best_time_to_buy_and_sell_stock_with_cooldown/solution.py   # debug one case (see CASE below)
+  uv run pytest leetcode/best_time_to_buy_and_sell_stock_with_cooldown/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

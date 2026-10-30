@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-get-max-increments.md
 
 IMDB, an Amazon-owned company, is a widely used platform for discovering scores of films and television series.
 
-  uv run python amazon_oa/amazon-get-max-increments/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-get-max-increments/              # run the test sets
+  uv run python amazon/amazon-get-max-increments/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-get-max-increments/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

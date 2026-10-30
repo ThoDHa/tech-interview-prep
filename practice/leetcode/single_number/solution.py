@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/leetcode/single_number.md
 
 You are given a **non-empty** array of integers `nums`. Every integer appears twice except for one. Return the integer that appears only once. You must implement a solution with $O(n)$ runtime complex
 
-  uv run python single_number/solution.py   # debug one case (see CASE below)
-  uv run pytest single_number/              # run the test sets
+  uv run python leetcode/single_number/solution.py   # debug one case (see CASE below)
+  uv run pytest leetcode/single_number/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

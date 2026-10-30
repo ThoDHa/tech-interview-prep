@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-longest-increasing-subsequenc
 
 Given an integer array nums, return the length of its longest strictly increasing subsequence.
 
-  uv run python amazon_oa/amazon-longest-increasing-subsequence-variant/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-longest-increasing-subsequence-variant/              # run the test sets
+  uv run python amazon/amazon-longest-increasing-subsequence-variant/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-longest-increasing-subsequence-variant/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

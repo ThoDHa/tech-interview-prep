@@ -10,8 +10,8 @@ to the power of `n` (i.e., `x^n`). Given a floating-point value `x` and an
 integer value `n`, implement the `myPow(x, n)` function, which calculates
 `x` raised to the power `n`.
 
-  uv run python powx_n/reference.py   # replay the example cases
-  uv run pytest powx_n/               # run the test sets
+  uv run python leetcode/powx_n/reference.py   # replay the example cases
+  uv run pytest leetcode/powx_n/               # run the test sets
 """
 
 from harness import pick_case

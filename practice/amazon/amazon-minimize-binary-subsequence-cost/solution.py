@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-minimize-binary-subsequence-c
 
 You are given a string binaryString consisting only of '0', '1', and '!', and two integers x and y.
 
-  uv run python amazon_oa/amazon-minimize-binary-subsequence-cost/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-minimize-binary-subsequence-cost/              # run the test sets
+  uv run python amazon/amazon-minimize-binary-subsequence-cost/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-minimize-binary-subsequence-cost/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

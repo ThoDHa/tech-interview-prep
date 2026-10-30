@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-lowest-common-ancestor-implem
 
 This question was reported for Amazon Fall Intern onsite.
 
-  uv run python amazon_oa/amazon-lowest-common-ancestor-implemented-with-stack/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-lowest-common-ancestor-implemented-with-stack/              # run the test sets
+  uv run python amazon/amazon-lowest-common-ancestor-implemented-with-stack/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-lowest-common-ancestor-implemented-with-stack/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

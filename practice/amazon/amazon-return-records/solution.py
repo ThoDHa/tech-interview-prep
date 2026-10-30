@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-return-records.md
 
 Simulate a website authentication service. Initially, no users are registered and no user is logged in. Process each request in attempts from left to right.
 
-  uv run python amazon_oa/amazon-return-records/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-return-records/              # run the test sets
+  uv run python amazon/amazon-return-records/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-return-records/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

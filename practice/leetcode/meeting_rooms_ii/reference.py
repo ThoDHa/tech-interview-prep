@@ -5,8 +5,8 @@ Reference implementation of the write-up's Min-Heap of End Times solution, kept
 next to the harness so authored cases stay falsifiable. Your own attempt
 lives in solution.py.
 
-  uv run python meeting_rooms_ii/reference.py   # replay the example
-  uv run pytest meeting_rooms_ii/               # run the test sets
+  uv run python leetcode/meeting_rooms_ii/reference.py   # replay the example
+  uv run pytest leetcode/meeting_rooms_ii/               # run the test sets
 """
 
 import heapq

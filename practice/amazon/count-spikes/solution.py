@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/count-spikes.md
 
 A k-Spike is an element that satisfies both the following conditions: 
 
-  uv run python amazon_oa/count-spikes/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/count-spikes/              # run the test sets
+  uv run python amazon/count-spikes/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/count-spikes/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

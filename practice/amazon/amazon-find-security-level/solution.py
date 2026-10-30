@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-find-security-level.md
 
 Source said that the other problem 👇 in the same batch was for Newe Grad, so I assume this problem is for New Grad as well.  
 
-  uv run python amazon_oa/amazon-find-security-level/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-find-security-level/              # run the test sets
+  uv run python amazon/amazon-find-security-level/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-find-security-level/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

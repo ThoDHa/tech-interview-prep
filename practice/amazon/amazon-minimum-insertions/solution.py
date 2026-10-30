@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-minimum-insertions.md
 
 Amazon CodeCraft introduces you to an engaging problem-solving challenge. You are
 
-  uv run python amazon_oa/amazon-minimum-insertions/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-minimum-insertions/              # run the test sets
+  uv run python amazon/amazon-minimum-insertions/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-minimum-insertions/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

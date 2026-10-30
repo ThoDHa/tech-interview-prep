@@ -5,8 +5,8 @@ Reference implementation of the write-up's Partition Binary Search solution.
 
 You are given two integer arrays `nums1` and `nums2` of size `m` and `n` respectively, where each is sorted in ascending order. Return the median value among all elements of the two arrays.
 
-  uv run python median_of_two_sorted_arrays/reference.py   # debug one case (see CASE below)
-  uv run pytest median_of_two_sorted_arrays/              # run the test sets
+  uv run python leetcode/median_of_two_sorted_arrays/reference.py   # debug one case (see CASE below)
+  uv run pytest leetcode/median_of_two_sorted_arrays/              # run the test sets
 """
 
 from harness import pick_case

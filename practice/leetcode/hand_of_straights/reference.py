@@ -5,8 +5,8 @@ Reference implementation of the write-up's Greedy solution, kept next to the
 harness so authored cases stay falsifiable. Your own attempt lives in
 solution.py.
 
-  uv run python hand_of_straights/reference.py   # replay the example cases
-  uv run pytest hand_of_straights/               # run the test sets
+  uv run python leetcode/hand_of_straights/reference.py   # replay the example cases
+  uv run pytest leetcode/hand_of_straights/               # run the test sets
 """
 
 from typing import List

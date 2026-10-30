@@ -5,8 +5,8 @@ Write-up & approaches: ../../../docs/leetcode/maximum_depth_of_binary_tree.md
 Given the `root` of a binary tree, return its maximum depth (the number of nodes
 along the longest path from the root down to the farthest leaf).
 
-  uv run python maximum_depth_of_binary_tree/solution.py   # debug one case (see CASE below)
-  uv run pytest maximum_depth_of_binary_tree/              # run the test sets
+  uv run python leetcode/maximum_depth_of_binary_tree/solution.py   # debug one case (see CASE below)
+  uv run pytest leetcode/maximum_depth_of_binary_tree/              # run the test sets
 """
 
 from typing import Optional

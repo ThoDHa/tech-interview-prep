@@ -5,8 +5,8 @@ Reference implementation of the write-up's Min-Heap Sweep solution, kept
 next to the harness so authored cases stay falsifiable. Your own attempt
 lives in solution.py.
 
-  uv run python minimum_interval_to_include_each_query/reference.py   # replay the example cases
-  uv run pytest minimum_interval_to_include_each_query/               # run the test sets
+  uv run python leetcode/minimum_interval_to_include_each_query/reference.py   # replay the example cases
+  uv run pytest leetcode/minimum_interval_to_include_each_query/               # run the test sets
 """
 
 import heapq

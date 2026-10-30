@@ -5,8 +5,8 @@ Reference implementation of the write-up's Binary Search on the Answer solution.
 
 You are given an integer array `piles` where `piles[i]` is the number of bananas in the `ith` pile, and an integer `h`, the number of hours you have to eat all the bananas. Each hour you choose a pile and eat `k` bananas from it; you cannot split a pile across hours. Return the minimum integer `k` such that you can eat all the bananas within `h` hours.
 
-  uv run python koko_eating_bananas/reference.py   # debug one case (see CASE below)
-  uv run pytest koko_eating_bananas/              # run the test sets
+  uv run python leetcode/koko_eating_bananas/reference.py   # debug one case (see CASE below)
+  uv run pytest leetcode/koko_eating_bananas/              # run the test sets
 """
 
 from harness import pick_case

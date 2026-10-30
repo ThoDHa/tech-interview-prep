@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-find-lexicographically-smalle
 
 Given a lowercase string s, find the lexicographically smallest lowercase string t that has the same length as s, is strictly greater than s, and has no two equal adjacent characters.
 
-  uv run python amazon_oa/amazon-find-lexicographically-smallest-string/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-find-lexicographically-smallest-string/              # run the test sets
+  uv run python amazon/amazon-find-lexicographically-smallest-string/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-find-lexicographically-smallest-string/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

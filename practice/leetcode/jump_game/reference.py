@@ -5,8 +5,8 @@ Reference implementation of the write-up's Greedy solution, kept next to the
 harness so authored cases stay falsifiable. Your own attempt lives in
 solution.py.
 
-  uv run python jump_game/reference.py   # replay the example cases
-  uv run pytest jump_game/               # run the test sets
+  uv run python leetcode/jump_game/reference.py   # replay the example cases
+  uv run pytest leetcode/jump_game/               # run the test sets
 """
 
 from typing import List

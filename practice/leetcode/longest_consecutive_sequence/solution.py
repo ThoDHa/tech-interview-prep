@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/leetcode/longest_consecutive_sequence.md
 
 Given an array of integers `nums`, return *the length* of the longest consecutive sequence of elements that can be formed. A *consecutive sequence* is a sequence of elements in which each element is e
 
-  uv run python longest_consecutive_sequence/solution.py   # debug one case (see CASE below)
-  uv run pytest longest_consecutive_sequence/              # run the test sets
+  uv run python leetcode/longest_consecutive_sequence/solution.py   # debug one case (see CASE below)
+  uv run pytest leetcode/longest_consecutive_sequence/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

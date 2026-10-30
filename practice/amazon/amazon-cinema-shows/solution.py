@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-cinema-shows.md
 
 Amazon OA problem.
 
-  uv run python amazon_oa/amazon-cinema-shows/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-cinema-shows/              # run the test sets
+  uv run python amazon/amazon-cinema-shows/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-cinema-shows/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

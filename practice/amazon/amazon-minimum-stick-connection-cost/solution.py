@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-minimum-stick-connection-cost
 
 You are given an integer array sticks, where each element is the length of a stick.
 
-  uv run python amazon_oa/amazon-minimum-stick-connection-cost/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-minimum-stick-connection-cost/              # run the test sets
+  uv run python amazon/amazon-minimum-stick-connection-cost/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-minimum-stick-connection-cost/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

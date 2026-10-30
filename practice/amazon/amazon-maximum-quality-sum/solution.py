@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-maximum-quality-sum.md
 
 Amazon's AWS provides fast and efficient server solutions. The developers want to stress-test the quality of the servers' channels. They must ensure the following:
 
-  uv run python amazon_oa/amazon-maximum-quality-sum/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-maximum-quality-sum/              # run the test sets
+  uv run python amazon/amazon-maximum-quality-sum/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-maximum-quality-sum/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

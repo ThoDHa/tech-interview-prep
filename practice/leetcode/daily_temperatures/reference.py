@@ -5,8 +5,8 @@ Reference implementation of the write-up's Monotonic Stack solution.
 
 You are given an array of integers `temperatures` where `temperatures[i]` represents the daily temperatures on the `ith` day. Return an array `result` where `result[i]` is the number of days after the `ith` day before a warmer temperature appears on a future day. If there is no day in the future where a warmer temperature will appear for the `ith` day, set `result[i]` to `0` instead.
 
-  uv run python daily_temperatures/reference.py   # debug one case (see CASE below)
-  uv run pytest daily_temperatures/              # run the test sets
+  uv run python leetcode/daily_temperatures/reference.py   # debug one case (see CASE below)
+  uv run pytest leetcode/daily_temperatures/              # run the test sets
 """
 
 from harness import pick_case

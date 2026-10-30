@@ -5,8 +5,8 @@ Reference implementation of the write-up's Space-Optimized DP solution, kept
 next to the harness so authored cases stay falsifiable. Your own attempt
 lives in solution.py.
 
-  uv run python house_robber/reference.py   # replay the example cases
-  uv run pytest house_robber/               # run the test sets
+  uv run python leetcode/house_robber/reference.py   # replay the example cases
+  uv run pytest leetcode/house_robber/               # run the test sets
 """
 
 from typing import List

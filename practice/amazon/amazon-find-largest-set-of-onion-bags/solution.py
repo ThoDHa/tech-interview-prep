@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-find-largest-set-of-onion-bag
 
 You are shopping online for some bags of onion. Each listing displays the number of onions that the bag contains. You want to buy a perfect set of onion bags from the entire search results list, onion
 
-  uv run python amazon_oa/amazon-find-largest-set-of-onion-bags/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-find-largest-set-of-onion-bags/              # run the test sets
+  uv run python amazon/amazon-find-largest-set-of-onion-bags/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-find-largest-set-of-onion-bags/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

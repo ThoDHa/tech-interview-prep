@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/leetcode/counting_bits.md
 
 Given an integer `n`, count the number of `1`'s in the binary representation of every number in the range `[0, n]`. Return an array `output` where `output[i]` is the number of `1`'s in the binary repr
 
-  uv run python counting_bits/solution.py   # debug one case (see CASE below)
-  uv run pytest counting_bits/              # run the test sets
+  uv run python leetcode/counting_bits/solution.py   # debug one case (see CASE below)
+  uv run pytest leetcode/counting_bits/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

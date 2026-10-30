@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/leetcode/distinct_subsequences.md
 
 You are given two strings `s` and `t`, both consisting of english letters. Return the number of distinct **subsequences** of `s` which are equal to `t`.
 
-  uv run python distinct_subsequences/solution.py   # debug one case (see CASE below)
-  uv run pytest distinct_subsequences/              # run the test sets
+  uv run python leetcode/distinct_subsequences/solution.py   # debug one case (see CASE below)
+  uv run pytest leetcode/distinct_subsequences/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

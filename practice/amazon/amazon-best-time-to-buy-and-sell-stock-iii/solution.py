@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-best-time-to-buy-and-sell-sto
 
 You are given an array prices, where prices[i] is the price of one stock on day i. Return the maximum profit you can earn by completing at most two transactions.
 
-  uv run python amazon_oa/amazon-best-time-to-buy-and-sell-stock-iii/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-best-time-to-buy-and-sell-stock-iii/              # run the test sets
+  uv run python amazon/amazon-best-time-to-buy-and-sell-stock-iii/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-best-time-to-buy-and-sell-stock-iii/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

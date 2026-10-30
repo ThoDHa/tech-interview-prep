@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/leetcode/longest_increasing_subsequence.md
 
 Given an integer array `nums`, return the *length* of the longest strictly *increasing* subsequence. A **subsequence** is a sequence that can be derived from the given sequence by deleting some or no 
 
-  uv run python longest_increasing_subsequence/solution.py   # debug one case (see CASE below)
-  uv run pytest longest_increasing_subsequence/              # run the test sets
+  uv run python leetcode/longest_increasing_subsequence/solution.py   # debug one case (see CASE below)
+  uv run pytest leetcode/longest_increasing_subsequence/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

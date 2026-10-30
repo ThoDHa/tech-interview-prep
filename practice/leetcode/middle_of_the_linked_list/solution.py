@@ -5,8 +5,8 @@ Write-up & approaches: ../../../docs/leetcode/middle_of_the_linked_list.md
 Given the `head` of a singly linked list, return the middle node. If there are
 two middle nodes, return the second middle node.
 
-  uv run python middle_of_the_linked_list/solution.py   # debug one case (see CASE below)
-  uv run pytest middle_of_the_linked_list/              # run the test sets
+  uv run python leetcode/middle_of_the_linked_list/solution.py   # debug one case (see CASE below)
+  uv run pytest leetcode/middle_of_the_linked_list/              # run the test sets
 """
 
 from typing import Optional

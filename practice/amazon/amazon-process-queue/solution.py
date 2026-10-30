@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-process-queue.md
 
 You are given an array wait with elements that represent processes where each element in the array denotes the amount on time that process can wait before needing to be removed. Each second, the next 
 
-  uv run python amazon_oa/amazon-process-queue/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-process-queue/              # run the test sets
+  uv run python amazon/amazon-process-queue/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-process-queue/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/leetcode/network_delay_time.md
 
 You are given a network of `n` directed nodes, labeled from `1` to `n`. You are also given `times`, a list of directed edges where `times[i] = (ui, vi, ti)`. * `ui` is the source node (an integer from
 
-  uv run python network_delay_time/solution.py   # debug one case (see CASE below)
-  uv run pytest network_delay_time/              # run the test sets
+  uv run python leetcode/network_delay_time/solution.py   # debug one case (see CASE below)
+  uv run pytest leetcode/network_delay_time/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

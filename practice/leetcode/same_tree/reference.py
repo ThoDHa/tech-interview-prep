@@ -8,8 +8,8 @@ lives in solution.py.
 
 Given the roots of two binary trees `p` and `q`, return `true` if the trees are equivalent (same structure, same values), otherwise return `false`.
 
-  uv run python same_tree/reference.py   # debug one case (see below)
-  uv run pytest same_tree/               # run the test sets
+  uv run python leetcode/same_tree/reference.py   # debug one case (see below)
+  uv run pytest leetcode/same_tree/               # run the test sets
 """
 
 from typing import Optional

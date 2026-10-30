@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/leetcode/jump_game.md
 
 You are given an integer array `nums` where each element `nums[i]` indicates your maximum jump length at that position. Return `true` if you can reach the last index starting from index `0`, or `false
 
-  uv run python jump_game/solution.py   # debug one case (see CASE below)
-  uv run pytest jump_game/              # run the test sets
+  uv run python leetcode/jump_game/solution.py   # debug one case (see CASE below)
+  uv run pytest leetcode/jump_game/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

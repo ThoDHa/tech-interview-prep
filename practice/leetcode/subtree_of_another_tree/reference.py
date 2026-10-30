@@ -8,8 +8,8 @@ Your own attempt lives in solution.py.
 
 Given the roots of two binary trees `root` and `subRoot`, return `true` if there is a subtree of `root` with the same structure and node values of `subRoot` and `false` otherwise.
 
-  uv run python subtree_of_another_tree/reference.py   # debug one case (see below)
-  uv run pytest subtree_of_another_tree/               # run the test sets
+  uv run python leetcode/subtree_of_another_tree/reference.py   # debug one case (see below)
+  uv run pytest leetcode/subtree_of_another_tree/               # run the test sets
 """
 
 from typing import Optional

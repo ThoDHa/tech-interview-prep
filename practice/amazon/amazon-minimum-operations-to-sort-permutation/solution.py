@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-minimum-operations-to-sort-pe
 
 You are given a permutation arr of size n, containing each integer from 1 to n exactly once.
 
-  uv run python amazon_oa/amazon-minimum-operations-to-sort-permutation/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-minimum-operations-to-sort-permutation/              # run the test sets
+  uv run python amazon/amazon-minimum-operations-to-sort-permutation/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-minimum-operations-to-sort-permutation/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

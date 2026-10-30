@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-remove-k-digits.md
 
 You are given a string num that represents a non-negative integer, and an integer k.
 
-  uv run python amazon_oa/amazon-remove-k-digits/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-remove-k-digits/              # run the test sets
+  uv run python amazon/amazon-remove-k-digits/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-remove-k-digits/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-rearrange-binary-string.md
 
 You are given a binary string, binary, consisting only of characters '0' and '1'. You are allowed to perform the following operation zero or more times:
 
-  uv run python amazon_oa/amazon-rearrange-binary-string/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-rearrange-binary-string/              # run the test sets
+  uv run python amazon/amazon-rearrange-binary-string/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-rearrange-binary-string/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

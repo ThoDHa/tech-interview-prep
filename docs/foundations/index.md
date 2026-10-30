@@ -54,14 +54,12 @@ The pass signal to aim at is not "I have seen every problem once". It is rough b
 
 ## Practicing in this repo
 
-The `practice/` workspace is a ready-made pytest harness. One-time setup: `cd practice`, then `uv sync`. After that, for any problem:
+The `practice/` workspace is a ready-made pytest harness: fork [the repository](https://github.com/ThoDHa/tech-interview-prep) on GitHub, clone your fork, and create your own workspace branch from the guide with `git switch -c practice main` (the repository's own `practice` branch holds the maintainer's worked attempts; your starting point is `main`). One-time setup: `cd practice`, then `uv sync`. Problems sit in `practice/leetcode/<slug>/` and `practice/amazon/<slug>/`; for any LeetCode-track problem:
 
-- `uv run pytest <slug>/ -m simple` is the equivalent of LeetCode's **Run**:
-  just the example cases, for quick feedback while you iterate.
-- `uv run pytest <slug>/ -m full` is the equivalent of **Submit**: the
-  examples plus a comprehensive corner-case gauntlet.
+- `uv run pytest leetcode/<slug>/ -m simple` is the equivalent of LeetCode's **Run**: just the example cases, for quick feedback while you iterate.
+- `uv run pytest leetcode/<slug>/ -m full` is the equivalent of **Submit**: the examples plus a comprehensive corner-case gauntlet.
 
-An unsolved stub raises `NotSolved`, so its tests **skip** rather than fail. A fresh checkout shows everything skipped, which is expected. Each `solution.py` also has a `__main__` debug playground: set `CASE` to a case id near the bottom of the file, then run the file directly (`uv run python <slug>/solution.py`) to print the input, expected, and actual values. The practice README (`practice/README.md`) walks through the full workflow.
+An unsolved stub raises `NotSolved`, so its tests **skip** rather than fail. In a fresh checkout almost everything skips, which is expected; the immediate passes are the reference tests that come with some folders, plus the tracker's own unit tests. Each `solution.py` also has a `__main__` debug playground: set `CASE` to a case id near the bottom of the file, then run the file directly (`uv run python leetcode/<slug>/solution.py`) to print the input, expected, and actual values. [The Practice Workspace](../interview-prep/practice_workspace.md) walks the full loop from fork to first green test, and the practice README (`practice/README.md`) is the workspace's own reference.
 
 The workspace also includes a small progress tracker, `progress.py`: `scan` records which problems your tests currently pass, `rate` captures how each solve felt, and `due` gives you a spaced-repetition review queue so earlier problems come back before they fade. The practice README documents the commands and intervals.
 

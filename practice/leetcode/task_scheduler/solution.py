@@ -6,8 +6,8 @@ Given a list of CPU `tasks` (uppercase letters) and a cooldown `n`, return the
 least number of time units needed so that any two identical tasks are separated
 by at least `n` units, idling when no task is available.
 
-  uv run python task_scheduler/solution.py   # debug one case (see CASE below)
-  uv run pytest task_scheduler/              # run the test sets
+  uv run python leetcode/task_scheduler/solution.py   # debug one case (see CASE below)
+  uv run pytest leetcode/task_scheduler/              # run the test sets
 """
 
 import heapq

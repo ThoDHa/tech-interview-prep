@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-get-maximum.md
 
 Amazon Fresh is a grocery store designed from the ground up to offer a seamless grocery shopping experience to consumers. As part of a stock clearance exercise at the store, given the number of fresh 
 
-  uv run python amazon_oa/amazon-get-maximum/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-get-maximum/              # run the test sets
+  uv run python amazon/amazon-get-maximum/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-get-maximum/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-k-closest-elements-in-sorted-
 
 Given an integer array arr sorted in nondecreasing order, an integer k, and a target x, return the k values closest to x in ascending order.
 
-  uv run python amazon_oa/amazon-k-closest-elements-in-sorted-array/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-k-closest-elements-in-sorted-array/              # run the test sets
+  uv run python amazon/amazon-k-closest-elements-in-sorted-array/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-k-closest-elements-in-sorted-array/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-determine-the-best-skipping-s
 
 A company operates numerous warehouses, with each warehouse i holding inventory[i] units of a particular product. You and your co-worker are responsible for dispatching these items to fulfill customer
 
-  uv run python amazon_oa/amazon-determine-the-best-skipping-strategy/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-determine-the-best-skipping-strategy/              # run the test sets
+  uv run python amazon/amazon-determine-the-best-skipping-strategy/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-determine-the-best-skipping-strategy/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

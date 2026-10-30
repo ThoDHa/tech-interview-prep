@@ -5,8 +5,8 @@ Write-up & approaches: ../../../docs/leetcode/longest_substring_without_repeatin
 Given a string `s`, find the length of the longest substring without repeating
 characters.
 
-  uv run python longest_substring_without_repeating_characters/solution.py     # debug one case (see CASE below)
-  uv run pytest longest_substring_without_repeating_characters/                # run the test sets
+  uv run python leetcode/longest_substring_without_repeating_characters/solution.py   # debug one case (see CASE below)
+  uv run pytest leetcode/longest_substring_without_repeating_characters/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

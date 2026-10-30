@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-largest-number-with-digit-sum
 
 You are given three integers x, y, and n, where x and y are digits from 1 to 9.
 
-  uv run python amazon_oa/amazon-largest-number-with-digit-sum/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-largest-number-with-digit-sum/              # run the test sets
+  uv run python amazon/amazon-largest-number-with-digit-sum/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-largest-number-with-digit-sum/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

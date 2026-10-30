@@ -5,8 +5,8 @@ Write-up & approaches: ../../../docs/leetcode/k_closest_points_to_origin.md
 Given an array of points `points[i] = [xi, yi]` and an integer `k`, return the
 `k` points closest to the origin `(0, 0)` by Euclidean distance, in any order.
 
-  uv run python k_closest_points_to_origin/solution.py     # debug one case (see CASE below)
-  uv run pytest k_closest_points_to_origin/                # run the test sets
+  uv run python leetcode/k_closest_points_to_origin/solution.py   # debug one case (see CASE below)
+  uv run pytest leetcode/k_closest_points_to_origin/              # run the test sets
 """
 
 from typing import List

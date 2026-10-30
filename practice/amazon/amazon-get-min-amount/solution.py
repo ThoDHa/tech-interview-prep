@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-get-min-amount.md
 
 Special thanks: A special thank you to a lovely, amazing fren who shared that this question appeared again on September 21, 2026! 💜
 
-  uv run python amazon_oa/amazon-get-min-amount/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-get-min-amount/              # run the test sets
+  uv run python amazon/amazon-get-min-amount/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-get-min-amount/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

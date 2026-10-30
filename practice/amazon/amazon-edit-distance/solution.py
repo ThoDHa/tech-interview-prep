@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-edit-distance.md
 
 Given two strings word1 and word2, return the minimum number of single-character operations needed to transform word1 into word2.
 
-  uv run python amazon_oa/amazon-edit-distance/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-edit-distance/              # run the test sets
+  uv run python amazon/amazon-edit-distance/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-edit-distance/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

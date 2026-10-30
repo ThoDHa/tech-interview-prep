@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-maximum-rating-threshold-coun
 
 Given a nonempty integer array ratings, return the largest integer k such that at least k entries in ratings are greater than or equal to k.
 
-  uv run python amazon_oa/amazon-maximum-rating-threshold-count/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-maximum-rating-threshold-count/              # run the test sets
+  uv run python amazon/amazon-maximum-rating-threshold-count/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-maximum-rating-threshold-count/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

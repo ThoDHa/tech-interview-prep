@@ -5,8 +5,8 @@ Reference implementation of the write-up's Multi-Source BFS solution, kept
 next to the harness so authored cases stay falsifiable. Your own attempt
 lives in solution.py.
 
-  uv run python walls_and_gates/reference.py   # debug one case (see CASE below)
-  uv run pytest walls_and_gates/               # run the test sets
+  uv run python leetcode/walls_and_gates/reference.py   # debug one case (see CASE below)
+  uv run pytest leetcode/walls_and_gates/               # run the test sets
 """
 
 from collections import deque

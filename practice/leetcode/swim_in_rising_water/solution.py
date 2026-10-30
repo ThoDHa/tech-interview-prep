@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/leetcode/swim_in_rising_water.md
 
 You are given a square 2-D matrix of distinct integers `grid` where each integer `grid[i][j]` represents the elevation at position `(i, j)`. Rain starts to fall at time = `0`, which causes the water l
 
-  uv run python swim_in_rising_water/solution.py   # debug one case (see CASE below)
-  uv run pytest swim_in_rising_water/              # run the test sets
+  uv run python leetcode/swim_in_rising_water/solution.py   # debug one case (see CASE below)
+  uv run pytest leetcode/swim_in_rising_water/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

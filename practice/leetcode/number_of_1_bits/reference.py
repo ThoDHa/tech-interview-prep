@@ -5,8 +5,8 @@ Reference implementation of the write-up's Brian Kernighan Erase Loop
 solution, kept next to the harness so authored cases stay falsifiable.
 Your own attempt lives in solution.py.
 
-  uv run python number_of_1_bits/reference.py   # replay the example cases
-  uv run pytest number_of_1_bits/               # run the test sets
+  uv run python leetcode/number_of_1_bits/reference.py   # replay the example cases
+  uv run pytest leetcode/number_of_1_bits/               # run the test sets
 """
 
 from harness import pick_case

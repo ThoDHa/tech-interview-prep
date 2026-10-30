@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-minimum-s3-storage-cost.md
 
 A batch contains files numbered from 1 to 2^n. Some files are sensitive and require encryption; their indices are given in sensitiveFiles.
 
-  uv run python amazon_oa/amazon-minimum-s3-storage-cost/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-minimum-s3-storage-cost/              # run the test sets
+  uv run python amazon/amazon-minimum-s3-storage-cost/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-minimum-s3-storage-cost/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

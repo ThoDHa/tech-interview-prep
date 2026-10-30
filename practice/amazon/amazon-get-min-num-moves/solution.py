@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-get-min-num-moves.md
 
 Imagine you are shopping on Amazon.com for some good weight lifting equipment. The equipment you want has blocks of many different weights that you can combine to lift.
 
-  uv run python amazon_oa/amazon-get-min-num-moves/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-get-min-num-moves/              # run the test sets
+  uv run python amazon/amazon-get-min-num-moves/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-get-min-num-moves/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

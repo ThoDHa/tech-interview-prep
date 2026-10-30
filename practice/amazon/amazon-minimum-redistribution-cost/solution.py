@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-minimum-redistribution-cost.m
 
 There are n warehouses arranged in a circle. Warehouse i initially stores products[i] items.
 
-  uv run python amazon_oa/amazon-minimum-redistribution-cost/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-minimum-redistribution-cost/              # run the test sets
+  uv run python amazon/amazon-minimum-redistribution-cost/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-minimum-redistribution-cost/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

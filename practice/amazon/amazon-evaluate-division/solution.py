@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-evaluate-division.md
 
 You are given variable pairs equations and positive real numbers values. For every index i, equations[i] = [a, b] and values[i] mean a / b = values[i].
 
-  uv run python amazon_oa/amazon-evaluate-division/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-evaluate-division/              # run the test sets
+  uv run python amazon/amazon-evaluate-division/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-evaluate-division/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

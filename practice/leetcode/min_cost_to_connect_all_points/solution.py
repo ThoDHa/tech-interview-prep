@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/leetcode/min_cost_to_connect_all_points.md
 
 You are given a 2-D integer array `points`, where `points[i] = [xi, yi]`. Each `points[i]` represents a distinct point on a 2-D plane. The cost of connecting two points `[xi, yi]` and `[xj, yj]` is th
 
-  uv run python min_cost_to_connect_all_points/solution.py   # debug one case (see CASE below)
-  uv run pytest min_cost_to_connect_all_points/              # run the test sets
+  uv run python leetcode/min_cost_to_connect_all_points/solution.py   # debug one case (see CASE below)
+  uv run pytest leetcode/min_cost_to_connect_all_points/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-cheapest-flights-within-k-sto
 
 There are n cities numbered from 0 to n - 1. You are given an array flights where flights[i] = [from_i, to_i, price_i] means there is a directed flight from city from_i to city to_i with cost price_i.
 
-  uv run python amazon_oa/amazon-cheapest-flights-within-k-stops/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-cheapest-flights-within-k-stops/              # run the test sets
+  uv run python amazon/amazon-cheapest-flights-within-k-stops/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-cheapest-flights-within-k-stops/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-longest-subarray-with-k-disti
 
 Given an integer array nums and an integer k, return the longest contiguous subarray containing exactly k distinct values.
 
-  uv run python amazon_oa/amazon-longest-subarray-with-k-distinct/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-longest-subarray-with-k-distinct/              # run the test sets
+  uv run python amazon/amazon-longest-subarray-with-k-distinct/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-longest-subarray-with-k-distinct/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

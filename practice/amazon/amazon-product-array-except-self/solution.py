@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-product-array-except-self.md
 
 Given an integer array nums, return an array answer where answer[i] equals the product of every element of nums except nums[i].
 
-  uv run python amazon_oa/amazon-product-array-except-self/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-product-array-except-self/              # run the test sets
+  uv run python amazon/amazon-product-array-except-self/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-product-array-except-self/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

@@ -5,8 +5,8 @@ Reference implementation of the write-up's Last-Occurrence Sweep solution, kept
 next to the harness so authored cases stay falsifiable. Your own attempt
 lives in solution.py.
 
-  uv run python partition_labels/reference.py   # replay the example cases
-  uv run pytest partition_labels/               # run the test sets
+  uv run python leetcode/partition_labels/reference.py   # replay the example cases
+  uv run pytest leetcode/partition_labels/               # run the test sets
 """
 
 from typing import List

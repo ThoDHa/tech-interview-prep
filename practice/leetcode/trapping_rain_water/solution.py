@@ -5,8 +5,8 @@ Write-up & approaches: ../../../docs/leetcode/trapping_rain_water.md
 Given `n` non-negative integers representing an elevation map where the width of
 each bar is `1`, compute how much water it can trap after raining.
 
-  uv run python trapping_rain_water/solution.py     # debug one case (see CASE below)
-  uv run pytest trapping_rain_water/                # run the test sets
+  uv run python leetcode/trapping_rain_water/solution.py   # debug one case (see CASE below)
+  uv run pytest leetcode/trapping_rain_water/              # run the test sets
 """
 
 from typing import List

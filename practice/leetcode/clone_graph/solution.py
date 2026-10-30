@@ -5,8 +5,8 @@ Write-up & approaches: ../../../docs/leetcode/clone_graph.md
 Given a reference to a node in a connected undirected graph, return a deep copy
 (clone) of the graph. Each node holds an `int` value and a list of its neighbors.
 
-  uv run python clone_graph/solution.py   # debug one case (see CASE below)
-  uv run pytest clone_graph/              # run the test sets
+  uv run python leetcode/clone_graph/solution.py   # debug one case (see CASE below)
+  uv run pytest leetcode/clone_graph/              # run the test sets
 """
 
 from typing import Optional

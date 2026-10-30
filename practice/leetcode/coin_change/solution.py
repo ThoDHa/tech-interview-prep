@@ -6,8 +6,8 @@ Given an integer array `coins` of different denominations and an integer
 `amount`, return the fewest number of coins needed to make up that amount, or
 `-1` if it cannot be made. You have an infinite supply of each coin.
 
-  uv run python coin_change/solution.py     # debug one case (see CASE below)
-  uv run pytest coin_change/                # run the test sets
+  uv run python leetcode/coin_change/solution.py   # debug one case (see CASE below)
+  uv run pytest leetcode/coin_change/              # run the test sets
 """
 
 from typing import List

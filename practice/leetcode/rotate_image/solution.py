@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/leetcode/rotate_image.md
 
 Given a square `n x n` matrix of integers `matrix`, rotate it by 90 degrees *clockwise*. You must rotate the matrix *in-place*. Do not allocate another 2D matrix and do the rotation.
 
-  uv run python rotate_image/solution.py   # debug one case (see CASE below)
-  uv run pytest rotate_image/              # run the test sets
+  uv run python leetcode/rotate_image/solution.py   # debug one case (see CASE below)
+  uv run pytest leetcode/rotate_image/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

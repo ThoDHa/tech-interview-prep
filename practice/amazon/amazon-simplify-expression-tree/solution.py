@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-simplify-expression-tree.md
 
 A valid binary expression tree is serialized in prefix order. Each token is +, -, *, a variable name, or a signed integer.
 
-  uv run python amazon_oa/amazon-simplify-expression-tree/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-simplify-expression-tree/              # run the test sets
+  uv run python amazon/amazon-simplify-expression-tree/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-simplify-expression-tree/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

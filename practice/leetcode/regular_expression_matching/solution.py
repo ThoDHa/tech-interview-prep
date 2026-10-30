@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/leetcode/regular_expression_matching.md
 
 You are given an input string `s` consisting of lowercase english letters, and a pattern `p` consisting of lowercase english letters, as well as `'.'`, and `'*'` characters. Return `true` if the patte
 
-  uv run python regular_expression_matching/solution.py   # debug one case (see CASE below)
-  uv run pytest regular_expression_matching/              # run the test sets
+  uv run python leetcode/regular_expression_matching/solution.py   # debug one case (see CASE below)
+  uv run pytest leetcode/regular_expression_matching/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

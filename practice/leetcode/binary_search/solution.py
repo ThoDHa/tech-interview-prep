@@ -6,8 +6,8 @@ Given an array of integers `nums` sorted in ascending order and an integer
 `target`, return the index of `target` in `nums`, or -1 if it is absent. The
 algorithm must run in `O(log n)` time.
 
-  uv run python binary_search/solution.py     # debug one case (see CASE below)
-  uv run pytest binary_search/                # run the test sets
+  uv run python leetcode/binary_search/solution.py   # debug one case (see CASE below)
+  uv run pytest leetcode/binary_search/              # run the test sets
 """
 
 from typing import List

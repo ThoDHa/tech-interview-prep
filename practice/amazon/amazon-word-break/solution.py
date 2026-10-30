@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-word-break.md
 
 Given a string s and an array of distinct dictionary words wordDict, return true if s can be split into a sequence of one or more dictionary words.
 
-  uv run python amazon_oa/amazon-word-break/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-word-break/              # run the test sets
+  uv run python amazon/amazon-word-break/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-word-break/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

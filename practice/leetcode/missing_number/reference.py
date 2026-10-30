@@ -5,8 +5,8 @@ Reference implementation of the write-up's Gauss Sum Formula solution,
 kept next to the harness so authored cases stay falsifiable. Your own
 attempt lives in solution.py.
 
-  uv run python missing_number/reference.py   # replay the example cases
-  uv run pytest missing_number/               # run the test sets
+  uv run python leetcode/missing_number/reference.py   # replay the example cases
+  uv run pytest leetcode/missing_number/               # run the test sets
 """
 
 from typing import List

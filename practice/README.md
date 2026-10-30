@@ -1,19 +1,35 @@
-# Grind75 Practice Harness
+# Practice Workspace
 
-A `pytest` workspace for practicing the [Grind75](https://www.techinterviewhandbook.org/grind75) problems. Each problem gets a directory you solve in, debug through, and test. The canonical worked solutions are **not** kept here: they live in the matching [`../docs/leetcode/<slug>.md`](../docs/leetcode) write-up, which each `solution.py` links to (and which links back), so you can go back and forth.
+A `pytest` workspace for practicing the problems in this repository yourself: the Grind 75 and NeetCode 150 LeetCode lists and the Amazon OA bank. Each problem gets a directory you solve in, debug through, and test. Every `solution.py` is an unsolved stub: it raises `NotSolved` until you implement it, and it links to the matching write-up, at `../docs/leetcode/<slug>.md` for the LeetCode track and `../docs/amazon/<slug>.md` for the Amazon bank, whose page links back, so you can go back and forth. About half the LeetCode folders and a small subset of the Amazon ones additionally carry a `reference.py`, the write-up's own solution kept next to the harness so its authored case files stay checkable; treat it as the answer key and stay out of it until after your own attempt, with some folders adding a `test_reference_<slug>.py` that checks it.
+
+## Get a copy
+
+Your attempts live on your own `practice` branch, created from the study guide's `main` branch, so they never touch the guide. Fork [ThoDHa/tech-interview-prep](https://github.com/ThoDHa/tech-interview-prep) on GitHub, clone your fork, and create the branch from `main`:
+
+```bash
+git clone https://github.com/<your-username>/tech-interview-prep.git
+cd tech-interview-prep
+git switch -c practice main
+```
+
+This creates a local `practice` branch at `main`'s tip and switches to it. The repository also carries a `practice` branch holding the maintainer's own worked attempts; leave it alone and build on `main`.
 
 ## Layout
 
-```
+```text
 practice/
-├── harness.py            # shared helpers (ListNode/TreeNode/graph builders, case loader, pick_case)
-├── pyproject.toml        # uv project (pytest dependency)
-├── pytest.ini            # makes `import harness` work from any test
-└── <problem_slug>/
-    ├── solution.py       # YOUR attempt: solve here; run it directly to debug a case
-    ├── cases.json        # simple cases: the LeetCode examples ("Run")
-    ├── cases_full.json   # full cases: the corner-case gauntlet ("Submit")
-    └── test_<slug>.py    # runs your solution against both case sets
+├── harness.py                 # shared helpers (ListNode/TreeNode/graph builders, case loader, pick_case)
+├── progress.py                # progress tracker (scan, rate, status, due)
+├── pyproject.toml             # uv project (pytest dependency)
+├── pytest.ini                 # markers, import path, and other pytest settings
+├── leetcode/                  # Grind 75 + NeetCode 150 problems
+│   └── <slug>/                # the four files below; some folders add reference.py + test_reference_<slug>.py
+│       ├── solution.py        # YOUR attempt: solve here; run it directly to debug a case
+│       ├── cases.json         # simple cases: the LeetCode examples ("Run")
+│       ├── cases_full.json    # full cases: the corner-case gauntlet ("Submit")
+│       └── test_<slug>.py     # runs your solution against both case sets
+└── amazon/                    # Amazon OA bank
+    └── <slug>/                # solution.py + cases.json + test_<slug>.py; a few folders add cases_full.json + reference.py + a reference test
 ```
 
 ## Setup (uv)
@@ -25,38 +41,44 @@ uv sync           # creates .venv and installs pytest
 
 ## The practice loop
 
-1. Open `<problem_slug>/solution.py`. The header links to the write-up at
-   `../../docs/leetcode/<slug>.md`: read the problem there.
+1. Open `leetcode/<slug>/solution.py`. The header links to the write-up at `../../docs/leetcode/<slug>.md`: read the problem there.
 2. Implement the method.
-3. **Debug it inside the file.** Each `solution.py` has a `__main__` block that
-   runs one case and prints input / expected / actual. Set a breakpoint in your method, pick the case (edit the `CASE` id near the bottom), and run/de­bug the file directly:
+3. **Debug it inside the file.** Each `solution.py` has a `__main__` block that runs one case and prints input / expected / actual. Set a breakpoint in your method, pick the case (edit the `CASE` id near the bottom), and run/debug the file directly:
 
    ```bash
-   uv run python two_sum/solution.py
+   uv run python leetcode/two_sum/solution.py
    ```
+
+   On an untouched stub the `__main__` block raises `NotSolved`: there is nothing to debug until the method exists.
 
 4. **Test it.** Two case sets, mirroring LeetCode's two buttons:
 
    ```bash
-   uv run pytest two_sum/             # both sets
-   uv run pytest two_sum/ -m simple   # "Run": just the examples
-   uv run pytest two_sum/ -m full     # "Submit": the full gauntlet
-   uv run pytest                      # everything
+   uv run pytest leetcode/two_sum/             # both sets
+   uv run pytest leetcode/two_sum/ -m simple   # "Run": just the examples
+   uv run pytest leetcode/two_sum/ -m full     # "Submit": the full gauntlet
+   uv run pytest                               # everything
    ```
 
    An unsolved `solution.py` raises `NotSolved`, so its tests **skip** rather than fail. Once you implement it, they run for real (red → green).
 
-5. To study the approaches, open `../docs/leetcode/<slug>.md` (linked from the top
-   of `solution.py`).
+5. To study the approaches, open `../docs/leetcode/<slug>.md` (linked from the top of `solution.py`).
 
-## Two test sets: Run vs Submit
+Amazon problems follow the same loop with paths like `amazon/amazon-aggressive-cows/` and its single case set:
+
+```bash
+uv run python amazon/amazon-aggressive-cows/solution.py
+uv run pytest amazon/amazon-aggressive-cows/
+```
+
+## Case sets: Run vs Submit
 
 | File | Marker | Role |
 |------|--------|------|
 | `cases.json` | `simple` | The example cases. Fast feedback while you iterate. |
 | `cases_full.json` | `full` | Examples **plus** a comprehensive corner-case gauntlet (empties, single elements, negatives, duplicates, boundary values, large inputs). |
 
-`cases_full.json` is a thorough corner-case suite built to each problem's constraints. LeetCode's literal hidden tests are not public, but this set targets the same failure modes.
+`cases_full.json` is a thorough corner-case suite built to each problem's constraints. LeetCode's literal hidden tests are not public, but this set targets the same failure modes. Amazon problems use no markers: most ship only `cases.json`, so a plain `uv run pytest amazon/<slug>/` is all they need, and the few that also carry `cases_full.json` and a reference test run their whole folder with that same plain command.
 
 ## Tracking your progress
 
@@ -65,7 +87,7 @@ uv sync           # creates .venv and installs pytest
 ```bash
 uv run python progress.py scan             # run the suite, record per-problem status
 uv run python progress.py rate <slug> <solid|shaky|struggled>
-uv run python progress.py status           # full board in canonical Grind75 order
+uv run python progress.py status           # full board in canonical study order
 uv run python progress.py due              # just the review queue
 ```
 

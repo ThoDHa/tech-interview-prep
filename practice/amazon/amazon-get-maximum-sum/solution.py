@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-get-maximum-sum.md
 
 Note 📝 - might be a sister problem of  🦥 Get Max Sum
 
-  uv run python amazon_oa/amazon-get-maximum-sum/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-get-maximum-sum/              # run the test sets
+  uv run python amazon/amazon-get-maximum-sum/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-get-maximum-sum/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

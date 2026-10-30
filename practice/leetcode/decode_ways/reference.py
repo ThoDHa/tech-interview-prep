@@ -5,8 +5,8 @@ Reference implementation of the write-up's Space-Optimized DP solution, kept
 next to the harness so authored cases stay falsifiable. Your own attempt
 lives in solution.py.
 
-  uv run python decode_ways/reference.py   # replay the example cases
-  uv run pytest decode_ways/               # run the test sets
+  uv run python leetcode/decode_ways/reference.py   # replay the example cases
+  uv run pytest leetcode/decode_ways/               # run the test sets
 """
 
 from harness import pick_case

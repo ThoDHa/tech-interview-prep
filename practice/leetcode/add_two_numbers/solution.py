@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/leetcode/add_two_numbers.md
 
 You are given two **non-empty** linked lists, `l1` and `l2`, where each represents a non-negative integer. The digits are stored in **reverse order**, e.g. the number 321 is represented as `1 -> 2 -> 
 
-  uv run python add_two_numbers/solution.py   # debug one case (see CASE below)
-  uv run pytest add_two_numbers/              # run the test sets
+  uv run python leetcode/add_two_numbers/solution.py   # debug one case (see CASE below)
+  uv run pytest leetcode/add_two_numbers/              # run the test sets
 """
 
 from harness import NotSolved, pick_case
@@ -24,7 +24,7 @@ class Solution:
 if __name__ == "__main__":
     # Debug playground: set a breakpoint in solve above, then run this file.
     # Pick a case by id (ids are in cases.json).
-    CASE = "example_1"
+    CASE = "case_1"
     case = pick_case(__file__, CASE)
     result = Solution().solve(*case["args"])
     print(f"case {case['id']}: args = {case['args']}")

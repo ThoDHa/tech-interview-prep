@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-package-delivery-system.md
 
 Each shipment scenario has a list of truck capacities and a list of package weights.
 
-  uv run python amazon_oa/amazon-package-delivery-system/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-package-delivery-system/              # run the test sets
+  uv run python amazon/amazon-package-delivery-system/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-package-delivery-system/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

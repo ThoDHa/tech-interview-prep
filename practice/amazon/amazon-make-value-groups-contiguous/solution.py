@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-make-value-groups-contiguous.
 
 You are given an integer array arr. In one operation, choose two values x and y (where y may be any value, including an existing value in the array), and replace every occurrence of x in the array wit
 
-  uv run python amazon_oa/amazon-make-value-groups-contiguous/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-make-value-groups-contiguous/              # run the test sets
+  uv run python amazon/amazon-make-value-groups-contiguous/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-make-value-groups-contiguous/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

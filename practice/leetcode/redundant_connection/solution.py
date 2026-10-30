@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/leetcode/redundant_connection.md
 
 You are given a connected **undirected graph** with `n` nodes labeled from `1` to `n`. Initially, it contained no cycles and consisted of `n-1` edges. We have now added one additional edge to the grap
 
-  uv run python redundant_connection/solution.py   # debug one case (see CASE below)
-  uv run pytest redundant_connection/              # run the test sets
+  uv run python leetcode/redundant_connection/solution.py   # debug one case (see CASE below)
+  uv run pytest leetcode/redundant_connection/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

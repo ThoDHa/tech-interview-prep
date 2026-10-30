@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-get-minimal-cost.md
 
 An online retailer offers products in n different dimensions as specified in the array dimensions. The category supervisor notices that several dimensions are redundant and do not offer a favorable cu
 
-  uv run python amazon_oa/amazon-get-minimal-cost/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-get-minimal-cost/              # run the test sets
+  uv run python amazon/amazon-get-minimal-cost/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-get-minimal-cost/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

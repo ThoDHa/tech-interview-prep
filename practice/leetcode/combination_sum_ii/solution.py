@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/leetcode/combination_sum_ii.md
 
 You are given an array of integers `candidates`, which may contain duplicates, and a target integer `target`. Your task is to return a list of all **unique combinations** of `candidates` where the cho
 
-  uv run python combination_sum_ii/solution.py   # debug one case (see CASE below)
-  uv run pytest combination_sum_ii/              # run the test sets
+  uv run python leetcode/combination_sum_ii/solution.py   # debug one case (see CASE below)
+  uv run pytest leetcode/combination_sum_ii/              # run the test sets
 """
 
 from harness import NotSolved, pick_case
@@ -24,7 +24,7 @@ class Solution:
 if __name__ == "__main__":
     # Debug playground: set a breakpoint in solve above, then run this file.
     # Pick a case by id (ids are in cases.json).
-    CASE = "example_1"
+    CASE = "neetcode_example"
     case = pick_case(__file__, CASE)
     result = Solution().solve(*case["args"])
     print(f"case {case['id']}: args = {case['args']}")

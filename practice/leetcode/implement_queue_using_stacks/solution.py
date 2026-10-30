@@ -6,8 +6,8 @@ Implement a first in first out (FIFO) queue using only two stacks. The queue
 must support `push`, `pop`, `peek`, and `empty` using only standard stack
 operations (push to top, peek/pop from top, size, is empty).
 
-  uv run python implement_queue_using_stacks/solution.py     # debug one case (see CASE below)
-  uv run pytest implement_queue_using_stacks/                # run the test sets
+  uv run python leetcode/implement_queue_using_stacks/solution.py   # debug one case (see CASE below)
+  uv run pytest leetcode/implement_queue_using_stacks/              # run the test sets
 """
 
 from harness import NotSolved, pick_case, run_operations

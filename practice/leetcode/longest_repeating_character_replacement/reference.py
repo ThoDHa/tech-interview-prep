@@ -6,8 +6,8 @@ Canonical reference implementation: the write-up's optimal approach
 (sliding window with a max-frequency counter), kept next to the harness so
 authored cases stay falsifiable. Your own attempt lives in solution.py.
 
-  uv run python longest_repeating_character_replacement/reference.py   # debug one case (see below)
-  uv run pytest longest_repeating_character_replacement/               # run the test sets
+  uv run python leetcode/longest_repeating_character_replacement/reference.py   # debug one case (see below)
+  uv run pytest leetcode/longest_repeating_character_replacement/               # run the test sets
 """
 
 from harness import pick_case

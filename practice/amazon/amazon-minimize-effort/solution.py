@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-minimize-effort.md
 
 Source note: 2026-07-17 — The EffiBin era is over. Long live Minimum Total Batch Expense. The problem has returned to the Circle of Source Fidelity, with its terminology, function signature, example, 
 
-  uv run python amazon_oa/amazon-minimize-effort/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-minimize-effort/              # run the test sets
+  uv run python amazon/amazon-minimize-effort/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-minimize-effort/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

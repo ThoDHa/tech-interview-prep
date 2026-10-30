@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-find-maximum-number-of-server
 
 Source note: 2026-07-02 — This problem duplicates Server Selection. Sighting dates were merged into this fuller official-source version, which remains the recommended practice page.
 
-  uv run python amazon_oa/amazon-find-maximum-number-of-servers/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-find-maximum-number-of-servers/              # run the test sets
+  uv run python amazon/amazon-find-maximum-number-of-servers/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-find-maximum-number-of-servers/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

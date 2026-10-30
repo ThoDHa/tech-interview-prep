@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-reorganize-string.md
 
 Rearrange a lowercase string so that no two adjacent characters are equal. If no such arrangement exists, return the empty string.
 
-  uv run python amazon_oa/amazon-reorganize-string/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-reorganize-string/              # run the test sets
+  uv run python amazon/amazon-reorganize-string/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-reorganize-string/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

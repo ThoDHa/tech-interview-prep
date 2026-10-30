@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-group-anagrams.md
 
 Group the strings in strs so that two strings appear in the same group exactly when they are anagrams.
 
-  uv run python amazon_oa/amazon-group-anagrams/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-group-anagrams/              # run the test sets
+  uv run python amazon/amazon-group-anagrams/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-group-anagrams/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

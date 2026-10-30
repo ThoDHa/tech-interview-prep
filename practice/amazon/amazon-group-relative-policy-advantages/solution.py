@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-group-relative-policy-advanta
 
 Compute group-relative advantages for sampled policy responses. Response i belongs to groupIds[i] and receives the integer reward correctnessRewards[i] + formatRewards[i].
 
-  uv run python amazon_oa/amazon-group-relative-policy-advantages/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-group-relative-policy-advantages/              # run the test sets
+  uv run python amazon/amazon-group-relative-policy-advantages/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-group-relative-policy-advantages/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

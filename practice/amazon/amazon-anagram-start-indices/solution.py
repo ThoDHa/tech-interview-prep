@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-anagram-start-indices.md
 
 Given lowercase strings s and p, return every starting index where a substring of s is an anagram of p.
 
-  uv run python amazon_oa/amazon-anagram-start-indices/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-anagram-start-indices/              # run the test sets
+  uv run python amazon/amazon-anagram-start-indices/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-anagram-start-indices/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

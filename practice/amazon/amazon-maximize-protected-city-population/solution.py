@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-maximize-protected-city-popul
 
 You are given n cities arranged in a line. City i has population population[i] and may contain a security unit described by unit[i], where unit[i] = '1' means a unit is initially stationed in city i.
 
-  uv run python amazon_oa/amazon-maximize-protected-city-population/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-maximize-protected-city-population/              # run the test sets
+  uv run python amazon/amazon-maximize-protected-city-population/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-maximize-protected-city-population/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

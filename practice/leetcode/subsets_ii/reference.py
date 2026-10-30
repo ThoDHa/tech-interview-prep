@@ -5,8 +5,8 @@ Reference implementation of the write-up's Sorted Backtracking solution,
 kept next to the harness so authored cases stay falsifiable. Your own attempt
 lives in solution.py.
 
-  uv run python subsets_ii/reference.py   # debug one case (see below)
-  uv run pytest subsets_ii/               # run the test sets
+  uv run python leetcode/subsets_ii/reference.py   # debug one case (see below)
+  uv run pytest leetcode/subsets_ii/               # run the test sets
 """
 
 from typing import List

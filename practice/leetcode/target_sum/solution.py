@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/leetcode/target_sum.md
 
 You are given an array of integers `nums` and an integer `target`. For each number in the array, you can choose to either add or subtract it to a total sum. * For example, if `nums = [1, 2]`, one poss
 
-  uv run python target_sum/solution.py   # debug one case (see CASE below)
-  uv run pytest target_sum/              # run the test sets
+  uv run python leetcode/target_sum/solution.py   # debug one case (see CASE below)
+  uv run pytest leetcode/target_sum/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

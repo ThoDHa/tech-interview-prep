@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-largest-lexicographic-unique-
 
 Given a lowercase string s, remove characters so that every distinct letter appears exactly once. The remaining characters must preserve their original relative order.
 
-  uv run python amazon_oa/amazon-largest-lexicographic-unique-letters/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-largest-lexicographic-unique-letters/              # run the test sets
+  uv run python amazon/amazon-largest-lexicographic-unique-letters/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-largest-lexicographic-unique-letters/              # run the test sets
 """
 
 from harness import NotSolved, pick_case

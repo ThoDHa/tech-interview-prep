@@ -4,8 +4,8 @@ Write-up & approaches: ../../../docs/amazon/amazon-get-max-aggregate-temperature
 
 Alexa is Amazon's virtual AI assistant. It makes it easy to set up your Alexa-enabled devices, listen to music, get weather updates, and much more. The team is working on a new feature that evaluates 
 
-  uv run python amazon_oa/amazon-get-max-aggregate-temperature-change/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon_oa/amazon-get-max-aggregate-temperature-change/              # run the test sets
+  uv run python amazon/amazon-get-max-aggregate-temperature-change/solution.py   # debug one case (see CASE below)
+  uv run pytest amazon/amazon-get-max-aggregate-temperature-change/              # run the test sets
 """
 
 from harness import NotSolved, pick_case
