@@ -1026,6 +1026,19 @@ def render_writeup(entry: dict, metadata: Optional[dict], parsed: Optional[dict]
     return "\n".join(parts).rstrip() + "\n"
 
 
+def render_command_block(dir_slug: str) -> str:
+    """Render the debug command lines embedded in a solution stub docstring.
+
+    Shared by the stub renderer and the idempotency check so the pinned
+    expectation can never drift from what emission writes.
+    """
+    return (
+        "\n"
+        f"  uv run python leetcode/{dir_slug}/solution.py   # debug one case (see CASE below)\n"
+        f"  uv run pytest leetcode/{dir_slug}/              # run the test sets\n"
+    )
+
+
 def render_solution_stub(
     entry: dict,
     metadata: Optional[dict],
@@ -1052,10 +1065,7 @@ def render_solution_stub(
 Write-up & approaches: {writeup_link}
 
 {summary}
-
-  uv run python leetcode/{dir_slug}/solution.py   # debug one case (see CASE below)
-  uv run pytest leetcode/{dir_slug}/              # run the test sets
-"""
+{render_command_block(dir_slug)}"""
 
 from harness import NotSolved, pick_case
 
@@ -1281,12 +1291,26 @@ def emit_scaffolds(entries: Sequence[dict], fetch: bool = True) -> dict:
 # ---------------------------------------------------------------------------
 
 
+def _displays(path: Path) -> str:
+    """Render a scaffold path for check output, repo-relative when possible."""
+    try:
+        return str(path.relative_to(REPO_ROOT))
+    except ValueError:
+        return str(path)
+
+
 def check(entries: Sequence[dict]) -> int:
     """Exit 0 when every scaffold on disk matches a fresh in-memory generation.
 
     Read-only: nothing is fetched, written, or rewritten. Cache misses do not
     mutate anything; they surface as stale files if the on-disk scaffold
     disagrees with what the cache regenerates.
+
+    Two sweeps run: delta entries are regenerated in memory and compared
+    whole-file, and every committed `practice/leetcode/<dirSlug>/solution.py`
+    is checked against the template's debug command lines. Command lines
+    are manifest-derived, so committed scaffolds stay verified after they
+    stop being delta problems.
 
     Args:
         entries: The delta manifest entries to verify.
@@ -1302,13 +1326,12 @@ def check(entries: Sequence[dict]) -> int:
         parsed_cases = cases_from_parsed(parsed, metadata, dir_slug)
         for path, expected in render_all(entry, metadata, parsed_cases, parsed).items():
             if not path.exists() or path.read_text(encoding="utf-8") != expected:
-                try:
-                    display = str(path.relative_to(REPO_ROOT))
-                except ValueError:
-                    display = str(path)
-                stale.append(display)
+                stale.append(_displays(path))
+    for solution in sorted(PRACTICE_DIR.glob("*/solution.py")):
+        if render_command_block(solution.parent.name) not in solution.read_text(encoding="utf-8"):
+            stale.append(_displays(solution))
     if stale:
-        print(f"--check: {len(stale)} scaffold file(s) differ from a fresh generation:")
+        print(f"--check: {len(stale)} scaffold file(s) differ from the expected scaffold content:")
         for path in stale[:20]:
             print(f"  {path}")
         return 1

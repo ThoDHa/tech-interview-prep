@@ -1059,6 +1059,26 @@ def test_check_mode_fails_when_files_drift(tmp_path, monkeypatch):
     assert gen.check([entry]) == 1
 
 
+def test_check_mode_sweeps_committed_stub_command_lines(tmp_path, monkeypatch):
+    docs_dir = tmp_path / "docs" / "problems"
+    practice_dir = tmp_path / "practice"
+    monkeypatch.setattr(gen, "DOCS_DIR", docs_dir)
+    monkeypatch.setattr(gen, "PRACTICE_DIR", practice_dir)
+    stub_dir = practice_dir / "group_anagrams"
+    stub_dir.mkdir(parents=True)
+    stub = stub_dir / "solution.py"
+    header = (
+        '"""Group Anagrams — https://leetcode.com/problems/group-anagrams/\n'
+        "\n"
+        "Write-up & approaches: ../docs/leetcode/group_anagrams.md\n"
+        '"""\n'
+    )
+    stub.write_text(header, encoding="utf-8")
+    assert gen.check([]) == 1
+    stub.write_text(header + gen.render_command_block("group_anagrams"), encoding="utf-8")
+    assert gen.check([]) == 0
+
+
 def test_main_check_mode_does_not_rewrite_the_manifest(tmp_path, monkeypatch):
     monkeypatch.setattr(gen, "MANIFEST_PATH", MANIFEST_PATH)
     reads = []

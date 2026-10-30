@@ -52,7 +52,7 @@ import urllib.error
 import urllib.request
 from dataclasses import dataclass
 from pathlib import Path
-from typing import Any, Dict, List, Mapping, Optional, Sequence
+from typing import Any, Dict, List, Mapping, NamedTuple, Optional, Sequence, Tuple
 
 import generate_index_tables as index_tables
 
@@ -714,10 +714,7 @@ def render_solution_stub(
 Write-up & approaches: {writeup_link}
 
 {summary}
-
-  uv run python amazon/{entry["slug"]}/solution.py   # debug one case (see CASE below)
-  uv run pytest amazon/{entry["slug"]}/              # run the test sets
-"""
+{render_command_block(entry["slug"])}"""
 
 from harness import NotSolved, pick_case
 
@@ -1080,37 +1077,77 @@ def ensure_nav_entry() -> bool:
 # ---------------------------------------------------------------------------
 
 
-def expected_scaffold_fragments(entry: dict) -> Dict[Path, str]:
+class ScaffoldExpectation(NamedTuple):
+    """Pinned expectation for one scaffold file.
+
+    The file must start with `prefix` and contain every fragment in
+    `required`. Prefixes pin generator-owned file heads; `required`
+    fragments pin generator-owned lines that sit below cache-rendered
+    content, where no byte-exact prefix can reach.
+    """
+
+    prefix: str
+    required: Tuple[str, ...] = ()
+
+
+def render_command_block(slug: str) -> str:
+    """Render the debug command lines embedded in a solution stub docstring.
+
+    Shared by the stub renderer and the idempotency check so the pinned
+    expectation can never drift from what emission writes.
+    """
+    return (
+        "\n"
+        f"  uv run python amazon/{slug}/solution.py   # debug one case (see CASE below)\n"
+        f"  uv run pytest amazon/{slug}/              # run the test sets\n"
+    )
+
+
+def expected_scaffold_fragments(entry: dict) -> Dict[Path, ScaffoldExpectation]:
     """Manifest-driven scaffold expectations for one problem.
 
     A `page-unparseable` entry was rendered entirely from the manifest, so
-    its four scaffolds are compared byte-for-byte. Every other entry was
-    rendered from FastPrep data that lives only in the unversioned /tmp
-    cache; the fragments the generator owns end to end (the write-up
-    header, the stub/test header and write-up link docstrings) are compared
-    exactly instead of re-rendering from the cache.
+    its four scaffolds are compared byte-for-byte (a whole-content prefix).
+    Every other entry was rendered from FastPrep data that lives only in
+    the unversioned /tmp cache; the fragments the generator owns end to end
+    are compared exactly instead of re-rendering from the cache: the
+    write-up header, the stub/test header and write-up link docstrings,
+    and the stub's two `uv run` command lines (via a required fragment,
+    since the cache-rendered statement summary sits between the header and
+    the commands).
 
     Args:
         entry: Manifest entry carrying `slug`, `title`, `url`, and
             `parse_status`.
 
     Returns:
-        Expected text fragments keyed by scaffold path; a file matches when
-        it starts with the expected fragment.
+        Expected fragments keyed by scaffold path; a file matches when it
+        starts with the expectation's prefix and contains every required
+        fragment.
     """
     slug = entry["slug"]
     if entry.get("parse_status") == "page-unparseable":
-        return render_all(entry, None, unparsed_page_cases(slug), "")
+        return {
+            path: ScaffoldExpectation(prefix=content)
+            for path, content in render_all(entry, None, unparsed_page_cases(slug), "").items()
+        }
     writeup_link = WRITEUP_LINK_TEMPLATE.format(slug=slug)
     return {
-        DOCS_DIR / f"{slug}.md": f"# [{entry['title']}]({entry['url']})\n",
-        PRACTICE_DIR / slug / "solution.py": (
-            f'"""{entry["title"]} — {entry["url"]}\n'
-            f"\nWrite-up & approaches: {writeup_link}\n"
+        DOCS_DIR / f"{slug}.md": ScaffoldExpectation(
+            prefix=f"# [{entry['title']}]({entry['url']})\n"
         ),
-        PRACTICE_DIR / slug / f"test_{slug}.py": (
-            f'"""Tests for {entry["title"]} — your attempt (solution.py) against'
-            f" cases.json.\n\nThe worked approaches live in {writeup_link}.\n"
+        PRACTICE_DIR / slug / "solution.py": ScaffoldExpectation(
+            prefix=(
+                f'"""{entry["title"]} — {entry["url"]}\n'
+                f"\nWrite-up & approaches: {writeup_link}\n"
+            ),
+            required=(render_command_block(slug),),
+        ),
+        PRACTICE_DIR / slug / f"test_{slug}.py": ScaffoldExpectation(
+            prefix=(
+                f'"""Tests for {entry["title"]} — your attempt (solution.py) against'
+                f" cases.json.\n\nThe worked approaches live in {writeup_link}.\n"
+            )
         ),
     }
 
@@ -1150,8 +1187,11 @@ def check(manifest: Sequence[dict]) -> int:
     stale: List[str] = []
     for entry in manifest:
         slug = entry["slug"]
-        for path, expected in expected_scaffold_fragments(entry).items():
-            if not path.exists() or not path.read_text(encoding="utf-8").startswith(expected):
+        for path, expectation in expected_scaffold_fragments(entry).items():
+            content = path.read_text(encoding="utf-8") if path.exists() else ""
+            if not content.startswith(expectation.prefix) or any(
+                fragment not in content for fragment in expectation.required
+            ):
                 stale.append(_displays(path))
         if entry.get("parse_status") != "page-unparseable":
             cases_path = PRACTICE_DIR / slug / "cases.json"
