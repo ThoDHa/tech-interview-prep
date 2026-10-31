@@ -14,7 +14,9 @@ Complete the function findMinReplacements in the editor.
 
 findMinReplacements has the following parameter:
 
-int pack[n]: an array representing the weights of packages.int: the minimum number of replacements needed.
+int pack[n]: an array representing the weights of packages.
+
+int: the minimum number of replacements needed.
 
 ## Examples
 

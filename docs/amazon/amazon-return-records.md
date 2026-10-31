@@ -6,7 +6,11 @@ Simulate a website authentication service. Initially, no users are registered an
 
 Each request has one of these forms:
 
-register username password: register a new username. Return "Registered Successfully", or "Register Unsuccessfully" if the username already exists.login username password: log in a registered user when the password matches and the user is not already logged in. Return "Logged In Successfully" on success, or "Login Unsuccessfully" otherwise.logout username: log out a currently logged-in user. Return "Logged Out Successfully" on success, or "Logout Unsuccessfully" otherwise.A failed login does not change an existing session. Usernames and passwords are case-sensitive.
+register username password: register a new username. Return "Registered Successfully", or "Register Unsuccessfully" if the username already exists.
+login username password: log in a registered user when the password matches and the user is not already logged in. Return "Logged In Successfully" on success, or "Login Unsuccessfully" otherwise.
+logout username: log out a currently logged-in user. Return "Logged Out Successfully" on success, or "Logout Unsuccessfully" otherwise.
+
+A failed login does not change an existing session. Usernames and passwords are case-sensitive.
 
 Return one result string for every request, in the same order.
 
@@ -26,7 +30,10 @@ Return one result string for every request, in the same order.
 
 **Output:** `["Registered Successfully", "Registered Successfully", "Logged In Successfully", "Login Unsuccessfully", "Logged Out Successfully"]`
 
-**Explanation:** david and adam are new usernames, so both registrations succeed.david logs in with the correct password.adam uses 1adam1, which does not match the case-sensitive password 1Adam1, so that login fails.david is logged in, so the logout succeeds.
+**Explanation:** david and adam are new usernames, so both registrations succeed.
+david logs in with the correct password.
+adam uses 1adam1, which does not match the case-sensitive password 1Adam1, so that login fails.
+david is logged in, so the logout succeeds.
 
 ## Constraints
 

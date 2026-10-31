@@ -2,7 +2,7 @@
 
 Write-up & approaches: ../../../docs/amazon/amazon-is-regex-matching.md
 
-Special thanks: Alex contributed this problem.
+The developers at Amazon are developing a regex matching library for their NLP use cases. A prototype regex matching has the following requirements:
 
   uv run python amazon/amazon-is-regex-matching/solution.py   # debug one case (see CASE below)
   uv run pytest amazon/amazon-is-regex-matching/              # run the test sets

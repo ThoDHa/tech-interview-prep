@@ -4,11 +4,7 @@
 
 The developers at AWS IAM are designing a new checksum logic for an authentication module. The checksum is calculated as an array hash where hash[i] = secretKey[i] % param[i]. There are n parameters for the checksum, where the ith parameter is represented by param[i]. The secret key consists of n values, with the ith value denoted as secretKey[i].
 
-
-
 A good secret key is one that results in more distinct values in the hash array.
-
-
 
 Given the array param of size n, determine the maximum number of possible distinct values in the hash array by selecting an appropriate secretKey.
 

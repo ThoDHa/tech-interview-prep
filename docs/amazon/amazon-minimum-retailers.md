@@ -14,7 +14,10 @@ Complete the function minimumRetailers in the editor below.
 
 minimumRetailers has the following parameters:
 
-int regionStart[n]: the left ends of the operating regionsint regionEnd[n]: the right ends of the operating regionsint: the minimum number of retailers to relocate
+int regionStart[n]: the left ends of the operating regions
+int regionEnd[n]: the right ends of the operating regions
+
+int: the minimum number of retailers to relocate
 
 ## Examples
 

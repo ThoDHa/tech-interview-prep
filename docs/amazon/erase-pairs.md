@@ -6,10 +6,7 @@ You are given a string S. In one move you can erase from S a pair of identical l
 If there are many such strings, choose the alphabetically (lexicographically) smallest one. 
 Note that there is no limit to the number of moves.
 
-
 Write a function:
-
-
 
 given a string S of length N, returns the shortest string (or the first alphabetically, in the case of a draw) created by erasing pairs of identical letters from S.
 

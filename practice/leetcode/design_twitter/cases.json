@@ -1,1 +1,56 @@
-[]
+[
+  {
+    "id": "empty_constructor_only",
+    "operations": [
+      "__init__"
+    ],
+    "arguments": [
+      []
+    ],
+    "expected": [
+      null
+    ]
+  },
+  {
+    "id": "empty_feed_no_tweets_no_follows",
+    "operations": [
+      "__init__",
+      "getNewsFeed"
+    ],
+    "arguments": [
+      [],
+      [
+        1
+      ]
+    ],
+    "expected": [
+      null,
+      []
+    ]
+  },
+  {
+    "id": "single_tweet_single_user",
+    "operations": [
+      "__init__",
+      "postTweet",
+      "getNewsFeed"
+    ],
+    "arguments": [
+      [],
+      [
+        1,
+        10
+      ],
+      [
+        1
+      ]
+    ],
+    "expected": [
+      null,
+      null,
+      [
+        10
+      ]
+    ]
+  }
+]

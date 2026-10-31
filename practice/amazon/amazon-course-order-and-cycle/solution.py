@@ -2,7 +2,7 @@
 
 Write-up & approaches: ../../../docs/amazon/amazon-course-order-and-cycle.md
 
-There are numCourses courses numbered from 0 through numCourses - 1. Each row [course, prerequisite] means the prerequisite must be completed before the course.
+Source note: Reports describe prerequisite execution order, cycle identification, and a changed-task rerun follow-up. Canonical sorted traversal, filtered full ordering, global cycle scope, and runner
 
   uv run python amazon/amazon-course-order-and-cycle/solution.py   # debug one case (see CASE below)
   uv run pytest amazon/amazon-course-order-and-cycle/              # run the test sets
@@ -12,7 +12,7 @@ from harness import NotSolved, pick_case
 
 
 class Solution:
-    def analyzeCourses(self, numCourses, prerequisites):
+    def analyzeCourses(self, numCourses, prerequisites, changedCourses):
         """State the time and space complexity of your approach, and explain why.
 
         Time:  O(?):

@@ -1,1 +1,45 @@
-[]
+[
+  {
+    "id": "neetcode_example",
+    "args": [
+      "aab"
+    ],
+    "expected": [
+      [
+        "a",
+        "a",
+        "b"
+      ],
+      [
+        "aa",
+        "b"
+      ]
+    ]
+  },
+  {
+    "id": "single_character",
+    "args": [
+      "a"
+    ],
+    "expected": [
+      [
+        "a"
+      ]
+    ]
+  },
+  {
+    "id": "all_palindromic_pair",
+    "args": [
+      "aa"
+    ],
+    "expected": [
+      [
+        "a",
+        "a"
+      ],
+      [
+        "aa"
+      ]
+    ]
+  }
+]

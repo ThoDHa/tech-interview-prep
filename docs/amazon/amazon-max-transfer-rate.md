@@ -4,29 +4,18 @@
 
 You are in the Amazon's Cloud Infrastructure Team, and you are working on a project to optimize how data flows through its network of storage servers.
 
-
-
 You are given with n storage servers, and the throughput capacity of each server is given in an integer array named throughput.
-
-
 
 There are pipelineCount data pipelines that need to be connected to two storage servers, one as the primary connection and the other as the backup. Each data pipeline must choose a unique pair of servers for its connections.
 
-
-
 The transferRate for each data pipeline is defined as the sum of the throughput of its primary and backup servers.
-
-
 
 Given an integer array throughput and an integer pipelineCount, find the maximum total transferRate that can be obtained by optimally choosing unique pairs of connections for each data pipeline.
 
-
-
 Note:
 
-
-
 A pair of servers (x, y) is said to be unique if no other pipeline has selected the same pair. However, the pairs (y, x) and (x, y) are treated as different connections.
+
 It is also possible to select the same server for primary and backup connections, which means that (x, x) is a valid pair for the connection.
 
 ## Examples

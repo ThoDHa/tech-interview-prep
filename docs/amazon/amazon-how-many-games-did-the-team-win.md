@@ -18,7 +18,11 @@ Return the number of games won by the first team, modulo 10^9 + 7.
 
 **Explanation:** The possible index pairs are (0, 1), (0, 2), and (1, 2).
 
-(0, 1): 1 + 2 = 3 and 3 + 2 = 5, so the first team loses.(0, 2): 1 + 3 = 4 and 3 + 1 = 4, so the first team does not win.(1, 2): 2 + 3 = 5 and 2 + 1 = 3, so the first team wins.There is 1 winning game.
+(0, 1): 1 + 2 = 3 and 3 + 2 = 5, so the first team loses.
+(0, 2): 1 + 3 = 4 and 3 + 1 = 4, so the first team does not win.
+(1, 2): 2 + 3 = 5 and 2 + 1 = 3, so the first team wins.
+
+There is 1 winning game.
 
 ## Constraints
 

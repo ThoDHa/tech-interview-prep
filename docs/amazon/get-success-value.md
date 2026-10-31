@@ -5,22 +5,20 @@
 Amazon Prime Video has recently released an exclusive series on its platform. They collected the number of viewers from n
 different regions across the world and stored the data in the array num_viewers.
 
-
-
 The success value of the release is defined as the sum of viewership in the top k regions, those with the highest viewers.
 For example, if num_viewers = [3, 2, 1, 4, 5] and k = 3, then the success value of the release is 
 3 + 4 + 5 = 12 as [3, 4, 5] are the top 3 values.
 
-
-
 Given a number of k values, calculate the success value for each query.
-
 
 Complete the function findSuccessValue in the editor.
 
 findSuccessValue has the following parameters:
 
-int num_viewers[n]: viewership from n different regionsint queries[q]: an array of k valueslong[q]: the maximum possible success values for each query
+int num_viewers[n]: viewership from n different regions
+int queries[q]: an array of k values
+
+long[q]: the maximum possible success values for each query
 
 ## Examples
 
@@ -50,7 +48,6 @@ Return [11, 16, 21].
 
 For the second query, k = 4, all 4 regions are used.
 
-
 Return [7, 17].
 
 ### Example 3
@@ -64,7 +61,6 @@ Return [7, 17].
 For the second query, k = 2, only the top 2 regions are used.
 
 For the third query, k = 3, all 3 regions are used.
-
 
 Return [7, 13, 18].
 

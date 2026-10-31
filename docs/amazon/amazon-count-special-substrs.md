@@ -14,7 +14,9 @@ Complete the function countSpecialSubstrings in the editor.
 
 countSpecialSubstrings has the following parameter:
 
-String s: a binary string representing a user's interaction historyint: the count of special behavior patterns (non-empty substrings)
+String s: a binary string representing a user's interaction history
+
+int: the count of special behavior patterns (non-empty substrings)
 
 ## Examples
 

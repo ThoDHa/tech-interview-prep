@@ -4,12 +4,12 @@
 
 A well-known consumer brand selling everyday products on Amazon is facing a supply issue due to daily changes in product demand. To manage this, Amazon has set up n distribution hubs, each labeled with a unique number from 1 to n.
 
-
-
 Amazon decides which hub to use each day by comparing the current day’s demand with the previous day’s:
 
+If today’s demand is higher, a hub with a larger number than yesterday’s is chosen.
+If today’s demand is lower, a hub with a smaller number than yesterday’s is used.
+If today’s demand is the same, the same hub as yesterday is selected.
 
-If today’s demand is higher, a hub with a larger number than yesterday’s is chosen.If today’s demand is lower, a hub with a smaller number than yesterday’s is used.If today’s demand is the same, the same hub as yesterday is selected.
 The total cost for the brand is based on how many different hubs are used over time. Your task is to find the minimum number of unique distribution hubs needed to handle the demand across all n days.
 
 ## Examples

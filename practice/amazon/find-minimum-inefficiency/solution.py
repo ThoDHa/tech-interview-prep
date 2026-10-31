@@ -2,7 +2,7 @@
 
 Write-up & approaches: ../../../docs/amazon/find-minimum-inefficiency.md
 
-Special thanks: 💐 1008th thank you to spike! 👏
+Amazon Web Service has n servers, each of them either has high fault tolerance or high reliability. 
 
   uv run python amazon/find-minimum-inefficiency/solution.py   # debug one case (see CASE below)
   uv run pytest amazon/find-minimum-inefficiency/              # run the test sets

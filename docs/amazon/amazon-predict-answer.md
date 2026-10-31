@@ -6,7 +6,12 @@ In this stock price prediction game, Player 1 provides Player 2 with stock marke
 
 The rules of the game are as follows:
 
-1. Player 1 will tell Player 2 a specific day number i (where 1 ≤ i ≤ n).2. Player 2 has to find the nearest day j (where 1 ≤ j < i or i < j ≤ n) in the past or future on which the stock price was lower than on the given day, i.e., stockData[j] < stockData[i].3. If there is more than one j which satisfies Rule 2 (i.e., a tie in distance), then Player 2 will choose the smaller day number (i.e., the smallest j satisfying Rule 2).4. If no such day j exists, then the answer for that case is -1.Given q queries in the array queries, the task is to find the answer for each queries[i] in queries and return a list of answers as per the above rules corresponding to each query.
+1. Player 1 will tell Player 2 a specific day number i (where 1 ≤ i ≤ n).
+2. Player 2 has to find the nearest day j (where 1 ≤ j < i or i < j ≤ n) in the past or future on which the stock price was lower than on the given day, i.e., stockData[j] < stockData[i].
+3. If there is more than one j which satisfies Rule 2 (i.e., a tie in distance), then Player 2 will choose the smaller day number (i.e., the smallest j satisfying Rule 2).
+4. If no such day j exists, then the answer for that case is -1.
+
+Given q queries in the array queries, the task is to find the answer for each queries[i] in queries and return a list of answers as per the above rules corresponding to each query.
 
 Note: The description and the answer format both adhere to 1-based indexing for the arrays.
 

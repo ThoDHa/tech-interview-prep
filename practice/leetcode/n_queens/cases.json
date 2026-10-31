@@ -1,1 +1,27 @@
-[]
+[
+  {
+    "id": "single_queen",
+    "args": [
+      1
+    ],
+    "expected": [
+      [
+        "Q"
+      ]
+    ]
+  },
+  {
+    "id": "no_solution_two",
+    "args": [
+      2
+    ],
+    "expected": []
+  },
+  {
+    "id": "no_solution_three",
+    "args": [
+      3
+    ],
+    "expected": []
+  }
+]

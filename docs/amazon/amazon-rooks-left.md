@@ -4,20 +4,18 @@
 
 You are given a 2D grid board that represents a chessboard. The board contains multiple cells, where:
 
+0 indicates an empty cell.
+1 indicates a cell containing a rook.
 
-0 indicates an empty cell.1 indicates a cell containing a rook.
 A rook can only move vertically or horizontally if there is another rook in its row or column to capture. It cannot move if there are no other rooks in its row or column.
-
-
 
 Your task is to determine the minimum number of rooks that can be left on the board in a peaceful state after capturing as many rooks as possible. A peaceful state is defined as a state where no two rooks can capture each other (i.e., no two rooks share the same row or column).
 
-
-
 Note:
 
-
-Rook Movement: A rook can only move if there is another rook in the same row or column to capture. If a rook is alone in its row or column, it cannot move.The goal is to minimize the number of rooks left by capturing as many rooks as possible, while ensuring that the remaining rooks are in a peaceful state.A peaceful state is achieved when no two rooks can capture each other (i.e., no two rooks share the same row or column).
+Rook Movement: A rook can only move if there is another rook in the same row or column to capture. If a rook is alone in its row or column, it cannot move.
+The goal is to minimize the number of rooks left by capturing as many rooks as possible, while ensuring that the remaining rooks are in a peaceful state.
+A peaceful state is achieved when no two rooks can capture each other (i.e., no two rooks share the same row or column).
 
 ## Examples
 

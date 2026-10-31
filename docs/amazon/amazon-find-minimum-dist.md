@@ -4,8 +4,6 @@
 
 note - See the Problem Source at the vely bottom of the page for the original problem description~
 
-
-
 In a realm where data centers and servers flourished along a mystical one-dimensional line, a wise ruler sought to optimize their connections. Each data center needed to establish a bond with a server, minimizing the lag defined as the absolute distance between their coordinates. Tasked with this quest, the ruler gathered the bravest minds to decipher the best pairings from the enchanted positions of the data centers and servers. Together, they embarked on a journey to forge connections that would ensure the smallest lag possible, bringing harmony to the kingdom's network and enhancing its magical efficiency.
 
 ## Examples

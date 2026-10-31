@@ -7,8 +7,6 @@ The borrower borrowed money on the jth day should payback on the (j+1)th day to 
 The borrower can payback the jth day loan from the (j+1)th day's borrowed money and can use the leftover money on that day.
 Find the maximum number of days the borrower can survive before defaulting.
 
-
-
 lender[i] represents the ith lending amount, and payback[i] represents the ith payback amount.
 
 ## Examples
@@ -19,7 +17,11 @@ lender[i] represents the ith lending amount, and payback[i] represents the ith p
 
 **Output:** `3`
 
-**Explanation:** Choose lender -> 1, so payback is 3.Choose lender -> 4, repay previous payback 3, hence remaining 4-3 = 1 (borrower spends it), the current Payback is 7.Choose lender -> 8, repay previous payback 7, hence remaining 8-7 = 1 (borrower spends it), the current Payback is 9.Left with lender -> 6, cannot repay previous payback which is 9, 9 > 6 hence default.
+**Explanation:** Choose lender -> 1, so payback is 3.
+Choose lender -> 4, repay previous payback 3, hence remaining 4-3 = 1 (borrower spends it), the current Payback is 7.
+Choose lender -> 8, repay previous payback 7, hence remaining 8-7 = 1 (borrower spends it), the current Payback is 9.
+Left with lender -> 6, cannot repay previous payback which is 9, 9 > 6 hence default.
+
 So the borrower can survive 3 days.
 
 ### Example 2
@@ -36,7 +38,10 @@ So the borrower can survive 3 days.
 
 **Output:** `2`
 
-**Explanation:** Choose lender -> 1, so payback is 2.Choose lender -> 1, repay previous payback 2, hence no remaining (borrower spends it), the current Payback is 2.Left with lender -> 1, cannot repay previous payback which is 2, 2 > 1 hence default.
+**Explanation:** Choose lender -> 1, so payback is 2.
+Choose lender -> 1, repay previous payback 2, hence no remaining (borrower spends it), the current Payback is 2.
+Left with lender -> 1, cannot repay previous payback which is 2, 2 > 1 hence default.
+
 So the borrower can survive 2 days.
 
 ## Constraints

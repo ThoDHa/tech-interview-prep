@@ -67,7 +67,7 @@ leetcode/two_sum/
 └── test_two_sum.py   # runs your solution against both case sets
 ```
 
-`solution.py` is always an unsolved stub: it raises `NotSolved` until you implement it, and the worked write-up lives on the site, linked from the top of every `solution.py`. About a hundred folders additionally carry a `reference.py`, the write-up's own solution kept next to the harness so its authored case files stay checkable (91 of the 168 LeetCode folders, 17 of the 380 Amazon ones, as of October 2026); treat it as the answer key and stay out of it until after your own attempt. Some of those folders also add a `test_reference_<slug>.py` that checks `reference.py` itself.
+`solution.py` is always an unsolved stub: it raises `NotSolved` until you implement it, and the worked write-up lives on the site, linked from the top of every `solution.py`. About a hundred folders additionally carry a `reference.py`, the write-up's own solution kept next to the harness so its authored case files stay checkable (91 of the 168 LeetCode folders, 17 of the 410 Amazon ones, as of October 2026); treat it as the answer key and stay out of it until after your own attempt. Some of those folders also add a `test_reference_<slug>.py` that checks `reference.py` itself.
 
 ## The practice loop
 
@@ -103,10 +103,10 @@ The two case files mirror the two buttons on a LeetCode problem page:
 
 | File | Marker | Role |
 |------|--------|------|
-| `cases.json` | `simple` | The problem's own examples: fast feedback while you iterate. |
+| `cases.json` | `simple` | The problem's own examples where they parse, otherwise a few promoted gauntlet cases: fast feedback while you iterate. |
 | `cases_full.json` | `full` | The examples plus a comprehensive corner-case gauntlet (empties, single elements, negatives, duplicates, boundary values, large inputs) built to the problem's constraints. |
 
-The `-m simple` and `-m full` flags select between them; a plain `uv run pytest leetcode/<slug>/` runs both sets. Amazon problems use no markers: 363 of the 380 ship only `cases.json`, so a plain `uv run pytest amazon/<slug>/` is all they need, and the 17 that also carry `cases_full.json` and a reference test run their whole folder with that same plain command.
+The `-m simple` and `-m full` flags select between them; a plain `uv run pytest leetcode/<slug>/` runs both sets. Amazon problems use no markers: 393 of the 410 ship only `cases.json`, so a plain `uv run pytest amazon/<slug>/` is all they need, and the 17 that also carry `cases_full.json` and a reference test run their whole folder with that same plain command.
 
 ## Stubs skip until you implement them
 
@@ -116,7 +116,7 @@ An untouched `solution.py` raises `NotSolved`, and its tests **skip** rather tha
 SKIPPED [3] leetcode/two_sum/test_two_sum.py:32: solution.py not implemented yet
 ```
 
-A fresh clone therefore shows a wall of skips, over 2,600 across the workspace; besides the tracker's own unit tests, the immediate green is just the reference tests where a folder carries `reference.py`. All of it is expected. The moment you implement a problem, its skips turn into real tests that can go red before they go green.
+A fresh clone therefore shows a wall of skips, over 3,100 across the workspace; besides the tracker's own unit tests, the immediate green is just the reference tests where a folder carries `reference.py`. All of it is expected. The moment you implement a problem, its skips turn into real tests that can go red before they go green.
 
 ## Track your progress
 

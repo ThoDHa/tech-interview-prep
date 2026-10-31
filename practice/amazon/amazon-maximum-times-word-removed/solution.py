@@ -2,7 +2,7 @@
 
 Write-up & approaches: ../../../docs/amazon/amazon-maximum-times-word-removed.md
 
-Special thanks: kcho and ketchup contributed this problem and example.
+Amazon Engineering maintains a large number of logs of operations across all products. A software engineer is debugging an issue in a product. An efficient way to analyze logs is to write automated sc
 
   uv run python amazon/amazon-maximum-times-word-removed/solution.py   # debug one case (see CASE below)
   uv run pytest amazon/amazon-maximum-times-word-removed/              # run the test sets

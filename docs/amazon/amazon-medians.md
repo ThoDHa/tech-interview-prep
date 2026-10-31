@@ -18,7 +18,11 @@ The median of a subsequence of length k is defined as follows: sort the k chosen
 
 **Explanation:** The subsequences of length k = 2 and their medians (using the lower-middle element of the sorted pair) are:
 
-[1, 2] → median 1[1, 3] → median 1[2, 3] → median 2The maximum median is 2 and the minimum median is 1.
+[1, 2] → median 1
+[1, 3] → median 1
+[2, 3] → median 2
+
+The maximum median is 2 and the minimum median is 1.
 
 ### Example 2
 
@@ -28,7 +32,10 @@ The median of a subsequence of length k is defined as follows: sort the k chosen
 
 **Explanation:** The subsequences of length k = 1 and their medians are:
 
-[56] → median 56[21] → median 21The maximum median is 56 and the minimum median is 21.
+[56] → median 56
+[21] → median 21
+
+The maximum median is 56 and the minimum median is 21.
 
 ### Example 3
 
@@ -38,7 +45,9 @@ The median of a subsequence of length k is defined as follows: sort the k chosen
 
 **Explanation:** There is only one subsequence of length k = 5:
 
-[16, 21, 9, 2, 78] → sorted [2, 9, 16, 21, 78], median at index floor((5-1)/2) = 2 is 16Since there is only one subsequence, both the maximum and minimum median are 16.
+[16, 21, 9, 2, 78] → sorted [2, 9, 16, 21, 78], median at index floor((5-1)/2) = 2 is 16
+
+Since there is only one subsequence, both the maximum and minimum median are 16.
 
 ## Constraints
 

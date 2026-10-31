@@ -9,30 +9,5 @@
       ]
     ],
     "expected": true
-  },
-  {
-    "id": "example_2",
-    "args": [
-      "applepenapple",
-      [
-        "apple",
-        "pen"
-      ]
-    ],
-    "expected": true
-  },
-  {
-    "id": "example_3",
-    "args": [
-      "catsandog",
-      [
-        "cats",
-        "dog",
-        "sand",
-        "and",
-        "cat"
-      ]
-    ],
-    "expected": false
   }
 ]

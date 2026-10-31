@@ -4,18 +4,16 @@
 
 X stores its data on different servers at different locations. From time to time, due to several factors, X needs to move its data from one location to another. This challenge involved keeping track of the locations of X's data and report them at the end of the year.
 
-
-
 At the start of the year, X's data was located at n different locations. Over the course of the year, X's data was moved from one server to another m times. Precisely, in the ith operation, the data was moved from movedFrom[i] to movedTo[i]. Find the locations of the data after all m moving operations. Return the locations in ascending order.
-
-
 
 Note:
 
-
 It is guaranteed that for any movement of data :
 
-There is data at movedFrom[i].There is no data at movedTo[i].int[]: the locations storing data after all moves are made, in ascending order.
+There is data at movedFrom[i].
+There is no data at movedTo[i].
+
+int[]: the locations storing data after all moves are made, in ascending order.
 
 ## Examples
 

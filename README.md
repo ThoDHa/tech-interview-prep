@@ -8,7 +8,7 @@ This repository is a structured study guide for algorithmic problem solving buil
 
 - **Grind 75** is the core track: the canonical 75 problems in study order, plus two bonus problems ([Binary Tree Maximum Path Sum](docs/leetcode/binary_tree_maximum_path_sum.md) and [Maximum Frequency Stack](docs/leetcode/maximum_frequency_stack.md)).
 - **NeetCode 150** extends the LeetCode track to 150 problems in NeetCode's section order; 59 of them overlap with Grind 75 and share their pages and write-ups.
-- **Amazon OA** is a growing bank of Amazon-tagged online-assessment questions (383 problems as of October 2026, tracked against its upstream sources), with its own [bank index](docs/amazon/index.md), most recently updated first, and practice stubs under `practice/amazon/`.
+- **Amazon OA** is a growing bank of Amazon-tagged online-assessment questions (410 problems as of October 2026, tracked against its upstream sources), with its own [bank index](docs/amazon/index.md), most recently updated first, and practice stubs under `practice/amazon/`.
 
 All three banks are presented through one generated catalog, the [Problems page](docs/leetcode/index.md): the Grind 75 and NeetCode 150 tracks merge into a single unified table of 168 unique problems (each problem appears once, credited to every track it belongs to), and the Amazon OA bank gets its own table on the same page.
 
@@ -16,7 +16,7 @@ Every problem, regardless of track, has the same core page structure (statement 
 
 ## How this repository is organized
 
-- The `main` branch carries the complete study guide: problem statements with full multi-approach write-ups for every Grind 75 and NeetCode 150 problem (Amazon OA write-ups land in waves, 183 of 383 as of October 2026), the pattern guides, foundations, interview prep planning, system design material, and the `practice/` workspace with stubs and tests. The published site is built from this branch.
+- The `main` branch carries the complete study guide: problem statements with full multi-approach write-ups for every Grind 75 and NeetCode 150 problem (Amazon OA write-ups land in waves, 183 of 410 as of October 2026), the pattern guides, foundations, interview prep planning, system design material, and the `practice/` workspace with stubs and tests. The published site is built from this branch.
 - The `practice` branch is your own workspace branch, created from `main` with `git switch -c practice main`: it is where your commits in the `practice/` workspace live, without touching the underlying material. (The repository's own `practice` branch holds the maintainer's worked attempts; it is not your starting point.) Attempt a problem on your branch first; read the write-up when you are ready to compare answers.
 - The `scripts/` directory holds the generators that maintain the generated tracks: `generate_neetcode150_scaffolds.py` emits problem pages and practice stubs for new NeetCode-only problems from `scripts/neetcode150_manifest.json`, `generate_amazon_oa_scaffolds.py` does the same for the Amazon OA bank (and owns its bank index) from `scripts/amazon_oa_manifest.json`, and `generate_index_tables.py` assembles the tables on the Problems catalog page and the site navigation from those data sources. All three are manifest-driven: a generator scaffolds a problem once and never touches it again once the write-up and practice folder have landed, so write-up bodies are hand-maintained after landing, and changes are validated with `cd practice && uv run pytest ../scripts/` and the generators' `--check` modes.
 
@@ -46,7 +46,7 @@ The [`practice/`](practice/) directory is a `pytest` workspace for solving the p
 
 ## Creating a PDF of All Problems with Pandoc
 
-You can compile every problem page in the repository into a single PDF with the included configuration. `configs/all-problems.yaml` lists all 551 problem pages (as of October 2026): the 168 LeetCode track pages in study order, then the 383 Amazon OA bank pages newest-first, with a divider introducing each collection.
+You can compile every problem page in the repository into a single PDF with the included configuration. `configs/all-problems.yaml` lists all 578 problem pages (as of October 2026): the 168 LeetCode track pages in study order, then the 410 Amazon OA bank pages newest-first, with a divider introducing each collection.
 
 ### Prerequisites
 
@@ -71,7 +71,7 @@ cd docs && pandoc --defaults ../configs/all-problems.yaml
 This will:
 
 - Read configuration from `configs/all-problems.yaml`
-- Combine all 551 problem pages (`two_sum.md`, `amazon-concatenated-words-variant.md`, etc.)
+- Combine all 578 problem pages (`two_sum.md`, `amazon-concatenated-words-variant.md`, etc.)
 - Create a table of contents
 - Generate `docs/all-problems.pdf` using the XeLaTeX engine (the PDF is gitignored)
 

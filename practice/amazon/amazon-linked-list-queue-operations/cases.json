@@ -1,1 +1,137 @@
-[]
+[
+  {
+    "id": "example_1_dedup_delete",
+    "operations": [
+      "LinkedQueue",
+      "enqueue",
+      "enqueue",
+      "enqueue",
+      "enqueue",
+      "enqueue",
+      "removeAllDuplicates",
+      "dequeue",
+      "delete",
+      "dequeue"
+    ],
+    "arguments": [
+      [],
+      [
+        3
+      ],
+      [
+        1
+      ],
+      [
+        3
+      ],
+      [
+        2
+      ],
+      [
+        1
+      ],
+      [],
+      [],
+      [
+        1
+      ],
+      []
+    ],
+    "expected": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      3,
+      null,
+      2
+    ]
+  },
+  {
+    "id": "example_2_tail_repair",
+    "operations": [
+      "LinkedQueue",
+      "enqueue",
+      "enqueue",
+      "enqueue",
+      "delete",
+      "enqueue",
+      "dequeue",
+      "dequeue",
+      "dequeue"
+    ],
+    "arguments": [
+      [],
+      [
+        4
+      ],
+      [
+        5
+      ],
+      [
+        6
+      ],
+      [
+        6
+      ],
+      [
+        7
+      ],
+      [],
+      [],
+      []
+    ],
+    "expected": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      4,
+      5,
+      7
+    ]
+  },
+  {
+    "id": "example_3_delete_first_match",
+    "operations": [
+      "LinkedQueue",
+      "enqueue",
+      "enqueue",
+      "enqueue",
+      "delete",
+      "dequeue",
+      "dequeue"
+    ],
+    "arguments": [
+      [],
+      [
+        8
+      ],
+      [
+        9
+      ],
+      [
+        8
+      ],
+      [
+        8
+      ],
+      [],
+      []
+    ],
+    "expected": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      9,
+      8
+    ]
+  }
+]

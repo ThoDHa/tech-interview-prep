@@ -4,15 +4,9 @@
 
 Given a string s consisting of parentheses, you need to find the maximum score possible in a balanced substring of s. The score of a substring is calculated by choosing two indices i and j (0 <= i < j < len(s)) such that s[i] is an opening parenthesis "(" and s[j] is a closing parenthesis ")". The score of the substring is defined as j - i, i.e., the difference between the indices.
 
-
-
 Write a function/method that takes a string s as input and returns the maximum score that can be obtained from a balanced substring of s.
 
-
-
 Note
-
-
 
 The input string s will only consist of opening and closing parentheses. A balanced substring is a substring that has an equal number of opening and closing parentheses.
 

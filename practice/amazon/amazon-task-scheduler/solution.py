@@ -2,7 +2,7 @@
 
 Write-up & approaches: ../../../docs/amazon/amazon-task-scheduler.md
 
-Special thanks: ( ˶ˆᗜˆ˵ ) Many Manyy Manyyy thanks to spike!ᯓᡣ𐭩
+AMZ Interval Collection (A group of problems focused on operations involving intervals :) - 
 
   uv run python amazon/amazon-task-scheduler/solution.py   # debug one case (see CASE below)
   uv run pytest amazon/amazon-task-scheduler/              # run the test sets

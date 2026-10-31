@@ -2,7 +2,7 @@
 
 Write-up & approaches: ../../../docs/amazon/amazon-find-maximum-num.md
 
-Special thanks: whale and spike contributed this problem.
+Your team at AmzAn is building a quiz-style application to help students prepare for certification exams. Each quiz module tests one or more subjects and limits the number of review attempts each stud
 
   uv run python amazon/amazon-find-maximum-num/solution.py   # debug one case (see CASE below)
   uv run pytest amazon/amazon-find-maximum-num/              # run the test sets

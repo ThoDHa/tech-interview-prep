@@ -1,1 +1,110 @@
-[]
+[
+  {
+    "id": "example_1",
+    "operations": [
+      "AdClickCounter",
+      "click",
+      "click",
+      "click",
+      "count",
+      "count",
+      "count"
+    ],
+    "arguments": [
+      [
+        1
+      ],
+      [
+        "shoes",
+        100
+      ],
+      [
+        "books",
+        120
+      ],
+      [
+        "shoes",
+        159
+      ],
+      [
+        "shoes",
+        160
+      ],
+      [
+        "books",
+        180
+      ],
+      [
+        "shoes",
+        220
+      ]
+    ],
+    "expected": [
+      null,
+      null,
+      null,
+      null,
+      1,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "example_2_inclusive_boundary",
+    "operations": [
+      "AdClickCounter",
+      "click",
+      "click",
+      "count",
+      "count"
+    ],
+    "arguments": [
+      [
+        1
+      ],
+      [
+        "ad1",
+        10
+      ],
+      [
+        "ad1",
+        69
+      ],
+      [
+        "ad1",
+        69
+      ],
+      [
+        "ad1",
+        70
+      ]
+    ],
+    "expected": [
+      null,
+      null,
+      null,
+      2,
+      1
+    ]
+  },
+  {
+    "id": "count_without_any_clicks",
+    "operations": [
+      "AdClickCounter",
+      "count"
+    ],
+    "arguments": [
+      [
+        1
+      ],
+      [
+        "ghost",
+        100
+      ]
+    ],
+    "expected": [
+      null,
+      0
+    ]
+  }
+]

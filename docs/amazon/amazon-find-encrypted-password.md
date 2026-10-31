@@ -6,7 +6,11 @@ The developers at Amazon employ several algorithms for encrypting passwords. In 
 
 The algorithm rearranges the characters so that the result:
 
-is a rearrangement of the original palindromic password,is also a palindrome, andis lexicographically smallest among all such palindromic rearrangements.Given an original palindromic password containing only lowercase English letters, find the encrypted password.
+is a rearrangement of the original palindromic password,
+is also a palindrome, and
+is lexicographically smallest among all such palindromic rearrangements.
+
+Given an original palindromic password containing only lowercase English letters, find the encrypted password.
 
 A string s is lexicographically smaller than a string t of the same length if the first character where they differ is smaller in s. For example, abcd is smaller than abdc but larger than abad.
 

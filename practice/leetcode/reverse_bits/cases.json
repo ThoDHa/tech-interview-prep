@@ -1,1 +1,23 @@
-[]
+[
+  {
+    "id": "example_1_value_21",
+    "args": [
+      21
+    ],
+    "expected": 2818572288
+  },
+  {
+    "id": "single_low_bit_value_1",
+    "args": [
+      1
+    ],
+    "expected": 2147483648
+  },
+  {
+    "id": "max_uint32",
+    "args": [
+      4294967295
+    ],
+    "expected": 4294967295
+  }
+]

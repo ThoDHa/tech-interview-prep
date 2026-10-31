@@ -1,1 +1,109 @@
-[]
+[
+  {
+    "id": "neetcode_example",
+    "args": [
+      [
+        [
+          "a",
+          "b",
+          "c",
+          "d"
+        ],
+        [
+          "s",
+          "a",
+          "a",
+          "t"
+        ],
+        [
+          "a",
+          "c",
+          "k",
+          "e"
+        ],
+        [
+          "a",
+          "c",
+          "d",
+          "n"
+        ]
+      ],
+      [
+        "bat",
+        "cat",
+        "back",
+        "backend",
+        "stack"
+      ]
+    ],
+    "expected": [
+      "back",
+      "backend",
+      "cat"
+    ]
+  },
+  {
+    "id": "three_words_two_found",
+    "args": [
+      [
+        [
+          "o",
+          "a",
+          "a",
+          "n"
+        ],
+        [
+          "e",
+          "t",
+          "a",
+          "e"
+        ],
+        [
+          "i",
+          "h",
+          "k",
+          "r"
+        ],
+        [
+          "i",
+          "f",
+          "l",
+          "v"
+        ]
+      ],
+      [
+        "oath",
+        "eat",
+        "rain"
+      ]
+    ],
+    "expected": [
+      "eat",
+      "oath"
+    ]
+  },
+  {
+    "id": "serpentine_path_only",
+    "args": [
+      [
+        [
+          "a",
+          "b",
+          "c"
+        ],
+        [
+          "d",
+          "e",
+          "f"
+        ]
+      ],
+      [
+        "abcfed",
+        "abcdef"
+      ]
+    ],
+    "expected": [
+      "abcfed"
+    ]
+  }
+]

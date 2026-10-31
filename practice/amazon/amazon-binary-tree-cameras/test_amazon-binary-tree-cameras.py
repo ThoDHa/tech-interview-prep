@@ -5,12 +5,9 @@ The worked approaches live in ../../../docs/amazon/amazon-binary-tree-cameras.md
 
 import pytest
 
-from harness import NotSolved, load_solution
+from harness import NotSolved, build_tree, load_cases, load_solution
 
-CASES = []
-
-if len(CASES) == 0:
-    pytest.skip("example input 'root' for amazon-binary-tree-cameras is not JSON-representable", allow_module_level=True)
+CASES = load_cases(__file__, "cases.json")
 
 solution = load_solution(__file__)
 
@@ -20,7 +17,7 @@ def _ids(cases):
 
 
 def _check(method, case):
-    assert method(*case["args"]) == case["expected"]
+    assert method(build_tree(case["args"][0])) == case["expected"]
 
 
 @pytest.mark.parametrize("case", CASES, ids=_ids(CASES))

@@ -75,7 +75,7 @@ uv run pytest amazon/amazon-aggressive-cows/
 
 | File | Marker | Role |
 |------|--------|------|
-| `cases.json` | `simple` | The example cases. Fast feedback while you iterate. |
+| `cases.json` | `simple` | The problem's own examples where they parse, otherwise a few promoted gauntlet cases. Fast feedback while you iterate. |
 | `cases_full.json` | `full` | Examples **plus** a comprehensive corner-case gauntlet (empties, single elements, negatives, duplicates, boundary values, large inputs). |
 
 `cases_full.json` is a thorough corner-case suite built to each problem's constraints. LeetCode's literal hidden tests are not public, but this set targets the same failure modes. Amazon problems use no markers: most ship only `cases.json`, so a plain `uv run pytest amazon/<slug>/` is all they need, and the few that also carry `cases_full.json` and a reference test run their whole folder with that same plain command.

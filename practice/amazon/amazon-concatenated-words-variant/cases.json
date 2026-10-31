@@ -15,5 +15,21 @@
       "catsdog",
       "dogcat"
     ]
+  },
+  {
+    "id": "example_2",
+    "args": [
+      [
+        "a",
+        "aa",
+        "aaa",
+        "aaaa"
+      ]
+    ],
+    "expected": [
+      "aa",
+      "aaa",
+      "aaaa"
+    ]
   }
 ]

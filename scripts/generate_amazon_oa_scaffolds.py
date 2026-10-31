@@ -21,6 +21,13 @@ value. Trees, linked lists, graphs, design-operation sequences, and free-text
 outputs produce an empty cases.json and a test module that skips with a reason
 naming the slug. Empty is never a silent pass.
 
+Authored protection: when the committed manifest does not mark a slug
+`parsed-with-cases` but its committed cases.json is a non-empty list
+(cases authored by hand after the scaffold), emission leaves the folder's
+practice files untouched, and --check exempts them from the generator-owned
+fragment pins. A `parsed-with-cases` entry's non-empty cases.json is the
+generator's own last render and stays generator-owned.
+
 Offline contract: the committed scripts/amazon_oa_manifest.json (with its
 per-slug parse_status) is the source of truth. When the bank pages under /tmp
 are absent (any fresh clone), every mode falls back to the committed manifest,
@@ -66,12 +73,24 @@ MKTABS_PATH = REPO_ROOT / "mkdocs.yml"
 DEFAULT_BANK_PAGES = (
     Path("/tmp/opencode/tech-oa/coding.md"),
     Path("/tmp/opencode/tech-oa/coding-page-2.md"),
+    Path("/tmp/opencode/tech-oa/coding-page-3.md"),
 )
+# Bank rows whose FastPrep problem pages are dead (HTTP 404): the write-ups
+# behind them were deliberately dropped, and keeping the rows out of the
+# manifest stops every regeneration from re-emitting placeholder-only
+# scaffolds for problems FastPrep no longer serves.
+EXCLUDED_SLUGS = {
+    "amazon-find-minimum-number-of-operations",
+    "amazon-find-minimum-possible-variance",
+    "amazon-get-min-cost-book",
+}
 FASTPREP_CACHE_DIR = Path("/tmp/opencode/fastprep-cache")
 FASTPREP_URL_TEMPLATE = "https://www.fastprep.io/problems/{slug}"
 FETCH_DELAY_SECONDS = 0.5
+FETCH_FAILED_MARKER_TEMPLATE = "<!-- fetch failed: HTTP {error_code} for {slug} -->"
 AMAZON_TAG = "Amazon"
 WRITEUP_LINK_TEMPLATE = "../../../docs/amazon/{slug}.md"
+WRITEUP_PLACEHOLDER_MARKER = "<!-- Scaffold placeholder:"
 # Header placeholders for what FastPrep does not publish; the bank index
 # renders those rows with the dash filler instead.
 WRITEUP_UNKNOWN_DIFFICULTY_MARKER = "unknown difficulty"
@@ -109,6 +128,8 @@ MIN_PLAUSIBLE_STATEMENT_LENGTH = 40
 # content, so extraction drops them and regenerations never re-introduce the
 # residue hand cleanups remove.
 CONTRIBUTOR_CHROME_PATTERN = re.compile(r"^Special thanks:.*(?:\n|$)", re.M)
+WRITEUP_SECTION_HEADING_PATTERN = re.compile(r"(?m)^## .*$")
+HTML_COMMENT_PATTERN = re.compile(r"<!--.*?-->", re.S)
 NEXT_FLIGHT_CHUNK_PATTERN = re.compile(
     r'self\.__next_f\.push\(\[1,("(?:[^"\\]|\\.)*")\]\)'
 )
@@ -154,7 +175,8 @@ def parse_bank_rows(page_text: str) -> List[dict]:
     """Extract every problem row from a Tech-OA bank page.
 
     Args:
-        page_text: Raw markdown of a bank page (coding.md / coding-page-2.md).
+        page_text: Raw markdown of a bank page (coding.md / coding-page-2.md /
+            coding-page-3.md).
 
     Returns:
         A list of row dicts with `companies` (list of names), `title`, `url`,
@@ -190,6 +212,13 @@ def format_updated_date(raw_date: str) -> str:
 def build_manifest(page_texts: Sequence[str]) -> List[dict]:
     """Build the Amazon-tagged manifest: filter, dedup, sort most-recent first.
 
+    Rows tagged Amazon are kept, minus the dead FastPrep pages listed in
+    EXCLUDED_SLUGS. A slug never scaffolded before (no write-up and no
+    practice folder) bootstraps with difficulty and categories None, so a
+    bank-growth run builds the manifest before any scaffold exists; a
+    missing write-up whose practice scaffolds DO exist is bank corruption
+    and still aborts.
+
     Args:
         page_texts: Raw markdown of each bank page, in any order.
 
@@ -204,24 +233,24 @@ def build_manifest(page_texts: Sequence[str]) -> List[dict]:
         for row in parse_bank_rows(page_text):
             if AMAZON_TAG not in row["companies"]:
                 continue
+            if row["slug"] in EXCLUDED_SLUGS:
+                continue
             existing = by_slug.get(row["slug"])
             if existing is None or row["updated"] > existing["updated"]:
                 by_slug[row["slug"]] = row
     entries = sorted(by_slug.values(), key=lambda row: row["slug"])
     entries.sort(key=lambda row: row["updated"], reverse=True)
-    return [
-        {
-            "slug": row["slug"],
-            "title": row["title"],
-            "url": row["url"],
-            "companies": row["companies"],
-            "updated": row["updated"],
-            **parse_difficulty_line(
-                DOCS_DIR / f"{row['slug']}.md"
-            ),
-        }
-        for row in entries
-    ]
+    enriched: List[dict] = []
+    for row in entries:
+        writeup_path = DOCS_DIR / f"{row['slug']}.md"
+        never_scaffolded = not writeup_path.exists() and not (PRACTICE_DIR / row["slug"]).exists()
+        writeup_metadata = (
+            {"difficulty": None, "categories": None}
+            if never_scaffolded
+            else parse_difficulty_line(writeup_path)
+        )
+        enriched.append({**row, **writeup_metadata})
+    return enriched
 
 
 def load_committed_manifest(path: Path = MANIFEST_PATH) -> List[dict]:
@@ -584,13 +613,148 @@ def render_writeup(entry: dict, problem: Optional[dict], statement_html: Optiona
         [
             "## Solutions",
             "",
-            "<!-- Scaffold placeholder: the worked derivation and write-up land",
+            f"{WRITEUP_PLACEHOLDER_MARKER} the worked derivation and write-up land",
             "     on main later. See ../../leetcode/_TEMPLATE.md for the",
             "     expected layout, naming, and ordering conventions. -->",
             "",
         ]
     )
     return "\n".join(parts).rstrip() + "\n"
+
+
+def cases_are_authored(cases_path: Path) -> bool:
+    """Report whether a committed cases.json holds hand-authored cases.
+
+    Mirrors writeup_is_authored on the practice side: a page that parses to
+    no harness cases would otherwise have its empty cases.json, stub, and
+    test module rewritten on every run, wiping cases authored after the
+    scaffold was born (trees, design sequences, free-text outputs). A
+    non-empty JSON list is exactly the authored state; the empty scaffold
+    state stays generator-owned and keeps refreshing.
+
+    Args:
+        cases_path: Path to the committed cases.json.
+
+    Returns:
+        True when the file exists and parses to a non-empty JSON list.
+    """
+    return bool(_json_list_file(cases_path))
+
+
+def committed_cases_are_authored(entry: dict, cases_path: Path) -> bool:
+    """Report whether a slug's cases.json is hand-owned, per the committed manifest.
+
+    A `parsed-with-cases` entry's non-empty cases.json is the generator's
+    own last render, never hand-authored; only a non-empty list under any
+    other committed parse_status counts as authored. Emission and check
+    share this predicate so the two sides cannot drift.
+
+    Args:
+        entry: Manifest entry whose committed parse_status classifies the
+            folder (emission reads it before any in-pass rewrite).
+        cases_path: Path to the committed cases.json.
+
+    Returns:
+        True when the committed parse_status is not `parsed-with-cases`
+        and the file parses to a non-empty JSON list.
+    """
+    return entry.get("parse_status") != "parsed-with-cases" and cases_are_authored(
+        cases_path
+    )
+
+
+def _split_writeup_sections(text: str) -> List[str]:
+    """Split a write-up into [header, section, ...] at `## ` headings.
+
+    Each section segment starts at its heading line and runs to the next
+    heading (or end of text); the first segment holds everything before the
+    first heading (title, metadata line, statement).
+    """
+    boundaries = list(WRITEUP_SECTION_HEADING_PATTERN.finditer(text))
+    if not boundaries:
+        return [text]
+    segments = [text[: boundaries[0].start()]]
+    for position, boundary in enumerate(boundaries):
+        end = (
+            boundaries[position + 1].start()
+            if position + 1 < len(boundaries)
+            else len(text)
+        )
+        segments.append(text[boundary.start() : end])
+    return segments
+
+
+def _section_carries_content(segment: str) -> bool:
+    """Report whether a write-up section holds anything but HTML comments.
+
+    The leading `## ` heading line is not content; a section whose every
+    other non-blank line is a scaffold placeholder comment is a marker
+    hole. The header segment carries no heading line and is checked whole.
+    """
+    if segment.startswith("## "):
+        segment = segment.split("\n", 1)[1] if "\n" in segment else ""
+    return bool(HTML_COMMENT_PATTERN.sub("", segment).strip())
+
+
+def preserve_writeup_on_death(committed_text: str, fresh_text: str) -> str:
+    """Merge a committed write-up with a fresh placeholder after page death.
+
+    When a FastPrep page has died (page-unparseable), a fresh render has no
+    upstream content to offer, so re-rendering a committed write-up would
+    destroy the repo's only copy of the archived statement, examples, and
+    constraints (the F1 wipe mechanism). This merge keeps every committed
+    section that carries non-marker content: the archived sections, and
+    the header whose metadata line feeds the manifest rebuild. It fills
+    only the marker holes (sections whose sole content is placeholder
+    comments, i.e. the Solutions scaffold) exactly as a fresh placeholder
+    would.
+
+    Args:
+        committed_text: The committed write-up markdown.
+        fresh_text: The freshly rendered placeholder write-up for the same
+            entry (from render_writeup with no parsed problem).
+
+    Returns:
+        The merged write-up. Equals `fresh_text` when the committed text is
+        a pure placeholder; byte-stable across repeated runs once the
+        archived sections are in place.
+    """
+    committed_sections = _split_writeup_sections(committed_text)
+    fresh_sections = _split_writeup_sections(fresh_text)
+    committed_by_heading = {
+        section.splitlines()[0]: section for section in committed_sections[1:]
+    }
+    if _section_carries_content(committed_sections[0]):
+        merged = [committed_sections[0]]
+    else:
+        merged = [fresh_sections[0]]
+    for fresh_section in fresh_sections[1:]:
+        committed_section = committed_by_heading.get(fresh_section.splitlines()[0])
+        if committed_section and _section_carries_content(committed_section):
+            merged.append(committed_section)
+        else:
+            merged.append(fresh_section)
+    return "".join(merged)
+
+
+def writeup_is_authored(writeup_path: Path) -> bool:
+    """Report whether a committed write-up has left the scaffold state.
+
+    Placeholder write-ups carry WRITEUP_PLACEHOLDER_MARKER and stay
+    generator-owned, so emission keeps refreshing them (an upstream
+    statement change updates the scaffold). Any body without the marker is
+    hand-authored and emission must leave it untouched.
+
+    Args:
+        writeup_path: Path to the committed write-up markdown.
+
+    Returns:
+        True when the file exists and no longer carries the placeholder
+        marker; False when it is absent or still a placeholder.
+    """
+    if not writeup_path.exists():
+        return False
+    return WRITEUP_PLACEHOLDER_MARKER not in writeup_path.read_text(encoding="utf-8")
 
 
 def difficulty_line(problem: Optional[dict]) -> str:
@@ -667,16 +831,28 @@ def rendered_statement_text(statement_html: str) -> str:
 
 
 def html_to_markdown(fragment: str) -> str:
-    """Convert the small HTML subset FastPrep uses to plain markdown text."""
-    text = re.sub(r"<!--.*?-->", "", fragment, flags=re.S)
+    """Convert the small HTML subset FastPrep uses to plain markdown text.
+
+    Block-level tags separate the blocks they bound: both the opening and
+    closing tag emit a paragraph break, so a run-in `<h3>` heading or a
+    `<ul>` of method specs never glues to the neighboring sentence. `<br>`
+    and `<li>` emit single line breaks; inline tags are stripped bare.
+    """
+    text = HTML_COMMENT_PATTERN.sub("", fragment)
     text = re.sub(r"<sup>(.*?)</sup>", r"^\1", text, flags=re.S | re.I)
-    text = text.replace("</p>", "\n\n")
+    text = re.sub(
+        r"(?i)</?(?:p|h[1-6]|ul|ol|pre|blockquote|div|table|tr)\b[^>]*>",
+        "\n\n",
+        text,
+    )
+    text = re.sub(r"(?i)<li\b[^>]*>", "\n", text)
+    text = re.sub(r"(?i)</li>", "", text)
     text = re.sub(r"<br\s*/?>", "\n", text)
-    text = re.sub(r"</?(p|code|pre|strong|em|b|i|ul|li|sup)[^>]*>", "", text)
     text = re.sub(r"<[^>]+>", "", text)
     # Source indentation after a blank line would render as markdown code
     # blocks; statement prose always sits at the left margin.
     text = re.sub(r"(?m)^[ \t]+", "", text)
+    text = re.sub(r"\n{3,}", "\n\n", text)
     return html.unescape(text).strip()
 
 
@@ -692,6 +868,43 @@ def split_constraints(raw_constraints: str) -> List[str]:
     return [text for text in (html_to_markdown(item).strip() for item in items) if text]
 
 
+def _arg_holds_data(value: Any) -> bool:
+    """Report whether one case argument carries data to debug against.
+
+    Non-empty collections and non-empty strings do; zero, False, and empty
+    containers leave nothing to inspect in a debug run.
+    """
+    if isinstance(value, (list, tuple, dict, set, str)):
+        return len(value) > 0
+    if isinstance(value, bool):
+        return value
+    if isinstance(value, (int, float)):
+        return value != 0
+    return value is not None
+
+
+def pick_default_case_id(cases: Sequence[dict]) -> Optional[str]:
+    """Pick the CASE id a rendered stub should start from.
+
+    Prefers the first non-degenerate case: one whose args hold data (a
+    non-empty collection or a nonzero scalar), since debugging against a
+    leading empty-container case inspects nothing. Falls back to the first
+    id when every case is degenerate; None when no cases exist, which
+    renders the stub's no-cases __main__ with the pick_case debug run
+    guarded behind the guidance print.
+
+    Args:
+        cases: Harness cases (`[{"id", "args", "expected"}]`).
+
+    Returns:
+        The preferred case id, or None when `cases` is empty.
+    """
+    for case in cases:
+        if any(_arg_holds_data(arg) for arg in case["args"]):
+            return case["id"]
+    return cases[0]["id"] if cases else None
+
+
 def render_solution_stub(
     entry: dict,
     problem: Optional[dict],
@@ -705,10 +918,34 @@ def render_solution_stub(
     summary = (
         rendered_summary[:200] if len(rendered_summary) >= MIN_PLAUSIBLE_STATEMENT_LENGTH else ""
     ) or "Amazon OA problem."
-    case_id = parsed_cases.cases[0]["id"] if parsed_cases.cases else "example_1"
+    case_id = pick_default_case_id(parsed_cases.cases)
     function_name = parsed_cases.function_name
     args_signature = _signature_args(problem)
     writeup_link = WRITEUP_LINK_TEMPLATE.format(slug=entry["slug"])
+    if case_id is None:
+        main_block = f'''if __name__ == "__main__":
+    # Debug playground: set a breakpoint in {function_name} above, then run this file.
+    CASE = None
+    if CASE is None:
+        print("no cases authored yet; add cases to cases.json or cases_full.json, then set CASE to an id")
+    else:
+        case = pick_case(__file__, CASE)
+        result = Solution().{function_name}(*case["args"])
+        print(f"case {{case['id']}}: args = {{case['args']}}")
+        print(f"expected: {{case['expected']}}")
+        print(f"got:      {{result}}")
+'''
+    else:
+        main_block = f'''if __name__ == "__main__":
+    # Debug playground: set a breakpoint in {function_name} above, then run this file.
+    # Pick a case by id (ids are in cases.json).
+    CASE = "{case_id}"
+    case = pick_case(__file__, CASE)
+    result = Solution().{function_name}(*case["args"])
+    print(f"case {{case['id']}}: args = {{case['args']}}")
+    print(f"expected: {{case['expected']}}")
+    print(f"got:      {{result}}")
+'''
     return f'''"""{entry["title"]} — {entry["url"]}
 
 Write-up & approaches: {writeup_link}
@@ -729,16 +966,7 @@ class Solution:
         raise NotSolved
 
 
-if __name__ == "__main__":
-    # Debug playground: set a breakpoint in {function_name} above, then run this file.
-    # Pick a case by id (ids are in cases.json).
-    CASE = "{case_id}"
-    case = pick_case(__file__, CASE)
-    result = Solution().{function_name}(*case["args"])
-    print(f"case {{case['id']}}: args = {{case['args']}}")
-    print(f"expected: {{case['expected']}}")
-    print(f"got:      {{result}}")
-'''
+{main_block}'''
 
 
 def _signature_args(problem: Optional[dict]) -> str:
@@ -974,7 +1202,7 @@ def fetch_problem_page(
     except urllib.error.HTTPError as error:
         # Dead bank links (HTTP 404) yield an unparseable page; the caller
         # emits placeholder scaffolds and records the slug as a parse failure.
-        return f"<!-- fetch failed: HTTP {error.code} for {slug} -->"
+        return FETCH_FAILED_MARKER_TEMPLATE.format(error_code=error.code, slug=slug)
     except Exception as error:
         raise RuntimeError(f"fetching {slug} failed: {error}") from error
     cache_root.mkdir(parents=True, exist_ok=True)
@@ -999,7 +1227,14 @@ def emit_scaffolds(entries: Sequence[dict], fetch: bool = True) -> dict:
     Returns:
         Stats: `generated` (n), `cases_parsed` (n), `cases_empty` (n),
         `parse_failures` (slugs whose FastPrep page did not parse),
-        `skipped_no_cache` (slugs left untouched under fetch=False).
+        `skipped_no_cache` (slugs left untouched under fetch=False),
+        `writeups_preserved` (slugs whose authored write-up was left
+        untouched), `writeups_preserved_dead_page` (slugs whose committed
+        write-up sections were merged into the placeholder because the
+        FastPrep page is dead), `cases_preserved` (slugs whose authored
+        practice cases.json, stub, and test module were left untouched),
+        `cases_conflicted` (slugs whose hand-authored practice cases.json
+        met a non-empty upstream parse and was overwritten; report-only).
     """
     stats = {
         "generated": 0,
@@ -1007,6 +1242,10 @@ def emit_scaffolds(entries: Sequence[dict], fetch: bool = True) -> dict:
         "cases_empty": 0,
         "parse_failures": [],
         "skipped_no_cache": [],
+        "writeups_preserved": [],
+        "writeups_preserved_dead_page": [],
+        "cases_preserved": [],
+        "cases_conflicted": [],
     }
     DOCS_DIR.mkdir(parents=True, exist_ok=True)
     PRACTICE_DIR.mkdir(parents=True, exist_ok=True)
@@ -1025,7 +1264,37 @@ def emit_scaffolds(entries: Sequence[dict], fetch: bool = True) -> dict:
             stats["parse_failures"].append(slug)
         statement_html = resolve_statement(problem, page_html)
         (PRACTICE_DIR / slug).mkdir(parents=True, exist_ok=True)
-        for path, content in render_all(entry, problem, parsed_cases, statement_html).items():
+        writeup_path = DOCS_DIR / f"{slug}.md"
+        rendered = render_all(entry, problem, parsed_cases, statement_html)
+        authored_cases = committed_cases_are_authored(
+            entry, PRACTICE_DIR / slug / "cases.json"
+        )
+        if authored_cases and not parsed_cases.cases:
+            # Authored practice cases on a page that yields none: the stub,
+            # cases.json, and test module are hand-owned, so only the
+            # (separately guarded) write-up remains a write target.
+            stats["cases_preserved"].append(slug)
+            rendered = {writeup_path: rendered[writeup_path]}
+        elif authored_cases:
+            # Authored practice cases meeting a live non-empty parse: the
+            # upstream refresh overwrites them (the default), but the wave
+            # log must name the conflict so the loss is visible.
+            stats["cases_conflicted"].append(slug)
+        for path, content in rendered.items():
+            if path == writeup_path:
+                if writeup_is_authored(writeup_path):
+                    stats["writeups_preserved"].append(slug)
+                    continue
+                if problem is None and writeup_path.exists():
+                    # Dead page: the committed write-up is the only copy of
+                    # the archived statement; merge it over the fresh
+                    # placeholder instead of re-rendering the wipe.
+                    merged_text = preserve_writeup_on_death(
+                        writeup_path.read_text(encoding="utf-8"), content
+                    )
+                    if merged_text != content:
+                        stats["writeups_preserved_dead_page"].append(slug)
+                    content = merged_text
             path.write_text(content, encoding="utf-8")
         if parsed_cases.cases:
             entry["parse_status"] = "parsed-with-cases"
@@ -1107,7 +1376,12 @@ def expected_scaffold_fragments(entry: dict) -> Dict[Path, ScaffoldExpectation]:
     """Manifest-driven scaffold expectations for one problem.
 
     A `page-unparseable` entry was rendered entirely from the manifest, so
-    its four scaffolds are compared byte-for-byte (a whole-content prefix).
+    its four scaffolds are compared byte-for-byte (a whole-content prefix),
+    unless the committed write-up carries archived sections (a dead page
+    preserved by emission, or a fully authored write-up): then only the
+    generator-owned part is pinned. A death-preserved write-up is pinned on
+    its Solutions scaffold block (the one section emission fills); a fully
+    authored one on its title line, matching the parsed-entry convention.
     Every other entry was rendered from FastPrep data that lives only in
     the unversioned /tmp cache; the fragments the generator owns end to end
     are compared exactly instead of re-rendering from the cache: the
@@ -1127,10 +1401,27 @@ def expected_scaffold_fragments(entry: dict) -> Dict[Path, ScaffoldExpectation]:
     """
     slug = entry["slug"]
     if entry.get("parse_status") == "page-unparseable":
-        return {
-            path: ScaffoldExpectation(prefix=content)
-            for path, content in render_all(entry, None, unparsed_page_cases(slug), "").items()
+        fresh = render_all(entry, None, unparsed_page_cases(slug), "")
+        expectations = {
+            path: ScaffoldExpectation(prefix=content) for path, content in fresh.items()
         }
+        writeup_path = DOCS_DIR / f"{slug}.md"
+        if writeup_path.exists():
+            committed_text = writeup_path.read_text(encoding="utf-8")
+            fresh_writeup = fresh[writeup_path]
+            if writeup_is_authored(writeup_path):
+                expectations[writeup_path] = ScaffoldExpectation(
+                    prefix=f"# [{entry['title']}]({entry['url']})\n"
+                )
+            elif (
+                preserve_writeup_on_death(committed_text, fresh_writeup)
+                != fresh_writeup
+            ):
+                expectations[writeup_path] = ScaffoldExpectation(
+                    prefix="",
+                    required=(fresh_writeup[fresh_writeup.index("## Solutions") :],),
+                )
+        return expectations
     writeup_link = WRITEUP_LINK_TEMPLATE.format(slug=slug)
     return {
         DOCS_DIR / f"{slug}.md": ScaffoldExpectation(
@@ -1152,15 +1443,23 @@ def expected_scaffold_fragments(entry: dict) -> Dict[Path, ScaffoldExpectation]:
     }
 
 
-def _is_json_list_file(path: Path) -> bool:
-    """Report whether the file exists and parses to a JSON list."""
+def _json_list_file(path: Path) -> Optional[list]:
+    """Parse a file into a JSON list.
+
+    Args:
+        path: Path to the candidate JSON file.
+
+    Returns:
+        The parsed list, or None when the file is absent, unreadable,
+        malformed JSON, or not a list.
+    """
     if not path.exists():
-        return False
+        return None
     try:
         parsed = json.loads(path.read_text(encoding="utf-8"))
     except (json.JSONDecodeError, UnicodeDecodeError):
-        return False
-    return isinstance(parsed, list)
+        return None
+    return parsed if isinstance(parsed, list) else None
 
 
 def _displays(path: Path) -> str:
@@ -1176,7 +1475,12 @@ def check(manifest: Sequence[dict]) -> int:
 
     Read-only: nothing is fetched, written, or rewritten; the committed
     manifest's `parse_status` drives the expectation per slug, so the check
-    never depends on the /tmp bank pages or the fastprep cache.
+    never depends on the /tmp bank pages or the fastprep cache. A folder
+    whose committed parse_status is not `parsed-with-cases` and whose
+    cases.json is an authored (non-empty) list keeps its
+    stub, cases.json, and test module exempt from the generator-owned
+    fragment pins (the cases.json list-validity check still applies),
+    mirroring emission's authored protection.
 
     Args:
         manifest: The manifest entries to verify.
@@ -1187,15 +1491,24 @@ def check(manifest: Sequence[dict]) -> int:
     stale: List[str] = []
     for entry in manifest:
         slug = entry["slug"]
+        cases_path = PRACTICE_DIR / slug / "cases.json"
+        authored_cases = committed_cases_are_authored(entry, cases_path)
+        writeup_path = DOCS_DIR / f"{slug}.md"
         for path, expectation in expected_scaffold_fragments(entry).items():
+            if authored_cases and path != writeup_path:
+                # Hand-owned content stays unpinned, but the files must
+                # exist: deleting a preserved folder's stub, cases.json, or
+                # test module must fail the check like any missing scaffold.
+                if not path.exists():
+                    stale.append(_displays(path))
+                continue
             content = path.read_text(encoding="utf-8") if path.exists() else ""
             if not content.startswith(expectation.prefix) or any(
                 fragment not in content for fragment in expectation.required
             ):
                 stale.append(_displays(path))
-        if entry.get("parse_status") != "page-unparseable":
-            cases_path = PRACTICE_DIR / slug / "cases.json"
-            if not _is_json_list_file(cases_path):
+        if entry.get("parse_status") != "page-unparseable" or authored_cases:
+            if _json_list_file(cases_path) is None:
                 stale.append(_displays(cases_path))
     expected_index = render_index(manifest)
     index_path = DOCS_DIR / "index.md"
@@ -1230,7 +1543,7 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
         action="append",
         type=Path,
         default=None,
-        help="Bank page markdown (default: the two cached Tech-OA coding pages)",
+        help="Bank page markdown (default: the three cached Tech-OA coding pages)",
     )
     parser.add_argument("--limit", type=int, default=None, help="Scaffold only the first N entries")
     parser.add_argument("--manifest-only", action="store_true", help="Write only the manifest")
@@ -1252,6 +1565,17 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
     else:
         manifest = build_manifest([path.read_text(encoding="utf-8") for path in bank_pages])
         source = "built from bank pages"
+        # The committed manifest classifies, the bank pages enrich: a built
+        # entry carries no parse_status, and emission's preservation and
+        # conflict predicates read the committed classification, so the
+        # seed must land before emission.
+        committed_by_slug = {
+            entry["slug"]: entry for entry in load_committed_manifest(MANIFEST_PATH)
+        }
+        for entry in manifest:
+            committed = committed_by_slug.get(entry["slug"])
+            if committed is not None:
+                entry["parse_status"] = committed.get("parse_status")
     print(f"manifest: {len(manifest)} Amazon-tagged coding problems ({source})")
     if args.manifest_only:
         write_manifest(manifest)
@@ -1289,6 +1613,27 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
                 " cache has no entry for the skipped slug(s); their existing"
                 " scaffolds were left untouched"
             )
+    if stats["writeups_preserved"]:
+        print(
+            "write-ups preserved (authored, left untouched): "
+            + ", ".join(stats["writeups_preserved"])
+        )
+    if stats["writeups_preserved_dead_page"]:
+        print(
+            "write-ups preserved (dead page, archived sections kept): "
+            + ", ".join(stats["writeups_preserved_dead_page"])
+        )
+    if stats["cases_preserved"]:
+        print(
+            "practice cases preserved (authored, left untouched): "
+            + ", ".join(stats["cases_preserved"])
+        )
+    if stats["cases_conflicted"]:
+        print(
+            "practice cases conflicted (authored cases.json met a non-empty"
+            " upstream parse and was overwritten): "
+            + ", ".join(stats["cases_conflicted"])
+        )
     return 0
 
 

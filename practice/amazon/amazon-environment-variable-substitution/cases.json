@@ -1,1 +1,76 @@
-[]
+[
+  {
+    "id": "example_1",
+    "operations": [
+      "EnvironmentStore",
+      "set",
+      "parse"
+    ],
+    "arguments": [
+      [],
+      [
+        "NAME",
+        "Tom"
+      ],
+      [
+        "Hello I am %NAME%"
+      ]
+    ],
+    "expected": [
+      null,
+      null,
+      "Hello I am Tom"
+    ]
+  },
+  {
+    "id": "example_2_missing_paths",
+    "operations": [
+      "EnvironmentStore",
+      "get",
+      "parse"
+    ],
+    "arguments": [
+      [],
+      [
+        "MISSING"
+      ],
+      [
+        "%MISSING%"
+      ]
+    ],
+    "expected": [
+      null,
+      null,
+      "%MISSING%"
+    ]
+  },
+  {
+    "id": "set_overwrite",
+    "operations": [
+      "EnvironmentStore",
+      "set",
+      "set",
+      "get"
+    ],
+    "arguments": [
+      [],
+      [
+        "NAME",
+        "Tom"
+      ],
+      [
+        "NAME",
+        "Andy"
+      ],
+      [
+        "NAME"
+      ]
+    ],
+    "expected": [
+      null,
+      null,
+      null,
+      "Andy"
+    ]
+  }
+]

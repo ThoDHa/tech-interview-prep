@@ -1,1 +1,38 @@
-[]
+[
+  {
+    "id": "neetcode_example",
+    "args": [
+      [
+        "hrn",
+        "hrf",
+        "er",
+        "enn",
+        "rfnn"
+      ]
+    ],
+    "expected": "hernf"
+  },
+  {
+    "id": "classic_example",
+    "args": [
+      [
+        "wrt",
+        "wrf",
+        "er",
+        "ett",
+        "rftt"
+      ]
+    ],
+    "expected": "wertf"
+  },
+  {
+    "id": "two_letters",
+    "args": [
+      [
+        "z",
+        "x"
+      ]
+    ],
+    "expected": "zx"
+  }
+]

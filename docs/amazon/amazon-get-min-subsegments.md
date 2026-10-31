@@ -8,7 +8,10 @@ Due to factors like lighting and camera angles, some frames may need horizontal 
 
 The goal is to accomplish this segmentation with two criteria in mind:
 
-Minimize the number of flips required to form valid segments, let this be denoted by B.Among all configurations requiring B flips, minimize the total number of subsegments.Given the binary string frames, determine the minimum number of even-length subsegments that can be created while utilising the least number of flips.
+Minimize the number of flips required to form valid segments, let this be denoted by B.
+Among all configurations requiring B flips, minimize the total number of subsegments.
+
+Given the binary string frames, determine the minimum number of even-length subsegments that can be created while utilising the least number of flips.
 
 Note: A subsegment is a segment that can be derived from another segment by deleting some elements without changing the order of the remaining elements.
 

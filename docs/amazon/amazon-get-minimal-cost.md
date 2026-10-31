@@ -4,11 +4,7 @@
 
 An online retailer offers products in n different dimensions as specified in the array dimensions. The category supervisor notices that several dimensions are redundant and do not offer a favorable customer experience. To optimize the available stock, the product should be offered in unique dimensions. The dimension of the i-th product, dimensions[i], can be augmented by one unit for a fee given in the adjustmentCosts array, adjustmentCosts[i].
 
-
-
 Determine the minimal total fee required to ensure that all product dimensions are unique.
-
-
 
 dimensions === size, cost === adjustmentCosts
 

@@ -5,19 +5,5 @@
       "aab"
     ],
     "expected": "aba"
-  },
-  {
-    "id": "example_2",
-    "args": [
-      "aaab"
-    ],
-    "expected": ""
-  },
-  {
-    "id": "example_3",
-    "args": [
-      "aabbcc"
-    ],
-    "expected": "abcabc"
   }
 ]

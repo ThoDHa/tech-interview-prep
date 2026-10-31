@@ -14,25 +14,17 @@ You are given an array wait with elements that represent processes where each el
 
 **Explanation:** If wait = [2,2,3,1]
 
-
-
 At time 0:
 First process is processed and therefore removed, no other processes have a wait time of 0 so nothing else is removed.
 Now wait = [2,3,1]. Num of processes = 3. answer = [3]
-
-
 
 At time 1:
 First process is removed. The process with 1 second wait time is also removed.
 Now wait = [3]. Num of processes = 1 answer = [3,1]
 
-
-
 At time 2:
 First process is removed. No more processes in queue.
 Now wait = []. Num of processes = 0. answer = [3,1,0]
-
-
 
 Return [3,1,0]
 
