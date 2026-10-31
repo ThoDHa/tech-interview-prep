@@ -12,6 +12,7 @@ import contextlib
 import io
 import json
 import re
+import shutil
 import subprocess
 import sys
 from pathlib import Path
@@ -889,6 +890,182 @@ def test_emit_scaffolds_refreshes_a_still_placeholder_writeup(tmp_path, monkeypa
     assert gen.WRITEUP_PLACEHOLDER_MARKER in committed
     assert stats["writeups_preserved"] == []
     assert stats["generated"] == 1
+
+
+def design_operations_problem(slug: str) -> dict:
+    """Build a parsed problem whose examples are design-operation sequences.
+
+    Shaped like the real promoted tree/design problems: the page parses,
+    but no example converts to `==`-assertable harness cases.
+    """
+    return dict(
+        gen.extract_problem_record(FASTPREP_PAGE),
+        id=slug,
+        examples=[
+            {
+                "id": 1,
+                "inputText": [
+                    {"inputName": "operations", "inputValue": '["LRUCache","put"]', "inputType": "string[]"},
+                    {"inputName": "arguments", "inputValue": "[[2],[1,1]]", "inputType": "integer[][]"},
+                ],
+                "outputText": "[null,null]",
+                "outputType": "long[]",
+            }
+        ],
+    )
+
+
+def seed_authored_cases_folder(practice_dir: Path, slug: str, cases: list) -> None:
+    """Write a converted (hand-owned) practice folder for `slug`."""
+    slug_dir = practice_dir / slug
+    slug_dir.mkdir(parents=True, exist_ok=True)
+    (slug_dir / "cases.json").write_text(json.dumps(cases, indent=2) + "\n", encoding="utf-8")
+    (slug_dir / "solution.py").write_text("hand-authored stub\n", encoding="utf-8")
+    (slug_dir / f"test_{slug}.py").write_text("hand-authored test module\n", encoding="utf-8")
+
+
+def test_emit_scaffolds_preserves_authored_cases_for_a_parsed_empty_entry(tmp_path, monkeypatch):
+    docs_dir = tmp_path / "docs" / "amazon"
+    practice_dir = tmp_path / "practice" / "amazon"
+    monkeypatch.setattr(gen, "DOCS_DIR", docs_dir)
+    monkeypatch.setattr(gen, "PRACTICE_DIR", practice_dir)
+    seed_cache(monkeypatch, tmp_path / "cache", "amazon-lru-query-result-cache")
+    design_problem = design_operations_problem("amazon-lru-query-result-cache")
+    monkeypatch.setattr(gen, "extract_problem_record", lambda page_html: design_problem)
+    entry = {"slug": "amazon-lru-query-result-cache", "title": "LRU", "url": "https://x", "companies": ["Amazon"], "updated": "2026-09-19"}
+    authored_cases = [{"id": "case_1", "args": [["LRUCache", "put", "get"], [[2], [1, 1], [1]], [None, None, 1]]}]
+    seed_authored_cases_folder(practice_dir, "amazon-lru-query-result-cache", authored_cases)
+
+    stats = gen.emit_scaffolds([entry], fetch=False)
+
+    slug_dir = practice_dir / "amazon-lru-query-result-cache"
+    assert stats["cases_preserved"] == ["amazon-lru-query-result-cache"]
+    assert entry["parse_status"] == "parsed-empty-cases"
+    assert json.loads((slug_dir / "cases.json").read_text(encoding="utf-8")) == authored_cases
+    assert (slug_dir / "solution.py").read_text(encoding="utf-8") == "hand-authored stub\n"
+    assert (slug_dir / "test_amazon-lru-query-result-cache.py").read_text(encoding="utf-8") == "hand-authored test module\n"
+
+
+def test_emit_scaffolds_refreshes_an_empty_cases_json_folder(tmp_path, monkeypatch):
+    docs_dir = tmp_path / "docs" / "amazon"
+    practice_dir = tmp_path / "practice" / "amazon"
+    monkeypatch.setattr(gen, "DOCS_DIR", docs_dir)
+    monkeypatch.setattr(gen, "PRACTICE_DIR", practice_dir)
+    seed_cache(monkeypatch, tmp_path / "cache", "amazon-lru-query-result-cache")
+    design_problem = design_operations_problem("amazon-lru-query-result-cache")
+    monkeypatch.setattr(gen, "extract_problem_record", lambda page_html: design_problem)
+    entry = {"slug": "amazon-lru-query-result-cache", "title": "LRU", "url": "https://x", "companies": ["Amazon"], "updated": "2026-09-19"}
+    seed_authored_cases_folder(practice_dir, "amazon-lru-query-result-cache", [])
+
+    stats = gen.emit_scaffolds([entry], fetch=False)
+
+    slug_dir = practice_dir / "amazon-lru-query-result-cache"
+    assert stats["cases_preserved"] == []
+    assert stats["cases_empty"] == 1
+    assert json.loads((slug_dir / "cases.json").read_text(encoding="utf-8")) == []
+    parsed_cases = gen.cases_from_record(design_problem)
+    statement_html = gen.resolve_statement(design_problem, "<html>cached</html>")
+    assert (slug_dir / "test_amazon-lru-query-result-cache.py").read_text(encoding="utf-8") == gen.render_test(
+        entry, parsed_cases.function_name, parsed_cases.cases, parsed_cases.skip_reason
+    )
+
+
+def test_check_stays_green_for_an_authored_cases_folder(tmp_path, monkeypatch):
+    redirect_check_paths(tmp_path, monkeypatch)
+    entry = dict(UNPARSEABLE_ENTRY, slug="amazon-lru-query-result-cache", parse_status="parsed-empty-cases")
+    write_scaffold_set(tmp_path, entry)
+    (gen.DOCS_DIR / "index.md").write_text(gen.render_index([entry]), encoding="utf-8")
+    slug_dir = gen.PRACTICE_DIR / "amazon-lru-query-result-cache"
+    authored_cases = [{"id": "case_1", "args": [["LRUCache"]], "expected": [None]}]
+    (slug_dir / "cases.json").write_text(json.dumps(authored_cases, indent=2) + "\n", encoding="utf-8")
+    (slug_dir / "solution.py").write_text("hand-authored stub\n", encoding="utf-8")
+    (slug_dir / "test_amazon-lru-query-result-cache.py").write_text("hand-authored test module\n", encoding="utf-8")
+
+    assert gen.check([entry]) == 0
+
+    (gen.DOCS_DIR / "amazon-lru-query-result-cache.md").write_text(
+        "# Different Problem (https://x/other)\n", encoding="utf-8"
+    )
+    assert gen.check([entry]) == 1
+
+
+def test_check_exempts_an_authored_cases_folder_on_a_page_unparseable_entry(tmp_path, monkeypatch):
+    redirect_check_paths(tmp_path, monkeypatch)
+    entry = dict(UNPARSEABLE_ENTRY, slug="amazon-lru-query-result-cache", parse_status="page-unparseable")
+    write_scaffold_set(tmp_path, entry)
+    (gen.DOCS_DIR / "index.md").write_text(gen.render_index([entry]), encoding="utf-8")
+    slug_dir = gen.PRACTICE_DIR / "amazon-lru-query-result-cache"
+    authored_cases = [{"id": "case_1", "args": [["LRUCache"]], "expected": [None]}]
+    (slug_dir / "cases.json").write_text(json.dumps(authored_cases, indent=2) + "\n", encoding="utf-8")
+    (slug_dir / "solution.py").write_text("hand-authored stub\n", encoding="utf-8")
+    (slug_dir / "test_amazon-lru-query-result-cache.py").write_text("hand-authored test module\n", encoding="utf-8")
+
+    assert gen.check([entry]) == 0
+
+
+def committed_authored_cases_slugs():
+    """List committed slugs whose manifest status is caseless but whose
+    cases.json holds authored (non-empty) cases: the folders the generator
+    must preserve byte-for-byte."""
+    manifest = json.loads((SCRIPTS_DIR / "amazon_oa_manifest.json").read_text(encoding="utf-8"))
+    slugs = []
+    for entry in manifest:
+        cases_path = SCRIPTS_DIR.parent / "practice" / "amazon" / entry["slug"] / "cases.json"
+        parsed = gen._json_list_file(cases_path)
+        if entry.get("parse_status") != "parsed-with-cases" and parsed:
+            slugs.append(entry["slug"])
+    return sorted(slugs)
+
+
+def test_full_run_simulation_leaves_authored_cases_folders_byte_identical(tmp_path, monkeypatch):
+    """Run the real emission over the real authored-cases folders.
+
+    The committed folders are copied to a temp DOCS/PRACTICE pair (the real
+    tree stays read-only) and every preserved file must come out
+    byte-identical. Slugs with a cached FastPrep page simulate the real
+    parse; the dead (HTTP 404) slugs get the exact failure marker the
+    fetcher produces, so their page-unparseable path runs offline too.
+    """
+    slugs = committed_authored_cases_slugs()
+    assert slugs, "no authored-cases folders committed"
+    manifest = json.loads((SCRIPTS_DIR / "amazon_oa_manifest.json").read_text(encoding="utf-8"))
+    entries = [dict(entry) for entry in manifest if entry["slug"] in set(slugs)]
+    repo_practice = SCRIPTS_DIR.parent / "practice" / "amazon"
+    repo_docs = SCRIPTS_DIR.parent / "docs" / "amazon"
+
+    docs_dir = tmp_path / "docs" / "amazon"
+    practice_dir = tmp_path / "practice" / "amazon"
+    docs_dir.mkdir(parents=True)
+    cache_dir = tmp_path / "fastprep-cache"
+    cache_dir.mkdir(parents=True)
+    for slug in slugs:
+        shutil.copytree(repo_practice / slug, practice_dir / slug)
+        shutil.copy2(repo_docs / f"{slug}.md", docs_dir / f"{slug}.md")
+        cached_page = gen.FASTPREP_CACHE_DIR / f"{slug}.html"
+        if cached_page.exists():
+            shutil.copy2(cached_page, cache_dir / f"{slug}.html")
+        else:
+            (cache_dir / f"{slug}.html").write_text(
+                f"<!-- fetch failed: HTTP 404 for {slug} -->", encoding="utf-8"
+            )
+    monkeypatch.setattr(gen, "DOCS_DIR", docs_dir)
+    monkeypatch.setattr(gen, "PRACTICE_DIR", practice_dir)
+    monkeypatch.setattr(gen, "FASTPREP_CACHE_DIR", cache_dir)
+
+    stats = gen.emit_scaffolds(entries, fetch=True)
+
+    assert sorted(stats["cases_preserved"]) == slugs
+    for slug in slugs:
+        repo_slug_dir = repo_practice / slug
+        tmp_slug_dir = practice_dir / slug
+        repo_files = sorted(path.relative_to(repo_slug_dir) for path in repo_slug_dir.rglob("*") if path.is_file())
+        tmp_files = sorted(path.relative_to(tmp_slug_dir) for path in tmp_slug_dir.rglob("*") if path.is_file())
+        assert repo_files == tmp_files, slug
+        for relative in repo_files:
+            assert (repo_slug_dir / relative).read_bytes() == (tmp_slug_dir / relative).read_bytes(), (
+                f"{slug}/{relative}"
+            )
+        assert (repo_docs / f"{slug}.md").read_bytes() == (docs_dir / f"{slug}.md").read_bytes(), slug
 
 
 def test_main_check_mode_does_not_rewrite_manifest(tmp_path, monkeypatch, seeded_docs_dir):

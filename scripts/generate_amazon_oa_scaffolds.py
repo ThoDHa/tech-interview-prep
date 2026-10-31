@@ -21,6 +21,11 @@ value. Trees, linked lists, graphs, design-operation sequences, and free-text
 outputs produce an empty cases.json and a test module that skips with a reason
 naming the slug. Empty is never a silent pass.
 
+Authored protection: when a page yields no cases but the committed cases.json
+is a non-empty list (cases authored by hand after the scaffold), emission
+leaves the folder's practice files untouched, and --check exempts them from
+the generator-owned fragment pins.
+
 Offline contract: the committed scripts/amazon_oa_manifest.json (with its
 per-slug parse_status) is the source of truth. When the bank pages under /tmp
 are absent (any fresh clone), every mode falls back to the committed manifest,
@@ -612,6 +617,25 @@ def render_writeup(entry: dict, problem: Optional[dict], statement_html: Optiona
     return "\n".join(parts).rstrip() + "\n"
 
 
+def cases_are_authored(cases_path: Path) -> bool:
+    """Report whether a committed cases.json holds hand-authored cases.
+
+    Mirrors writeup_is_authored on the practice side: a page that parses to
+    no harness cases would otherwise have its empty cases.json, stub, and
+    test module rewritten on every run, wiping cases authored after the
+    scaffold was born (trees, design sequences, free-text outputs). A
+    non-empty JSON list is exactly the authored state; the empty scaffold
+    state stays generator-owned and keeps refreshing.
+
+    Args:
+        cases_path: Path to the committed cases.json.
+
+    Returns:
+        True when the file exists and parses to a non-empty JSON list.
+    """
+    return bool(_json_list_file(cases_path))
+
+
 def writeup_is_authored(writeup_path: Path) -> bool:
     """Report whether a committed write-up has left the scaffold state.
 
@@ -1092,7 +1116,8 @@ def emit_scaffolds(entries: Sequence[dict], fetch: bool = True) -> dict:
         `parse_failures` (slugs whose FastPrep page did not parse),
         `skipped_no_cache` (slugs left untouched under fetch=False),
         `writeups_preserved` (slugs whose authored write-up was left
-        untouched).
+        untouched), `cases_preserved` (slugs whose authored practice
+        cases.json, stub, and test module were left untouched).
     """
     stats = {
         "generated": 0,
@@ -1101,6 +1126,7 @@ def emit_scaffolds(entries: Sequence[dict], fetch: bool = True) -> dict:
         "parse_failures": [],
         "skipped_no_cache": [],
         "writeups_preserved": [],
+        "cases_preserved": [],
     }
     DOCS_DIR.mkdir(parents=True, exist_ok=True)
     PRACTICE_DIR.mkdir(parents=True, exist_ok=True)
@@ -1120,7 +1146,14 @@ def emit_scaffolds(entries: Sequence[dict], fetch: bool = True) -> dict:
         statement_html = resolve_statement(problem, page_html)
         (PRACTICE_DIR / slug).mkdir(parents=True, exist_ok=True)
         writeup_path = DOCS_DIR / f"{slug}.md"
-        for path, content in render_all(entry, problem, parsed_cases, statement_html).items():
+        rendered = render_all(entry, problem, parsed_cases, statement_html)
+        if not parsed_cases.cases and cases_are_authored(PRACTICE_DIR / slug / "cases.json"):
+            # Authored practice cases on a page that yields none: the stub,
+            # cases.json, and test module are hand-owned, so only the
+            # (separately guarded) write-up remains a write target.
+            stats["cases_preserved"].append(slug)
+            rendered = {writeup_path: rendered[writeup_path]}
+        for path, content in rendered.items():
             if path == writeup_path and writeup_is_authored(writeup_path):
                 stats["writeups_preserved"].append(slug)
                 continue
@@ -1250,15 +1283,23 @@ def expected_scaffold_fragments(entry: dict) -> Dict[Path, ScaffoldExpectation]:
     }
 
 
-def _is_json_list_file(path: Path) -> bool:
-    """Report whether the file exists and parses to a JSON list."""
+def _json_list_file(path: Path) -> Optional[list]:
+    """Parse a file into a JSON list.
+
+    Args:
+        path: Path to the candidate JSON file.
+
+    Returns:
+        The parsed list, or None when the file is absent, unreadable,
+        malformed JSON, or not a list.
+    """
     if not path.exists():
-        return False
+        return None
     try:
         parsed = json.loads(path.read_text(encoding="utf-8"))
     except (json.JSONDecodeError, UnicodeDecodeError):
-        return False
-    return isinstance(parsed, list)
+        return None
+    return parsed if isinstance(parsed, list) else None
 
 
 def _displays(path: Path) -> str:
@@ -1274,7 +1315,11 @@ def check(manifest: Sequence[dict]) -> int:
 
     Read-only: nothing is fetched, written, or rewritten; the committed
     manifest's `parse_status` drives the expectation per slug, so the check
-    never depends on the /tmp bank pages or the fastprep cache.
+    never depends on the /tmp bank pages or the fastprep cache. A folder
+    whose committed cases.json is an authored (non-empty) list keeps its
+    stub, cases.json, and test module exempt from the generator-owned
+    fragment pins (the cases.json list-validity check still applies),
+    mirroring emission's authored protection.
 
     Args:
         manifest: The manifest entries to verify.
@@ -1285,15 +1330,22 @@ def check(manifest: Sequence[dict]) -> int:
     stale: List[str] = []
     for entry in manifest:
         slug = entry["slug"]
+        cases_path = PRACTICE_DIR / slug / "cases.json"
+        authored_cases = (
+            entry.get("parse_status") != "parsed-with-cases"
+            and cases_are_authored(cases_path)
+        )
+        writeup_path = DOCS_DIR / f"{slug}.md"
         for path, expectation in expected_scaffold_fragments(entry).items():
+            if authored_cases and path != writeup_path:
+                continue
             content = path.read_text(encoding="utf-8") if path.exists() else ""
             if not content.startswith(expectation.prefix) or any(
                 fragment not in content for fragment in expectation.required
             ):
                 stale.append(_displays(path))
-        if entry.get("parse_status") != "page-unparseable":
-            cases_path = PRACTICE_DIR / slug / "cases.json"
-            if not _is_json_list_file(cases_path):
+        if entry.get("parse_status") != "page-unparseable" or authored_cases:
+            if _json_list_file(cases_path) is None:
                 stale.append(_displays(cases_path))
     expected_index = render_index(manifest)
     index_path = DOCS_DIR / "index.md"
@@ -1391,6 +1443,11 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
         print(
             "write-ups preserved (authored, left untouched): "
             + ", ".join(stats["writeups_preserved"])
+        )
+    if stats["cases_preserved"]:
+        print(
+            "practice cases preserved (authored, left untouched): "
+            + ", ".join(stats["cases_preserved"])
         )
     return 0
 
