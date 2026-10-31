@@ -82,6 +82,7 @@ FASTPREP_URL_TEMPLATE = "https://www.fastprep.io/problems/{slug}"
 FETCH_DELAY_SECONDS = 0.5
 AMAZON_TAG = "Amazon"
 WRITEUP_LINK_TEMPLATE = "../../../docs/amazon/{slug}.md"
+WRITEUP_PLACEHOLDER_MARKER = "<!-- Scaffold placeholder:"
 # Header placeholders for what FastPrep does not publish; the bank index
 # renders those rows with the dash filler instead.
 WRITEUP_UNKNOWN_DIFFICULTY_MARKER = "unknown difficulty"
@@ -602,13 +603,33 @@ def render_writeup(entry: dict, problem: Optional[dict], statement_html: Optiona
         [
             "## Solutions",
             "",
-            "<!-- Scaffold placeholder: the worked derivation and write-up land",
+            f"{WRITEUP_PLACEHOLDER_MARKER} the worked derivation and write-up land",
             "     on main later. See ../../leetcode/_TEMPLATE.md for the",
             "     expected layout, naming, and ordering conventions. -->",
             "",
         ]
     )
     return "\n".join(parts).rstrip() + "\n"
+
+
+def writeup_is_authored(writeup_path: Path) -> bool:
+    """Report whether a committed write-up has left the scaffold state.
+
+    Placeholder write-ups carry WRITEUP_PLACEHOLDER_MARKER and stay
+    generator-owned, so emission keeps refreshing them (an upstream
+    statement change updates the scaffold). Any body without the marker is
+    hand-authored and emission must leave it untouched.
+
+    Args:
+        writeup_path: Path to the committed write-up markdown.
+
+    Returns:
+        True when the file exists and no longer carries the placeholder
+        marker; False when it is absent or still a placeholder.
+    """
+    if not writeup_path.exists():
+        return False
+    return WRITEUP_PLACEHOLDER_MARKER not in writeup_path.read_text(encoding="utf-8")
 
 
 def difficulty_line(problem: Optional[dict]) -> str:
@@ -1069,7 +1090,9 @@ def emit_scaffolds(entries: Sequence[dict], fetch: bool = True) -> dict:
     Returns:
         Stats: `generated` (n), `cases_parsed` (n), `cases_empty` (n),
         `parse_failures` (slugs whose FastPrep page did not parse),
-        `skipped_no_cache` (slugs left untouched under fetch=False).
+        `skipped_no_cache` (slugs left untouched under fetch=False),
+        `writeups_preserved` (slugs whose authored write-up was left
+        untouched).
     """
     stats = {
         "generated": 0,
@@ -1077,6 +1100,7 @@ def emit_scaffolds(entries: Sequence[dict], fetch: bool = True) -> dict:
         "cases_empty": 0,
         "parse_failures": [],
         "skipped_no_cache": [],
+        "writeups_preserved": [],
     }
     DOCS_DIR.mkdir(parents=True, exist_ok=True)
     PRACTICE_DIR.mkdir(parents=True, exist_ok=True)
@@ -1095,7 +1119,11 @@ def emit_scaffolds(entries: Sequence[dict], fetch: bool = True) -> dict:
             stats["parse_failures"].append(slug)
         statement_html = resolve_statement(problem, page_html)
         (PRACTICE_DIR / slug).mkdir(parents=True, exist_ok=True)
+        writeup_path = DOCS_DIR / f"{slug}.md"
         for path, content in render_all(entry, problem, parsed_cases, statement_html).items():
+            if path == writeup_path and writeup_is_authored(writeup_path):
+                stats["writeups_preserved"].append(slug)
+                continue
             path.write_text(content, encoding="utf-8")
         if parsed_cases.cases:
             entry["parse_status"] = "parsed-with-cases"
@@ -1359,6 +1387,11 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
                 " cache has no entry for the skipped slug(s); their existing"
                 " scaffolds were left untouched"
             )
+    if stats["writeups_preserved"]:
+        print(
+            "write-ups preserved (authored, left untouched): "
+            + ", ".join(stats["writeups_preserved"])
+        )
     return 0
 
 

@@ -826,6 +826,71 @@ def test_emit_scaffolds_records_parse_status_on_entries(tmp_path, monkeypatch):
     assert dead_entry["parse_status"] == "page-unparseable"
 
 
+def authored_writeup(entry: dict) -> str:
+    """Render a placeholder write-up for `entry`, then hand-author its body."""
+    placeholder = gen.render_writeup(entry, None, "")
+    placeholder_comment = (
+        f"{gen.WRITEUP_PLACEHOLDER_MARKER} the worked derivation and write-up land\n"
+        "     on main later. See ../../leetcode/_TEMPLATE.md for the\n"
+        "     expected layout, naming, and ordering conventions. -->"
+    )
+    authored = placeholder.replace(placeholder_comment, "Hand-authored derivation prose.", 1)
+    assert gen.WRITEUP_PLACEHOLDER_MARKER not in authored
+    return authored
+
+
+def test_emit_scaffolds_preserves_an_authored_writeup_and_reports_it(tmp_path, monkeypatch):
+    docs_dir = tmp_path / "docs" / "amazon"
+    practice_dir = tmp_path / "practice" / "amazon"
+    monkeypatch.setattr(gen, "DOCS_DIR", docs_dir)
+    monkeypatch.setattr(gen, "PRACTICE_DIR", practice_dir)
+    seed_cache(monkeypatch, tmp_path / "cache", "amazon-ok")
+    monkeypatch.setattr(
+        gen,
+        "fetch_problem_page",
+        lambda slug, cache_dir=None, delay=True, network=True: FASTPREP_PAGE,
+    )
+    entry = {"slug": "amazon-ok", "title": "Ok", "url": "https://x", "companies": ["Amazon"], "updated": "2026-09-19"}
+    authored = authored_writeup(entry)
+    docs_dir.mkdir(parents=True)
+    (docs_dir / "amazon-ok.md").write_text(authored, encoding="utf-8")
+
+    stats = gen.emit_scaffolds([entry], fetch=False)
+
+    assert (docs_dir / "amazon-ok.md").read_text(encoding="utf-8") == authored
+    assert stats["writeups_preserved"] == ["amazon-ok"]
+    assert stats["generated"] == 1
+
+
+def test_emit_scaffolds_refreshes_a_still_placeholder_writeup(tmp_path, monkeypatch):
+    docs_dir = tmp_path / "docs" / "amazon"
+    practice_dir = tmp_path / "practice" / "amazon"
+    monkeypatch.setattr(gen, "DOCS_DIR", docs_dir)
+    monkeypatch.setattr(gen, "PRACTICE_DIR", practice_dir)
+    seed_cache(monkeypatch, tmp_path / "cache", "amazon-ok")
+    monkeypatch.setattr(
+        gen,
+        "fetch_problem_page",
+        lambda slug, cache_dir=None, delay=True, network=True: FASTPREP_PAGE,
+    )
+    entry = {"slug": "amazon-ok", "title": "Ok", "url": "https://x", "companies": ["Amazon"], "updated": "2026-09-19"}
+    stale_placeholder = gen.render_writeup(entry, None, "")
+    docs_dir.mkdir(parents=True)
+    (docs_dir / "amazon-ok.md").write_text(stale_placeholder, encoding="utf-8")
+
+    stats = gen.emit_scaffolds([entry], fetch=False)
+
+    problem = gen.extract_problem_record(FASTPREP_PAGE)
+    statement_html = gen.resolve_statement(problem, FASTPREP_PAGE)
+    fresh_placeholder = gen.render_writeup(entry, problem, statement_html)
+    committed = (docs_dir / "amazon-ok.md").read_text(encoding="utf-8")
+    assert committed == fresh_placeholder
+    assert committed != stale_placeholder
+    assert gen.WRITEUP_PLACEHOLDER_MARKER in committed
+    assert stats["writeups_preserved"] == []
+    assert stats["generated"] == 1
+
+
 def test_main_check_mode_does_not_rewrite_manifest(tmp_path, monkeypatch, seeded_docs_dir):
     monkeypatch.setattr(
         gen,
