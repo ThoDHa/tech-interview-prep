@@ -1195,7 +1195,9 @@ def emit_scaffolds(entries: Sequence[dict], fetch: bool = True) -> dict:
         untouched), `writeups_preserved_dead_page` (slugs whose committed
         write-up sections were merged into the placeholder because the
         FastPrep page is dead), `cases_preserved` (slugs whose authored
-        practice cases.json, stub, and test module were left untouched).
+        practice cases.json, stub, and test module were left untouched),
+        `cases_conflicted` (slugs whose authored practice cases.json met a
+        non-empty upstream parse and was overwritten; report-only).
     """
     stats = {
         "generated": 0,
@@ -1206,6 +1208,7 @@ def emit_scaffolds(entries: Sequence[dict], fetch: bool = True) -> dict:
         "writeups_preserved": [],
         "writeups_preserved_dead_page": [],
         "cases_preserved": [],
+        "cases_conflicted": [],
     }
     DOCS_DIR.mkdir(parents=True, exist_ok=True)
     PRACTICE_DIR.mkdir(parents=True, exist_ok=True)
@@ -1226,12 +1229,18 @@ def emit_scaffolds(entries: Sequence[dict], fetch: bool = True) -> dict:
         (PRACTICE_DIR / slug).mkdir(parents=True, exist_ok=True)
         writeup_path = DOCS_DIR / f"{slug}.md"
         rendered = render_all(entry, problem, parsed_cases, statement_html)
-        if not parsed_cases.cases and cases_are_authored(PRACTICE_DIR / slug / "cases.json"):
+        authored_cases = cases_are_authored(PRACTICE_DIR / slug / "cases.json")
+        if authored_cases and not parsed_cases.cases:
             # Authored practice cases on a page that yields none: the stub,
             # cases.json, and test module are hand-owned, so only the
             # (separately guarded) write-up remains a write target.
             stats["cases_preserved"].append(slug)
             rendered = {writeup_path: rendered[writeup_path]}
+        elif authored_cases:
+            # Authored practice cases meeting a live non-empty parse: the
+            # upstream refresh overwrites them (the default), but the wave
+            # log must name the conflict so the loss is visible.
+            stats["cases_conflicted"].append(slug)
         for path, content in rendered.items():
             if path == writeup_path:
                 if writeup_is_authored(writeup_path):
@@ -1565,6 +1574,12 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
         print(
             "practice cases preserved (authored, left untouched): "
             + ", ".join(stats["cases_preserved"])
+        )
+    if stats["cases_conflicted"]:
+        print(
+            "practice cases conflicted (authored cases.json met a non-empty"
+            " upstream parse and was overwritten): "
+            + ", ".join(stats["cases_conflicted"])
         )
     return 0
 

@@ -1127,6 +1127,40 @@ def test_emit_scaffolds_refreshes_an_empty_cases_json_folder(tmp_path, monkeypat
     )
 
 
+def test_emit_scaffolds_reports_cases_conflicted_when_upstream_parse_meets_authored_cases(tmp_path, monkeypatch):
+    """A live non-empty parse over an authored cases.json is named.
+
+    The overwrite itself stays the default (the upstream refresh is
+    authoritative); the stat exists so the wave log names which folders'
+    hand-authored cases were replaced instead of passing silently.
+    """
+    docs_dir = tmp_path / "docs" / "amazon"
+    practice_dir = tmp_path / "practice" / "amazon"
+    monkeypatch.setattr(gen, "DOCS_DIR", docs_dir)
+    monkeypatch.setattr(gen, "PRACTICE_DIR", practice_dir)
+    seed_cache(monkeypatch, tmp_path / "cache", "amazon-ok")
+    monkeypatch.setattr(
+        gen,
+        "fetch_problem_page",
+        lambda slug, cache_dir=None, delay=True, network=True: FASTPREP_PAGE,
+    )
+    entry = {"slug": "amazon-ok", "title": "Ok", "url": "https://x", "companies": ["Amazon"], "updated": "2026-09-19"}
+    seed_authored_cases_folder(practice_dir, "amazon-ok", [{"id": "case_1", "args": [["hand"], [1]], "expected": [2]}])
+
+    stats = gen.emit_scaffolds([entry], fetch=False)
+
+    problem = gen.extract_problem_record(FASTPREP_PAGE)
+    parsed_cases = gen.cases_from_record(problem)
+    assert parsed_cases.cases, "fixture must parse to non-empty cases"
+    assert stats["cases_conflicted"] == ["amazon-ok"]
+    assert stats["cases_preserved"] == []
+    assert entry["parse_status"] == "parsed-with-cases"
+    slug_dir = practice_dir / "amazon-ok"
+    assert (slug_dir / "cases.json").read_text(encoding="utf-8") == gen.render_cases_file(
+        parsed_cases
+    )
+
+
 def test_check_stays_green_for_an_authored_cases_folder(tmp_path, monkeypatch):
     redirect_check_paths(tmp_path, monkeypatch)
     entry = dict(UNPARSEABLE_ENTRY, slug="amazon-lru-query-result-cache", parse_status="parsed-empty-cases")
