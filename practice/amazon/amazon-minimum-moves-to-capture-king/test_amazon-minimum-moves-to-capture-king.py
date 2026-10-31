@@ -58,6 +58,40 @@ CASES = [
         ],
         "expected": 7,
     },
+    {
+        "id": 'example_2',
+        "args": [
+            8,
+            8,
+            [
+                0,
+                0,
+            ],
+            [
+                7,
+                7,
+            ],
+            [
+                [
+                    -1,
+                    0,
+                ],
+                [
+                    0,
+                    -1,
+                ],
+                [
+                    0,
+                    1,
+                ],
+                [
+                    1,
+                    0,
+                ],
+            ],
+        ],
+        "expected": 14,
+    },
 ]
 
 if len(CASES) == 0:
@@ -77,6 +111,6 @@ def _check(method, case):
 @pytest.mark.parametrize("case", CASES, ids=_ids(CASES))
 def test_solution(case):
     try:
-        _check(solution.Solution().solve, case)
+        _check(solution.Solution().minimumMovesToCaptureKing, case)
     except NotSolved:
         pytest.skip("solution.py not implemented yet")

@@ -4,19 +4,14 @@
 
 In the world of Amazon's vast inventory management, you face a challenge of optimizing two inventories, inv1 and inv2, each containing n elements.
 
-
-
 Your goal is to maximize the similarity between these inventories. The similarity is measured by the number of indices i (0 ≤ i < n) where inv1[i] equals inv2[i].
-
-
 
 Amazon provides a unique tool, the "Inventory Optimizer". This tool allows you to perform the following operation:
 
+Select two distinct indices i and j (where 0 ≤ i, j < n and i ≠ j), provided that the jth element of inv1 is positive.
+Apply the operation: add 1 to inv1[i] and subtract 1 from inv1[j].
 
-Select two distinct indices i and j (where 0 ≤ i, j < n and i ≠ j), provided that the jth element of inv1 is positive.Apply the operation: add 1 to inv1[i] and subtract 1 from inv1[j].
 Using the Inventory Optimizer, you can perform this operation any number of times (including zero) to maximize the similarity between inv1 and inv2.
-
-
 
 🧡 Thanks A LOT! spike!! 🧡
 
@@ -29,9 +24,8 @@ Using the Inventory Optimizer, you can perform this operation any number of time
 **Output:** `2`
 
 **Explanation:** Apply the operation on indices i = 2 and j = 0, which makes inv1 = [1, 4, 2].
+
 Next, apply the operation on indices i = 2 and j = 1, which updates inv1 = [1, 3, 3].
-
-
 
 Now, there are two indices, i = 0 and i = 2, for which inv1[i] = inv2[i]. Since it's impossible to make the elements at all indices of the two arrays equal, the answer is 2.
 

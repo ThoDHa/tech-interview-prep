@@ -3,14 +3,14 @@
 The worked approaches live in ../../../docs/leetcode/surrounded_regions.md.
 """
 
+import copy
+
 import pytest
 
-from harness import NotSolved, load_solution
+from harness import NotSolved, load_cases, load_solution
 
-CASES = []
-
-if len(CASES) == 0:
-    pytest.skip("in-place mutation return is not `==`-assertable for surrounded_regions", allow_module_level=True)
+SIMPLE = load_cases(__file__, "cases.json")
+FULL = SIMPLE + load_cases(__file__, "cases_full.json")
 
 solution = load_solution(__file__)
 
@@ -20,11 +20,24 @@ def _ids(cases):
 
 
 def _check(method, case):
-    assert method(*case["args"]) == case["expected"]
+    # solve mutates the grid in place; the copy shields the shared case dict from double mutation.
+    args = copy.deepcopy(case["args"])
+    method(*args)
+    assert args[0] == case["expected"]
 
 
-@pytest.mark.parametrize("case", CASES, ids=_ids(CASES))
-def test_solution(case):
+@pytest.mark.simple
+@pytest.mark.parametrize("case", SIMPLE, ids=_ids(SIMPLE))
+def test_solution_simple(case):
+    try:
+        _check(solution.Solution().solve, case)
+    except NotSolved:
+        pytest.skip("solution.py not implemented yet")
+
+
+@pytest.mark.full
+@pytest.mark.parametrize("case", FULL, ids=_ids(FULL))
+def test_solution_full(case):
     try:
         _check(solution.Solution().solve, case)
     except NotSolved:

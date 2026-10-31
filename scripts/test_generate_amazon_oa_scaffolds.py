@@ -12,6 +12,9 @@ import contextlib
 import io
 import json
 import re
+import shutil
+import subprocess
+import sys
 from pathlib import Path
 
 import pytest
@@ -20,14 +23,17 @@ import generate_amazon_oa_scaffolds as gen
 
 SCRIPTS_DIR = Path(__file__).resolve().parent
 FIXTURES_DIR = SCRIPTS_DIR / "fixtures"
+HARNESS_PATH = SCRIPTS_DIR.parent / "practice" / "harness.py"
 
 BANK_PAGE = (FIXTURES_DIR / "bank_coding.md").read_text(encoding="utf-8")
 BANK_PAGE_2 = (FIXTURES_DIR / "bank_coding_page_2.md").read_text(encoding="utf-8")
+BANK_PAGE_3 = (FIXTURES_DIR / "bank_coding_page_3.md").read_text(encoding="utf-8")
 FASTPREP_PAGE = (FIXTURES_DIR / "fastprep_problem.html").read_text(encoding="utf-8")
 
 REAL_BANK_PAGES = [
     Path("/tmp/opencode/tech-oa/coding.md"),
     Path("/tmp/opencode/tech-oa/coding-page-2.md"),
+    Path("/tmp/opencode/tech-oa/coding-page-3.md"),
 ]
 
 
@@ -78,7 +84,7 @@ def seeded_docs_dir(tmp_path, monkeypatch):
     directory must hold a synthetic write-up per fixture slug.
     """
     slugs = set()
-    for page_text in (BANK_PAGE, BANK_PAGE_2):
+    for page_text in (BANK_PAGE, BANK_PAGE_2, BANK_PAGE_3):
         for row in gen.parse_bank_rows(page_text):
             slugs.add(row["slug"])
     slug_headers = {
@@ -113,6 +119,31 @@ def test_build_manifest_dedups_by_slug_keeping_most_recent(seeded_docs_dir):
     entries = [e for e in manifest if e["slug"].endswith("one-reversal")]
     assert len(entries) == 1
     assert entries[0]["updated"] == "2026-09-19"
+
+
+def test_build_manifest_merges_three_pages_with_dedup_and_exclusion(seeded_docs_dir):
+    manifest = gen.build_manifest([BANK_PAGE, BANK_PAGE_2, BANK_PAGE_3])
+    slugs = [entry["slug"] for entry in manifest]
+    assert slugs[0] == "amazon-telemetry-aggregation-buffer"
+    reversal = [
+        entry for entry in manifest
+        if entry["slug"] == "amazon-maximize-adjacent-difference-with-one-reversal"
+    ]
+    assert len(reversal) == 1
+    assert reversal[0]["updated"] == "2026-09-19"
+    assert "amazon-find-minimum-number-of-operations" not in slugs
+    assert "uber-ride-surge-estimator" not in slugs
+
+
+def test_build_manifest_drops_excluded_dead_page_slugs():
+    page = (
+        "| Company | OA / Interview Question | Practice | Updated |\n"
+        "| :-- | :-- | :-: | :-- |\n"
+        "|**Amazon**|[Get Min Cost Book](https://www.fastprep.io/problems/amazon-get-min-cost-book)"
+        "|[![Practice][p]](https://www.fastprep.io/problems/amazon-get-min-cost-book)"
+        "|🔥 Sep 21, 2026|\n"
+    )
+    assert gen.build_manifest([page]) == []
 
 
 def test_build_manifest_sorts_most_recent_first(seeded_docs_dir):
@@ -197,16 +228,68 @@ def test_build_manifest_maps_the_unknown_markers_to_none(seeded_docs_dir):
     assert entry["categories"] is None
 
 
+def test_build_manifest_bootstraps_a_never_scaffolded_slug_with_none_metadata(tmp_path, monkeypatch):
+    monkeypatch.setattr(gen, "DOCS_DIR", tmp_path / "docs" / "amazon")
+    monkeypatch.setattr(gen, "PRACTICE_DIR", tmp_path / "practice" / "amazon")
+    page = (
+        "| Company | OA / Interview Question | Practice | Updated |\n"
+        "| :-- | :-- | :-: | :-- |\n"
+        "|**Amazon**|[Brand New Task](https://www.fastprep.io/problems/amazon-brand-new-task)"
+        "|[![Practice][p]](https://www.fastprep.io/problems/amazon-brand-new-task)"
+        "|Sep 19, 2026|\n"
+    )
+
+    manifest = gen.build_manifest([page])
+
+    assert [entry["slug"] for entry in manifest] == ["amazon-brand-new-task"]
+    assert manifest[0]["difficulty"] is None
+    assert manifest[0]["categories"] is None
+
+
+def test_build_manifest_aborts_when_writeup_missing_but_practice_scaffolds_exist(tmp_path, monkeypatch):
+    monkeypatch.setattr(gen, "DOCS_DIR", tmp_path / "docs" / "amazon")
+    practice_dir = tmp_path / "practice" / "amazon"
+    monkeypatch.setattr(gen, "PRACTICE_DIR", practice_dir)
+    (practice_dir / "amazon-half-built").mkdir(parents=True)
+    page = (
+        "| Company | OA / Interview Question | Practice | Updated |\n"
+        "| :-- | :-- | :-: | :-- |\n"
+        "|**Amazon**|[Half Built](https://www.fastprep.io/problems/amazon-half-built)"
+        "|[![Practice][p]](https://www.fastprep.io/problems/amazon-half-built)"
+        "|Sep 19, 2026|\n"
+    )
+
+    with pytest.raises(SystemExit, match="write-up not found"):
+        gen.build_manifest([page])
+
+
 @pytest.mark.skipif(
     not all(path.exists() for path in REAL_BANK_PAGES),
     reason="cached bank pages not present (offline fixture-only run)",
 )
-def test_real_bank_pages_yield_383_unique_amazon_entries():
+def test_real_bank_pages_yield_413_unique_amazon_entries_and_410_manifest_entries(tmp_path, monkeypatch):
     texts = [path.read_text(encoding="utf-8") for path in REAL_BANK_PAGES]
+    bank_slugs = {
+        row["slug"]
+        for text in texts
+        for row in gen.parse_bank_rows(text)
+        if gen.AMAZON_TAG in row["companies"]
+    }
+    assert len(bank_slugs) == 413
+    # build_manifest enriches rows from the write-up headers, and the bank
+    # leads the docs tree between syncs; synthetic headers keep the count
+    # assertions independent of which scaffolds already exist.
+    for slug in bank_slugs:
+        (tmp_path / f"{slug}.md").write_text(
+            "# [T](https://x)\n\n**Medium** | **NN minutes** | **Array**\n",
+            encoding="utf-8",
+        )
+    monkeypatch.setattr(gen, "DOCS_DIR", tmp_path)
     manifest = gen.build_manifest(texts)
-    assert len(manifest) == 383
+    assert len(manifest) == 410
     slugs = [entry["slug"] for entry in manifest]
-    assert len(set(slugs)) == 383
+    assert not set(slugs) & gen.EXCLUDED_SLUGS
+    assert len(set(slugs)) == len(slugs)
     updated = [entry["updated"] for entry in manifest]
     assert updated == sorted(updated, reverse=True)
 
@@ -493,6 +576,43 @@ def test_html_to_markdown_renders_paragraph_breaks_and_strips_comments():
     assert gen.html_to_markdown("<p>One</p><p>Two</p><!-- x -->") == "One\n\nTwo"
 
 
+def test_html_to_markdown_separates_a_run_in_heading_from_the_next_block():
+    """A heading between blocks never glues to the neighboring prose.
+
+    Shaped like the real bank pages whose statements carry `<h3>` run-in
+    headings (`Optimization follow-upAfter` was the rendered join before
+    the block-join fix). Inline markup inside one paragraph is legitimate
+    emphasis and stays bare.
+    """
+    fragment = (
+        "<p>Solve the base case first.</p>"
+        "<h3>Optimization follow-up</h3>"
+        "<p>After a correct simple implementation, explain the trade-offs.</p>"
+    )
+
+    rendered = gen.html_to_markdown(fragment)
+
+    assert rendered == (
+        "Solve the base case first.\n\n"
+        "Optimization follow-up\n\n"
+        "After a correct simple implementation, explain the trade-offs."
+    )
+
+
+def test_html_to_markdown_puts_each_list_item_on_its_own_line():
+    """A `<ul>` of method specs renders one line per `<li>`, not one blob."""
+    fragment = (
+        "<p>Operations:</p>"
+        "<ul><li><code>add_ip</code>: add the address.</li>"
+        "<li><code>remove_ip</code>: remove the address.</li></ul>"
+    )
+
+    rendered = gen.html_to_markdown(fragment)
+
+    assert "add_ip: add the address.\nremove_ip: remove the address." in rendered
+    assert ".remove_ip" not in rendered
+
+
 def test_html_to_markdown_strips_leading_indentation_from_every_line():
     rendered = gen.html_to_markdown(
         "<div class=\"wrap\"><p>First paragraph</p><p>  Second paragraph\n"
@@ -744,6 +864,600 @@ def test_emit_scaffolds_records_parse_status_on_entries(tmp_path, monkeypatch):
     assert dead_entry["parse_status"] == "page-unparseable"
 
 
+def authored_writeup(entry: dict) -> str:
+    """Render a placeholder write-up for `entry`, then hand-author its body."""
+    placeholder = gen.render_writeup(entry, None, "")
+    placeholder_comment = (
+        f"{gen.WRITEUP_PLACEHOLDER_MARKER} the worked derivation and write-up land\n"
+        "     on main later. See ../../leetcode/_TEMPLATE.md for the\n"
+        "     expected layout, naming, and ordering conventions. -->"
+    )
+    authored = placeholder.replace(placeholder_comment, "Hand-authored derivation prose.", 1)
+    assert gen.WRITEUP_PLACEHOLDER_MARKER not in authored
+    return authored
+
+
+def test_emit_scaffolds_preserves_an_authored_writeup_and_reports_it(tmp_path, monkeypatch):
+    docs_dir = tmp_path / "docs" / "amazon"
+    practice_dir = tmp_path / "practice" / "amazon"
+    monkeypatch.setattr(gen, "DOCS_DIR", docs_dir)
+    monkeypatch.setattr(gen, "PRACTICE_DIR", practice_dir)
+    seed_cache(monkeypatch, tmp_path / "cache", "amazon-ok")
+    monkeypatch.setattr(
+        gen,
+        "fetch_problem_page",
+        lambda slug, cache_dir=None, delay=True, network=True: FASTPREP_PAGE,
+    )
+    entry = {"slug": "amazon-ok", "title": "Ok", "url": "https://x", "companies": ["Amazon"], "updated": "2026-09-19"}
+    authored = authored_writeup(entry)
+    docs_dir.mkdir(parents=True)
+    (docs_dir / "amazon-ok.md").write_text(authored, encoding="utf-8")
+
+    stats = gen.emit_scaffolds([entry], fetch=False)
+
+    assert (docs_dir / "amazon-ok.md").read_text(encoding="utf-8") == authored
+    assert stats["writeups_preserved"] == ["amazon-ok"]
+    assert stats["generated"] == 1
+
+
+def test_emit_scaffolds_refreshes_a_still_placeholder_writeup(tmp_path, monkeypatch):
+    docs_dir = tmp_path / "docs" / "amazon"
+    practice_dir = tmp_path / "practice" / "amazon"
+    monkeypatch.setattr(gen, "DOCS_DIR", docs_dir)
+    monkeypatch.setattr(gen, "PRACTICE_DIR", practice_dir)
+    seed_cache(monkeypatch, tmp_path / "cache", "amazon-ok")
+    monkeypatch.setattr(
+        gen,
+        "fetch_problem_page",
+        lambda slug, cache_dir=None, delay=True, network=True: FASTPREP_PAGE,
+    )
+    entry = {"slug": "amazon-ok", "title": "Ok", "url": "https://x", "companies": ["Amazon"], "updated": "2026-09-19"}
+    stale_placeholder = gen.render_writeup(entry, None, "")
+    docs_dir.mkdir(parents=True)
+    (docs_dir / "amazon-ok.md").write_text(stale_placeholder, encoding="utf-8")
+
+    stats = gen.emit_scaffolds([entry], fetch=False)
+
+    problem = gen.extract_problem_record(FASTPREP_PAGE)
+    statement_html = gen.resolve_statement(problem, FASTPREP_PAGE)
+    fresh_placeholder = gen.render_writeup(entry, problem, statement_html)
+    committed = (docs_dir / "amazon-ok.md").read_text(encoding="utf-8")
+    assert committed == fresh_placeholder
+    assert committed != stale_placeholder
+    assert gen.WRITEUP_PLACEHOLDER_MARKER in committed
+    assert stats["writeups_preserved"] == []
+    assert stats["generated"] == 1
+
+
+def test_preserve_writeup_on_death_keeps_archived_sections_and_fills_marker_holes():
+    """The merge keeps non-marker sections and fills only the marker holes."""
+    entry = {"slug": "amazon-gone", "title": "Gone", "url": "https://x/gone"}
+    fresh = gen.render_writeup(entry, None, "")
+    fresh_constraints_marker = (
+        "<!-- Constraints not parseable from FastPrep for amazon-gone; fill them in. -->"
+    )
+    committed = fresh.replace(
+        "<!-- Statement not parseable from FastPrep; fill it in. -->",
+        "Archived statement surviving the page death.",
+        1,
+    ).replace(
+        "<!-- Examples not parseable from FastPrep for amazon-gone; fill them in. -->",
+        "### Example 1\n\n**Input:** `n = 2`\n\n**Output:** `3`",
+        1,
+    ).replace(
+        fresh_constraints_marker,
+        fresh_constraints_marker.replace(" them in.", " them in"),
+        1,
+    )
+
+    merged = gen.preserve_writeup_on_death(committed, fresh)
+
+    assert "Archived statement surviving the page death." in merged
+    assert "### Example 1" in merged
+    assert fresh_constraints_marker in merged
+    assert fresh_constraints_marker.replace(" them in.", " them in") not in merged
+    assert merged.endswith(fresh[fresh.index("## Solutions") :])
+    assert merged != fresh
+
+
+def test_preserve_writeup_on_death_returns_the_fresh_placeholder_for_a_pure_placeholder():
+    """A committed write-up with every section still a marker adds nothing."""
+    entry = {"slug": "amazon-gone", "title": "Gone", "url": "https://x/gone"}
+    fresh = gen.render_writeup(entry, None, "")
+
+    assert gen.preserve_writeup_on_death(fresh, fresh) == fresh
+
+
+def test_emit_scaffolds_preserves_a_dead_page_writeups_archived_sections(tmp_path, monkeypatch):
+    """A dead page must not re-render a committed write-up's archived body.
+
+    The committed write-up still carries the Solutions scaffold marker (so
+    it is not authored) but holds the archived statement: emission keeps it
+    and reports the slug, and a second pass over the result is byte-stable,
+    which is the property that lets a restored write-up survive every
+    future wave.
+    """
+    docs_dir = tmp_path / "docs" / "amazon"
+    practice_dir = tmp_path / "practice" / "amazon"
+    monkeypatch.setattr(gen, "DOCS_DIR", docs_dir)
+    monkeypatch.setattr(gen, "PRACTICE_DIR", practice_dir)
+    seed_cache(monkeypatch, tmp_path / "cache", "amazon-gone")
+    monkeypatch.setattr(
+        gen,
+        "fetch_problem_page",
+        lambda slug, cache_dir=None, delay=True, network=True: "<html>dead page</html>",
+    )
+    entry = {"slug": "amazon-gone", "title": "Gone", "url": "https://x/gone", "companies": ["Amazon"], "updated": "2026-09-19"}
+    committed = gen.render_writeup(entry, None, "").replace(
+        "<!-- Statement not parseable from FastPrep; fill it in. -->",
+        "Archived statement surviving the page death.",
+        1,
+    )
+    docs_dir.mkdir(parents=True)
+    (docs_dir / "amazon-gone.md").write_text(committed, encoding="utf-8")
+
+    stats = gen.emit_scaffolds([entry], fetch=False)
+
+    preserved = (docs_dir / "amazon-gone.md").read_text(encoding="utf-8")
+    assert preserved == committed
+    assert "Archived statement surviving the page death." in preserved
+    assert stats["writeups_preserved_dead_page"] == ["amazon-gone"]
+    assert entry["parse_status"] == "page-unparseable"
+
+    stats = gen.emit_scaffolds([entry], fetch=False)
+
+    assert (docs_dir / "amazon-gone.md").read_text(encoding="utf-8") == committed
+    assert stats["writeups_preserved_dead_page"] == ["amazon-gone"]
+
+
+def test_check_stays_green_for_a_death_preserved_writeup(tmp_path, monkeypatch):
+    """The check pins the Solutions block of a death-preserved write-up.
+
+    The archived statement is archive-owned (tampering with it stays green);
+    the Solutions scaffold block is generator-owned (drift there fails).
+    """
+    redirect_check_paths(tmp_path, monkeypatch)
+    entry = dict(UNPARSEABLE_ENTRY)
+    fresh = gen.render_writeup(entry, None, "")
+    committed = fresh.replace(
+        "<!-- Statement not parseable from FastPrep; fill it in. -->",
+        "Archived statement surviving the page death.",
+        1,
+    )
+    write_scaffold_set(tmp_path, entry)
+    (gen.DOCS_DIR / "amazon-gone.md").write_text(committed, encoding="utf-8")
+    (gen.DOCS_DIR / "index.md").write_text(gen.render_index([entry]), encoding="utf-8")
+
+    assert gen.check([entry]) == 0
+
+    tampered_solutions = committed.replace(
+        f"{gen.WRITEUP_PLACEHOLDER_MARKER} the worked derivation and write-up land",
+        f"{gen.WRITEUP_PLACEHOLDER_MARKER} drifted scaffold text",
+        1,
+    )
+    assert gen.WRITEUP_PLACEHOLDER_MARKER in tampered_solutions
+    (gen.DOCS_DIR / "amazon-gone.md").write_text(tampered_solutions, encoding="utf-8")
+    assert gen.check([entry]) == 1
+
+    tampered_statement = committed.replace(
+        "Archived statement surviving the page death.",
+        "Hand-edited archive text.",
+        1,
+    )
+    (gen.DOCS_DIR / "amazon-gone.md").write_text(tampered_statement, encoding="utf-8")
+    assert gen.check([entry]) == 0
+
+
+def test_check_pins_an_authored_dead_page_writeups_title_line(tmp_path, monkeypatch):
+    """A fully authored write-up on a dead page is pinned on its title line.
+
+    The pin is the manifest-derived `# [Title](url)` line, matching the
+    parsed-entry convention: a pin on the committed file's own first line
+    is always true and would never catch a write-up retitled away from the
+    manifest. The body below the title line stays hand-editable.
+    """
+    redirect_check_paths(tmp_path, monkeypatch)
+    entry = dict(UNPARSEABLE_ENTRY)
+    fresh = gen.render_writeup(entry, None, "")
+    committed = re.sub(
+        rf"{re.escape(gen.WRITEUP_PLACEHOLDER_MARKER)}.*?-->",
+        "Fully authored derivation.",
+        fresh,
+        flags=re.S,
+    )
+    assert gen.WRITEUP_PLACEHOLDER_MARKER not in committed
+    write_scaffold_set(tmp_path, entry)
+    (gen.DOCS_DIR / "amazon-gone.md").write_text(committed, encoding="utf-8")
+    (gen.DOCS_DIR / "index.md").write_text(gen.render_index([entry]), encoding="utf-8")
+
+    expectation = gen.expected_scaffold_fragments(entry)[gen.DOCS_DIR / "amazon-gone.md"]
+    assert expectation.prefix == "# [Gone](https://x/gone)\n"
+
+    assert gen.check([entry]) == 0
+
+    retitled = committed.replace(
+        "# [Gone](https://x/gone)", "# [Renamed Problem](https://x/gone)", 1
+    )
+    (gen.DOCS_DIR / "amazon-gone.md").write_text(retitled, encoding="utf-8")
+    assert gen.check([entry]) == 1
+
+    edited_body = committed.replace("Fully authored derivation.", "Rewritten derivation.", 1)
+    (gen.DOCS_DIR / "amazon-gone.md").write_text(edited_body, encoding="utf-8")
+    assert gen.check([entry]) == 0
+
+
+def design_operations_problem(slug: str) -> dict:
+    """Build a parsed problem whose examples are design-operation sequences.
+
+    Shaped like the real promoted tree/design problems: the page parses,
+    but no example converts to `==`-assertable harness cases.
+    """
+    return dict(
+        gen.extract_problem_record(FASTPREP_PAGE),
+        id=slug,
+        examples=[
+            {
+                "id": 1,
+                "inputText": [
+                    {"inputName": "operations", "inputValue": '["LRUCache","put"]', "inputType": "string[]"},
+                    {"inputName": "arguments", "inputValue": "[[2],[1,1]]", "inputType": "integer[][]"},
+                ],
+                "outputText": "[null,null]",
+                "outputType": "long[]",
+            }
+        ],
+    )
+
+
+def seed_authored_cases_folder(practice_dir: Path, slug: str, cases: list) -> None:
+    """Write a converted (hand-owned) practice folder for `slug`."""
+    slug_dir = practice_dir / slug
+    slug_dir.mkdir(parents=True, exist_ok=True)
+    (slug_dir / "cases.json").write_text(json.dumps(cases, indent=2) + "\n", encoding="utf-8")
+    (slug_dir / "solution.py").write_text("hand-authored stub\n", encoding="utf-8")
+    (slug_dir / f"test_{slug}.py").write_text("hand-authored test module\n", encoding="utf-8")
+
+
+def test_emit_scaffolds_preserves_authored_cases_for_a_parsed_empty_entry(tmp_path, monkeypatch):
+    docs_dir = tmp_path / "docs" / "amazon"
+    practice_dir = tmp_path / "practice" / "amazon"
+    monkeypatch.setattr(gen, "DOCS_DIR", docs_dir)
+    monkeypatch.setattr(gen, "PRACTICE_DIR", practice_dir)
+    seed_cache(monkeypatch, tmp_path / "cache", "amazon-lru-query-result-cache")
+    design_problem = design_operations_problem("amazon-lru-query-result-cache")
+    monkeypatch.setattr(gen, "extract_problem_record", lambda page_html: design_problem)
+    entry = {"slug": "amazon-lru-query-result-cache", "title": "LRU", "url": "https://x", "companies": ["Amazon"], "updated": "2026-09-19"}
+    authored_cases = [{"id": "case_1", "args": [["LRUCache", "put", "get"], [[2], [1, 1], [1]], [None, None, 1]]}]
+    seed_authored_cases_folder(practice_dir, "amazon-lru-query-result-cache", authored_cases)
+
+    stats = gen.emit_scaffolds([entry], fetch=False)
+
+    slug_dir = practice_dir / "amazon-lru-query-result-cache"
+    assert stats["cases_preserved"] == ["amazon-lru-query-result-cache"]
+    assert entry["parse_status"] == "parsed-empty-cases"
+    assert json.loads((slug_dir / "cases.json").read_text(encoding="utf-8")) == authored_cases
+    assert (slug_dir / "solution.py").read_text(encoding="utf-8") == "hand-authored stub\n"
+    assert (slug_dir / "test_amazon-lru-query-result-cache.py").read_text(encoding="utf-8") == "hand-authored test module\n"
+
+
+def test_emit_scaffolds_refreshes_an_empty_cases_json_folder(tmp_path, monkeypatch):
+    docs_dir = tmp_path / "docs" / "amazon"
+    practice_dir = tmp_path / "practice" / "amazon"
+    monkeypatch.setattr(gen, "DOCS_DIR", docs_dir)
+    monkeypatch.setattr(gen, "PRACTICE_DIR", practice_dir)
+    seed_cache(monkeypatch, tmp_path / "cache", "amazon-lru-query-result-cache")
+    design_problem = design_operations_problem("amazon-lru-query-result-cache")
+    monkeypatch.setattr(gen, "extract_problem_record", lambda page_html: design_problem)
+    entry = {"slug": "amazon-lru-query-result-cache", "title": "LRU", "url": "https://x", "companies": ["Amazon"], "updated": "2026-09-19"}
+    seed_authored_cases_folder(practice_dir, "amazon-lru-query-result-cache", [])
+
+    stats = gen.emit_scaffolds([entry], fetch=False)
+
+    slug_dir = practice_dir / "amazon-lru-query-result-cache"
+    assert stats["cases_preserved"] == []
+    assert stats["cases_empty"] == 1
+    assert json.loads((slug_dir / "cases.json").read_text(encoding="utf-8")) == []
+    parsed_cases = gen.cases_from_record(design_problem)
+    statement_html = gen.resolve_statement(design_problem, "<html>cached</html>")
+    assert (slug_dir / "test_amazon-lru-query-result-cache.py").read_text(encoding="utf-8") == gen.render_test(
+        entry, parsed_cases.function_name, parsed_cases.cases, parsed_cases.skip_reason
+    )
+
+
+def test_emit_scaffolds_reports_cases_conflicted_when_upstream_parse_meets_authored_cases(tmp_path, monkeypatch):
+    """A live non-empty parse over an authored cases.json is named.
+
+    The overwrite itself stays the default (the upstream refresh is
+    authoritative); the stat exists so the wave log names which folders'
+    hand-authored cases were replaced instead of passing silently.
+    """
+    docs_dir = tmp_path / "docs" / "amazon"
+    practice_dir = tmp_path / "practice" / "amazon"
+    monkeypatch.setattr(gen, "DOCS_DIR", docs_dir)
+    monkeypatch.setattr(gen, "PRACTICE_DIR", practice_dir)
+    seed_cache(monkeypatch, tmp_path / "cache", "amazon-ok")
+    monkeypatch.setattr(
+        gen,
+        "fetch_problem_page",
+        lambda slug, cache_dir=None, delay=True, network=True: FASTPREP_PAGE,
+    )
+    entry = {"slug": "amazon-ok", "title": "Ok", "url": "https://x", "companies": ["Amazon"], "updated": "2026-09-19", "parse_status": "parsed-empty-cases"}
+    seed_authored_cases_folder(practice_dir, "amazon-ok", [{"id": "case_1", "args": [["hand"], [1]], "expected": [2]}])
+
+    stats = gen.emit_scaffolds([entry], fetch=False)
+
+    problem = gen.extract_problem_record(FASTPREP_PAGE)
+    parsed_cases = gen.cases_from_record(problem)
+    assert parsed_cases.cases, "fixture must parse to non-empty cases"
+    assert stats["cases_conflicted"] == ["amazon-ok"]
+    assert stats["cases_preserved"] == []
+    assert entry["parse_status"] == "parsed-with-cases"
+    slug_dir = practice_dir / "amazon-ok"
+    assert (slug_dir / "cases.json").read_text(encoding="utf-8") == gen.render_cases_file(
+        parsed_cases
+    )
+
+
+def test_emit_scaffolds_names_only_hand_owned_cases_in_cases_conflicted(tmp_path, monkeypatch):
+    """cases_conflicted fires only for hand-authored case sets meeting upstream cases.
+
+    A `parsed-with-cases` entry's non-empty cases.json is the generator's
+    own last render, so a full run over the committed bank (hundreds of
+    such folders) must stay silent for them; only a hand-authored case set
+    under a non-pwc committed parse_status names a real overwrite.
+    """
+    docs_dir = tmp_path / "docs" / "amazon"
+    practice_dir = tmp_path / "practice" / "amazon"
+    monkeypatch.setattr(gen, "DOCS_DIR", docs_dir)
+    monkeypatch.setattr(gen, "PRACTICE_DIR", practice_dir)
+    seed_cache(monkeypatch, tmp_path / "cache", "amazon-ok", "amazon-authored")
+    monkeypatch.setattr(
+        gen,
+        "fetch_problem_page",
+        lambda slug, cache_dir=None, delay=True, network=True: FASTPREP_PAGE,
+    )
+    problem = gen.extract_problem_record(FASTPREP_PAGE)
+    parsed_cases = gen.cases_from_record(problem)
+    assert parsed_cases.cases, "fixture must parse to non-empty cases"
+
+    generator_owned_entry = {
+        "slug": "amazon-ok",
+        "title": "Ok",
+        "url": "https://x",
+        "companies": ["Amazon"],
+        "updated": "2026-09-19",
+        "parse_status": "parsed-with-cases",
+    }
+    statement_html = gen.resolve_statement(problem, FASTPREP_PAGE)
+    for path, content in gen.render_all(
+        generator_owned_entry, problem, parsed_cases, statement_html
+    ).items():
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text(content, encoding="utf-8")
+    authored_entry = {
+        "slug": "amazon-authored",
+        "title": "Authored",
+        "url": "https://x",
+        "companies": ["Amazon"],
+        "updated": "2026-09-19",
+        "parse_status": "parsed-empty-cases",
+    }
+    seed_authored_cases_folder(
+        practice_dir, "amazon-authored", [{"id": "case_1", "args": [["hand"], [1]], "expected": [2]}]
+    )
+
+    stats = gen.emit_scaffolds([generator_owned_entry, authored_entry], fetch=False)
+
+    assert stats["cases_conflicted"] == ["amazon-authored"]
+    assert stats["cases_preserved"] == []
+    assert generator_owned_entry["parse_status"] == "parsed-with-cases"
+    assert (practice_dir / "amazon-ok" / "cases.json").read_text(
+        encoding="utf-8"
+    ) == gen.render_cases_file(parsed_cases)
+    assert (practice_dir / "amazon-authored" / "cases.json").read_text(
+        encoding="utf-8"
+    ) == gen.render_cases_file(parsed_cases)
+
+
+def test_main_seeds_committed_parse_status_before_emission(tmp_path, monkeypatch, seeded_docs_dir, capsys):
+    """A bank-present run classifies folders from the committed manifest.
+
+    The committed manifest classifies, the bank pages enrich: a built
+    entry carries no parse_status, so without seeding it from the commit
+    before emission, every generator-owned `parsed-with-cases` folder's
+    non-empty cases.json counted as hand-authored and the wave log named
+    a conflict for it. The seed must leave brand-new slugs (absent from
+    the committed manifest) unclassified — emission classifies them from
+    the live parse itself.
+    """
+    monkeypatch.setattr(
+        gen,
+        "DEFAULT_BANK_PAGES",
+        [
+            FIXTURES_DIR / "bank_coding.md",
+            FIXTURES_DIR / "bank_coding_page_2.md",
+            FIXTURES_DIR / "bank_coding_page_3.md",
+        ],
+    )
+    target_slug = gen.extract_problem_record(FASTPREP_PAGE)["id"]
+    manifest_path = tmp_path / "amazon_oa_manifest.json"
+    manifest_path.write_text(
+        json.dumps(
+            [
+                {
+                    "slug": target_slug,
+                    "title": "Maximize Adjacent Difference With One Reversal",
+                    "url": f"https://www.fastprep.io/problems/{target_slug}",
+                    "companies": ["Amazon"],
+                    "updated": "2026-09-19",
+                    "difficulty": "Hard",
+                    "categories": "Array, Greedy, Math",
+                    "parse_status": "parsed-with-cases",
+                }
+            ],
+            indent=2,
+        )
+        + "\n",
+        encoding="utf-8",
+    )
+    monkeypatch.setattr(gen, "MANIFEST_PATH", manifest_path)
+    monkeypatch.setattr(gen, "PRACTICE_DIR", tmp_path / "practice" / "amazon")
+    monkeypatch.setattr(
+        gen,
+        "fetch_problem_page",
+        lambda slug, cache_dir=None, delay=True, network=True: FASTPREP_PAGE,
+    )
+    committed_manifest = json.loads(
+        (SCRIPTS_DIR / "amazon_oa_manifest.json").read_text(encoding="utf-8")
+    )
+    committed_pwc_slug = next(
+        entry["slug"]
+        for entry in committed_manifest
+        if entry.get("parse_status") == "parsed-with-cases"
+    )
+    shutil.copytree(
+        SCRIPTS_DIR.parent / "practice" / "amazon" / committed_pwc_slug,
+        gen.PRACTICE_DIR / target_slug,
+    )
+    copied_cases = json.loads(
+        (gen.PRACTICE_DIR / target_slug / "cases.json").read_text(encoding="utf-8")
+    )
+    assert copied_cases, "fixture premise: the committed folder's cases.json is non-empty"
+    mkdocs_path = tmp_path / "mkdocs.yml"
+    mkdocs_path.write_text(
+        "nav:\n  - Home: index.md\n  - Problems:\n    - Leetcode:\n",
+        encoding="utf-8",
+    )
+    monkeypatch.setattr(gen, "MKTABS_PATH", mkdocs_path)
+    seen = {}
+    real_emit = gen.emit_scaffolds
+
+    def spy_emit(entries, fetch=True):
+        seen["entries"] = [dict(entry) for entry in entries]
+        return real_emit(entries, fetch=fetch)
+
+    monkeypatch.setattr(gen, "emit_scaffolds", spy_emit)
+
+    assert gen.main([]) == 0
+
+    out = capsys.readouterr().out
+    assert "practice cases conflicted" not in out
+    seeded = {entry["slug"]: entry for entry in seen["entries"]}
+    assert seeded[target_slug]["parse_status"] == "parsed-with-cases"
+    brand_new = [slug for slug in seeded if slug != target_slug]
+    assert brand_new, "fixture premise: the bank carries slugs the committed manifest omits"
+    assert all("parse_status" not in seeded[slug] for slug in brand_new)
+
+
+def test_check_stays_green_for_an_authored_cases_folder(tmp_path, monkeypatch):
+    redirect_check_paths(tmp_path, monkeypatch)
+    entry = dict(UNPARSEABLE_ENTRY, slug="amazon-lru-query-result-cache", parse_status="parsed-empty-cases")
+    write_scaffold_set(tmp_path, entry)
+    (gen.DOCS_DIR / "index.md").write_text(gen.render_index([entry]), encoding="utf-8")
+    slug_dir = gen.PRACTICE_DIR / "amazon-lru-query-result-cache"
+    authored_cases = [{"id": "case_1", "args": [["LRUCache"]], "expected": [None]}]
+    (slug_dir / "cases.json").write_text(json.dumps(authored_cases, indent=2) + "\n", encoding="utf-8")
+    (slug_dir / "solution.py").write_text("hand-authored stub\n", encoding="utf-8")
+    (slug_dir / "test_amazon-lru-query-result-cache.py").write_text("hand-authored test module\n", encoding="utf-8")
+
+    assert gen.check([entry]) == 0
+
+    (gen.DOCS_DIR / "amazon-lru-query-result-cache.md").write_text(
+        "# Different Problem (https://x/other)\n", encoding="utf-8"
+    )
+    assert gen.check([entry]) == 1
+
+
+def test_check_exempts_an_authored_cases_folder_on_a_page_unparseable_entry(tmp_path, monkeypatch):
+    redirect_check_paths(tmp_path, monkeypatch)
+    entry = dict(UNPARSEABLE_ENTRY, slug="amazon-lru-query-result-cache", parse_status="page-unparseable")
+    write_scaffold_set(tmp_path, entry)
+    (gen.DOCS_DIR / "index.md").write_text(gen.render_index([entry]), encoding="utf-8")
+    slug_dir = gen.PRACTICE_DIR / "amazon-lru-query-result-cache"
+    authored_cases = [{"id": "case_1", "args": [["LRUCache"]], "expected": [None]}]
+    (slug_dir / "cases.json").write_text(json.dumps(authored_cases, indent=2) + "\n", encoding="utf-8")
+    (slug_dir / "solution.py").write_text("hand-authored stub\n", encoding="utf-8")
+    (slug_dir / "test_amazon-lru-query-result-cache.py").write_text("hand-authored test module\n", encoding="utf-8")
+
+    assert gen.check([entry]) == 0
+
+    (slug_dir / "test_amazon-lru-query-result-cache.py").unlink()
+    assert gen.check([entry]) == 1
+
+    (slug_dir / "solution.py").unlink()
+    assert gen.check([entry]) == 1
+
+    (slug_dir / "solution.py").write_text("hand-authored stub\n", encoding="utf-8")
+    (slug_dir / "test_amazon-lru-query-result-cache.py").write_text("hand-authored test module\n", encoding="utf-8")
+    assert gen.check([entry]) == 0
+
+
+def committed_authored_cases_slugs():
+    """List committed slugs whose manifest status is caseless but whose
+    cases.json holds authored (non-empty) cases: the folders the generator
+    must preserve byte-for-byte."""
+    manifest = json.loads((SCRIPTS_DIR / "amazon_oa_manifest.json").read_text(encoding="utf-8"))
+    slugs = []
+    for entry in manifest:
+        cases_path = SCRIPTS_DIR.parent / "practice" / "amazon" / entry["slug"] / "cases.json"
+        parsed = gen._json_list_file(cases_path)
+        if entry.get("parse_status") != "parsed-with-cases" and parsed:
+            slugs.append(entry["slug"])
+    return sorted(slugs)
+
+
+def test_full_run_simulation_leaves_authored_cases_folders_byte_identical(tmp_path, monkeypatch):
+    """Run the real emission over the real authored-cases folders.
+
+    The committed folders are copied to a temp DOCS/PRACTICE pair (the real
+    tree stays read-only) and every preserved file must come out
+    byte-identical. Slugs with a cached FastPrep page simulate the real
+    parse; the dead (HTTP 404) slugs get the exact failure marker the
+    fetcher produces, so their page-unparseable path runs offline too.
+    """
+    slugs = committed_authored_cases_slugs()
+    assert slugs, "no authored-cases folders committed"
+    manifest = json.loads((SCRIPTS_DIR / "amazon_oa_manifest.json").read_text(encoding="utf-8"))
+    entries = [dict(entry) for entry in manifest if entry["slug"] in set(slugs)]
+    repo_practice = SCRIPTS_DIR.parent / "practice" / "amazon"
+    repo_docs = SCRIPTS_DIR.parent / "docs" / "amazon"
+
+    docs_dir = tmp_path / "docs" / "amazon"
+    practice_dir = tmp_path / "practice" / "amazon"
+    docs_dir.mkdir(parents=True)
+    cache_dir = tmp_path / "fastprep-cache"
+    cache_dir.mkdir(parents=True)
+    for slug in slugs:
+        shutil.copytree(repo_practice / slug, practice_dir / slug)
+        shutil.copy2(repo_docs / f"{slug}.md", docs_dir / f"{slug}.md")
+        cached_page = gen.FASTPREP_CACHE_DIR / f"{slug}.html"
+        if cached_page.exists():
+            shutil.copy2(cached_page, cache_dir / f"{slug}.html")
+        else:
+            (cache_dir / f"{slug}.html").write_text(
+                gen.FETCH_FAILED_MARKER_TEMPLATE.format(error_code=404, slug=slug),
+                encoding="utf-8",
+            )
+    monkeypatch.setattr(gen, "DOCS_DIR", docs_dir)
+    monkeypatch.setattr(gen, "PRACTICE_DIR", practice_dir)
+    monkeypatch.setattr(gen, "FASTPREP_CACHE_DIR", cache_dir)
+
+    stats = gen.emit_scaffolds(entries, fetch=True)
+
+    assert sorted(stats["cases_preserved"]) == slugs
+    for slug in slugs:
+        repo_slug_dir = repo_practice / slug
+        tmp_slug_dir = practice_dir / slug
+        repo_files = sorted(path.relative_to(repo_slug_dir) for path in repo_slug_dir.rglob("*") if path.is_file())
+        tmp_files = sorted(path.relative_to(tmp_slug_dir) for path in tmp_slug_dir.rglob("*") if path.is_file())
+        assert repo_files == tmp_files, slug
+        for relative in repo_files:
+            assert (repo_slug_dir / relative).read_bytes() == (tmp_slug_dir / relative).read_bytes(), (
+                f"{slug}/{relative}"
+            )
+        assert (repo_docs / f"{slug}.md").read_bytes() == (docs_dir / f"{slug}.md").read_bytes(), slug
+
+
 def test_main_check_mode_does_not_rewrite_manifest(tmp_path, monkeypatch, seeded_docs_dir):
     monkeypatch.setattr(
         gen,
@@ -829,6 +1543,75 @@ def test_render_test_links_writeup_at_amazon_depth():
         "The worked approaches live in ../../../docs/amazon/amazon-depth.md." in text
     )
     assert "live in ../../../docs/problems/" not in text
+
+
+# ---------------------------------------------------------------------------
+# Solution stub case defaults (no-cases fallback, non-degenerate preference)
+# ---------------------------------------------------------------------------
+
+
+def test_render_solution_stub_with_no_cases_guards_the_debug_block_behind_the_guidance():
+    entry = {"slug": "amazon-empty", "title": "T", "url": "https://x", "companies": ["Amazon"], "updated": "2026-09-19"}
+    text = gen.render_solution_stub(entry, None, gen.unparsed_page_cases("amazon-empty"), "")
+    assert "CASE = None" in text
+    assert (
+        "no cases authored yet; add cases to cases.json or cases_full.json,"
+        " then set CASE to an id" in text
+    )
+    assert "if CASE is None:" in text
+    assert "pick_case(__file__, CASE)" in text
+    assert 'CASE = "example_1"' not in text
+    ast.parse(text)
+
+
+def test_no_cases_stub_runs_the_debug_block_once_cases_and_case_are_authored(tmp_path):
+    entry = {"slug": "amazon-debug", "title": "T", "url": "https://x", "companies": ["Amazon"], "updated": "2026-09-19"}
+    text = gen.render_solution_stub(entry, None, gen.unparsed_page_cases("amazon-debug"), "")
+    (tmp_path / "solution.py").write_text(
+        text.replace("CASE = None", 'CASE = "example_1"').replace(
+            "raise NotSolved", "return sum(args)"
+        ),
+        encoding="utf-8",
+    )
+    (tmp_path / "harness.py").write_text(HARNESS_PATH.read_text(encoding="utf-8"), encoding="utf-8")
+    (tmp_path / "cases.json").write_text("[]", encoding="utf-8")
+    (tmp_path / "cases_full.json").write_text(
+        json.dumps([{"id": "example_1", "args": [1, 2], "expected": 3}]), encoding="utf-8"
+    )
+
+    completed = subprocess.run(
+        [sys.executable, "solution.py"], cwd=tmp_path, capture_output=True, text=True, timeout=60
+    )
+
+    assert completed.returncode == 0, completed.stderr
+    assert "no cases authored yet" not in completed.stdout
+    assert "case example_1: args = [1, 2]" in completed.stdout
+    assert "expected: 3" in completed.stdout
+    assert "got:      3" in completed.stdout
+
+
+def test_render_solution_stub_default_case_prefers_first_non_degenerate_case():
+    entry = {"slug": "amazon-degenerate", "title": "T", "url": "https://x", "companies": ["Amazon"], "updated": "2026-09-19"}
+    cases = [
+        {"id": "example_1", "args": [[]], "expected": 0},
+        {"id": "example_2", "args": [[3, 1, 2]], "expected": 2},
+    ]
+    text = gen.render_solution_stub(entry, None, gen.CasesResult("solve", cases, None), "")
+    assert 'CASE = "example_2"' in text
+    assert 'CASE = "example_1"' not in text
+
+
+def test_pick_default_case_id_falls_back_to_first_when_every_case_is_degenerate():
+    cases = [
+        {"id": "example_1", "args": [[]], "expected": 0},
+        {"id": "example_2", "args": [""], "expected": 0},
+        {"id": "example_3", "args": [0], "expected": 0},
+    ]
+    assert gen.pick_default_case_id(cases) == "example_1"
+
+
+def test_pick_default_case_id_returns_none_without_cases():
+    assert gen.pick_default_case_id([]) is None
 
 
 def test_render_index_names_practice_directory_as_inline_code():

@@ -1,1 +1,104 @@
-[]
+[
+  {
+    "id": "example_1",
+    "operations": [
+      "MedianFinder",
+      "add",
+      "median",
+      "add",
+      "median",
+      "add",
+      "median"
+    ],
+    "arguments": [
+      [],
+      [
+        5
+      ],
+      [],
+      [
+        1
+      ],
+      [],
+      [
+        9
+      ],
+      []
+    ],
+    "expected": [
+      null,
+      null,
+      5.0,
+      null,
+      3.0,
+      null,
+      5.0
+    ]
+  },
+  {
+    "id": "example_2_negative_duplicate",
+    "operations": [
+      "MedianFinder",
+      "add",
+      "add",
+      "median",
+      "add",
+      "median",
+      "add",
+      "median"
+    ],
+    "arguments": [
+      [],
+      [
+        -4
+      ],
+      [
+        8
+      ],
+      [],
+      [
+        8
+      ],
+      [],
+      [
+        20
+      ],
+      []
+    ],
+    "expected": [
+      null,
+      null,
+      null,
+      2.0,
+      null,
+      8.0,
+      null,
+      8.0
+    ]
+  },
+  {
+    "id": "example_3_large_values",
+    "operations": [
+      "MedianFinder",
+      "add",
+      "add",
+      "median"
+    ],
+    "arguments": [
+      [],
+      [
+        1000000000
+      ],
+      [
+        999999999
+      ],
+      []
+    ],
+    "expected": [
+      null,
+      null,
+      null,
+      999999999.5
+    ]
+  }
+]

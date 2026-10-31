@@ -4,10 +4,25 @@
 
 Amazon’s engineering team is developing a tool designed to minimize the size of an n x n grid named matrix, based on a compression ratio described by the array limit. Their challenge is to compute the highest possible sum of exactly x elements from the matrix while adhering to the following conditions:
 
+For every row i (where 0 ≤ i < n), the count of elements picked from that row must not surpass limit[i].
 
+If it turns out impossible to pick exactly x elements, the function should return -1.
 
+Your task is to assist by computing the largest possible sum achievable under these restrictions.
 
-For every row i (where 0 ≤ i
+Input Parameters:
+
+limit[n]: A list where each entry specifies the maximum count of numbers allowed to be chosen from the respective row in matrix.
+
+matrix[n][n]: A two-dimensional square grid containing integer values.
+
+x: The exact total count of elements that need to be picked.
+
+Returns:
+
+A long integer representing the maximum achievable sum when choosing exactly x elements following the constraints.
+
+Return -1 if selecting exactly x elements is not feasible.
 
 ## Examples
 

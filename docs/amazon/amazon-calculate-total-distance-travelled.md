@@ -6,8 +6,6 @@ Giving position of trucks and they are always moving towards end station as it i
 Given a second array indicating extra gas station position in 1-indexing. Calculate the total distance 
 travelled by all the trucks.
 
-
-
 Example: Given trucks at positions [0,2,5,9,12,18] and extra gas stations at positions 
 [[2,5],[3]], the answer to be returned is [12,18]. The solution can be 
 solved in O(n^2) time complexity with one for loop for traversing gas station array and 

@@ -6,8 +6,6 @@ Data analysts at Amazon are analyzing a data set of n strings in the array
 dataSet[], each consisting of lowercase English letters. Each character in a 
 string corresponds to a particular feature.
 
-
-
 The information gain obtained by training a model with two strings, dataSet[i] 
 and dataSet[j], is the difference between the lengths of the strings i.e., 
 |len(dataSet[i]) - len(dataSet[j])|. To avoid too many overlapping features, two 
@@ -16,8 +14,6 @@ given threshold, max_common_features. The number of common features here is equa
 to the number of common characters between the two strings. For example, "abc" and "bcd" have 
 2 common features 'b' and 'c'. While "aa" and "aaa" have two common features, the "a" two 
 'a' characters.
-
-
 
 Given dataSet and max_common_features, determine the maximum 
 information gain possible.

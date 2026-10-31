@@ -2,7 +2,7 @@
 
 Write-up & approaches: ../../../docs/amazon/get-mean-rank-count.md
 
-Special thanks: precurewalker contributed this problem.
+Amazon Academy recently organized a scholaship test on its platform.
 
   uv run python amazon/get-mean-rank-count/solution.py   # debug one case (see CASE below)
   uv run pytest amazon/get-mean-rank-count/              # run the test sets

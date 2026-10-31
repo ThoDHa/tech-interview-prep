@@ -4,19 +4,11 @@
 
 Given a sequence of n natural numbers a_1, a_2, ..., a_n, you are to assign a sign (+ or -) to each a_i such that the cumulative sum of the signed a_1 + a_2 + ... + a_i remains positive for each i in 1 <= i <= n. Your task is to maximize the number of assigned negative signs, while still satisfying the above condition.
 
-
-
 Input
-
-
 
 The input consists of a single line containing n natural numbers separated by spaces, representing the sequence a_1, a_2, ..., a_n.
 
-
-
 Output
-
-
 
 Output a single integer, the maximum number of negative signs that can be assigned to the elements of the sequence, while ensuring that all partial cumulative sums a_1 + a_2 + ... + a_i are positive.
 

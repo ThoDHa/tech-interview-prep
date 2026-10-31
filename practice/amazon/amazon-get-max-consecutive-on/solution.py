@@ -2,7 +2,7 @@
 
 Write-up & approaches: ../../../docs/amazon/amazon-get-max-consecutive-on.md
 
-Special thanks: Barry contributed this problem.
+Amazon operates a network of n machines. Some are currently inactive, while others are active. The engineers managing the infrastructure have access to a specific procedure that allows toggling the st
 
   uv run python amazon/amazon-get-max-consecutive-on/solution.py   # debug one case (see CASE below)
   uv run pytest amazon/amazon-get-max-consecutive-on/              # run the test sets

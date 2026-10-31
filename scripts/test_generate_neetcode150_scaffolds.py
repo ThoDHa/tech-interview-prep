@@ -10,6 +10,8 @@ problem, a premium problem carrying LaTeX, and a null payload). Run with:
 import ast
 import json
 import re
+import subprocess
+import sys
 from pathlib import Path
 
 import pytest
@@ -19,6 +21,7 @@ import generate_neetcode150_scaffolds as gen
 SCRIPTS_DIR = Path(__file__).resolve().parent
 MANIFEST_PATH = SCRIPTS_DIR / "neetcode150_manifest.json"
 FIXTURES_DIR = SCRIPTS_DIR / "fixtures"
+HARNESS_PATH = SCRIPTS_DIR.parent / "practice" / "harness.py"
 
 CLEAN_METADATA = json.loads((FIXTURES_DIR / "neetcode_metadata_clean.json").read_text(encoding="utf-8"))
 PREMIUM_METADATA = json.loads((FIXTURES_DIR / "neetcode_metadata_premium.json").read_text(encoding="utf-8"))
@@ -838,6 +841,71 @@ def test_render_solution_stub_avoids_python_keywords_in_signature():
     assert "def " in text
     module = ast.parse(text)
     assert module is not None
+
+
+def test_render_solution_stub_with_no_cases_guards_the_debug_block_behind_the_guidance():
+    text = gen.render_solution_stub(writeup_entry(), None, gen.CasesResult("solve", [], "no cases for group_anagrams"))
+    assert "CASE = None" in text
+    assert (
+        "no cases authored yet; add cases to cases.json or cases_full.json,"
+        " then set CASE to an id" in text
+    )
+    assert "if CASE is None:" in text
+    assert "pick_case(__file__, CASE)" in text
+    assert 'CASE = "example_1"' not in text
+    ast.parse(text)
+
+
+def test_no_cases_stub_runs_the_debug_block_once_cases_and_case_are_authored(tmp_path):
+    text = gen.render_solution_stub(writeup_entry(), None, gen.CasesResult("solve", [], "no cases for group_anagrams"))
+    (tmp_path / "solution.py").write_text(
+        text.replace("CASE = None", 'CASE = "example_1"').replace(
+            "raise NotSolved", "return sum(args)"
+        ),
+        encoding="utf-8",
+    )
+    (tmp_path / "harness.py").write_text(HARNESS_PATH.read_text(encoding="utf-8"), encoding="utf-8")
+    (tmp_path / "cases.json").write_text("[]", encoding="utf-8")
+    (tmp_path / "cases_full.json").write_text(
+        json.dumps([{"id": "example_1", "args": [1, 2], "expected": 3}]), encoding="utf-8"
+    )
+
+    completed = subprocess.run(
+        [sys.executable, "solution.py"], cwd=tmp_path, capture_output=True, text=True, timeout=60
+    )
+
+    assert completed.returncode == 0, completed.stderr
+    assert "no cases authored yet" not in completed.stdout
+    assert "case example_1: args = [1, 2]" in completed.stdout
+    assert "expected: 3" in completed.stdout
+    assert "got:      3" in completed.stdout
+
+
+def test_render_solution_stub_default_case_prefers_first_non_degenerate_case():
+    cases = gen.CasesResult(
+        "groupAnagrams",
+        [
+            {"id": "example_1", "args": [[]], "expected": 0},
+            {"id": "example_2", "args": [["a", "b"]], "expected": 2},
+        ],
+        None,
+    )
+    text = gen.render_solution_stub(writeup_entry(), None, cases)
+    assert 'CASE = "example_2"' in text
+    assert 'CASE = "example_1"' not in text
+
+
+def test_pick_default_case_id_falls_back_to_first_when_every_case_is_degenerate():
+    cases = [
+        {"id": "example_1", "args": [[]], "expected": 0},
+        {"id": "example_2", "args": [""], "expected": 0},
+        {"id": "example_3", "args": [0], "expected": 0},
+    ]
+    assert gen.pick_default_case_id(cases) == "example_1"
+
+
+def test_pick_default_case_id_returns_none_without_cases():
+    assert gen.pick_default_case_id([]) is None
 
 
 def test_render_cases_file_always_writes_json():

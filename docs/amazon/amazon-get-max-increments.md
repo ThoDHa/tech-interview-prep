@@ -4,11 +4,7 @@
 
 IMDB, an Amazon-owned company, is a widely used platform for discovering scores of films and television series.
 
-
-
 Researchers are examining audience preferences by studying sequences of film scores. One specific metric they focus on is counting how many positions exist where a score is directly followed by a higher score. Their goal is to determine the largest possible count of such positions by rearranging the scores in the most efficient manner.
-
-
 
 Given an array scores consisting of n integers, compute the highest possible number of indices i such that scores[i] < scores[i + 1] after optimally reordering the array.
 

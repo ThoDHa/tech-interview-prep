@@ -1,0 +1,80 @@
+[
+  {
+    "id": "example_1",
+    "args": [
+      [
+        "bread",
+        "sandwich"
+      ],
+      [
+        [
+          "flour",
+          "water"
+        ],
+        [
+          "bread",
+          "ham"
+        ]
+      ],
+      [
+        "flour",
+        "water",
+        "ham"
+      ]
+    ],
+    "expected": [
+      "bread",
+      "sandwich"
+    ]
+  },
+  {
+    "id": "example_2",
+    "args": [
+      [
+        "cake",
+        "icing",
+        "tea"
+      ],
+      [
+        [
+          "flour",
+          "icing"
+        ],
+        [
+          "sugar"
+        ],
+        [
+          "water"
+        ]
+      ],
+      [
+        "sugar",
+        "water"
+      ]
+    ],
+    "expected": [
+      "icing",
+      "tea"
+    ]
+  },
+  {
+    "id": "example_3",
+    "args": [
+      [
+        "meal",
+        "base"
+      ],
+      [
+        [
+          "base"
+        ],
+        []
+      ],
+      []
+    ],
+    "expected": [
+      "meal",
+      "base"
+    ]
+  }
+]

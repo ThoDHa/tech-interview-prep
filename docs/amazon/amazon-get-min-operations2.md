@@ -2,31 +2,25 @@
 
 **Medium** | **NN minutes** | **Sorting, Greedy**
 
+🍊 Following is the original prompt - 🥑
+
 Devs at AMZ are working on a new sorting algorithm for points on the x-axis of the coordinate system.
-
-
 
 There are n points. The i^th point initially has a weight of weight[i] and is located at position i on the x-axis.
 In a single position, the i^th point can be moved to the right by a distance of dist[i].
 
-
-
 Given weight and dist, find the minimum number of operations required to sort the points by their weights.
 
-
-
-Function Description
-
-
+Function Description 🥑
 
 Complete the function getMinOperations2 in the editor - 
 
-
-
 GetMinOperations2 has the following arguments - 
 
+int weights[n]: the weights of the points
+int dist[n]: the distances the points can move
 
-int weights[n]: the weights of the pointsint dist[n]: the distances the points can moveReturns 
+Returns 
 long int: the min num of operations to sort the points. Here long int represents a 64 bit integer. :)
 
 ## Examples

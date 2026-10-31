@@ -1,0 +1,28 @@
+[
+  {
+    "id": "example_1",
+    "args": [
+      [
+        [
+          "ann",
+          "bob"
+        ],
+        [
+          "ann",
+          "cat"
+        ],
+        [
+          "bob",
+          "dan"
+        ],
+        [
+          "cat",
+          "eve"
+        ]
+      ],
+      "dan",
+      "eve"
+    ],
+    "expected": true
+  }
+]

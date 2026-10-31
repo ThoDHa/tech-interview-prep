@@ -59,7 +59,7 @@ The unified LeetCode problem set across the [Grind 75](https://www.techinterview
 | [Implement Queue using Stacks](implement_queue_using_stacks.md) | Easy | Stack | [LeetCode](https://leetcode.com/problems/implement-queue-using-stacks/) | [Grind 75](https://www.techinterviewhandbook.org/grind75?order=grind75-order) | 20 minutes |
 | [First Bad Version](first_bad_version.md) | Easy | Binary Search | [LeetCode](https://leetcode.com/problems/first-bad-version/) | [Grind 75](https://www.techinterviewhandbook.org/grind75?order=grind75-order) | 20 minutes |
 | [Ransom Note](ransom_note.md) | Easy | Hash Table | [LeetCode](https://leetcode.com/problems/ransom-note/) | [Grind 75](https://www.techinterviewhandbook.org/grind75?order=grind75-order) | 15 minutes |
-| [Climbing Stairs](climbing_stairs.md) | Easy | Dynamic Programming | [LeetCode](https://leetcode.com/problems/climbing-stairs/) | [Grind 75](https://www.techinterviewhandbook.org/grind75?order=grind75-order) + [NeetCode 150](https://neetcode.io/practice/practice/neetcode150) | 20 minutes |
+| [Climbing Stairs](climbing_stairs.md) | Easy | Dynamic Programming | [LeetCode](https://leetcode.com/problems/climbing-stairs/) | [Grind 75](https://www.techinterviewhandbook.org/grind75?order=grind75-order) + [NeetCode 150](https://neetcode.io/practice/practice/neetcode150) · Amazon OA | 20 minutes |
 | [Min Cost Climbing Stairs](min_cost_climbing_stairs.md) | Easy | Dynamic Programming | [LeetCode](https://leetcode.com/problems/min-cost-climbing-stairs/) | [NeetCode 150](https://neetcode.io/practice/practice/neetcode150) | 15 minutes |
 | [House Robber](house_robber.md) | Medium | Dynamic Programming | [LeetCode](https://leetcode.com/problems/house-robber/) | [NeetCode 150](https://neetcode.io/practice/practice/neetcode150) · Amazon OA | 25 minutes |
 | [House Robber II](house_robber_ii.md) | Medium | Dynamic Programming | [LeetCode](https://leetcode.com/problems/house-robber-ii/) | [NeetCode 150](https://neetcode.io/practice/practice/neetcode150) | 25 minutes |
@@ -199,4 +199,4 @@ The three problem banks are curated elsewhere; this site adds the write-ups, pat
 
 ## Study Guide and Practice
 
-The [home page](../index.md) carries the study-guide front door: the [pattern intuition guides](../patterns/index.md) explain the *why* behind each recurring algorithm pattern. The `practice/` directory is a `pytest` workspace for solving the problems yourself; see `practice/README.md` for setup and the practice loop.
+The [home page](../index.md) carries the study-guide front door: the [pattern intuition guides](../patterns/index.md) explain the *why* behind each recurring algorithm pattern. The `practice/` directory is a `pytest` workspace for solving the problems yourself; see `practice/README.md` for setup and the practice loop, and [The Practice Workspace](../interview-prep/practice_workspace.md) covers the same ground on the site.

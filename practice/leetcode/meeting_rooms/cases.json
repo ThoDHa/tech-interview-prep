@@ -1,1 +1,71 @@
-[]
+[
+  {
+    "id": "empty_schedule",
+    "operations": [
+      "Solution",
+      "canAttendMeetings"
+    ],
+    "arguments": [
+      [],
+      [
+        []
+      ]
+    ],
+    "expected": [
+      null,
+      true
+    ]
+  },
+  {
+    "id": "single_meeting",
+    "operations": [
+      "Solution",
+      "canAttendMeetings"
+    ],
+    "arguments": [
+      [],
+      [
+        [
+          [
+            5,
+            10
+          ]
+        ]
+      ]
+    ],
+    "expected": [
+      null,
+      true
+    ]
+  },
+  {
+    "id": "classic_overlap",
+    "operations": [
+      "Solution",
+      "canAttendMeetings"
+    ],
+    "arguments": [
+      [],
+      [
+        [
+          [
+            0,
+            30
+          ],
+          [
+            5,
+            10
+          ],
+          [
+            15,
+            20
+          ]
+        ]
+      ]
+    ],
+    "expected": [
+      null,
+      false
+    ]
+  }
+]

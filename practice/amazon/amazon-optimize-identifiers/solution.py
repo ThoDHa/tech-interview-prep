@@ -2,7 +2,7 @@
 
 Write-up & approaches: ../../../docs/amazon/amazon-optimize-identifiers.md
 
-Special thanks: 𓇼 ⋆.˚Manyy Manyyy thanks to Nachos and spike!𓆝 𓆡⋆.˚ 𓇼
+In an Amazon inventory management, an operations analyst is dealing with a set of initial product identifiers represented by strings. The type of a product identifier is determined by the first and la
 
   uv run python amazon/amazon-optimize-identifiers/solution.py   # debug one case (see CASE below)
   uv run pytest amazon/amazon-optimize-identifiers/              # run the test sets

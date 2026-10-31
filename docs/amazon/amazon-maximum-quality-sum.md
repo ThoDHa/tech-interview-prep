@@ -4,15 +4,12 @@
 
 Amazon's AWS provides fast and efficient server solutions. The developers want to stress-test the quality of the servers' channels. They must ensure the following:
 
+Each of the packets must be sent via a single channel.
+Each of the channels must transfer at least one packet.
 
-Each of the packets must be sent via a single channel.Each of the channels must transfer at least one packet.
 The quality of the transfer for a channel is defined by the median of the sizes of all the data packets sent through that channel.
 
-
-
 Note: The median of an array is the middle element if the array is sorted in non-decreasing order. If the number of elements in the array is even, the median is the average of the two middle elements.
-
-
 
 Find the maximum possible sum of the qualities of all channels. If the answer is a floating-point value, round it to the next higher integer.
 
@@ -25,8 +22,6 @@ Find the maximum possible sum of the qualities of all channels. If the answer is
 **Output:** `8`
 
 **Explanation:** At least one packet has to go through each of the 2 channels. One maximal solution is to transfer packets {1, 2, 3, 4) through channel 1 and packet {5} through channel 2.
-
-
 
 The quality of transfer for channel 1 is (2 + 3)/2 = 2.5 and that of channel 2 is 5. Their sum is 2.5 + 5 = 7.5 which rounds up to 8.
 

@@ -1,1 +1,63 @@
-[]
+[
+  {
+    "id": "neetcode_example",
+    "args": [
+      [
+        "act",
+        "pots",
+        "tops",
+        "cat",
+        "stop",
+        "hat"
+      ]
+    ],
+    "expected": [
+      [
+        "act",
+        "cat"
+      ],
+      [
+        "hat"
+      ],
+      [
+        "pots",
+        "stop",
+        "tops"
+      ]
+    ]
+  },
+  {
+    "id": "single_word",
+    "args": [
+      [
+        "listen"
+      ]
+    ],
+    "expected": [
+      [
+        "listen"
+      ]
+    ]
+  },
+  {
+    "id": "all_distinct",
+    "args": [
+      [
+        "abc",
+        "def",
+        "ghi"
+      ]
+    ],
+    "expected": [
+      [
+        "abc"
+      ],
+      [
+        "def"
+      ],
+      [
+        "ghi"
+      ]
+    ]
+  }
+]

@@ -2,7 +2,7 @@
 
 Write-up & approaches: ../../../docs/amazon/amazon-get-smaller-items.md
 
-Special thanks: 🐳 Manyyy thanks to the GG of Error-Free Excellence 👉 ✨ spike ✨! 🐝
+An Amazon fulfillment center receives a large number of orders each day. Each order is associated with a range of prices of items that need to be picked from the warehouse and packed into a box. There
 
   uv run python amazon/amazon-get-smaller-items/solution.py   # debug one case (see CASE below)
   uv run pytest amazon/amazon-get-smaller-items/              # run the test sets

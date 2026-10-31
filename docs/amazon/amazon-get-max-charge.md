@@ -4,15 +4,9 @@
 
 A team of engineers at Amazon, using advanced simulation tools, are analyzing a series of interconnected systems, where each system has a charge value represented by charge[i] (which can be positive, negative, or zero).
 
-
-
 The engineers have a specialized tool that allows them to perform the following operation: Select a system and remove it, causing the neighboring systems to automatically merge and combine their charge values. If the removed system has neighboring systems with charges x and y directly to its left and right, they will combine to form a new system with charge x + y. No combination will take place if the system is the leftmost or rightmost in the array.
 
-
-
 Since this process is computationally expensive, the engineers will simulate the operation using Amazon's advanced tools.
-
-
 
 For example, if the system charges are [-3, 1, 4, -1, 5, -9], using the tool on the 4th system (index 3) will result in the new sequence [-3, 1, 9, -9], as the charges from the 3rd and 5th systems also combine to 4 + 5 = 9. If they then use the tool on the 1st system in this new sequence, it will become [1, 9, -9].
 

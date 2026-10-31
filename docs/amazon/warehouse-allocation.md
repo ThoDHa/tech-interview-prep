@@ -6,7 +6,10 @@ Amazon has a warehouse that stores piles of boxes containing goods to be shipped
 
 To achieve an even distribution of boxes, the caretaker can perform the following operation any number of times (possibly zero):
 
-Choose two distinct piles i and j such that boxes[i] > 0.Remove one box from pile i and place it on pile j (increment boxes[j] by 1 and decrement boxes[i] by 1).The caretaker wishes to minimize the difference between the maximum and the minimum number of boxes among the piles. Call this minimum achievable difference d.
+Choose two distinct piles i and j such that boxes[i] > 0.
+Remove one box from pile i and place it on pile j (increment boxes[j] by 1 and decrement boxes[i] by 1).
+
+The caretaker wishes to minimize the difference between the maximum and the minimum number of boxes among the piles. Call this minimum achievable difference d.
 
 Complete the function findMinimumOperations, which returns the minimum number of operations required to reach a configuration whose difference between the maximum and minimum number of boxes equals d.
 

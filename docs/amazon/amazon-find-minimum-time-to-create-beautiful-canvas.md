@@ -4,23 +4,13 @@
 
 Amazon is introducing an innovative smart canvas display for personalized home decor. The canvas is initially painted white, featuring n rows and m columns, waiting to be transformed into a beautiful masterpiece. Each minute, the canvas undergoes a unique coloring process as specified by the user.
 
-
-
 A beautiful canvas is defined by the presence of a square with a side length of k where all cells within the square are elegantly colored.
-
-
 
 Determine the minimum time required for the canvas to achieve its beauty.
 
-
-
 Formally, Given n and m that denote the number of rows and columns of the canvas respectively, k denotes the size of the square, and a 2D array paint of dimensions (n * m) rows and 2 columns, where each entry (paint[i][0], paint[i][1]) represents the coordinates of a cell to be painted black during the ith minute.
 
-
-
 Note that each cell is painted only once during this transformation.
-
-
 
 Find the minimum time (in minutes) after which the canvas becomes beautiful.
 

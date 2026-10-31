@@ -6,7 +6,10 @@ A coding challenge has n participants. Participant i earned score points[i]. The
 
 Assign one prize value to each participant using the available prize multiset such that:
 
-Participants with the same score receive the same prize value.Participants with higher scores receive strictly higher prize values than participants with lower scores.If multiple fair distributions are possible, return the lexicographically smallest distribution in the original participant order.
+Participants with the same score receive the same prize value.
+Participants with higher scores receive strictly higher prize values than participants with lower scores.
+
+If multiple fair distributions are possible, return the lexicographically smallest distribution in the original participant order.
 
 ## Examples
 

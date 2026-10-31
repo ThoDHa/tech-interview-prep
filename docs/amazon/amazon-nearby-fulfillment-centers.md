@@ -8,7 +8,11 @@ The array inventory represents a map from center ID to available quantity: each 
 
 Return every center ID that satisfies all of these conditions:
 
-the center is not destination;its inventory quantity is greater than 0;its shortest-path distance from destination is at most maxStep edges.Return the qualifying IDs in ascending numerical order. A center in a disconnected component does not qualify.
+the center is not destination;
+its inventory quantity is greater than 0;
+its shortest-path distance from destination is at most maxStep edges.
+
+Return the qualifying IDs in ascending numerical order. A center in a disconnected component does not qualify.
 
 ## Examples
 

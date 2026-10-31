@@ -2,7 +2,7 @@
 
 Write-up & approaches: ../../../docs/amazon/amazon-get-special-string.md
 
-Special thanks: Agnes and spike contributed this problem.
+Developers at Amazon are working on a text generation utility for one of their new products.
 
   uv run python amazon/amazon-get-special-string/solution.py   # debug one case (see CASE below)
   uv run pytest amazon/amazon-get-special-string/              # run the test sets

@@ -1,1 +1,85 @@
-[]
+[
+  {
+    "id": "example_1",
+    "operations": [
+      "MiddleStack",
+      "push",
+      "push",
+      "push",
+      "middle",
+      "top",
+      "pop",
+      "middle"
+    ],
+    "arguments": [
+      [],
+      [
+        1
+      ],
+      [
+        2
+      ],
+      [
+        3
+      ],
+      [],
+      [],
+      [],
+      []
+    ],
+    "expected": [
+      null,
+      null,
+      null,
+      null,
+      2,
+      3,
+      3,
+      1
+    ]
+  },
+  {
+    "id": "example_2_empty_sentinels",
+    "operations": [
+      "MiddleStack",
+      "top",
+      "middle",
+      "pop"
+    ],
+    "arguments": [
+      [],
+      [],
+      [],
+      []
+    ],
+    "expected": [
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "id": "example_3_single_element",
+    "operations": [
+      "MiddleStack",
+      "push",
+      "middle",
+      "pop"
+    ],
+    "arguments": [
+      [],
+      [
+        -4
+      ],
+      [],
+      []
+    ],
+    "expected": [
+      null,
+      null,
+      -4,
+      -4
+    ]
+  }
+]

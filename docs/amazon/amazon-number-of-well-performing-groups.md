@@ -4,15 +4,9 @@
 
 Amazon aims to review its network of m servers deployed across different regions globally. The workloads on these servers are stored in the array workloads. A collection of servers is labeled as performing optimally when the difference between the highest and lowest workloads in that collection equals difference.
 
-
-
 A collection is termed a consecutive group if there are two positions x and y such that 1 ≤ x ≤ y ≤ m, where all servers from position x to y are included in the group, with none from outside.
 
-
-
 A group of servers is called contiguous servers when there exists x, y such that 1 ≤ x ≤ y ≤ m and all the servers between i and j are in the group and no other should be in the group.
-
-
 
 Given the integer array workloads and integer difference, determine how many consecutive groups of servers meet the optimal performance criteria.
 
