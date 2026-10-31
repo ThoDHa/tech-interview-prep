@@ -67,14 +67,23 @@ all three after touching a generator, its data sources, or generated output.
   aborts the run. `cases_full.json` is never generated.
 - `scripts/generate_amazon_oa_scaffolds.py` emits the Amazon scaffolds under
   `docs/amazon/` and `practice/amazon/`, and owns
-  `docs/amazon/index.md` whole-file. A write-up rendered entirely from the
-  manifest (a dead FastPrep page whose scaffolds are placeholder-only) is
-  byte-compared, never hand-edited; the bank currently has none, since the
-  dead FastPrep rows are excluded from the manifest outright. For every
-  other Amazon write-up, the generator pins the `# [Title](url)` header
-  line byte-exact and fragment-pins the leading docstring lines of
-  `solution.py` and `test_<slug>.py` under `practice/amazon/<slug>/`; the
-  write-up body is hand-editable.
+  `docs/amazon/index.md` whole-file. The committed manifest classifies each
+  slug (`parse_status`); the bank pages only enrich it. Placeholder
+  write-ups stay generator-owned and keep refreshing. The four
+  `page-unparseable` entries are dead FastPrep pages whose write-ups are
+  death-preserved archives: emission keeps their archived sections and
+  pins only the generator-owned `## Solutions` block. An authored write-up
+  (placeholder marker gone) is preserved untouched; the generator still
+  pins its `# [Title](url)` header line byte-exact, and the body is
+  hand-editable. An authored-cases folder (a non-empty `cases.json` under a
+  committed status other than `parsed-with-cases`) is hand-owned: emission
+  leaves its stub, `cases.json`, and test module untouched, and `--check`
+  pins only that those three files exist. A refresh whose live parse meets
+  such a folder anyway still overwrites it, and the run log names the slug
+  under `practice cases conflicted`. For every remaining folder, the
+  generator pins the `# [Title](url)` header line byte-exact on the
+  write-up and fragment-pins the leading docstring lines of `solution.py`
+  and `test_<slug>.py` under `practice/amazon/<slug>/`.
 - `scripts/generate_index_tables.py` owns the marker-bounded sections of
   `docs/leetcode/index.md` (`unified-leetcode`, `sources`) and the `Leetcode`
   and `Amazon` nav sections in `mkdocs.yml`.
