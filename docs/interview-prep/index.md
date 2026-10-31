@@ -14,10 +14,8 @@ Eight steps, in the order you do them. Each maps onto something in this repo.
    hours per week you can honestly give. The Grind 75 track takes roughly 32 hours at one clean pass per problem; nobody passes everything cleanly, so plan for two to three times that. See [Study Plan and Schedule](study_plan.md).
 3. **Learn the prerequisites, then study and practice each topic together.**
    Read the [Foundations](../foundations/index.md) first (about an hour), then for each new topic: read the [pattern guide](../patterns/index.md), solve the problems that use it, and only then move on.
-4. **Work the problems in study order.** For each one: read the problem page,
-   open its linked pattern guide, attempt it yourself in the `practice/` workspace, then compare with the solution ladder, baseline first.
-5. **Review what fades.** Rate every solve with the practice tracker
-   (`progress.py rate`) and clear the `due` review queue weekly. Spaced repetition is what turns "I did that problem once" into a skill.
+4. **Work the problems in study order.** For each one: read the problem page, open its linked pattern guide, attempt it yourself in the [Practice Workspace](practice_workspace.md), then compare with the solution ladder, baseline first.
+5. **Review what fades.** Rate every solve with the [practice tracker](practice_workspace.md#track-your-progress) (`progress.py rate`) and clear the `due` review queue weekly. Spaced repetition is what turns "I did that problem once" into a skill.
 6. **Prepare the non-coding rounds.** A 90-second self-introduction, a handful
    of STAR stories, and real questions to ask your interviewer. See [Behavioral Interviews](behavioral.md).
 7. **Rehearse under interview conditions.** Mock interviews, starting when you

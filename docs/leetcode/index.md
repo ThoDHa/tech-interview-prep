@@ -199,4 +199,4 @@ The three problem banks are curated elsewhere; this site adds the write-ups, pat
 
 ## Study Guide and Practice
 
-The [home page](../index.md) carries the study-guide front door: the [pattern intuition guides](../patterns/index.md) explain the *why* behind each recurring algorithm pattern. The `practice/` directory is a `pytest` workspace for solving the problems yourself; see `practice/README.md` for setup and the practice loop.
+The [home page](../index.md) carries the study-guide front door: the [pattern intuition guides](../patterns/index.md) explain the *why* behind each recurring algorithm pattern. The `practice/` directory is a `pytest` workspace for solving the problems yourself; see `practice/README.md` for setup and the practice loop, and [The Practice Workspace](../interview-prep/practice_workspace.md) covers the same ground on the site.
