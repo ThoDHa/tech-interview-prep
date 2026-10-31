@@ -1,1 +1,104 @@
-[]
+[
+  {
+    "id": "example_1",
+    "operations": [
+      "FreqStack",
+      "push",
+      "push",
+      "push",
+      "push",
+      "push",
+      "push",
+      "pop",
+      "pop",
+      "pop",
+      "pop"
+    ],
+    "arguments": [
+      [],
+      [
+        5
+      ],
+      [
+        7
+      ],
+      [
+        5
+      ],
+      [
+        7
+      ],
+      [
+        4
+      ],
+      [
+        5
+      ],
+      [],
+      [],
+      [],
+      []
+    ],
+    "expected": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      5,
+      7,
+      5,
+      4
+    ]
+  },
+  {
+    "id": "example_2_recency_tie",
+    "operations": [
+      "FreqStack",
+      "push",
+      "push",
+      "pop",
+      "pop"
+    ],
+    "arguments": [
+      [],
+      [
+        1
+      ],
+      [
+        2
+      ],
+      [],
+      []
+    ],
+    "expected": [
+      null,
+      null,
+      null,
+      2,
+      1
+    ]
+  },
+  {
+    "id": "single_push_pop",
+    "operations": [
+      "FreqStack",
+      "push",
+      "pop"
+    ],
+    "arguments": [
+      [],
+      [
+        9
+      ],
+      []
+    ],
+    "expected": [
+      null,
+      null,
+      9
+    ]
+  }
+]

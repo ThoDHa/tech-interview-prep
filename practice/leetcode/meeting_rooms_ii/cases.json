@@ -1,1 +1,71 @@
-[]
+[
+  {
+    "id": "empty_schedule",
+    "operations": [
+      "Solution",
+      "minMeetingRooms"
+    ],
+    "arguments": [
+      [],
+      [
+        []
+      ]
+    ],
+    "expected": [
+      null,
+      0
+    ]
+  },
+  {
+    "id": "single_meeting",
+    "operations": [
+      "Solution",
+      "minMeetingRooms"
+    ],
+    "arguments": [
+      [],
+      [
+        [
+          [
+            5,
+            10
+          ]
+        ]
+      ]
+    ],
+    "expected": [
+      null,
+      1
+    ]
+  },
+  {
+    "id": "classic_two_rooms",
+    "operations": [
+      "Solution",
+      "minMeetingRooms"
+    ],
+    "arguments": [
+      [],
+      [
+        [
+          [
+            0,
+            30
+          ],
+          [
+            5,
+            10
+          ],
+          [
+            15,
+            20
+          ]
+        ]
+      ]
+    ],
+    "expected": [
+      null,
+      2
+    ]
+  }
+]

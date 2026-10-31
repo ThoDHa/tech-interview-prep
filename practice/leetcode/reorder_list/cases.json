@@ -1,1 +1,41 @@
-[]
+[
+  {
+    "id": "single_node",
+    "args": [
+      [
+        7
+      ]
+    ],
+    "expected": [
+      7
+    ]
+  },
+  {
+    "id": "two_nodes",
+    "args": [
+      [
+        1,
+        2
+      ]
+    ],
+    "expected": [
+      1,
+      2
+    ]
+  },
+  {
+    "id": "three_nodes",
+    "args": [
+      [
+        1,
+        2,
+        3
+      ]
+    ],
+    "expected": [
+      1,
+      3,
+      2
+    ]
+  }
+]

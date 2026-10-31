@@ -1,1 +1,63 @@
-[]
+[
+  {
+    "id": "empty_search_literal",
+    "operations": [
+      "__init__",
+      "search"
+    ],
+    "arguments": [
+      [],
+      [
+        "apple"
+      ]
+    ],
+    "expected": [
+      null,
+      false
+    ]
+  },
+  {
+    "id": "empty_search_wildcard",
+    "operations": [
+      "__init__",
+      "search"
+    ],
+    "arguments": [
+      [],
+      [
+        "."
+      ]
+    ],
+    "expected": [
+      null,
+      false
+    ]
+  },
+  {
+    "id": "single_word_hit_and_miss",
+    "operations": [
+      "__init__",
+      "addWord",
+      "search",
+      "search"
+    ],
+    "arguments": [
+      [],
+      [
+        "bad"
+      ],
+      [
+        "bad"
+      ],
+      [
+        "dad"
+      ]
+    ],
+    "expected": [
+      null,
+      null,
+      true,
+      false
+    ]
+  }
+]

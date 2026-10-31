@@ -1,1 +1,50 @@
-[]
+[
+  {
+    "id": "classic_tie_free",
+    "args": [
+      [
+        1,
+        1,
+        1,
+        2,
+        2,
+        3
+      ],
+      2
+    ],
+    "expected": [
+      2,
+      3
+    ]
+  },
+  {
+    "id": "single_element",
+    "args": [
+      [
+        1
+      ],
+      1
+    ],
+    "expected": [
+      1
+    ]
+  },
+  {
+    "id": "neetcode_example",
+    "args": [
+      [
+        1,
+        2,
+        2,
+        3,
+        3,
+        3
+      ],
+      2
+    ],
+    "expected": [
+      2,
+      3
+    ]
+  }
+]

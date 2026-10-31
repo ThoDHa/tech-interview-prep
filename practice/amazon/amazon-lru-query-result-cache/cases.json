@@ -1,1 +1,143 @@
-[]
+[
+  {
+    "id": "example_1",
+    "operations": [
+      "LRUCache",
+      "put",
+      "put",
+      "get",
+      "put",
+      "get",
+      "get"
+    ],
+    "arguments": [
+      [
+        2
+      ],
+      [
+        1,
+        10
+      ],
+      [
+        2,
+        20
+      ],
+      [
+        1
+      ],
+      [
+        3,
+        30
+      ],
+      [
+        2
+      ],
+      [
+        3
+      ]
+    ],
+    "expected": [
+      null,
+      null,
+      null,
+      10,
+      null,
+      -1,
+      30
+    ]
+  },
+  {
+    "id": "example_2_update_recency",
+    "operations": [
+      "LRUCache",
+      "put",
+      "put",
+      "put",
+      "put",
+      "get",
+      "get",
+      "get"
+    ],
+    "arguments": [
+      [
+        2
+      ],
+      [
+        1,
+        5
+      ],
+      [
+        2,
+        6
+      ],
+      [
+        1,
+        7
+      ],
+      [
+        3,
+        8
+      ],
+      [
+        1
+      ],
+      [
+        2
+      ],
+      [
+        3
+      ]
+    ],
+    "expected": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      7,
+      -1,
+      8
+    ]
+  },
+  {
+    "id": "capacity_one_eviction_chain",
+    "operations": [
+      "LRUCache",
+      "put",
+      "get",
+      "put",
+      "get",
+      "get"
+    ],
+    "arguments": [
+      [
+        1
+      ],
+      [
+        1,
+        10
+      ],
+      [
+        1
+      ],
+      [
+        2,
+        20
+      ],
+      [
+        1
+      ],
+      [
+        2
+      ]
+    ],
+    "expected": [
+      null,
+      null,
+      10,
+      null,
+      -1,
+      20
+    ]
+  }
+]

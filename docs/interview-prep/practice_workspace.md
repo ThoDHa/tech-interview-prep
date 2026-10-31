@@ -103,7 +103,7 @@ The two case files mirror the two buttons on a LeetCode problem page:
 
 | File | Marker | Role |
 |------|--------|------|
-| `cases.json` | `simple` | The problem's own examples: fast feedback while you iterate. |
+| `cases.json` | `simple` | The problem's own examples where they parse, otherwise a few promoted gauntlet cases: fast feedback while you iterate. |
 | `cases_full.json` | `full` | The examples plus a comprehensive corner-case gauntlet (empties, single elements, negatives, duplicates, boundary values, large inputs) built to the problem's constraints. |
 
 The `-m simple` and `-m full` flags select between them; a plain `uv run pytest leetcode/<slug>/` runs both sets. Amazon problems use no markers: 363 of the 380 ship only `cases.json`, so a plain `uv run pytest amazon/<slug>/` is all they need, and the 17 that also carry `cases_full.json` and a reference test run their whole folder with that same plain command.

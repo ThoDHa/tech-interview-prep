@@ -1,1 +1,55 @@
-[]
+[
+  {
+    "id": "encode_empty_list",
+    "operations": [
+      "Solution",
+      "encode"
+    ],
+    "arguments": [
+      [],
+      [
+        []
+      ]
+    ],
+    "expected": [
+      null,
+      ""
+    ]
+  },
+  {
+    "id": "decode_empty_list",
+    "operations": [
+      "Solution",
+      "decode"
+    ],
+    "arguments": [
+      [],
+      [
+        ""
+      ]
+    ],
+    "expected": [
+      null,
+      []
+    ]
+  },
+  {
+    "id": "encode_single_empty_string",
+    "operations": [
+      "Solution",
+      "encode"
+    ],
+    "arguments": [
+      [],
+      [
+        [
+          ""
+        ]
+      ]
+    ],
+    "expected": [
+      null,
+      "0#"
+    ]
+  }
+]

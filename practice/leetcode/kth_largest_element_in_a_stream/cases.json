@@ -1,1 +1,104 @@
-[]
+[
+  {
+    "id": "empty_stream_rank_one",
+    "operations": [
+      "KthLargest",
+      "add",
+      "add",
+      "add"
+    ],
+    "arguments": [
+      [
+        1,
+        []
+      ],
+      [
+        4
+      ],
+      [
+        -2
+      ],
+      [
+        9
+      ]
+    ],
+    "expected": [
+      null,
+      4,
+      4,
+      9
+    ]
+  },
+  {
+    "id": "single_seed_rank_one",
+    "operations": [
+      "KthLargest",
+      "add",
+      "add"
+    ],
+    "arguments": [
+      [
+        1,
+        [
+          7
+        ]
+      ],
+      [
+        7
+      ],
+      [
+        3
+      ]
+    ],
+    "expected": [
+      null,
+      7,
+      7
+    ]
+  },
+  {
+    "id": "classic_example",
+    "operations": [
+      "KthLargest",
+      "add",
+      "add",
+      "add",
+      "add",
+      "add"
+    ],
+    "arguments": [
+      [
+        3,
+        [
+          1,
+          2,
+          3,
+          3
+        ]
+      ],
+      [
+        3
+      ],
+      [
+        5
+      ],
+      [
+        6
+      ],
+      [
+        7
+      ],
+      [
+        8
+      ]
+    ],
+    "expected": [
+      null,
+      3,
+      3,
+      3,
+      5,
+      6
+    ]
+  }
+]

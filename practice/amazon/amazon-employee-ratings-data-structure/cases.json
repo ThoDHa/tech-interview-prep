@@ -1,1 +1,119 @@
-[]
+[
+  {
+    "id": "example_1",
+    "operations": [
+      "EmployeeRatings",
+      "append",
+      "append",
+      "append",
+      "query",
+      "delete",
+      "query"
+    ],
+    "arguments": [
+      [
+        6
+      ],
+      [
+        5
+      ],
+      [
+        7
+      ],
+      [
+        7
+      ],
+      [],
+      [
+        1
+      ],
+      []
+    ],
+    "expected": [
+      null,
+      null,
+      null,
+      null,
+      [
+        7,
+        1
+      ],
+      null,
+      [
+        7,
+        1
+      ]
+    ]
+  },
+  {
+    "id": "example_2_negative_then_positive",
+    "operations": [
+      "EmployeeRatings",
+      "append",
+      "query",
+      "append",
+      "query"
+    ],
+    "arguments": [
+      [
+        4
+      ],
+      [
+        -2
+      ],
+      [],
+      [
+        4
+      ],
+      []
+    ],
+    "expected": [
+      null,
+      null,
+      [
+        -2,
+        0
+      ],
+      null,
+      [
+        4,
+        1
+      ]
+    ]
+  },
+  {
+    "id": "example_3_delete_head_shift",
+    "operations": [
+      "EmployeeRatings",
+      "append",
+      "append",
+      "delete",
+      "query"
+    ],
+    "arguments": [
+      [
+        4
+      ],
+      [
+        3
+      ],
+      [
+        1
+      ],
+      [
+        0
+      ],
+      []
+    ],
+    "expected": [
+      null,
+      null,
+      null,
+      null,
+      [
+        1,
+        0
+      ]
+    ]
+  }
+]

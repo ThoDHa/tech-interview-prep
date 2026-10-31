@@ -1,1 +1,58 @@
-[]
+[
+  {
+    "id": "single_prerequisite",
+    "args": [
+      2,
+      [
+        [
+          1,
+          0
+        ]
+      ]
+    ],
+    "expected": [
+      0,
+      1
+    ]
+  },
+  {
+    "id": "diamond_graph",
+    "args": [
+      4,
+      [
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          3,
+          2
+        ]
+      ]
+    ],
+    "expected": [
+      0,
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "id": "single_course_no_prerequisites",
+    "args": [
+      1,
+      []
+    ],
+    "expected": [
+      0
+    ]
+  }
+]

@@ -1,1 +1,127 @@
-[]
+[
+  {
+    "id": "example_1",
+    "operations": [
+      "PrefixSearchCollection",
+      "insert",
+      "insert",
+      "insert",
+      "insert",
+      "insert",
+      "search",
+      "search"
+    ],
+    "arguments": [
+      [],
+      [
+        "mouse"
+      ],
+      [
+        "mobile"
+      ],
+      [
+        "moneypot"
+      ],
+      [
+        "monitor"
+      ],
+      [
+        "mousepad"
+      ],
+      [
+        "mo"
+      ],
+      [
+        "mou"
+      ]
+    ],
+    "expected": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      [
+        "mobile",
+        "moneypot",
+        "monitor"
+      ],
+      [
+        "mouse",
+        "mousepad"
+      ]
+    ]
+  },
+  {
+    "id": "example_2_duplicate_insert",
+    "operations": [
+      "PrefixSearchCollection",
+      "insert",
+      "insert",
+      "search",
+      "insert",
+      "insert",
+      "search",
+      "search"
+    ],
+    "arguments": [
+      [],
+      [
+        "app"
+      ],
+      [
+        "apple"
+      ],
+      [
+        "ap"
+      ],
+      [
+        "apex"
+      ],
+      [
+        "app"
+      ],
+      [
+        "ap"
+      ],
+      [
+        "z"
+      ]
+    ],
+    "expected": [
+      null,
+      null,
+      null,
+      [
+        "app",
+        "apple"
+      ],
+      null,
+      null,
+      [
+        "apex",
+        "app",
+        "apple"
+      ],
+      []
+    ]
+  },
+  {
+    "id": "search_empty_collection",
+    "operations": [
+      "PrefixSearchCollection",
+      "search"
+    ],
+    "arguments": [
+      [],
+      [
+        "mo"
+      ]
+    ],
+    "expected": [
+      null,
+      []
+    ]
+  }
+]
