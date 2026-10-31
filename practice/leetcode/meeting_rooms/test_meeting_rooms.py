@@ -5,27 +5,31 @@ The worked approaches live in ../../../docs/leetcode/meeting_rooms.md.
 
 import pytest
 
-from harness import NotSolved, load_solution
+from harness import load_cases
 
-CASES = []
-
-if len(CASES) == 0:
-    pytest.skip("multi-method starter (__init__, canAttendMeetings) is not a single `==`-assertable call for meeting_rooms", allow_module_level=True)
-
-solution = load_solution(__file__)
+SIMPLE = load_cases(__file__, "cases.json")
+FULL = SIMPLE + load_cases(__file__, "cases_full.json")
 
 
 def _ids(cases):
     return [case["id"] for case in cases]
 
 
-def _check(method, case):
-    assert method(*case["args"]) == case["expected"]
+def _assert_design_case_shape(case):
+    # A structurally corrupt design gauntlet must fail here rather than skip.
+    assert set(case) >= {"id", "operations", "arguments", "expected"}
+    assert len(case["operations"]) == len(case["arguments"])
 
 
-@pytest.mark.parametrize("case", CASES, ids=_ids(CASES))
-def test_solution(case):
-    try:
-        _check(solution.Solution().solve, case)
-    except NotSolved:
-        pytest.skip("solution.py not implemented yet")
+@pytest.mark.simple
+@pytest.mark.parametrize("case", SIMPLE, ids=_ids(SIMPLE))
+def test_solution_simple(case):
+    _assert_design_case_shape(case)
+    pytest.skip("design-operation cases replay against a design class; the starter is not a design class yet")
+
+
+@pytest.mark.full
+@pytest.mark.parametrize("case", FULL, ids=_ids(FULL))
+def test_solution_full(case):
+    _assert_design_case_shape(case)
+    pytest.skip("design-operation cases replay against a design class; the starter is not a design class yet")

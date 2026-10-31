@@ -5,12 +5,10 @@ The worked approaches live in ../../../docs/leetcode/subsets_ii.md.
 
 import pytest
 
-from harness import NotSolved, load_solution
+from harness import NotSolved, load_cases, load_solution
 
-CASES = []
-
-if len(CASES) == 0:
-    pytest.skip("any-order output is not `==`-assertable; compare as sets for subsets_ii", allow_module_level=True)
+SIMPLE = load_cases(__file__, "cases.json")
+FULL = SIMPLE + load_cases(__file__, "cases_full.json")
 
 solution = load_solution(__file__)
 
@@ -20,11 +18,24 @@ def _ids(cases):
 
 
 def _check(method, case):
-    assert method(*case["args"]) == case["expected"]
+    # Subsets may come in any order; sorted-of-sorted keeps duplicate elements significant.
+    assert sorted(sorted(subset) for subset in method(*case["args"])) == sorted(
+        sorted(subset) for subset in case["expected"]
+    )
 
 
-@pytest.mark.parametrize("case", CASES, ids=_ids(CASES))
-def test_solution(case):
+@pytest.mark.simple
+@pytest.mark.parametrize("case", SIMPLE, ids=_ids(SIMPLE))
+def test_solution_simple(case):
+    try:
+        _check(solution.Solution().solve, case)
+    except NotSolved:
+        pytest.skip("solution.py not implemented yet")
+
+
+@pytest.mark.full
+@pytest.mark.parametrize("case", FULL, ids=_ids(FULL))
+def test_solution_full(case):
     try:
         _check(solution.Solution().solve, case)
     except NotSolved:
