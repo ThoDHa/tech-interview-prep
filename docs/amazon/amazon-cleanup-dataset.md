@@ -4,19 +4,13 @@
 
 Data Scientists at Amazon are working on cleansing a machine learning dataset. The dataset is represented as a string dataset consisting of an even number of lowercase English letters. The goal is to clean the dataset efficiently by performing specific operations.
 
-
-
 Here's how the operations work:
-
-
 
 In each operation, two characters from the dataset are selected and removed.
 Each operation has an associated cost:
 
 x: the cost of removing two identical characters.
 y: the cost of removing two different characters.
-
-
 
 The task is to determine the optimal strategy that minimizes the total cost to completely clean up the dataset. In other words, find the minimum cost required to remove all characters and make the dataset empty.
 

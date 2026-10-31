@@ -4,16 +4,12 @@
 
 Amazon Prime Video has movies in category 'comedy' or 'drama'. Determine the earliest time you can finish at least one movie from each category. The release schedule and duration of the movies are provided.
 
-
-
 You can start watching a movie at the time it is release or later.
 If you begin a movie at time t, it ends at t + duration.
 If a movie ends at time t + duration , the second movie can start at that time, t+ duration, or later.
 The movies can be watched in any order.
 
 Complete the function minimumTimeSpent which has the following parameters:
-
-
 
 int comedyReleaseTime[n]: release times
 int comedyDuration[n]: durations

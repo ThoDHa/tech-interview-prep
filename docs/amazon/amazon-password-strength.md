@@ -4,19 +4,11 @@
 
 Sup! I might be a sister question of Password Strength 🐣
 
-
-
 Your group at Amazon has recently set up a fresh verification rule for internal employee login credentials.
-
-
 
 A credential consists solely of lowercase English alphabets and is deemed acceptable only if it includes at least one vowel and at least one consonant. The vowel set includes 'a', 'e', 'i', 'o', 'u'. All other letters are treated as consonants.
 
-
-
 Given a text string representing the credential, determine and return its strength value. If the entire credential fails to meet the criteria, return 0.
-
-
 
 Note: A piece refers to a sequence of neighboring characters taken from the original string, maintaining the same order.
 

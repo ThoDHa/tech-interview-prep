@@ -4,31 +4,18 @@
 
 SDE II
 
-
-
 Amazon Shopping is running a reward collection event for its customers.
-
-
 
 There are n customers and the i-th customer has collected initialRewards[i] points so far.
 
-
-
 One final tournament is to take place where:
-
 
 The champion earns n additional pointsThe second place earns n - 1 pointsThe third place earns n - 2 points… and the last place earns 1 point
 Given an integer array initialRewards of length n, representing the initial reward points of the customers before the final tournament:
 
-
-
 Find the number of customers i (1 ≤ i ≤ n) such that, if the i-th customer wins the final tournament, they would have the highest total points.
 
-
-
 Note -
-
-
 
 The total points = initialRewards[i] + n (if they win).
 

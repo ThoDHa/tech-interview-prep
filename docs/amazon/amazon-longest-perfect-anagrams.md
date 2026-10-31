@@ -4,34 +4,21 @@
 
 Developers at Amazon continuously develop algorithms to ensure the security of users' accounts through strong passwords.
 
-
-
 One such algorithm is based upon the concept of perfect anagrams.
-
-
 
 A string x is an anagram of y if it is possible to rearrange the letters in x to get y. For example, "bat" and "tab" are anagrams, 'bats' and 'tab' are not.
 Two strings a and b are said to be perfect anagrams if a and b are anagrams of each other and a is not equal to b.
 
 For example,
 
-
 Strings "dog" and "god" are anagrams and perfect anagrams.Strings "baba" and "baba" are anagrams but not perfect anagrams because the strings are equal.Strings "abbac" and "caaba" are not anagrams because they do not contain exactly the same characters.
 Given a string s, find the maximum length of two of its substrings that are perfect anagrams. If no such substrings exist, return -1.
 
-
-
 Note: A substring is a contiguous subsegment of a string. For example, "xy" is a substring of "xyz" but "xz" is not.
-
-
 
 Complete the function longestPerfectAnagrams in the editor.
 
-
-
 longestPerfectAnagrams has the following parameter:
-
-
 
 string s: a string
 

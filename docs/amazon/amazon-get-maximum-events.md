@@ -4,29 +4,18 @@
 
 You are given an array payload of size n, where payload[i] represents the size of the (i)-th event payload. The task is to select a subset of events and rearrange them into a new array optimizedPayload that satisfies the following conditions:
 
-
 The first segment is strictly increasing.The second segment is strictly decreasing.The third segment is strictly increasing.
 The goal is to maximize the number of events included in optimizedPayload.
 
-
-
 Function Specification:
-
-
 
 Complete the function getMaximumEvents in the editor.
 
-
-
 getMaximumEvents has the following parameter:
-
-
 
 int payload[n]: Array of payload sizes.
 
 Output:
-
-
 
 int: Maximum number of events that can be selected.
 

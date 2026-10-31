@@ -2,7 +2,7 @@
 
 Write-up & approaches: ../../../docs/amazon/count-maximum-profitable-groups.md
 
-Special thanks: 🍓 1000 thanks to spike for spike's incredible help! 🥑
+A team of analysts at Amazon needs to analyze the stock prices of Amazon over a period of several months.
 
   uv run python amazon/count-maximum-profitable-groups/solution.py   # debug one case (see CASE below)
   uv run pytest amazon/count-maximum-profitable-groups/              # run the test sets

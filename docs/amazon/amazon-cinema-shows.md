@@ -4,15 +4,9 @@
 
 SDE II
 
-
-
 A prominent media company (AMZ MGM) has partnered with select theaters to showcase exclusive video content, including feature films, episodic series, live performances, and more.
 
-
-
 You are given an integer n, representing the number of scheduled screenings. Each screening has a start time, duration, and expected audience size, which are provided as integer arrays start, duration, and volume, respectively.
-
-
 
 Your task is to determine the highest possible total audience size while ensuring that no two selected screenings overlap. Two screenings are considered non-overlapping if one fully concludes before the next one begins.
 

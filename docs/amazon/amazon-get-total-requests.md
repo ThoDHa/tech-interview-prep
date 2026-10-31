@@ -4,15 +4,9 @@
 
 Developers at Amazon have their applications deployed on n servers. Initially, the ith server has an id server[i] and can handle server[i] requests at a time.
 
-
-
 For maintenance purposes, some servers are replaced periodically. On a jth day, all the servers with id equal to replaced[j] are replaced with servers with id newId[j] that can serve newId[j] requests. The total number of requests served on a jth day is the sum of the ids of the servers that the application is running on.
 
-
-
 Given server, replaced, and newId, find the total number of requests served by the servers each day.
-
-
 
 Note: The indices i and j are assumed to follow 1-based indexing.
 

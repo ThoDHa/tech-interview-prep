@@ -130,6 +130,7 @@ def fixture_amazon():
 EXPECTED_AMAZON_OVERLAP_LC_SLUGS = frozenset(
     {
         "cheapest-flights-within-k-stops",
+        "climbing-stairs",
         "container-with-most-water",
         "course-schedule",
         "course-schedule-ii",
@@ -642,7 +643,7 @@ def test_committed_amazon_rows_dash_exactly_the_unsourced_rows():
         )
         == gen.UNKNOWN_TIME_CELL
     ]
-    assert len(dashed) == 20
+    assert len(dashed) == 24
 
 
 EXPECTED_AMAZON_DIFFICULTY_SAMPLES = {
@@ -667,7 +668,7 @@ def test_amazon_writeup_difficulty_reads_every_committed_header_offline():
         gen.amazon_writeup_difficulty(entry["slug"]) for entry in amazon
     )
     assert counts == collections.Counter(
-        {"Easy": 69, "Medium": 204, "Hard": 86, None: 21}
+        {"Easy": 73, "Medium": 223, "Hard": 89, None: 25}
     )
 
 
@@ -1158,7 +1159,7 @@ def test_amazon_overlap_lc_slugs_ignores_entries_without_the_amazon_prefix():
     assert gen.amazon_overlap_lc_slugs(fixture_neetcode(), [entry]) == set()
 
 
-def test_committed_amazon_overlap_rule_yields_exactly_the_23_listed_problems():
+def test_committed_amazon_overlap_rule_yields_exactly_the_24_listed_problems():
     overlap = gen.amazon_overlap_lc_slugs(
         gen.load_neetcode_manifest(NEETCODE_MANIFEST_PATH),
         gen.load_amazon_manifest(AMAZON_MANIFEST_PATH),
@@ -1588,13 +1589,13 @@ def test_render_unified_section_links_rows_landing_relative():
     assert "](problems/" not in section
 
 
-def test_render_unified_section_marks_exactly_the_23_committed_amazon_overlap_rows():
+def test_render_unified_section_marks_exactly_the_24_committed_amazon_overlap_rows():
     rows = unified_table_rows(committed_section())
     marked_slugs = {
         unified_row_lc_slug(row) for row in rows if gen.AMAZON_MARKER in row
     }
     assert marked_slugs == EXPECTED_AMAZON_OVERLAP_LC_SLUGS
-    assert sum(gen.AMAZON_MARKER in row for row in rows) == 23
+    assert sum(gen.AMAZON_MARKER in row for row in rows) == 24
 
 
 def test_render_unified_section_excludes_grind_only_amazon_matches_from_the_marker():

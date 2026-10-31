@@ -4,11 +4,7 @@
 
 The supply chain manager at one of Amazon's warehouses wants to measure the efficiency of the way parcels are shipped. The volume of each parcel is represented in the array parcelWeights. Each day, the first and last parcels in the array parcelWeights are shipped until all of them are dispatched.
 
-
-
 The manager comes up with metrics to calculate warehouse efficiency. Each day before shipping, any parcel in the warehouse is chosen and its volume is added to the sum of total efficiency. A parcel can only be chosen once.
-
-
 
 Given the array parcelWeights, find the maximum possible efficiency of the warehouse.
 

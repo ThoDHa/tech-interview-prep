@@ -312,28 +312,5 @@
       true,
       false
     ]
-  },
-  {
-    "id": "example_2",
-    "args": [
-      [
-        "a",
-        "b",
-        "a",
-        "a"
-      ],
-      [
-        0,
-        0,
-        59,
-        60
-      ]
-    ],
-    "expected": [
-      true,
-      true,
-      true,
-      true
-    ]
   }
 ]

@@ -4,11 +4,7 @@
 
 Alexa is Amazon's virtual AI assistant. It makes it easy to set up your Alexa-enabled devices, listen to music, get weather updates, and much more. The team is working on a new feature that evaluates the aggregate temperature change for a period based on the changes in temperature of previous and upcoming days.
 
-
-
 Taking the change in temperature data of n days, the aggregate temperature change evaluated on the ith day is the maximum of the sum of the changes in temperatures until the ith day, and the sum of the change in temperatures in the next (n - i) days, with the ith day temperature change included in both.
-
-
 
 Given the temperature data of n days, find the maximum aggregate temperature change evaluated among all the days.
 
@@ -34,7 +30,7 @@ For day 2, consider [6, -2] -> 6 + (-2) = 4, and [-2, 5] -> (-2) + 5 = 3. The ma
 
 For day 3,consider [6, -2, 5] -> 6 + (-2) + 5  = 9, and [5]. The maximum of 9 and 5 is 9.
 
-The max aggregate temperature change is max (9, 4, 9) = 9.
+The max aggregate temp change is max (9, 4, 9) = 9.
 
 ### Example 2
 

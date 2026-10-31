@@ -4,35 +4,19 @@
 
 DAs at TomTom Global are deeply engaged in the analysis of the info gained when the company's re-inforcement learning AI model named Supa Helo is trained with different arrangements of exact the same dataset.
 
-
-
 This time, the process involves exploring how the order of data points tends to affect the model's overall performance.
-
-
 
 That being said, for an arr of n integers, denoted as data, the analysts all agree that the arrangement is represented using a permutation of the integers from 1 to n.
 
-
-
 DAs at TomTom Global soon observed that the information gained for a given specific permutation p of the n integers in the arr data can be quantified using a special formula.
-
-
 
 Detaily speaking, the info gained == sum of i * data[p[i]] for all indices i from 0 to n :)
 
-
-
 You are required to complete the func pre-defined in the editor on the right side of this page 👉👉
-
-
 
 This func has int[] data, which is an arr of integers, as its parameter.
 
-
-
 If doing right, your implementation should return an int[] that represents the lexicographically smallest permutation p with the maximum info gain.
-
-
 
 Memo: A permutation p is considered lexicographically smaller than another permutation pp if, at the first index i where p[i] and pp[i] differ, p[i] is less than pp[i]. This concept is crucial when determining the smallest permutation among multiple valid options.
 

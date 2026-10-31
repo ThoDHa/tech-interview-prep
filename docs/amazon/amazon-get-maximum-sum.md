@@ -4,31 +4,19 @@
 
 Note 📝 - might be a sister problem of  🦥 Get Max Sum
 
-
-
 Amazon is building a new data center with n servers of different types. The health and type of each server are represented in the arrays health and serverType. The developers need to build a server facility with a maximum of k distinct types of servers and the sum of their health should be maximized.
-
-
 
 Given arrays health and serverType, find the maximum sum of the health for up to k types of servers.
 
-
-
 Complete the function getMaximumSum in the editor.
 
-
-
 getMaximumSum has the following parameters:
-
-
 
 int health[n]: the health of each server
 int serverType[n]: the type of each server
 int k: the maximum number of distinct types
 
 long int: the maximum sum of health of the selected servers
-
-
 
 Thanks a lot to Spike — our trusted authority! 🥰
 

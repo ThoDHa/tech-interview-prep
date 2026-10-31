@@ -5,15 +5,10 @@
 You are given a binary string. Find the minimum number of operations required to reverse it. An operation is defined as:
 Remove a character from any index and append it to the end of the string.
 
-
 Function Description 
 Complete the function reverseBinaryString in the editor.
 
-
-
 reverseBinaryString has the following parameter:
-
-
 
 String s: a binary string
 Returns 

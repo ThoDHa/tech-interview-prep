@@ -4,14 +4,9 @@
 
 Imagine you are shopping on Amazon.com for some good weight lifting equipment. The equipment you want has blocks of many different weights that you can combine to lift.
 
-
-
 The listing on Amazon gives you an array, blocks, that consists of n different weighted blocks, in kilograms. There are no two blocks with the same weight. The element blocks[i] denotes the weight of the ith block from the top of the stack. You consider weight lifting equipment to be good if the block at the top is the lightest, and the block at the bottom is the heaviest.
 
-
-
 More formally, the equipment with array blocks will be called good weight lifting equipment if it satisfies the following conditions assuming the index of the array starts from 1:
-
 
 blocks[1] < blocks[i] for all 2 ≤ i ≤ nblocks[i] < blocks[n] for all 1 ≤ i ≤ n-1
 In one move, you can swap the order of adjacent blocks. Find out the minimum number of moves required to form good weight lifting equipment.

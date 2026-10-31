@@ -7,19 +7,12 @@ values a[i] and b[i]. There are infinitely many items of each
 type numbered from 1 to infinity and the item numbered j of type 
 i costs a[i] + (j - 1) * b[i] units.
 
-
-
 Determine the minimum possible cost to purchase exactly m items.
-
 
 Function Description 
 Complete the function getMinimumCost in the editor.
 
-
-
 getMinimumCost has the following parameters:
-
-
 
 1. int a[n]: an array of integers
 2. int b[n]: an array of integers

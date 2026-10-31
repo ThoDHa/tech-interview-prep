@@ -4,7 +4,6 @@
 
 An Amazon Fulfillment Associate has a set of items that need to be packed into two boxes. Given an integer array of the item weights (arr) to be packed, divide the item weights into two subsets, A and B, for packing into the associated boxes, while respecting the following conditions:
 
-
 The intersection of A and B is null.The union of A and B is equal to the original array.The number of elements in subset A is minimal.The sum of A's weights is greater than the sum of B's weights.
 Return the subset A in increasing order where the sum of A's weights is greater than the sum of B's weights. If more than one subset A exists, return the one with the maximal total weight.
 

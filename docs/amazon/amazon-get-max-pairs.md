@@ -4,8 +4,6 @@
 
 An AWS client wants to deploy multiple applications and needs two servers, one for their frontend and another for their backend. They have a list of integers representing the quality of servers in terms of availability. The client's preference is that the availability of an application's frontend server must be greater than that of its backend.
 
-
-
 Two arrays of same size n, frontend[n] and backend[n] where elements represent the quality of the servers, create pairs of elements (frontend[i], backend[i]) such that frontend[i] > backend[i] in each pair. Each element from an array can be picked only once to form a pair, Find the maximum number pairs that can be formed.
 
 ## Examples

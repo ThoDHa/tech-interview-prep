@@ -4,11 +4,8 @@
 
 The manager of an Amazon warehouse needs to ship n products from different locations, the location of the ith product is represented by an array locations[i]. The manager is allowed to perform one operation at a time. Each operation is described below:
 
-
 If the inventory has two or more products, the manager can pick two products x and y from the inventory if they have different locations (locations[x]!=locations[y]) and ship both of them.If the inventory has one or more products, the manager can pick one product x from the inventory and ship it.
 Note: After shipping a product it gets removed from the inventory, and the rest of the products which are currently not shipped come together keeping the order the same as before.
-
-
 
 Given n products and an array locations, find the minimum number of operations that the manager has to perform to ship all of the products.
 

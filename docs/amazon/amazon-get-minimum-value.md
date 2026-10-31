@@ -4,7 +4,6 @@
 
 Amazon Prime Games is designing a game. The player needs to pass n rounds sequentially in this game. Rules of play are as follows:
 
-
 The player loses power[i] health to complete round i.The player's health must be greater than 0 at all times.The player can choose to use armor in any one round. The armor will prevent damage of min(armor, power[i]).
 Determine the minimum starting health for a player to win the game.
 

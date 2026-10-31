@@ -2,7 +2,7 @@
 
 Write-up & approaches: ../../../docs/amazon/amazon-maximum-user-traffic.md
 
-Special thanks: Nick contributed this problem.
+In order to ensure a hassle-free user experience during the festive season, Amazon maintains logs of the days when its users use the Amazon Shopping app.
 
   uv run python amazon/amazon-maximum-user-traffic/solution.py   # debug one case (see CASE below)
   uv run pytest amazon/amazon-maximum-user-traffic/              # run the test sets

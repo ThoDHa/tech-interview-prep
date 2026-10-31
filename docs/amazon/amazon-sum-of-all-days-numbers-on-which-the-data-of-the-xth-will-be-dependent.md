@@ -4,19 +4,12 @@
 
 Data analysts at Amazon are analyzing time series data. It was concluded that the data of the nth item was dependent on the data of the some xth day if there is a positive integer k such that the floor (n/k) = x where floor(z) represents the largest integer less than or equal to z.
 
-
-
 Given n, find the sum of all the days numbers on which the data of the xth (0 ≤ x ≤ n) will be dependent.
-
 
 Function Description 
 Complete the function sumOfAllDaysNumbers in the editor.
 
-
-
 sumOfAllDaysNumbers has the following parameter:
-
-
 
 int n: the nth item
 Returns 

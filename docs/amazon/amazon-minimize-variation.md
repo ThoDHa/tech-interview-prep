@@ -4,22 +4,13 @@
 
 Source note: Examples 3 through 5 were added on 2025-06-25, with relevant source images included in Problem Source. The original poster said Example 5 failed but did not clarify whether the testcase itself was incorrect or merely failed during their attempt, so treat that example with caution.
 
-
 As an operations engineer at Amazon, you are responsible for organizing the distribution of n different items in the warehouse. The size of each product is provided in an array productSize, where productSize[i] represents the size of the ith product.
-
-
 
 You construct a new array called variation, where each element variation[i] is the difference between the largest and smallest product sizes among the first i products. Mathematically, this is defined as:
 
-
-
 variation[i] = max(productSize[1], productSize[2], ..., productSize[i]) - min(productSize[1], productSize[2], ..., productSize[i])
 
-
-
 Your goal is to arrange the products in a way that minimizes the total variation, i.e., the sum of variation[1] + variation[2] + ... + variation[n]. Determine the minimum possible value of this sum after you have reordered the products.
-
-
 
 Complete the function minimizeVariation in the editor.
 

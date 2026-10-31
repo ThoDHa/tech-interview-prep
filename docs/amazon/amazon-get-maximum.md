@@ -4,7 +4,6 @@
 
 Amazon Fresh is a grocery store designed from the ground up to offer a seamless grocery shopping experience to consumers. As part of a stock clearance exercise at the store, given the number of fresh products, follow the rules given below to stack the products in an orderly manner.
 
-
 There are a total of n piles of products.The number of products in each pile is represented by the array numProducts.Select any subarray from the array numProducts and pick up products from that subarrayThe number of products you pick from the i-th pile is strictly less than the number of products you pick from the (i+1)th pile for all indices i of the subarray.
 Find the maximum number of products that can be picked.
 

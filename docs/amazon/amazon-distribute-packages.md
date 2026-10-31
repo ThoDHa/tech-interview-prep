@@ -4,15 +4,10 @@
 
 Amazon has to distribute multiple packages across all of their delivery trucks. Given an array of trucks where trucks[i] represents the ith truck quantity. We also have another input to_distribute which states the number of packages we want to distribute across all the trucks. So how would we distribute the to_distribute number such that the max total of each truck is minimized?
 
-
 Function Description 
 Complete the function distributePackages in the editor.
 
-
-
 distributePackages has the following parameters:
-
-
 
 1. int[] trucks: an array of integers representing the quantity of each truck
 2. int to_distribute: the number of packages to distribute

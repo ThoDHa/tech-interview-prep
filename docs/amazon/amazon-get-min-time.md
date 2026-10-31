@@ -4,8 +4,6 @@
 
 Developers at Amazon have deployed an application with a distributed database. It is stored on total_servers different servers numbered from 1 to total_servers that are connected in a circular fashion, i.e. 1 is connected to 2, 2 is connected to 3, and so on until total_servers connects back to 1.
 
-
-
 There is a subset of servers represented by an array servers of integers. They need to transfer the data to each other to be synchronized. Data transfer from one server to one it is directly connected to takes 1 unit of time. Starting from any server, find the minimum amount of time to transfer the data to all the other servers.
 
 ## Examples

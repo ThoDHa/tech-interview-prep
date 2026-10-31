@@ -4,9 +4,6 @@
 
 Amazon’s engineering team is developing a tool designed to minimize the size of an n x n grid named matrix, based on a compression ratio described by the array limit. Their challenge is to compute the highest possible sum of exactly x elements from the matrix while adhering to the following conditions:
 
-
-
-
 For every row i (where 0 ≤ i
 
 ## Examples

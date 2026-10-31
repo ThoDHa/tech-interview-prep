@@ -2,26 +2,17 @@
 
 **Hard** | **NN minutes** | **Dynamic Programming, String, Parsing**
 
-
 The developers at Amazon are developing a regex matching library for their NLP use cases. A prototype regex matching has the following requirements:
-
 
 The regex expression contains lowercase English letters, '(', ')', '.', and '*'.'.' matches with exactly one lowercase English letter.A regular expression followed by '*' matches with zero or more occurrences of the regular expression.If an expression is enclosed in parentheses '(' and ')', it is treated as one expression and any asterisk '*' applies to the whole expression. It is guaranteed that no expression enclosed within parenthesis contains any '*' but is always followed by '*'. Also, there is no nested brackets sequence in the given regex expression for the prototype.
 For example,
 
-
 Regex "(ab)*d" matches with the strings "d", "ababd", "abd", but not with the strings "abbd", "abab".Regex "ab*d" matches with the strings "abbbd", "ad", "abd", but not with strings "ababd".Regex "a(b.d)*" matches with the strings "abcdbcd", "abcdbed", "abed", "a" but not with strings "bcd", "abd".Regex "(.)*" matches with the strings "a", "aa", "aaa", "b", "bb" and many more but not "ac", "and", or "bcd" for example.
 Given an array, arr, of length k containing strings consisting of lowercase English letters only and a string regex of length n, for each of them find whether the given regex matches with the string or not and report an array of strings "YES" or "NO" respectively.
 
-
-
 Complete the function isRegexMatching in the editor.
 
-
-
 isRegexMatching has the following parameters:
-
-
 
 regex: A regex
 arr[k]: An array of strings

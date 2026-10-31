@@ -6,21 +6,14 @@ You have an array of data (index starting from 1)
 data = [3, 6, 1, 4, 2]. Rearrange the data such that after the permutation,
 1 * data[1] + 2 * data[2] + 3 * data[3] + ... n * data[n] is the largest.
 
-
-
 Return the permutations as an array where each element represents the index after permutation
 (also starting from 1). If there are multiple equivalent answers, return the lexicographically
 smallest one.
 
-
 Function Description 
 Complete the function maximizeSum in the editor.
 
-
-
 maximizeSum has the following parameter:
-
-
 
 int[] data: an array of integers
 Returns 

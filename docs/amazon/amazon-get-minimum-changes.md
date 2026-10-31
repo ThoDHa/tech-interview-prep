@@ -4,16 +4,10 @@
 
 Amazon's software developers are working on enhancing their inventory management system with a new pricing adjustment operation on an array of products, where the price of the i^th product is given by prod_price[i]. The objective is to determine the minimum number of price adjustments needed to ensure that the Amazon price algorithm yields the same price for the sums of all subarrays of length k within the array prod_price.
 
-
-
 Price adjustment operations can be performed as follows:
-
-
 
 Modify any number of values in the array prod_price[i] to positive integers.
 Given the array prod_price and a positive integer k, find the minimum number of changes required so that the sum of elements in all contiguous segments of length k is equal.
-
-
 
 Note: A subarray is a contiguous segment of an array.
 

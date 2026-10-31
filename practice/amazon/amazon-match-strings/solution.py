@@ -2,7 +2,7 @@
 
 Write-up & approaches: ../../../docs/amazon/amazon-match-strings.md
 
-Special thanks: MasterKhan contributed this problem.
+Amazon is developing an efficient string matching library. Develop a prototype service that matches a simple pattern with a text. There are two arrays of strings, text, and pat, each of size n. Each s
 
   uv run python amazon/amazon-match-strings/solution.py   # debug one case (see CASE below)
   uv run pytest amazon/amazon-match-strings/              # run the test sets

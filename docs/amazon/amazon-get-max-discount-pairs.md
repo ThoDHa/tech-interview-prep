@@ -4,15 +4,10 @@
 
 It is the third anniversary of Amazon Prime Day, and they have come up with amazing offers yet again! Customers who purchase a pair of products whose prices sum to a power of three receive a 50% discount. Given the prices of n products, find the number of pairs (i, j) such that i < j and (price[i] + price[j]) is a power of three.
 
-
 Function Description 
 Complete the function getMaxDiscountPairs in the editor below.
 
-
-
 getMaxDiscountPairs has the following parameters:
-
-
 
 int price[n]: the product prices
 Returns 

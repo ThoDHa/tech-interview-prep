@@ -4,19 +4,12 @@
 
 Find the sum of the maximum of all subarrays multiplied by their length in O(n).
 
-
-
 For example, given an array arr = [4,2,1,2], the output should be 59.
-
 
 Function Description 
 Complete the function sumOfMaxOfSubarrays in the editor.
 
-
-
 sumOfMaxOfSubarrays has the following parameter:
-
-
 
 int[] arr: an array of integers
 Returns 

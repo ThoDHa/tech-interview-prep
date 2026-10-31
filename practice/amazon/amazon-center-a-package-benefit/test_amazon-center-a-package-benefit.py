@@ -32,6 +32,51 @@ CASES = [
         ],
         "expected": 12,
     },
+    {
+        "id": 'example_2',
+        "args": [
+            [
+                5,
+                2,
+                9,
+            ],
+            [
+                4,
+                8,
+                1,
+            ],
+            [],
+        ],
+        "expected": 7,
+    },
+    {
+        "id": 'example_3',
+        "args": [
+            [
+                10,
+                4,
+                6,
+                12,
+            ],
+            [
+                2,
+                8,
+                7,
+                1,
+            ],
+            [
+                [
+                    0,
+                    1,
+                ],
+                [
+                    2,
+                    3,
+                ],
+            ],
+        ],
+        "expected": 22,
+    },
 ]
 
 if len(CASES) == 0:
@@ -51,6 +96,6 @@ def _check(method, case):
 @pytest.mark.parametrize("case", CASES, ids=_ids(CASES))
 def test_solution(case):
     try:
-        _check(solution.Solution().solve, case)
+        _check(solution.Solution().maximizeCenterABenefit, case)
     except NotSolved:
         pytest.skip("solution.py not implemented yet")

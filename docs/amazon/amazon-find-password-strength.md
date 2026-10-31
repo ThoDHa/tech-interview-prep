@@ -4,16 +4,10 @@
 
 Hello! Did you navigate here from my sister question Password Strength 🐣?
 
-
-
 Another check pwd strength question you might be interested in:
-
-
 
 Find the password strength for a given password. For example, if the password is "good", 
 then iterate over all substrings and find the distinct character counts:
-
-
 
 g = 1,
 o = 1,

@@ -4,11 +4,7 @@
 
 In the context of an Amazon gaming product involving a snake and apples on a number line, the product simulates a set of unique coordinates representing the positions of the apples. The array named position of size n holds these unique integers, each denoting the coordinate of the nth apple.
 
-
-
 The snake, starting at the origin (0 coordinate), decides to consume some of the apples. The snake can move left and right along the line at a constant speed of 1 unit/sec, allowing it to transition from a coordinate x to y (or y to x) in |y - x| seconds. Additionally, the snake can instantly eat an apple when it occupies the same coordinate as the apple.
-
-
 
 Given an integer k and the array position, Determine the minimum time required for the snake to consume at least k apples.
 

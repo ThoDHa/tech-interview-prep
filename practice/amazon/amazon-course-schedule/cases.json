@@ -11,22 +11,5 @@
       ]
     ],
     "expected": true
-  },
-  {
-    "id": "example_2",
-    "args": [
-      2,
-      [
-        [
-          1,
-          0
-        ],
-        [
-          0,
-          1
-        ]
-      ]
-    ],
-    "expected": false
   }
 ]

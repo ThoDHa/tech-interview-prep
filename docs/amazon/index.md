@@ -4,21 +4,57 @@ Amazon-tagged coding problems from the [Tech-OA-Interview-Questions](https://git
 
 | Problem | Difficulty | Category | Time | Companies | Updated |
 |---------|-----------|----------|------|-----------|---------|
+| [Are Two People Relatives in a Family Tree?](amazon-family-tree-relatives.md) | Medium | Graph, Breadth First Search, Hash Table | 25 minutes | Amazon | 2026-10-28 |
+| [Best Improvement Period of at Least K Intervals](amazon-max-improvement-period-at-least-k.md) | Medium | Array, Prefix Sum, Dynamic Programming | 25 minutes | Amazon | 2026-10-28 |
+| [Search for an Element in a Stream](amazon-search-element-in-stream.md) | Medium | Hash Table, Tree, Design | 25 minutes | Amazon | 2026-10-28 |
+| [Sliding-Window Rate Limiter](amazon-sliding-window-rate-limiter.md) | Medium | Queue, Hash Table, Sliding Window, Design | 25 minutes | Amazon | 2026-10-28 |
+| [Word Break](amazon-word-break.md) | Medium | Array, Hash Table, String, Dynamic Programming | 25 minutes | Amazon | 2026-10-28 |
+| [Fill One Exact-Length Binary Window](amazon-fill-exact-length-window.md) | Easy | String, Prefix Sum | 15 minutes | Amazon | 2026-10-27 |
+| [First Unique Character in a Stream](amazon-first-unique-character-stream.md) | Medium | String, Hash Table, Queue | 25 minutes | Amazon | 2026-10-27 |
+| [Page Referrer Reachability](amazon-page-referrer-reachability.md) | Medium | Graph, Breadth First Search, Depth First Search, Hash Table | 25 minutes | Amazon | 2026-10-27 |
+| [Longest Equal-Value Run](amazon-longest-equal-value-run.md) | Easy | Array | 15 minutes | Amazon | 2026-10-26 |
+| [Word Dictionary with Wildcard Find](amazon-wildcard-word-dictionary.md) | Medium | Trie, String, Depth First Search, Design | 25 minutes | Amazon | 2026-10-26 |
+| [Course Schedule](amazon-course-schedule.md) | Medium | Graph, Depth First Search, Breadth First Search, Topological Sort | 25 minutes | Amazon | 2026-10-25 |
+| [Reorganize a String](amazon-reorganize-string.md) | Medium | String, Hash Table, Heap, Greedy | 25 minutes | Amazon | 2026-10-24 |
+| [Search a Row and Column Sorted Matrix](amazon-search-row-column-sorted-matrix.md) | Medium | Matrix, Binary Search | 25 minutes | Amazon | 2026-10-22 |
+| [Maximize Shipment Order by Sorting One Window](amazon-maximize-shipment-order-one-window.md) | Hard | Array, Stack, Segment Tree, Sorting | 40 minutes | Amazon | 2026-10-21 |
+| [Aggressive Cows](amazon-aggressive-cows.md) | Medium | Array, Sorting, Binary Search, Greedy | 25 minutes | Amazon | 2026-10-20 |
+| [Climbing Stairs](amazon-climbing-stairs.md) | Easy | Dynamic Programming, Math | 15 minutes | Amazon | 2026-10-20 |
+| [Course Schedule II](amazon-course-schedule-ii.md) | Medium | Graph, Heap, Breadth First Search, Topological Sort | 25 minutes | Amazon | 2026-10-20 |
+| [Binary Tree Spiral Level Order](amazon-binary-tree-spiral-level-order.md) | Medium | Tree, Breadth First Search, Depth First Search | 25 minutes | Amazon | 2026-10-18 |
+| [Minimum Cost of Left and Right Propagation](amazon-minimum-left-right-propagation-cost.md) | Medium | Array, Greedy | 25 minutes | Amazon | 2026-10-18 |
+| [Number of Islands](amazon-number-of-islands.md) | Medium | Matrix, Graph, Depth First Search, Breadth First Search | 25 minutes | Amazon | 2026-10-18 |
+| [Next Greater Element I](amazon-next-greater-element-i.md) | Easy | Stack, Hash Table | 15 minutes | Amazon | 2026-10-17 |
+| [Search in a Rotated Sorted Array](amazon-search-rotated-sorted-array.md) | Medium | Array, Binary Search | 25 minutes | Amazon | 2026-10-17 |
+| [Dense Matrix Multiplication](amazon-dense-matrix-multiplication.md) | Medium | Matrix, Simulation | 25 minutes | Amazon | 2026-10-16 |
+| [LFU Cache](amazon-lfu-cache.md) | Hard | Design, Hash Table, Linked List, Simulation | 40 minutes | Amazon | 2026-10-16 |
+| [Lowest Common Ancestor in an N-ary Tree](amazon-nary-tree-lowest-common-ancestor.md) | Medium | Tree, Hash Table | 25 minutes | Amazon | 2026-10-16 |
+| [Dijkstra Shortest Paths in a Weighted Undirected Graph](amazon-shortest-path-weighted-graph.md) | Medium | Graph, Shortest Path, Heap | 25 minutes | Amazon | 2026-10-16 |
+| [Top K Frequent Elements](amazon-top-k-frequent-elements.md) | Medium | Array, Hash Table, Heap, Sorting | 25 minutes | Amazon | 2026-10-16 |
+| [Find Word-Multiset Windows](amazon-word-multiset-window-search.md) | Medium | Array, String, Hash Table, Sliding Window | 25 minutes | Amazon | 2026-10-16 |
+| [Find All People with the Secret](amazon-find-all-people-with-secret.md) | Hard | Graph, Breadth First Search, Sorting | 40 minutes | Amazon | 2026-10-15 |
+| [Available Recipes from Initial Supplies](amazon-available-recipes-from-supplies.md) | Medium | Graph, Topological Sort, Hash Table | 25 minutes | Amazon | 2026-10-11 |
+| [Minimum Completion Time for DAG Dependencies](amazon-minimum-dag-completion-time.md) | Medium | Graph, Topological Sort, Dynamic Programming | 25 minutes | Amazon | 2026-10-11 |
 | [Concatenated Words](amazon-concatenated-words-variant.md) | Hard | String, Dynamic Programming, Trie | 40 minutes | Amazon | 2026-10-07 |
+| [Find K Pairs with Smallest Sums](amazon-k-smallest-pair-sums.md) | Medium | Array, Heap, Sorting | 25 minutes | Amazon | 2026-10-07 |
 | [Longest Increasing Subsequence](amazon-longest-increasing-subsequence-variant.md) | Medium | Array, Binary Search, Dynamic Programming | 25 minutes | Amazon | 2026-10-07 |
 | [Minimum Moves to Capture the King](amazon-minimum-moves-to-capture-king.md) | Medium | Graph, Breadth First Search, Matrix | 25 minutes | Amazon | 2026-10-07 |
 | [Squirrel Nut Collection Shortest Path](amazon-squirrel-nut-collection-shortest-path.md) | Medium | Array, Greedy, Math | 25 minutes | Amazon | 2026-10-07 |
+| [Bounded IPv4 Filter](amazon-bounded-ipv4-filter.md) | Easy | Array, Hash Table, Simulation | 15 minutes | Amazon | 2026-10-06 |
+| [Connect N Ropes With Minimum Cost](amazon-connect-ropes-minimum-cost.md) | Medium | Heap, Greedy | 25 minutes | Amazon | 2026-10-04 |
+| [0/1 Knapsack](amazon-zero-one-knapsack.md) | Medium | Dynamic Programming, Array | 25 minutes | Amazon | 2026-10-04 |
 | [Maximize Center A Package Benefit](amazon-center-a-package-benefit.md) | Medium | Array, Greedy, Sorting | 25 minutes | Amazon | 2026-10-03 |
 | [Max Area of Island](amazon-max-area-of-island.md) | Medium | Matrix, Graph, Depth First Search, Breadth First Search | 25 minutes | Amazon | 2026-10-03 |
 | [Maximum Rating Threshold Count](amazon-maximum-rating-threshold-count.md) | Medium | Array, Sorting | 25 minutes | Amazon | 2026-10-03 |
-| [Number of Islands](amazon-number-of-islands.md) | Medium | Matrix, Graph, Depth First Search, Breadth First Search | 25 minutes | Amazon | 2026-10-03 |
 | [Count Islands from Streaming Rows](amazon-streaming-island-count.md) | Hard | Matrix, Graph, Union Find, Simulation | 40 minutes | Amazon | 2026-10-03 |
-| [Top K Frequent Elements](amazon-top-k-frequent-elements.md) | Medium | Array, Hash Table, Heap, Sorting | 25 minutes | Amazon | 2026-10-03 |
+| [Maximize K-Element AND with an Increment Budget](amazon-maximize-k-element-and-with-increment-budget.md) | Hard | Array, Bit Manipulation, Greedy, Sorting | 40 minutes | Amazon | 2026-10-02 |
 | [Minimum Merge Conflicts](amazon-minimum-merge-conflicts.md) | Hard | Dynamic Programming, String | 40 minutes | Amazon | 2026-10-01 |
+| [Next Smaller Ticket Price](amazon-next-smaller-ticket-price.md) | Medium | Array, Stack | 25 minutes | Amazon | 2026-10-01 |
+| [Parking Garage Allocator](amazon-parking-garage-allocator.md) | Medium | Array, Simulation, String | 25 minutes | Amazon | 2026-10-01 |
+| [Tallest Billboard](amazon-tallest-billboard.md) | Hard | Dynamic Programming, Array, Hash Table | 40 minutes | Amazon | 2026-10-01 |
 | [Optimize Package Order by Sorting One Window](amazon-optimize-package-order-one-window.md) | Medium | Array, Sorting, Simulation | 25 minutes | Amazon | 2026-09-30 |
 | [Largest Binary-String Subset Within Bit Budgets](amazon-binary-strings-bounded-subset.md) | Medium | Array, String, Dynamic Programming | 25 minutes | Amazon | 2026-09-29 |
 | [Lowest Common Ancestor in an Inserted BST](amazon-bst-lowest-common-ancestor.md) | Easy | Tree, Binary Search | 15 minutes | Amazon | 2026-09-29 |
-| [Maximize K-Element AND with an Increment Budget](amazon-maximize-k-element-and-with-increment-budget.md) | Hard | Array, Bit Manipulation, Greedy, Sorting | 40 minutes | Amazon | 2026-09-29 |
 | [Evaluate Division](amazon-evaluate-division.md) | Medium | Graph, Depth First Search, Breadth First Search | 25 minutes | Amazon | 2026-09-28 |
 | [Apply a Reversi Move](amazon-reversi-move-simulation.md) | Medium | Array, Matrix, Simulation | 25 minutes | Amazon | 2026-09-28 |
 | [Longest Content Window with Bounded Labels](amazon-streaming-content-label-window.md) | Hard | Array, Hash Table, Sliding Window | 40 minutes | Amazon | 2026-09-28 |
@@ -36,6 +72,7 @@ Amazon-tagged coding problems from the [Tech-OA-Interview-Questions](https://git
 | [Minimum Cost for Roads and Hospitals](amazon-roads-and-hospitals-minimum-cost.md) | Medium | Graph, Union Find, Greedy | 25 minutes | Amazon | 2026-09-24 |
 | [Select K Paired Indices for Maximum Score](amazon-select-k-paired-array-score.md) | Medium | Array, Sorting, Heap, Greedy | 25 minutes | Amazon | 2026-09-24 |
 | [Environment Variable Store and Substitution](amazon-environment-variable-substitution.md) | Medium | String, Hash Table, Simulation | 25 minutes | Amazon | 2026-09-23 |
+| [LRU Cache for Query Results](amazon-lru-query-result-cache.md) | Medium | Design, Hash Table, Linked List, Simulation | 25 minutes | Amazon | 2026-09-23 |
 | [Minimum Edge Moves to Connect a Network](amazon-minimum-edge-moves-to-connect-graph.md) | Medium | Graph, Union Find | 25 minutes | Amazon | 2026-09-23 |
 | [Simplify a Binary Expression Tree](amazon-simplify-expression-tree.md) | Medium | Tree, Recursion, Parsing | 25 minutes | Amazon | 2026-09-23 |
 | [Path Through an O/X Grid Using Only Right and Down](amazon-right-down-grid-path.md) | Medium | Array, Matrix, Dynamic Programming, Breadth First Search | 25 minutes | Amazon | 2026-09-22 |
@@ -46,13 +83,14 @@ Amazon-tagged coding problems from the [Tech-OA-Interview-Questions](https://git
 | [Word Ladder](amazon-word-ladder.md) | Hard | Breadth First Search, Graph, String | 40 minutes | Amazon | 2026-09-21 |
 | [Maximize Adjacent Difference With One Reversal](amazon-maximize-adjacent-difference-with-one-reversal.md) | Hard | Array, Greedy, Math | 40 minutes | Amazon | 2026-09-19 |
 | [Shortest Grid Path With One Wall Break](amazon-shortest-grid-path-with-one-wall-break.md) | Medium | Matrix, Breadth First Search, Shortest Path | 25 minutes | Amazon | 2026-09-19 |
-| [Course Order and Cycle](amazon-course-order-and-cycle.md) | Hard | Graph, Breadth First Search, Depth First Search, Topological Sort | 40 minutes | Amazon | 2026-09-18 |
 | [Inventory Allocation](amazon-inventory-allocation.md) | Medium | Simulation, Sorting, Heap | 25 minutes | Amazon | 2026-09-18 |
-| [LRU Cache for Query Results](amazon-lru-query-result-cache.md) | Medium | Design, Hash Table, Linked List, Simulation | 25 minutes | Amazon | 2026-09-18 |
 | [Minimum Stick Connection Cost](amazon-minimum-stick-connection-cost.md) | - | - | - | Amazon | 2026-09-18 |
+| [Course Order and Cycle](amazon-course-order-and-cycle.md) | Hard | Graph, Breadth First Search, Depth First Search, Topological Sort | 40 minutes | Amazon | 2026-09-17 |
+| [Hierarchical Document Search](amazon-hierarchical-document-search.md) | Medium | Tree, Depth First Search | 25 minutes | Amazon | 2026-09-17 |
+| [Lazy Merge of Sorted Event Streams](amazon-lazy-event-stream-merge.md) | Medium | Heap, Sorting | 25 minutes | Amazon | 2026-09-17 |
+| [Grid Reachability with a Forbidden Turn](amazon-grid-reachability-forbidden-turn.md) | Medium | Breadth First Search, Graph | 25 minutes | Amazon | 2026-09-16 |
 | [First Non-Repeating Character](amazon-first-non-repeating-character.md) | Easy | String, Hash Table | 15 minutes | Amazon | 2026-09-14 |
 | [Root-to-Leaf Paths with a Target Sum](amazon-root-to-leaf-target-sum-paths.md) | Medium | Tree, Depth First Search, Backtracking | 25 minutes | Amazon | 2026-09-14 |
-| [Aggressive Cows](amazon-aggressive-cows.md) | Medium | Array, Sorting, Binary Search, Greedy | 25 minutes | Amazon | 2026-09-13 |
 | [All Anagram Start Indices](amazon-anagram-start-indices.md) | Medium | String, Hash Table, Sliding Window | 25 minutes | Amazon | 2026-09-13 |
 | [Basic Calculator](amazon-basic-calculator.md) | Hard | String, Stack, Recursion | 40 minutes | Amazon | 2026-09-13 |
 | [Binary Tree Cameras](amazon-binary-tree-cameras.md) | Hard | Tree, Depth First Search, Dynamic Programming, Greedy | 40 minutes | Amazon | 2026-09-13 |
@@ -63,8 +101,6 @@ Amazon-tagged coding problems from the [Tech-OA-Interview-Questions](https://git
 | [Container With Most Water](amazon-container-with-most-water.md) | Medium | Array, Two Pointers, Greedy | 25 minutes | Amazon | 2026-09-13 |
 | [Count Stepping Numbers In Range](amazon-count-stepping-numbers-in-range.md) | Hard | Math, Breadth First Search, Dynamic Programming | 40 minutes | Amazon | 2026-09-13 |
 | [Count Uni-Valued Subtrees](amazon-count-univalued-subtrees.md) | Medium | Tree, Depth First Search, Recursion | 25 minutes | Amazon | 2026-09-13 |
-| [Course Schedule](amazon-course-schedule.md) | Medium | Graph, Depth First Search, Breadth First Search, Topological Sort | 25 minutes | Amazon | 2026-09-13 |
-| [Course Schedule II](amazon-course-schedule-ii.md) | Medium | Graph, Heap, Breadth First Search, Topological Sort | 25 minutes | Amazon | 2026-09-13 |
 | [Decode an Encoded String](amazon-decode-encoded-string.md) | Medium | String, Stack, Parsing | 25 minutes | Amazon | 2026-09-13 |
 | [Distance Between Two Tree Nodes](amazon-distance-between-tree-nodes.md) | Medium | Tree, Breadth First Search, Graph | 25 minutes | Amazon | 2026-09-13 |
 | [E-commerce Notification Router](amazon-ecommerce-notification-router.md) | Easy | Array, String, Simulation | 15 minutes | Amazon | 2026-09-13 |
@@ -72,7 +108,6 @@ Amazon-tagged coding problems from the [Tech-OA-Interview-Questions](https://git
 | [Find Median from Data Stream](amazon-find-median-from-data-stream.md) | Hard | Design, Heap, Sorting | 40 minutes | Amazon | 2026-09-13 |
 | [Find the Safest Path in a Grid](amazon-find-safest-path-in-grid.md) | Hard | Array, Matrix, Breadth First Search, Binary Search, Heap, Shortest Path | 40 minutes | Amazon | 2026-09-13 |
 | [First Missing Positive](amazon-first-missing-positive.md) | Hard | Array, Hash Table | 40 minutes | Amazon | 2026-09-13 |
-| [First Unique Character in a Stream](amazon-first-unique-character-stream.md) | Medium | String, Hash Table, Queue | 25 minutes | Amazon | 2026-09-13 |
 | [Bit at an Index After Repeated Binary Expansion](amazon-indexed-bit-after-binary-expansion.md) | Medium | String, Math | 25 minutes | Amazon | 2026-09-13 |
 | [Count Islands with Eight-Direction Adjacency](amazon-islands-eight-direction.md) | Medium | Array, Matrix, Depth First Search, Breadth First Search | 25 minutes | Amazon | 2026-09-13 |
 | [K Closest Elements in a Sorted Array](amazon-k-closest-elements-in-sorted-array.md) | Medium | Array, Binary Search, Two Pointers | 25 minutes | Amazon | 2026-09-13 |
@@ -96,9 +131,7 @@ Amazon-tagged coding problems from the [Tech-OA-Interview-Questions](https://git
 | [Next Palindromic Time](amazon-next-palindromic-time.md) | Medium | String, Simulation | 25 minutes | Amazon | 2026-09-13 |
 | [Next Permutation](amazon-next-permutation.md) | Medium | Array, Two Pointers | 25 minutes | Amazon | 2026-09-13 |
 | [Product of Array Except Self](amazon-product-array-except-self.md) | Medium | Array, Prefix Sum | 25 minutes | Amazon | 2026-09-13 |
-| [Reorganize a String](amazon-reorganize-string.md) | Medium | String, Hash Table, Heap, Greedy | 25 minutes | Amazon | 2026-09-13 |
 | [Running Delivery Time Medians](amazon-running-delivery-time-medians.md) | Medium | Heap, Design | 25 minutes | Amazon | 2026-09-13 |
-| [Search in a Rotated Sorted Array](amazon-search-rotated-sorted-array.md) | Medium | Array, Binary Search | 25 minutes | Amazon | 2026-09-13 |
 | [Task Scheduler](amazon-task-scheduler.md) | Medium | Greedy, Heap | 25 minutes | Amazon | 2026-09-13 |
 | [Three Sum Closest](amazon-three-sum-closest.md) | Medium | Array, Sorting, Two Pointers | 25 minutes | Amazon | 2026-09-13 |
 | [Fare Between Stops on a Train Route](amazon-train-route-fare.md) | Easy | Array, Hash Table, Simulation | 15 minutes | Amazon | 2026-09-13 |
@@ -108,7 +141,6 @@ Amazon-tagged coding problems from the [Tech-OA-Interview-Questions](https://git
 | [Unique String Permutations](amazon-unique-string-permutations.md) | Medium | String, Sorting, Backtracking, Combinatorics | 25 minutes | Amazon | 2026-09-13 |
 | [Validate a Two-Color Chessboard](amazon-validate-two-color-chessboard.md) | Easy | Matrix, Array | 15 minutes | Amazon | 2026-09-13 |
 | [Maximum Saw Height for At Least M Cut Length](amazon-woodcut-saw-height.md) | Medium | Array, Binary Search | 25 minutes | Amazon | 2026-09-13 |
-| [Word Break](amazon-word-break.md) | Medium | Array, Hash Table, String, Dynamic Programming | 25 minutes | Amazon | 2026-09-13 |
 | [Word Break II](amazon-word-break-ii.md) | Hard | Array, Hash Table, String, Dynamic Programming, Backtracking, Trie | 40 minutes | Amazon | 2026-09-13 |
 | [Interleaving String](amazon-interleaving-string.md) | Medium | Dynamic Programming, String | 25 minutes | Amazon | 2026-09-12 |
 | [Dynamic Prefix Search Collection](amazon-prefix-search-collection.md) | Medium | Trie, String, Design | 25 minutes | Amazon | 2026-09-12 |
@@ -116,14 +148,13 @@ Amazon-tagged coding problems from the [Tech-OA-Interview-Questions](https://git
 | [Recent Advertisement Click Counts](amazon-ad-click-counts-sliding-window.md) | Medium | Queue, Hash Table, Sliding Window, Design | 25 minutes | Amazon | 2026-09-10 |
 | [Most Frequent Consecutive Website Pattern](amazon-consecutive-website-visit-pattern.md) | Medium | Array, Hash Table, Sorting, String | 25 minutes | Amazon | 2026-09-10 |
 | [Longest Substring Without Repeating Characters](amazon-longest-substring-without-repeating-characters.md) | Medium | String, Sliding Window, Hash Table | 25 minutes | Amazon | 2026-09-10 |
-| [Page Referrer Reachability](amazon-page-referrer-reachability.md) | Medium | Graph, Breadth First Search, Depth First Search, Hash Table | 25 minutes | Amazon | 2026-09-10 |
-| [Sliding-Window Rate Limiter](amazon-sliding-window-rate-limiter.md) | Medium | Queue, Hash Table, Sliding Window, Design | 25 minutes | Amazon | 2026-09-10 |
 | [Find Minimum Cost](amazon-find-minimum-cost.md) | Hard | Array, Prefix Sum, Greedy | 40 minutes | Amazon | 2026-09-09 |
+| [Meeting Rooms II](amazon-meeting-rooms-ii.md) | Medium | Array, Sorting, Two Pointers, Heap, Intervals | 25 minutes | Amazon | 2026-09-09 |
 | [Maximum System Memory Capacity](amazon-maximum-capacity.md) | Easy | Sorting, Greedy | 15 minutes | Amazon | 2026-09-08 |
-| [Meeting Rooms II](amazon-meeting-rooms-ii.md) | Medium | Array, Sorting, Two Pointers, Heap, Intervals | 25 minutes | Amazon | 2026-09-08 |
-| [Next Smaller Ticket Price](amazon-next-smaller-ticket-price.md) | Medium | Array, Stack | 25 minutes | Amazon | 2026-09-08 |
 | [Remove K Digits](amazon-remove-k-digits.md) | Medium | Stack, Greedy, String | 25 minutes | Amazon | 2026-09-08 |
 | [Get Distinct Pairs](amazon-get-distinct-pairs.md) | Easy | Hash Table, Two Pointers | 15 minutes | Amazon | 2026-09-05 |
+| [Latest-Timestamp Key-Value Store](amazon-latest-timestamp-key-value-store.md) | Medium | Hash Table, Design | 25 minutes | Amazon | 2026-09-04 |
+| [Sliding Window Maximum](amazon-sliding-window-maximum.md) | Hard | Array, Sliding Window, Queue | 40 minutes | Amazon | 2026-09-03 |
 | [Minimum Adjacent Swaps to Group Binary Values](amazon-minimum-adjacent-swaps-binary-groups.md) | Medium | Array, Greedy | 25 minutes | Amazon | 2026-09-02 |
 | [Maximum Frequency Stack](amazon-maximum-frequency-stack.md) | Hard | Hash Table, Stack, Design | 40 minutes | Amazon | 2026-09-01 |
 | [Linked-List Queue with Delete and Deduplication](amazon-linked-list-queue-operations.md) | Medium | Linked List, Design, Simulation | 25 minutes | Amazon | 2026-08-31 |
@@ -144,7 +175,6 @@ Amazon-tagged coding problems from the [Tech-OA-Interview-Questions](https://git
 | [Maximal Square](amazon-maximal-square.md) | Medium | Array, Matrix, Dynamic Programming | 25 minutes | Amazon | 2026-07-12 |
 | [Maximum Sum of Heights](amazon-maximum-sum-of-heights.md) | Hard | Array, Stack, Dynamic Programming | 40 minutes | Amazon | 2026-07-12 |
 | [Number of Islands II](amazon-number-of-islands-ii.md) | Hard | Array, Matrix, Graph, Union Find | 40 minutes | Amazon | 2026-07-12 |
-| [Sliding Window Maximum](amazon-sliding-window-maximum.md) | Hard | Array, Sliding Window, Queue | 40 minutes | Amazon | 2026-07-12 |
 | [Domain Weight Calculation](amazon-domain-weight-calculation.md) | Medium | String, Hash Table, Trie, Depth First Search | 25 minutes | Amazon | 2026-07-10 |
 | [Minimum Contiguous Replacements](amazon-minimum-contiguous-replacements.md) | Medium | Array, Hash Table, Union Find | 25 minutes | Amazon | 2026-07-10 |
 | [Minimum Redistribution Cost](amazon-minimum-redistribution-cost.md) | Medium | Array, Prefix Sum, Greedy | 25 minutes | Amazon | 2026-07-10 |
@@ -248,7 +278,7 @@ Amazon-tagged coding problems from the [Tech-OA-Interview-Questions](https://git
 | [Get Max Events](amazon-get-maximum-events.md) | Hard | Dynamic Programming, Sorting, Greedy | 40 minutes | Amazon | 2025-01-05 |
 | [Calculate Max Profit](amazon-calculate-max-profit.md) | Easy | Greedy, Sorting | 15 minutes | Amazon | 2024-12-22 |
 | [Get Final Location](amazon-get-final-locations.md) | Easy | Hash Table, Sorting | 15 minutes | Amazon | 2024-12-22 |
-| [Get Stable Periods Count](amazon-get-stable-periods-count.md) | Medium | Sliding Window, Hash Table | 25 minutes | Amazon | 2024-12-22 |
+| [Get Stable Periods Count](amazon-get-stable-periods-count.md) | - | - | - | Amazon | 2024-12-22 |
 | [Max Transfer Rate](amazon-max-transfer-rate.md) | Easy | Greedy, Sorting, Math | 15 minutes | Amazon | 2024-12-22 |
 | [Get Max Stability](amazon-get-max-stability.md) | Medium | Sorting, Greedy | 25 minutes | Amazon | 2024-12-20 |
 | [Min Operations](amazon-make-array-zero-by-subtracting-equal-amounts.md) | Easy | Array, Hash Table | 15 minutes | Amazon | 2024-12-20 |
@@ -303,7 +333,7 @@ Amazon-tagged coding problems from the [Tech-OA-Interview-Questions](https://git
 | [Calculate Total Distrance Travelled](amazon-calculate-total-distance-travelled.md) | Medium | Array, Binary Search, Prefix Sum | 25 minutes | Amazon | 2024-09-19 |
 | [Maximum Possible Racers](amazon-maximum-possible-racers.md) | Medium | Sliding Window, Hash Table | 25 minutes | Amazon | 2024-09-19 |
 | [Distributed Packages](amazon-distribute-packages.md) | Medium | Array, Greedy, Sorting | 25 minutes | Amazon | 2024-09-03 |
-| [Find Capable Winners](amazon-find-capable-winners.md) | Hard | Sorting, Greedy, Array | 40 minutes | Amazon | 2024-09-03 |
+| [Find Capable Winners](amazon-find-capable-winners.md) | - | - | - | Amazon | 2024-09-03 |
 | [Get Max Information Gain](amazon-get-max-information-gain.md) | Easy | String, Hash Table, Sorting | 15 minutes | Amazon | 2024-09-03 |
 | [Get Min Size](amazon-get-min-size.md) | Medium | Binary Search, Greedy, Sorting | 25 minutes | Amazon | 2024-08-30 |
 | [Choose Warehouse Location](amazon-choose-warehouses-location.md) | Medium | Array, Dynamic Programming, Prefix Sum | 25 minutes | Amazon | 2024-08-25 |
@@ -312,7 +342,7 @@ Amazon-tagged coding problems from the [Tech-OA-Interview-Questions](https://git
 | [Assign Tasks](amazon-assign-tasks.md) | Easy | Array, Heap | 15 minutes | Amazon | 2024-08-05 |
 | [Get Active Requests Count](amazon-get-active-requests-count.md) | Medium | Queue, Simulation | 25 minutes | Amazon | 2024-08-05 |
 | [Get Operations](amazon-get-operations.md) | Hard | Array, Greedy, Sorting | 40 minutes | Amazon | 2024-08-05 |
-| [Process Queries On Cart](amazon-process-queries-on-cart.md) | Easy | Linked List, Hash Table, Simulation | 15 minutes | Amazon | 2024-08-05 |
+| [Process Queries On Cart](amazon-process-queries-on-cart.md) | - | - | - | Amazon | 2024-08-05 |
 | [Get Minimum Boxes](amazon-get-minimum-boxes.md) | Medium | Array, Sorting, Sliding Window | 25 minutes | Amazon | 2024-07-25 |
 | [Compute Encoded Product Name](amazon-compute-encoded-product-name.md) | Easy | String, Sorting | 15 minutes | Amazon | 2024-07-15 |
 | [Get Redundant Substrings](amazon-get-redundant-substrings.md) | Hard | String, Prefix Sum, Hash Table | 40 minutes | Amazon | 2024-07-15 |
@@ -363,7 +393,7 @@ Amazon-tagged coding problems from the [Tech-OA-Interview-Questions](https://git
 | [Execute Processes](amazon-execute-processes.md) | Medium | Array, Hash Table, Simulation | 25 minutes | Amazon | 2024-01-27 |
 | [Find Unique Values](amazon-find-unique-values.md) | Easy | Sorting, Hash Table | 15 minutes | Amazon | 2024-01-27 |
 | [Group Students](amazon-group-students.md) | Easy | Sorting, Greedy | 15 minutes | Amazon | 2024-01-27 |
-| [Number of Suitable Locations](amazon-num-of-suitable-places.md) | Medium | Sorting, Binary Search, Prefix Sum | 25 minutes | Amazon | 2024-01-27 |
+| [Number of Suitable Locations](amazon-num-of-suitable-places.md) | - | - | - | Amazon | 2024-01-27 |
 | [Rice Bags](max-set-size.md) | Medium | Hash Table, Dynamic Programming | 25 minutes | Amazon | 2024-01-13 |
 | [Get Discount Pairs](get-discount-pairs.md) | Easy | Array, Hash Table, Math | 15 minutes | Amazon | 2024-01-11 |
 | [Get Min Cost Data](get-min-cost-data.md) | Medium | String, Greedy, Hash Table | 25 minutes | Amazon | 2024-01-10 |

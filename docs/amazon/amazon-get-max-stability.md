@@ -5,13 +5,9 @@
 AWS provides a range of servers to meet the deployment needs of its clients. A client wants to choose a set of servers to deploy their application. Each server is
 associated with an availability factor and a reliability factor.
 
-
-
 The client defines the stability of a set of servers as the minimum availability amongst the servers multiplied by the sum of reliabilities of all the servers. Given two arrays of
 integers, availability, and reliability, where the availability[i] and reliability[i] represent the availability and reliability factors of the ith server, find the maximum possible stability of
 any subset of servers.
-
-
 
 Since the answer can be large, report the answer modulo (10^9 + 7).
 

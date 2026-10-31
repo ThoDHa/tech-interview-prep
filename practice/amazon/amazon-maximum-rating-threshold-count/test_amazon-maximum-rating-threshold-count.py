@@ -21,6 +21,29 @@ CASES = [
         ],
         "expected": 3,
     },
+    {
+        "id": 'example_2',
+        "args": [
+            [
+                1,
+                1,
+                1,
+            ],
+        ],
+        "expected": 1,
+    },
+    {
+        "id": 'example_3',
+        "args": [
+            [
+                0,
+                0,
+                0,
+                0,
+            ],
+        ],
+        "expected": 0,
+    },
 ]
 
 if len(CASES) == 0:
@@ -40,6 +63,6 @@ def _check(method, case):
 @pytest.mark.parametrize("case", CASES, ids=_ids(CASES))
 def test_solution(case):
     try:
-        _check(solution.Solution().solve, case)
+        _check(solution.Solution().maximumRatingThreshold, case)
     except NotSolved:
         pytest.skip("solution.py not implemented yet")

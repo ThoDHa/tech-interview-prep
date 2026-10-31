@@ -4,26 +4,15 @@
 
 Source note: Confirmed on 2026-06-23 as a duplicate of Find Minimum Cost. The linked version is more complete and is the recommended practice version.
 
-
 Basically, Amazon has its warehouses lined up in a circle, you can start from any warehouse move in either clockwise or anti-clockwise direction, the direction must remain the same throughout the remaining moves.
-
-
 
 Each warehouse stores some items. The goal is to collect excess items from some warehouses and deliver them to others need them, so that each warehouse stores the same number of items in the end (guaranteed).
 
-
-
 The distance between 2 adjacent warehouses is 1, and the cost of each product transfer is the distance the product is moved.
-
-
 
 Complete the function minimizeWarehouseTransferCost in the editor.
 
-
-
 minimizeWarehouseTransferCost has the following parameter:
-
-
 
 int[] warehouses: an array of integers representing the number of items in each warehouse
 

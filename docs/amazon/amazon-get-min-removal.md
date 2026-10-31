@@ -4,11 +4,7 @@
 
 There are n products in an Amazon catalogue, where the category of the i^th product is represented by the array catalogue.
 
-
-
 The catalogue will be called valid if the number of distinct product categories in it is at most k. If the catalogue is not valid initially, then make it valid by removing some products from the catalogue.
-
-
 
 Given n products and an array catalogue, find the minimum number of products to remove from the catalogue to make it valid.
 

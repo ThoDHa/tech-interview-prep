@@ -4,14 +4,10 @@
 
 Given a string of lowercase characters, pick substring of any length in it and reverse them. Find the number of possible unique strings.
 
-
 Function Description 
 Complete the function findNumberOfPossibleUniqueStrings in the editor.
 
-
-
 findNumberOfPossibleUniqueStrings has the following parameter:
-
 
 String s: the input stringReturns 
 int: the number of possible unique strings

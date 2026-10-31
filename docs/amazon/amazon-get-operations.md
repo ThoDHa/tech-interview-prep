@@ -4,17 +4,11 @@
 
 There are n processes. The i-th process has resource[i] number of resources. All the resource[i] are distinct. The CPU wants the processes to be arranged in increasing order of their resource[i]. The CPU does several operations to make this.
 
-
-
 In each operation, the CPU selects an integer x and a process with number of
 resources x. It then places all processes with resource values less than x before the
 processes with resource values greater than or equal to x, maintaining their original order i.e. the relative order between processes having resource value less than x should be maintained and the same applies for processes having resource value greater than or equal to x.
 
-
-
 Find the lexicographically smallest sequence of Xs that the CPU chooses, such that it takes the minimum number of operations to complete the task.
-
-
 
 Note: If the minimum number of operations = 0, then return a sequence only
 containing the integer -1.

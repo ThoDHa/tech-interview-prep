@@ -4,15 +4,7 @@
 
 Amazon Web Services (AWS) is a cloud computing platform with multiple servers. One of the servers is assigned to serve customer requests. There are n customer requests placed sequentially in a queue, where the ith request has a maximum waiting time denoted by wait[i]. That is, if the ith request is not served within wait[i] seconds, then the request expires and it is removed from the queue. The server processes the request following the First In First Out (FIFO) principle. The 1st request is processed first, and the nth request is served last. At each second, the first request in the queue is processed. At the next second, the processed request and any expired requests are removed from the queue.
 
-
-
-
-
 Given the maximum waiting time of each request denoted by the array wait, find the number of requests present in the queue at every second until it is empty.
-
-
-
-
 
 Note:
 

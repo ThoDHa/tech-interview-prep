@@ -2,7 +2,7 @@
 
 Write-up & approaches: ../../../docs/amazon/amazon-get-min-amount.md
 
-Special thanks: A special thank you to a lovely, amazing fren who shared that this question appeared again on September 21, 2026! 💜
+The manager of the Amazon warehouse has decided to make changes to the inventory. Currently, the inventory has n products, where the quality of the ith product after quality checks is represented by t
 
   uv run python amazon/amazon-get-min-amount/solution.py   # debug one case (see CASE below)
   uv run pytest amazon/amazon-get-min-amount/              # run the test sets

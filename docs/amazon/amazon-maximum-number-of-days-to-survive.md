@@ -7,8 +7,6 @@ The borrower borrowed money on the jth day should payback on the (j+1)th day to 
 The borrower can payback the jth day loan from the (j+1)th day's borrowed money and can use the leftover money on that day.
 Find the maximum number of days the borrower can survive before defaulting.
 
-
-
 lender[i] represents the ith lending amount, and payback[i] represents the ith payback amount.
 
 ## Examples

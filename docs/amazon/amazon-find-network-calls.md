@@ -4,30 +4,17 @@
 
 Source note: Example 2 was added on 2025-03-31; its relevant source image is included in Problem Source.
 
-
 A digital commerce platform is conducting an experiment on the number of customer feedback entries associated with each item in its catalog.
-
-
 
 You are provided with an array feedback of size n, where feedback[i] denotes the current number of feedback entries for the i-th item. The platform offers API endpoints that allow modifying these counts by either increasing or decreasing them by one per call.
 
-
-
 Given an integer array targetCounts of size q, your task is to determine the number of API calls required to adjust the feedback count of every item in feedback so that all items match each value in targetCounts.
-
-
 
 The objective is to return an array of size q, where the i-th element represents the total number of API calls necessary to align all feedback counts with targetCounts[i].
 
-
-
 Complete the function findNetworkCalls in the editor below.
 
-
-
 findNetworkCalls has the following parameters:
-
-
 
 int feedback[n]: the initial count of reviews of each product
 int targetCounts[q]: the equal count of reviews

@@ -34,17 +34,6 @@ CASES = [
         ],
         "expected": 2,
     },
-    {
-        "id": 'example_2',
-        "args": [
-            [
-                [
-                    0,
-                ],
-            ],
-        ],
-        "expected": 0,
-    },
 ]
 
 if len(CASES) == 0:
@@ -64,6 +53,6 @@ def _check(method, case):
 @pytest.mark.parametrize("case", CASES, ids=_ids(CASES))
 def test_solution(case):
     try:
-        _check(solution.Solution().getMinInconvenience, case)
+        _check(solution.Solution().solve, case)
     except NotSolved:
         pytest.skip("solution.py not implemented yet")

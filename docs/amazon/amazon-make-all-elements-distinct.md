@@ -4,11 +4,7 @@
 
 An Amazon warehouse manager is responsible for managing inventory and ensuring that each product has a unique identifier. There are n products in the warehouse, where the identifier of the i-th item is represented by the array identifier[i]. However, in the inventory management system, some items have the same identifier.
 
-
-
 To make all items in the inventory distinct, the following operation can be used:
-
-
 
 Remove the first (leftmost) item from the inventory sequence.
 

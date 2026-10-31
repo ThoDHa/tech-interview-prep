@@ -4,25 +4,15 @@
 
 Problem Description Version No.2:
 
-
-
 You are given two arrays size and cost of size n.
 The cost will be calculated for every increment.
-
-
 
 Your task is to make the size array distinct by incrementing any of its elements
 and calculate the minimum cost to do so.
 
-
-
 Complete the function makeArrayDistinct in the editor.
 
-
-
 makeArrayDistinct has the following parameters:
-
-
 
 1. int[] size: an array of integers representing the sizes
 2. int[] cost: an array of integers representing the costs
