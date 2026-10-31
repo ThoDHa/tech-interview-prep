@@ -12,6 +12,7 @@ Complete the function sumOfMaxOfSubarrays in the editor.
 sumOfMaxOfSubarrays has the following parameter:
 
 int[] arr: an array of integers
+
 Returns 
 long integer: the sum of the maximum of all subarrays multiplied by their length
 

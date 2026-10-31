@@ -4,7 +4,10 @@
 
 You are given a positive integer array values. You may perform either propagation operation any number of times and in any order:
 
-Choose index i and propagate left: replace every element before i with values[i]. This costs i * values[i].Choose index i and propagate right: replace every element after i with values[i]. This costs (n - 1 - i) * values[i].Return the minimum total cost needed to make every array element equal. You may perform zero operations when the array is already uniform.
+Choose index i and propagate left: replace every element before i with values[i]. This costs i * values[i].
+Choose index i and propagate right: replace every element after i with values[i]. This costs (n - 1 - i) * values[i].
+
+Return the minimum total cost needed to make every array element equal. You may perform zero operations when the array is already uniform.
 
 ## Examples
 

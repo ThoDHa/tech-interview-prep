@@ -16,15 +16,9 @@ Given array items, start, end, and query. For each query[i], find the count of e
 
 **Explanation:** Over the 3 orders, the picked items are [1, 2], [1, 2, 5], and [2, 5].
 
-
-
 For the first query, 2 picked items have values less than 2.
 
-
-
 5 picked items have values less than 4.
-
-
 
 Hence the answer is [2, 5].
 

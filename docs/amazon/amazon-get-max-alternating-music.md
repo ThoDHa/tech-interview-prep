@@ -13,6 +13,7 @@ As a developer at Amazon, the task is to determine the longest alternating subst
 Note:
 
 A binary string is a sequence of '0' and '1' characters.
+
 A string A is a substring of a string B if A can be obtained from B by deleting several (possibly, zero or all) characters from the beginning and several (possibly, zero or all) characters from the end.
 
 ## Examples

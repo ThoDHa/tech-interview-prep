@@ -4,14 +4,19 @@
 
 You are given two lists:
 
-price[]: A list of integers representing the prices of different stocks.futurePrice[]: A list of integers representing the future prices of those stocks.principle: An integer representing the amount of money you have available to invest.
+price[]: A list of integers representing the prices of different stocks.
+futurePrice[]: A list of integers representing the future prices of those stocks.
+principle: An integer representing the amount of money you have available to invest.
+
 You can buy as many stocks as you want, but the total cost of the stocks you buy must not exceed your principle.
 
 Task:
 
 Write a function that calculates the maximum profit you can make by buying stocks, where:
 
-The profit for each stock is calculated as the difference between its futurePrice and price (i.e., futurePrice[i] - price[i]).You can buy a stock only if its price is less than or equal to the available principle.
+The profit for each stock is calculated as the difference between its futurePrice and price (i.e., futurePrice[i] - price[i]).
+You can buy a stock only if its price is less than or equal to the available principle.
+
 Constraints:)
 
 You can buy any number of stocks, as long as the total price of the selected stocks is less than or equal to principle.

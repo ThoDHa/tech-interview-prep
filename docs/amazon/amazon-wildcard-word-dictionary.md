@@ -4,7 +4,10 @@
 
 Build a word dictionary that supports inserting words and finding words with wildcards. Process the rows of operations from left to right. The dictionary starts empty, and each row has one of these forms:
 
-["insert", word] adds word to the dictionary. Inserting a word that is already present changes nothing.["find", pattern] asks whether the dictionary currently holds at least one word that matches pattern.A pattern matches a word when both have the same length and, at every position, the pattern character is either the same letter or a period .. A period is a wildcard that matches exactly one lowercase letter. It never matches zero letters or more than one letter.
+["insert", word] adds word to the dictionary. Inserting a word that is already present changes nothing.
+["find", pattern] asks whether the dictionary currently holds at least one word that matches pattern.
+
+A pattern matches a word when both have the same length and, at every position, the pattern character is either the same letter or a period .. A period is a wildcard that matches exactly one lowercase letter. It never matches zero letters or more than one letter.
 
 ## Examples
 

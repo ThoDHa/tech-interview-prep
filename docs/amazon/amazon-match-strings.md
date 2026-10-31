@@ -20,9 +20,8 @@ Note: The implementation shall not use any in build regex libraries.
 
 **Explanation:** Given n = 2, text = ["code", "coder"], pat = ["co*d", "co*er"],
 
-
-
-text[0] = "code", pat[0] = "co*d", "NO", the suffixes do not matchtext[1] = "coder", pat[1] = "co*er", "YES", the prefixes and suffixes match
+text[0] = "code", pat[0] = "co*d", "NO", the suffixes do not match
+text[1] = "coder", pat[1] = "co*er", "YES", the prefixes and suffixes match
 
 Here prefix of a string is defined as any substring that starts at the beginning of the string and suffix of a string is defined as any substring that ends at the end of the string.
 

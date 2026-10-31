@@ -576,6 +576,43 @@ def test_html_to_markdown_renders_paragraph_breaks_and_strips_comments():
     assert gen.html_to_markdown("<p>One</p><p>Two</p><!-- x -->") == "One\n\nTwo"
 
 
+def test_html_to_markdown_separates_a_run_in_heading_from_the_next_block():
+    """A heading between blocks never glues to the neighboring prose.
+
+    Shaped like the real bank pages whose statements carry `<h3>` run-in
+    headings (`Optimization follow-upAfter` was the rendered join before
+    the block-join fix). Inline markup inside one paragraph is legitimate
+    emphasis and stays bare.
+    """
+    fragment = (
+        "<p>Solve the base case first.</p>"
+        "<h3>Optimization follow-up</h3>"
+        "<p>After a correct simple implementation, explain the trade-offs.</p>"
+    )
+
+    rendered = gen.html_to_markdown(fragment)
+
+    assert rendered == (
+        "Solve the base case first.\n\n"
+        "Optimization follow-up\n\n"
+        "After a correct simple implementation, explain the trade-offs."
+    )
+
+
+def test_html_to_markdown_puts_each_list_item_on_its_own_line():
+    """A `<ul>` of method specs renders one line per `<li>`, not one blob."""
+    fragment = (
+        "<p>Operations:</p>"
+        "<ul><li><code>add_ip</code>: add the address.</li>"
+        "<li><code>remove_ip</code>: remove the address.</li></ul>"
+    )
+
+    rendered = gen.html_to_markdown(fragment)
+
+    assert "add_ip: add the address.\nremove_ip: remove the address." in rendered
+    assert ".remove_ip" not in rendered
+
+
 def test_html_to_markdown_strips_leading_indentation_from_every_line():
     rendered = gen.html_to_markdown(
         "<div class=\"wrap\"><p>First paragraph</p><p>  Second paragraph\n"
@@ -1193,6 +1230,16 @@ def test_check_exempts_an_authored_cases_folder_on_a_page_unparseable_entry(tmp_
 
     assert gen.check([entry]) == 0
 
+    (slug_dir / "test_amazon-lru-query-result-cache.py").unlink()
+    assert gen.check([entry]) == 1
+
+    (slug_dir / "solution.py").unlink()
+    assert gen.check([entry]) == 1
+
+    (slug_dir / "solution.py").write_text("hand-authored stub\n", encoding="utf-8")
+    (slug_dir / "test_amazon-lru-query-result-cache.py").write_text("hand-authored test module\n", encoding="utf-8")
+    assert gen.check([entry]) == 0
+
 
 def committed_authored_cases_slugs():
     """List committed slugs whose manifest status is caseless but whose
@@ -1237,7 +1284,8 @@ def test_full_run_simulation_leaves_authored_cases_folders_byte_identical(tmp_pa
             shutil.copy2(cached_page, cache_dir / f"{slug}.html")
         else:
             (cache_dir / f"{slug}.html").write_text(
-                f"<!-- fetch failed: HTTP 404 for {slug} -->", encoding="utf-8"
+                gen.FETCH_FAILED_MARKER_TEMPLATE.format(error_code=404, slug=slug),
+                encoding="utf-8",
             )
     monkeypatch.setattr(gen, "DOCS_DIR", docs_dir)
     monkeypatch.setattr(gen, "PRACTICE_DIR", practice_dir)

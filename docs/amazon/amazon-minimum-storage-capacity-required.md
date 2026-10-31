@@ -20,8 +20,6 @@ What is the minimum storage capacity of pen drives that you must order to be abl
 
 **Explanation:** We note that we will need pen drives of the size of at least 9 units to store the first game. This also turns out to be the minimum size of pen drives that should be ordered to give the games to these children.
 
-
-
 We can use the first pen drive to store the game of size 9, the 2nd one to store the second and third games, and the 3rd pen drive to store the fourth game. Hence, the minimum capacity of pen drives required is 9 units.
 
 ## Constraints

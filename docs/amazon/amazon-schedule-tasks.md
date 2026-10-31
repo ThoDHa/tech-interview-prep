@@ -20,11 +20,12 @@ Determine the maximum number of secondary tasks that can be scheduled during the
 
 **Explanation:** One of the optimal scheduling can be:
 
-
-
 Day 1: Schedule the first primary task and the third secondary task. Total time is 4 + 3 = 7.
+
 Day 2: Schedule the second primary task. Total time is 5.
+
 Day 3: Schedule the third primary task and first secondary task. Total time is 2 + 5 = 7.
+
 Day 4: Schedule the fourth primary task. Total time is 4.
 
 There is no other arrangement of secondary tasks for which more than 2 secondary tasks can be scheduled in 4 days.

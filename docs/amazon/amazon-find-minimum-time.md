@@ -18,9 +18,11 @@ Given an integer k and the array position, Determine the minimum time required f
 
 **Explanation:** It is optimal to choose the following way:
 
+Initially, the snake is at coordinate 0. As the snake needs to eat all three apples,
+It will first go right for 5 seconds and eat the apple at position 5.
+It moves in the same direction for another 5 seconds to reach coordinate 10 and eat the apple there.
+Now it moves left for 30 seconds to reach the coordinate -20 and eat the apple there.
 
-
-Initially, the snake is at coordinate 0. As the snake needs to eat all three apples,It will first go right for 5 seconds and eat the apple at position 5.It moves in the same direction for another 5 seconds to reach coordinate 10 and eat the apple there.Now it moves left for 30 seconds to reach the coordinate -20 and eat the apple there.
 Time taken will be 5 + 5 + 30 = 40 seconds.
 It can be shown that it is not possible for the snake to eat all the apples in less than 40 seconds.
 Hence, the answer is 40.

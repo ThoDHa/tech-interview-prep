@@ -9,7 +9,10 @@ Given the maximum waiting time of each request denoted by the array wait, find t
 Note:
 
 If a request is served at some time instant t, it will be counted for that instant and is removed at the next instant.
-The first request is processed at time = 0. A request expires without being processed when time = wait[i]. It must be processed while time
+
+The first request is processed at time = 0. A request expires without being processed when time = wait[i]. It must be processed while time < wait[i].
+
+The initial queue represents all requests at time = 0 in the order they must be processed.
 
 ## Examples
 
@@ -21,15 +24,11 @@ The first request is processed at time = 0. A request expires without being proc
 
 **Explanation:** - time = 0 seconds, the 1st request is served. The number of requests in the queue is 4. queue = [1, 2, 3, 4].
 
-
 - time = 1 second, request 1 is removed because it is processed, request 4 (wait[3] = 1) is removed because time = wait[3] = 1 which exceeds its maximum waiting time. Also, request 2 is served. The number of requests in the queue at time = 1 seconds is 2. queue = [2, 3].
-
 
 - time = 2 seconds, request 2 is removed because it is processed, request 3 is served. The number of requests in the queue is 1. queue = [3].
 
-
 - time = 3 seconds, request 3 is removed because it is processed. The number of requests in the queue is 0. queue = [empty].
-
 
 The answer is [4, 2, 1, 0].
 

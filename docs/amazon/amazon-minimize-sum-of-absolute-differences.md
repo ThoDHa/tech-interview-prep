@@ -10,7 +10,9 @@ Complete the function minimizeSumOfAbsoluteDifferences in the editor.
 
 minimizeSumOfAbsoluteDifferences has the following parameters:
 
-int a[n]: an array of integersint b[n]: an array of integers
+int a[n]: an array of integers
+int b[n]: an array of integers
+
 int: the minimum sum of absolute differences
 
 ## Examples

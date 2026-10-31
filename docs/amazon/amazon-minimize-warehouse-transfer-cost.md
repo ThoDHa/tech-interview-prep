@@ -28,7 +28,6 @@ long integer: the minimum cost to make all warehouses store the same number of i
 
 **Explanation:** The source compares two possible routes with costs 7 and 8. Since the problem asks for the minimum cost, the example output is 7.
 
-
 We can optimally start from the first warehouse and collect 1 item, repeat the same for the following 2 warehouses and deliver 2 to the 4th warehouse and 1 to the 5th warehouse. In the end, each warehouse has 5 items and the total cost is 1 + 2 + 3 + 1 = 7. This is just a possible clockwise move, the optimal cost should consider the anti-clockwise direction as well and return the minimum cost.
 
 ## Constraints

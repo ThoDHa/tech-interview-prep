@@ -12,7 +12,10 @@ Complete the function maximumTimesWordRemoved in the editor.
 
 maximumTimesWordRemoved has the following parameters:     
 
-String s: a log entryString t: a target wordint: the maximum number of times the target word can be removed
+String s: a log entry
+String t: a target word
+
+int: the maximum number of times the target word can be removed
 
 ## Examples
 

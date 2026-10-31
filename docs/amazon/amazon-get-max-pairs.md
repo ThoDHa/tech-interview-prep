@@ -16,9 +16,8 @@ Two arrays of same size n, frontend[n] and backend[n] where elements represent t
 
 **Explanation:** The possible valid pairs which can be made are:
 
-
-
-(frontend[1], backend[0])=(2, 1) and (frontend[2], backend[2])=(3, 1) are valid pairs.(frontend[1], backend[0])=(2, 1) and (frontend[2], backend[1])=(3, 2) are valid pairs.
+(frontend[1], backend[0])=(2, 1) and (frontend[2], backend[2])=(3, 1) are valid pairs.
+(frontend[1], backend[0])=(2, 1) and (frontend[2], backend[1])=(3, 2) are valid pairs.
 
 It can be seen that a maximum of 2 valid pairs can be made at a time. So the maximum number of pairs that can be formed is 2. Return 2.
 

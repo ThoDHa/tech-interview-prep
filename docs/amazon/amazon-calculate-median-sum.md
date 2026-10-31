@@ -4,7 +4,9 @@
 
 You are given a list of packets of varying sizes and there are n channels.
 
-Each of the n channel must have a single packetEach packet can only be on a single channel
+Each of the n channel must have a single packet
+Each packet can only be on a single channel
+
 The quality of a channel is described as the median of the packet sizes on that channel. The total quality
 is defined as sum of the quality of all channels (round to integer in case of float).
 
@@ -16,7 +18,9 @@ Complete the function calculateMedianSum in the editor.
 calculateMedianSum has the following parameters:
 
 int[] packets: an array of integers
+
 int n: the number of channels
+
 Returns 
 int: the sum of the medians of each channel
 

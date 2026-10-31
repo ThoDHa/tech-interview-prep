@@ -13,7 +13,9 @@ Complete the function getMaximumSum in the editor.
 getMaximumSum has the following parameters:
 
 int health[n]: the health of each server
+
 int serverType[n]: the type of each server
+
 int k: the maximum number of distinct types
 
 long int: the maximum sum of health of the selected servers

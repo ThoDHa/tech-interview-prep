@@ -13,6 +13,7 @@ Return a 2-dimensional array where each element i contains the ith player's p an
 Complete the function getAverageStanding which has the following parameters:
 
 int d: the number of players
+
 int records[n][3]: each record[i] contains [race id, player id, player time]
 
 ## Examples

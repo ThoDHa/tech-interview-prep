@@ -5,6 +5,7 @@
 Source said that the other problem 👇 in the same batch was for Newe Grad, so I assume this problem is for New Grad as well.  
 
 Segmentify: Minimum Subsegments 🦔
+
 Amazon is launching a revolutionary security feature that incorporates an advanced antivirus program, adept at identifying and halting potential threats. This framework manages n active programs, each with a unique Program Identifier (PID).
 
 The antivirus program evaluates the overall security risk of the system using a specialized algorithm.

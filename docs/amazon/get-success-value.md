@@ -15,7 +15,10 @@ Complete the function findSuccessValue in the editor.
 
 findSuccessValue has the following parameters:
 
-int num_viewers[n]: viewership from n different regionsint queries[q]: an array of k valueslong[q]: the maximum possible success values for each query
+int num_viewers[n]: viewership from n different regions
+int queries[q]: an array of k values
+
+long[q]: the maximum possible success values for each query
 
 ## Examples
 
@@ -45,7 +48,6 @@ Return [11, 16, 21].
 
 For the second query, k = 4, all 4 regions are used.
 
-
 Return [7, 17].
 
 ### Example 3
@@ -59,7 +61,6 @@ Return [7, 17].
 For the second query, k = 2, only the top 2 regions are used.
 
 For the third query, k = 3, all 3 regions are used.
-
 
 Return [7, 13, 18].
 

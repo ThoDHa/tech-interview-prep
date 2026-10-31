@@ -4,7 +4,10 @@
 
 Process commands on an initially empty least-frequently-used cache with positive integer capacity.
 
-put key value inserts a new key or updates an existing key.get key returns the stored value, or -1 when the key is absent.For this exercise, assume a successful get and a put that updates an existing key each increase that key's frequency by one and make it most recently used within its new frequency. A new key starts with frequency one.
+put key value inserts a new key or updates an existing key.
+get key returns the stored value, or -1 when the key is absent.
+
+For this exercise, assume a successful get and a put that updates an existing key each increase that key's frequency by one and make it most recently used within its new frequency. A new key starts with frequency one.
 
 When a new insertion would exceed capacity, evict the key with the smallest frequency. Break a frequency tie by evicting the least recently used key. Return the results of all get commands in order. Each operation should run in average O(1) time.
 

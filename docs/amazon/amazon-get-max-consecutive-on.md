@@ -28,8 +28,6 @@ This results in a sequence of 4 consecutive active machines.
 
 **Explanation:** You can flip indices [1..2] to obtain "1111".
 
-
-
 Only one operation is needed to achieve a maximum of 4 continuous active machines.
 
 There’s no advantage in using the second operation.

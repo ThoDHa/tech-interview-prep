@@ -14,6 +14,7 @@ The ask is to find the maximum number of products you can pick. The answer for t
 Because you pick [2, 9, 4, 7] subarray and [2, 3, 4, 7] products out of it.
 
 Constraints: 1 <= len(products) <= 5000 the array length won't exceed 5000
+
 1 <= products[i] <= 10^9, the stocks per product won't exceed 10^9
 
 ## Examples
@@ -26,11 +27,12 @@ Constraints: 1 <= len(products) <= 5000 the array length won't exceed 5000
 
 **Explanation:** The optimal subarray to pick from is [2, 9, 4, 7]. You can pick the following number of products:
 
-
-
 From the first product: 2
+
 From the second product: 3 (since it must be strictly more than the previous pick)
+
 From the third product: 4 (since it must be strictly more than the previous pick)
+
 From the fourth product: 7 (since it must be strictly more than the previous pick)
 
 The total number of products picked is 2 + 3 + 4 + 7 = 16.

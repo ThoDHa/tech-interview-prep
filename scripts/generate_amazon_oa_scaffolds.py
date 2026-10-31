@@ -85,6 +85,7 @@ EXCLUDED_SLUGS = {
 FASTPREP_CACHE_DIR = Path("/tmp/opencode/fastprep-cache")
 FASTPREP_URL_TEMPLATE = "https://www.fastprep.io/problems/{slug}"
 FETCH_DELAY_SECONDS = 0.5
+FETCH_FAILED_MARKER_TEMPLATE = "<!-- fetch failed: HTTP {error_code} for {slug} -->"
 AMAZON_TAG = "Amazon"
 WRITEUP_LINK_TEMPLATE = "../../../docs/amazon/{slug}.md"
 WRITEUP_PLACEHOLDER_MARKER = "<!-- Scaffold placeholder:"
@@ -678,8 +679,8 @@ def preserve_writeup_on_death(committed_text: str, fresh_text: str) -> str:
     upstream content to offer, so re-rendering a committed write-up would
     destroy the repo's only copy of the archived statement, examples, and
     constraints (the F1 wipe mechanism). This merge keeps every committed
-    section that carries non-marker content — the archived sections, and
-    the header whose metadata line feeds the manifest rebuild — and fills
+    section that carries non-marker content: the archived sections, and
+    the header whose metadata line feeds the manifest rebuild. It fills
     only the marker holes (sections whose sole content is placeholder
     comments, i.e. the Solutions scaffold) exactly as a fresh placeholder
     would.
@@ -806,16 +807,28 @@ def rendered_statement_text(statement_html: str) -> str:
 
 
 def html_to_markdown(fragment: str) -> str:
-    """Convert the small HTML subset FastPrep uses to plain markdown text."""
-    text = re.sub(r"<!--.*?-->", "", fragment, flags=re.S)
+    """Convert the small HTML subset FastPrep uses to plain markdown text.
+
+    Block-level tags separate the blocks they bound: both the opening and
+    closing tag emit a paragraph break, so a run-in `<h3>` heading or a
+    `<ul>` of method specs never glues to the neighboring sentence. `<br>`
+    and `<li>` emit single line breaks; inline tags are stripped bare.
+    """
+    text = HTML_COMMENT_PATTERN.sub("", fragment)
     text = re.sub(r"<sup>(.*?)</sup>", r"^\1", text, flags=re.S | re.I)
-    text = text.replace("</p>", "\n\n")
+    text = re.sub(
+        r"(?i)</?(?:p|h[1-6]|ul|ol|pre|blockquote|div|table|tr)\b[^>]*>",
+        "\n\n",
+        text,
+    )
+    text = re.sub(r"(?i)<li\b[^>]*>", "\n", text)
+    text = re.sub(r"(?i)</li>", "", text)
     text = re.sub(r"<br\s*/?>", "\n", text)
-    text = re.sub(r"</?(p|code|pre|strong|em|b|i|ul|li|sup)[^>]*>", "", text)
     text = re.sub(r"<[^>]+>", "", text)
     # Source indentation after a blank line would render as markdown code
     # blocks; statement prose always sits at the left margin.
     text = re.sub(r"(?m)^[ \t]+", "", text)
+    text = re.sub(r"\n{3,}", "\n\n", text)
     return html.unescape(text).strip()
 
 
@@ -1165,7 +1178,7 @@ def fetch_problem_page(
     except urllib.error.HTTPError as error:
         # Dead bank links (HTTP 404) yield an unparseable page; the caller
         # emits placeholder scaffolds and records the slug as a parse failure.
-        return f"<!-- fetch failed: HTTP {error.code} for {slug} -->"
+        return FETCH_FAILED_MARKER_TEMPLATE.format(error_code=error.code, slug=slug)
     except Exception as error:
         raise RuntimeError(f"fetching {slug} failed: {error}") from error
     cache_root.mkdir(parents=True, exist_ok=True)
@@ -1337,7 +1350,7 @@ def expected_scaffold_fragments(entry: dict) -> Dict[Path, ScaffoldExpectation]:
     """Manifest-driven scaffold expectations for one problem.
 
     A `page-unparseable` entry was rendered entirely from the manifest, so
-    its four scaffolds are compared byte-for-byte (a whole-content prefix) —
+    its four scaffolds are compared byte-for-byte (a whole-content prefix),
     unless the committed write-up carries archived sections (a dead page
     preserved by emission, or a fully authored write-up): then only the
     generator-owned part is pinned. A death-preserved write-up is pinned on
@@ -1459,6 +1472,11 @@ def check(manifest: Sequence[dict]) -> int:
         writeup_path = DOCS_DIR / f"{slug}.md"
         for path, expectation in expected_scaffold_fragments(entry).items():
             if authored_cases and path != writeup_path:
+                # Hand-owned content stays unpinned, but the files must
+                # exist: deleting a preserved folder's stub, cases.json, or
+                # test module must fail the check like any missing scaffold.
+                if not path.exists():
+                    stale.append(_displays(path))
                 continue
             content = path.read_text(encoding="utf-8") if path.exists() else ""
             if not content.startswith(expectation.prefix) or any(

@@ -6,7 +6,13 @@ Within an Amazon software management tool, there's a collection of software prog
 
 The objective is to execute the software programs following a specific algorithm:
 
-Start with the first time slot.Proceed sequentially through the software programs from left to right.Execute a program if it can be completed within the current time slot (i.e., the remaining time in the time slot is greater than or equal to the execution time of the program).If a program cannot be completed in the current time slot, move it to the next available time slot (if one is available).Continue this process until the available time slot.If there are no available time slots and some software programs remain to be executed, then the goal is to determine the maximum number of software programs that can be executed using this algorithm.
+Start with the first time slot.
+Proceed sequentially through the software programs from left to right.
+Execute a program if it can be completed within the current time slot (i.e., the remaining time in the time slot is greater than or equal to the execution time of the program).
+If a program cannot be completed in the current time slot, move it to the next available time slot (if one is available).
+Continue this process until the available time slot.
+If there are no available time slots and some software programs remain to be executed, then the goal is to determine the maximum number of software programs that can be executed using this algorithm.
+
 The goal is to determine the maximum number of software programs that can be executed using this algorithm. This can be done by moving to the last program executed within the set of software programs and removing the software programs from the leftmost of the list until the remaining set of software programs can be executed with the available time slots.
 
 Find the maximum number of software programs from the suffix that can be executed efficiently using this algorithm. In other words, you are looking for the longest sequence of consecutive software programs from the end of the list that can be successfully scheduled within the given time slots when scheduled according to the rules provided.
@@ -37,9 +43,9 @@ Find the maximum number of software programs from the suffix that can be execute
 
 **Explanation:** All the software programs will be executed in the following manner:
 
-
-
-1st and 2nd software programs in the first time slot.3rd software program in the second time slot.4th and 5th software programs in the third time slot.
+1st and 2nd software programs in the first time slot.
+3rd software program in the second time slot.
+4th and 5th software programs in the third time slot.
 
 Hence the answer is 5.
 

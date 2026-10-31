@@ -36,12 +36,7 @@ Memo: A permutation p is considered lexicographically smaller than another permu
 [2, 3, 1] | 1 * 1 + 2 * 2 + 3 * 2 = 11
 [3, 2, 1] | 1 * 2 + 2 * 1 + 3 * 2 = 10
 
-
-
 The maximum information is gained for permutations [2, 1, 3] and [2, 3, 1], but [2, 1, 3] is the lexicographically smallest permutation.
-
-
-
 
 More than happy to modify the explanation if found to be incorrect or misleading. Thanks for the feedback :)
 

@@ -20,11 +20,7 @@ Note: The indices i and j are assumed to follow 1-based indexing.
 
 **Explanation:** Day 1: The servers are [20, 10]. Server with id 10 is replaced by a server with id 20. New servers are [20, 20]. Total requests = 20 + 20 = 40.
 
-
-
 Day 2: The servers are [20, 20]. Server with id 20 is replaced by a server with id 1. New servers are [1, 1]. Total requests = 1 + 1 = 2.
-
-
 
 Hence the answer is [40, 2].
 

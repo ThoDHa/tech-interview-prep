@@ -6,7 +6,10 @@ Source note: The source reports set(timestamp,key,value) and get(key) returning 
 
 Implement a key-value store that chooses values by their supplied timestamps, not by arrival order. The four aligned arrays describe a finite sequence of operations:
 
-operations[i] = 0: perform set(timestamps[i], keys[i], values[i]).operations[i] = 1: perform get(keys[i]). Ignore timestamps[i] and values[i] for this operation.A get returns the value from a preceding set for that key whose timestamp is greatest. If several preceding sets have that greatest timestamp, use the one that occurs latest in the operation sequence. If the key has never been set, return the empty string.
+operations[i] = 0: perform set(timestamps[i], keys[i], values[i]).
+operations[i] = 1: perform get(keys[i]). Ignore timestamps[i] and values[i] for this operation.
+
+A get returns the value from a preceding set for that key whose timestamp is greatest. If several preceding sets have that greatest timestamp, use the one that occurs latest in the operation sequence. If the key has never been set, return the empty string.
 
 Return only the get results, in encounter order. Sets do not produce output. Each call starts with an empty store, and there is no eviction, expiration, capacity limit, or historical timestamp query.
 

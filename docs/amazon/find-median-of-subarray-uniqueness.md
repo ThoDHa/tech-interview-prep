@@ -8,7 +8,8 @@ The uniqueness of an array of integers is defined as the number of distinct elem
 
 Notes:
 
-The median of a list is defined as the middle value of the list when it is sorted in non-decreasing order. If there are multiple choices for median, the smaller of the two values is taken. For example, the median of [1, 5, 8] is 5, and of [2, 3, 7, 11] is 3.A subarray is a contiguous part of the array. For example, [1, 2, 3] is a subarray of [6, 1, 2, 3, 5] but [6, 2] is not.
+The median of a list is defined as the middle value of the list when it is sorted in non-decreasing order. If there are multiple choices for median, the smaller of the two values is taken. For example, the median of [1, 5, 8] is 5, and of [2, 3, 7, 11] is 3.
+A subarray is a contiguous part of the array. For example, [1, 2, 3] is a subarray of [6, 1, 2, 3, 5] but [6, 2] is not.
 
 ## Examples
 
@@ -20,9 +21,11 @@ The median of a list is defined as the middle value of the list when it is sorte
 
 **Explanation:** The subarrays along with their uniqueness values are:
 
+[1]: uniqueness = 1
+[1, 1]: uniqueness = 1
+[1]: uniqueness = 1
 
-
-[1]: uniqueness = 1[1, 1]: uniqueness = 1[1]: uniqueness = 1subarray_uniqueness is [1, 1, 1].
+subarray_uniqueness is [1, 1, 1].
 
 ### Example 2
 
@@ -32,9 +35,14 @@ The median of a list is defined as the middle value of the list when it is sorte
 
 **Explanation:** Given n = 3 and arr = [1, 2, 3], the subarrays along with their uniqueness values are:
 
+[1]: uniqueness = 1
+[1, 2]: uniqueness = 2
+[1, 2, 3]: uniqueness = 3
+[2]: uniqueness = 1
+[2, 3]: uniqueness = 2
+[3]: uniqueness = 1
 
-
-[1]: uniqueness = 1[1, 2]: uniqueness = 2[1, 2, 3]: uniqueness = 3[2]: uniqueness = 1[2, 3]: uniqueness = 2[3]: uniqueness = 1subarray_uniqueness is [1, 2, 3, 1, 2, 1], and after sorting it is [1, 1, 1, 2, 2, 3].
+subarray_uniqueness is [1, 2, 3, 1, 2, 1], and after sorting it is [1, 1, 1, 2, 2, 3].
 
 ### Example 3
 

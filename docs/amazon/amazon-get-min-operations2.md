@@ -17,7 +17,10 @@ Complete the function getMinOperations2 in the editor -
 
 GetMinOperations2 has the following arguments - 
 
-int weights[n]: the weights of the pointsint dist[n]: the distances the points can moveReturns 
+int weights[n]: the weights of the points
+int dist[n]: the distances the points can move
+
+Returns 
 long int: the min num of operations to sort the points. Here long int represents a 64 bit integer. :)
 
 ## Examples

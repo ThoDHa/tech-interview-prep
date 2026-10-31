@@ -20,8 +20,6 @@ Find the minimum total number of requests that the developers must use to bring 
 
 **Explanation:** The minimum number of requests required is 21.
 
-
-
 Explanation image was added on 06-13-2025
 
 ## Constraints

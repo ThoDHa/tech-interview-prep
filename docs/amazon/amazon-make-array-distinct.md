@@ -15,6 +15,7 @@ Complete the function makeArrayDistinct in the editor.
 makeArrayDistinct has the following parameters:
 
 1. int[] size: an array of integers representing the sizes
+
 2. int[] cost: an array of integers representing the costs
 
 int: the minimum cost to make the size array distinct

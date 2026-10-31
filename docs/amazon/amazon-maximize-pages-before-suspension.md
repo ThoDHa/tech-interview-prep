@@ -6,13 +6,17 @@ The engineering team at an Amazon fulfillment center is optimizing n high-perfor
 
 Each printer can be in exactly one of three states: operational, idle, or suspended.
 
-Printers initially start in an idle state and can be activated one by one.However, if too many printers are active at once, some will get suspended due to their threshold limit defined by the suspension rule below.Suspension Rule: If there are at least x operational printers, all such printers i with threshold[i] <= x will get suspended and stop printing.
+Printers initially start in an idle state and can be activated one by one.
+However, if too many printers are active at once, some will get suspended due to their threshold limit defined by the suspension rule below.
+
+Suspension Rule: If there are at least x operational printers, all such printers i with threshold[i] <= x will get suspended and stop printing.
 
 Task: Determine the maximum number of pages that can be printed before printers get suspended.
 
 Note:
 
-Activating a printer with threshold[i] = x allows it to print pages[i] pages. However, once at least x printers are active, their pages get printed first, and then all printers with threshold <= x get suspended immediately.Choosing the activation order carefully is therefore crucial to maximize the total printed pages before suspensions occur.
+Activating a printer with threshold[i] = x allows it to print pages[i] pages. However, once at least x printers are active, their pages get printed first, and then all printers with threshold <= x get suspended immediately.
+Choosing the activation order carefully is therefore crucial to maximize the total printed pages before suspensions occur.
 
 ## Examples
 

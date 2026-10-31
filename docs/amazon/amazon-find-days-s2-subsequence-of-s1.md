@@ -10,9 +10,13 @@ Complete the function findDaysS2SubsequenceOfS1 in the editor.
 findDaysS2SubsequenceOfS1 has the following parameters:
 
 1. String s1: the original string
+
 2. String s2: the subsequence to find
+
 3. int[] start: the start indices
+
 4. int[] end: the end indices
+
 Returns 
 int: the number of days s2 is a subsequence of s1
 

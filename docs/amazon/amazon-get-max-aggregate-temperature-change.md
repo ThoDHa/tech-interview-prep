@@ -18,8 +18,6 @@ Given the temperature data of n days, find the maximum aggregate temperature cha
 
 **Explanation:** The aggregate temperature change on each day is evaluated as:
 
-
-
 For day 1, there are no preceding days info, but the day itself is included in the calculation. Temperature changes = [6] for the before period.
 
 For succeeding days, there are values [6, -2, 5] and 6 + (-2) + 5 = 9.

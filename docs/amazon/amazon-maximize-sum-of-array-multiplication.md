@@ -16,6 +16,7 @@ Complete the function maximizeSum in the editor.
 maximizeSum has the following parameter:
 
 int[] data: an array of integers
+
 Returns 
 int[]: the permutation of indices that maximizes the sum
 
@@ -29,8 +30,6 @@ int[]: the permutation of indices that maximizes the sum
 
 **Explanation:** The permutation [3, 5, 1, 4, 2] is chosen because the sum
 1 * 1 + 2 * 2 + 3 * 3 + 4 * 4 + 5 * 6 is the largest sum you can get.
-
-
 
 Larger values stay later. Sort the array based on 1. value 2. if there's a tie, based on index.
 

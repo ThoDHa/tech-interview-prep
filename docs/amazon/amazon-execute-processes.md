@@ -16,12 +16,16 @@ to right.
 
 Notes
 
-The ceil() function returns the smallest integer that is bigger or equal to its argument. For example, ceil(1.1) = 2, ceil(2.5) = 3, ceil(5) = 5, etc.If the execution time of some process i is reduced and becomes equal to the execution time of any other process j, then the two processes i and j are not considered cohesive.
+The ceil() function returns the smallest integer that is bigger or equal to its argument. For example, ceil(1.1) = 2, ceil(2.5) = 3, ceil(5) = 5, etc.
+If the execution time of some process i is reduced and becomes equal to the execution time of any other process j, then the two processes i and j are not considered cohesive.
+
 Complete the function totalExecutionTime in the editor.
 
 totalExecutionTime has the following parameter:
 
-int execution[n]: an array of integers representing the execution timesint: the total amount of time to execute all processes
+int execution[n]: an array of integers representing the execution times
+
+int: the total amount of time to execute all processes
 
 ## Examples
 

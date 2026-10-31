@@ -10,6 +10,7 @@ Complete the function getMaxDiscountPairs in the editor below.
 getMaxDiscountPairs has the following parameters:
 
 int price[n]: the product prices
+
 Returns 
 int: the number of pairs whose sum is a power of three.
 

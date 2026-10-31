@@ -15,8 +15,11 @@ Complete the function getMinimumCost in the editor.
 getMinimumCost has the following parameters:
 
 1. int a[n]: an array of integers
+
 2. int b[n]: an array of integers
+
 3. m: the number of items to purchase
+
 Returns 
 long integer: the minimum cost
 

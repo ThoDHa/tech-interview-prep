@@ -18,8 +18,6 @@ Given the initial sequence of the digits of numbers, find the encrypted number. 
 
 **Explanation:** Encryption occurs as follows:
 
-
-
 Hence, the encrypted number formed is 04.
 
 ## Constraints

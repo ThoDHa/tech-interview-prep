@@ -15,7 +15,9 @@ xin the range [1, n].
 Notes
 
 1. The mean value of an array of kelements is defined as the sum of elements divided by k.
+
 2. A permutation of leangth nis a sequence where each number from qtonappears exactly once.
+
 3. A subarray of an array is a contiguous section of the array.
 
 ## Examples
@@ -34,7 +36,10 @@ Notes
 
 **Output:** `[1, 2, 2, 1]`
 
-**Explanation:** x = 1 -> [1] x = 2 -> [3, 2, 1], [2] x = 3 -> [3], [4, 3, 2] x = 4 -> [4]
+**Explanation:** x = 1 -> [1]
+x = 2 -> [3, 2, 1], [2]
+x = 3 -> [3], [4, 3, 2]
+x = 4 -> [4]
 
 ### Example 3
 
@@ -42,7 +47,13 @@ Notes
 
 **Output:** `[1, 1, 1, 4, 4, 1, 1]`
 
-**Explanation:** x = 1 -> [1] x = 2 -> [2] x = 3 -> [3] x = 4 -> [4], [3, 6, 5, 2], [7, 3, 6, 5, 2, 1], [4, 7, 3, 6, 5, 2 ,1] x = 5 -> [5], [7, 3], [4, 7, 3, 6] and [4, 7, 3, 6, 5] x = 6 -> [6] x = 7 -> [7]
+**Explanation:** x = 1 -> [1]
+x = 2 -> [2]
+x = 3 -> [3]
+x = 4 -> [4], [3, 6, 5, 2], [7, 3, 6, 5, 2, 1], [4, 7, 3, 6, 5, 2 ,1]
+x = 5 -> [5], [7, 3], [4, 7, 3, 6] and [4, 7, 3, 6, 5]
+x = 6 -> [6]
+x = 7 -> [7]
 
 ## Constraints
 

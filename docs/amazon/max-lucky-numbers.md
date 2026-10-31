@@ -18,9 +18,10 @@ Given two different digits x and y and a positive integer n, determine the maxim
 
 **Explanation:** If the two digits that make up the number are x = 3 and y = 4, and the sum of the digits must be n = 13, then the lucky numbers are:
 
-
-
-3334334334334333
+3334
+3343
+3433
+4333
 
 The maximum lucky number is 4333.
 

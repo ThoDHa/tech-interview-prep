@@ -6,7 +6,10 @@ enigma shared this example.
 
 On Amazon Prime Day, non-critical requests for a transaction system are routed through a throttling gateway to ensure that the network is not choked by non-essential requests. The gateway has the following limits:
 
-The number of transactions in any given second cannot exceed 3.The number of transactions in any given 10 second period cannot exceed 20. A ten-second period includes all requests arriving from time T to T-9 (inclusive of both) for any valid time T.The number of transactions in any given minute cannot exceed 60. Similar to above, 1 minute is from max(T, T-59) to T.
+The number of transactions in any given second cannot exceed 3.
+The number of transactions in any given 10 second period cannot exceed 20. A ten-second period includes all requests arriving from time T to T-9 (inclusive of both) for any valid time T.
+The number of transactions in any given minute cannot exceed 60. Similar to above, 1 minute is from max(T, T-59) to T.
+
 Any request that exceeds any of the above limits will be dropped by the gateway. Given the times at which different requests arrive sorted ascending, find how many requests will be dropped.
 
 Note: Even if a request is dropped it is still considered for future calculations. Although, if a request is to be dropped due to multiple violations, it is still counted only once.
@@ -19,7 +22,11 @@ Note: Even if a request is dropped it is still considered for future calculation
 
 **Output:** `1`
 
-**Explanation:** Request 1 - Not Dropped.Request 1 - Not Dropped.Request 1 - Not Dropped.Request 1 - Dropped. At most 3 requests are allowed in one second.Request 2 - Not Dropped.
+**Explanation:** Request 1 - Not Dropped.
+Request 1 - Not Dropped.
+Request 1 - Not Dropped.
+Request 1 - Dropped. At most 3 requests are allowed in one second.
+Request 2 - Not Dropped.
 
 ### Example 2
 
@@ -27,9 +34,29 @@ Note: Even if a request is dropped it is still considered for future calculation
 
 **Output:** `2`
 
-**Explanation:** Request 1 - Not Dropped.Request 1 - Not Dropped.Request 1 - Not Dropped.Request 1 - Dropped. At most 3 requsts are allowed in one second.Request 2 - Not Dropped.Request 2 - Not Dropped.Request 2 - Not Dropped.Request 3 - Not Dropped.Request 3 - Not Dropped.Request 3 - Not Dropped.Request 4 - Not Dropped.Request 4 - Not Dropped.Request 4 - Not Dropped.Request 5 - Not Dropped.Request 5 - Not Dropped.Request 5 - Not Dropped.Request 6 - Not Dropped.Request 6 - Not Dropped.Request 6 - Not Dropped.Request 7 - Not Dropped.
+**Explanation:** Request 1 - Not Dropped.
+Request 1 - Not Dropped.
+Request 1 - Not Dropped.
+Request 1 - Dropped. At most 3 requsts are allowed in one second.
+Request 2 - Not Dropped.
+Request 2 - Not Dropped.
+Request 2 - Not Dropped.
+Request 3 - Not Dropped.
+Request 3 - Not Dropped.
+Request 3 - Not Dropped.
+Request 4 - Not Dropped.
+Request 4 - Not Dropped.
+Request 4 - Not Dropped.
+Request 5 - Not Dropped.
+Request 5 - Not Dropped.
+Request 5 - Not Dropped.
+Request 6 - Not Dropped.
+Request 6 - Not Dropped.
+Request 6 - Not Dropped.
+Request 7 - Not Dropped.
 
-The total count of requests in the 10-second period from the first to the seventh second is 21, which exceeds the limit (21 > 20), so 1 request is dropped.Request 7 - Dropped.
+The total count of requests in the 10-second period from the first to the seventh second is 21, which exceeds the limit (21 > 20), so 1 request is dropped.
+Request 7 - Dropped.
 
 ### Example 3
 

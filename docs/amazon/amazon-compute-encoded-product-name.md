@@ -6,7 +6,10 @@ Amazon's software team utilizes several algorithms to maintain data integrity, o
 
 The chief aim of the algorithm is to rearrange the characters in the original symmetrical name according to these criteria:
 
-The rearranged name is a reshuffled version of the original symmetrical name.The restructured name should be symmetrical as well.This restructured name should be lexicographically smallest among all its symmetric permutations.
+The rearranged name is a reshuffled version of the original symmetrical name.
+The restructured name should be symmetrical as well.
+This restructured name should be lexicographically smallest among all its symmetric permutations.
+
 Given an initial symmetrical name that contains only lowercase English characters, compute the encoded name.
 
 A string is considered to be lexicographically smaller than the string t of the same length if the first character in s that differs from that in t is smaller. For example, "abcd" is lexicographically smaller than "abdc" but larger than "abaa".

@@ -10,7 +10,9 @@ Complete the function distributePackages in the editor.
 distributePackages has the following parameters:
 
 1. int[] trucks: an array of integers representing the quantity of each truck
+
 2. int to_distribute: the number of packages to distribute
+
 Returns 
 int[]: an array representing the distributed packages across the trucks
 

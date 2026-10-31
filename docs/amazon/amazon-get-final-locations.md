@@ -11,6 +11,7 @@ Note:
 It is guaranteed that for any movement of data:
 
 There is data at movedFrom[i].
+
 There is no data at movedTo[i].
 
 ## Examples

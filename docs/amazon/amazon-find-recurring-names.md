@@ -10,7 +10,11 @@ Given an array of realNames an array allNames of usernames for each account, ide
 
 Please note that:
 
-It is guaranteed that no two real names are permutations of each other.For the variable realNames, each value is unique, and indicates an individual person.Each name in allNames is a permutation of some name in realNames.There may be some names in realNames without a permutation in allNames.It is possible that some users may create an account using fake names only.
+It is guaranteed that no two real names are permutations of each other.
+For the variable realNames, each value is unique, and indicates an individual person.
+Each name in allNames is a permutation of some name in realNames.
+There may be some names in realNames without a permutation in allNames.
+It is possible that some users may create an account using fake names only.
 
 ## Examples
 

@@ -32,10 +32,9 @@ For example, [2, 7, 4] is a subsequence of [4, 2, 3, 7, 2, 1, 41], while [2, 4, 
 
 **Explanation:** We make the following insertions in the initialList:
 
-
-
 Operation 1: Insert 5 such that initialList = [5, 9, 4, 2, 3, 4], so current common
 subsequence [5, 3].
+
 Operation 2: Insert 1 such that initialList = [5, 9, 4, 1, 2, 3, 4], so current common
 subsequence [5, 1, 3].
 

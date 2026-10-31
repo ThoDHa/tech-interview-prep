@@ -10,6 +10,7 @@ Complete the function findUniqueValues in the editor below.
 findUniqueValues has the following parameter:
 
 int experience[n]: the experience points for each developer
+
 Returns 
 int: the number of unique values among the combined experience points of the pairs formed
 

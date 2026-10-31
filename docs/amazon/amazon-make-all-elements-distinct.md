@@ -20,15 +20,13 @@ Given n products and the array identifier, find the minimum number of operations
 
 **Explanation:** Operations:
 
-
-
 Remove the first 2, resulting in [3, 2, 1, 5, 2]
+
 Remove the next 3, resulting in [2, 1, 5, 2]
+
 Remove the next 2, resulting in [1, 5, 2]
 
 After 3 operations, identifier = [1, 5, 2], and all the elements of identifier are distinct.
-
-
 
 Hence, the minimum number of operations required to make all the elements of the array distinct is 3.
 

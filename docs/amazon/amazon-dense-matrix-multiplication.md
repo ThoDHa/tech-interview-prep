@@ -6,7 +6,9 @@ You are given two rectangular integer matrices: left has m rows and k columns, a
 
 Each output entry is the dot product of one left row and one right column: result[i][j] = sum(left[i][t] * right[t][j]) for 0 <= t < k.
 
-Optimization follow-upAfter a correct simple implementation, explain how tiling reuses a small block of data and how contiguous memory access affects throughput. The interview report also asks about data coalescing. Discuss how adjacent GPU threads would access adjacent elements; no GPU API, kernel launch, timing target, or hardware-specific code is required by this portable exercise.
+Optimization follow-up
+
+After a correct simple implementation, explain how tiling reuses a small block of data and how contiguous memory access affects throughput. The interview report also asks about data coalescing. Discuss how adjacent GPU threads would access adjacent elements; no GPU API, kernel launch, timing target, or hardware-specific code is required by this portable exercise.
 
 ## Examples
 

@@ -2,7 +2,7 @@
 
 docs/interview-prep/practice_workspace.md quotes tree counts as of October
 2026: 91 of the 168 LeetCode folders carry a `reference.py`, and 17 of the
-380 Amazon folders do. This guard re-counts the tree and fails on drift:
+410 Amazon ones do. This guard re-counts the tree and fails on drift:
 a wave landing that adds or removes problems or reference files must update
 the page counts in the same change. Rewording the quoted sentence also
 fails the guard on purpose, so the new wording and this regex are updated

@@ -12,7 +12,9 @@ If there are no such pairs, you have to return 0.
 Note:
 
 A parcel cannot be present in more than one pair in a group.
+
 Two groups are different if at least one of their pairs contains a different pair of parcels. The pairs at indices (i, j) and (j, i) are considered the same.
+
 If there are no such pair, you have to return 0.
 
 ## Examples
@@ -27,9 +29,10 @@ If there are no such pair, you have to return 0.
 
 All possible ways of grouping the parcels into pairs are, {(1, 2), (4, 3), (5, 6), (7, 8)}, {(1, 3), (4, 2), (5, 6), (7, 8)}, {(1, 6), (4, 3), (5, 2), (7, 8)}, {(1, 2), (4, 6), (5, 3), (7, 8)}, {(1, 3), (4, 6), (5, 2), (7, 8)} and {(1, 6), (4, 2), (5, 3), (7, 8)}. In all these groups, the absolute difference of the weights of each pair of parcels is equal to the given extra weight wt = 1. For example, consider the group {(1, 6), (4, 2), (5, 3), (7, 8)}.
 
-
-
-|weight[1] - weight[6]| = |4 - 5| = 1|weight[4] - weight[2]| = |4 - 5| = 1|weight[3] - weight[5]| = |5 - 4| = 1|weight[7] - weight[8]| = |2 - 3| = 1
+|weight[1] - weight[6]| = |4 - 5| = 1
+|weight[4] - weight[2]| = |4 - 5| = 1
+|weight[3] - weight[5]| = |5 - 4| = 1
+|weight[7] - weight[8]| = |2 - 3| = 1
 
 ## Constraints
 

@@ -8,7 +8,10 @@ Formally, given a scheduling array truckCargoSize of length n, where each unit i
 
 Notes:
 
-As soon as a dock bay becomes available after unloading a truck, it can immediately start processing the next truck.It is guaranteed that unloading all trucks is possible with some number of dock bays.Only the start times of unloading need to be considered in order, not the finish times.Trucks are processed in their given arrival order. With d dock bays, the trucks are distributed among the bays in arrival order so that each bay's total processing time is the sum of the cargo times of the trucks assigned to it. The overall time to unload all trucks equals the maximum total processing time over all d dock bays.
+As soon as a dock bay becomes available after unloading a truck, it can immediately start processing the next truck.
+It is guaranteed that unloading all trucks is possible with some number of dock bays.
+Only the start times of unloading need to be considered in order, not the finish times.
+Trucks are processed in their given arrival order. With d dock bays, the trucks are distributed among the bays in arrival order so that each bay's total processing time is the sum of the cargo times of the trucks assigned to it. The overall time to unload all trucks equals the maximum total processing time over all d dock bays.
 
 ## Examples
 

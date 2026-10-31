@@ -15,6 +15,7 @@ Given an integer array throughput and an integer pipelineCount, find the maximum
 Note:
 
 A pair of servers (x, y) is said to be unique if no other pipeline has selected the same pair. However, the pairs (y, x) and (x, y) are treated as different connections.
+
 It is also possible to select the same server for primary and backup connections, which means that (x, x) is a valid pair for the connection.
 
 ## Examples

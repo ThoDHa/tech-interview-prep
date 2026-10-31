@@ -16,9 +16,10 @@ Note: A substring is a contiguous sequence of characters within a string. For ex
 
 **Explanation:** The following strings can be formed from password = 'abc':
 
-
-
-Reversing any substring of length 1 gives the original string "abc".Reversing the substring "ab" gives a new string "bac".Reversing the substring "bc" gives a new string "acb".Reversing the substring "abc" gives a new string "cba".
+Reversing any substring of length 1 gives the original string "abc".
+Reversing the substring "ab" gives a new string "bac".
+Reversing the substring "bc" gives a new string "acb".
+Reversing the substring "abc" gives a new string "cba".
 
 There are 4 distinct password strings that can be obtained from password. Return 4.
 

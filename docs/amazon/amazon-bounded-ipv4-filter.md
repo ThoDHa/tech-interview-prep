@@ -8,11 +8,17 @@ Implement an IPv4 address pool that can store at most 128 distinct addresses. Th
 
 You are given two arrays, operations and addresses, of equal length. Start with an empty pool and process their entries in order. Entry i applies operations[i] to addresses[i].
 
-add_ip: if the address is already present, leave the pool unchanged. Otherwise, add it only if the pool has fewer than 128 distinct addresses. If the pool is full, ignore the addition without removing any stored address.remove_ip: remove the address if present. Removing an absent address leaves the pool unchanged.check_ip: report true if the exact address is currently present and false otherwise.Return the results of only the check_ip operations, in their original order. Adding and removing addresses produce no output. If there are no checks, return an empty boolean array.
+add_ip: if the address is already present, leave the pool unchanged. Otherwise, add it only if the pool has fewer than 128 distinct addresses. If the pool is full, ignore the addition without removing any stored address.
+remove_ip: remove the address if present. Removing an absent address leaves the pool unchanged.
+check_ip: report true if the exact address is currently present and false otherwise.
+
+Return the results of only the check_ip operations, in their original order. Adding and removing addresses produce no output. If there are no checks, return an empty boolean array.
 
 All addresses are valid IPv4 addresses in canonical dotted-decimal notation: four decimal octets from 0 through 255, with no leading zeros except the single digit 0. Every address from 0.0.0.0 through 255.255.255.255 is a valid pool key. Match complete addresses; there are no subnets, prefixes, or wildcard rules.
 
-Memory and implementation trade-offsThe interview setting is a small Linux system with at most 128 stored records. Consider how to keep the pool representation small and explain the time and memory costs of your chosen data structure. This exercise does not impose a language-specific memory limit or require one particular representation.
+Memory and implementation trade-offs
+
+The interview setting is a small Linux system with at most 128 stored records. Consider how to keep the pool representation small and explain the time and memory costs of your chosen data structure. This exercise does not impose a language-specific memory limit or require one particular representation.
 
 ## Examples
 

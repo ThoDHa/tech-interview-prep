@@ -10,7 +10,8 @@ Given two arrays, skill and expertise, find the maximum possible sum of skills o
 
 Note:
 
-It is always possible to form a team consisting of zero employees with a total skill of zero.A contiguous set of elements is a sequence where each element is adjacent to the next, with no gaps between them. Each element in the set is directly next to the previous one.
+It is always possible to form a team consisting of zero employees with a total skill of zero.
+A contiguous set of elements is a sequence where each element is adjacent to the next, with no gaps between them. Each element in the set is directly next to the previous one.
 
 ## Examples
 

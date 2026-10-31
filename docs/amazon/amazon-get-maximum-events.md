@@ -4,7 +4,10 @@
 
 You are given an array payload of size n, where payload[i] represents the size of the (i)-th event payload. The task is to select a subset of events and rearrange them into a new array optimizedPayload that satisfies the following conditions:
 
-The first segment is strictly increasing.The second segment is strictly decreasing.The third segment is strictly increasing.
+The first segment is strictly increasing.
+The second segment is strictly decreasing.
+The third segment is strictly increasing.
+
 The goal is to maximize the number of events included in optimizedPayload.
 
 Function Specification:

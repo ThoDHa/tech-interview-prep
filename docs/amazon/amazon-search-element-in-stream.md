@@ -6,7 +6,10 @@ Values arrive one at a time in a stream. At any moment, you may be asked whether
 
 You are given two arrays of the same length, operations and values. Process them from left to right. At index i:
 
-If operations[i] is "add", the value values[i] arrives in the stream.If operations[i] is "search", check whether values[i] arrived at an earlier index.Return a boolean array with one entry for each "search", in the order the searches appear. An entry is true if that value arrived before the search, and false otherwise. A value may arrive more than once; a repeat arrival changes nothing. If there are no searches, return an empty array.
+If operations[i] is "add", the value values[i] arrives in the stream.
+If operations[i] is "search", check whether values[i] arrived at an earlier index.
+
+Return a boolean array with one entry for each "search", in the order the searches appear. An entry is true if that value arrived before the search, and false otherwise. A value may arrive more than once; a repeat arrival changes nothing. If there are no searches, return an empty array.
 
 ## Examples
 

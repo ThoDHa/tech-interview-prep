@@ -6,7 +6,10 @@ A batch contains files numbered from 1 to 2^n. Some files are sensitive and requ
 
 For any contiguous batch of M files:
 
-If it contains X > 0 sensitive files, storing the whole batch costs M * X * encCost.If it contains no sensitive files, storing the whole batch costs flatCost.If the batch size is even, you may either store the whole batch or split it into two equal contiguous batches and pay the sum of their optimal costs. Return the minimum possible storage cost modulo 1_000_000_007.
+If it contains X > 0 sensitive files, storing the whole batch costs M * X * encCost.
+If it contains no sensitive files, storing the whole batch costs flatCost.
+
+If the batch size is even, you may either store the whole batch or split it into two equal contiguous batches and pay the sum of their optimal costs. Return the minimum possible storage cost modulo 1_000_000_007.
 
 ## Examples
 

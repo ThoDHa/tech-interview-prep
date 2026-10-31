@@ -10,7 +10,10 @@ Note:
 
 It is guaranteed that for any movement of data :
 
-There is data at movedFrom[i].There is no data at movedTo[i].int[]: the locations storing data after all moves are made, in ascending order.
+There is data at movedFrom[i].
+There is no data at movedTo[i].
+
+int[]: the locations storing data after all moves are made, in ascending order.
 
 ## Examples
 

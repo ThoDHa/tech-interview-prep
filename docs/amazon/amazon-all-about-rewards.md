@@ -10,7 +10,11 @@ There are n customers and the i-th customer has collected initialRewards[i] poin
 
 One final tournament is to take place where:
 
-The champion earns n additional pointsThe second place earns n - 1 pointsThe third place earns n - 2 points… and the last place earns 1 point
+The champion earns n additional points
+The second place earns n - 1 points
+The third place earns n - 2 points
+… and the last place earns 1 point
+
 Given an integer array initialRewards of length n, representing the initial reward points of the customers before the final tournament:
 
 Find the number of customers i (1 ≤ i ≤ n) such that, if the i-th customer wins the final tournament, they would have the highest total points.

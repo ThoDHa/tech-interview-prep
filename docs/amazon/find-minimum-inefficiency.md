@@ -19,7 +19,9 @@ Complete the function findMinimumInefficiency in the editor.
 
 findMinimumInefficiency has the following parameter:
 
-string serverType: the server typesint: the minimum possible inefficiency
+string serverType: the server types
+
+int: the minimum possible inefficiency
 
 ## Examples
 
@@ -31,7 +33,10 @@ string serverType: the server typesint: the minimum possible inefficiency
 
 **Explanation:** In the above example, the number of servers n = 8. One optimal way to install servers is to
 
-Install a server having fault tolerance (0) at the first and the second positions.Install a server having high reliability (1) at the sixth and the seventh positions.After making these changes, the server types are '00011110'. The number of adjacent pairs having different server types is 2. It can be shown that the answer cannot be reduced from 2. Return 2.
+Install a server having fault tolerance (0) at the first and the second positions.
+Install a server having high reliability (1) at the sixth and the seventh positions.
+
+After making these changes, the server types are '00011110'. The number of adjacent pairs having different server types is 2. It can be shown that the answer cannot be reduced from 2. Return 2.
 
 Note that another possible way to achieve a minimum number of different adjancet pairs as 2 would 00011100 and 00011000.
 
