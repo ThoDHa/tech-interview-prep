@@ -1039,6 +1039,43 @@ def render_command_block(dir_slug: str) -> str:
     )
 
 
+def _arg_holds_data(value: Any) -> bool:
+    """Report whether one case argument carries data to debug against.
+
+    Non-empty collections and non-empty strings do; zero, False, and empty
+    containers leave nothing to inspect in a debug run.
+    """
+    if isinstance(value, (list, tuple, dict, set, str)):
+        return len(value) > 0
+    if isinstance(value, bool):
+        return value
+    if isinstance(value, (int, float)):
+        return value != 0
+    return value is not None
+
+
+def pick_default_case_id(cases: Sequence[dict]) -> Optional[str]:
+    """Pick the CASE id a rendered stub should start from.
+
+    Prefers the first non-degenerate case: one whose args hold data (a
+    non-empty collection or a nonzero scalar), since debugging against a
+    leading empty-container case inspects nothing. Falls back to the first
+    id when every case is degenerate; None when no cases exist, which
+    renders the stub's no-cases __main__ with the pick_case debug run
+    guarded behind the guidance print.
+
+    Args:
+        cases: Harness cases (`[{"id", "args", "expected"}]`).
+
+    Returns:
+        The preferred case id, or None when `cases` is empty.
+    """
+    for case in cases:
+        if any(_arg_holds_data(arg) for arg in case["args"]):
+            return case["id"]
+    return cases[0]["id"] if cases else None
+
+
 def render_solution_stub(
     entry: dict,
     metadata: Optional[dict],
@@ -1055,11 +1092,35 @@ def render_solution_stub(
         else ""
     ) or f"NeetCode 150 problem ({entry['section']})."
     lc_url = LC_PROBLEM_URL_TEMPLATE.format(slug=entry["lcSlug"])
-    case_id = parsed_cases.cases[0]["id"] if parsed_cases.cases else "example_1"
+    case_id = pick_default_case_id(parsed_cases.cases)
     function_name = parsed_cases.function_name
     args_signature = _signature_args(parsed, parsed_cases)
     dir_slug = entry["dirSlug"]
     writeup_link = WRITEUP_LINK_TEMPLATE.format(dir_slug=dir_slug)
+    if case_id is None:
+        main_block = f'''if __name__ == "__main__":
+    # Debug playground: set a breakpoint in {function_name} above, then run this file.
+    CASE = None
+    if CASE is None:
+        print("no cases authored yet; add cases to cases.json or cases_full.json, then set CASE to an id")
+    else:
+        case = pick_case(__file__, CASE)
+        result = Solution().{function_name}(*case["args"])
+        print(f"case {{case['id']}}: args = {{case['args']}}")
+        print(f"expected: {{case['expected']}}")
+        print(f"got:      {{result}}")
+'''
+    else:
+        main_block = f'''if __name__ == "__main__":
+    # Debug playground: set a breakpoint in {function_name} above, then run this file.
+    # Pick a case by id (ids are in cases.json).
+    CASE = "{case_id}"
+    case = pick_case(__file__, CASE)
+    result = Solution().{function_name}(*case["args"])
+    print(f"case {{case['id']}}: args = {{case['args']}}")
+    print(f"expected: {{case['expected']}}")
+    print(f"got:      {{result}}")
+'''
     return f'''"""{entry["title"]} — {lc_url}
 
 Write-up & approaches: {writeup_link}
@@ -1080,16 +1141,7 @@ class Solution:
         raise NotSolved
 
 
-if __name__ == "__main__":
-    # Debug playground: set a breakpoint in {function_name} above, then run this file.
-    # Pick a case by id (ids are in cases.json).
-    CASE = "{case_id}"
-    case = pick_case(__file__, CASE)
-    result = Solution().{function_name}(*case["args"])
-    print(f"case {{case['id']}}: args = {{case['args']}}")
-    print(f"expected: {{case['expected']}}")
-    print(f"got:      {{result}}")
-'''
+{main_block}'''
 
 
 def _signature_args(parsed: dict, parsed_cases: CasesResult) -> str:
