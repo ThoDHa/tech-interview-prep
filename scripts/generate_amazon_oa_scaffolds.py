@@ -125,6 +125,8 @@ MIN_PLAUSIBLE_STATEMENT_LENGTH = 40
 # content, so extraction drops them and regenerations never re-introduce the
 # residue hand cleanups remove.
 CONTRIBUTOR_CHROME_PATTERN = re.compile(r"^Special thanks:.*(?:\n|$)", re.M)
+WRITEUP_SECTION_HEADING_PATTERN = re.compile(r"(?m)^## .*$")
+HTML_COMMENT_PATTERN = re.compile(r"<!--.*?-->", re.S)
 NEXT_FLIGHT_CHUNK_PATTERN = re.compile(
     r'self\.__next_f\.push\(\[1,("(?:[^"\\]|\\.)*")\]\)'
 )
@@ -636,6 +638,80 @@ def cases_are_authored(cases_path: Path) -> bool:
     return bool(_json_list_file(cases_path))
 
 
+def _split_writeup_sections(text: str) -> List[str]:
+    """Split a write-up into [header, section, ...] at `## ` headings.
+
+    Each section segment starts at its heading line and runs to the next
+    heading (or end of text); the first segment holds everything before the
+    first heading (title, metadata line, statement).
+    """
+    boundaries = list(WRITEUP_SECTION_HEADING_PATTERN.finditer(text))
+    if not boundaries:
+        return [text]
+    segments = [text[: boundaries[0].start()]]
+    for position, boundary in enumerate(boundaries):
+        end = (
+            boundaries[position + 1].start()
+            if position + 1 < len(boundaries)
+            else len(text)
+        )
+        segments.append(text[boundary.start() : end])
+    return segments
+
+
+def _section_carries_content(segment: str) -> bool:
+    """Report whether a write-up section holds anything but HTML comments.
+
+    The leading `## ` heading line is not content; a section whose every
+    other non-blank line is a scaffold placeholder comment is a marker
+    hole. The header segment carries no heading line and is checked whole.
+    """
+    if segment.startswith("## "):
+        segment = segment.split("\n", 1)[1] if "\n" in segment else ""
+    return bool(HTML_COMMENT_PATTERN.sub("", segment).strip())
+
+
+def preserve_writeup_on_death(committed_text: str, fresh_text: str) -> str:
+    """Merge a committed write-up with a fresh placeholder after page death.
+
+    When a FastPrep page has died (page-unparseable), a fresh render has no
+    upstream content to offer, so re-rendering a committed write-up would
+    destroy the repo's only copy of the archived statement, examples, and
+    constraints (the F1 wipe mechanism). This merge keeps every committed
+    section that carries non-marker content — the archived sections, and
+    the header whose metadata line feeds the manifest rebuild — and fills
+    only the marker holes (sections whose sole content is placeholder
+    comments, i.e. the Solutions scaffold) exactly as a fresh placeholder
+    would.
+
+    Args:
+        committed_text: The committed write-up markdown.
+        fresh_text: The freshly rendered placeholder write-up for the same
+            entry (from render_writeup with no parsed problem).
+
+    Returns:
+        The merged write-up. Equals `fresh_text` when the committed text is
+        a pure placeholder; byte-stable across repeated runs once the
+        archived sections are in place.
+    """
+    committed_sections = _split_writeup_sections(committed_text)
+    fresh_sections = _split_writeup_sections(fresh_text)
+    committed_by_heading = {
+        section.splitlines()[0]: section for section in committed_sections[1:]
+    }
+    if _section_carries_content(committed_sections[0]):
+        merged = [committed_sections[0]]
+    else:
+        merged = [fresh_sections[0]]
+    for fresh_section in fresh_sections[1:]:
+        committed_section = committed_by_heading.get(fresh_section.splitlines()[0])
+        if committed_section and _section_carries_content(committed_section):
+            merged.append(committed_section)
+        else:
+            merged.append(fresh_section)
+    return "".join(merged)
+
+
 def writeup_is_authored(writeup_path: Path) -> bool:
     """Report whether a committed write-up has left the scaffold state.
 
@@ -1116,8 +1192,10 @@ def emit_scaffolds(entries: Sequence[dict], fetch: bool = True) -> dict:
         `parse_failures` (slugs whose FastPrep page did not parse),
         `skipped_no_cache` (slugs left untouched under fetch=False),
         `writeups_preserved` (slugs whose authored write-up was left
-        untouched), `cases_preserved` (slugs whose authored practice
-        cases.json, stub, and test module were left untouched).
+        untouched), `writeups_preserved_dead_page` (slugs whose committed
+        write-up sections were merged into the placeholder because the
+        FastPrep page is dead), `cases_preserved` (slugs whose authored
+        practice cases.json, stub, and test module were left untouched).
     """
     stats = {
         "generated": 0,
@@ -1126,6 +1204,7 @@ def emit_scaffolds(entries: Sequence[dict], fetch: bool = True) -> dict:
         "parse_failures": [],
         "skipped_no_cache": [],
         "writeups_preserved": [],
+        "writeups_preserved_dead_page": [],
         "cases_preserved": [],
     }
     DOCS_DIR.mkdir(parents=True, exist_ok=True)
@@ -1154,9 +1233,20 @@ def emit_scaffolds(entries: Sequence[dict], fetch: bool = True) -> dict:
             stats["cases_preserved"].append(slug)
             rendered = {writeup_path: rendered[writeup_path]}
         for path, content in rendered.items():
-            if path == writeup_path and writeup_is_authored(writeup_path):
-                stats["writeups_preserved"].append(slug)
-                continue
+            if path == writeup_path:
+                if writeup_is_authored(writeup_path):
+                    stats["writeups_preserved"].append(slug)
+                    continue
+                if problem is None and writeup_path.exists():
+                    # Dead page: the committed write-up is the only copy of
+                    # the archived statement; merge it over the fresh
+                    # placeholder instead of re-rendering the wipe.
+                    merged_text = preserve_writeup_on_death(
+                        writeup_path.read_text(encoding="utf-8"), content
+                    )
+                    if merged_text != content:
+                        stats["writeups_preserved_dead_page"].append(slug)
+                    content = merged_text
             path.write_text(content, encoding="utf-8")
         if parsed_cases.cases:
             entry["parse_status"] = "parsed-with-cases"
@@ -1238,7 +1328,12 @@ def expected_scaffold_fragments(entry: dict) -> Dict[Path, ScaffoldExpectation]:
     """Manifest-driven scaffold expectations for one problem.
 
     A `page-unparseable` entry was rendered entirely from the manifest, so
-    its four scaffolds are compared byte-for-byte (a whole-content prefix).
+    its four scaffolds are compared byte-for-byte (a whole-content prefix) —
+    unless the committed write-up carries archived sections (a dead page
+    preserved by emission, or a fully authored write-up): then only the
+    generator-owned part is pinned. A death-preserved write-up is pinned on
+    its Solutions scaffold block (the one section emission fills); a fully
+    authored one on its title line, matching the parsed-entry convention.
     Every other entry was rendered from FastPrep data that lives only in
     the unversioned /tmp cache; the fragments the generator owns end to end
     are compared exactly instead of re-rendering from the cache: the
@@ -1258,10 +1353,27 @@ def expected_scaffold_fragments(entry: dict) -> Dict[Path, ScaffoldExpectation]:
     """
     slug = entry["slug"]
     if entry.get("parse_status") == "page-unparseable":
-        return {
-            path: ScaffoldExpectation(prefix=content)
-            for path, content in render_all(entry, None, unparsed_page_cases(slug), "").items()
+        fresh = render_all(entry, None, unparsed_page_cases(slug), "")
+        expectations = {
+            path: ScaffoldExpectation(prefix=content) for path, content in fresh.items()
         }
+        writeup_path = DOCS_DIR / f"{slug}.md"
+        if writeup_path.exists():
+            committed_text = writeup_path.read_text(encoding="utf-8")
+            fresh_writeup = fresh[writeup_path]
+            if writeup_is_authored(writeup_path):
+                expectations[writeup_path] = ScaffoldExpectation(
+                    prefix=f"# [{entry['title']}]({entry['url']})\n"
+                )
+            elif (
+                preserve_writeup_on_death(committed_text, fresh_writeup)
+                != fresh_writeup
+            ):
+                expectations[writeup_path] = ScaffoldExpectation(
+                    prefix="",
+                    required=(fresh_writeup[fresh_writeup.index("## Solutions") :],),
+                )
+        return expectations
     writeup_link = WRITEUP_LINK_TEMPLATE.format(slug=slug)
     return {
         DOCS_DIR / f"{slug}.md": ScaffoldExpectation(
@@ -1443,6 +1555,11 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
         print(
             "write-ups preserved (authored, left untouched): "
             + ", ".join(stats["writeups_preserved"])
+        )
+    if stats["writeups_preserved_dead_page"]:
+        print(
+            "write-ups preserved (dead page, archived sections kept): "
+            + ", ".join(stats["writeups_preserved_dead_page"])
         )
     if stats["cases_preserved"]:
         print(

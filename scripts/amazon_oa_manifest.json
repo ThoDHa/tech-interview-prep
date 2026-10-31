@@ -3295,8 +3295,8 @@
     "url": "https://www.fastprep.io/problems/amazon-get-stable-periods-count",
     "slug": "amazon-get-stable-periods-count",
     "updated": "2024-12-22",
-    "difficulty": null,
-    "categories": null,
+    "difficulty": "Medium",
+    "categories": "Sliding Window, Hash Table",
     "parse_status": "page-unparseable"
   },
   {
@@ -3955,8 +3955,8 @@
     "url": "https://www.fastprep.io/problems/amazon-find-capable-winners",
     "slug": "amazon-find-capable-winners",
     "updated": "2024-09-03",
-    "difficulty": null,
-    "categories": null,
+    "difficulty": "Hard",
+    "categories": "Sorting, Greedy, Array",
     "parse_status": "page-unparseable"
   },
   {
@@ -4063,8 +4063,8 @@
     "url": "https://www.fastprep.io/problems/amazon-process-queries-on-cart",
     "slug": "amazon-process-queries-on-cart",
     "updated": "2024-08-05",
-    "difficulty": null,
-    "categories": null,
+    "difficulty": "Easy",
+    "categories": "Linked List, Hash Table, Simulation",
     "parse_status": "page-unparseable"
   },
   {
@@ -4675,8 +4675,8 @@
     "url": "https://www.fastprep.io/problems/amazon-num-of-suitable-places",
     "slug": "amazon-num-of-suitable-places",
     "updated": "2024-01-27",
-    "difficulty": null,
-    "categories": null,
+    "difficulty": "Medium",
+    "categories": "Sorting, Binary Search, Prefix Sum",
     "parse_status": "page-unparseable"
   },
   {

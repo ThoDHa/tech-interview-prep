@@ -892,6 +892,163 @@ def test_emit_scaffolds_refreshes_a_still_placeholder_writeup(tmp_path, monkeypa
     assert stats["generated"] == 1
 
 
+def test_preserve_writeup_on_death_keeps_archived_sections_and_fills_marker_holes():
+    """The merge keeps non-marker sections and fills only the marker holes."""
+    entry = {"slug": "amazon-gone", "title": "Gone", "url": "https://x/gone"}
+    fresh = gen.render_writeup(entry, None, "")
+    fresh_constraints_marker = (
+        "<!-- Constraints not parseable from FastPrep for amazon-gone; fill them in. -->"
+    )
+    committed = fresh.replace(
+        "<!-- Statement not parseable from FastPrep; fill it in. -->",
+        "Archived statement surviving the page death.",
+        1,
+    ).replace(
+        "<!-- Examples not parseable from FastPrep for amazon-gone; fill them in. -->",
+        "### Example 1\n\n**Input:** `n = 2`\n\n**Output:** `3`",
+        1,
+    ).replace(
+        fresh_constraints_marker,
+        fresh_constraints_marker.replace(" them in.", " them in"),
+        1,
+    )
+
+    merged = gen.preserve_writeup_on_death(committed, fresh)
+
+    assert "Archived statement surviving the page death." in merged
+    assert "### Example 1" in merged
+    assert fresh_constraints_marker in merged
+    assert fresh_constraints_marker.replace(" them in.", " them in") not in merged
+    assert merged.endswith(fresh[fresh.index("## Solutions") :])
+    assert merged != fresh
+
+
+def test_preserve_writeup_on_death_returns_the_fresh_placeholder_for_a_pure_placeholder():
+    """A committed write-up with every section still a marker adds nothing."""
+    entry = {"slug": "amazon-gone", "title": "Gone", "url": "https://x/gone"}
+    fresh = gen.render_writeup(entry, None, "")
+
+    assert gen.preserve_writeup_on_death(fresh, fresh) == fresh
+
+
+def test_emit_scaffolds_preserves_a_dead_page_writeups_archived_sections(tmp_path, monkeypatch):
+    """A dead page must not re-render a committed write-up's archived body.
+
+    The committed write-up still carries the Solutions scaffold marker (so
+    it is not authored) but holds the archived statement: emission keeps it
+    and reports the slug, and a second pass over the result is byte-stable,
+    which is the property that lets a restored write-up survive every
+    future wave.
+    """
+    docs_dir = tmp_path / "docs" / "amazon"
+    practice_dir = tmp_path / "practice" / "amazon"
+    monkeypatch.setattr(gen, "DOCS_DIR", docs_dir)
+    monkeypatch.setattr(gen, "PRACTICE_DIR", practice_dir)
+    seed_cache(monkeypatch, tmp_path / "cache", "amazon-gone")
+    monkeypatch.setattr(
+        gen,
+        "fetch_problem_page",
+        lambda slug, cache_dir=None, delay=True, network=True: "<html>dead page</html>",
+    )
+    entry = {"slug": "amazon-gone", "title": "Gone", "url": "https://x/gone", "companies": ["Amazon"], "updated": "2026-09-19"}
+    committed = gen.render_writeup(entry, None, "").replace(
+        "<!-- Statement not parseable from FastPrep; fill it in. -->",
+        "Archived statement surviving the page death.",
+        1,
+    )
+    docs_dir.mkdir(parents=True)
+    (docs_dir / "amazon-gone.md").write_text(committed, encoding="utf-8")
+
+    stats = gen.emit_scaffolds([entry], fetch=False)
+
+    preserved = (docs_dir / "amazon-gone.md").read_text(encoding="utf-8")
+    assert preserved == committed
+    assert "Archived statement surviving the page death." in preserved
+    assert stats["writeups_preserved_dead_page"] == ["amazon-gone"]
+    assert entry["parse_status"] == "page-unparseable"
+
+    stats = gen.emit_scaffolds([entry], fetch=False)
+
+    assert (docs_dir / "amazon-gone.md").read_text(encoding="utf-8") == committed
+    assert stats["writeups_preserved_dead_page"] == ["amazon-gone"]
+
+
+def test_check_stays_green_for_a_death_preserved_writeup(tmp_path, monkeypatch):
+    """The check pins the Solutions block of a death-preserved write-up.
+
+    The archived statement is archive-owned (tampering with it stays green);
+    the Solutions scaffold block is generator-owned (drift there fails).
+    """
+    redirect_check_paths(tmp_path, monkeypatch)
+    entry = dict(UNPARSEABLE_ENTRY)
+    fresh = gen.render_writeup(entry, None, "")
+    committed = fresh.replace(
+        "<!-- Statement not parseable from FastPrep; fill it in. -->",
+        "Archived statement surviving the page death.",
+        1,
+    )
+    write_scaffold_set(tmp_path, entry)
+    (gen.DOCS_DIR / "amazon-gone.md").write_text(committed, encoding="utf-8")
+    (gen.DOCS_DIR / "index.md").write_text(gen.render_index([entry]), encoding="utf-8")
+
+    assert gen.check([entry]) == 0
+
+    tampered_solutions = committed.replace(
+        f"{gen.WRITEUP_PLACEHOLDER_MARKER} the worked derivation and write-up land",
+        f"{gen.WRITEUP_PLACEHOLDER_MARKER} drifted scaffold text",
+        1,
+    )
+    assert gen.WRITEUP_PLACEHOLDER_MARKER in tampered_solutions
+    (gen.DOCS_DIR / "amazon-gone.md").write_text(tampered_solutions, encoding="utf-8")
+    assert gen.check([entry]) == 1
+
+    tampered_statement = committed.replace(
+        "Archived statement surviving the page death.",
+        "Hand-edited archive text.",
+        1,
+    )
+    (gen.DOCS_DIR / "amazon-gone.md").write_text(tampered_statement, encoding="utf-8")
+    assert gen.check([entry]) == 0
+
+
+def test_check_pins_an_authored_dead_page_writeups_title_line(tmp_path, monkeypatch):
+    """A fully authored write-up on a dead page is pinned on its title line.
+
+    The pin is the manifest-derived `# [Title](url)` line, matching the
+    parsed-entry convention: a pin on the committed file's own first line
+    is always true and would never catch a write-up retitled away from the
+    manifest. The body below the title line stays hand-editable.
+    """
+    redirect_check_paths(tmp_path, monkeypatch)
+    entry = dict(UNPARSEABLE_ENTRY)
+    fresh = gen.render_writeup(entry, None, "")
+    committed = re.sub(
+        rf"{re.escape(gen.WRITEUP_PLACEHOLDER_MARKER)}.*?-->",
+        "Fully authored derivation.",
+        fresh,
+        flags=re.S,
+    )
+    assert gen.WRITEUP_PLACEHOLDER_MARKER not in committed
+    write_scaffold_set(tmp_path, entry)
+    (gen.DOCS_DIR / "amazon-gone.md").write_text(committed, encoding="utf-8")
+    (gen.DOCS_DIR / "index.md").write_text(gen.render_index([entry]), encoding="utf-8")
+
+    expectation = gen.expected_scaffold_fragments(entry)[gen.DOCS_DIR / "amazon-gone.md"]
+    assert expectation.prefix == "# [Gone](https://x/gone)\n"
+
+    assert gen.check([entry]) == 0
+
+    retitled = committed.replace(
+        "# [Gone](https://x/gone)", "# [Renamed Problem](https://x/gone)", 1
+    )
+    (gen.DOCS_DIR / "amazon-gone.md").write_text(retitled, encoding="utf-8")
+    assert gen.check([entry]) == 1
+
+    edited_body = committed.replace("Fully authored derivation.", "Rewritten derivation.", 1)
+    (gen.DOCS_DIR / "amazon-gone.md").write_text(edited_body, encoding="utf-8")
+    assert gen.check([entry]) == 0
+
+
 def design_operations_problem(slug: str) -> dict:
     """Build a parsed problem whose examples are design-operation sequences.
 

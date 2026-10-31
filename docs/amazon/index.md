@@ -278,7 +278,7 @@ Amazon-tagged coding problems from the [Tech-OA-Interview-Questions](https://git
 | [Get Max Events](amazon-get-maximum-events.md) | Hard | Dynamic Programming, Sorting, Greedy | 40 minutes | Amazon | 2025-01-05 |
 | [Calculate Max Profit](amazon-calculate-max-profit.md) | Easy | Greedy, Sorting | 15 minutes | Amazon | 2024-12-22 |
 | [Get Final Location](amazon-get-final-locations.md) | Easy | Hash Table, Sorting | 15 minutes | Amazon | 2024-12-22 |
-| [Get Stable Periods Count](amazon-get-stable-periods-count.md) | - | - | - | Amazon | 2024-12-22 |
+| [Get Stable Periods Count](amazon-get-stable-periods-count.md) | Medium | Sliding Window, Hash Table | 25 minutes | Amazon | 2024-12-22 |
 | [Max Transfer Rate](amazon-max-transfer-rate.md) | Easy | Greedy, Sorting, Math | 15 minutes | Amazon | 2024-12-22 |
 | [Get Max Stability](amazon-get-max-stability.md) | Medium | Sorting, Greedy | 25 minutes | Amazon | 2024-12-20 |
 | [Min Operations](amazon-make-array-zero-by-subtracting-equal-amounts.md) | Easy | Array, Hash Table | 15 minutes | Amazon | 2024-12-20 |
@@ -333,7 +333,7 @@ Amazon-tagged coding problems from the [Tech-OA-Interview-Questions](https://git
 | [Calculate Total Distrance Travelled](amazon-calculate-total-distance-travelled.md) | Medium | Array, Binary Search, Prefix Sum | 25 minutes | Amazon | 2024-09-19 |
 | [Maximum Possible Racers](amazon-maximum-possible-racers.md) | Medium | Sliding Window, Hash Table | 25 minutes | Amazon | 2024-09-19 |
 | [Distributed Packages](amazon-distribute-packages.md) | Medium | Array, Greedy, Sorting | 25 minutes | Amazon | 2024-09-03 |
-| [Find Capable Winners](amazon-find-capable-winners.md) | - | - | - | Amazon | 2024-09-03 |
+| [Find Capable Winners](amazon-find-capable-winners.md) | Hard | Sorting, Greedy, Array | 40 minutes | Amazon | 2024-09-03 |
 | [Get Max Information Gain](amazon-get-max-information-gain.md) | Easy | String, Hash Table, Sorting | 15 minutes | Amazon | 2024-09-03 |
 | [Get Min Size](amazon-get-min-size.md) | Medium | Binary Search, Greedy, Sorting | 25 minutes | Amazon | 2024-08-30 |
 | [Choose Warehouse Location](amazon-choose-warehouses-location.md) | Medium | Array, Dynamic Programming, Prefix Sum | 25 minutes | Amazon | 2024-08-25 |
@@ -342,7 +342,7 @@ Amazon-tagged coding problems from the [Tech-OA-Interview-Questions](https://git
 | [Assign Tasks](amazon-assign-tasks.md) | Easy | Array, Heap | 15 minutes | Amazon | 2024-08-05 |
 | [Get Active Requests Count](amazon-get-active-requests-count.md) | Medium | Queue, Simulation | 25 minutes | Amazon | 2024-08-05 |
 | [Get Operations](amazon-get-operations.md) | Hard | Array, Greedy, Sorting | 40 minutes | Amazon | 2024-08-05 |
-| [Process Queries On Cart](amazon-process-queries-on-cart.md) | - | - | - | Amazon | 2024-08-05 |
+| [Process Queries On Cart](amazon-process-queries-on-cart.md) | Easy | Linked List, Hash Table, Simulation | 15 minutes | Amazon | 2024-08-05 |
 | [Get Minimum Boxes](amazon-get-minimum-boxes.md) | Medium | Array, Sorting, Sliding Window | 25 minutes | Amazon | 2024-07-25 |
 | [Compute Encoded Product Name](amazon-compute-encoded-product-name.md) | Easy | String, Sorting | 15 minutes | Amazon | 2024-07-15 |
 | [Get Redundant Substrings](amazon-get-redundant-substrings.md) | Hard | String, Prefix Sum, Hash Table | 40 minutes | Amazon | 2024-07-15 |
@@ -393,7 +393,7 @@ Amazon-tagged coding problems from the [Tech-OA-Interview-Questions](https://git
 | [Execute Processes](amazon-execute-processes.md) | Medium | Array, Hash Table, Simulation | 25 minutes | Amazon | 2024-01-27 |
 | [Find Unique Values](amazon-find-unique-values.md) | Easy | Sorting, Hash Table | 15 minutes | Amazon | 2024-01-27 |
 | [Group Students](amazon-group-students.md) | Easy | Sorting, Greedy | 15 minutes | Amazon | 2024-01-27 |
-| [Number of Suitable Locations](amazon-num-of-suitable-places.md) | - | - | - | Amazon | 2024-01-27 |
+| [Number of Suitable Locations](amazon-num-of-suitable-places.md) | Medium | Sorting, Binary Search, Prefix Sum | 25 minutes | Amazon | 2024-01-27 |
 | [Rice Bags](max-set-size.md) | Medium | Hash Table, Dynamic Programming | 25 minutes | Amazon | 2024-01-13 |
 | [Get Discount Pairs](get-discount-pairs.md) | Easy | Array, Hash Table, Math | 15 minutes | Amazon | 2024-01-11 |
 | [Get Min Cost Data](get-min-cost-data.md) | Medium | String, Greedy, Hash Table | 25 minutes | Amazon | 2024-01-10 |

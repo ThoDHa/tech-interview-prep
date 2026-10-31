@@ -643,7 +643,7 @@ def test_committed_amazon_rows_dash_exactly_the_unsourced_rows():
         )
         == gen.UNKNOWN_TIME_CELL
     ]
-    assert len(dashed) == 24
+    assert len(dashed) == 20
 
 
 EXPECTED_AMAZON_DIFFICULTY_SAMPLES = {
@@ -668,7 +668,7 @@ def test_amazon_writeup_difficulty_reads_every_committed_header_offline():
         gen.amazon_writeup_difficulty(entry["slug"]) for entry in amazon
     )
     assert counts == collections.Counter(
-        {"Easy": 73, "Medium": 223, "Hard": 89, None: 25}
+        {"Easy": 74, "Medium": 225, "Hard": 90, None: 21}
     )
 
 
