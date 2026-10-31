@@ -202,7 +202,11 @@ def build_manifest(page_texts: Sequence[str]) -> List[dict]:
     """Build the Amazon-tagged manifest: filter, dedup, sort most-recent first.
 
     Rows tagged Amazon are kept, minus the dead FastPrep pages listed in
-    EXCLUDED_SLUGS.
+    EXCLUDED_SLUGS. A slug never scaffolded before (no write-up and no
+    practice folder) bootstraps with difficulty and categories None, so a
+    bank-growth run builds the manifest before any scaffold exists; a
+    missing write-up whose practice scaffolds DO exist is bank corruption
+    and still aborts.
 
     Args:
         page_texts: Raw markdown of each bank page, in any order.
@@ -225,19 +229,17 @@ def build_manifest(page_texts: Sequence[str]) -> List[dict]:
                 by_slug[row["slug"]] = row
     entries = sorted(by_slug.values(), key=lambda row: row["slug"])
     entries.sort(key=lambda row: row["updated"], reverse=True)
-    return [
-        {
-            "slug": row["slug"],
-            "title": row["title"],
-            "url": row["url"],
-            "companies": row["companies"],
-            "updated": row["updated"],
-            **parse_difficulty_line(
-                DOCS_DIR / f"{row['slug']}.md"
-            ),
-        }
-        for row in entries
-    ]
+    enriched: List[dict] = []
+    for row in entries:
+        writeup_path = DOCS_DIR / f"{row['slug']}.md"
+        never_scaffolded = not writeup_path.exists() and not (PRACTICE_DIR / row["slug"]).exists()
+        writeup_metadata = (
+            {"difficulty": None, "categories": None}
+            if never_scaffolded
+            else parse_difficulty_line(writeup_path)
+        )
+        enriched.append({**row, **writeup_metadata})
+    return enriched
 
 
 def load_committed_manifest(path: Path = MANIFEST_PATH) -> List[dict]:

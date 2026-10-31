@@ -227,6 +227,41 @@ def test_build_manifest_maps_the_unknown_markers_to_none(seeded_docs_dir):
     assert entry["categories"] is None
 
 
+def test_build_manifest_bootstraps_a_never_scaffolded_slug_with_none_metadata(tmp_path, monkeypatch):
+    monkeypatch.setattr(gen, "DOCS_DIR", tmp_path / "docs" / "amazon")
+    monkeypatch.setattr(gen, "PRACTICE_DIR", tmp_path / "practice" / "amazon")
+    page = (
+        "| Company | OA / Interview Question | Practice | Updated |\n"
+        "| :-- | :-- | :-: | :-- |\n"
+        "|**Amazon**|[Brand New Task](https://www.fastprep.io/problems/amazon-brand-new-task)"
+        "|[![Practice][p]](https://www.fastprep.io/problems/amazon-brand-new-task)"
+        "|Sep 19, 2026|\n"
+    )
+
+    manifest = gen.build_manifest([page])
+
+    assert [entry["slug"] for entry in manifest] == ["amazon-brand-new-task"]
+    assert manifest[0]["difficulty"] is None
+    assert manifest[0]["categories"] is None
+
+
+def test_build_manifest_aborts_when_writeup_missing_but_practice_scaffolds_exist(tmp_path, monkeypatch):
+    monkeypatch.setattr(gen, "DOCS_DIR", tmp_path / "docs" / "amazon")
+    practice_dir = tmp_path / "practice" / "amazon"
+    monkeypatch.setattr(gen, "PRACTICE_DIR", practice_dir)
+    (practice_dir / "amazon-half-built").mkdir(parents=True)
+    page = (
+        "| Company | OA / Interview Question | Practice | Updated |\n"
+        "| :-- | :-- | :-: | :-- |\n"
+        "|**Amazon**|[Half Built](https://www.fastprep.io/problems/amazon-half-built)"
+        "|[![Practice][p]](https://www.fastprep.io/problems/amazon-half-built)"
+        "|Sep 19, 2026|\n"
+    )
+
+    with pytest.raises(SystemExit, match="write-up not found"):
+        gen.build_manifest([page])
+
+
 @pytest.mark.skipif(
     not all(path.exists() for path in REAL_BANK_PAGES),
     reason="cached bank pages not present (offline fixture-only run)",
