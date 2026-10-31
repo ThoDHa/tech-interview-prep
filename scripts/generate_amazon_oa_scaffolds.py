@@ -21,10 +21,12 @@ value. Trees, linked lists, graphs, design-operation sequences, and free-text
 outputs produce an empty cases.json and a test module that skips with a reason
 naming the slug. Empty is never a silent pass.
 
-Authored protection: when a page yields no cases but the committed cases.json
-is a non-empty list (cases authored by hand after the scaffold), emission
-leaves the folder's practice files untouched, and --check exempts them from
-the generator-owned fragment pins.
+Authored protection: when the committed manifest does not mark a slug
+`parsed-with-cases` but its committed cases.json is a non-empty list
+(cases authored by hand after the scaffold), emission leaves the folder's
+practice files untouched, and --check exempts them from the generator-owned
+fragment pins. A `parsed-with-cases` entry's non-empty cases.json is the
+generator's own last render and stays generator-owned.
 
 Offline contract: the committed scripts/amazon_oa_manifest.json (with its
 per-slug parse_status) is the source of truth. When the bank pages under /tmp
@@ -639,6 +641,28 @@ def cases_are_authored(cases_path: Path) -> bool:
     return bool(_json_list_file(cases_path))
 
 
+def committed_cases_are_authored(entry: dict, cases_path: Path) -> bool:
+    """Report whether a slug's cases.json is hand-owned, per the committed manifest.
+
+    A `parsed-with-cases` entry's non-empty cases.json is the generator's
+    own last render, never hand-authored; only a non-empty list under any
+    other committed parse_status counts as authored. Emission and check
+    share this predicate so the two sides cannot drift.
+
+    Args:
+        entry: Manifest entry whose committed parse_status classifies the
+            folder (emission reads it before any in-pass rewrite).
+        cases_path: Path to the committed cases.json.
+
+    Returns:
+        True when the committed parse_status is not `parsed-with-cases`
+        and the file parses to a non-empty JSON list.
+    """
+    return entry.get("parse_status") != "parsed-with-cases" and cases_are_authored(
+        cases_path
+    )
+
+
 def _split_writeup_sections(text: str) -> List[str]:
     """Split a write-up into [header, section, ...] at `## ` headings.
 
@@ -1209,8 +1233,8 @@ def emit_scaffolds(entries: Sequence[dict], fetch: bool = True) -> dict:
         write-up sections were merged into the placeholder because the
         FastPrep page is dead), `cases_preserved` (slugs whose authored
         practice cases.json, stub, and test module were left untouched),
-        `cases_conflicted` (slugs whose authored practice cases.json met a
-        non-empty upstream parse and was overwritten; report-only).
+        `cases_conflicted` (slugs whose hand-authored practice cases.json
+        met a non-empty upstream parse and was overwritten; report-only).
     """
     stats = {
         "generated": 0,
@@ -1242,7 +1266,9 @@ def emit_scaffolds(entries: Sequence[dict], fetch: bool = True) -> dict:
         (PRACTICE_DIR / slug).mkdir(parents=True, exist_ok=True)
         writeup_path = DOCS_DIR / f"{slug}.md"
         rendered = render_all(entry, problem, parsed_cases, statement_html)
-        authored_cases = cases_are_authored(PRACTICE_DIR / slug / "cases.json")
+        authored_cases = committed_cases_are_authored(
+            entry, PRACTICE_DIR / slug / "cases.json"
+        )
         if authored_cases and not parsed_cases.cases:
             # Authored practice cases on a page that yields none: the stub,
             # cases.json, and test module are hand-owned, so only the
@@ -1450,7 +1476,8 @@ def check(manifest: Sequence[dict]) -> int:
     Read-only: nothing is fetched, written, or rewritten; the committed
     manifest's `parse_status` drives the expectation per slug, so the check
     never depends on the /tmp bank pages or the fastprep cache. A folder
-    whose committed cases.json is an authored (non-empty) list keeps its
+    whose committed parse_status is not `parsed-with-cases` and whose
+    cases.json is an authored (non-empty) list keeps its
     stub, cases.json, and test module exempt from the generator-owned
     fragment pins (the cases.json list-validity check still applies),
     mirroring emission's authored protection.
@@ -1465,10 +1492,7 @@ def check(manifest: Sequence[dict]) -> int:
     for entry in manifest:
         slug = entry["slug"]
         cases_path = PRACTICE_DIR / slug / "cases.json"
-        authored_cases = (
-            entry.get("parse_status") != "parsed-with-cases"
-            and cases_are_authored(cases_path)
-        )
+        authored_cases = committed_cases_are_authored(entry, cases_path)
         writeup_path = DOCS_DIR / f"{slug}.md"
         for path, expectation in expected_scaffold_fragments(entry).items():
             if authored_cases and path != writeup_path:
@@ -1541,6 +1565,17 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
     else:
         manifest = build_manifest([path.read_text(encoding="utf-8") for path in bank_pages])
         source = "built from bank pages"
+        # The committed manifest classifies, the bank pages enrich: a built
+        # entry carries no parse_status, and emission's preservation and
+        # conflict predicates read the committed classification, so the
+        # seed must land before emission.
+        committed_by_slug = {
+            entry["slug"]: entry for entry in load_committed_manifest(MANIFEST_PATH)
+        }
+        for entry in manifest:
+            committed = committed_by_slug.get(entry["slug"])
+            if committed is not None:
+                entry["parse_status"] = committed.get("parse_status")
     print(f"manifest: {len(manifest)} Amazon-tagged coding problems ({source})")
     if args.manifest_only:
         write_manifest(manifest)

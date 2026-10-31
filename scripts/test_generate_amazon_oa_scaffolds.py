@@ -1181,7 +1181,7 @@ def test_emit_scaffolds_reports_cases_conflicted_when_upstream_parse_meets_autho
         "fetch_problem_page",
         lambda slug, cache_dir=None, delay=True, network=True: FASTPREP_PAGE,
     )
-    entry = {"slug": "amazon-ok", "title": "Ok", "url": "https://x", "companies": ["Amazon"], "updated": "2026-09-19"}
+    entry = {"slug": "amazon-ok", "title": "Ok", "url": "https://x", "companies": ["Amazon"], "updated": "2026-09-19", "parse_status": "parsed-empty-cases"}
     seed_authored_cases_folder(practice_dir, "amazon-ok", [{"id": "case_1", "args": [["hand"], [1]], "expected": [2]}])
 
     stats = gen.emit_scaffolds([entry], fetch=False)
@@ -1196,6 +1196,157 @@ def test_emit_scaffolds_reports_cases_conflicted_when_upstream_parse_meets_autho
     assert (slug_dir / "cases.json").read_text(encoding="utf-8") == gen.render_cases_file(
         parsed_cases
     )
+
+
+def test_emit_scaffolds_names_only_hand_owned_cases_in_cases_conflicted(tmp_path, monkeypatch):
+    """cases_conflicted fires only for hand-authored case sets meeting upstream cases.
+
+    A `parsed-with-cases` entry's non-empty cases.json is the generator's
+    own last render, so a full run over the committed bank (hundreds of
+    such folders) must stay silent for them; only a hand-authored case set
+    under a non-pwc committed parse_status names a real overwrite.
+    """
+    docs_dir = tmp_path / "docs" / "amazon"
+    practice_dir = tmp_path / "practice" / "amazon"
+    monkeypatch.setattr(gen, "DOCS_DIR", docs_dir)
+    monkeypatch.setattr(gen, "PRACTICE_DIR", practice_dir)
+    seed_cache(monkeypatch, tmp_path / "cache", "amazon-ok", "amazon-authored")
+    monkeypatch.setattr(
+        gen,
+        "fetch_problem_page",
+        lambda slug, cache_dir=None, delay=True, network=True: FASTPREP_PAGE,
+    )
+    problem = gen.extract_problem_record(FASTPREP_PAGE)
+    parsed_cases = gen.cases_from_record(problem)
+    assert parsed_cases.cases, "fixture must parse to non-empty cases"
+
+    generator_owned_entry = {
+        "slug": "amazon-ok",
+        "title": "Ok",
+        "url": "https://x",
+        "companies": ["Amazon"],
+        "updated": "2026-09-19",
+        "parse_status": "parsed-with-cases",
+    }
+    statement_html = gen.resolve_statement(problem, FASTPREP_PAGE)
+    for path, content in gen.render_all(
+        generator_owned_entry, problem, parsed_cases, statement_html
+    ).items():
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text(content, encoding="utf-8")
+    authored_entry = {
+        "slug": "amazon-authored",
+        "title": "Authored",
+        "url": "https://x",
+        "companies": ["Amazon"],
+        "updated": "2026-09-19",
+        "parse_status": "parsed-empty-cases",
+    }
+    seed_authored_cases_folder(
+        practice_dir, "amazon-authored", [{"id": "case_1", "args": [["hand"], [1]], "expected": [2]}]
+    )
+
+    stats = gen.emit_scaffolds([generator_owned_entry, authored_entry], fetch=False)
+
+    assert stats["cases_conflicted"] == ["amazon-authored"]
+    assert stats["cases_preserved"] == []
+    assert generator_owned_entry["parse_status"] == "parsed-with-cases"
+    assert (practice_dir / "amazon-ok" / "cases.json").read_text(
+        encoding="utf-8"
+    ) == gen.render_cases_file(parsed_cases)
+    assert (practice_dir / "amazon-authored" / "cases.json").read_text(
+        encoding="utf-8"
+    ) == gen.render_cases_file(parsed_cases)
+
+
+def test_main_seeds_committed_parse_status_before_emission(tmp_path, monkeypatch, seeded_docs_dir, capsys):
+    """A bank-present run classifies folders from the committed manifest.
+
+    The committed manifest classifies, the bank pages enrich: a built
+    entry carries no parse_status, so without seeding it from the commit
+    before emission, every generator-owned `parsed-with-cases` folder's
+    non-empty cases.json counted as hand-authored and the wave log named
+    a conflict for it. The seed must leave brand-new slugs (absent from
+    the committed manifest) unclassified — emission classifies them from
+    the live parse itself.
+    """
+    monkeypatch.setattr(
+        gen,
+        "DEFAULT_BANK_PAGES",
+        [
+            FIXTURES_DIR / "bank_coding.md",
+            FIXTURES_DIR / "bank_coding_page_2.md",
+            FIXTURES_DIR / "bank_coding_page_3.md",
+        ],
+    )
+    target_slug = gen.extract_problem_record(FASTPREP_PAGE)["id"]
+    manifest_path = tmp_path / "amazon_oa_manifest.json"
+    manifest_path.write_text(
+        json.dumps(
+            [
+                {
+                    "slug": target_slug,
+                    "title": "Maximize Adjacent Difference With One Reversal",
+                    "url": f"https://www.fastprep.io/problems/{target_slug}",
+                    "companies": ["Amazon"],
+                    "updated": "2026-09-19",
+                    "difficulty": "Hard",
+                    "categories": "Array, Greedy, Math",
+                    "parse_status": "parsed-with-cases",
+                }
+            ],
+            indent=2,
+        )
+        + "\n",
+        encoding="utf-8",
+    )
+    monkeypatch.setattr(gen, "MANIFEST_PATH", manifest_path)
+    monkeypatch.setattr(gen, "PRACTICE_DIR", tmp_path / "practice" / "amazon")
+    monkeypatch.setattr(
+        gen,
+        "fetch_problem_page",
+        lambda slug, cache_dir=None, delay=True, network=True: FASTPREP_PAGE,
+    )
+    committed_manifest = json.loads(
+        (SCRIPTS_DIR / "amazon_oa_manifest.json").read_text(encoding="utf-8")
+    )
+    committed_pwc_slug = next(
+        entry["slug"]
+        for entry in committed_manifest
+        if entry.get("parse_status") == "parsed-with-cases"
+    )
+    shutil.copytree(
+        SCRIPTS_DIR.parent / "practice" / "amazon" / committed_pwc_slug,
+        gen.PRACTICE_DIR / target_slug,
+    )
+    copied_cases = json.loads(
+        (gen.PRACTICE_DIR / target_slug / "cases.json").read_text(encoding="utf-8")
+    )
+    assert copied_cases, "fixture premise: the committed folder's cases.json is non-empty"
+    mkdocs_path = tmp_path / "mkdocs.yml"
+    mkdocs_path.write_text(
+        "nav:\n  - Home: index.md\n  - Problems:\n    - Leetcode:\n",
+        encoding="utf-8",
+    )
+    monkeypatch.setattr(gen, "MKTABS_PATH", mkdocs_path)
+    seen = {}
+    real_emit = gen.emit_scaffolds
+
+    def spy_emit(entries, fetch=True):
+        seen["entries"] = [dict(entry) for entry in entries]
+        return real_emit(entries, fetch=fetch)
+
+    monkeypatch.setattr(gen, "emit_scaffolds", spy_emit)
+
+    assert gen.main([]) == 0
+
+    out = capsys.readouterr().out
+    assert "practice cases conflicted" not in out
+    seeded = {entry["slug"]: entry for entry in seen["entries"]}
+    assert seeded[target_slug]["parse_status"] == "parsed-with-cases"
+    brand_new = [slug for slug in seeded if slug != target_slug]
+    assert brand_new, "fixture premise: the bank carries slugs the committed manifest omits"
+    assert all("parse_status" not in seeded[slug] for slug in brand_new)
 
 
 def test_check_stays_green_for_an_authored_cases_folder(tmp_path, monkeypatch):
