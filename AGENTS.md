@@ -67,14 +67,14 @@ all three after touching a generator, its data sources, or generated output.
   aborts the run. `cases_full.json` is never generated.
 - `scripts/generate_amazon_oa_scaffolds.py` emits the Amazon scaffolds under
   `docs/amazon/` and `practice/amazon/`, and owns
-  `docs/amazon/index.md` whole-file. Three write-ups rendered from
-  the manifest alone are byte-compared, never hand-edited:
-  `amazon-find-minimum-possible-variance.md`, `amazon-get-min-cost-book.md`,
-  `amazon-find-minimum-number-of-operations.md`. For every other Amazon
-  write-up, the generator pins the `# [Title](url)` header line byte-exact and
-  fragment-pins the leading docstring lines of `solution.py` and
-  `test_<slug>.py` under `practice/amazon/<slug>/`; the write-up body is
-  hand-editable.
+  `docs/amazon/index.md` whole-file. A write-up rendered entirely from the
+  manifest (a dead FastPrep page whose scaffolds are placeholder-only) is
+  byte-compared, never hand-edited; the bank currently has none, since the
+  dead FastPrep rows are excluded from the manifest outright. For every
+  other Amazon write-up, the generator pins the `# [Title](url)` header
+  line byte-exact and fragment-pins the leading docstring lines of
+  `solution.py` and `test_<slug>.py` under `practice/amazon/<slug>/`; the
+  write-up body is hand-editable.
 - `scripts/generate_index_tables.py` owns the marker-bounded sections of
   `docs/leetcode/index.md` (`unified-leetcode`, `sources`) and the `Leetcode`
   and `Amazon` nav sections in `mkdocs.yml`.

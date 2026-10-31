@@ -23,11 +23,13 @@ FIXTURES_DIR = SCRIPTS_DIR / "fixtures"
 
 BANK_PAGE = (FIXTURES_DIR / "bank_coding.md").read_text(encoding="utf-8")
 BANK_PAGE_2 = (FIXTURES_DIR / "bank_coding_page_2.md").read_text(encoding="utf-8")
+BANK_PAGE_3 = (FIXTURES_DIR / "bank_coding_page_3.md").read_text(encoding="utf-8")
 FASTPREP_PAGE = (FIXTURES_DIR / "fastprep_problem.html").read_text(encoding="utf-8")
 
 REAL_BANK_PAGES = [
     Path("/tmp/opencode/tech-oa/coding.md"),
     Path("/tmp/opencode/tech-oa/coding-page-2.md"),
+    Path("/tmp/opencode/tech-oa/coding-page-3.md"),
 ]
 
 
@@ -78,7 +80,7 @@ def seeded_docs_dir(tmp_path, monkeypatch):
     directory must hold a synthetic write-up per fixture slug.
     """
     slugs = set()
-    for page_text in (BANK_PAGE, BANK_PAGE_2):
+    for page_text in (BANK_PAGE, BANK_PAGE_2, BANK_PAGE_3):
         for row in gen.parse_bank_rows(page_text):
             slugs.add(row["slug"])
     slug_headers = {
@@ -113,6 +115,31 @@ def test_build_manifest_dedups_by_slug_keeping_most_recent(seeded_docs_dir):
     entries = [e for e in manifest if e["slug"].endswith("one-reversal")]
     assert len(entries) == 1
     assert entries[0]["updated"] == "2026-09-19"
+
+
+def test_build_manifest_merges_three_pages_with_dedup_and_exclusion(seeded_docs_dir):
+    manifest = gen.build_manifest([BANK_PAGE, BANK_PAGE_2, BANK_PAGE_3])
+    slugs = [entry["slug"] for entry in manifest]
+    assert slugs[0] == "amazon-telemetry-aggregation-buffer"
+    reversal = [
+        entry for entry in manifest
+        if entry["slug"] == "amazon-maximize-adjacent-difference-with-one-reversal"
+    ]
+    assert len(reversal) == 1
+    assert reversal[0]["updated"] == "2026-09-19"
+    assert "amazon-find-minimum-number-of-operations" not in slugs
+    assert "uber-ride-surge-estimator" not in slugs
+
+
+def test_build_manifest_drops_excluded_dead_page_slugs():
+    page = (
+        "| Company | OA / Interview Question | Practice | Updated |\n"
+        "| :-- | :-- | :-: | :-- |\n"
+        "|**Amazon**|[Get Min Cost Book](https://www.fastprep.io/problems/amazon-get-min-cost-book)"
+        "|[![Practice][p]](https://www.fastprep.io/problems/amazon-get-min-cost-book)"
+        "|🔥 Sep 21, 2026|\n"
+    )
+    assert gen.build_manifest([page]) == []
 
 
 def test_build_manifest_sorts_most_recent_first(seeded_docs_dir):
@@ -201,12 +228,29 @@ def test_build_manifest_maps_the_unknown_markers_to_none(seeded_docs_dir):
     not all(path.exists() for path in REAL_BANK_PAGES),
     reason="cached bank pages not present (offline fixture-only run)",
 )
-def test_real_bank_pages_yield_383_unique_amazon_entries():
+def test_real_bank_pages_yield_413_unique_amazon_entries_and_410_manifest_entries(tmp_path, monkeypatch):
     texts = [path.read_text(encoding="utf-8") for path in REAL_BANK_PAGES]
+    bank_slugs = {
+        row["slug"]
+        for text in texts
+        for row in gen.parse_bank_rows(text)
+        if gen.AMAZON_TAG in row["companies"]
+    }
+    assert len(bank_slugs) == 413
+    # build_manifest enriches rows from the write-up headers, and the bank
+    # leads the docs tree between syncs; synthetic headers keep the count
+    # assertions independent of which scaffolds already exist.
+    for slug in bank_slugs:
+        (tmp_path / f"{slug}.md").write_text(
+            "# [T](https://x)\n\n**Medium** | **NN minutes** | **Array**\n",
+            encoding="utf-8",
+        )
+    monkeypatch.setattr(gen, "DOCS_DIR", tmp_path)
     manifest = gen.build_manifest(texts)
-    assert len(manifest) == 383
+    assert len(manifest) == 410
     slugs = [entry["slug"] for entry in manifest]
-    assert len(set(slugs)) == 383
+    assert not set(slugs) & gen.EXCLUDED_SLUGS
+    assert len(set(slugs)) == len(slugs)
     updated = [entry["updated"] for entry in manifest]
     assert updated == sorted(updated, reverse=True)
 

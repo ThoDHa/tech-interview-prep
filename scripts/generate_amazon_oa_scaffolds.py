@@ -66,7 +66,17 @@ MKTABS_PATH = REPO_ROOT / "mkdocs.yml"
 DEFAULT_BANK_PAGES = (
     Path("/tmp/opencode/tech-oa/coding.md"),
     Path("/tmp/opencode/tech-oa/coding-page-2.md"),
+    Path("/tmp/opencode/tech-oa/coding-page-3.md"),
 )
+# Bank rows whose FastPrep problem pages are dead (HTTP 404): the write-ups
+# behind them were deliberately dropped, and keeping the rows out of the
+# manifest stops every regeneration from re-emitting placeholder-only
+# scaffolds for problems FastPrep no longer serves.
+EXCLUDED_SLUGS = {
+    "amazon-find-minimum-number-of-operations",
+    "amazon-find-minimum-possible-variance",
+    "amazon-get-min-cost-book",
+}
 FASTPREP_CACHE_DIR = Path("/tmp/opencode/fastprep-cache")
 FASTPREP_URL_TEMPLATE = "https://www.fastprep.io/problems/{slug}"
 FETCH_DELAY_SECONDS = 0.5
@@ -154,7 +164,8 @@ def parse_bank_rows(page_text: str) -> List[dict]:
     """Extract every problem row from a Tech-OA bank page.
 
     Args:
-        page_text: Raw markdown of a bank page (coding.md / coding-page-2.md).
+        page_text: Raw markdown of a bank page (coding.md / coding-page-2.md /
+            coding-page-3.md).
 
     Returns:
         A list of row dicts with `companies` (list of names), `title`, `url`,
@@ -190,6 +201,9 @@ def format_updated_date(raw_date: str) -> str:
 def build_manifest(page_texts: Sequence[str]) -> List[dict]:
     """Build the Amazon-tagged manifest: filter, dedup, sort most-recent first.
 
+    Rows tagged Amazon are kept, minus the dead FastPrep pages listed in
+    EXCLUDED_SLUGS.
+
     Args:
         page_texts: Raw markdown of each bank page, in any order.
 
@@ -203,6 +217,8 @@ def build_manifest(page_texts: Sequence[str]) -> List[dict]:
     for page_text in page_texts:
         for row in parse_bank_rows(page_text):
             if AMAZON_TAG not in row["companies"]:
+                continue
+            if row["slug"] in EXCLUDED_SLUGS:
                 continue
             existing = by_slug.get(row["slug"])
             if existing is None or row["updated"] > existing["updated"]:
@@ -1230,7 +1246,7 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
         action="append",
         type=Path,
         default=None,
-        help="Bank page markdown (default: the two cached Tech-OA coding pages)",
+        help="Bank page markdown (default: the three cached Tech-OA coding pages)",
     )
     parser.add_argument("--limit", type=int, default=None, help="Scaffold only the first N entries")
     parser.add_argument("--manifest-only", action="store_true", help="Write only the manifest")
