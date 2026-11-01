@@ -2,9 +2,10 @@
 
 The generator-emitted test module replays solution.py against cases.json
 and stays untouched; this module replays the write-up's recommended
-Single-Pass Run Counter reference against cases_full.json plus three
-constructed full-size corners. Every expectation in cases_full.json is
-oracle-derived, never hand-computed and never recorded from this
+Single-Pass Run Counter reference against cases_full.json plus
+constructed and synthesized full-size corners. Every expectation in
+cases_full.json is oracle-derived, never hand-computed and never
+recorded from this
 reference: the oracle enumerates run boundaries (indices whose value
 differs from their predecessor), takes the longest stretch between
 consecutive boundaries and the array ends, and shares no mechanism with
@@ -30,8 +31,11 @@ constructible or synthesized, never serialized bulk:
 - test_synthesized_randomized_array_matches_frozen_expectation: the
   review-sanctioned single seeded randomized representative at the
   100000-element scale; values are drawn with one random.Random(20261031)
-  generator over the signed 10^9 domain, and only the frozen
-  expectation is stored (1, frozen from the boundary-enumeration oracle
+  generator over the narrow 1250-value domain, since the signed 10^9
+  domain almost surely draws no adjacent equal pair in 10^5 draws and
+  its outcome would merely repeat the constructed strictly-ascending
+  corner instead of exercising run boundaries. Only the frozen
+  expectation is stored (2, frozen from the boundary-enumeration oracle
   and confirmed by the reference's rolling counter).
 """
 
@@ -48,7 +52,8 @@ reference_module = load_solution(__file__, "reference.py")
 CONSTRUCTED_LENGTH = 100000
 RANDOMIZED_SEED = 20261031
 RANDOMIZED_LENGTH = 100000
-RANDOMIZED_FROZEN_EXPECTATION = 1
+RANDOMIZED_VALUE_DOMAIN = 1250
+RANDOMIZED_FROZEN_EXPECTATION = 2
 
 
 def _ids(cases):
@@ -76,5 +81,7 @@ def test_constructed_all_equal_array_answers_full_length():
 
 def test_synthesized_randomized_array_matches_frozen_expectation():
     value_rng = random.Random(RANDOMIZED_SEED)
-    randomized = [value_rng.randrange(-(10**9), 10**9 + 1) for _ in range(RANDOMIZED_LENGTH)]
+    randomized = [
+        value_rng.randrange(0, RANDOMIZED_VALUE_DOMAIN) for _ in range(RANDOMIZED_LENGTH)
+    ]
     assert reference_module.Solution().solve(randomized) == RANDOMIZED_FROZEN_EXPECTATION

@@ -2,8 +2,9 @@
 
 The generator-emitted test module replays solution.py against cases.json
 and stays untouched; this module replays the write-up's recommended
-Min-Heap with heapq reference against cases_full.json plus three
-constructed full-size corners. The statement defines its procedure
+Min-Heap with heapq reference against cases_full.json plus
+constructed and synthesized full-size corners. The statement defines
+its procedure
 literally, so the oracle was an independently coded implementation of
 that same smallest-first greedy rather than a different algorithm: a
 two-queue merge planner (original ropes sorted once, merged sums
@@ -72,7 +73,7 @@ def _equal_rope_closed_form(rope_count: int, rope_length: int) -> int:
 
     The smallest-first greedy on equal weights builds the complete
     binary tree, so the cost is the length times the leaf-depth sum:
-    floor(log2 rope_count) leaves sit one level shallower than the rest.
+    leaves at depth floor(log2 rope_count) sit one level shallower than the rest.
     """
     shallow_depth = rope_count.bit_length() - 1
     deep_count = 2 * (rope_count - 2**shallow_depth)
