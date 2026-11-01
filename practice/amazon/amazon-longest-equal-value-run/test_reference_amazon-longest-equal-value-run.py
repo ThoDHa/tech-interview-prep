@@ -37,6 +37,25 @@ constructible or synthesized, never serialized bulk:
   corner instead of exercising run boundaries. Only the frozen
   expectation is stored (2, frozen from the boundary-enumeration oracle
   and confirmed by the reference's rolling counter).
+
+Discrimination record for the wrong-neighbor compare mutants, each
+rendering applied to every case in the module: the randomized item alone
+discriminates none of them, all three renderings return the frozen 2 on
+that draw, and the serialized cases carry the discrimination instead,
+with the constructed all-equal corner joining against the look-ahead
+rendering. example_1 catches the back-lagged compare
+`nums[index] == nums[index - 2]`: comparing two back misses the first
+extension of every run, so the interior [2, 2, 2] run scores 2 and the
+mutant answers 2 against the frozen 3. two_equal and the all-equal
+corners catch the look-ahead compare `nums[index] == nums[index + 1]`
+with the out-of-bounds final index dropped from the loop: a two-element
+array never enters the loop (mutant 1 against the frozen 2) and a
+whole-array run loses its final extension (9 vs 10 serialized, 99999 vs
+100000 constructed). run_at_end catches the lagged-pair compare
+`nums[index - 1] == nums[index - 2]`: the condition reads the two
+elements before the current one, so a run's first extension never fires
+(mutant 2 against the frozen 3; the same shape catches it in
+negatives_and_large_values).
 """
 
 import random
