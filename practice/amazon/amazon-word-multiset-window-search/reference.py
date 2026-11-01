@@ -35,11 +35,11 @@ class Solution:
         Returns:
             The ascending start indices of the matching windows.
 
-        Time:  O(n): one average-constant map update per word entering
-            or leaving the window, plus the target's counts, where n =
-            len(textWords) and len(targetWords) <= n.
-        Space: O(n): the two count maps hold at most the distinct words
-            of the input, plus the result list.
+        Time:  O(n + k): one average-constant map update per word
+            entering or leaving the window, plus building the target's
+            counts, where n = len(textWords) and k = len(targetWords).
+        Space: O(n + k): the two count maps hold at most the distinct
+            words of the input, plus the result list.
         """
         needed: Dict[str, int] = {}
         for word in targetWords:
