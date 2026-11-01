@@ -252,7 +252,7 @@ The sweep pushes each of the `m` values once and pops each at most once, so the 
 
 ### Space Complexity
 
-- **Brute Force Scan per Query**: `O(1)` - loop locals only, beyond the output.
+- **Brute Force Scan per Query**: `O(m)` - the transient per-query tail slice, beyond the output.
 - **One-Time Greater Table**: `O(m)` - the answer map.
 - **Monotonic Stack**: `O(m)` - the stack and the answer map.
 
