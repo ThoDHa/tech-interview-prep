@@ -123,7 +123,7 @@ The output and its sorted copy dominate; the walk itself keeps one label.
 
 - The parent array is a complete oracle for subtree membership on its own; no children map is required to be correct.
 - The filters stay inline here, which is exactly the coupling the statement warns about: adding a third condition means editing the walk.
-- Per-node walks re-traverse the same ancestor chains exponentially often in depth, which is the redundancy the next approach removes.
+- Per-node walks re-traverse the same ancestor chains quadratically often in depth, which is the redundancy the next approach removes.
 
 ### Children-Map DFS
 

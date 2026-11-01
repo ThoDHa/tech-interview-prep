@@ -104,9 +104,9 @@ class Solution:
 
 #### Time and Space Complexity Analysis
 
-##### Time Complexity: `O(g * m + n log n)`
+##### Time Complexity: `O(m^2 + n log n)`
 
-Every distinct time re-sweeps its meetings at least twice (once to change, once to confirm), so a timeline whose `g` time groups each need several passes costs up to a constant factor more than `m` per group; worst-case chains inside one group push a group to repeated passes. The final sort of holders is `O(n log n)`.
+Each sweep reads its group's meetings once, and a group re-sweeps until a full pass changes nothing, so a group of `k` meetings costs `k` per pass times however many passes it takes. The pass count is not a constant: a chain of `k` same-time meetings listed in reverse needs an impotent first pass, then roughly one pass per chain position as the secret walks the chain, each pass reading all `k` edges. One group holding all `m` meetings as such a chain makes the worst case quadratic: `O(m^2 + n log n)`, with the final sort of holders contributing the `O(n log n)`. Typical inputs scatter meetings across many small groups that stabilize after a pass or two, which behaves linearly per group; that is the typical shape of the input, not the bound.
 
 ##### Space Complexity: `O(m + n)`
 
@@ -199,7 +199,7 @@ The grouped map and the largest group's adjacency dominate; the queue never exce
 
 ### Time Complexity
 
-- **Timestamp-Swept Simulation**: `O(g * m + n log n)` - each time group re-sweeps until stable.
+- **Timestamp-Swept Simulation**: `O(m^2 + n log n)` - each time group re-sweeps until stable, so a long same-time chain compounds quadratically.
 - **Per-Time BFS on Meeting Groups**: `O(m log m + n log n)` - one sort plus one traversal per meeting edge.
 
 ### Space Complexity

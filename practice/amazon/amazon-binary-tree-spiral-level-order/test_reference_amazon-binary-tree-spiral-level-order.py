@@ -17,7 +17,8 @@ the three authored examples (empty tree, skipped nulls, alternating
 direction), single node, one-sided children, left/right/alternating
 chains, complete trees, sparse null holes, duplicate values at and
 across levels, all-negative values, and the +-10^6 value bounds, plus a
-seeded random band of 100 trees up to 40 nodes. Two further corners
+seeded random band of 100 trees drawn up to 40 nodes each (the frozen
+band realizes 18 nodes at the maximum, median 6). Two further corners
 stay out of the JSON because their serialized form exceeds the
 eye-auditable bound; both are constructed here and their expectations
 follow from the construction:
