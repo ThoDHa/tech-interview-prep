@@ -54,7 +54,7 @@ Two statement clauses shape everything: a meeting connects its participants only
 
 #### Derivation
 
-The most literal transcription of the statement keeps a set of holders and replays the timeline. Grouping meetings by time is unavoidable (the input order lies about causality), but inside a time group the simulation can be naive: sweep the group's meetings, teach the counterpart whenever one side holds the secret, and repeat until a full sweep teaches nobody. The repetition is what makes the simulation honest about instant sharing: in a chain of same-time meetings listed backwards, the first pass is impotent and the second pass cascades. Once every time has stabilized, the holders are the answer:
+The most literal transcription of the statement keeps a set of holders and replays the timeline. Grouping meetings by time is unavoidable (the input order lies about causality), but inside a time group the simulation can be naive: sweep the group's meetings, teach the counterpart whenever one side holds the secret, and repeat until a full sweep teaches nobody. The repetition is what makes the simulation honest about instant sharing: in a chain of same-time meetings listed backwards, each pass advances the secret one position along the chain until a final pass changes nothing. Once every time has stabilized, the holders are the answer:
 
 1. Seed `holders` with person `0` and `firstPerson`.
 2. For each distinct time in increasing order, collect that time's meetings.
@@ -106,7 +106,7 @@ class Solution:
 
 ##### Time Complexity: `O(m^2 + n log n)`
 
-Each sweep reads its group's meetings once, and a group re-sweeps until a full pass changes nothing, so a group of `k` meetings costs `k` per pass times however many passes it takes. The pass count is not a constant: a chain of `k` same-time meetings listed in reverse needs an impotent first pass, then roughly one pass per chain position as the secret walks the chain, each pass reading all `k` edges. One group holding all `m` meetings as such a chain makes the worst case quadratic: `O(m^2 + n log n)`, with the final sort of holders contributing the `O(n log n)`. Typical inputs scatter meetings across many small groups that stabilize after a pass or two, which behaves linearly per group; that is the typical shape of the input, not the bound.
+Each sweep reads its group's meetings once, and a group re-sweeps until a full pass changes nothing, so a group of `k` meetings costs `k` per pass times however many passes it takes. The pass count is not a constant: a chain of `k` same-time meetings listed in reverse needs roughly one pass per chain position as the secret walks the chain, plus one final pass that changes nothing, each pass reading all `k` edges. One group holding all `m` meetings as such a chain makes the worst case quadratic: `O(m^2 + n log n)`, with the final sort of holders contributing the `O(n log n)`. Typical inputs scatter meetings across many small groups that stabilize after a pass or two, which behaves linearly per group; that is the typical shape of the input, not the bound.
 
 ##### Space Complexity: `O(m + n)`
 
