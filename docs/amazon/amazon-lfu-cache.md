@@ -112,7 +112,10 @@ class Solution:
                 else:
                     if len(records) == capacity:
                         victim_key = min(
-                            records, key=lambda k: (records[k][1], records[k][2])
+                            records,
+                            key=lambda candidate: (
+                                records[candidate][1], records[candidate][2]
+                            ),
                         )
                         del records[victim_key]
                     stamp += 1
