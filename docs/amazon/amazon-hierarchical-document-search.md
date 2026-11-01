@@ -138,15 +138,15 @@ The Parent-Walk's repeated work is re-deriving one relation per node: who is in 
 
 #### Walkthrough
 
-Example 1, with `root = 0`, `minSize = 20`, `wantedType = "pdf"`. The stack column shows the traversal; the filter column runs only on documents:
+Example 1, with `root = 0`, `minSize = 20`, `wantedType = "pdf"`. Each row shows the stack at the top of the loop with the next node to pop rightmost; the filter column runs only on documents:
 
 ```text
 stack [0]      visit 0          folder, skip
-stack [2, 1]   visit 1          folder, skip
-stack [2]      visit 2          folder, skip
-stack [5]      visit 3          document: size 10 > 20 false
-stack [4, 5]   visit 4          document: size 30 > 20 true, type txt != pdf
-stack [5]      visit 5          document: size 40 > 20 true, type pdf == pdf
+stack [1, 2]   visit 2          folder, skip
+stack [1, 5]   visit 5          document: size 40 > 20 true, type pdf == pdf
+stack [1]      visit 1          folder, skip
+stack [3, 4]   visit 4          document: size 30 > 20 true, type txt != pdf
+stack [3]      visit 3          document: size 10 > 20 false
 
 matches [5]
 ```
