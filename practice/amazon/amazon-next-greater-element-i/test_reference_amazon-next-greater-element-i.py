@@ -12,8 +12,9 @@ query.length = 1 and query.length = reference.length (both length
 bounds), distinct values, every query value present in reference, plus
 scrambled query order, descending reference (every answer -1),
 ascending reference (only the last missing), signed extreme magnitudes,
-randomized mixed shapes, and one 5000-value reference with 2000
-queries. The output is a deterministic list aligned with query order,
+randomized mixed shapes, and two randomized cases at the statement's
+reference-length upper bound of 100000 (one with 2000 queries, one with
+100000, the query-length bound). The output is a deterministic list aligned with query order,
 so the comparison is plain `==` with no canonicalization.
 """
 
