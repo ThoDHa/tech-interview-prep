@@ -94,9 +94,9 @@ class Solution:
 
 Each of the `n` queries pays `O(m)` to locate its value and up to another `O(m)` to scan the tail, with `m = reference.length`.
 
-##### Space Complexity: `O(1)`
+##### Space Complexity: `O(m)`
 
-Beyond the output list, only the loop's index and candidate live across iterations. (`reference[anchor + 1:]` copies the tail per query; slicing it away with index arithmetic keeps the constant smaller.)
+Each query slices `reference[anchor + 1:]`, a transient copy of the unscanned tail, so the auxiliary space beyond the output list is one tail copy at a time; only the loop's index and candidate live across iterations.
 
 #### Key Insights
 
