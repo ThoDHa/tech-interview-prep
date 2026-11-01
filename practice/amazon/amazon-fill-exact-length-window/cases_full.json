@@ -1,0 +1,162 @@
+[
+  {
+    "id": "example_1",
+    "args": [
+      "11001",
+      2
+    ],
+    "expected": 5
+  },
+  {
+    "id": "all_ones",
+    "args": [
+      "1111",
+      2
+    ],
+    "expected": 4
+  },
+  {
+    "id": "all_zeros",
+    "args": [
+      "0000",
+      2
+    ],
+    "expected": 2
+  },
+  {
+    "id": "k_equals_length",
+    "args": [
+      "0101",
+      4
+    ],
+    "expected": 4
+  },
+  {
+    "id": "k_one_mixed",
+    "args": [
+      "101010",
+      1
+    ],
+    "expected": 4
+  },
+  {
+    "id": "single_zero_char",
+    "args": [
+      "0",
+      1
+    ],
+    "expected": 1
+  },
+  {
+    "id": "single_one_char",
+    "args": [
+      "1",
+      1
+    ],
+    "expected": 1
+  },
+  {
+    "id": "zeros_split",
+    "args": [
+      "1001001",
+      2
+    ],
+    "expected": 5
+  },
+  {
+    "id": "window_overlaps_all_ones",
+    "args": [
+      "111000",
+      3
+    ],
+    "expected": 6
+  },
+  {
+    "id": "best_window_mixed",
+    "args": [
+      "100101011",
+      3
+    ],
+    "expected": 7
+  },
+  {
+    "id": "forced_include_ones",
+    "args": [
+      "0110",
+      3
+    ],
+    "expected": 3
+  },
+  {
+    "id": "alternating_twenty",
+    "args": [
+      "01010101010101010101",
+      2
+    ],
+    "expected": 11
+  },
+  {
+    "id": "k_one_all_zeros",
+    "args": [
+      "000",
+      1
+    ],
+    "expected": 1
+  },
+  {
+    "id": "trailing_ones_untouched",
+    "args": [
+      "0011",
+      2
+    ],
+    "expected": 4
+  },
+  {
+    "id": "separated_single_zeros",
+    "args": [
+      "010",
+      1
+    ],
+    "expected": 2
+  },
+  {
+    "id": "two_char_windows",
+    "args": [
+      "010",
+      2
+    ],
+    "expected": 2
+  },
+  {
+    "id": "exact_zero_block_cover",
+    "args": [
+      "1100",
+      2
+    ],
+    "expected": 4
+  },
+  {
+    "id": "multiple_optimal_windows",
+    "args": [
+      "0101",
+      2
+    ],
+    "expected": 3
+  },
+  {
+    "id": "k_equals_length_all_ones",
+    "args": [
+      "111",
+      3
+    ],
+    "expected": 3
+  },
+  {
+    "id": "longer_binary",
+    "args": [
+      "10110111",
+      3
+    ],
+    "expected": 7
+  }
+]
