@@ -90,9 +90,10 @@ def test_constructed_perfect_tree_of_255_nodes_alternates_through_eight_levels()
     for depth in range(PERFECT_TREE_DEPTH + 1):
         level = list(range(2**depth, 2 ** (depth + 1)))
         expected.append(level[::-1] if depth % 2 else level)
-    got = reference.Solution().zigzagLevels(build_tree(values))
+    tree = build_tree(values)
+    got = reference.Solution().zigzagLevels(tree)
     assert got == expected
-    assert _spiral_by_depth_bucketed_dfs(build_tree(values)) == expected
+    assert _spiral_by_depth_bucketed_dfs(tree) == expected
 
 
 def test_constructed_caterpillar_of_500_nodes_turns_at_every_level():
