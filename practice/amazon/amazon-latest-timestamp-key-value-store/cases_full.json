@@ -1,0 +1,682 @@
+[
+  {
+    "id": "example_1",
+    "operations": [
+      "LatestTimestampStore",
+      "set",
+      "set",
+      "get",
+      "set",
+      "get",
+      "set",
+      "get"
+    ],
+    "arguments": [
+      [],
+      [
+        10,
+        "a",
+        "newer"
+      ],
+      [
+        3,
+        "a",
+        "older"
+      ],
+      [
+        "a"
+      ],
+      [
+        10,
+        "a",
+        "tie"
+      ],
+      [
+        "a"
+      ],
+      [
+        12,
+        "a",
+        "newest"
+      ],
+      [
+        "a"
+      ]
+    ],
+    "expected": [
+      null,
+      null,
+      null,
+      "newer",
+      null,
+      "tie",
+      null,
+      "newest"
+    ]
+  },
+  {
+    "id": "example_2",
+    "operations": [
+      "LatestTimestampStore",
+      "get",
+      "set",
+      "set",
+      "get",
+      "get"
+    ],
+    "arguments": [
+      [],
+      [
+        "x"
+      ],
+      [
+        0,
+        "x",
+        "red"
+      ],
+      [
+        5,
+        "y",
+        "blue"
+      ],
+      [
+        "x"
+      ],
+      [
+        "y"
+      ]
+    ],
+    "expected": [
+      null,
+      "",
+      null,
+      null,
+      "red",
+      "blue"
+    ]
+  },
+  {
+    "id": "get_before_any_set",
+    "operations": [
+      "LatestTimestampStore",
+      "get"
+    ],
+    "arguments": [
+      [],
+      [
+        "k"
+      ]
+    ],
+    "expected": [
+      null,
+      ""
+    ]
+  },
+  {
+    "id": "later_smaller_ts_no_replace",
+    "operations": [
+      "LatestTimestampStore",
+      "set",
+      "set",
+      "get"
+    ],
+    "arguments": [
+      [],
+      [
+        100,
+        "k",
+        "high"
+      ],
+      [
+        1,
+        "k",
+        "low"
+      ],
+      [
+        "k"
+      ]
+    ],
+    "expected": [
+      null,
+      null,
+      null,
+      "high"
+    ]
+  },
+  {
+    "id": "tie_latest_wins",
+    "operations": [
+      "LatestTimestampStore",
+      "set",
+      "set",
+      "get"
+    ],
+    "arguments": [
+      [],
+      [
+        50,
+        "k",
+        "first"
+      ],
+      [
+        50,
+        "k",
+        "second"
+      ],
+      [
+        "k"
+      ]
+    ],
+    "expected": [
+      null,
+      null,
+      null,
+      "second"
+    ]
+  },
+  {
+    "id": "timestamp_zero_ties",
+    "operations": [
+      "LatestTimestampStore",
+      "set",
+      "get",
+      "set",
+      "get"
+    ],
+    "arguments": [
+      [],
+      [
+        0,
+        "k",
+        "zero"
+      ],
+      [
+        "k"
+      ],
+      [
+        0,
+        "k",
+        "zero_again"
+      ],
+      [
+        "k"
+      ]
+    ],
+    "expected": [
+      null,
+      null,
+      "zero",
+      null,
+      "zero_again"
+    ]
+  },
+  {
+    "id": "empty_value_stored",
+    "operations": [
+      "LatestTimestampStore",
+      "set",
+      "get",
+      "set",
+      "get",
+      "get"
+    ],
+    "arguments": [
+      [],
+      [
+        9,
+        "k",
+        ""
+      ],
+      [
+        "k"
+      ],
+      [
+        20,
+        "other",
+        "x"
+      ],
+      [
+        "k"
+      ],
+      [
+        "other"
+      ]
+    ],
+    "expected": [
+      null,
+      null,
+      "",
+      null,
+      "",
+      "x"
+    ]
+  },
+  {
+    "id": "independent_keys",
+    "operations": [
+      "LatestTimestampStore",
+      "set",
+      "set",
+      "get",
+      "get"
+    ],
+    "arguments": [
+      [],
+      [
+        1,
+        "a",
+        "alpha"
+      ],
+      [
+        2,
+        "b",
+        "beta"
+      ],
+      [
+        "b"
+      ],
+      [
+        "a"
+      ]
+    ],
+    "expected": [
+      null,
+      null,
+      null,
+      "beta",
+      "alpha"
+    ]
+  },
+  {
+    "id": "out_of_order_arrival",
+    "operations": [
+      "LatestTimestampStore",
+      "set",
+      "set",
+      "set",
+      "get"
+    ],
+    "arguments": [
+      [],
+      [
+        30,
+        "k",
+        "c"
+      ],
+      [
+        10,
+        "k",
+        "a"
+      ],
+      [
+        20,
+        "k",
+        "b"
+      ],
+      [
+        "k"
+      ]
+    ],
+    "expected": [
+      null,
+      null,
+      null,
+      null,
+      "c"
+    ]
+  },
+  {
+    "id": "ascending_replacement",
+    "operations": [
+      "LatestTimestampStore",
+      "set",
+      "set",
+      "set",
+      "get"
+    ],
+    "arguments": [
+      [],
+      [
+        1,
+        "k",
+        "a"
+      ],
+      [
+        2,
+        "k",
+        "b"
+      ],
+      [
+        3,
+        "k",
+        "c"
+      ],
+      [
+        "k"
+      ]
+    ],
+    "expected": [
+      null,
+      null,
+      null,
+      null,
+      "c"
+    ]
+  },
+  {
+    "id": "descending_no_replacement",
+    "operations": [
+      "LatestTimestampStore",
+      "set",
+      "set",
+      "set",
+      "get"
+    ],
+    "arguments": [
+      [],
+      [
+        3,
+        "k",
+        "c"
+      ],
+      [
+        2,
+        "k",
+        "b"
+      ],
+      [
+        1,
+        "k",
+        "a"
+      ],
+      [
+        "k"
+      ]
+    ],
+    "expected": [
+      null,
+      null,
+      null,
+      null,
+      "c"
+    ]
+  },
+  {
+    "id": "repeated_same_timestamp_chain",
+    "operations": [
+      "LatestTimestampStore",
+      "set",
+      "set",
+      "set",
+      "get"
+    ],
+    "arguments": [
+      [],
+      [
+        7,
+        "k",
+        "one"
+      ],
+      [
+        7,
+        "k",
+        "two"
+      ],
+      [
+        7,
+        "k",
+        "three"
+      ],
+      [
+        "k"
+      ]
+    ],
+    "expected": [
+      null,
+      null,
+      null,
+      null,
+      "three"
+    ]
+  },
+  {
+    "id": "extreme_timestamp_boundary",
+    "operations": [
+      "LatestTimestampStore",
+      "set",
+      "set",
+      "get"
+    ],
+    "arguments": [
+      [],
+      [
+        1000000000,
+        "k",
+        "edge"
+      ],
+      [
+        999999999,
+        "k",
+        "below"
+      ],
+      [
+        "k"
+      ]
+    ],
+    "expected": [
+      null,
+      null,
+      null,
+      "edge"
+    ]
+  },
+  {
+    "id": "max_length_key_value",
+    "operations": [
+      "LatestTimestampStore",
+      "set",
+      "get",
+      "set",
+      "get"
+    ],
+    "arguments": [
+      [],
+      [
+        5,
+        "abcdefghijklmnopqrst",
+        "abcdefghijklmnopqrst"
+      ],
+      [
+        "abcdefghijklmnopqrst"
+      ],
+      [
+        4,
+        "abcdefghijklmnopqrst",
+        "shorter"
+      ],
+      [
+        "abcdefghijklmnopqrst"
+      ]
+    ],
+    "expected": [
+      null,
+      null,
+      "abcdefghijklmnopqrst",
+      null,
+      "abcdefghijklmnopqrst"
+    ]
+  },
+  {
+    "id": "get_repeats_no_mutation",
+    "operations": [
+      "LatestTimestampStore",
+      "set",
+      "get",
+      "get",
+      "get"
+    ],
+    "arguments": [
+      [],
+      [
+        4,
+        "k",
+        "v"
+      ],
+      [
+        "k"
+      ],
+      [
+        "k"
+      ],
+      [
+        "k"
+      ]
+    ],
+    "expected": [
+      null,
+      null,
+      "v",
+      "v",
+      "v"
+    ]
+  },
+  {
+    "id": "set_after_gets",
+    "operations": [
+      "LatestTimestampStore",
+      "set",
+      "get",
+      "set",
+      "get"
+    ],
+    "arguments": [
+      [],
+      [
+        1,
+        "k",
+        "old"
+      ],
+      [
+        "k"
+      ],
+      [
+        2,
+        "k",
+        "new"
+      ],
+      [
+        "k"
+      ]
+    ],
+    "expected": [
+      null,
+      null,
+      "old",
+      null,
+      "new"
+    ]
+  },
+  {
+    "id": "many_keys_alternating",
+    "operations": [
+      "LatestTimestampStore",
+      "set",
+      "set",
+      "get",
+      "set",
+      "get",
+      "set",
+      "get",
+      "get",
+      "get"
+    ],
+    "arguments": [
+      [],
+      [
+        10,
+        "a",
+        "va"
+      ],
+      [
+        5,
+        "b",
+        "vb"
+      ],
+      [
+        "a"
+      ],
+      [
+        7,
+        "c",
+        "vc"
+      ],
+      [
+        "b"
+      ],
+      [
+        12,
+        "b",
+        "vb2"
+      ],
+      [
+        "b"
+      ],
+      [
+        "c"
+      ],
+      [
+        "a"
+      ]
+    ],
+    "expected": [
+      null,
+      null,
+      null,
+      "va",
+      null,
+      "vb",
+      null,
+      "vb2",
+      "vc",
+      "va"
+    ]
+  },
+  {
+    "id": "winner_survives_lower_sets",
+    "operations": [
+      "LatestTimestampStore",
+      "set",
+      "set",
+      "set",
+      "get"
+    ],
+    "arguments": [
+      [],
+      [
+        10,
+        "k",
+        "win"
+      ],
+      [
+        1,
+        "k",
+        "lose"
+      ],
+      [
+        2,
+        "k",
+        "lose2"
+      ],
+      [
+        "k"
+      ]
+    ],
+    "expected": [
+      null,
+      null,
+      null,
+      null,
+      "win"
+    ]
+  }
+]
