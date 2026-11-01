@@ -97,7 +97,7 @@ if __name__ == "__main__":
     stack = MiddleStack()
     for value in (1, 2, 3):
         stack.push(value)
-    print(stack.middle_value())
+    print(stack.middle())
     print(stack.top())
     print(stack.pop())
-    print(stack.middle_value())
+    print(stack.middle())
