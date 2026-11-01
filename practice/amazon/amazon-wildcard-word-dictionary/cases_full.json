@@ -1,0 +1,693 @@
+[
+  {
+    "id": "example_1",
+    "operations": [
+      "WordDictionary",
+      "insert",
+      "insert",
+      "insert",
+      "find",
+      "find",
+      "find",
+      "find"
+    ],
+    "arguments": [
+      [],
+      [
+        "cat"
+      ],
+      [
+        "car"
+      ],
+      [
+        "cart"
+      ],
+      [
+        "ca."
+      ],
+      [
+        "c..t"
+      ],
+      [
+        "ca"
+      ],
+      [
+        "d.."
+      ]
+    ],
+    "expected": [
+      null,
+      null,
+      null,
+      null,
+      true,
+      true,
+      false,
+      false
+    ]
+  },
+  {
+    "id": "find_before_any_insert",
+    "operations": [
+      "WordDictionary",
+      "find"
+    ],
+    "arguments": [
+      [],
+      [
+        "x"
+      ]
+    ],
+    "expected": [
+      null,
+      false
+    ]
+  },
+  {
+    "id": "wildcard_single_position",
+    "operations": [
+      "WordDictionary",
+      "insert",
+      "insert",
+      "find",
+      "find",
+      "find"
+    ],
+    "arguments": [
+      [],
+      [
+        "cat"
+      ],
+      [
+        "car"
+      ],
+      [
+        "ca."
+      ],
+      [
+        "c.t"
+      ],
+      [
+        ".at"
+      ]
+    ],
+    "expected": [
+      null,
+      null,
+      null,
+      true,
+      true,
+      true
+    ]
+  },
+  {
+    "id": "wildcard_never_zero_or_two_letters",
+    "operations": [
+      "WordDictionary",
+      "insert",
+      "find",
+      "find",
+      "find",
+      "find"
+    ],
+    "arguments": [
+      [],
+      [
+        "cat"
+      ],
+      [
+        "cat."
+      ],
+      [
+        "at"
+      ],
+      [
+        "ct"
+      ],
+      [
+        "ca.."
+      ]
+    ],
+    "expected": [
+      null,
+      null,
+      false,
+      false,
+      false,
+      false
+    ]
+  },
+  {
+    "id": "all_dots_pattern",
+    "operations": [
+      "WordDictionary",
+      "insert",
+      "insert",
+      "find",
+      "find",
+      "find"
+    ],
+    "arguments": [
+      [],
+      [
+        "cat"
+      ],
+      [
+        "dog"
+      ],
+      [
+        "..."
+      ],
+      [
+        "."
+      ],
+      [
+        "...."
+      ]
+    ],
+    "expected": [
+      null,
+      null,
+      null,
+      true,
+      false,
+      false
+    ]
+  },
+  {
+    "id": "exact_find_no_dots",
+    "operations": [
+      "WordDictionary",
+      "insert",
+      "find",
+      "find",
+      "find"
+    ],
+    "arguments": [
+      [],
+      [
+        "cat"
+      ],
+      [
+        "cat"
+      ],
+      [
+        "can"
+      ],
+      [
+        "cats"
+      ]
+    ],
+    "expected": [
+      null,
+      null,
+      true,
+      false,
+      false
+    ]
+  },
+  {
+    "id": "duplicate_insert_no_change",
+    "operations": [
+      "WordDictionary",
+      "insert",
+      "insert",
+      "find",
+      "find"
+    ],
+    "arguments": [
+      [],
+      [
+        "cat"
+      ],
+      [
+        "cat"
+      ],
+      [
+        "cat"
+      ],
+      [
+        "ca."
+      ]
+    ],
+    "expected": [
+      null,
+      null,
+      null,
+      true,
+      true
+    ]
+  },
+  {
+    "id": "dot_at_boundaries",
+    "operations": [
+      "WordDictionary",
+      "insert",
+      "find",
+      "find",
+      "find",
+      "find"
+    ],
+    "arguments": [
+      [],
+      [
+        "cat"
+      ],
+      [
+        ".at"
+      ],
+      [
+        "ca."
+      ],
+      [
+        ".a."
+      ],
+      [
+        ".."
+      ]
+    ],
+    "expected": [
+      null,
+      null,
+      true,
+      true,
+      true,
+      false
+    ]
+  },
+  {
+    "id": "multiple_lengths_same_shape",
+    "operations": [
+      "WordDictionary",
+      "insert",
+      "insert",
+      "insert",
+      "find",
+      "find",
+      "find",
+      "find",
+      "find"
+    ],
+    "arguments": [
+      [],
+      [
+        "a"
+      ],
+      [
+        "ab"
+      ],
+      [
+        "abc"
+      ],
+      [
+        "."
+      ],
+      [
+        "a."
+      ],
+      [
+        "..."
+      ],
+      [
+        ".b"
+      ],
+      [
+        ".c"
+      ]
+    ],
+    "expected": [
+      null,
+      null,
+      null,
+      null,
+      true,
+      true,
+      true,
+      true,
+      false
+    ]
+  },
+  {
+    "id": "inserted_after_failed_find",
+    "operations": [
+      "WordDictionary",
+      "find",
+      "insert",
+      "find",
+      "find"
+    ],
+    "arguments": [
+      [],
+      [
+        "zz"
+      ],
+      [
+        "zz"
+      ],
+      [
+        "zz"
+      ],
+      [
+        "z."
+      ]
+    ],
+    "expected": [
+      null,
+      false,
+      null,
+      true,
+      true
+    ]
+  },
+  {
+    "id": "single_letter_words",
+    "operations": [
+      "WordDictionary",
+      "insert",
+      "find",
+      "find",
+      "find",
+      "find"
+    ],
+    "arguments": [
+      [],
+      [
+        "a"
+      ],
+      [
+        "."
+      ],
+      [
+        "a"
+      ],
+      [
+        "b"
+      ],
+      [
+        ".."
+      ]
+    ],
+    "expected": [
+      null,
+      null,
+      true,
+      true,
+      false,
+      false
+    ]
+  },
+  {
+    "id": "dot_in_middle_only",
+    "operations": [
+      "WordDictionary",
+      "insert",
+      "insert",
+      "insert",
+      "find",
+      "find",
+      "find"
+    ],
+    "arguments": [
+      [],
+      [
+        "cat"
+      ],
+      [
+        "cut"
+      ],
+      [
+        "cot"
+      ],
+      [
+        "c.t"
+      ],
+      [
+        "x.t"
+      ],
+      [
+        "c.x"
+      ]
+    ],
+    "expected": [
+      null,
+      null,
+      null,
+      null,
+      true,
+      false,
+      false
+    ]
+  },
+  {
+    "id": "prefix_is_not_a_word",
+    "operations": [
+      "WordDictionary",
+      "insert",
+      "find",
+      "find",
+      "find",
+      "find"
+    ],
+    "arguments": [
+      [],
+      [
+        "cart"
+      ],
+      [
+        "car"
+      ],
+      [
+        "ca"
+      ],
+      [
+        "cart"
+      ],
+      [
+        "car."
+      ]
+    ],
+    "expected": [
+      null,
+      null,
+      false,
+      false,
+      true,
+      true
+    ]
+  },
+  {
+    "id": "word_alongside_its_extension",
+    "operations": [
+      "WordDictionary",
+      "insert",
+      "insert",
+      "find",
+      "find",
+      "find",
+      "find"
+    ],
+    "arguments": [
+      [],
+      [
+        "car"
+      ],
+      [
+        "cart"
+      ],
+      [
+        "car"
+      ],
+      [
+        "car."
+      ],
+      [
+        "cart"
+      ],
+      [
+        "ca."
+      ]
+    ],
+    "expected": [
+      null,
+      null,
+      null,
+      true,
+      true,
+      true,
+      true
+    ]
+  },
+  {
+    "id": "interleaved_insert_find",
+    "operations": [
+      "WordDictionary",
+      "find",
+      "insert",
+      "find",
+      "find",
+      "insert",
+      "find"
+    ],
+    "arguments": [
+      [],
+      [
+        "log"
+      ],
+      [
+        "log"
+      ],
+      [
+        "log"
+      ],
+      [
+        "lag"
+      ],
+      [
+        "lag"
+      ],
+      [
+        "l.g"
+      ]
+    ],
+    "expected": [
+      null,
+      false,
+      null,
+      true,
+      false,
+      null,
+      true
+    ]
+  },
+  {
+    "id": "probe_unstored_letters",
+    "operations": [
+      "WordDictionary",
+      "insert",
+      "find",
+      "find",
+      "find",
+      "find"
+    ],
+    "arguments": [
+      [],
+      [
+        "sun"
+      ],
+      [
+        "s.n"
+      ],
+      [
+        "q.n"
+      ],
+      [
+        "su."
+      ],
+      [
+        "qn."
+      ]
+    ],
+    "expected": [
+      null,
+      null,
+      true,
+      false,
+      true,
+      false
+    ]
+  },
+  {
+    "id": "many_words_one_match",
+    "operations": [
+      "WordDictionary",
+      "insert",
+      "insert",
+      "insert",
+      "insert",
+      "find",
+      "find",
+      "find",
+      "find"
+    ],
+    "arguments": [
+      [],
+      [
+        "band"
+      ],
+      [
+        "bind"
+      ],
+      [
+        "bond"
+      ],
+      [
+        "bend"
+      ],
+      [
+        "b.nd"
+      ],
+      [
+        "bind"
+      ],
+      [
+        "xind"
+      ],
+      [
+        "b..."
+      ]
+    ],
+    "expected": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      true,
+      true,
+      false,
+      true
+    ]
+  },
+  {
+    "id": "same_length_rejects_all",
+    "operations": [
+      "WordDictionary",
+      "insert",
+      "insert",
+      "find",
+      "find",
+      "find",
+      "find"
+    ],
+    "arguments": [
+      [],
+      [
+        "dog"
+      ],
+      [
+        "dig"
+      ],
+      [
+        "..."
+      ],
+      [
+        "d.g"
+      ],
+      [
+        "z.z"
+      ],
+      [
+        "o"
+      ]
+    ],
+    "expected": [
+      null,
+      null,
+      null,
+      true,
+      true,
+      false,
+      false
+    ]
+  }
+]
