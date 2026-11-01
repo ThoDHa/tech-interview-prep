@@ -23,13 +23,15 @@ the statement's length corner, which is constructed here rather than
 serialized and whose expectation additionally follows from arithmetic
 on the construction:
 
-- test_constructed_document_comb_of_100000_nodes_matches_the_derived_band:
-  50000 folders in a chain (labels 0..49999) with one document per
-  folder (label 50000 + folder index), document sizes cycling 0..9 by
-  construction and every type "pdf". Searching from the tree root with
-  `minSize = 5` and an empty type must return exactly the documents
-  whose `(label - 50000) % 10 > 5`, in increasing order: 20000 IDs
-  derived arithmetically, then confirmed by both implementations.
+- test_constructed_document_fan_of_100000_nodes_matches_the_derived_band:
+  50000 folders in a chain (labels 0..49999) carrying all 50000
+  documents (labels 50000 + index) as children of the last folder, so
+  every folder's children stay homogeneous, document sizes cycling
+  0..9 by construction and every type "pdf". Searching from the tree
+  root with `minSize = 5` and an empty type must return exactly the
+  documents whose `(label - 50000) % 10 > 5`, in increasing order:
+  20000 IDs derived arithmetically, then confirmed by both
+  implementations.
 """
 
 import pytest
@@ -40,7 +42,7 @@ FULL = load_cases(__file__, "cases_full.json")
 
 reference = load_solution(__file__, "reference.py")
 
-COMB_FOLDER_COUNT = 50_000
+FAN_FOLDER_COUNT = 50_000
 
 
 def _ids(cases):
@@ -95,12 +97,12 @@ def test_reference_cases(case):
     assert _oracle_from_case(case) == case["expected"]
 
 
-def test_constructed_document_comb_of_100000_nodes_matches_the_derived_band():
-    folder_count = COMB_FOLDER_COUNT
+def test_constructed_document_fan_of_100000_nodes_matches_the_derived_band():
+    folder_count = FAN_FOLDER_COUNT
     parents = [-1] + list(range(folder_count - 1))
-    parents += [folder for folder in range(folder_count)]
+    parents += [folder_count - 1] * folder_count
     document_flags = [0] * folder_count + [1] * folder_count
-    document = COMB_FOLDER_COUNT
+    document = FAN_FOLDER_COUNT
     sizes = [0] * folder_count + [index % 10 for index in range(folder_count)]
     document_types = [""] * folder_count + ["pdf"] * folder_count
 
