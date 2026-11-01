@@ -27,8 +27,8 @@ class Solution:
         breadth-first sweep seeded with the group members who already
         hold the secret adds exactly the people reachable from them
         through that group's edges, and every person reached joins the
-        holders permanently. Sorting meetings into the grouped map is
-        the only global work.
+        holders permanently. Sorting the distinct times is the only
+        global work.
 
         Args:
             n: The people, labeled 0 through n - 1.
@@ -40,10 +40,10 @@ class Solution:
         Returns:
             The secret holders after all meetings, in ascending order.
 
-        Time:  O(m log m + n): grouping sorts the meetings, and each
-            meeting edge is traversed a constant number of times inside
-            its group; the final sort of holders is linear in n because
-            the labels are a bounded integer range.
+        Time:  O(m log m + n log n): grouping sorts the distinct time
+            keys, and each meeting edge is traversed a constant number
+            of times inside its group; the final sort of holders is
+            comparison-based, O(n log n) in the worst case.
         Space: O(m): the grouped map and per-group adjacency.
         """
         holders = {0, firstPerson}
