@@ -23,11 +23,13 @@ eye-auditable bound; both are constructed here and their expectations
 follow from the construction:
 
 - test_constructed_perfect_tree_of_255_nodes_alternates_through_eight_levels:
-  a perfect tree of depth 8 (255 nodes, within the 500-node bound)
-  serialized as values 1..255 in level order. Level d of a perfect tree
-  holds exactly the values 2^d through 2^(d+1) - 1 in left-to-right
-  order, so the expected spiral alternates each ascending range with
-  its reverse.
+  a perfect tree of eight levels (255 nodes, depths 0 through 7,
+  within the 500-node bound) serialized as values 1..255 in level
+  order. Level d of a perfect tree holds exactly the values 2^d
+  through 2^(d+1) - 1 in left-to-right order, so the expected spiral
+  alternates each ascending range with its reverse; the test
+  double-asserts that expectation against the depth-bucketed
+  traversal oracle defined below.
 - test_constructed_caterpillar_of_500_nodes_turns_at_every_level:
   250 spine nodes (values 0..249) linked by left edges, each carrying a
   right-leaf (value 250 + spine index), 500 nodes in all. Levels 1
@@ -35,6 +37,8 @@ follow from the construction:
   level 250 holds the last leaf alone, so the tree reaches the
   statement's node bound with the direction turning 250 times.
 """
+
+from typing import List, Optional
 
 import pytest
 
@@ -44,12 +48,34 @@ FULL = load_cases(__file__, "cases_full.json")
 
 reference = load_solution(__file__, "reference.py")
 
-PERFECT_TREE_DEPTH = 8
+PERFECT_TREE_DEPTH = 7
 CATERPILLAR_SPINE_LENGTH = 250
 
 
 def _ids(cases):
     return [case["id"] for case in cases]
+
+
+def _spiral_by_depth_bucketed_dfs(root: Optional[TreeNode]) -> List[List[int]]:
+    """Independent oracle: depth-bucketed preorder, alternate depths reversed.
+
+    An explicit stack walks a left-first preorder and appends each value
+    to its depth bucket; preorder meets every level left to right, and
+    reversing the odd buckets reproduces the statement's alternating
+    direction. Shares no mechanism with the reference's level-size BFS.
+    """
+    buckets: List[List[int]] = []
+    stack = [(root, 0)] if root is not None else []
+    while stack:
+        node, depth = stack.pop()
+        if depth == len(buckets):
+            buckets.append([])
+        buckets[depth].append(node.val)
+        if node.right is not None:
+            stack.append((node.right, depth + 1))
+        if node.left is not None:
+            stack.append((node.left, depth + 1))
+    return [bucket[::-1] if depth % 2 else bucket for depth, bucket in enumerate(buckets)]
 
 
 @pytest.mark.parametrize("case", FULL, ids=_ids(FULL))
@@ -66,6 +92,7 @@ def test_constructed_perfect_tree_of_255_nodes_alternates_through_eight_levels()
         expected.append(level[::-1] if depth % 2 else level)
     got = reference.Solution().zigzagLevels(build_tree(values))
     assert got == expected
+    assert _spiral_by_depth_bucketed_dfs(build_tree(values)) == expected
 
 
 def test_constructed_caterpillar_of_500_nodes_turns_at_every_level():
