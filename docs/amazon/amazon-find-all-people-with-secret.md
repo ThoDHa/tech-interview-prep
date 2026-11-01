@@ -181,9 +181,9 @@ class Solution:
 
 #### Time and Space Complexity Analysis
 
-##### Time Complexity: `O(m log m + n)`
+##### Time Complexity: `O(m log m + n log n)`
 
-Grouping sorts the `m` meetings, each edge enters its adjacency twice and is traversed at most twice inside its group, and the final sort of holder labels is linear because they are a bounded integer range.
+Grouping sorts the `m` meetings, each edge enters its adjacency twice and is traversed at most twice inside its group, and the final sort of the holder set costs `O(n log n)` in the worst case, when everyone ends up a holder.
 
 ##### Space Complexity: `O(m)`
 
@@ -193,14 +193,14 @@ The grouped map and the largest group's adjacency dominate; the queue never exce
 
 - Building the group's adjacency converts the fixpoint's repeated membership tests into a visited-marked traversal: one sweep reaches the whole instant-sharing chain, in any input order.
 - Seeding from `holders` (not from person 0) keeps the invariant honest: a group seeded with nobody is skipped in `O(group)` and stays that way.
-- Groups never interact, so the sort is the only global step; everything else is linear in the meeting count.
+- Groups never interact, so the sort is the only super-linear step; everything else is linear in the meeting count.
 
 ## Comparison of Solutions
 
 ### Time Complexity
 
 - **Timestamp-Swept Simulation**: `O(g * m + n log n)` - each time group re-sweeps until stable.
-- **Per-Time BFS on Meeting Groups**: `O(m log m + n)` - one sort plus one traversal per meeting edge.
+- **Per-Time BFS on Meeting Groups**: `O(m log m + n log n)` - one sort plus one traversal per meeting edge.
 
 ### Space Complexity
 
@@ -221,4 +221,4 @@ The grouped map and the largest group's adjacency dominate; the queue never exce
 
 - A union-find variant merges each time group's participants, then rolls back unions of members that did not reach a holder; it shares the `O(m log m)` bound and avoids the per-group adjacency, at the price of a rollback-capable structure.
 - The seeded BFS can skip building `adjacency` for groups whose seed set is empty, saving the throwaway map on dead groups; the code above keeps the map unconditional for simplicity.
-- The final `sorted(holders)` is linear-time counting behavior over a bounded label range; sorting a list is still the cleanest expression at `n = 10^5`.
+- The final `sorted(holders)` is a comparison sort; replacing it with one linear sweep over the label range `0..n - 1` would collect the holders in `O(n)` if the last logarithm ever mattered at `n = 10^5`.
