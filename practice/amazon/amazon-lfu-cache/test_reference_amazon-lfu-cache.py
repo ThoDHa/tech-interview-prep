@@ -17,12 +17,13 @@ canonicalization applies.
 The gauntlet covers the statement's named corners at eye-auditable
 sizes: the page's two examples, the single-get minimum, capacity one
 (eviction on every fresh insert), an updating put that must not evict
-and must bump frequency, the frequency tie broken by recency, a miss
-get touching nothing, a promotion saving a key, a re-inserted evicted
-key starting fresh, negative and int32-extreme keys and values, a
-stored -1 colliding with the miss sentinel in output only, the
-min-frequency pointer both advancing and holding, a large capacity
-(3000) with few keys, and a small interleaved churn. Two scale corners
+and must bump frequency, an updating put landing on a full cache that
+must keep both keys, the frequency tie broken by recency, a miss get
+touching nothing, a promotion saving a key, a re-inserted evicted key
+starting fresh, negative and int32-extreme keys and values, a stored -1
+colliding with the miss sentinel in output only, the min-frequency
+pointer advancing before a fresh key refills its emptied bucket, a
+large capacity (3000) with few keys, and a small interleaved churn. Two scale corners
 live here as constructed cases per the Testing Strategy rule that
 length corners are constructible or synthesized, never serialized bulk;
 both build their operation sequences in this module and derive every
@@ -46,15 +47,20 @@ expected outcome from the construction:
   original value.
 
 Discrimination record, naming the mutant classes the serialized cases
-catch: an LRU-instead-of-LFU eviction is caught by
-frequent_but_older_key_survives (the frequent key is the least recent,
-so a recency-only victim differs); an MRU-instead-of-LRU tie break is
-caught by recency_tie_after_parallel_promotion (the most recent of the
-tied keys would be evicted instead); skipping the frequency bump on an
-updating put, and evicting on an updating put, are both caught by
-update_never_evicts; failing to advance min_frequency when its bucket
-empties, and advancing it when a different bucket empties, are caught
-by min_freq_advances_on_empty_bucket.
+catch, each claim verified by running the mutant against every case:
+an LRU-instead-of-LFU eviction is caught by frequent_but_older_key_survives,
+repeated_update_single_key, and min_advances_before_bucket_refill; an
+MRU-instead-of-LRU tie break by recency_tie_after_parallel_promotion
+and five further cases; skipping the frequency bump on an updating put
+by update_never_evicts; running the capacity check before the
+membership check, which evicts on an updating put, by
+update_on_full_keeps_both_keys, the one case where an updated key and
+an untouched key then compete at different frequencies; failing to
+advance min_frequency crashes on an empty eviction bucket in example_1
+and seven further cases and reads a wrong victim in
+update_on_full_keeps_both_keys and min_advances_before_bucket_refill;
+advancing min_frequency whenever any bucket empties is caught by
+lower_frequency_beats_recency and min_freq_advances_on_empty_bucket.
 """
 
 import pytest

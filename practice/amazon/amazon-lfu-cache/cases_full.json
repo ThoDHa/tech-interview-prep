@@ -1152,5 +1152,126 @@
       -1,
       3
     ]
+  },
+  {
+    "id": "update_on_full_keeps_both_keys",
+    "operations": [
+      "LFUCache",
+      "put",
+      "put",
+      "get",
+      "put",
+      "put",
+      "get",
+      "get",
+      "get"
+    ],
+    "arguments": [
+      [
+        2
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        1
+      ],
+      [
+        2,
+        8
+      ],
+      [
+        3,
+        3
+      ],
+      [
+        1
+      ],
+      [
+        2
+      ],
+      [
+        3
+      ]
+    ],
+    "expected": [
+      null,
+      null,
+      null,
+      1,
+      null,
+      null,
+      -1,
+      8,
+      3
+    ]
+  },
+  {
+    "id": "min_advances_before_bucket_refill",
+    "operations": [
+      "LFUCache",
+      "put",
+      "put",
+      "get",
+      "get",
+      "put",
+      "put",
+      "get",
+      "get",
+      "get"
+    ],
+    "arguments": [
+      [
+        3
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        1
+      ],
+      [
+        2
+      ],
+      [
+        3,
+        3
+      ],
+      [
+        4,
+        4
+      ],
+      [
+        3
+      ],
+      [
+        1
+      ],
+      [
+        4
+      ]
+    ],
+    "expected": [
+      null,
+      null,
+      null,
+      1,
+      2,
+      null,
+      null,
+      -1,
+      1,
+      4
+    ]
   }
 ]
