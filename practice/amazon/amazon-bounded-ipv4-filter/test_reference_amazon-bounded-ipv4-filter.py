@@ -20,7 +20,8 @@ run_operations requires at least the constructor operation), empty-pool
 checks, duplicate adds, absent removals, all-octet boundary addresses,
 exact-match digit neighbors (10.0.0.1 versus 10.0.0.10 versus
 1.0.0.10), the 128-entry limit with an ignored overflow add and its
-post-removal retry, and randomized add/remove/check interleavings.
+post-removal retry, randomized add/remove/check interleavings, and the
+statement's operations-length upper bound of 10000 entries.
 """
 
 import pytest
