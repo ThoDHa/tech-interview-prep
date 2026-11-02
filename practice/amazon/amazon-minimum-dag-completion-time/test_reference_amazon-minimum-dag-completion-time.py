@@ -33,8 +33,8 @@ agree:
   sum, 1000.
 - test_constructed_fan_in_of_two_thousand_leaves: 2000 unit leaves all
   feeding one hub of duration 2; the hub starts at 1 and finishes at 3.
-- test_constructed_fan_out_to_one_thousand_leaves: a hub of duration 4
-  feeding 1499 unit leaves; the last leaf finishes at 5.
+- test_constructed_fan_out_of_one_thousand_five_hundred_leaves: a hub
+  of duration 4 feeding 1500 unit leaves; the last leaf finishes at 5.
 - test_constructed_chain_of_five_hundred_bound_durations: 500 tasks of
   10^9 chained end to end; the answer is 5 * 10^11, above 32-bit range.
 - test_synthesized_random_forward_graph: one seeded 40-task instance
@@ -150,7 +150,7 @@ def test_constructed_fan_in_of_two_thousand_leaves():
     assert FixedPointRelaxation.minimum_completion_time(durations, dependencies) == expected
 
 
-def test_constructed_fan_out_to_one_thousand_leaves():
+def test_constructed_fan_out_of_one_thousand_five_hundred_leaves():
     leaves = 1500
     durations = [4] + [1] * leaves
     dependencies = [[0, leaf] for leaf in range(1, leaves + 1)]
