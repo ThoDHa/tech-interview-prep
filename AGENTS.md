@@ -91,7 +91,8 @@ all three after touching a generator, its data sources, or generated output.
   interview prep, system design, `cases_full.json` files, and the committed
   data sources (`scripts/neetcode150_manifest.json`,
   `scripts/amazon_oa_manifest.json`, `scripts/grind75_table.json`,
-  `scripts/amazon_lc_overlap_aliases.json`).
+  `scripts/amazon_lc_overlap_aliases.json`,
+  `scripts/amazon_difficulty_overrides.json`).
 
 ## Verification
 
