@@ -34,7 +34,7 @@ Sizes are 1, 2, or 3.
 Two operations, and every park asks one question: where does the leftmost run of `size` consecutive free spaces begin? The approaches below differ only in how the garage remembers its free space, and the ladder re-represents that state three times, each step buying a cheaper answer for the next park.
 
 1. **Start literal.** Keep one boolean per space and scan candidate starts left to right for the first all-free window: see [Occupancy-Array Scan](#occupancy-array-scan).
-2. **Spot the waste.** The array stores every space, but only the gaps between occupied islands matter: a garage with one occupied corner still walks hundreds of thousands of cells on every park.
+2. **Spot the waste.** The array stores every space, but only the gaps between occupied islands matter: a garage with one occupied corner still walks up to a hundred thousand cells on every park.
 3. **Fix it.** Keep only the free runs, sorted by start; the first run long enough is the leftmost fit, and a leave re-inserts its range while absorbing the free runs that touch it: see [Free-Interval First Fit](#free-interval-first-fit).
 4. **Hand the bookkeeping to the library.** The one search the design still writes by hand, a leave's insertion point, is a `bisect` call away: see [Free-Interval First Fit with Bisect](#free-interval-first-fit-with-bisect).
 
@@ -65,7 +65,7 @@ LEAVE 0 2    [. . # # # .]
 PARK 1       [# . # # # .]            0
 ```
 
-The parks collect into `[0,2,0]`, matching the expected Output. The final park reuses cell 0, freed two operations earlier, because the scan meets it first.
+The parks collect into `[0,2,0]`, matching the expected Output. The final park reuses cell 0, freed by the preceding leave, because the scan meets it first.
 
 #### Solution
 
