@@ -1,4 +1,4 @@
-"""Tests for Gas Station — your attempt (solution.py) against cases.json.
+"""Tests for Gas Station: your attempt (solution.py) against both case sets.
 
 The worked approaches live in ../../../docs/leetcode/gas_station.md.
 """

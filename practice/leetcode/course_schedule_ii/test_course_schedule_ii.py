@@ -1,4 +1,4 @@
-"""Tests for Course Schedule II — your attempt (solution.py) against cases.json.
+"""Tests for Course Schedule II: your attempt (solution.py) against both case sets.
 
 The worked approaches live in ../../../docs/leetcode/course_schedule_ii.md.
 """

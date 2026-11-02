@@ -1,4 +1,4 @@
-"""Tests for Reorder List — your attempt (solution.py) against cases.json.
+"""Tests for Reorder List: your attempt (solution.py) against both case sets.
 
 The worked approaches live in ../../../docs/leetcode/reorder_list.md.
 """

@@ -1,4 +1,4 @@
-"""Tests for Palindrome Partitioning — your attempt (solution.py) against cases.json.
+"""Tests for Palindrome Partitioning: your attempt (solution.py) against both case sets.
 
 The worked approaches live in ../../../docs/leetcode/palindrome_partitioning.md.
 """

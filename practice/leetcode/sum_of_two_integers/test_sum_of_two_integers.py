@@ -1,4 +1,4 @@
-"""Tests for Sum of Two Integers — your attempt (solution.py) against cases.json.
+"""Tests for Sum of Two Integers: your attempt (solution.py) against both case sets.
 
 The worked approaches live in ../../../docs/leetcode/sum_of_two_integers.md.
 """

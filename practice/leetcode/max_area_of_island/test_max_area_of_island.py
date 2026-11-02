@@ -1,4 +1,4 @@
-"""Tests for Max Area of Island — your attempt (solution.py) against cases.json.
+"""Tests for Max Area of Island: your attempt (solution.py) against both case sets.
 
 The worked approaches live in ../../../docs/leetcode/max_area_of_island.md.
 """

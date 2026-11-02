@@ -1,4 +1,4 @@
-"""Tests for Copy List With Random Pointer — your attempt (solution.py) against cases.json.
+"""Tests for Copy List With Random Pointer: your attempt (solution.py) against both case sets.
 
 The worked approaches live in ../../../docs/leetcode/copy_list_with_random_pointer.md.
 """

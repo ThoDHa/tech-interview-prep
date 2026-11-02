@@ -1,4 +1,4 @@
-"""Tests for Pacific Atlantic Water Flow — your attempt (solution.py) against cases.json.
+"""Tests for Pacific Atlantic Water Flow: your attempt (solution.py) against both case sets.
 
 The worked approaches live in ../../../docs/leetcode/pacific_atlantic_water_flow.md.
 """

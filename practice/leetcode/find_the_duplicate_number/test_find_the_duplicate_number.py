@@ -1,4 +1,4 @@
-"""Tests for Find The Duplicate Number — your attempt (solution.py) against cases.json.
+"""Tests for Find The Duplicate Number: your attempt (solution.py) against both case sets.
 
 The worked approaches live in ../../../docs/leetcode/find_the_duplicate_number.md.
 """

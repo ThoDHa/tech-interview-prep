@@ -1,4 +1,4 @@
-"""Tests for Pow(x, n) — your attempt (solution.py) against cases.json.
+"""Tests for Pow(x, n): your attempt (solution.py) against the inline cases.json set.
 
 The worked approaches live in ../../../docs/leetcode/powx_n.md.
 """

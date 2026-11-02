@@ -1,4 +1,4 @@
-"""Tests for Group Anagrams — your attempt (solution.py) against cases.json.
+"""Tests for Group Anagrams: your attempt (solution.py) against both case sets.
 
 The worked approaches live in ../../../docs/leetcode/group_anagrams.md.
 """

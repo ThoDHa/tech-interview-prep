@@ -1,4 +1,4 @@
-"""Tests for Car Fleet — your attempt (solution.py) against cases.json.
+"""Tests for Car Fleet: your attempt (solution.py) against both case sets.
 
 The worked approaches live in ../../../docs/leetcode/car_fleet.md.
 """

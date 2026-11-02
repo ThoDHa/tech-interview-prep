@@ -1,4 +1,4 @@
-"""Tests for Target Sum — your attempt (solution.py) against cases.json.
+"""Tests for Target Sum: your attempt (solution.py) against both case sets.
 
 The worked approaches live in ../../../docs/leetcode/target_sum.md.
 """

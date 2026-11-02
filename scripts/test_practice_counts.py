@@ -2,9 +2,9 @@
 
 README and docs/interview-prep/practice_workspace.md quote tree counts as of
 October 2026: the bank totals (410 Amazon problems, 168 LeetCode folders),
-the write-up wave progress (183 of 410), the compiled PDF page count (578 =
-168 + 410), the workspace reference-file counts (91 of 168, 17 of 410), the
-cases-only Amazon folder count (393 of 410), the reference-test Amazon
+the write-up wave progress (213 of 410), the compiled PDF page count (578 =
+168 + 410), the workspace reference-file counts (91 of 168, 47 of 410), the
+cases-only Amazon folder count (363 of 410), the reference-test Amazon
 folder count (47 of 410), and the fresh-clone skip floor
 (over 3,100). This guard re-counts the tree and fails on drift: a wave
 landing that adds or removes problems, write-ups, or case files must update

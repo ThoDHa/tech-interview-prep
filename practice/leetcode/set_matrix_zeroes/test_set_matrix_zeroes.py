@@ -1,4 +1,4 @@
-"""Tests for Set Matrix Zeroes — your attempt (solution.py) against cases.json.
+"""Tests for Set Matrix Zeroes: your attempt (solution.py) against both case sets.
 
 The worked approaches live in ../../../docs/leetcode/set_matrix_zeroes.md.
 """

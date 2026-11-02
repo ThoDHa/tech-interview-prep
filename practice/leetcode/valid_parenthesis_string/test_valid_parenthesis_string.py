@@ -1,4 +1,4 @@
-"""Tests for Valid Parenthesis String — your attempt (solution.py) against cases.json.
+"""Tests for Valid Parenthesis String: your attempt (solution.py) against both case sets.
 
 The worked approaches live in ../../../docs/leetcode/valid_parenthesis_string.md.
 """

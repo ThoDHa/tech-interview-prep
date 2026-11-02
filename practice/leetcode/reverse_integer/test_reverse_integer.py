@@ -1,4 +1,4 @@
-"""Tests for Reverse Integer — your attempt (solution.py) against cases.json.
+"""Tests for Reverse Integer: your attempt (solution.py) against both case sets.
 
 The worked approaches live in ../../../docs/leetcode/reverse_integer.md.
 """

@@ -1,4 +1,4 @@
-"""Tests for Graph Valid Tree — your attempt (solution.py) against cases.json.
+"""Tests for Graph Valid Tree: your attempt (solution.py) against both case sets.
 
 The worked approaches live in ../../../docs/leetcode/graph_valid_tree.md.
 """

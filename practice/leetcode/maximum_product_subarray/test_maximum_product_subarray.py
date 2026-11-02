@@ -1,4 +1,4 @@
-"""Tests for Maximum Product Subarray — your attempt (solution.py) against cases.json.
+"""Tests for Maximum Product Subarray: your attempt (solution.py) against both case sets.
 
 The worked approaches live in ../../../docs/leetcode/maximum_product_subarray.md.
 """

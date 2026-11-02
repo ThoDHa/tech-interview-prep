@@ -1,4 +1,4 @@
-"""Tests for Number of 1 Bits — your attempt (solution.py) against cases.json.
+"""Tests for Number of 1 Bits: your attempt (solution.py) against both case sets.
 
 The worked approaches live in ../../../docs/leetcode/number_of_1_bits.md.
 """

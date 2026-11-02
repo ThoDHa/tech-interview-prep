@@ -1,4 +1,4 @@
-"""Tests for Partition Labels — your attempt (solution.py) against cases.json.
+"""Tests for Partition Labels: your attempt (solution.py) against both case sets.
 
 The worked approaches live in ../../../docs/leetcode/partition_labels.md.
 """

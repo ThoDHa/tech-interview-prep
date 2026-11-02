@@ -1,4 +1,4 @@
-"""Tests for Last Stone Weight — your attempt (solution.py) against cases.json.
+"""Tests for Last Stone Weight: your attempt (solution.py) against both case sets.
 
 The worked approaches live in ../../../docs/leetcode/last_stone_weight.md.
 """
