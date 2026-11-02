@@ -16,7 +16,9 @@ Given an integer array nums, return the length of its longest contiguous run of 
 
 ## Constraints
 
-<!-- Constraints not parseable from FastPrep for amazon-longest-equal-value-run; fill them in. -->
+- `For this exercise, assume 0 <= nums.length <= 100000.`
+- `Every element of nums is an integer.`
+- `An empty array is a valid input and returns 0.`
 
 ## Deriving the Solution
 
