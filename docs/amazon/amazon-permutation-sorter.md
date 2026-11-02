@@ -26,7 +26,7 @@ Reverse the permutation to get arr = [1, 10, 9, 8, 7, 6, 5, 4, 3, 2].Transfer th
 
 ## Constraints
 
-<!-- Constraints not parseable from FastPrep for amazon-permutation-sorter; fill them in. -->
+- `N/A (the FastPrep page for this problem returns 404; no constraints could be transcribed).`
 
 ## Solutions
 
