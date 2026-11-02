@@ -67,7 +67,7 @@ leetcode/two_sum/
 └── test_two_sum.py   # runs your solution against both case sets
 ```
 
-`solution.py` is always an unsolved stub: it raises `NotSolved` until you implement it, and the worked write-up lives on the site, linked from the top of every `solution.py`. About a hundred folders additionally carry a `reference.py`, the write-up's own solution kept next to the harness so its authored case files stay checkable (91 of the 168 LeetCode folders, 29 of the 410 Amazon ones, as of October 2026); treat it as the answer key and stay out of it until after your own attempt. Some of those folders also add a `test_reference_<slug>.py` that checks `reference.py` itself.
+`solution.py` is always an unsolved stub: it raises `NotSolved` until you implement it, and the worked write-up lives on the site, linked from the top of every `solution.py`. About a hundred folders additionally carry a `reference.py`, the write-up's own solution kept next to the harness so its authored case files stay checkable (91 of the 168 LeetCode folders, 35 of the 410 Amazon ones, as of October 2026); treat it as the answer key and stay out of it until after your own attempt. Some of those folders also add a `test_reference_<slug>.py` that checks `reference.py` itself.
 
 ## The practice loop
 
@@ -106,7 +106,7 @@ The two case files mirror the two buttons on a LeetCode problem page:
 | `cases.json` | `simple` | The problem's own examples where they parse, otherwise a few promoted gauntlet cases: fast feedback while you iterate. |
 | `cases_full.json` | `full` | The examples plus a comprehensive corner-case gauntlet (empties, single elements, negatives, duplicates, boundary values, large inputs) built to the problem's constraints. |
 
-The `-m simple` and `-m full` flags select between them; a plain `uv run pytest leetcode/<slug>/` runs both sets. Amazon problems use no markers: 381 of the 410 ship only `cases.json`, so a plain `uv run pytest amazon/<slug>/` is all they need, and the 29 that also carry `cases_full.json` and a reference test run their whole folder with that same plain command.
+The `-m simple` and `-m full` flags select between them; a plain `uv run pytest leetcode/<slug>/` runs both sets. Amazon problems use no markers: 375 of the 410 ship only `cases.json`, so a plain `uv run pytest amazon/<slug>/` is all they need, and the 35 that also carry `cases_full.json` and a reference test run their whole folder with that same plain command.
 
 ## Stubs skip until you implement them
 
