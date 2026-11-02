@@ -1,0 +1,320 @@
+[
+  {
+    "id": "example_1",
+    "args": [
+      [
+        "red",
+        "blue",
+        "green",
+        "blue",
+        "red"
+      ],
+      [
+        "blue",
+        "red"
+      ]
+    ],
+    "expected": [
+      0,
+      3
+    ]
+  },
+  {
+    "id": "example_2",
+    "args": [
+      [
+        "a",
+        "a",
+        "b",
+        "a"
+      ],
+      [
+        "a",
+        "a"
+      ]
+    ],
+    "expected": [
+      0
+    ]
+  },
+  {
+    "id": "target_equals_text_same_order",
+    "args": [
+      [
+        "a",
+        "b"
+      ],
+      [
+        "a",
+        "b"
+      ]
+    ],
+    "expected": [
+      0
+    ]
+  },
+  {
+    "id": "target_equals_text_reordered",
+    "args": [
+      [
+        "a",
+        "b"
+      ],
+      [
+        "b",
+        "a"
+      ]
+    ],
+    "expected": [
+      0
+    ]
+  },
+  {
+    "id": "single_word_target",
+    "args": [
+      [
+        "a",
+        "b",
+        "a"
+      ],
+      [
+        "a"
+      ]
+    ],
+    "expected": [
+      0,
+      2
+    ]
+  },
+  {
+    "id": "no_matches",
+    "args": [
+      [
+        "a",
+        "b",
+        "c"
+      ],
+      [
+        "a",
+        "a"
+      ]
+    ],
+    "expected": []
+  },
+  {
+    "id": "duplicates_multiplicity",
+    "args": [
+      [
+        "a",
+        "a",
+        "b"
+      ],
+      [
+        "a",
+        "a"
+      ]
+    ],
+    "expected": [
+      0
+    ]
+  },
+  {
+    "id": "case_sensitivity",
+    "args": [
+      [
+        "Red",
+        "red"
+      ],
+      [
+        "red"
+      ]
+    ],
+    "expected": [
+      1
+    ]
+  },
+  {
+    "id": "match_at_end",
+    "args": [
+      [
+        "x",
+        "a",
+        "a"
+      ],
+      [
+        "a",
+        "a"
+      ]
+    ],
+    "expected": [
+      1
+    ]
+  },
+  {
+    "id": "every_position_matches",
+    "args": [
+      [
+        "a",
+        "b",
+        "a",
+        "b"
+      ],
+      [
+        "a",
+        "b"
+      ]
+    ],
+    "expected": [
+      0,
+      1,
+      2
+    ]
+  },
+  {
+    "id": "sparse_matches",
+    "args": [
+      [
+        "a",
+        "b",
+        "b",
+        "a"
+      ],
+      [
+        "b",
+        "a"
+      ]
+    ],
+    "expected": [
+      0,
+      2
+    ]
+  },
+  {
+    "id": "longer_words",
+    "args": [
+      [
+        "cat",
+        "dog",
+        "cat",
+        "emu",
+        "dog"
+      ],
+      [
+        "dog",
+        "cat"
+      ]
+    ],
+    "expected": [
+      0,
+      1
+    ]
+  },
+  {
+    "id": "all_identical_words",
+    "args": [
+      [
+        "z",
+        "z",
+        "z",
+        "z",
+        "z"
+      ],
+      [
+        "z",
+        "z"
+      ]
+    ],
+    "expected": [
+      0,
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "id": "order_within_window_free",
+    "args": [
+      [
+        "a",
+        "b",
+        "a",
+        "b"
+      ],
+      [
+        "b",
+        "a"
+      ]
+    ],
+    "expected": [
+      0,
+      1,
+      2
+    ]
+  },
+  {
+    "id": "high_multiplicity_shift",
+    "args": [
+      [
+        "a",
+        "a",
+        "a",
+        "b"
+      ],
+      [
+        "a",
+        "a",
+        "b"
+      ]
+    ],
+    "expected": [
+      1
+    ]
+  },
+  {
+    "id": "long_words_forty_chars",
+    "args": [
+      [
+        "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy",
+        "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+      ],
+      [
+        "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy"
+      ]
+    ],
+    "expected": [
+      0,
+      1
+    ]
+  },
+  {
+    "id": "duplicates_at_target_ends",
+    "args": [
+      [
+        "a",
+        "b",
+        "a"
+      ],
+      [
+        "a",
+        "a"
+      ]
+    ],
+    "expected": []
+  },
+  {
+    "id": "full_window_rejects",
+    "args": [
+      [
+        "dog",
+        "dig"
+      ],
+      [
+        "dog",
+        "dug"
+      ]
+    ],
+    "expected": []
+  }
+]

@@ -1,0 +1,357 @@
+[
+  {
+    "id": "example_1",
+    "args": [
+      [
+        1,
+        3,
+        4,
+        5
+      ],
+      [
+        1,
+        4,
+        5,
+        7
+      ],
+      7
+    ],
+    "expected": 9
+  },
+  {
+    "id": "example_2",
+    "args": [
+      [
+        2,
+        2,
+        3
+      ],
+      [
+        6,
+        10,
+        12
+      ],
+      5
+    ],
+    "expected": 22
+  },
+  {
+    "id": "example_3",
+    "args": [
+      [
+        4,
+        5
+      ],
+      [
+        8,
+        9
+      ],
+      3
+    ],
+    "expected": 0
+  },
+  {
+    "id": "empty_arrays_capacity_zero",
+    "args": [
+      [],
+      [],
+      0
+    ],
+    "expected": 0
+  },
+  {
+    "id": "empty_arrays_positive_capacity",
+    "args": [
+      [],
+      [],
+      10
+    ],
+    "expected": 0
+  },
+  {
+    "id": "single_item_fits",
+    "args": [
+      [
+        5
+      ],
+      [
+        7
+      ],
+      5
+    ],
+    "expected": 7
+  },
+  {
+    "id": "single_item_too_heavy",
+    "args": [
+      [
+        6
+      ],
+      [
+        7
+      ],
+      5
+    ],
+    "expected": 0
+  },
+  {
+    "id": "single_item_exact_capacity_bound",
+    "args": [
+      [
+        10000
+      ],
+      [
+        1000000
+      ],
+      10000
+    ],
+    "expected": 1000000
+  },
+  {
+    "id": "capacity_zero",
+    "args": [
+      [
+        1,
+        2
+      ],
+      [
+        5,
+        6
+      ],
+      0
+    ],
+    "expected": 0
+  },
+  {
+    "id": "greedy_ratio_trap",
+    "args": [
+      [
+        3,
+        4
+      ],
+      [
+        5,
+        6
+      ],
+      4
+    ],
+    "expected": 6
+  },
+  {
+    "id": "identical_items",
+    "args": [
+      [
+        2,
+        2,
+        2
+      ],
+      [
+        3,
+        3,
+        3
+      ],
+      4
+    ],
+    "expected": 6
+  },
+  {
+    "id": "zero_value_items",
+    "args": [
+      [
+        1,
+        2
+      ],
+      [
+        0,
+        0
+      ],
+      3
+    ],
+    "expected": 0
+  },
+  {
+    "id": "large_values_pair",
+    "args": [
+      [
+        1,
+        1
+      ],
+      [
+        1000000,
+        1000000
+      ],
+      2
+    ],
+    "expected": 2000000
+  },
+  {
+    "id": "capacity_exceeds_total_weight",
+    "args": [
+      [
+        1,
+        2
+      ],
+      [
+        5,
+        6
+      ],
+      100
+    ],
+    "expected": 11
+  },
+  {
+    "id": "exact_fill_pairing",
+    "args": [
+      [
+        3,
+        4,
+        5
+      ],
+      [
+        4,
+        5,
+        6
+      ],
+      7
+    ],
+    "expected": 9
+  },
+  {
+    "id": "tie_between_subsets",
+    "args": [
+      [
+        1,
+        2
+      ],
+      [
+        4,
+        4
+      ],
+      2
+    ],
+    "expected": 4
+  },
+  {
+    "id": "many_items_small_capacity",
+    "args": [
+      [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      3
+    ],
+    "expected": 3
+  },
+  {
+    "id": "dominant_item_left_behind",
+    "args": [
+      [
+        10,
+        1
+      ],
+      [
+        100,
+        1
+      ],
+      1
+    ],
+    "expected": 1
+  },
+  {
+    "id": "same_weight_items",
+    "args": [
+      [
+        7,
+        7,
+        7
+      ],
+      [
+        1,
+        5,
+        3
+      ],
+      14
+    ],
+    "expected": 8
+  },
+  {
+    "id": "skip_to_optimize",
+    "args": [
+      [
+        5,
+        6,
+        7
+      ],
+      [
+        10,
+        11,
+        20
+      ],
+      13
+    ],
+    "expected": 31
+  },
+  {
+    "id": "sixteen_items_mixed",
+    "args": [
+      [
+        2,
+        3,
+        5,
+        7,
+        1,
+        4,
+        6,
+        8,
+        3,
+        2,
+        9,
+        5,
+        4,
+        3,
+        2,
+        1
+      ],
+      [
+        3,
+        4,
+        6,
+        8,
+        1,
+        5,
+        7,
+        9,
+        4,
+        3,
+        10,
+        6,
+        5,
+        4,
+        3,
+        2
+      ],
+      20
+    ],
+    "expected": 28
+  }
+]
