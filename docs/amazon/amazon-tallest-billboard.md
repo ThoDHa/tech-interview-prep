@@ -201,10 +201,10 @@ Example 2 (`rods = [1,2]`), the whole array indexed by difference (`-1` shown as
 difference     0  1  2  3
 start          0  .  .  .
 rod 1          0  0  .  .
-rod 2          0  0  0  0
+rod 2          0  1  0  0
 ```
 
-After rod 1: difference 1 holds a lone support at height 0. After rod 2: difference 3 rises from rods 1 and 2 on one side, difference 1 from rod 1 alone, difference 2 from rod 2 alone. `best_shorter[0]` stays `0`: no split of `[1,2]` levels above the empty one, matching the expected Output.
+After rod 1: difference 1 holds a lone support at height 0. After rod 2: difference 3 rises from rods 1 and 2 on one side, difference 2 from rod 2 alone, and difference 1 is taken over by the page's first split: rod 2 lands on the shorter side of the difference-1 state, overtakes it, and the new shorter support stands at `0 + min(1, 2) = 1`. `best_shorter[0]` stays `0`: no split of `[1,2]` levels above the empty one, matching the expected Output.
 
 #### Solution
 
@@ -270,10 +270,10 @@ Example 2 (`rods = [1,2]`) again; the dict's keys after each rod:
 ```text
 start          {0: 0}
 rod 1          {0: 0, 1: 0}
-rod 2          {0: 0, 1: 0, 2: 0, 3: 0}
+rod 2          {0: 0, 1: 1, 2: 0, 3: 0}
 ```
 
-The dict grows exactly along the differences some placement can build, and `best_shorter[0]` stays `0`, matching the expected Output.
+The dict grows exactly along the differences some placement can build, difference 1 ending at height 1 once the `{2}` against `{1}` split lands, and `best_shorter[0]` stays `0`, matching the expected Output.
 
 #### Solution
 

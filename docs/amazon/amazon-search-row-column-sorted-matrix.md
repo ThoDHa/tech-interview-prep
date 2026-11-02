@@ -186,12 +186,10 @@ Example 2 (`target = 8`) on the same matrix:
 (0, 2) = 7    7 < 8    move down
 (1, 2) = 9    9 > 8    move left
 (1, 1) = 5    5 < 8    move down
-(2, 1) = 6    6 < 8    move down
-(2, 2) = 12   12 > 8   move left
-(2, 0) = 3    3 < 8    move down: row 3 is outside the grid
+(2, 1) = 6    6 < 8    move down: row 3 is outside the grid
 ```
 
-The walk leaves the grid without meeting `8`, so the search returns `False`, matching the expected Output.
+Four comparisons exhaust the grid without meeting `8`, so the search returns `False`, matching the expected Output.
 
 #### Solution
 
