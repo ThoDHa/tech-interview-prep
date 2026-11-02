@@ -1,0 +1,358 @@
+[
+  {
+    "id": "example_1",
+    "args": [
+      [
+        5,
+        1,
+        4,
+        3,
+        2
+      ],
+      3
+    ],
+    "expected": [
+      5,
+      1,
+      3,
+      4,
+      2
+    ]
+  },
+  {
+    "id": "single_element",
+    "args": [
+      [
+        1
+      ],
+      1
+    ],
+    "expected": [
+      1
+    ]
+  },
+  {
+    "id": "window_covers_array",
+    "args": [
+      [
+        3,
+        1,
+        2
+      ],
+      3
+    ],
+    "expected": [
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "id": "unit_windows_change_nothing",
+    "args": [
+      [
+        4,
+        2,
+        5,
+        1,
+        3
+      ],
+      1
+    ],
+    "expected": [
+      4,
+      2,
+      5,
+      1,
+      3
+    ]
+  },
+  {
+    "id": "sorted_window_returns_original",
+    "args": [
+      [
+        2,
+        4,
+        1,
+        5,
+        6,
+        3
+      ],
+      2
+    ],
+    "expected": [
+      2,
+      4,
+      1,
+      5,
+      6,
+      3
+    ]
+  },
+  {
+    "id": "sorted_array_returns_original",
+    "args": [
+      [
+        1,
+        2,
+        3,
+        4
+      ],
+      2
+    ],
+    "expected": [
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  {
+    "id": "every_window_hurts",
+    "args": [
+      [
+        5,
+        4,
+        3,
+        2,
+        1
+      ],
+      2
+    ],
+    "expected": [
+      5,
+      4,
+      3,
+      1,
+      2
+    ]
+  },
+  {
+    "id": "longest_agreement_wins",
+    "args": [
+      [
+        3,
+        2,
+        1,
+        4
+      ],
+      3
+    ],
+    "expected": [
+      3,
+      1,
+      2,
+      4
+    ]
+  },
+  {
+    "id": "tie_prefers_earlier_window",
+    "args": [
+      [
+        4,
+        1,
+        3,
+        2,
+        5
+      ],
+      3
+    ],
+    "expected": [
+      4,
+      1,
+      2,
+      3,
+      5
+    ]
+  },
+  {
+    "id": "final_window_sort_wins",
+    "args": [
+      [
+        6,
+        1,
+        5,
+        4,
+        2,
+        3
+      ],
+      3
+    ],
+    "expected": [
+      6,
+      1,
+      5,
+      2,
+      3,
+      4
+    ]
+  },
+  {
+    "id": "wide_window_minimal_damage",
+    "args": [
+      [
+        6,
+        2,
+        5,
+        1,
+        4,
+        3
+      ],
+      4
+    ],
+    "expected": [
+      6,
+      2,
+      1,
+      3,
+      4,
+      5
+    ]
+  },
+  {
+    "id": "edge_descent_tie_same_result",
+    "args": [
+      [
+        1,
+        3,
+        2,
+        4
+      ],
+      3
+    ],
+    "expected": [
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  {
+    "id": "valley_two_sides",
+    "args": [
+      [
+        3,
+        1,
+        4,
+        2,
+        5
+      ],
+      3
+    ],
+    "expected": [
+      3,
+      1,
+      2,
+      4,
+      5
+    ]
+  },
+  {
+    "id": "peak_from_both_sides",
+    "args": [
+      [
+        2,
+        4,
+        1,
+        3
+      ],
+      3
+    ],
+    "expected": [
+      2,
+      1,
+      3,
+      4
+    ]
+  },
+  {
+    "id": "single_agreement_in_second_window",
+    "args": [
+      [
+        4,
+        1,
+        3,
+        2
+      ],
+      3
+    ],
+    "expected": [
+      4,
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "id": "all_descending_four",
+    "args": [
+      [
+        4,
+        3,
+        2,
+        1
+      ],
+      2
+    ],
+    "expected": [
+      4,
+      3,
+      1,
+      2
+    ]
+  },
+  {
+    "id": "mixed_damage_twelve",
+    "args": [
+      [
+        9,
+        1,
+        8,
+        2,
+        7,
+        3,
+        6,
+        4,
+        5,
+        12,
+        10,
+        11
+      ],
+      5
+    ],
+    "expected": [
+      9,
+      1,
+      8,
+      2,
+      7,
+      3,
+      6,
+      4,
+      5,
+      10,
+      11,
+      12
+    ]
+  },
+  {
+    "id": "earliest_start_longest_agreement",
+    "args": [
+      [
+        1,
+        2,
+        5,
+        3,
+        4
+      ],
+      4
+    ],
+    "expected": [
+      1,
+      2,
+      3,
+      5,
+      4
+    ]
+  }
+]
