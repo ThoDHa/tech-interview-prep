@@ -4,7 +4,8 @@ README and docs/interview-prep/practice_workspace.md quote tree counts as of
 October 2026: the bank totals (410 Amazon problems, 168 LeetCode folders),
 the write-up wave progress (183 of 410), the compiled PDF page count (578 =
 168 + 410), the workspace reference-file counts (91 of 168, 17 of 410), the
-cases-only Amazon folder count (393 of 410), and the fresh-clone skip floor
+cases-only Amazon folder count (393 of 410), the reference-test Amazon
+folder count (47 of 410), and the fresh-clone skip floor
 (over 3,100). This guard re-counts the tree and fails on drift: a wave
 landing that adds or removes problems, write-ups, or case files must update
 the quoted counts in the same change. Rewording a quoted sentence also fails
@@ -112,6 +113,23 @@ def authored_amazon_writeups() -> int:
 def amazon_cases_full_folders() -> int:
     """Count the Amazon problem folders carrying a `cases_full.json`."""
     return len(list((PRACTICE_DIR / "amazon").glob("*/cases_full.json")))
+
+
+def amazon_reference_test_folders() -> int:
+    """Count the Amazon folders carrying a `cases_full.json` and a reference test.
+
+    The workspace page's second counts sentence names these as the folders
+    that run their whole set under a plain `uv run pytest amazon/<slug>/`:
+    the `cases_full.json` gauntlet plus the `test_reference_<slug>.py`
+    module replaying it against `reference.py`.
+    """
+    return sum(
+        1
+        for folder in (PRACTICE_DIR / "amazon").iterdir()
+        if folder.is_dir()
+        and (folder / "cases_full.json").exists()
+        and any(folder.glob("test_reference_*.py"))
+    )
 
 
 def collect_workspace_test_items() -> int:
@@ -249,6 +267,29 @@ def test_workspace_page_cases_only_count_matches_the_tree():
         f"the practice workspace page counts {quoted} but the tree has"
         f" {actual} (Amazon folders without a cases_full.json, and the bank"
         " total); update the page counts in the same change as the tree"
+    )
+
+
+def test_workspace_page_reference_test_count_matches_the_tree():
+    page = WORKSPACE_PAGE.read_text(encoding="utf-8")
+    match = re.search(
+        r"and the (\d+) that also carry"
+        r" `cases_full\.json` and a reference test",
+        page,
+    )
+    assert match, (
+        "the practice workspace page no longer carries the expected"
+        " reference-test sentence ('the N that also carry `cases_full.json`"
+        " and a reference test'); update the sentence together with this"
+        " regex"
+    )
+    quoted = int(match.group(1))
+    actual = amazon_reference_test_folders()
+    assert quoted == actual, (
+        f"the practice workspace page counts {quoted} but the tree has"
+        f" {actual} (Amazon folders carrying both a cases_full.json and a"
+        " reference test); update the page counts in the same change as"
+        " the tree"
     )
 
 

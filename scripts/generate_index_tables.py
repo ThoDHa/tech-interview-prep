@@ -17,7 +17,10 @@ Pipeline:
   3. Cross-reference the Amazon OA bank: rows whose problem also appears
      there (amazon slug minus the amazon- prefix matching a NeetCode
      lcSlug) carry an "Amazon OA" marker with a legend under the table
-     pointing at the bank index in docs/amazon/index.md.
+     pointing at the bank index in docs/amazon/index.md. Exact duplicates
+     whose slugs differ come from scripts/amazon_lc_overlap_aliases.json
+     (an Amazon slug -> NeetCode lcSlug mapping) and join the same marker
+     set, so one mechanism marks every exact duplicate.
   4. Emit two marker-bounded sections into docs/leetcode/index.md: the
      unified LeetCode table and the Sources credits. --check compares the
      marker spans against a fresh render, so the tables stay
@@ -64,6 +67,9 @@ NEETCODE_MANIFEST_PATH = REPO_ROOT / "scripts" / "neetcode150_manifest.json"
 AMAZON_MANIFEST_PATH = REPO_ROOT / "scripts" / "amazon_oa_manifest.json"
 AMAZON_DIFFICULTY_OVERRIDES_PATH = (
     REPO_ROOT / "scripts" / "amazon_difficulty_overrides.json"
+)
+AMAZON_LC_OVERLAP_ALIASES_PATH = (
+    REPO_ROOT / "scripts" / "amazon_lc_overlap_aliases.json"
 )
 PROBLEMS_INDEX_PATH = REPO_ROOT / "docs" / "leetcode" / "index.md"
 MKDOCS_PATH = REPO_ROOT / "mkdocs.yml"
@@ -814,6 +820,83 @@ def amazon_overlap_lc_slugs(
     }
 
 
+def load_amazon_lc_overlap_aliases(
+    path: Path = AMAZON_LC_OVERLAP_ALIASES_PATH,
+) -> dict:
+    """Load the committed Amazon slug -> lcSlug exact-duplicate aliases.
+
+    Slug equality cannot mark the exact duplicates whose Amazon slug
+    differs from the LeetCode slug (the wildcard-word-dictionary pair,
+    LC 211; the count-connected-components pair); this file names them so
+    the unified table's Amazon OA marker covers every exact duplicate,
+    slug equality UNION this mapping. An absent file is the empty mapping
+    (the revert path: deleting it and regenerating restores
+    slug-equality-only marking); anything present must be one JSON object.
+
+    Args:
+        path: Path to amazon_lc_overlap_aliases.json (default: module
+            constant).
+
+    Returns:
+        The Amazon slug -> lcSlug mapping, empty when the file is absent.
+
+    Raises:
+        SourceError: When the file is unreadable, invalid JSON, or not a
+            JSON object.
+    """
+    if not path.exists():
+        return {}
+    try:
+        aliases = json.loads(path.read_text(encoding="utf-8"))
+    except (json.JSONDecodeError, UnicodeDecodeError) as error:
+        raise SourceError(f"Amazon LC overlap aliases {path} is not valid JSON: {error}") from error
+    if not isinstance(aliases, dict):
+        raise SourceError(f"Amazon LC overlap aliases {path} must be a JSON object")
+    return aliases
+
+
+def validate_amazon_lc_overlap_aliases(
+    aliases: dict, neetcode: Sequence[dict], amazon: Sequence[dict]
+) -> None:
+    """Check the alias mapping against the manifests it bridges.
+
+    The contract: every key is an Amazon manifest slug (the alias
+    addresses a real bank page), every value is a NeetCode lcSlug (the
+    marker only lands on unified-table rows, and an unmatched value would
+    otherwise mark nothing silently), and no alias restates slug equality
+    (the match rule the file exists to extend).
+
+    Args:
+        aliases: The Amazon slug -> lcSlug mapping.
+        neetcode: The validated NeetCode manifest entries.
+        amazon: The validated Amazon OA manifest entries.
+
+    Raises:
+        SourceError: When a key or value names no manifest entry, or an
+            alias restates slug equality.
+    """
+    lc_slugs = {entry["lcSlug"] for entry in neetcode}
+    amazon_slugs = {entry["slug"] for entry in amazon}
+    for amazon_slug, lc_slug in aliases.items():
+        if amazon_slug not in amazon_slugs:
+            raise SourceError(
+                f"Amazon LC overlap alias names an unknown Amazon slug"
+                f" {amazon_slug!r}; the manifest carries {len(amazon_slugs)} slugs"
+            )
+        if lc_slug not in lc_slugs:
+            raise SourceError(
+                f"Amazon LC overlap alias for {amazon_slug!r} names an"
+                f" unknown NeetCode lcSlug {lc_slug!r}; the manifest carries"
+                f" {len(lc_slugs)} lcSlugs"
+            )
+        if amazon_slug.removeprefix(AMAZON_SLUG_PREFIX) == lc_slug:
+            raise SourceError(
+                f"Amazon LC overlap alias for {amazon_slug!r} restates slug"
+                f" equality with {lc_slug!r}; the slug-equality rule already"
+                " marks that pair"
+            )
+
+
 def amazon_writeup_difficulty(slug: str, docs_dir: Optional[Path] = None) -> Optional[str]:
     """Parse one Amazon OA write-up's difficulty from its committed header.
 
@@ -1108,7 +1191,9 @@ def render_sections() -> List[tuple]:
     """
     grind, neetcode, amazon = load_validated_sources()
     merged = study_order_rows(grind, neetcode)
-    overlap = amazon_overlap_lc_slugs(neetcode, amazon)
+    aliases = load_amazon_lc_overlap_aliases()
+    validate_amazon_lc_overlap_aliases(aliases, neetcode, amazon)
+    overlap = amazon_overlap_lc_slugs(neetcode, amazon) | set(aliases.values())
     return [
         (
             "unified-leetcode",
