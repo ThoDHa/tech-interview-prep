@@ -21,7 +21,7 @@ A pattern matches a word when both have the same length and, at every position, 
 
 ## Constraints
 
-<!-- Constraints not parseable from FastPrep for amazon-wildcard-word-dictionary; fill them in. -->
+- `N/A (FastPrep lists no constraints)`
 
 ## Deriving the Solution
 

@@ -1,4 +1,4 @@
-"""Tests for Alien Dictionary — your attempt (solution.py) against cases.json.
+"""Tests for Alien Dictionary: your attempt (solution.py) against both case sets.
 
 The worked approaches live in ../../../docs/leetcode/alien_dictionary.md.
 """

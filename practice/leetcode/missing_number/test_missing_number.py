@@ -1,4 +1,4 @@
-"""Tests for Missing Number — your attempt (solution.py) against cases.json.
+"""Tests for Missing Number: your attempt (solution.py) against both case sets.
 
 The worked approaches live in ../../../docs/leetcode/missing_number.md.
 """

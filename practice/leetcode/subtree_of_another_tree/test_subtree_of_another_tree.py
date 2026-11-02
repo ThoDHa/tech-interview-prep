@@ -1,4 +1,4 @@
-"""Tests for Subtree of Another Tree — your attempt (solution.py) against cases.json.
+"""Tests for Subtree of Another Tree: your attempt (solution.py) against both case sets.
 
 The worked approaches live in ../../../docs/leetcode/subtree_of_another_tree.md.
 """

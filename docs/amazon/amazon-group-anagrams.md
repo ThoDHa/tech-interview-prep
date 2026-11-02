@@ -16,7 +16,7 @@ For this exercise, assume every string contains only lowercase English letters. 
 
 ## Constraints
 
-<!-- Constraints not parseable from FastPrep for amazon-group-anagrams; fill them in. -->
+- `N/A (FastPrep lists no constraints)`
 
 ## Solutions
 

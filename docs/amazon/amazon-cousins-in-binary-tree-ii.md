@@ -36,7 +36,9 @@ All replacements are conceptually simultaneous. Return the updated tree using th
 
 ## Constraints
 
-<!-- Constraints not parseable from FastPrep for amazon-cousins-in-binary-tree-ii; fill them in. -->
+- `For this exercise, assume 1 <= node count <= 100000 and every value is an integer from 1 to 10000.`
+- `Every non-null token is a decimal integer.`
+- `levelOrder is a valid level-order serialization of one binary tree; "null" marks a missing child slot, never the root slot.`
 
 ## Solutions
 

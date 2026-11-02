@@ -1,4 +1,4 @@
-"""Tests for Interleaving String — your attempt (solution.py) against cases.json.
+"""Tests for Interleaving String: your attempt (solution.py) against both case sets.
 
 The worked approaches live in ../../../docs/leetcode/interleaving_string.md.
 """

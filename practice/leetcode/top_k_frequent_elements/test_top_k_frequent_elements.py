@@ -1,4 +1,4 @@
-"""Tests for Top K Frequent Elements — your attempt (solution.py) against cases.json.
+"""Tests for Top K Frequent Elements: your attempt (solution.py) against both case sets.
 
 The worked approaches live in ../../../docs/leetcode/top_k_frequent_elements.md.
 """

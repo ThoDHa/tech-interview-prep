@@ -1,4 +1,4 @@
-"""Tests for Kth Largest Element In An Array — your attempt (solution.py) against cases.json.
+"""Tests for Kth Largest Element In An Array: your attempt (solution.py) against both case sets.
 
 The worked approaches live in ../../../docs/leetcode/kth_largest_element_in_an_array.md.
 """

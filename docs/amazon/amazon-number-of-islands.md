@@ -16,7 +16,9 @@ Given an array of equal-length strings grid, where '1' represents land and '0' r
 
 ## Constraints
 
-<!-- Constraints not parseable from FastPrep for amazon-number-of-islands; fill them in. -->
+- `1 <= grid.length <= 300.`
+- `1 <= grid[i].length <= 300, and every row has the same length.`
+- `Every character is '0' or '1'.`
 
 ## Solutions
 

@@ -1,4 +1,4 @@
-"""Tests for Rotate Image — your attempt (solution.py) against cases.json.
+"""Tests for Rotate Image: your attempt (solution.py) against both case sets.
 
 The worked approaches live in ../../../docs/leetcode/rotate_image.md.
 """

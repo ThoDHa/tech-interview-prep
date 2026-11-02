@@ -26,7 +26,7 @@ Interview follow-upThe interviewer asked follow-up questions about the approach,
 
 ## Constraints
 
-<!-- Constraints not parseable from FastPrep for amazon-maximum-sum-of-heights; fill them in. -->
+- `N/A (FastPrep lists no constraints)`
 
 ## Solutions
 

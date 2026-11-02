@@ -11,12 +11,13 @@ differs from their predecessor), takes the longest stretch between
 consecutive boundaries and the array ends, and shares no mechanism with
 the reference's rolling counter. The statement parses with no
 constraints block, so the gauntlet covers the corner shapes its
-statement and example name: single element, one run spanning the whole
-array, all-distinct (every run length 1), runs at the start, middle,
+statement and example name: the granted empty array (the statement's
+expected 0), single element, one run spanning the whole array,
+all-distinct (every run length 1), runs at the start, middle,
 and end, ties for the maximum, non-adjacent repeats of one value across
 separate runs, signed extreme magnitudes, and randomized arrays, all at
-eye-auditable sizes. Arrays are non-empty by assumption, and the output
-is a deterministic integer, so the comparison is plain `==`.
+eye-auditable sizes. The output is a deterministic integer, so the
+comparison is plain `==`.
 
 The two serialized length corners were converted to constructed or
 synthesized cases per the Testing Strategy rule that length corners are

@@ -23,6 +23,13 @@
   "expected": 1
  },
  {
+  "id": "empty_array",
+  "args": [
+   []
+  ],
+  "expected": 0
+ },
+ {
   "id": "two_equal",
   "args": [
    [

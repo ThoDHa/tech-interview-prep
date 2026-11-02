@@ -1,4 +1,4 @@
-"""Tests for Search a 2D Matrix — your attempt (solution.py) against cases.json.
+"""Tests for Search a 2D Matrix: your attempt (solution.py) against both case sets.
 
 The worked approaches live in ../../../docs/leetcode/search_a_2d_matrix.md.
 """

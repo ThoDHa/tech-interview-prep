@@ -1,4 +1,4 @@
-"""Tests for N Queens — your attempt (solution.py) against cases.json.
+"""Tests for N Queens: your attempt (solution.py) against both case sets.
 
 The worked approaches live in ../../../docs/leetcode/n_queens.md.
 """

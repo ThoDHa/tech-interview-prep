@@ -1,4 +1,4 @@
-"""Tests for Hand of Straights — your attempt (solution.py) against cases.json.
+"""Tests for Hand of Straights: your attempt (solution.py) against both case sets.
 
 The worked approaches live in ../../../docs/leetcode/hand_of_straights.md.
 """

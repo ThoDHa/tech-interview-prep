@@ -1,4 +1,4 @@
-"""Tests for Daily Temperatures — your attempt (solution.py) against cases.json.
+"""Tests for Daily Temperatures: your attempt (solution.py) against both case sets.
 
 The worked approaches live in ../../../docs/leetcode/daily_temperatures.md.
 """

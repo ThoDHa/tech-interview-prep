@@ -1,4 +1,4 @@
-"""Tests for Longest Increasing Path In a Matrix — your attempt (solution.py) against cases.json.
+"""Tests for Longest Increasing Path In a Matrix: your attempt (solution.py) against both case sets.
 
 The worked approaches live in ../../../docs/leetcode/longest_increasing_path_in_a_matrix.md.
 """

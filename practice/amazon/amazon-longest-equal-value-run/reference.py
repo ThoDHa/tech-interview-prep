@@ -25,8 +25,8 @@ class Solution:
         run at length 1.
 
         Args:
-            nums: Non-empty integer array (the statement's example and
-                corner shapes all carry at least one element).
+            nums: Integer array; the statement grants the empty array
+                with an expected result of 0.
 
         Returns:
             The length of the longest contiguous stretch of equal values.
@@ -34,6 +34,8 @@ class Solution:
         Time:  O(n): one predecessor comparison per element.
         Space: O(1): two counters regardless of input size.
         """
+        if not nums:
+            return 0
         longest_run = 1
         current_run = 1
         for index in range(1, len(nums)):

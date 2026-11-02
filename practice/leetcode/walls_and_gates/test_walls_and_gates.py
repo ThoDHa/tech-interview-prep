@@ -1,4 +1,4 @@
-"""Tests for Walls And Gates — your attempt (solution.py) against cases.json.
+"""Tests for Walls And Gates: your attempt (solution.py) against both case sets.
 
 The worked approaches live in ../../../docs/leetcode/walls_and_gates.md.
 """
