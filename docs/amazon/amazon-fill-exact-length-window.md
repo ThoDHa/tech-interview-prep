@@ -16,7 +16,9 @@ Given a binary string log and an integer k, choose exactly one contiguous substr
 
 ## Constraints
 
-<!-- Constraints not parseable from FastPrep for amazon-fill-exact-length-window; fill them in. -->
+- `For this exercise, assume 1 <= log.length <= 100000.`
+- `1 <= k <= log.length.`
+- `Every character of log is 0 or 1.`
 
 ## Deriving the Solution
 
