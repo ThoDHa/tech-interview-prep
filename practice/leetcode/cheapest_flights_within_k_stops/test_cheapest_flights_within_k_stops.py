@@ -1,4 +1,4 @@
-"""Tests for Cheapest Flights Within K Stops — your attempt (solution.py) against cases.json.
+"""Tests for Cheapest Flights Within K Stops: your attempt (solution.py) against both case sets.
 
 The worked approaches live in ../../../docs/leetcode/cheapest_flights_within_k_stops.md.
 """

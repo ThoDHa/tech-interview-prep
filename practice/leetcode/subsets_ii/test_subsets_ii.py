@@ -1,4 +1,4 @@
-"""Tests for Subsets II — your attempt (solution.py) against cases.json.
+"""Tests for Subsets II: your attempt (solution.py) against both case sets.
 
 The worked approaches live in ../../../docs/leetcode/subsets_ii.md.
 """

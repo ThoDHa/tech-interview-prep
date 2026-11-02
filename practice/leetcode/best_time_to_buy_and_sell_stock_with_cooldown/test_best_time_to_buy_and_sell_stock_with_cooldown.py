@@ -1,4 +1,4 @@
-"""Tests for Best Time to Buy And Sell Stock With Cooldown — your attempt (solution.py) against cases.json.
+"""Tests for Best Time to Buy And Sell Stock With Cooldown: your attempt (solution.py) against both case sets.
 
 The worked approaches live in ../../../docs/leetcode/best_time_to_buy_and_sell_stock_with_cooldown.md.
 """

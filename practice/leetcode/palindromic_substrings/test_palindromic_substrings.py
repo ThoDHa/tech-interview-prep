@@ -1,4 +1,4 @@
-"""Tests for Palindromic Substrings — your attempt (solution.py) against cases.json.
+"""Tests for Palindromic Substrings: your attempt (solution.py) against both case sets.
 
 The worked approaches live in ../../../docs/leetcode/palindromic_substrings.md.
 """

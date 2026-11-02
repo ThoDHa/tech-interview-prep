@@ -1,4 +1,4 @@
-"""Tests for Minimum Interval to Include Each Query — your attempt (solution.py) against cases.json.
+"""Tests for Minimum Interval to Include Each Query: your attempt (solution.py) against both case sets.
 
 The worked approaches live in ../../../docs/leetcode/minimum_interval_to_include_each_query.md.
 """

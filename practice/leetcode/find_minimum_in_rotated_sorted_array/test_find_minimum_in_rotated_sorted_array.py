@@ -1,4 +1,4 @@
-"""Tests for Find Minimum In Rotated Sorted Array — your attempt (solution.py) against cases.json.
+"""Tests for Find Minimum In Rotated Sorted Array: your attempt (solution.py) against both case sets.
 
 The worked approaches live in ../../../docs/leetcode/find_minimum_in_rotated_sorted_array.md.
 """

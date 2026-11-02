@@ -1,4 +1,4 @@
-"""Tests for Happy Number — your attempt (solution.py) against cases.json.
+"""Tests for Happy Number: your attempt (solution.py) against both case sets.
 
 The worked approaches live in ../../../docs/leetcode/happy_number.md.
 """

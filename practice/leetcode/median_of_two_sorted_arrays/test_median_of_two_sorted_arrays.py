@@ -1,4 +1,4 @@
-"""Tests for Median of Two Sorted Arrays — your attempt (solution.py) against cases.json.
+"""Tests for Median of Two Sorted Arrays: your attempt (solution.py) against both case sets.
 
 The worked approaches live in ../../../docs/leetcode/median_of_two_sorted_arrays.md.
 """

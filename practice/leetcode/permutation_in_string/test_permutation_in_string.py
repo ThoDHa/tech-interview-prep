@@ -1,4 +1,4 @@
-"""Tests for Permutation In String — your attempt (solution.py) against cases.json.
+"""Tests for Permutation In String: your attempt (solution.py) against both case sets.
 
 The worked approaches live in ../../../docs/leetcode/permutation_in_string.md.
 """

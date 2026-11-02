@@ -1,4 +1,4 @@
-"""Tests for Sliding Window Maximum — your attempt (solution.py) against cases.json.
+"""Tests for Sliding Window Maximum: your attempt (solution.py) against both case sets.
 
 The worked approaches live in ../../../docs/leetcode/sliding_window_maximum.md.
 """

@@ -1,4 +1,4 @@
-"""Tests for Remove Nth Node From End of List — your attempt (solution.py) against cases.json.
+"""Tests for Remove Nth Node From End of List: your attempt (solution.py) against both case sets.
 
 The worked approaches live in ../../../docs/leetcode/remove_nth_node_from_end_of_list.md.
 """

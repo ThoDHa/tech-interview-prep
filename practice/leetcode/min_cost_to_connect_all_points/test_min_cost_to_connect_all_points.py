@@ -1,4 +1,4 @@
-"""Tests for Min Cost to Connect All Points — your attempt (solution.py) against cases.json.
+"""Tests for Min Cost to Connect All Points: your attempt (solution.py) against both case sets.
 
 The worked approaches live in ../../../docs/leetcode/min_cost_to_connect_all_points.md.
 """

@@ -1,4 +1,4 @@
-"""Tests for Min Cost Climbing Stairs — your attempt (solution.py) against cases.json.
+"""Tests for Min Cost Climbing Stairs: your attempt (solution.py) against both case sets.
 
 The worked approaches live in ../../../docs/leetcode/min_cost_climbing_stairs.md.
 """

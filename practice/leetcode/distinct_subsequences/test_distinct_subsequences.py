@@ -1,4 +1,4 @@
-"""Tests for Distinct Subsequences — your attempt (solution.py) against cases.json.
+"""Tests for Distinct Subsequences: your attempt (solution.py) against both case sets.
 
 The worked approaches live in ../../../docs/leetcode/distinct_subsequences.md.
 """
