@@ -16,7 +16,8 @@ Given an integer array nums, return the length of its longest strictly increasin
 
 ## Constraints
 
-<!-- Constraints not parseable from FastPrep for amazon-longest-increasing-subsequence-variant; fill them in. -->
+- `1 <= nums.length <= 2500`
+- `-10^4 <= nums[i] <= 10^4`
 
 ## Solutions
 

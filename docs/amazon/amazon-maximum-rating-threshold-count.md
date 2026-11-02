@@ -16,7 +16,8 @@ Given a nonempty integer array ratings, return the largest integer k such that a
 
 ## Constraints
 
-<!-- Constraints not parseable from FastPrep for amazon-maximum-rating-threshold-count; fill them in. -->
+- `1 <= ratings.length <= 200000.`
+- `0 <= ratings[i] <= 10^9.`
 
 ## Solutions
 

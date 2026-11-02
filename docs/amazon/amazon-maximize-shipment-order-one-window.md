@@ -16,7 +16,7 @@ shipmentOrder is a permutation of 1..n. Choose exactly one contiguous window of 
 
 ## Constraints
 
-<!-- Constraints not parseable from FastPrep for amazon-maximize-shipment-order-one-window; fill them in. -->
+- `N/A (FastPrep lists no constraints)`
 
 ## Deriving the Solution
 
