@@ -16,7 +16,9 @@ Given a nonempty integer array nums and an integer k, return the k distinct valu
 
 ## Constraints
 
-<!-- Constraints not parseable from FastPrep for amazon-top-k-frequent-elements; fill them in. -->
+- `1 <= nums.length <= 100000.`
+- `-10^9 <= nums[i] <= 10^9.`
+- `1 <= k <= the number of distinct values in nums.`
 
 ## Solutions
 

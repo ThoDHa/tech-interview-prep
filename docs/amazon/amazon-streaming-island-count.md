@@ -16,7 +16,11 @@ A binary matrix arrives one row at a time from top to bottom. Given those rows a
 
 ## Constraints
 
-<!-- Constraints not parseable from FastPrep for amazon-streaming-island-count; fill them in. -->
+- `1 <= rows.length <= 100000.`
+- `1 <= rows[i].length <= 1000, and every row has equal length.`
+- `rows.length * rows[i].length <= 1000000.`
+- `Every character is '0' or '1'.`
+- `The algorithm must use O(rows[i].length) auxiliary memory.`
 
 ## Solutions
 
