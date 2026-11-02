@@ -1,0 +1,226 @@
+[
+  {
+    "id": "example_1",
+    "args": [
+      [
+        3,
+        -2,
+        5,
+        -1,
+        4
+      ],
+      2
+    ],
+    "expected": 10
+  },
+  {
+    "id": "k_equals_n",
+    "args": [
+      [
+        3,
+        -2,
+        5,
+        -1,
+        4
+      ],
+      5
+    ],
+    "expected": 3
+  },
+  {
+    "id": "k_one",
+    "args": [
+      [
+        3,
+        -2,
+        5,
+        -1,
+        4
+      ],
+      1
+    ],
+    "expected": 10
+  },
+  {
+    "id": "single_element",
+    "args": [
+      [
+        7
+      ],
+      1
+    ],
+    "expected": -7
+  },
+  {
+    "id": "all_positive",
+    "args": [
+      [
+        2,
+        3,
+        4
+      ],
+      1
+    ],
+    "expected": 5
+  },
+  {
+    "id": "all_negative",
+    "args": [
+      [
+        -2,
+        -3,
+        -4
+      ],
+      1
+    ],
+    "expected": 4
+  },
+  {
+    "id": "all_negative_k_two",
+    "args": [
+      [
+        -2,
+        -3,
+        -4
+      ],
+      2
+    ],
+    "expected": -1
+  },
+  {
+    "id": "start_decline_gain",
+    "args": [
+      [
+        -5,
+        10
+      ],
+      1
+    ],
+    "expected": 15
+  },
+  {
+    "id": "flat_zeros",
+    "args": [
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      2
+    ],
+    "expected": 0
+  },
+  {
+    "id": "decline_then_swing",
+    "args": [
+      [
+        -1,
+        -1,
+        -1,
+        10
+      ],
+      2
+    ],
+    "expected": 11
+  },
+  {
+    "id": "decline_start_best",
+    "args": [
+      [
+        1,
+        -9,
+        9,
+        9
+      ],
+      2
+    ],
+    "expected": 27
+  },
+  {
+    "id": "two_decline_starts",
+    "args": [
+      [
+        -4,
+        5,
+        -4,
+        5
+      ],
+      2
+    ],
+    "expected": 10
+  },
+  {
+    "id": "k_n_minus_one",
+    "args": [
+      [
+        5,
+        -1,
+        2
+      ],
+      2
+    ],
+    "expected": 3
+  },
+  {
+    "id": "increasing",
+    "args": [
+      [
+        1,
+        2,
+        3,
+        4
+      ],
+      2
+    ],
+    "expected": 8
+  },
+  {
+    "id": "decreasing",
+    "args": [
+      [
+        4,
+        3,
+        2,
+        1
+      ],
+      2
+    ],
+    "expected": 2
+  },
+  {
+    "id": "short_period_trap",
+    "args": [
+      [
+        5,
+        -9,
+        -9,
+        5
+      ],
+      3
+    ],
+    "expected": 5
+  },
+  {
+    "id": "large_magnitude_negative_score",
+    "args": [
+      [
+        1000000000,
+        -1000000000
+      ],
+      2
+    ],
+    "expected": -2000000000
+  },
+  {
+    "id": "large_magnitude_positive_score",
+    "args": [
+      [
+        -1000000000,
+        1000000000
+      ],
+      2
+    ],
+    "expected": 2000000000
+  }
+]
