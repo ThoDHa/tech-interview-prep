@@ -146,10 +146,10 @@ from typing import Dict, List, Tuple
 class Solution:
     def tallestBillboard(self, rods: List[int]) -> int:
         rod_count = len(rods)
-        memo: Dict[Tuple[int, int], int] = {}
-        unreachable = -1
+        memo: Dict[Tuple[int, int], float] = {}
+        unreachable = float("-inf")
 
-        def grow_from(index: int, difference: int) -> int:
+        def grow_from(index: int, difference: int) -> float:
             if index == rod_count:
                 return 0 if difference == 0 else unreachable
             state = (index, difference)
@@ -164,7 +164,7 @@ class Solution:
             memo[state] = best
             return best
 
-        return grow_from(0, 0)
+        return int(grow_from(0, 0))
 ```
 
 #### Time and Space Complexity Analysis
