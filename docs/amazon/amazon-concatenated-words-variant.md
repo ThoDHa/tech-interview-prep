@@ -16,7 +16,9 @@ Return every word in words that can be formed by concatenating at least two shor
 
 ## Constraints
 
-<!-- Constraints not parseable from FastPrep for amazon-concatenated-words-variant; fill them in. -->
+- `1 <= words.length <= 10000.`
+- `Words are unique and contain one to thirty lowercase ASCII letters.`
+- `The sum of all word lengths is at most 100000.`
 
 ## Solutions
 

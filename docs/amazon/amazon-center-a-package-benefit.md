@@ -20,7 +20,12 @@ Order the independent packages by decreasing benefitA[i] + benefitB[i], breaking
 
 ## Constraints
 
-<!-- Constraints not parseable from FastPrep for amazon-center-a-package-benefit; fill them in. -->
+- `1 <= benefitA.length = benefitB.length <= 200000.`
+- `0 <= benefitA[i], benefitB[i] <= 10^9.`
+- `0 <= linkedPairs.length <= floor(n / 2).`
+- `Every pair contains two distinct valid zero-based package indices.`
+- `No package index appears in more than one linked pair.`
+- `The answer fits in a signed 64-bit integer.`
 
 ## Solutions
 
