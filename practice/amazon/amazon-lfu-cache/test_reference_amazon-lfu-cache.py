@@ -56,11 +56,15 @@ by update_never_evicts; running the capacity check before the
 membership check, which evicts on an updating put, by
 update_on_full_keeps_both_keys, the one case where an updated key and
 an untouched key then compete at different frequencies; failing to
-advance min_frequency crashes on an empty eviction bucket in example_1
-and seven further cases and reads a wrong victim in
-update_on_full_keeps_both_keys and min_advances_before_bucket_refill;
-advancing min_frequency whenever any bucket empties is caught by
-lower_frequency_beats_recency and min_freq_advances_on_empty_bucket.
+advance min_frequency crashes on an empty eviction bucket in example_1,
+update_on_full_keeps_both_keys, and seven further cases, every catcher
+failing by crash and none reading a wrong victim
+(min_advances_before_bucket_refill survives this mutant because a
+fresh insert re-creates the emptied bucket and resets min_frequency
+before the stale pointer is read, so it catches only the
+LRU-instead-of-LFU eviction named above); advancing min_frequency
+whenever any bucket empties is caught by lower_frequency_beats_recency
+and min_freq_advances_on_empty_bucket.
 """
 
 import pytest

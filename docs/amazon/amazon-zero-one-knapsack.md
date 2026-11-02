@@ -209,11 +209,11 @@ The memo is a table with one row per item and one column per remaining budget, a
 
 Let `best_value[c]` be the best value achievable with capacity `c` using only the items processed so far, and let `(w, v)` be the item being processed:
 
-$$ best\\_value[c] = \\begin{cases}
-0, & \\text{no items processed} \\\\[4pt]
-\\max(best\\_value[c],\\ best\\_value[c - w] + v), & c \\ge w,\\ \\text{swept in descending } c \\\\[4pt]
-best\\_value[c], & c < w
-\\end{cases} $$
+$$ best\_value[c] = \begin{cases}
+0, & \text{no items processed} \\[4pt]
+\max(best\_value[c],\ best\_value[c - w] + v), & c \ge w,\ \text{swept in descending } c \\[4pt]
+best\_value[c], & c < w
+\end{cases} $$
 
 ```text
 best_value[c] = 0                                  with no items processed

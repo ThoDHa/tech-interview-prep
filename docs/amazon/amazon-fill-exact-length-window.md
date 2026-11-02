@@ -95,7 +95,7 @@ Spelling out what the rebuild computes: outside the window nothing changes, insi
 
 The decomposition the code evaluates, with `n = len(log)` and `W(s) = log[s:s+k]`:
 
-$$ \\text{answer} = \\text{ones}(\\log) + \\max_s\\ big(k - (\\text{prefix}[s + k] - \\text{prefix}[s])\\big) $$
+$$ \text{answer} = \text{ones}(\log) + \max_s\ \big(k - (\text{prefix}[s + k] - \text{prefix}[s])\big) $$
 
 ```text
 answer    = ones(log) + max over s of (k - (prefix[s + k] - prefix[s]))
