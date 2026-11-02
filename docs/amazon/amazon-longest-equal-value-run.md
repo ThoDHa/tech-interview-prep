@@ -36,7 +36,9 @@ The array decomposes into maximal runs of equal values, separated exactly where 
 
 The statement's most literal reading: a run is a maximal stretch of equal values, so try to start a run at every position, extend it rightward while the values stay equal, and remember the longest extension. The extension loop is the statement's definition of a run, applied once per candidate start:
 
-1. Set `longest_run = 1` (any non-empty array has a run of length 1).
+1. Return 0 immediately for an empty array (the statement grants it with
+   an expected answer of 0); otherwise set `longest_run = 1`, since any
+   non-empty array has a run of length 1.
 2. For each `start`, advance `run_end` from `start` while
    `nums[run_end + 1] == nums[run_end]`.
 3. Update `longest_run` with the stretch length `run_end - start + 1`.
@@ -65,6 +67,8 @@ from typing import List
 
 class Solution:
     def solve(self, nums: List[int]) -> int:
+        if not nums:
+            return 0
         longest_run = 1
         for start in range(len(nums)):
             run_end = start
@@ -88,7 +92,7 @@ Only the `start`, `run_end`, and `longest_run` locals live across iterations.
 
 - The extension loop is the definition of a run, which makes this version almost impossible to get wrong and a good baseline to state first.
 - The redundancy is measurable: every element inside a run of length `L` is compared `L` times before the scan moves on.
-- The answer is at least 1 for any non-empty array, which the `longest_run = 1` seed encodes and which removes a special case from the loop.
+- The answer is at least 1 for any non-empty array, which the `longest_run = 1` seed encodes; the granted empty array is answered by the early return, keeping the loop free of special cases.
 
 ### Single-Pass Run Counter
 
@@ -96,7 +100,9 @@ Only the `start`, `run_end`, and `longest_run` locals live across iterations.
 
 The Brute Force re-measures a run once per element inside it, but a single walk can carry the measurement forward: `current_run` counts the run ending at the previous element, so an element equal to its predecessor extends that same run, and any different value proves the previous run ended and restarts the count. The maximum is updated the moment a run grows, so nothing is measured twice:
 
-1. Seed `current_run = 1` and `longest_run = 1` for the first element.
+1. Return 0 immediately for an empty array (the statement grants it with
+   an expected answer of 0); otherwise seed `current_run = 1` and
+   `longest_run = 1` for the first element.
 2. For each `index` from 1 onward: when `nums[index] == nums[index - 1]`,
    increment `current_run` and raise `longest_run` to match if larger.
 3. Otherwise reset `current_run` to 1; the run ending at `index` starts over.
@@ -127,6 +133,8 @@ from typing import List
 
 class Solution:
     def solve(self, nums: List[int]) -> int:
+        if not nums:
+            return 0
         longest_run = 1
         current_run = 1
         for index in range(1, len(nums)):
@@ -162,7 +170,8 @@ The Single-Pass counter maintains run lengths by hand, but grouping consecutive 
 
 1. Group `nums` with `groupby`; each `(value, group)` pair is one maximal run.
 2. Measure each group with `len(list(group))`.
-3. Return the `max` group length.
+3. Return the `max` group length, with `default=0` answering the
+   granted empty input.
 
 #### Walkthrough
 
@@ -185,7 +194,7 @@ from typing import List
 
 class Solution:
     def solve(self, nums: List[int]) -> int:
-        return max(len(list(group)) for _, group in groupby(nums))
+        return max((len(list(group)) for _, group in groupby(nums)), default=0)
 ```
 
 #### Time and Space Complexity Analysis
@@ -234,4 +243,4 @@ Each materialized group holds at most the longest run's length `L` at one time; 
 
 - **Single-Pass Run Counter** is the recommended choice: it touches each element exactly once and carries no per-run overhead.
 - The whole problem is a special case of run-length encoding: if follow-ups ask *which* value runs longest or *where*, the same walk records the run's value and start index alongside its length.
-- `max` over an empty `nums` would raise, which is why the approaches seed from a non-empty assumption; the statement's example and corner shapes all carry at least one element.
+- The statement grants the empty array with an expected answer of 0, so every approach answers it explicitly: an early return in the two loop forms, `default=0` on the `max` over `groupby`.
