@@ -26,10 +26,8 @@ Interview Follow-upThe interviewer asked follow-up questions about alternative s
 
 ## Constraints
 
-- `For this exercise, assume 1 <= numCourses <= 2000.`
-- `0 <= prerequisites.length <= numCourses * (numCourses - 1) / 2.`
+- `For this exercise, assume 1 <= numCourses <= 2000, 0 <= prerequisites.length <= 5000, and all pairs are distinct.`
 - `Every pair is [course, prerequisite] with 0 <= course, prerequisite < numCourses.`
-- `All pairs are distinct.`
 
 ## Solutions
 
