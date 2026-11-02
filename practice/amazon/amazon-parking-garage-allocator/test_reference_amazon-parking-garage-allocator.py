@@ -48,18 +48,30 @@ module and derive every expected outcome from the construction:
 Discrimination record, naming the mutant classes the serialized cases
 catch, each claim verified by running the mutant against every case:
 allocating at the rightmost fitting run instead of the leftmost is
-caught by example_1 and fragmented_free_cells_reject_size_two; placing
-at the chosen run's far end instead of its start by example_1 and
-thirteen further cases (every case that parks into a partially used
-run); skipping exact-fit runs with a strict comparison by example_2 and
-sixteen further cases (every case whose outcome parks a run exactly);
-dropping the left merge by merge_left_enables_size_three and
+caught by example_1 and fragmented_free_cells_reject_size_two;
+placing at the chosen run's far end instead of its start by 14 of the
+19, escaping exactly example_2, min_garage_single_park,
+min_garage_leave_refill_cycle, full_garage_rejects_all_sizes, and
+single_operation_oversize, whose parks all land where the run's start
+is its own far end; skipping exact-fit runs with a strict comparison
+by 17 of the 19, escaping exactly example_1 and
+single_operation_oversize, whose parks never meet an exactly-fitting
+run; dropping the left merge by merge_left_enables_size_three and
 merge_both_sides_into_one_run; dropping the right merge by
 merge_right_enables_size_three and leave_left_boundary_then_oversize;
 dropping both merges by those four cases; freeing one cell past the
-stated range by fragmented_free_cells_reject_size_two and nine further
-cases; and keeping an exactly-consumed run in the list (stale run,
-later double booking) by exact_fill_then_fail and eight further cases.
+stated range by 10 of the 19, escaping exactly the five leave-free
+sequences example_2, min_garage_single_park, exact_fill_then_fail,
+full_garage_rejects_all_sizes, and single_operation_oversize plus
+example_1, min_garage_leave_refill_cycle,
+leave_left_boundary_then_oversize, and size_three_exact_tail_fit,
+whose extra freed cell moves no later park; and keeping an
+exactly-consumed run in the list (stale run, later double booking) by
+9 of the 19, escaping exactly example_1, example_2,
+min_garage_single_park, min_garage_leave_refill_cycle,
+fragmented_free_cells_reject_size_two, first_fit_skips_short_front_gap,
+leftmost_of_two_fitting_gaps, merge_right_enables_size_three,
+merge_both_sides_into_one_run, and single_operation_oversize.
 """
 
 import pytest
