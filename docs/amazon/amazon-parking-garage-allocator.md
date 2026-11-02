@@ -48,7 +48,7 @@ The statement's most literal reading: the garage is a row of spaces, each either
 
 1. Keep `occupied`, one boolean per space, all false for the empty garage.
 2. On `PARK size`: try every `start` from `0` through `spaceCount - size`; the first window with no occupied cell wins, occupy its cells, and contribute `start`. Contribute `-1` when no window fits.
-3. On `LEAVE start size`: clear the cells `start` through `start + size - 1` and contribute nothing.
+3. On `LEAVE start size`: clear the cells `start` through `start + size - 1` and contribute nothing. The parameter is named `size` and the statement fixes "Sizes are 1, 2, or 3", naming a length rather than a position, so the second argument counts the freed cells; the occupied-range guarantee then makes `start` through `start + size - 1` exactly the run a car holds.
 4. Collect the contributions of the park operations in order.
 
 This is the statement's definition transcribed directly, which makes it the oracle the faster versions are checked against.
