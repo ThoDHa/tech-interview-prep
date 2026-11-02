@@ -25,7 +25,7 @@ practice/
 ├── leetcode/                  # Grind 75 + NeetCode 150 problems
 │   └── <slug>/                # the four files below; some folders add reference.py + test_reference_<slug>.py
 │       ├── solution.py        # YOUR attempt: solve here; run it directly to debug a case
-│       ├── cases.json         # simple cases: the LeetCode and FastPrep examples ("Run")
+│       ├── cases.json         # simple cases: the LeetCode examples ("Run")
 │       ├── cases_full.json    # full cases: the corner-case gauntlet ("Submit")
 │       └── test_<slug>.py     # runs your solution against both case sets
 └── amazon/                    # Amazon OA bank
