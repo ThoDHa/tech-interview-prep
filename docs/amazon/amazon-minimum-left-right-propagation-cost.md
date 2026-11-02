@@ -111,14 +111,13 @@ class Solution:
                     if right_cost < best_cost.get(right_state, float("inf")):
                         best_cost[right_state] = right_cost
                         heapq.heappush(frontier, (right_cost, right_state))
-        return 0
 ```
 
 #### Time and Space Complexity Analysis
 
-##### Time Complexity: `O(S * n log S)`
+##### Time Complexity: `O(S * n^2 + S * n log S)`
 
-`S`, the number of reachable states, is bounded by the constant-prefix, untouched-middle, constant-suffix shapes the operations can produce; each expansion tries `2n` operations.
+Each expansion builds and hashes `2n` neighbor tuples of length `n`, the quadratic term, and each heap push costs a length-`n` comparison against `log S` frontier entries. `S`, the number of reachable states, is bounded by the constant-prefix, untouched-middle, constant-suffix shapes the operations can produce, which keeps the whole product tiny.
 
 ##### Space Complexity: `O(S * n)`
 
@@ -154,10 +153,10 @@ and the answer is the minimum of this over all maximal runs. An already-uniform 
 Example 3 (`values = [5,1,1,2,1,1]`), every maximal run scored with `n = 6`:
 
 ```text
-run [0..0] value 5:  (0 + 5 - 0) * 5 = 25
-run [1..2] value 1:  (1 + 5 - 1 - 2) * 1 = 1 + 3 = 4
-run [3..3] value 2:  (3 + 5 - 1 - 3) * 2 = 10
-run [4..5] value 1:  (4 + 5 - 1 - 5) * 1 = 4
+run [0..0] value 5:  (0 + 6 - 1 - 0) * 5 = 25
+run [1..2] value 1:  (1 + 6 - 1 - 2) * 1 = 1 + 3 = 4
+run [3..3] value 2:  (3 + 6 - 1 - 3) * 2 = 10
+run [4..5] value 1:  (4 + 6 - 1 - 5) * 1 = 4
 ```
 
 The minimum is `4`, matching the expected Output: propagate left from index 1 and right from index 2.
@@ -205,7 +204,7 @@ Only the running best and the two run pointers.
 
 ### Time Complexity
 
-- **Operation-Sequence Search**: `O(S * n log S)` over reachable states `S` - exhaustive but tiny-state.
+- **Operation-Sequence Search**: `O(S * n^2 + S * n log S)` over reachable states `S` - exhaustive but tiny-state.
 - **Kept-Run Greedy**: `O(n)` - one pass over the runs.
 
 ### Space Complexity

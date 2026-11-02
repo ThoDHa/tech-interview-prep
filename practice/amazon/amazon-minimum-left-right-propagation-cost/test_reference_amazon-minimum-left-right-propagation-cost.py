@@ -22,7 +22,7 @@ four distinct values, an alternating array, a single peak, a single
 valley, an expensive dominant value, runs touching each edge, values at
 the 10^9 bound, and a twelve-value mix. Scale corners live here as
 constructed cases per the Testing Strategy rule that length corners are
-constructible or synthesized, never serialized bulk; all three build
+constructible or synthesized, never serialized bulk; all four build
 their arrays in this module and derive the expected outcome from the
 construction, with each derivation rule confirmed against the oracle on
 a brute-force-able analogue before freezing:
