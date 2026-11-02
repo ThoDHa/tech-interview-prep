@@ -1,4 +1,4 @@
-"""Tests for Valid Sudoku: your attempt (solution.py) against both case sets.
+"""Tests for Valid Sudoku: your attempt (solution.py) against the inline cases.json set.
 
 The worked approaches live in ../../../docs/leetcode/valid_sudoku.md.
 """

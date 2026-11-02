@@ -1,4 +1,4 @@
-"""Tests for Two Sum II Input Array Is Sorted: your attempt (solution.py) against both case sets.
+"""Tests for Two Sum II Input Array Is Sorted: your attempt (solution.py) against the inline cases.json set.
 
 The worked approaches live in ../../../docs/leetcode/two_sum_ii_input_array_is_sorted.md.
 """

@@ -1,4 +1,4 @@
-"""Tests for Longest Consecutive Sequence: your attempt (solution.py) against both case sets.
+"""Tests for Longest Consecutive Sequence: your attempt (solution.py) against the inline cases.json set.
 
 The worked approaches live in ../../../docs/leetcode/longest_consecutive_sequence.md.
 """
