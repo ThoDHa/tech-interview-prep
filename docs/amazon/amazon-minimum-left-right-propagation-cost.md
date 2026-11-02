@@ -115,9 +115,9 @@ class Solution:
 
 #### Time and Space Complexity Analysis
 
-##### Time Complexity: `O(S * n^2 + S * n log S)`
+##### Time Complexity: `O(S * n^2 * log S)`
 
-Each expansion builds and hashes `2n` neighbor tuples of length `n`, the quadratic term, and each heap push costs a length-`n` comparison against `log S` frontier entries. `S`, the number of reachable states, is bounded by the constant-prefix, untouched-middle, constant-suffix shapes the operations can produce, which keeps the whole product tiny.
+Each expansion builds and hashes `2n` neighbor tuples of length `n`, the quadratic term, and up to `2n` improving neighbors each pay a heap push whose sift makes `O(log S)` length-`n` tuple comparisons, `O(n log S)` per push, so the heap term `O(n^2 log S)` dominates the expansion. `S`, the number of reachable states, is bounded by the constant-prefix, untouched-middle, constant-suffix shapes the operations can produce, which keeps the whole product tiny.
 
 ##### Space Complexity: `O(S * n)`
 
@@ -204,7 +204,7 @@ Only the running best and the two run pointers.
 
 ### Time Complexity
 
-- **Operation-Sequence Search**: `O(S * n^2 + S * n log S)` over reachable states `S` - exhaustive but tiny-state.
+- **Operation-Sequence Search**: `O(S * n^2 * log S)` over reachable states `S` - exhaustive but tiny-state.
 - **Kept-Run Greedy**: `O(n)` - one pass over the runs.
 
 ### Space Complexity

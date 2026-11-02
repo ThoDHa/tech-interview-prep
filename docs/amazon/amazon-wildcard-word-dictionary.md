@@ -33,6 +33,8 @@ One rule decides everything: a pattern matches only a word of its own exact leng
 
 ## Solutions
 
+The approaches mirror the unified-track page [Design Add and Search Words Data Structure](../leetcode/design_add_and_search_words_data_structure.md), which solves the same problem through LeetCode's addWord and search method calls.
+
 ### Brute Force Scan
 
 #### Derivation
