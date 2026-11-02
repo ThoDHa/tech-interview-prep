@@ -28,7 +28,7 @@ Interview follow-upThe rest of the discussion covered the DSU approach, how unio
 
 ## Constraints
 
-- `N/A (the FastPrep page for this problem lists no constraints).`
+- `N/A (FastPrep lists no constraints)`
 
 ## Solutions
 

@@ -21,7 +21,7 @@ A pattern matches a word when both have the same length and, at every position, 
 
 ## Constraints
 
-- `N/A (the FastPrep page for this problem lists no constraints).`
+- `N/A (FastPrep lists no constraints)`
 
 ## Deriving the Solution
 

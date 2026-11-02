@@ -22,7 +22,7 @@ The source noted that multiple valid orders may exist. FastPrep uses this determ
 
 ## Constraints
 
-- `N/A (the FastPrep page for this problem lists no constraints).`
+- `N/A (FastPrep lists no constraints)`
 
 ## Solutions
 

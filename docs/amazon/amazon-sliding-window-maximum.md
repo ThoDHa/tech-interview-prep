@@ -20,7 +20,7 @@ Given an integer array nums and a window size k, return the maximum value in eve
 
 ## Constraints
 
-- `N/A (the FastPrep page for this problem lists no constraints).`
+- `N/A (FastPrep lists no constraints)`
 
 ## Solutions
 
