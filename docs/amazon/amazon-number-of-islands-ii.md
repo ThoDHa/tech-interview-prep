@@ -28,7 +28,7 @@ Interview follow-upThe rest of the discussion covered the DSU approach, how unio
 
 ## Constraints
 
-<!-- Constraints not parseable from FastPrep for amazon-number-of-islands-ii; fill them in. -->
+- `N/A (FastPrep lists no constraints)`
 
 ## Solutions
 

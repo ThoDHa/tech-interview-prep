@@ -36,7 +36,7 @@ All n elements are unique.The difference between the maximum and minimum element
 
 ## Constraints
 
-<!-- Constraints not parseable from FastPrep for amazon-minimum-operations-to-make-array-continuous; fill them in. -->
+- `N/A (FastPrep lists no constraints)`
 
 ## Solutions
 

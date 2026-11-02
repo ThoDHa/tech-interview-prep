@@ -16,7 +16,9 @@ A squirrel, a tree, and several nuts occupy distinct cells on a rectangular Manh
 
 ## Constraints
 
-<!-- Constraints not parseable from FastPrep for amazon-squirrel-nut-collection-shortest-path; fill them in. -->
+- `1 <= nuts.length <= 50000.`
+- `Every coordinate component is in [0, 10000].`
+- `The tree, squirrel, and nut cells are pairwise distinct.`
 
 ## Solutions
 

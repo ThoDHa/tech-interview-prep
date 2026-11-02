@@ -16,7 +16,9 @@ A piece starts at start on an empty rows-by-cols board and must capture the king
 
 ## Constraints
 
-<!-- Constraints not parseable from FastPrep for amazon-minimum-moves-to-capture-king; fill them in. -->
+- `1 <= rows, cols <= 200.`
+- `Start and king are valid board cells.`
+- `1 <= directions.length <= 8; every direction is a distinct nonzero pair with components in [-1,1].`
 
 ## Solutions
 

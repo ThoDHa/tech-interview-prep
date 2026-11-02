@@ -20,7 +20,7 @@ Given an integer array nums and a window size k, return the maximum value in eve
 
 ## Constraints
 
-<!-- Constraints not parseable from FastPrep for amazon-sliding-window-maximum; fill them in. -->
+- `N/A (FastPrep lists no constraints)`
 
 ## Solutions
 
