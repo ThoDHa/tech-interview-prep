@@ -70,7 +70,7 @@ Example 1 (`vertexCount = 5`, `source = 0`), the distance table pass by pass:
 ```text
             dist[0..4]
 initial     [0, inf, inf, inf, inf]
-pass 1      [0, 3, 1, 4, inf]   0-1 relaxed 4->3 through 2; 1-3 and 2-3 settle 4
+pass 1      [0, 3, 1, 4, inf]   0-1 relaxed 4->3 through 2; 1-3 settles 4; 2-3 relaxes to 6, no change
 pass 2      no change: done
 answer      [0, 3, 1, 4, -1]
 ```
