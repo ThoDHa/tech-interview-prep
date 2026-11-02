@@ -25,7 +25,6 @@ Return a boolean array with one entry for each "search", in the order the search
 
 - `For this exercise, assume 1 <= operations.length <= 100000 and values.length == operations.length.`
 - `Every entry of operations is exactly "add" or "search", and every value is an integer.`
-- `A "search" tests arrival strictly before its own index.`
 - `When the stream holds no searches, the result is an empty array.`
 
 ## Deriving the Solution
