@@ -22,11 +22,11 @@ class Solution:
         run ending at the previous element. An element equal to its
         predecessor extends that run and raises `longest_run` when the
         run becomes the longest seen; any different value restarts the
-        run at length 1.
+        run at length 1. The statement grants the empty array with an
+        expected result of 0, answered before the seed.
 
         Args:
-            nums: Non-empty integer array (the statement's example and
-                corner shapes all carry at least one element).
+            nums: Integer array; may be empty (granted, expected 0).
 
         Returns:
             The length of the longest contiguous stretch of equal values.
@@ -34,6 +34,8 @@ class Solution:
         Time:  O(n): one predecessor comparison per element.
         Space: O(1): two counters regardless of input size.
         """
+        if not nums:
+            return 0
         longest_run = 1
         current_run = 1
         for index in range(1, len(nums)):
