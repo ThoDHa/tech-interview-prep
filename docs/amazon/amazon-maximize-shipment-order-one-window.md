@@ -16,7 +16,7 @@ shipmentOrder is a permutation of 1..n. Choose exactly one contiguous window of 
 
 ## Constraints
 
-- `N/A`
+- `N/A (FastPrep lists no constraints)`
 
 ## Deriving the Solution
 

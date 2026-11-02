@@ -26,7 +26,7 @@ Direction 4 points back toward [3, 4] and then [1, 2]. Because [3, 4] has alread
 
 ## Constraints
 
-- `N/A`
+- `N/A (FastPrep lists no constraints)`
 
 ## Solutions
 

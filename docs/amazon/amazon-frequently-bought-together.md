@@ -22,7 +22,7 @@ Your task is to find the pair of distinct SKUs that appears in the highest numbe
 
 ## Constraints
 
-- `N/A`
+- `N/A (FastPrep lists no constraints)`
 
 ## Solutions
 

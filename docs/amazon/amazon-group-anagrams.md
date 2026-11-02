@@ -16,7 +16,7 @@ For this exercise, assume every string contains only lowercase English letters. 
 
 ## Constraints
 
-- `N/A`
+- `N/A (FastPrep lists no constraints)`
 
 ## Solutions
 

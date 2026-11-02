@@ -20,7 +20,7 @@ Starting on a decline helps here, because subtracting a negative change adds to 
 
 ## Constraints
 
-- `N/A`
+- `N/A (FastPrep lists no constraints)`
 
 ## Deriving the Solution
 

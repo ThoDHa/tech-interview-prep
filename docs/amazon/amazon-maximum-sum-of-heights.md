@@ -26,7 +26,7 @@ Interview follow-upThe interviewer asked follow-up questions about the approach,
 
 ## Constraints
 
-- `N/A`
+- `N/A (FastPrep lists no constraints)`
 
 ## Solutions
 

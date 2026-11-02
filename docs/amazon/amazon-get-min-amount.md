@@ -28,7 +28,7 @@ Hence, the total amount spent is 4.
 
 ## Constraints
 
-- `N/A`
+- `N/A (FastPrep lists no constraints)`
 
 ## Solutions
 

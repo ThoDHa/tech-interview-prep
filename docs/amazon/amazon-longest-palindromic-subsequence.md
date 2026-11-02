@@ -24,7 +24,7 @@ A subsequence keeps the relative order of selected characters but does not need 
 
 ## Constraints
 
-- `N/A`
+- `N/A (FastPrep lists no constraints)`
 
 ## Solutions
 

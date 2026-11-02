@@ -22,7 +22,7 @@ Given a matrix of characters '0' and '1', return the area of the largest square 
 
 ## Constraints
 
-- `N/A`
+- `N/A (FastPrep lists no constraints)`
 
 ## Solutions
 
