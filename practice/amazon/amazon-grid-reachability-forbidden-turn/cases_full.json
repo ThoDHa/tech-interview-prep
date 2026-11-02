@@ -1,0 +1,433 @@
+[
+  {
+    "id": "example_1",
+    "args": [
+      [
+        "000",
+        "0X0",
+        "000"
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        2,
+        2
+      ],
+      1,
+      "left"
+    ],
+    "expected": true
+  },
+  {
+    "id": "example_2",
+    "args": [
+      [
+        "000",
+        "0X0",
+        "000"
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        2,
+        2
+      ],
+      1,
+      "right"
+    ],
+    "expected": false
+  },
+  {
+    "id": "single_cell_grid",
+    "args": [
+      [
+        "0"
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        0
+      ],
+      0,
+      "left"
+    ],
+    "expected": true
+  },
+  {
+    "id": "start_equals_destination",
+    "args": [
+      [
+        "00",
+        "00"
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        0
+      ],
+      1,
+      "right"
+    ],
+    "expected": true
+  },
+  {
+    "id": "single_row_straight_shot",
+    "args": [
+      [
+        "0000"
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        3
+      ],
+      1,
+      "left"
+    ],
+    "expected": true
+  },
+  {
+    "id": "single_row_heading_away",
+    "args": [
+      [
+        "0000"
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        3
+      ],
+      3,
+      "right"
+    ],
+    "expected": false
+  },
+  {
+    "id": "single_column_straight_shot",
+    "args": [
+      [
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        2,
+        0
+      ],
+      2,
+      "left"
+    ],
+    "expected": true
+  },
+  {
+    "id": "single_column_heading_away",
+    "args": [
+      [
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        2,
+        0
+      ],
+      0,
+      "right"
+    ],
+    "expected": false
+  },
+  {
+    "id": "plus_shape_right_turn_reaches",
+    "args": [
+      [
+        "X0X",
+        "000",
+        "X0X"
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        2,
+        1
+      ],
+      1,
+      "left"
+    ],
+    "expected": true
+  },
+  {
+    "id": "plus_shape_left_turn_blocked",
+    "args": [
+      [
+        "X0X",
+        "000",
+        "X0X"
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        2,
+        1
+      ],
+      1,
+      "right"
+    ],
+    "expected": false
+  },
+  {
+    "id": "plus_shape_north_arm_left_turn",
+    "args": [
+      [
+        "X0X",
+        "000",
+        "X0X"
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        0,
+        1
+      ],
+      1,
+      "right"
+    ],
+    "expected": true
+  },
+  {
+    "id": "revisit_cell_new_heading",
+    "args": [
+      [
+        "000",
+        "000"
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        0
+      ],
+      2,
+      "right"
+    ],
+    "expected": true
+  },
+  {
+    "id": "serpentine_two_right_turns",
+    "args": [
+      [
+        "0000",
+        "XXX0",
+        "0000"
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        2,
+        0
+      ],
+      1,
+      "left"
+    ],
+    "expected": true
+  },
+  {
+    "id": "serpentine_mirrored_left_turns",
+    "args": [
+      [
+        "0000",
+        "0XXX",
+        "0000"
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        2,
+        3
+      ],
+      3,
+      "right"
+    ],
+    "expected": true
+  },
+  {
+    "id": "ring_right_turn_at_start",
+    "args": [
+      [
+        "000",
+        "0X0",
+        "000"
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        0
+      ],
+      1,
+      "left"
+    ],
+    "expected": true
+  },
+  {
+    "id": "ring_right_edge_descent",
+    "args": [
+      [
+        "000",
+        "0X0",
+        "000"
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        2,
+        1
+      ],
+      1,
+      "left"
+    ],
+    "expected": true
+  },
+  {
+    "id": "open_grid_trapped_on_top_row",
+    "args": [
+      [
+        "000",
+        "000",
+        "000"
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        2,
+        2
+      ],
+      1,
+      "right"
+    ],
+    "expected": false
+  },
+  {
+    "id": "open_grid_right_turns_reach",
+    "args": [
+      [
+        "000",
+        "000",
+        "000"
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        2,
+        2
+      ],
+      1,
+      "left"
+    ],
+    "expected": true
+  },
+  {
+    "id": "corner_pair_left_forbidden_false",
+    "args": [
+      [
+        "00",
+        "00"
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        1
+      ],
+      2,
+      "left"
+    ],
+    "expected": false
+  },
+  {
+    "id": "corner_pair_left_allowed_true",
+    "args": [
+      [
+        "00",
+        "00"
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        1
+      ],
+      2,
+      "right"
+    ],
+    "expected": true
+  },
+  {
+    "id": "edge_descent_left_turn_analogue",
+    "args": [
+      [
+        "000",
+        "000",
+        "000"
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        2,
+        2
+      ],
+      2,
+      "right"
+    ],
+    "expected": true
+  }
+]
