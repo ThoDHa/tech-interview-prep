@@ -24,7 +24,7 @@ What is the number of items that the shopper will buy before she runs out of mon
 
 ## Constraints
 
-<!-- Constraints not parseable from FastPrep for amazon-souvenir-shop-purchases; fill them in. -->
+- `N/A (the FastPrep page for this problem lists no constraints).`
 
 ## Solutions
 

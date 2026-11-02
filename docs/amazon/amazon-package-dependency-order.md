@@ -22,7 +22,7 @@ The source noted that multiple valid orders may exist. FastPrep uses this determ
 
 ## Constraints
 
-<!-- Constraints not parseable from FastPrep for amazon-package-dependency-order; fill them in. -->
+- `N/A (the FastPrep page for this problem lists no constraints).`
 
 ## Solutions
 
