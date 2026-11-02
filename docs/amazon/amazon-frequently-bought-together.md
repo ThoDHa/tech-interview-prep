@@ -22,7 +22,7 @@ Your task is to find the pair of distinct SKUs that appears in the highest numbe
 
 ## Constraints
 
-<!-- Constraints not parseable from FastPrep for amazon-frequently-bought-together; fill them in. -->
+- `N/A`
 
 ## Solutions
 

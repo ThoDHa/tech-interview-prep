@@ -26,7 +26,7 @@ Direction 4 points back toward [3, 4] and then [1, 2]. Because [3, 4] has alread
 
 ## Constraints
 
-<!-- Constraints not parseable from FastPrep for amazon-http-request-redirection; fill them in. -->
+- `N/A`
 
 ## Solutions
 

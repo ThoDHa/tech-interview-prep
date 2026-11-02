@@ -22,7 +22,7 @@ Given a matrix of characters '0' and '1', return the area of the largest square 
 
 ## Constraints
 
-<!-- Constraints not parseable from FastPrep for amazon-maximal-square; fill them in. -->
+- `N/A`
 
 ## Solutions
 

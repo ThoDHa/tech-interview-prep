@@ -20,7 +20,7 @@ Starting on a decline helps here, because subtracting a negative change adds to 
 
 ## Constraints
 
-<!-- Constraints not parseable from FastPrep for amazon-max-improvement-period-at-least-k; fill them in. -->
+- `N/A`
 
 ## Deriving the Solution
 

@@ -24,7 +24,7 @@ A subsequence keeps the relative order of selected characters but does not need 
 
 ## Constraints
 
-<!-- Constraints not parseable from FastPrep for amazon-longest-palindromic-subsequence; fill them in. -->
+- `N/A`
 
 ## Solutions
 

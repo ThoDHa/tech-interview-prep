@@ -28,7 +28,7 @@ Hence, the total amount spent is 4.
 
 ## Constraints
 
-<!-- Constraints not parseable from FastPrep for amazon-get-min-amount; fill them in. -->
+- `N/A`
 
 ## Solutions
 
