@@ -48,8 +48,10 @@ value_ceiling_hit, duplicates_across_rows_hit, anti_row_major_hit,
 row_blocks_hit, negatives_interleaved, bottom_left_hit, top_left_hit,
 constructed_anti_row_major_bottom_right, constructed_anti_row_major_top_left,
 and constructed_single_column_bottom; replacing the walk with a flat
-row-major binary search is caught by anti_row_major_hit, bottom_left_hit,
-and constructed_anti_row_major_bottom_right; seeding the walk at row 1
+row-major binary search is caught by anti_row_major_hit and
+bottom_left_hit (the constructed 300-square survives it: a flat
+row-major binary search still finds its bottom-right and top-left
+values and still misses 500); seeding the walk at row 1
 (skipping the first row) is caught by single_cell_hit, single_row_hit,
 value_floor_hit, top_left_hit, constructed_anti_row_major_top_left,
 and constructed_single_row_bottom; seeding the walk at column

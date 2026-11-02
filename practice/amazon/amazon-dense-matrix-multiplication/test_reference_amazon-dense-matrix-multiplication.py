@@ -66,8 +66,9 @@ constructed_sixty_four_square_extremes,
 constructed_row_times_column_at_bounds, and
 constructed_identity_sixty_four (the k = 1 cases cannot catch it
 because one product needs no accumulation); skipping inner index t = 0
-is caught by every case, serialized and constructed (the k = 1 cases
-lose their only product, the rest lose a real summand); aliasing the
+is caught by every case except all_zeros, whose product stays zero
+under any inner-index subset (the k = 1 cases lose their only product,
+the rest lose a real summand); aliasing the
 result rows ([[0] * columns] * rows, every row write sharing one list)
 is caught by example_1, example_2, identity_left, identity_right,
 zero_row_in_left, zero_column_in_right, negative_times_negative,

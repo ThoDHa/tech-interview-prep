@@ -52,10 +52,15 @@ row's first head); advancing every stream whose head equals the
 popped timestamp and dropping their heads unemitted is caught by
 example_1, example_2, duplicates_across, int32_extremes,
 one_giant_one_tiny, all_equal, and zero_flood; stopping once stream 0
-exhausts is caught by example_1, single_stream, duplicates_within,
-duplicates_across, negatives, int32_extremes, interleaved,
-one_giant_one_tiny, disjoint_ranges, reversed_ranges, all_equal,
-three_way_overlap, zero_flood, and sign_spread; and advancing the
+exhausts is caught by example_1, duplicates_across, negatives,
+int32_extremes, interleaved, all_equal, three_way_overlap, and
+zero_flood, the cases where another stream still holds events after
+stream 0's row is consumed; the stop is tested after the exhausting
+event is emitted, where a pre-push or post-push placement behaves
+identically, and every case with nothing pending at that moment
+survives it, single_stream included, because stopping then is natural
+termination (a pre-emit placement additionally drops stream 0's
+exhausting event and catches the rest); and advancing the
 winning stream's cursor by two (skipping an event) is caught by
 example_1, example_2, single_stream, duplicates_within,
 duplicates_across, negatives, int32_extremes, interleaved,

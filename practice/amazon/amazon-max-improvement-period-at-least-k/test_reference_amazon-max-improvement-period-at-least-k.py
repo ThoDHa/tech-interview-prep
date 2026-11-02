@@ -61,11 +61,14 @@ decline_start_best, two_decline_starts, k_n_minus_one, increasing,
 decreasing, short_period_trap,
 constructed_hundred_thousand_all_gains_k_half, and
 constructed_giant_decline_then_gains; shifting the end term to
-prefix[end] is caught by every case; and admitting each new start one
-end late (scoring before the update) is caught by all_negative,
-decline_then_swing, k_n_minus_one, short_period_trap,
-constructed_hundred_thousand_all_declines, and
-constructed_giant_decline_then_gains.
+prefix[end] is caught by every case except flat_zeros, where both
+terms score 0; and admitting each new start one end late (scoring
+before the update, which leaves every exactly-length-k window
+unscored) is caught by all_negative, all_negative_k_two,
+decline_then_swing, k_equals_n, k_n_minus_one,
+large_magnitude_negative_score, large_magnitude_positive_score,
+short_period_trap, single_element, and
+constructed_hundred_thousand_all_declines.
 """
 
 import pytest
