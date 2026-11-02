@@ -12,7 +12,10 @@ the log, the statement's "arrived at an earlier index" read literally,
 which shares no mechanism with the reference's set. Adds and the
 constructor expect None; every search expects one boolean, so
 run_operations compares the whole expected list per sequence and no
-canonicalization applies. The gauntlet covers the statement's named
+canonicalization applies. The no-searches case is the statement's
+granted empty contract in this representation: an adds-only stream
+returns an empty result array, which the aligned replay records as
+every entry None. The gauntlet covers the statement's named
 rules as corners: the page's example, a search before any arrival, the
 no-searches input (adds only), repeat arrivals changing nothing,
 repeated searches across an arrival, a search immediately after its

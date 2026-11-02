@@ -28,7 +28,9 @@ Given a query [from, to], return the conversion rate from from to to, rounded an
 
 ## Constraints
 
-<!-- Constraints not parseable from FastPrep for amazon-currency-conversion-rate; fill them in. -->
+- `For this exercise, assume 1 <= rates.length <= 500 with at most 100 distinct currency names.`
+- `Every row is [source, target, value]: two distinct currency-name strings and a positive decimal number string.`
+- `The query names two currencies joined by the supplied rates, directly or through conversions.`
 
 ## Solutions
 

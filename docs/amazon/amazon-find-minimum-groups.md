@@ -26,7 +26,8 @@ Group 1: 2 devices of vulnerability 2.Group 2: 2 devices of vulnerability 3.Grou
 
 ## Constraints
 
-<!-- Constraints not parseable from FastPrep for amazon-find-minimum-groups; fill them in. -->
+- `For this exercise, assume 1 <= security.length <= 100000 and every grade is an integer from 1 to 100000.`
+- `Every element of security is a security grade.`
 
 ## Solutions
 

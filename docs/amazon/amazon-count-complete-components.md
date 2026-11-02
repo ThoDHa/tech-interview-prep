@@ -36,7 +36,10 @@ Return the number of complete connected components. A component containing one v
 
 ## Constraints
 
-<!-- Constraints not parseable from FastPrep for amazon-count-complete-components; fill them in. -->
+- `For this exercise, assume 1 <= n <= 50.`
+- `0 <= edges.length <= n * (n - 1) / 2.`
+- `Every edge is [u, v] with u != v and 0 <= u, v < n.`
+- `No edge appears more than once.`
 
 ## Solutions
 

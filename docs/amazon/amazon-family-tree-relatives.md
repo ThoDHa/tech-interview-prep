@@ -18,7 +18,10 @@ Two people are relatives when they share at least one ancestor. Each person coun
 
 ## Constraints
 
-<!-- Constraints not parseable from FastPrep for amazon-family-tree-relatives; fill them in. -->
+- `For this exercise, assume 0 <= relations.length <= 10000 with at most 1000 distinct person names.`
+- `Every row is [parent, child]; both entries are person-name strings, and a child never has more than two recorded parents.`
+- `The rows never make a person their own ancestor through a chain of relations.`
+- `first and second are person names, and they may be the same person.`
 
 ## Deriving the Solution
 

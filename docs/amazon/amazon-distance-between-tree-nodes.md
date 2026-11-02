@@ -28,7 +28,9 @@ The serialized edge list supplies the tree structure without parent pointers.
 
 ## Constraints
 
-<!-- Constraints not parseable from FastPrep for amazon-distance-between-tree-nodes; fill them in. -->
+- `For this exercise, assume 1 <= treeNodes <= 100000.`
+- `treeFrom and treeTo hold exactly treeNodes - 1 edges forming one tree over nodes 1..treeNodes.`
+- `root, source, and target are node IDs from 1 to treeNodes.`
 
 ## Solutions
 

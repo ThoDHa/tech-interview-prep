@@ -23,7 +23,9 @@ Return a boolean array with one entry for each "search", in the order the search
 
 ## Constraints
 
-<!-- Constraints not parseable from FastPrep for amazon-search-element-in-stream; fill them in. -->
+- `For this exercise, assume 1 <= operations.length <= 100000 and values.length == operations.length.`
+- `Every entry of operations is exactly "add" or "search", and every value is an integer.`
+- `When the stream holds no searches, the result is an empty array.`
 
 ## Deriving the Solution
 
