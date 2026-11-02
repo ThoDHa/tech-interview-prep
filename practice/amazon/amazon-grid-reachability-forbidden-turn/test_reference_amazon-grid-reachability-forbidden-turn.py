@@ -53,13 +53,15 @@ constructed). Dropping the heading from the visited state is caught by
 revisit_cell_new_heading alone: the walk must cross the top-right corner
 heading east first, where it dead-ends, and only the later crossing
 heading north continues west along the top row to the destination.
-Allowing both turns is caught by example_1, single_row_straight_shot,
-single_column_straight_shot, plus_shape_left_turn_blocked,
-serpentine_two_right_turns, serpentine_mirrored_left_turns,
-ring_right_edge_descent, open_grid_trapped_on_top_row,
-corner_pair_left_forbidden_false, and
-constructed_serpentine_500_two_rows_deep (the remaining cases have no
-path either way or reach it under either turn set). Requiring the
+Allowing both turns (straight plus left and right, a strict superset
+of the legal move set) is caught by exactly the four cases whose
+destination is unreachable legally but reachable once the forbidden
+turn exists: example_2, plus_shape_left_turn_blocked,
+open_grid_trapped_on_top_row, and corner_pair_left_forbidden_false;
+every case that already reaches the destination cannot flip, since
+extra moves never revoke reachability, and the two heading-away
+straight shots stay boxed on their row or column under either turn
+set. Requiring the
 arrival heading to equal initialHeading is caught by example_1,
 plus_shape_right_turn_reaches, plus_shape_north_arm_left_turn,
 revisit_cell_new_heading, serpentine_two_right_turns,
