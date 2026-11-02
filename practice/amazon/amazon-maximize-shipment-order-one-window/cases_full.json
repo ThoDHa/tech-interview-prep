@@ -334,5 +334,25 @@
       11,
       12
     ]
+  },
+  {
+    "id": "earliest_start_longest_agreement",
+    "args": [
+      [
+        1,
+        2,
+        5,
+        3,
+        4
+      ],
+      4
+    ],
+    "expected": [
+      1,
+      2,
+      3,
+      5,
+      4
+    ]
   }
 ]

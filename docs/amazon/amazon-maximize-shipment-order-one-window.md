@@ -95,7 +95,7 @@ One candidate copy and the running best, each a full array.
 The brute force sorts every window just to compare the results. Compare the results structurally instead. A result with window start `s` equals the original everywhere outside `[s, s + w)`, and inside the window the sorted order agrees with the original on a prefix: position `k` still holds `values[k]` exactly while the values before `k` inside the window are the smallest ones, ascending, and no value from `k` onward is smaller. Let `e(s)` be the first position where the sorted window differs from the original (the break), with `e(s) = s` when even the window's own first position changes and `e(s) = s + w` for a window already sorted:
 
 1. Two candidates with starts `s < t`: candidate `t` keeps the original on `[0, t)`, so if candidate `s` breaks before `t`, it loses at its own break, where it placed a strictly smaller value.
-2. A candidate with a later break therefore beats every candidate with an earlier break, and among candidates sharing the same break `E`, the earliest start wins: its window is a subset of the later starts' windows, so at every position from `E` on it places a value at least as large.
+2. A candidate with a later break therefore beats every candidate with an earlier break, and among candidates sharing the same break `E`, the earliest start wins: past `E` each sorted window places the order statistics of its suffix `values[E..window_end)`, the later start's suffix is a strict superset of the earlier start's, so the later candidate places an element-wise smaller-or-equal value across the shared stretch `[E, s + w)`; when those values tie, the later candidate then holds the ascending arrangement of exactly the cells the earlier candidate holds in original order, and ascending is the lexicographically least arrangement of a multiset.
 3. So the winner is the start maximizing `e(s)`, earliest on ties, and only that one window needs sorting.
 4. To compute `e(s)` for one start: sweep the window's suffix minima right to left into `suffix_min`, then walk `k` upward from `s + 1` while the values `values[s..k-1]` are ascending and `values[k-1] <= suffix_min[k]`; the first failure is `e(s)`. The walk reaching the window's last position means the window itself is sorted, so the original array is the answer and the scan can stop.
 5. Otherwise sort the winning window and return.
@@ -132,11 +132,11 @@ class Solution:
                 suffix_min = min(suffix_min, values[start + offset])
                 mins[offset] = suffix_min
             agreement = start
-            ascending = True
             for offset in range(1, width):
-                if values[start + offset - 1] > values[start + offset]:
-                    ascending = False
-                if not ascending or values[start + offset - 1] > mins[offset]:
+                if (
+                    values[start + offset - 1] > values[start + offset]
+                    or values[start + offset - 1] > mins[offset]
+                ):
                     break
                 agreement = start + offset
             if agreement == start + width - 1:
@@ -313,5 +313,5 @@ The three arrays over positions, the pointer array, and the result assembly.
 
 - **Painted Agreement Intervals** is the recommended choice: the dominant cost is the single `O(w log w)` sort of the winning window.
 - The break conditions decompose cleanly because the array is a permutation: distinct values make the descent test strict and the next-smaller scan unambiguous.
-- The identity early-out must run before painting: a sorted window would otherwise paint a break of `start + width`, a value no breaking window can reach.
+- The identity early-out must run before painting: a sorted window never paints past `start + width - 1`, so with the early-out dropped its undercounted break loses the argmax to a start whose painted-or-default break is larger, and sorting that window returns a damaged candidate instead of the original.
 - Working assumption recorded for review: the page's constraint block is unparseable, so the gauntlet assumes `1 <= windowSize <= n`; `windowSize = 1` and `windowSize = n` both appear as cases.

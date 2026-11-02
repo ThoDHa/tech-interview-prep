@@ -20,10 +20,13 @@ array where every window hurts, the longest-agreement rule, a tie
 preferring the earlier window, a tie producing one result, the final
 window's sort winning, a wide window minimizing damage, descents at
 both edges, a valley touched from both sides, a peak approached from
-both sides, an agreement landing in the second window, and a mixed
-twelve-value permutation. Scale corners live here as constructed cases
-per the Testing Strategy rule that length corners are constructible or
-synthesized, never serialized bulk; all four build their inputs in this
+both sides, an agreement landing in the second window, a mixed
+twelve-value permutation, and an earliest start whose agreement prefix
+is strictly longer than the next start's (the case that catches the
+smallest-covering-break mutant and the latest-start tie flip). Scale
+corners live here as constructed cases per the Testing Strategy rule
+that length corners are constructible or synthesized, never serialized
+bulk; all four build their inputs in this
 module and derive the expected outcome from the construction, with each
 derivation rule confirmed against the brute-force oracle at
 brute-force-able analogue scales before freezing:
@@ -48,9 +51,11 @@ brute-force-able analogue scales before freezing:
 
 Discrimination record, naming the mutant classes the serialized and
 constructed cases catch, every claim below verified by applying the
-mutant rendering to the reference and running all 21 cases against the
-frozen expectations. Breaking ranking ties toward the latest start
-(update on `>=` instead of `>`) is caught by example_1. Defaulting
+mutant rendering to the reference and running all 22 cases (18 frozen
+plus four constructed) against the frozen expectations. Breaking
+ranking ties toward the latest start (update on `>=` instead of `>`)
+is caught by example_1 and earliest_start_longest_agreement, whose two
+starts tie at the same painted break. Defaulting
 unpainted breaks to 0 instead of the start's own position is caught by
 every_window_hurts, longest_agreement_wins, final_window_sort_wins,
 wide_window_minimal_damage, peak_from_both_sides, all_descending_four,
@@ -62,8 +67,11 @@ identity, so the output is unchanged; only the buried-ascent corner
 shifts the argmax to a damaged window. Giving every start its smallest
 covering break instead of its largest, in either rendering (painting
 increasing-k with the skip structure, or decreasing-k with plain
-overwrites), survives all 21 cases: no authored case shifts the
-argmax, an honest blind spot of this gauntlet. Relaxing the
+overwrites), is caught by earliest_start_longest_agreement alone: the
+earliest start covers two agreement ends while the later start covers
+only its own break, so smallest-serving demotes the earliest start
+from the tie and the argmax flips to the later window; the other 21
+cases leave the argmax unchanged. Relaxing the
 next-smaller bound to `next_smaller_right[last_agreed] - width + 1`
 (letting an agreement end claim a window position that holds a smaller
 value) is caught by final_window_sort_wins and peak_from_both_sides.
