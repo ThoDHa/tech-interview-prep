@@ -1,0 +1,268 @@
+[
+  {
+    "id": "example_1",
+    "args": [
+      [
+        1,
+        2,
+        3,
+        6
+      ]
+    ],
+    "expected": 6
+  },
+  {
+    "id": "example_2",
+    "args": [
+      [
+        1,
+        2
+      ]
+    ],
+    "expected": 0
+  },
+  {
+    "id": "single_rod",
+    "args": [
+      [
+        7
+      ]
+    ],
+    "expected": 0
+  },
+  {
+    "id": "equal_pair",
+    "args": [
+      [
+        5,
+        5
+      ]
+    ],
+    "expected": 5
+  },
+  {
+    "id": "three_builds",
+    "args": [
+      [
+        1,
+        2,
+        3
+      ]
+    ],
+    "expected": 3
+  },
+  {
+    "id": "quadruple_duplicates",
+    "args": [
+      [
+        2,
+        2,
+        2,
+        2
+      ]
+    ],
+    "expected": 4
+  },
+  {
+    "id": "primes_never_level",
+    "args": [
+      [
+        7,
+        11,
+        13
+      ]
+    ],
+    "expected": 0
+  },
+  {
+    "id": "odd_total_still_levels",
+    "args": [
+      [
+        1,
+        1,
+        3
+      ]
+    ],
+    "expected": 1
+  },
+  {
+    "id": "unused_rods",
+    "args": [
+      [
+        3,
+        3,
+        7
+      ]
+    ],
+    "expected": 3
+  },
+  {
+    "id": "swap_makes_pair",
+    "args": [
+      [
+        2,
+        5,
+        7
+      ]
+    ],
+    "expected": 7
+  },
+  {
+    "id": "two_ways_tie",
+    "args": [
+      [
+        2,
+        3,
+        3,
+        5
+      ]
+    ],
+    "expected": 5
+  },
+  {
+    "id": "big_pair",
+    "args": [
+      [
+        1000,
+        1000
+      ]
+    ],
+    "expected": 1000
+  },
+  {
+    "id": "four_big",
+    "args": [
+      [
+        1000,
+        1000,
+        1000,
+        1000
+      ]
+    ],
+    "expected": 2000
+  },
+  {
+    "id": "five_at_total_bound",
+    "args": [
+      [
+        1000,
+        1000,
+        1000,
+        1000,
+        1000
+      ]
+    ],
+    "expected": 2000
+  },
+  {
+    "id": "mixed_uneven",
+    "args": [
+      [
+        5,
+        5,
+        10,
+        20
+      ]
+    ],
+    "expected": 20
+  },
+  {
+    "id": "unit_rods_even",
+    "args": [
+      [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    ],
+    "expected": 3
+  },
+  {
+    "id": "one_heavy_rest_light",
+    "args": [
+      [
+        999,
+        1000,
+        1
+      ]
+    ],
+    "expected": 1000
+  },
+  {
+    "id": "no_split_possible",
+    "args": [
+      [
+        1,
+        4,
+        9
+      ]
+    ],
+    "expected": 0
+  },
+  {
+    "id": "reversed_example",
+    "args": [
+      [
+        6,
+        3,
+        2,
+        1
+      ]
+    ],
+    "expected": 6
+  },
+  {
+    "id": "gap_after_exact",
+    "args": [
+      [
+        4,
+        4,
+        9
+      ]
+    ],
+    "expected": 4
+  },
+  {
+    "id": "twelve_mixed",
+    "args": [
+      [
+        10,
+        20,
+        30,
+        40,
+        50,
+        60,
+        70,
+        80,
+        90,
+        100,
+        110,
+        120
+      ]
+    ],
+    "expected": 390
+  },
+  {
+    "id": "tall_single_among_lights",
+    "args": [
+      [
+        50,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    ],
+    "expected": 5
+  }
+]

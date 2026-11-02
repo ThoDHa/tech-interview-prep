@@ -1,0 +1,442 @@
+[
+  {
+    "id": "example_1",
+    "args": [
+      [
+        [
+          1,
+          4,
+          7
+        ],
+        [
+          2,
+          5,
+          9
+        ],
+        [
+          3,
+          6,
+          12
+        ]
+      ],
+      6
+    ],
+    "expected": true
+  },
+  {
+    "id": "example_2",
+    "args": [
+      [
+        [
+          1,
+          4,
+          7
+        ],
+        [
+          2,
+          5,
+          9
+        ],
+        [
+          3,
+          6,
+          12
+        ]
+      ],
+      8
+    ],
+    "expected": false
+  },
+  {
+    "id": "single_cell_hit",
+    "args": [
+      [
+        [
+          5
+        ]
+      ],
+      5
+    ],
+    "expected": true
+  },
+  {
+    "id": "single_cell_miss",
+    "args": [
+      [
+        [
+          5
+        ]
+      ],
+      4
+    ],
+    "expected": false
+  },
+  {
+    "id": "single_row_hit",
+    "args": [
+      [
+        [
+          1,
+          3,
+          5,
+          7,
+          9
+        ]
+      ],
+      7
+    ],
+    "expected": true
+  },
+  {
+    "id": "single_row_miss",
+    "args": [
+      [
+        [
+          1,
+          3,
+          5,
+          7,
+          9
+        ]
+      ],
+      4
+    ],
+    "expected": false
+  },
+  {
+    "id": "single_column_hit",
+    "args": [
+      [
+        [
+          1
+        ],
+        [
+          3
+        ],
+        [
+          5
+        ],
+        [
+          7
+        ]
+      ],
+      5
+    ],
+    "expected": true
+  },
+  {
+    "id": "single_column_miss",
+    "args": [
+      [
+        [
+          1
+        ],
+        [
+          3
+        ],
+        [
+          5
+        ],
+        [
+          7
+        ]
+      ],
+      6
+    ],
+    "expected": false
+  },
+  {
+    "id": "value_floor_hit",
+    "args": [
+      [
+        [
+          -1000000000,
+          -999999999
+        ],
+        [
+          -999999998,
+          0
+        ]
+      ],
+      -1000000000
+    ],
+    "expected": true
+  },
+  {
+    "id": "value_ceiling_hit",
+    "args": [
+      [
+        [
+          -5,
+          0
+        ],
+        [
+          0,
+          1000000000
+        ]
+      ],
+      1000000000
+    ],
+    "expected": true
+  },
+  {
+    "id": "value_floor_gap_miss",
+    "args": [
+      [
+        [
+          -1000000000,
+          -999999997
+        ],
+        [
+          -999999996,
+          -999999995
+        ]
+      ],
+      -999999998
+    ],
+    "expected": false
+  },
+  {
+    "id": "value_ceiling_gap_miss",
+    "args": [
+      [
+        [
+          999999995,
+          999999996
+        ],
+        [
+          999999997,
+          1000000000
+        ]
+      ],
+      999999998
+    ],
+    "expected": false
+  },
+  {
+    "id": "all_equal_hit",
+    "args": [
+      [
+        [
+          7,
+          7,
+          7
+        ],
+        [
+          7,
+          7,
+          7
+        ],
+        [
+          7,
+          7,
+          7
+        ]
+      ],
+      7
+    ],
+    "expected": true
+  },
+  {
+    "id": "all_equal_miss",
+    "args": [
+      [
+        [
+          7,
+          7,
+          7
+        ],
+        [
+          7,
+          7,
+          7
+        ],
+        [
+          7,
+          7,
+          7
+        ]
+      ],
+      8
+    ],
+    "expected": false
+  },
+  {
+    "id": "duplicates_across_rows_hit",
+    "args": [
+      [
+        [
+          1,
+          3,
+          3
+        ],
+        [
+          3,
+          5,
+          5
+        ],
+        [
+          5,
+          8,
+          9
+        ]
+      ],
+      5
+    ],
+    "expected": true
+  },
+  {
+    "id": "duplicates_across_rows_miss",
+    "args": [
+      [
+        [
+          1,
+          3,
+          3
+        ],
+        [
+          3,
+          5,
+          5
+        ],
+        [
+          5,
+          8,
+          9
+        ]
+      ],
+      4
+    ],
+    "expected": false
+  },
+  {
+    "id": "anti_row_major_hit",
+    "args": [
+      [
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      2
+    ],
+    "expected": true
+  },
+  {
+    "id": "row_blocks_hit",
+    "args": [
+      [
+        [
+          1,
+          10,
+          20
+        ],
+        [
+          2,
+          11,
+          21
+        ],
+        [
+          30,
+          40,
+          50
+        ]
+      ],
+      30
+    ],
+    "expected": true
+  },
+  {
+    "id": "row_blocks_miss",
+    "args": [
+      [
+        [
+          1,
+          10,
+          20
+        ],
+        [
+          2,
+          11,
+          21
+        ],
+        [
+          30,
+          40,
+          50
+        ]
+      ],
+      25
+    ],
+    "expected": false
+  },
+  {
+    "id": "negatives_interleaved",
+    "args": [
+      [
+        [
+          -9,
+          -4,
+          -2
+        ],
+        [
+          -5,
+          -1,
+          3
+        ],
+        [
+          -3,
+          2,
+          6
+        ]
+      ],
+      2
+    ],
+    "expected": true
+  },
+  {
+    "id": "bottom_left_hit",
+    "args": [
+      [
+        [
+          1,
+          4,
+          7
+        ],
+        [
+          2,
+          5,
+          8
+        ],
+        [
+          3,
+          6,
+          12
+        ]
+      ],
+      3
+    ],
+    "expected": true
+  },
+  {
+    "id": "top_left_hit",
+    "args": [
+      [
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          9
+        ]
+      ],
+      1
+    ],
+    "expected": true
+  }
+]
