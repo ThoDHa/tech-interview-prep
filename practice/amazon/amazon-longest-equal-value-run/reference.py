@@ -22,11 +22,11 @@ class Solution:
         run ending at the previous element. An element equal to its
         predecessor extends that run and raises `longest_run` when the
         run becomes the longest seen; any different value restarts the
-        run at length 1. The statement grants the empty array with an
-        expected result of 0, answered before the seed.
+        run at length 1.
 
         Args:
-            nums: Integer array; may be empty (granted, expected 0).
+            nums: Integer array; the statement grants the empty array
+                with an expected result of 0.
 
         Returns:
             The length of the longest contiguous stretch of equal values.
