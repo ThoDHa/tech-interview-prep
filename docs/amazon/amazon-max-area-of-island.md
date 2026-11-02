@@ -16,7 +16,9 @@ Given a binary matrix grid, return the maximum area of an island.
 
 ## Constraints
 
-<!-- Constraints not parseable from FastPrep for amazon-max-area-of-island; fill them in. -->
+- `1 <= grid.length <= 500.`
+- `1 <= grid[i].length <= 500, and every row has equal length.`
+- `Every cell is either 0 or 1.`
 
 ## Solutions
 
