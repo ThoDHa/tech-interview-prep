@@ -2409,3 +2409,79 @@ def test_main_check_mode_covers_the_pandoc_configs(tmp_path, monkeypatch):
     drifted = before_config.replace(gen.PANDOC_OUTPUT_FILE, "drifted-output.pdf")
     gen.PANDOC_CONFIG_PATH.write_text(drifted, encoding="utf-8")
     assert gen.main(["--check"]) == 1
+
+
+# ---------------------------------------------------------------------------
+# The Amazon LC overlap aliases
+# ---------------------------------------------------------------------------
+
+AMAZON_LC_OVERLAP_ALIASES_PATH = SCRIPTS_DIR / "amazon_lc_overlap_aliases.json"
+
+EXPECTED_AMAZON_LC_OVERLAP_ALIASES = {
+    "amazon-count-connected-components": (
+        "number-of-connected-components-in-an-undirected-graph"
+    ),
+    "amazon-wildcard-word-dictionary": "design-add-and-search-words-data-structure",
+}
+
+
+def test_load_amazon_lc_overlap_aliases_returns_an_empty_mapping_when_absent(tmp_path):
+    assert gen.load_amazon_lc_overlap_aliases(tmp_path / "absent.json") == {}
+
+
+def test_load_amazon_lc_overlap_aliases_reads_the_committed_json_object():
+    aliases = gen.load_amazon_lc_overlap_aliases(AMAZON_LC_OVERLAP_ALIASES_PATH)
+    assert isinstance(aliases, dict)
+    assert aliases
+
+
+def test_load_amazon_lc_overlap_aliases_rejects_a_non_json_object(tmp_path):
+    path = write_json(tmp_path, "aliases.json", ["amazon-odd"])
+    with pytest.raises(gen.SourceError, match="JSON object"):
+        gen.load_amazon_lc_overlap_aliases(path)
+
+
+def test_amazon_lc_overlap_aliases_validate_against_the_committed_manifests():
+    aliases = gen.load_amazon_lc_overlap_aliases(AMAZON_LC_OVERLAP_ALIASES_PATH)
+    neetcode = gen.load_neetcode_manifest(NEETCODE_MANIFEST_PATH)
+    amazon = gen.load_amazon_manifest(AMAZON_MANIFEST_PATH)
+    gen.validate_amazon_lc_overlap_aliases(aliases, neetcode, amazon)
+
+
+def test_amazon_lc_overlap_aliases_reject_an_unknown_amazon_slug(tmp_path):
+    aliases = {"amazon-not-in-the-manifest": "two-sum"}
+    neetcode = gen.load_neetcode_manifest(NEETCODE_MANIFEST_PATH)
+    with pytest.raises(gen.SourceError, match="unknown Amazon slug"):
+        gen.validate_amazon_lc_overlap_aliases(aliases, neetcode, valid_amazon())
+
+
+def test_amazon_lc_overlap_aliases_reject_an_unknown_lc_slug(tmp_path):
+    aliases = {valid_amazon()[0]["slug"]: "not-a-neetcode-lc-slug"}
+    neetcode = gen.load_neetcode_manifest(NEETCODE_MANIFEST_PATH)
+    with pytest.raises(gen.SourceError, match="unknown NeetCode lcSlug"):
+        gen.validate_amazon_lc_overlap_aliases(aliases, neetcode, valid_amazon())
+
+
+def test_amazon_lc_overlap_aliases_reject_a_slug_equality_restatement(tmp_path):
+    aliases = {"amazon-two-sum": "two-sum"}
+    neetcode = gen.load_neetcode_manifest(NEETCODE_MANIFEST_PATH)
+    with pytest.raises(gen.SourceError, match="slug equality"):
+        gen.validate_amazon_lc_overlap_aliases(aliases, neetcode, [{"slug": "amazon-two-sum"}])
+
+
+def test_committed_amazon_lc_overlap_aliases_pin_the_exact_duplicates():
+    assert gen.load_amazon_lc_overlap_aliases(AMAZON_LC_OVERLAP_ALIASES_PATH) == (
+        EXPECTED_AMAZON_LC_OVERLAP_ALIASES
+    )
+
+
+def test_committed_amazon_lc_overlap_aliases_join_the_slug_equality_marker_set():
+    neetcode = gen.load_neetcode_manifest(NEETCODE_MANIFEST_PATH)
+    amazon = gen.load_amazon_manifest(AMAZON_MANIFEST_PATH)
+    aliases = gen.load_amazon_lc_overlap_aliases(AMAZON_LC_OVERLAP_ALIASES_PATH)
+    slug_equality = gen.amazon_overlap_lc_slugs(neetcode, amazon)
+    for lc_slug in aliases.values():
+        assert lc_slug not in slug_equality, (
+            "an alias restating slug equality is load-bearing for nothing"
+        )
+        assert lc_slug in slug_equality | set(aliases.values()), lc_slug
