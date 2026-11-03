@@ -38,21 +38,97 @@ You may return the output in **any order**.
 
 Selection by frequency decomposes into two stages that can be optimized separately: tally how often each value occurs, then choose the `k` highest tallies. Every solution below counts in one linear pass and differs only in how the second stage selects the winners.
 
-1. **Start literal.** Count into a dictionary, then sort the distinct values by descending frequency and slice off the first `k`. Sorting orders all `m` distinct values when only `k` are wanted, costing `O(m log m)`: see [Count and Sort](#count-and-sort).
-2. **Keep only the winners.** A min-heap of size `k` holds the current top `k` as values stream past: a value beats the heap's minimum or is discarded. Each of the `m` values costs one bounded `O(log k)` push or pop: see [Min-Heap of Size K](#min-heap-of-size-k).
-3. **Exploit the frequency bound.** A value's frequency can never exceed `n`, so the distinct values drop into `n + 1` frequency slots and reading the slots from high to low collects the winners in plain linear time, `O(n)`: see [Bucket Sort](#bucket-sort).
-4. **Library shortcut last.** `Counter.most_common(k)` performs both stages, tally and top-`k` selection, in one call: see [Counter Most Common](#counter-most-common).
+1. **Start literal.** Take the winners one at a time: each of the `k` rounds scans every remaining count for the highest and deletes its value, costing `O(n + k * m)` for `m` distinct values: see [Repeated Max Scan](#repeated-max-scan).
+2. **Order once instead of rescanning.** Re-finding every winner from scratch is the scan's waste; one descending ranking of the `m` distinct values answers all `k` rounds, with the ranking handed to the language's sort at `O(m log m)`: see [Count and Sort](#count-and-sort).
+3. **Keep only the winners.** A min-heap of size `k` holds the current top `k` as values stream past: a value beats the heap's minimum or is discarded. Each of the `m` values costs one bounded `O(log k)` push or pop: see [Min-Heap of Size K](#min-heap-of-size-k).
+4. **Exploit the frequency bound.** A value's frequency can never exceed `n`, so the distinct values drop into `n + 1` frequency slots and reading the slots from high to low collects the winners in plain linear time, `O(n)`: see [Bucket Sort](#bucket-sort).
+5. **Library shortcut last.** `Counter.most_common(k)` performs both stages, tally and top-`k` selection, in one call: see [Counter Most Common](#counter-most-common).
 
 ## Solutions
+
+### Repeated Max Scan
+
+#### Derivation
+
+The most direct selection takes the winners one at a time. With the counts in hand, the highest-frequency value is found by scanning every entry once; removing it and repeating `k` times peels off the `k` winners in descending frequency order, ties in any order. No ordering of the losers ever happens, because each round only asks for the single best remaining entry:
+
+1. Build `counts`, a dictionary mapping each value in `nums` to its frequency.
+2. Repeat `k` times: scan `counts` for the entry with the highest frequency, tracking it in `best_value` and `best_freq`.
+3. Append `best_value` to `top` and delete its entry from `counts`, so later rounds cannot take it again.
+4. Return `top`.
+
+#### Walkthrough
+
+Trace the rounds on Example 1: `nums = [1,2,2,3,3,3]`, `k = 2`. The counting pass tallies one value at a time:
+
+```text
+value 1   counts = {1: 1}
+value 2   counts = {1: 1, 2: 1}
+value 2   counts = {1: 1, 2: 2}
+value 3   counts = {1: 1, 2: 2, 3: 1}
+value 3   counts = {1: 1, 2: 2, 3: 2}
+value 3   counts = {1: 1, 2: 2, 3: 3}
+```
+
+Each selection round scans every surviving entry and removes its winner:
+
+```text
+round 1   scan {1: 1, 2: 2, 3: 3}   best_value = 3, best_freq = 3   top = [3]
+round 2   scan {1: 1, 2: 2}         best_value = 2, best_freq = 2   top = [3, 2]
+```
+
+The rounds return `[3, 2]`, which is the expected Output `[2, 3]` in descending-frequency order, and the any-order contract accepts either. Example 2, `nums = [7,7]`, `k = 1`, finishes in one round: the scan of `{7: 2}` picks `7` and the function returns `[7]`.
+
+#### Solution
+
+The code is the counting pass and the scan-and-remove rounds from the walkthrough.
+
+```python
+from typing import List
+
+
+class Solution:
+    def topKFrequent(self, nums: List[int], k: int) -> List[int]:
+        counts = {}
+        for num in nums:
+            counts[num] = counts.get(num, 0) + 1
+        top = []
+        for _ in range(k):
+            best_value = None
+            best_freq = 0
+            for value, freq in counts.items():
+                if freq > best_freq:
+                    best_value = value
+                    best_freq = freq
+            top.append(best_value)
+            del counts[best_value]
+        return top
+```
+
+#### Time and Space Complexity Analysis
+
+##### Time Complexity: `O(n + k * m)`
+
+Counting is `O(n)`. With `m` distinct values, each of the `k` rounds scans every surviving count once, adding `O(k * m)`. In the worst case, where `k` reaches `m` and `m` reaches `n`, the rounds degrade to `O(n^2)`.
+
+##### Space Complexity: `O(n)`
+
+The dictionary holds `O(m) <= O(n)` entries and the output holds `k`.
+
+#### Key Insights
+
+- The winners can be peeled off one at a time with nothing but scans: selecting the best `k` never requires ordering the losers.
+- Deleting each winner as it is taken keeps the later rounds honest at no extra cost.
+- The price is repetition: every round pays for a full scan even though the pool shrank by one, which is the flaw the next approach repairs.
 
 ### Count and Sort
 
 #### Derivation
 
-The most direct plan counts first and delegates the rest to sorting. Once every distinct value carries its frequency, sorting the distinct values by that frequency, highest first, lines the winners up at the front of the list:
+The repeated scan re-finds each winner from scratch: `k` rounds cost `k * m` comparisons over the counts, even though a single ordering of the `m` distinct values would settle every round at once. That ordering is mechanical bookkeeping, so this approach hands the ranking to the language's sort. Once every distinct value carries its frequency, sorting the distinct values by that frequency, highest first, lines the winners up at the front of the list:
 
 1. Build `counts`, a dictionary mapping each value in `nums` to its frequency.
-2. Collect the distinct values and sort them by `counts[value]`, descending.
+2. Collect the distinct values and let `sorted` rank them by `counts[value]`, descending.
 3. Slice the first `k` entries off the sorted list and return them.
 
 #### Walkthrough
@@ -101,7 +177,7 @@ The dictionary and the sorted distinct list hold `O(m) <= O(n)` entries.
 
 - The two-stage structure, count then select, is shared by every approach in this file.
 - Sorting all distinct values does more work than the problem asks for: the bottom `m - k` values are ordered with nobody looking.
-- Simple to reason about and hard to get wrong, which makes it a good first answer before tightening.
+- Delegating the ranking to `sorted` makes the selection a one-liner once the counts exist, but it pays the full `O(m log m)` ordering even when `k` is small.
 
 ### Min-Heap of Size K
 
@@ -172,7 +248,7 @@ The count map holds `O(m)` entries and the heap is capped at `k`, so the count m
 
 #### Derivation
 
-Both earlier approaches pay a log factor to order candidates against each other, yet the frequencies themselves impose a free order: a frequency is an integer between `1` and `n`, the length of the input. Values can therefore be filed into an array of `n + 1` frequency slots, where slot `f` lists every value occurring exactly `f` times, and scanning the slots from index `n` down collects the winners in descending frequency without a single comparison. This is [bucket sort](https://en.wikipedia.org/wiki/Bucket_sort) with frequency as the bucket index:
+The sort and the heap both pay a log factor to order candidates against each other, yet the frequencies themselves impose a free order: a frequency is an integer between `1` and `n`, the length of the input. Values can therefore be filed into an array of `n + 1` frequency slots, where slot `f` lists every value occurring exactly `f` times, and scanning the slots from index `n` down collects the winners in descending frequency without a single comparison. This is [bucket sort](https://en.wikipedia.org/wiki/Bucket_sort) with frequency as the bucket index:
 
 1. Build `counts` as before.
 2. Create `buckets`, an array of `n + 1` empty lists.
@@ -293,6 +369,7 @@ The counter and the returned list hold `O(m)` entries.
 
 ### Time Complexity
 
+- **Repeated Max Scan**: `O(n + k * m)` - `k` rounds, each a full scan of the surviving counts.
 - **Count and Sort**: `O(n log n)` - sorting all `m` distinct values dominates.
 - **Min-Heap of Size K**: `O(n log k)` - one bounded push-pop per distinct value.
 - **Bucket Sort**: `O(n)` - counting, filing, and scanning, with no comparisons.
@@ -300,6 +377,7 @@ The counter and the returned list hold `O(m)` entries.
 
 ### Space Complexity
 
+- **Repeated Max Scan**: `O(n)` - the count map plus the `k` winners.
 - **Count and Sort**: `O(n)` - count map plus sorted distinct list.
 - **Min-Heap of Size K**: `O(n)` - count map plus a heap capped at `k`.
 - **Bucket Sort**: `O(n)` - count map plus `n + 1` frequency slots.
@@ -307,6 +385,7 @@ The counter and the returned list hold `O(m)` entries.
 
 ### Trade-offs
 
+- **Repeated Max Scan** needs nothing beyond scans and a dictionary, but every winner costs a full pass over the surviving counts.
 - **Count and Sort** is the clearest to write and verify, but pays for ordering values nobody asked about.
 - **Min-Heap of Size K** bounds its extra structure at `k`, which shines when `k` is small next to `n`.
 - **Bucket Sort** is asymptotically optimal and comparison-free, at the price of an `n + 1` slot array even when only a few frequencies occur.
@@ -314,7 +393,8 @@ The counter and the returned list hold `O(m)` entries.
 
 ### When to Use Each
 
-- **Count and Sort**: quick scripts, small inputs, or as the interview warm-up before tightening.
+- **Repeated Max Scan**: tiny `k` over large distinct sets, or as the hand-rolled warm-up before any ordering machinery.
+- **Count and Sort**: quick scripts, small inputs, or when the full descending ranking is wanted anyway and `k` is not far below `m`.
 - **Min-Heap of Size K**: streaming or huge inputs where `k` is small and candidates should be inspected once.
 - **Bucket Sort**: the optimal answer over in-memory integer arrays (recommended here).
 - **Counter Most Common**: idiomatic Python one-offs where clarity beats micro-optimization.
@@ -323,4 +403,5 @@ The counter and the returned list hold `O(m)` entries.
 
 - The frequency bound `1 <= frequency <= n` is the entire idea behind Bucket Sort; missing it makes the linear approach look impossible.
 - All approaches share the same counting pass, so interviews usually grade the second stage: know why heap beats sort, and why buckets beat heap, here.
-- For the unique-answer guarantee, tie-breaking inside the heap or library call can never change the selected *set*, only its order, which the any-order contract already forgives.
+- The scan's `k * m` comparisons beat the sort's `m log m` only while `k < log m`; that crossover is why the ordering approaches take over as `k` grows.
+- For the unique-answer guarantee, tie-breaking inside the scan, heap, or library call can never change the selected *set*, only its order, which the any-order contract already forgives.
