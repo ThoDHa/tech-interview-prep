@@ -1282,12 +1282,10 @@ def emit_scaffolds(entries: Sequence[dict], fetch: bool = True) -> dict:
             and not parsed_cases.cases
         )
         if transient_parse:
-            # A committed case-parsed slug whose live parse transiently
-            # yields nothing: the committed practice files and
-            # parse_status stay authoritative, and only the (separately
-            # guarded) write-up remains a write target, so a genuinely
-            # dead page surfaces under the stat for a manual decision
-            # instead of silently wiping the gauntlet in one pass.
+            # A transient 404 or empty parse must not wipe a committed
+            # case-parsed folder: the practice files and parse_status stay
+            # authoritative, and a genuinely dead page surfaces under the
+            # stat for a manual decision instead of a silent wipe.
             stats["transient_parse_guard"].append(slug)
             rendered = {writeup_path: rendered[writeup_path]}
         elif authored_cases and not parsed_cases.cases:
