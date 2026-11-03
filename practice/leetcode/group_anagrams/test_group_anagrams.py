@@ -1,6 +1,10 @@
 """Tests for Group Anagrams: your attempt (solution.py) against both case sets.
 
 The worked approaches live in ../../../docs/leetcode/group_anagrams.md.
+
+Group order and within-group word order are free, so both sides are
+canonicalized to a sorted multiset of sorted groups before comparison; a
+solution that duplicates or drops a whole group fails the multiset.
 """
 
 import pytest
@@ -17,11 +21,14 @@ def _ids(cases):
     return [case["id"] for case in cases]
 
 
+def _canonical(groups):
+    return sorted(sorted(group) for group in groups)
+
+
 def _check(method, case):
-    # Group order and word order within a group are both arbitrary.
-    assert {frozenset(group) for group in method(*case["args"])} == {
-        frozenset(group) for group in case["expected"]
-    }
+    # Group order and word order within a group are both arbitrary; the group
+    # multiset is not, so a duplicated or missing group must fail.
+    assert _canonical(method(*case["args"])) == _canonical(case["expected"])
 
 
 @pytest.mark.simple
