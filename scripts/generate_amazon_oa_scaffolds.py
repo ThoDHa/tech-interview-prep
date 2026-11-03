@@ -1387,7 +1387,18 @@ def emit_scaffolds(entries: Sequence[dict], fetch: bool = True) -> dict:
 
 
 def write_manifest(manifest: Sequence[dict]) -> None:
-    """Write scripts/amazon_oa_manifest.json, most-recent first."""
+    """Write scripts/amazon_oa_manifest.json, most-recent first.
+
+    Every written entry carries the shape the strict manifest load
+    requires, so the tool can always reload its own output: a slug the
+    emission never classified (beyond --limit, a --no-fetch skip, a
+    --manifest-only bootstrap) gains parse_status None and the next
+    bank-available run classifies it. slug, title, and url always come
+    from the bank row or the validated load, so parse_status is the only
+    key a write-time entry can lack.
+    """
+    for entry in manifest:
+        entry.setdefault("parse_status", None)
     MANIFEST_PATH.parent.mkdir(parents=True, exist_ok=True)
     MANIFEST_PATH.write_text(json.dumps(list(manifest), indent=2) + "\n", encoding="utf-8")
 
@@ -1653,7 +1664,7 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
         for entry in manifest:
             committed = committed_by_slug.get(entry["slug"])
             if committed is not None:
-                entry["parse_status"] = committed.get("parse_status")
+                entry["parse_status"] = committed["parse_status"]
     print(f"manifest: {len(manifest)} Amazon-tagged coding problems ({source})")
     if args.manifest_only:
         write_manifest(manifest)

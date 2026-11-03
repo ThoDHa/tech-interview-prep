@@ -1697,6 +1697,209 @@ def test_main_check_mode_does_not_rewrite_manifest(tmp_path, monkeypatch, seeded
     assert (tmp_path / "manifest.json").exists()
 
 
+def test_write_manifest_fills_parse_status_on_unclassified_entries(tmp_path, monkeypatch):
+    """The manifest writer leaves no entry for the strict load to refuse.
+
+    The strict load aborts on any entry missing slug, title, url, or
+    parse_status, and the write paths can hold slugs emission never
+    classified (beyond --limit, a --no-fetch skip, a --manifest-only
+    bootstrap), so the writer itself completes the shape: an unclassified
+    entry gains parse_status None and the file reloads cleanly.
+    """
+    manifest_path = tmp_path / "amazon_oa_manifest.json"
+    monkeypatch.setattr(gen, "MANIFEST_PATH", manifest_path)
+    classified = {
+        "slug": "amazon-intact",
+        "title": "Intact",
+        "url": "https://x/intact",
+        "companies": ["Amazon"],
+        "updated": "2026-09-19",
+        "difficulty": None,
+        "categories": None,
+        "parse_status": "parsed-with-cases",
+    }
+    unclassified = {
+        "slug": "amazon-fresh",
+        "title": "Fresh",
+        "url": "https://x/fresh",
+        "companies": ["Amazon"],
+        "updated": "2026-09-20",
+        "difficulty": None,
+        "categories": None,
+    }
+
+    gen.write_manifest([classified, unclassified])
+
+    entries = gen.load_committed_manifest(manifest_path)
+    assert entries[0]["parse_status"] == "parsed-with-cases"
+    assert entries[1]["parse_status"] is None
+
+
+def test_manifest_only_bootstrap_write_round_trips_through_the_strict_loader(
+    tmp_path, monkeypatch, seeded_docs_dir
+):
+    """A --manifest-only run over grown bank pages stays reloadable.
+
+    The bootstrap flow builds the manifest before any scaffold exists:
+    bank slugs absent from the committed manifest reach the write with no
+    classification, and the next run's strict load must accept the file
+    with those slugs held unclassified for a full run to classify.
+    """
+    monkeypatch.setattr(
+        gen,
+        "DEFAULT_BANK_PAGES",
+        [FIXTURES_DIR / "bank_coding.md", FIXTURES_DIR / "bank_coding_page_2.md"],
+    )
+    manifest_path = tmp_path / "amazon_oa_manifest.json"
+    manifest_path.write_text(
+        json.dumps(
+            [
+                {
+                    "slug": "amazon-inventory-allocation",
+                    "title": "Inventory Allocation",
+                    "url": "https://www.fastprep.io/problems/amazon-inventory-allocation",
+                    "companies": ["Amazon"],
+                    "updated": "2026-09-18",
+                    "difficulty": None,
+                    "categories": None,
+                    "parse_status": "parsed-with-cases",
+                }
+            ],
+            indent=2,
+        )
+        + "\n",
+        encoding="utf-8",
+    )
+    monkeypatch.setattr(gen, "MANIFEST_PATH", manifest_path)
+
+    assert gen.main(["--manifest-only"]) == 0
+
+    entries = gen.load_committed_manifest(manifest_path)
+    status_by_slug = {entry["slug"]: entry["parse_status"] for entry in entries}
+    assert status_by_slug["amazon-inventory-allocation"] == "parsed-with-cases"
+    assert status_by_slug["amazon-maximize-adjacent-difference-with-one-reversal"] is None
+    assert status_by_slug["amazon-lru-query-result-cache"] is None
+    assert status_by_slug["amazon-currency-conversion-rate"] is None
+
+
+def test_limit_run_write_round_trips_through_the_strict_loader(
+    tmp_path, monkeypatch, seeded_docs_dir
+):
+    """A --limit run writes the full manifest, still reloadable.
+
+    Emission classifies only the limited slice while the write persists
+    every entry: a bank slug beyond the limit is new to the committed
+    manifest, lands unclassified in the file, and the next run's strict
+    load must accept it.
+    """
+    monkeypatch.setattr(
+        gen,
+        "DEFAULT_BANK_PAGES",
+        [FIXTURES_DIR / "bank_coding.md", FIXTURES_DIR / "bank_coding_page_2.md"],
+    )
+    target_slug = gen.extract_problem_record(FASTPREP_PAGE)["id"]
+    manifest_path = tmp_path / "amazon_oa_manifest.json"
+    manifest_path.write_text(
+        json.dumps(
+            [
+                {
+                    "slug": target_slug,
+                    "title": "Maximize Adjacent Difference With One Reversal",
+                    "url": f"https://www.fastprep.io/problems/{target_slug}",
+                    "companies": ["Amazon"],
+                    "updated": "2026-09-19",
+                    "difficulty": "Hard",
+                    "categories": "Array, Greedy, Math",
+                    "parse_status": "parsed-with-cases",
+                }
+            ],
+            indent=2,
+        )
+        + "\n",
+        encoding="utf-8",
+    )
+    monkeypatch.setattr(gen, "MANIFEST_PATH", manifest_path)
+    monkeypatch.setattr(gen, "PRACTICE_DIR", tmp_path / "practice" / "amazon")
+    monkeypatch.setattr(gen, "FASTPREP_CACHE_DIR", tmp_path / "fastprep-cache")
+    monkeypatch.setattr(
+        gen,
+        "fetch_problem_page",
+        lambda slug, cache_dir=None, delay=True, network=True: FASTPREP_PAGE,
+    )
+    mkdocs_path = tmp_path / "mkdocs.yml"
+    mkdocs_path.write_text(
+        "nav:\n  - Home: index.md\n  - Problems:\n    - Leetcode:\n",
+        encoding="utf-8",
+    )
+    monkeypatch.setattr(gen, "MKTABS_PATH", mkdocs_path)
+
+    assert gen.main(["--limit", "1"]) == 0
+
+    entries = gen.load_committed_manifest(manifest_path)
+    status_by_slug = {entry["slug"]: entry["parse_status"] for entry in entries}
+    assert status_by_slug[target_slug] == "parsed-with-cases"
+    assert status_by_slug["amazon-inventory-allocation"] is None
+    assert status_by_slug["amazon-currency-conversion-rate"] is None
+
+
+def test_no_fetch_run_write_round_trips_through_the_strict_loader(
+    tmp_path, monkeypatch, seeded_docs_dir
+):
+    """A --no-fetch run keeps its unclassified skips reloadable.
+
+    A slug with no cached page is skipped before any classification, yet
+    the run still writes the whole manifest: the skipped new slug leaves
+    without a parse_status and the next run's strict load must accept it
+    while the cache-hit slug carries its live classification.
+    """
+    monkeypatch.setattr(
+        gen,
+        "DEFAULT_BANK_PAGES",
+        [FIXTURES_DIR / "bank_coding.md", FIXTURES_DIR / "bank_coding_page_2.md"],
+    )
+    target_slug = gen.extract_problem_record(FASTPREP_PAGE)["id"]
+    manifest_path = tmp_path / "amazon_oa_manifest.json"
+    manifest_path.write_text(
+        json.dumps(
+            [
+                {
+                    "slug": target_slug,
+                    "title": "Maximize Adjacent Difference With One Reversal",
+                    "url": f"https://www.fastprep.io/problems/{target_slug}",
+                    "companies": ["Amazon"],
+                    "updated": "2026-09-19",
+                    "difficulty": "Hard",
+                    "categories": "Array, Greedy, Math",
+                    "parse_status": "parsed-with-cases",
+                }
+            ],
+            indent=2,
+        )
+        + "\n",
+        encoding="utf-8",
+    )
+    monkeypatch.setattr(gen, "MANIFEST_PATH", manifest_path)
+    monkeypatch.setattr(gen, "PRACTICE_DIR", tmp_path / "practice" / "amazon")
+    cache_dir = tmp_path / "fastprep-cache"
+    cache_dir.mkdir()
+    (cache_dir / f"{target_slug}.html").write_text(FASTPREP_PAGE, encoding="utf-8")
+    monkeypatch.setattr(gen, "FASTPREP_CACHE_DIR", cache_dir)
+    mkdocs_path = tmp_path / "mkdocs.yml"
+    mkdocs_path.write_text(
+        "nav:\n  - Home: index.md\n  - Problems:\n    - Leetcode:\n",
+        encoding="utf-8",
+    )
+    monkeypatch.setattr(gen, "MKTABS_PATH", mkdocs_path)
+
+    assert gen.main(["--no-fetch"]) == 0
+
+    entries = gen.load_committed_manifest(manifest_path)
+    status_by_slug = {entry["slug"]: entry["parse_status"] for entry in entries}
+    assert status_by_slug[target_slug] == "parsed-with-cases"
+    assert status_by_slug["amazon-inventory-allocation"] is None
+    assert status_by_slug["amazon-lru-query-result-cache"] is None
+
+
 def test_render_test_skips_empty_cases_naming_the_slug():
     entry = {"slug": "amazon-empty-cases", "title": "T", "url": "https://x", "companies": ["Amazon"], "updated": "2026-09-19"}
     text = gen.render_test(entry, function_name="solve", cases=[], skip_reason="no parseable examples for amazon-empty-cases")
