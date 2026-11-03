@@ -696,6 +696,36 @@ def _section_carries_content(segment: str) -> bool:
     return bool(HTML_COMMENT_PATTERN.sub("", segment).strip())
 
 
+def committed_only_sections(committed_text: str, fresh_text: str) -> List[str]:
+    """Return committed sections the fresh placeholder has no heading for.
+
+    A section qualifies when its heading line is absent from the fresh
+    render and the section carries non-marker content. The death merge
+    appends these after the fresh-driven loop (the union), and the
+    emission loop names them in the run log so a carried archive section
+    stays auditable.
+
+    Args:
+        committed_text: The committed write-up markdown.
+        fresh_text: The freshly rendered placeholder write-up for the same
+            entry.
+
+    Returns:
+        The qualifying committed sections, in committed order; empty when
+        every committed section has a fresh counterpart or is a marker
+        hole.
+    """
+    fresh_headings = {
+        section.splitlines()[0] for section in _split_writeup_sections(fresh_text)[1:]
+    }
+    return [
+        section
+        for section in _split_writeup_sections(committed_text)[1:]
+        if section.splitlines()[0] not in fresh_headings
+        and _section_carries_content(section)
+    ]
+
+
 def preserve_writeup_on_death(committed_text: str, fresh_text: str) -> str:
     """Merge a committed write-up with a fresh placeholder after page death.
 
@@ -707,7 +737,9 @@ def preserve_writeup_on_death(committed_text: str, fresh_text: str) -> str:
     the header whose metadata line feeds the manifest rebuild. It fills
     only the marker holes (sections whose sole content is placeholder
     comments, i.e. the Solutions scaffold) exactly as a fresh placeholder
-    would.
+    would. Committed sections whose headings the fresh render lacks are
+    unioned in after the template sections, so a hand-added archived
+    section survives the page death too.
 
     Args:
         committed_text: The committed write-up markdown.
@@ -734,6 +766,7 @@ def preserve_writeup_on_death(committed_text: str, fresh_text: str) -> str:
             merged.append(committed_section)
         else:
             merged.append(fresh_section)
+    merged.extend(committed_only_sections(committed_text, fresh_text))
     return "".join(merged)
 
 
@@ -1240,7 +1273,9 @@ def emit_scaffolds(entries: Sequence[dict], fetch: bool = True) -> dict:
         no cases; their committed practice files and classification are
         kept and only the write-up is written, so a genuinely dead page
         surfaces for a manual decision instead of wiping the folder in
-        one pass).
+        one pass), `death_merge_union` (slugs plus the committed-only
+        section headings a dead-page merge carried into the archived
+        write-up).
     """
     stats = {
         "generated": 0,
@@ -1253,6 +1288,7 @@ def emit_scaffolds(entries: Sequence[dict], fetch: bool = True) -> dict:
         "cases_preserved": [],
         "cases_conflicted": [],
         "transient_parse_guard": [],
+        "death_merge_union": [],
     }
     DOCS_DIR.mkdir(parents=True, exist_ok=True)
     PRACTICE_DIR.mkdir(parents=True, exist_ok=True)
@@ -1305,14 +1341,19 @@ def emit_scaffolds(entries: Sequence[dict], fetch: bool = True) -> dict:
                     stats["writeups_preserved"].append(slug)
                     continue
                 if problem is None and writeup_path.exists():
+                    committed_text = writeup_path.read_text(encoding="utf-8")
                     # Dead page: the committed write-up is the only copy of
                     # the archived statement; merge it over the fresh
                     # placeholder instead of re-rendering the wipe.
-                    merged_text = preserve_writeup_on_death(
-                        writeup_path.read_text(encoding="utf-8"), content
-                    )
+                    merged_text = preserve_writeup_on_death(committed_text, content)
                     if merged_text != content:
                         stats["writeups_preserved_dead_page"].append(slug)
+                    carried_sections = committed_only_sections(committed_text, content)
+                    if carried_sections:
+                        carried_headings = ", ".join(
+                            section.splitlines()[0] for section in carried_sections
+                        )
+                        stats["death_merge_union"].append(f"{slug}: {carried_headings}")
                     content = merged_text
             path.write_text(content, encoding="utf-8")
         if transient_parse:
@@ -1649,6 +1690,11 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
         print(
             "write-ups preserved (dead page, archived sections kept): "
             + ", ".join(stats["writeups_preserved_dead_page"])
+        )
+    if stats["death_merge_union"]:
+        print(
+            "death merge union (committed-only archived sections carried): "
+            + ", ".join(stats["death_merge_union"])
         )
     if stats["cases_preserved"]:
         print(

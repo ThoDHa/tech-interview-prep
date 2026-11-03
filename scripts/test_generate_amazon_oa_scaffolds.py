@@ -880,7 +880,9 @@ def test_emit_scaffolds_transient_guard_keeps_committed_cases_when_a_parsed_with
     monkeypatch.setattr(
         gen,
         "fetch_problem_page",
-        lambda slug, cache_dir=None, delay=True, network=True: "<html>no payload</html>",
+        lambda slug, cache_dir=None, delay=True, network=True: gen.FETCH_FAILED_MARKER_TEMPLATE.format(
+            error_code=404, slug=slug
+        ),
     )
     problem = gen.extract_problem_record(FASTPREP_PAGE)
     parsed_cases = gen.cases_from_record(problem)
@@ -1015,6 +1017,47 @@ def test_preserve_writeup_on_death_returns_the_fresh_placeholder_for_a_pure_plac
     assert gen.preserve_writeup_on_death(fresh, fresh) == fresh
 
 
+def test_preserve_writeup_on_death_union_keeps_a_committed_only_section():
+    """A committed heading outside the fresh template survives the merge.
+
+    The fresh-driven loop fills the template's own sections; a committed
+    section whose heading the fresh render lacks is appended after them
+    instead of being silently dropped, and a second merge is byte-stable,
+    so the carried archive section survives every future run.
+    """
+    entry = {"slug": "amazon-gone", "title": "Gone", "url": "https://x/gone"}
+    fresh = gen.render_writeup(entry, None, "")
+    committed_only_section = "## Archived round trace\n\nHand-added trace table.\n\n"
+    committed = fresh.rstrip() + "\n\n" + committed_only_section
+
+    merged = gen.preserve_writeup_on_death(committed, fresh)
+
+    assert "## Archived round trace" in merged
+    assert "Hand-added trace table." in merged
+    assert merged.index("## Archived round trace") > merged.index("## Solutions")
+    assert merged == fresh + committed_only_section
+    assert gen.preserve_writeup_on_death(merged, fresh) == merged
+
+
+def test_preserve_writeup_on_death_union_drops_a_committed_only_marker_hole():
+    """A committed-only section holding nothing but markers is not kept.
+
+    The union carries content; a marker hole with no fresh counterpart is
+    a scaffold remnant, and resurrecting it would pin placeholder noise
+    into the archived write-up.
+    """
+    entry = {"slug": "amazon-gone", "title": "Gone", "url": "https://x/gone"}
+    fresh = gen.render_writeup(entry, None, "")
+    marker_hole = f"## Retired drill\n\n{gen.WRITEUP_PLACEHOLDER_MARKER} gone. -->\n\n"
+    committed = fresh.rstrip() + "\n\n" + marker_hole
+
+    merged = gen.preserve_writeup_on_death(committed, fresh)
+
+    assert "## Retired drill" not in merged
+    assert merged == fresh
+    assert gen.preserve_writeup_on_death(merged, fresh) == merged
+
+
 def test_emit_scaffolds_preserves_a_dead_page_writeups_archived_sections(tmp_path, monkeypatch):
     """A dead page must not re-render a committed write-up's archived body.
 
@@ -1055,6 +1098,41 @@ def test_emit_scaffolds_preserves_a_dead_page_writeups_archived_sections(tmp_pat
 
     assert (docs_dir / "amazon-gone.md").read_text(encoding="utf-8") == committed
     assert stats["writeups_preserved_dead_page"] == ["amazon-gone"]
+
+
+def test_emit_scaffolds_logs_a_carried_committed_only_section_in_the_death_merge(tmp_path, monkeypatch):
+    """The run log names a committed-only section the death merge carries.
+
+    A dead page whose committed write-up holds a heading outside the fresh
+    template keeps that section in the archived file, and the emission
+    stat names the slug and heading so the union stays auditable.
+    """
+    docs_dir = tmp_path / "docs" / "amazon"
+    practice_dir = tmp_path / "practice" / "amazon"
+    monkeypatch.setattr(gen, "DOCS_DIR", docs_dir)
+    monkeypatch.setattr(gen, "PRACTICE_DIR", practice_dir)
+    seed_cache(monkeypatch, tmp_path / "cache", "amazon-gone")
+    monkeypatch.setattr(
+        gen,
+        "fetch_problem_page",
+        lambda slug, cache_dir=None, delay=True, network=True: gen.FETCH_FAILED_MARKER_TEMPLATE.format(
+            error_code=404, slug=slug
+        ),
+    )
+    entry = {"slug": "amazon-gone", "title": "Gone", "url": "https://x/gone", "companies": ["Amazon"], "updated": "2026-09-19"}
+    committed_only_section = "## Archived round trace\n\nHand-added trace table.\n\n"
+    committed = gen.render_writeup(entry, None, "").rstrip() + "\n\n" + committed_only_section
+    docs_dir.mkdir(parents=True)
+    (docs_dir / "amazon-gone.md").write_text(committed, encoding="utf-8")
+
+    stats = gen.emit_scaffolds([entry], fetch=False)
+
+    preserved = (docs_dir / "amazon-gone.md").read_text(encoding="utf-8")
+    assert preserved == gen.render_writeup(entry, None, "") + committed_only_section
+    assert "Hand-added trace table." in preserved
+    assert stats["writeups_preserved_dead_page"] == ["amazon-gone"]
+    assert stats["death_merge_union"] == ["amazon-gone: ## Archived round trace"]
+    assert entry["parse_status"] == "page-unparseable"
 
 
 def test_check_stays_green_for_a_death_preserved_writeup(tmp_path, monkeypatch):
