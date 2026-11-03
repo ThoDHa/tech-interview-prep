@@ -31,7 +31,7 @@ Order within a matching window does not matter, duplicate target words retain th
 
 ## Deriving the Solution
 
-The answer is every window whose word multiset equals the target's, and the multiset of consecutive windows barely changes: sliding one position removes one word and adds one other. Sorting re-derives a whole window to learn what two counters already know. The ladder:
+The answer is every window whose word multiset equals the target's, and the multiset of consecutive windows barely changes: sliding one position removes one word and adds one other. Sorting re-derives a whole window to learn what two counters already know. The counting window is the same instrument [Minimum Window Substring](../leetcode/minimum_window_substring.md) slides over characters, but that problem keeps only the shortest window that covers its target with surplus allowed, while this statement records every window whose word multiset equals the target exactly. The ladder:
 
 1. **Start literal.** Sort the target once, sort each candidate window, and compare the sorted lists: correct, and it re-sorts on every slide: see [Sorted-Window Comparison](#sorted-window-comparison).
 2. **Keep counts, not orders.** Multiset equality is per-word count equality; maintain the window's counts and a tally of words whose counts are off, updating it only for the word leaving and the word entering, so a slide costs O(1): see [Match-Count Sliding Window](#match-count-sliding-window).
