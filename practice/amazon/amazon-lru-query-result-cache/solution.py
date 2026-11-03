@@ -8,11 +8,23 @@ Maintain a cache with positive integer capacity. Process each operation atomical
   uv run pytest amazon/amazon-lru-query-result-cache/              # run the test sets
 """
 
-from harness import NotSolved, pick_case
+from harness import NotSolved, pick_case, run_operations
 
 
-class Solution:
-    def runQueryCache(self, capacity, operations):
+class LRUCache:
+    def __init__(self, capacity: int) -> None:
+        # Initialize empty state here; methods below raise until implemented.
+        pass
+
+    def get(self, key: int) -> int:
+        """State the time and space complexity of your approach, and explain why.
+
+        Time:  O(?):
+        Space: O(?):
+        """
+        raise NotSolved
+
+    def put(self, key: int, value: int) -> None:
         """State the time and space complexity of your approach, and explain why.
 
         Time:  O(?):
@@ -22,11 +34,15 @@ class Solution:
 
 
 if __name__ == "__main__":
-    # Debug playground: set a breakpoint in runQueryCache above, then run this file.
-    # Pick a case by id (ids are in cases.json).
+    # Debug playground: set a breakpoint in a LRUCache method, then run this file.
+    # Pick a case by id (ids are in cases.json / cases_full.json).
     CASE = "example_1"
     case = pick_case(__file__, CASE)
-    result = Solution().runQueryCache(*case["args"])
-    print(f"case {case['id']}: args = {case['args']}")
-    print(f"expected: {case['expected']}")
-    print(f"got:      {result}")
+    print(f"case {case['id']}: operations = {case['operations']}")
+    print(f"arguments: {case['arguments']}")
+    print(f"expected:  {case['expected']}")
+    try:
+        result = run_operations(LRUCache, case["operations"], case["arguments"])
+        print(f"got:       {result}")
+    except NotSolved:
+        print("got:       implement LRUCache's methods first")
