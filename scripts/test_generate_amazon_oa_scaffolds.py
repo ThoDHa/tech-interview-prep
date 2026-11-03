@@ -880,7 +880,9 @@ def test_emit_scaffolds_transient_guard_keeps_committed_cases_when_a_parsed_with
     monkeypatch.setattr(
         gen,
         "fetch_problem_page",
-        lambda slug, cache_dir=None, delay=True, network=True: "<html>no payload</html>",
+        lambda slug, cache_dir=None, delay=True, network=True: gen.FETCH_FAILED_MARKER_TEMPLATE.format(
+            error_code=404, slug=slug
+        ),
     )
     problem = gen.extract_problem_record(FASTPREP_PAGE)
     parsed_cases = gen.cases_from_record(problem)
