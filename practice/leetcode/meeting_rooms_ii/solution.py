@@ -8,11 +8,13 @@ Given an array of meeting time interval objects consisting of start and end time
   uv run pytest leetcode/meeting_rooms_ii/              # run the test sets
 """
 
-from harness import NotSolved, pick_case
+from typing import List
+
+from harness import NotSolved, pick_case, run_operations
 
 
 class Solution:
-    def solve(self, *args):
+    def minMeetingRooms(self, intervals: List[List[int]]) -> int:
         """State the time and space complexity of your approach, and explain why.
 
         Time:  O(?):
@@ -22,11 +24,15 @@ class Solution:
 
 
 if __name__ == "__main__":
-    # Debug playground: set a breakpoint in solve above, then run this file.
-    # Pick a case by id (ids are in cases.json).
-    CASE = "empty_schedule"
+    # Debug playground: set a breakpoint in minMeetingRooms, then run this file.
+    # Pick a case by id (ids are in cases.json / cases_full.json).
+    CASE = "classic_two_rooms"
     case = pick_case(__file__, CASE)
-    result = Solution().solve(*case["args"])
-    print(f"case {case['id']}: args = {case['args']}")
-    print(f"expected: {case['expected']}")
-    print(f"got:      {result}")
+    print(f"case {case['id']}: operations = {case['operations']}")
+    print(f"arguments: {case['arguments']}")
+    print(f"expected:  {case['expected']}")
+    try:
+        result = run_operations(Solution, case["operations"], case["arguments"])
+        print(f"got:       {result}")
+    except NotSolved:
+        print("got:       implement minMeetingRooms first")

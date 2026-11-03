@@ -1,1 +1,98 @@
-[]
+[
+  {
+    "id": "example_1",
+    "operations": [
+      "StreamSearch",
+      "add",
+      "add",
+      "search",
+      "search",
+      "add",
+      "search"
+    ],
+    "arguments": [
+      [],
+      [
+        5
+      ],
+      [
+        3
+      ],
+      [
+        3
+      ],
+      [
+        7
+      ],
+      [
+        7
+      ],
+      [
+        7
+      ]
+    ],
+    "expected": [
+      null,
+      null,
+      null,
+      true,
+      false,
+      null,
+      true
+    ]
+  },
+  {
+    "id": "search_before_any_add",
+    "operations": [
+      "StreamSearch",
+      "search",
+      "search"
+    ],
+    "arguments": [
+      [],
+      [
+        4
+      ],
+      [
+        0
+      ]
+    ],
+    "expected": [
+      null,
+      false,
+      false
+    ]
+  },
+  {
+    "id": "no_searches",
+    "operations": [
+      "StreamSearch",
+      "add",
+      "add",
+      "add",
+      "add"
+    ],
+    "arguments": [
+      [],
+      [
+        1
+      ],
+      [
+        2
+      ],
+      [
+        3
+      ],
+      [
+        2
+      ]
+    ],
+    "expected": [
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
+  }
+]

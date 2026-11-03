@@ -1,1 +1,136 @@
-[]
+[
+  {
+    "id": "example_1",
+    "operations": [
+      "LFUCache",
+      "put",
+      "put",
+      "get",
+      "put",
+      "get",
+      "get",
+      "put",
+      "get",
+      "get",
+      "get"
+    ],
+    "arguments": [
+      [
+        2
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        1
+      ],
+      [
+        3,
+        3
+      ],
+      [
+        2
+      ],
+      [
+        3
+      ],
+      [
+        4,
+        4
+      ],
+      [
+        1
+      ],
+      [
+        3
+      ],
+      [
+        4
+      ]
+    ],
+    "expected": [
+      null,
+      null,
+      null,
+      1,
+      null,
+      -1,
+      3,
+      null,
+      -1,
+      3,
+      4
+    ]
+  },
+  {
+    "id": "example_2",
+    "operations": [
+      "LFUCache",
+      "put",
+      "put",
+      "get",
+      "put",
+      "get",
+      "get"
+    ],
+    "arguments": [
+      [
+        1
+      ],
+      [
+        7,
+        5
+      ],
+      [
+        7,
+        8
+      ],
+      [
+        7
+      ],
+      [
+        9,
+        4
+      ],
+      [
+        7
+      ],
+      [
+        9
+      ]
+    ],
+    "expected": [
+      null,
+      null,
+      null,
+      8,
+      null,
+      -1,
+      4
+    ]
+  },
+  {
+    "id": "get_on_empty",
+    "operations": [
+      "LFUCache",
+      "get"
+    ],
+    "arguments": [
+      [
+        3
+      ],
+      [
+        5
+      ]
+    ],
+    "expected": [
+      null,
+      -1
+    ]
+  }
+]

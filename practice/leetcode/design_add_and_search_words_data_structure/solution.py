@@ -8,11 +8,23 @@ Design a data structure that supports adding new words and searching for existin
   uv run pytest leetcode/design_add_and_search_words_data_structure/              # run the test sets
 """
 
-from harness import NotSolved, pick_case
+from harness import NotSolved, pick_case, run_operations
 
 
-class Solution:
-    def solve(self, *args):
+class WordDictionary:
+    def __init__(self) -> None:
+        # Initialize empty state here; methods below raise until implemented.
+        pass
+
+    def addWord(self, word: str) -> None:
+        """State the time and space complexity of your approach, and explain why.
+
+        Time:  O(?):
+        Space: O(?):
+        """
+        raise NotSolved
+
+    def search(self, word: str) -> bool:
         """State the time and space complexity of your approach, and explain why.
 
         Time:  O(?):
@@ -22,11 +34,15 @@ class Solution:
 
 
 if __name__ == "__main__":
-    # Debug playground: set a breakpoint in solve above, then run this file.
-    # Pick a case by id (ids are in cases.json).
+    # Debug playground: set a breakpoint in a WordDictionary method, then run this file.
+    # Pick a case by id (ids are in cases.json / cases_full.json).
     CASE = "empty_search_literal"
     case = pick_case(__file__, CASE)
-    result = Solution().solve(*case["args"])
-    print(f"case {case['id']}: args = {case['args']}")
-    print(f"expected: {case['expected']}")
-    print(f"got:      {result}")
+    print(f"case {case['id']}: operations = {case['operations']}")
+    print(f"arguments: {case['arguments']}")
+    print(f"expected:  {case['expected']}")
+    try:
+        result = run_operations(WordDictionary, case["operations"], case["arguments"])
+        print(f"got:       {result}")
+    except NotSolved:
+        print("got:       implement WordDictionary's methods first")

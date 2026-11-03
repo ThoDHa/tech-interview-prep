@@ -52,20 +52,24 @@ twitter.getNewsFeed(1);   // User 1's news feed should only contain their own tw
 Nothing in the input orders tweets by ID: an ID only promises uniqueness. The one order the problem defines is the order `postTweet` calls arrive, so every solution starts by stamping each tweet with a monotonically increasing counter at posting time and keeping each user's timeline in stamp order. After that, `getNewsFeed(userId)` is always the same question, "which are the 10 largest stamps among the authors `userId` follows, plus their own?", and the solutions differ only in how they run that selection.
 
 1. **Start literal.** On each `getNewsFeed` call, flatten every tweet of every
-   followed author into one candidate list, sort it newest-first, and slice off
-   10. Correct, but it comparison-sorts material that is already sorted inside
-   each author's timeline, at `O(C log C)` per feed for `C` candidate tweets:
+   followed author into one candidate pool, then take the newest ten by hand:
+   each of ten rounds scans the pool for the largest stamp, appends the winner
+   to the feed, and removes it, at `O(C)` per feed for `C` candidate tweets:
    see [Brute Force](#brute-force).
-2. **Spot the waste.** The candidates are `A` already-sorted timelines, and
-   merging sorted sources never needs a sort: keep one cursor per author and
-   repeatedly emit whichever cursor holds the newest stamp. At most ten
-   emissions, each found by one linear scan over the cursors: see
+2. **Spot the waste.** The candidates are `A` already-sorted timelines, and the
+   newest tweet not yet fed always sits at some author's timeline head: keep one
+   cursor per author and repeatedly emit whichever cursor holds the newest
+   stamp, materializing no candidate pool at all. At most ten emissions, each
+   found by one linear scan over the cursors: see
    [Repeated Maximum Scan](#repeated-maximum-scan).
 3. **Reach for the k-way merge.** "Repeatedly take the newest head of several
    sorted streams" is the merge step of a [k-way merge](https://en.wikipedia.org/wiki/K-way_merge_algorithm),
    and a min-heap of stream heads finds each next element in `O(log A)` instead
    of a fresh scan: see [Min-Heap K-Way Merge](#min-heap-k-way-merge).
-4. **Let the library select.** `heapq.nlargest(10, candidates)` packages exactly
+4. **Delegate the ordering.** The ranking the by-hand rounds perform is exactly
+   what the language's sort provides in one call, at `O(C log C)` per feed: see
+   [Flatten and Sort](#flatten-and-sort).
+5. **Let the library select.** `heapq.nlargest(10, candidates)` packages exactly
    this top-10 selection, keeping its working set at 10 entries while it sweeps
    the candidates once: see
    [Bounded Heap Selection](#bounded-heap-selection).
@@ -76,7 +80,7 @@ Nothing in the input orders tweets by ID: an ID only promises uniqueness. The on
 
 #### Derivation
 
-The most literal reading of `getNewsFeed` is "collect the authors' tweets, put them in newest-first order, read off 10". `postTweet` appends each tweet to its author's timeline, so the timelines are chronological; stamping each entry with the global counter's value at posting time makes "newest" a plain numeric comparison on that stamp. The sort key is the stamp, never the `tweetId`: IDs carry no order, and sorting by ID would silently misorder the feed:
+The most literal reading of `getNewsFeed` is "collect the authors' tweets, then read off the ten newest". `postTweet` appends each tweet to its author's timeline, so the timelines are chronological; stamping each entry with the global counter's value at posting time makes "newest" a plain numeric comparison on that stamp. The comparison key is the stamp, never the `tweetId`: IDs carry no order, and ranking by ID would silently misorder the feed. The selection itself stays hand-rolled, acting the feed out emission by emission: scan for the largest stamp, take that tweet, remove it, and repeat:
 
 1. `__init__` keeps `tweets`, a map from `userId` to its chronological list of
    `(count, tweetId)` entries, `followees`, a map from follower to a set of
@@ -84,30 +88,34 @@ The most literal reading of `getNewsFeed` is "collect the authors' tweets, put t
 2. `postTweet` increments `count` and appends `(count, tweetId)` to
    `tweets[userId]`.
 3. `getNewsFeed` unions `followees[userId]` with `{userId}` into `authors`,
-   flattens every author's timeline into `candidates`, sorts `candidates`
-   descending, slices 10, and strips the stamps.
+   flattens every author's timeline into `candidates`, then runs `feed_size`
+   rounds: each round scans `candidates` for the largest stamp, tracking it in
+   `newest_index`, appends the winner's `tweetId` to `feed`, and pops the
+   winner from `candidates`.
 4. `follow` adds to the `followees` set, refusing a self-edge, and `unfollow`
    discards from it.
 
 #### Walkthrough
 
-Trace Example 1. Each entry shows the state after the call; `getNewsFeed` lines show the union into `authors`, the flattened `candidates`, the newest-first ordering, and the stamps stripped:
+Trace Example 1. Each entry shows the state after the call; `getNewsFeed` lines show the union into `authors`, the flattened `candidates`, the winner each round takes, and the feed it builds:
 
 ```text
 postTweet(1, 10)   tweets = {1: [(1, 10)]}
 postTweet(2, 20)   tweets = {1: [(1, 10)], 2: [(2, 20)]}
-getNewsFeed(1)     authors = [1]       candidates = [(1, 10)]          newest-first -> [(1, 10)]            feed = [10]
-getNewsFeed(2)     authors = [2]       candidates = [(2, 20)]          newest-first -> [(2, 20)]            feed = [20]
+getNewsFeed(1)     authors = [1]       candidates = [(1, 10)]          round 1 takes (1, 10)                         feed = [10]
+getNewsFeed(2)     authors = [2]       candidates = [(2, 20)]          round 1 takes (2, 20)                         feed = [20]
 follow(1, 2)       followees = {1: {2}}
-getNewsFeed(1)     authors = [1, 2]    candidates = [(1, 10), (2, 20)] newest-first -> [(2, 20), (1, 10)]   feed = [20, 10]
-getNewsFeed(2)     authors = [2]       candidates = [(2, 20)]          newest-first -> [(2, 20)]            feed = [20]
+getNewsFeed(1)     authors = [1, 2]    candidates = [(1, 10), (2, 20)] round 1 takes (2, 20), round 2 takes (1, 10)  feed = [20, 10]
+getNewsFeed(2)     authors = [2]       candidates = [(2, 20)]          round 1 takes (2, 20)                         feed = [20]
 unfollow(1, 2)     followees = {1: {}}
-getNewsFeed(1)     authors = [1]       candidates = [(1, 10)]          newest-first -> [(1, 10)]            feed = [10]
+getNewsFeed(1)     authors = [1]       candidates = [(1, 10)]          round 1 takes (1, 10)                         feed = [10]
 ```
 
-Each tweet entry is `(count, tweetId)`: tweet `10` was posted first and carries stamp `1`, tweet `20` carries stamp `2`. Before the follow, user `1`'s feed is its own tweet; after `follow(1, 2)` the union widens to `[1, 2]` and the sort puts stamp `2` (tweet `20`) first, producing the expected `[20, 10]`; `unfollow` narrows the union back and the feed returns to `[10]`, matching the expected Output.
+Each tweet entry is `(count, tweetId)`: tweet `10` was posted first and carries stamp `1`, tweet `20` carries stamp `2`. Before the follow, user `1`'s feed is its own tweet; after `follow(1, 2)` the union widens to `[1, 2]` and the round scans take stamp `2` (tweet `20`) first and stamp `1` (tweet `10`) second, producing the expected `[20, 10]`; `unfollow` narrows the union back and the feed returns to `[10]`, matching the expected Output.
 
 #### Solution
+
+The code is the flatten and the scan-take-remove rounds from the walkthrough.
 
 ```python
 from collections import defaultdict
@@ -128,8 +136,16 @@ class Twitter:
         feed_size = 10
         authors = self.followees[userId] | {userId}
         candidates = [tweet for author in authors for tweet in self.tweets[author]]
-        newest_first = sorted(candidates, reverse=True)[:feed_size]
-        return [tweetId for _, tweetId in newest_first]
+        feed: List[int] = []
+        for _ in range(feed_size):
+            if not candidates:
+                break
+            newest_index = 0
+            for index in range(1, len(candidates)):
+                if candidates[index][0] > candidates[newest_index][0]:
+                    newest_index = index
+            feed.append(candidates.pop(newest_index)[1])
+        return feed
 
     def follow(self, followerId: int, followeeId: int) -> None:
         if followerId != followeeId:
@@ -141,25 +157,25 @@ class Twitter:
 
 #### Time and Space Complexity Analysis
 
-##### Time Complexity: `O(C log C)` per `getNewsFeed`
+##### Time Complexity: `O(C)` per `getNewsFeed`
 
-Where `C` is the total number of tweets posted by the authors in the feed. The flatten touches all `C` candidates and the descending sort comparison-sorts them; `postTweet`, `follow`, and `unfollow` are `O(1)` average set and list operations.
+Where `C` is the total number of tweets posted by the authors in the feed. The flatten touches all `C` candidates once, and each of the ten rounds scans and pops within a pool of at most `C` entries, a constant number of linear passes; `postTweet`, `follow`, and `unfollow` are `O(1)` average set and list operations.
 
 ##### Space Complexity: `O(C)` per `getNewsFeed`
 
-`candidates` materializes every tweet of every followed author, regardless of how few survive the slice to 10.
+`candidates` materializes every tweet of every followed author, regardless of how few survive the ten rounds.
 
 #### Key Insights
 
 - The stamp counter, not the `tweetId`, defines recency; deriving order from IDs is the classic bug here because IDs only promise uniqueness.
-- Every feed pays to reorder the authors' whole histories, although each author's timeline is already sorted by construction.
-- The later solutions stop paying for the sort in three ways: two merge the per-author sorted lists directly, and the last swaps the full sort for a bounded top-10 selection.
+- Every feed pays to look at the authors' whole histories, although each author's timeline is already sorted by construction.
+- Taking the winners one at a time needs no ordering of the losers, but every round re-scans a pool that shrank by only one; the later solutions attack that pool two ways: the next two never materialize it, and the last two hand the ordering or the bounded selection to the standard library.
 
 ### Repeated Maximum Scan
 
 #### Derivation
 
-The brute force sorts together what is already ordered per author. Since each timeline is stamp-ordered, the newest tweet not yet fed is always at some author's cursor head, so the feed can be produced by ten rounds of one question: "which author's cursor holds the newest stamp?" Each round answers it with a linear scan over the cursors, emits the winner, and retreats that one cursor. No candidate list is ever materialized:
+The brute force flattens every candidate into one pool and re-scans that pool for every emission. But each timeline is stamp-ordered, so the newest tweet not yet fed is always at some author's cursor head, and the pool never needs to exist: the feed can be produced by ten rounds of one question, "which author's cursor holds the newest stamp?" Each round answers it with a linear scan over the cursors, emits the winner, and retreats that one cursor:
 
 1. Build `cursors`, one entry per author, pointing at each timeline's last index
    (its newest tweet); an empty timeline starts at `-1`, already exhausted.
@@ -348,6 +364,84 @@ The heap holds at most one entry per author, regardless of how long each author'
 - The heap stays at `A` entries no matter how long the histories are, and at most 10 pops happen per feed.
 - Against the scan, the win is the per-emission cost: `O(log A)` replacement instead of an `O(A)` re-scan, while both share the `O(A)` setup.
 
+### Flatten and Sort
+
+#### Derivation
+
+The approaches above produced the newest-first order themselves, stamp by stamp. Once `candidates` exists, that ordering is exactly what the language's sort provides: `sorted(candidates, reverse=True)` ranks the entries by descending stamp in one call, and the first ten are the feed. This approach delegates the ranking instead of running rounds by hand, trading the brute force's ten per-emission passes for one full comparison sort:
+
+1. Build `candidates` exactly as the brute force does.
+2. `sorted(candidates, reverse=True)` puts the newest stamp first.
+3. Slice the first ten, strip the stamps, and return the IDs.
+
+#### Walkthrough
+
+Trace Example 1. Each entry shows the state after the call; `getNewsFeed` lines show the union into `authors`, the flattened `candidates`, the newest-first ordering, and the stamps stripped:
+
+```text
+postTweet(1, 10)   tweets = {1: [(1, 10)]}
+postTweet(2, 20)   tweets = {1: [(1, 10)], 2: [(2, 20)]}
+getNewsFeed(1)     authors = [1]       candidates = [(1, 10)]          newest-first -> [(1, 10)]            feed = [10]
+getNewsFeed(2)     authors = [2]       candidates = [(2, 20)]          newest-first -> [(2, 20)]            feed = [20]
+follow(1, 2)       followees = {1: {2}}
+getNewsFeed(1)     authors = [1, 2]    candidates = [(1, 10), (2, 20)] newest-first -> [(2, 20), (1, 10)]   feed = [20, 10]
+getNewsFeed(2)     authors = [2]       candidates = [(2, 20)]          newest-first -> [(2, 20)]            feed = [20]
+unfollow(1, 2)     followees = {1: {}}
+getNewsFeed(1)     authors = [1]       candidates = [(1, 10)]          newest-first -> [(1, 10)]            feed = [10]
+```
+
+Each tweet entry is `(count, tweetId)`: tweet `10` was posted first and carries stamp `1`, tweet `20` carries stamp `2`. Before the follow, user `1`'s feed is its own tweet; after `follow(1, 2)` the union widens to `[1, 2]` and the sort puts stamp `2` (tweet `20`) first, producing the expected `[20, 10]`; `unfollow` narrows the union back and the feed returns to `[10]`, matching the expected Output.
+
+#### Solution
+
+The code is the flatten and the delegated ranking from the walkthrough.
+
+```python
+from collections import defaultdict
+from typing import List
+
+
+class Twitter:
+    def __init__(self) -> None:
+        self.tweets: dict[int, list[tuple[int, int]]] = defaultdict(list)
+        self.followees: dict[int, set[int]] = defaultdict(set)
+        self.count = 0
+
+    def postTweet(self, userId: int, tweetId: int) -> None:
+        self.count += 1
+        self.tweets[userId].append((self.count, tweetId))
+
+    def getNewsFeed(self, userId: int) -> List[int]:
+        feed_size = 10
+        authors = self.followees[userId] | {userId}
+        candidates = [tweet for author in authors for tweet in self.tweets[author]]
+        newest_first = sorted(candidates, reverse=True)[:feed_size]
+        return [tweetId for _, tweetId in newest_first]
+
+    def follow(self, followerId: int, followeeId: int) -> None:
+        if followerId != followeeId:
+            self.followees[followerId].add(followeeId)
+
+    def unfollow(self, followerId: int, followeeId: int) -> None:
+        self.followees[followerId].discard(followeeId)
+```
+
+#### Time and Space Complexity Analysis
+
+##### Time Complexity: `O(C log C)` per `getNewsFeed`
+
+Where `C` is the total number of tweets posted by the authors in the feed. The flatten touches all `C` candidates and the descending sort comparison-sorts all of them, although only ten survive the slice.
+
+##### Space Complexity: `O(C)` per `getNewsFeed`
+
+`candidates` materializes every tweet of every followed author, and the sorted copy holds the entries again.
+
+#### Key Insights
+
+- The delegation is shorthand, not a new mechanism: the stamp discipline and the newest-first ranking were already derived by hand in the approaches above.
+- Sorting all `C` candidates orders entries the slice never reads, the waste a bounded selection avoids.
+- The sorted call is what `heapq.nlargest` below improves on: same result, working set capped at ten.
+
 ### Bounded Heap Selection
 
 #### Derivation
@@ -421,7 +515,7 @@ Where `C` is the total number of tweets posted by the authors in the feed. The f
 
 #### Key Insights
 
-- `heapq.nlargest(k, xs)` matches `sorted(xs, reverse=True)[:k]` in result but keeps its working set at `k` entries, evicting through a conditional root replacement instead of re-sorting.
+- `heapq.nlargest(k, xs)` matches the Flatten and Sort approach above in result but keeps its working set at `k` entries, evicting through a conditional root replacement instead of re-sorting.
 - The `C`-sized flatten is the remaining waste; avoiding it requires walking the per-author timelines, which is what the merge solution does.
 - The internal evictions remove exactly the tweets that fall out of the newest 10, the same bookkeeping the merge's capped heap performs, handed to the library.
 
@@ -431,30 +525,34 @@ Where `C` is the total number of tweets posted by the authors in the feed. The f
 
 ### Time Complexity
 
-- **Brute Force**: `O(C log C)` - flattens all `C` candidates and comparison-sorts them on every feed.
+- **Brute Force**: `O(C)` - flatten plus ten scan-and-remove rounds over the candidate pool.
 - **Repeated Maximum Scan**: `O(A)` - at most ten linear passes over the `A` cursors.
 - **Min-Heap K-Way Merge**: `O(A + 10 log A)` - `O(A)` to heapify one head per author, then at most ten `O(log A)` pops.
+- **Flatten and Sort**: `O(C log C)` - flatten plus a full descending sort of all `C` candidates.
 - **Bounded Heap Selection**: `O(C)` - linear flatten plus a sweep whose heap work is constant per candidate.
 
 ### Space Complexity
 
-- **Brute Force**: `O(C)` - the full candidate list.
+- **Brute Force**: `O(C)` - the full candidate pool.
 - **Repeated Maximum Scan**: `O(A)` - one cursor per author.
 - **Min-Heap K-Way Merge**: `O(A)` - one heap entry per author.
+- **Flatten and Sort**: `O(C)` - the candidate list plus the sorted copy.
 - **Bounded Heap Selection**: `O(C)` - the full candidate list, plus a selection heap capped at 10.
 
 ### Trade-offs
 
-- **Brute Force**: The least code and the easiest to trust, but it re-orders the authors' entire histories on every single feed.
+- **Brute Force**: Needs nothing beyond scans and a list, but every emission re-scans a pool holding the authors' entire histories.
 - **Repeated Maximum Scan**: Never materializes candidates, so history length is irrelevant, but each emission re-scans every author.
 - **Min-Heap K-Way Merge**: The scan's mechanism with the argmax handed to a heap; a little more machinery (negated counts, timeline indices) buys `O(log A)` emissions and the standard shape that scales with the feed cap.
+- **Flatten and Sort**: The shortest statement of the flatten reading, but it orders every candidate when only ten survive.
 - **Bounded Heap Selection**: The shortest capped implementation, but it flattens all `C` candidates to hand them to the library.
 
 ### When to Use Each
 
-- **Brute Force**: A first working version while the API settles, or feeds so small the sort is irrelevant.
+- **Brute Force**: A first working version while the API settles, or feeds so small the pool is irrelevant.
 - **Repeated Maximum Scan**: When avoiding any candidate buffer matters and author counts stay modest.
 - **Min-Heap K-Way Merge** (recommended): The default; per-author histories stay unmaterialized and each of the ten emissions costs `O(log A)` instead of a fresh scan.
+- **Flatten and Sort**: When the candidates are at hand anyway and a one-line ordering reads clearer than selection rounds.
 - **Bounded Heap Selection**: When the candidate set is known to be small anyway, or when brevity beats the buffer.
 
 ### Optimization Notes

@@ -8,11 +8,21 @@ Design an algorithm to encode **a list of strings** to **a string**. The **encod
   uv run pytest leetcode/encode_and_decode_strings/              # run the test sets
 """
 
-from harness import NotSolved, pick_case
+from typing import List
+
+from harness import NotSolved, pick_case, run_operations
 
 
 class Solution:
-    def solve(self, *args):
+    def encode(self, strs: List[str]) -> str:
+        """State the time and space complexity of your approach, and explain why.
+
+        Time:  O(?):
+        Space: O(?):
+        """
+        raise NotSolved
+
+    def decode(self, s: str) -> List[str]:
         """State the time and space complexity of your approach, and explain why.
 
         Time:  O(?):
@@ -22,11 +32,15 @@ class Solution:
 
 
 if __name__ == "__main__":
-    # Debug playground: set a breakpoint in solve above, then run this file.
-    # Pick a case by id (ids are in cases.json).
+    # Debug playground: set a breakpoint in a Solution method, then run this file.
+    # Pick a case by id (ids are in cases.json / cases_full.json).
     CASE = "encode_empty_list"
     case = pick_case(__file__, CASE)
-    result = Solution().solve(*case["args"])
-    print(f"case {case['id']}: args = {case['args']}")
-    print(f"expected: {case['expected']}")
-    print(f"got:      {result}")
+    print(f"case {case['id']}: operations = {case['operations']}")
+    print(f"arguments: {case['arguments']}")
+    print(f"expected:  {case['expected']}")
+    try:
+        result = run_operations(Solution, case["operations"], case["arguments"])
+        print(f"got:       {result}")
+    except NotSolved:
+        print("got:       implement Solution's methods first")
