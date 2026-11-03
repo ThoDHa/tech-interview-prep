@@ -317,4 +317,4 @@ One position per row, reused.
 - **Staircase Search from the Top-Right Corner** is the recommended choice: at the statement's bounds (`m, n <= 300`) it is at most 599 comparisons against up to 90000 for the scan.
 - Values span the full `[-10^9, 10^9]` range and duplicates are allowed; no comparison in the walk depends on distinctness or on fits beyond the platform integer.
 - The matrix is rectangular by the statement, so `len(matrix[0])` is a valid column bound; a ragged input would need per-row widths and would break the region-elimination argument.
-- The row-major-sorted variant of this problem (LeetCode 74) admits a single flat binary search in `O(log(m * n))`; this statement's weaker guarantee is exactly what rules that out and makes the staircase the fast lane.
+- The row-major-sorted variant of this problem, [Search a 2D Matrix](../leetcode/search_a_2d_matrix.md), admits a single flat binary search in `O(log(m * n))`; this statement's weaker guarantee (rows and columns sorted independently, rows not concatenated) is exactly what rules that out and makes the staircase the fast lane.
