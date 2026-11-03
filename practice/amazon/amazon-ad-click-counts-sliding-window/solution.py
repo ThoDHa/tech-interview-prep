@@ -8,11 +8,23 @@ You receive a finite sequence of advertisement click and count operations. Each 
   uv run pytest amazon/amazon-ad-click-counts-sliding-window/              # run the test sets
 """
 
-from harness import NotSolved, pick_case
+from harness import NotSolved, pick_case, run_operations
 
 
-class Solution:
-    def countRecentAdClicks(self, operations, kMinutes):
+class AdClickCounter:
+    def __init__(self, k_minutes: int) -> None:
+        # Initialize empty state here; methods below raise until implemented.
+        pass
+
+    def click(self, ad_id: str, timestamp: int) -> None:
+        """State the time and space complexity of your approach, and explain why.
+
+        Time:  O(?):
+        Space: O(?):
+        """
+        raise NotSolved
+
+    def count(self, ad_id: str, timestamp: int) -> int:
         """State the time and space complexity of your approach, and explain why.
 
         Time:  O(?):
@@ -22,11 +34,15 @@ class Solution:
 
 
 if __name__ == "__main__":
-    # Debug playground: set a breakpoint in countRecentAdClicks above, then run this file.
-    # Pick a case by id (ids are in cases.json).
+    # Debug playground: set a breakpoint in an AdClickCounter method, then run this file.
+    # Pick a case by id (ids are in cases.json / cases_full.json).
     CASE = "example_1"
     case = pick_case(__file__, CASE)
-    result = Solution().countRecentAdClicks(*case["args"])
-    print(f"case {case['id']}: args = {case['args']}")
-    print(f"expected: {case['expected']}")
-    print(f"got:      {result}")
+    print(f"case {case['id']}: operations = {case['operations']}")
+    print(f"arguments: {case['arguments']}")
+    print(f"expected:  {case['expected']}")
+    try:
+        result = run_operations(AdClickCounter, case["operations"], case["arguments"])
+        print(f"got:       {result}")
+    except NotSolved:
+        print("got:       implement AdClickCounter's methods first")
