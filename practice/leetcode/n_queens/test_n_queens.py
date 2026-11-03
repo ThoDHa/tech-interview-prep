@@ -1,6 +1,10 @@
 """Tests for N Queens: your attempt (solution.py) against both case sets.
 
 The worked approaches live in ../../../docs/leetcode/n_queens.md.
+
+Boards may be returned in any order, so both sides are compared as a
+sorted multiset of row tuples; a solution that duplicates or drops a
+board fails the multiset, while row order inside a board stays exact.
 """
 
 import pytest
@@ -18,8 +22,11 @@ def _ids(cases):
 
 
 def _check(method, case):
-    # Solution boards may be returned in any order; each board's rows are significant.
-    assert set(map(tuple, method(*case["args"]))) == set(map(tuple, case["expected"]))
+    # Board order is free; each board's rows are significant and the board
+    # multiset is not, so a duplicated or missing board must fail.
+    assert sorted(map(tuple, method(*case["args"]))) == sorted(
+        map(tuple, case["expected"])
+    )
 
 
 @pytest.mark.simple
