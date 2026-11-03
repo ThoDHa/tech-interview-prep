@@ -22,8 +22,7 @@ def _ids(cases):
 
 
 def _check(method, case):
-    # Board order is free; each board's rows are significant and the board
-    # multiset is not, so a duplicated or missing board must fail.
+    # Solution boards may be returned in any order; each board's rows are significant.
     assert sorted(map(tuple, method(*case["args"]))) == sorted(
         map(tuple, case["expected"])
     )

@@ -26,8 +26,7 @@ def _canonical(groups):
 
 
 def _check(method, case):
-    # Group order and word order within a group are both arbitrary; the group
-    # multiset is not, so a duplicated or missing group must fail.
+    # Group order and word order within a group are both arbitrary.
     assert _canonical(method(*case["args"])) == _canonical(case["expected"])
 
 

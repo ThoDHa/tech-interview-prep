@@ -38,8 +38,7 @@ def _returned_frequencies(method, case):
 
 
 def _check(method, case):
-    # Ties make any element with the top-slot frequency multiset legal, so
-    # compare slot count, distinctness, and the sorted frequency multiset.
+    # Elements tied in frequency may be returned in any order.
     frequencies = _frequencies(case["args"][0])
     assert _returned_frequencies(method, case) == sorted(
         frequencies[number] for number in case["expected"]
