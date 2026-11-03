@@ -80,7 +80,11 @@ all three after touching a generator, its data sources, or generated output.
   leaves its stub, `cases.json`, and test module untouched, and `--check`
   pins only that those three files exist. A refresh whose live parse meets
   such a folder anyway still overwrites it, and the run log names the slug
-  under `practice cases conflicted`. For every remaining folder, the
+  under `practice cases conflicted`. A committed `parsed-with-cases` slug
+  whose live parse yields no problem and no cases keeps its practice files
+  and classification untouched, and the run log names it under `transient
+  parse guard` so a transient failure or a genuinely dead page surfaces
+  for a manual decision. For every remaining folder, the
   generator pins the `# [Title](url)` header line byte-exact on the
   write-up and fragment-pins the leading docstring lines of `solution.py`
   and `test_<slug>.py` under `practice/amazon/<slug>/`.
