@@ -1,1 +1,103 @@
-[]
+[
+  {
+    "id": "example_1",
+    "operations": [
+      "WordDictionary",
+      "insert",
+      "insert",
+      "insert",
+      "find",
+      "find",
+      "find",
+      "find"
+    ],
+    "arguments": [
+      [],
+      [
+        "cat"
+      ],
+      [
+        "car"
+      ],
+      [
+        "cart"
+      ],
+      [
+        "ca."
+      ],
+      [
+        "c..t"
+      ],
+      [
+        "ca"
+      ],
+      [
+        "d.."
+      ]
+    ],
+    "expected": [
+      null,
+      null,
+      null,
+      null,
+      true,
+      true,
+      false,
+      false
+    ]
+  },
+  {
+    "id": "find_before_any_insert",
+    "operations": [
+      "WordDictionary",
+      "find"
+    ],
+    "arguments": [
+      [],
+      [
+        "x"
+      ]
+    ],
+    "expected": [
+      null,
+      false
+    ]
+  },
+  {
+    "id": "wildcard_single_position",
+    "operations": [
+      "WordDictionary",
+      "insert",
+      "insert",
+      "find",
+      "find",
+      "find"
+    ],
+    "arguments": [
+      [],
+      [
+        "cat"
+      ],
+      [
+        "car"
+      ],
+      [
+        "ca."
+      ],
+      [
+        "c.t"
+      ],
+      [
+        ".at"
+      ]
+    ],
+    "expected": [
+      null,
+      null,
+      null,
+      true,
+      true,
+      true
+    ]
+  }
+]
