@@ -263,6 +263,49 @@ def test_build_manifest_aborts_when_writeup_missing_but_practice_scaffolds_exist
         gen.build_manifest([page])
 
 
+def test_load_committed_manifest_aborts_naming_a_slug_missing_parse_status(tmp_path):
+    """A committed manifest entry without parse_status aborts, naming it.
+
+    The committed manifest classifies every slug, and an entry missing
+    `parse_status` would silently flip the authored-protection predicates
+    that read it; the load refuses the manifest and names the offending
+    slug instead.
+    """
+    manifest_path = tmp_path / "amazon_oa_manifest.json"
+    entries = [
+        {"slug": "amazon-intact", "title": "Intact", "url": "https://x/intact", "parse_status": "parsed-with-cases"},
+        {"slug": "amazon-hollow", "title": "Hollow", "url": "https://x/hollow", "parse_status": "parsed-with-cases"},
+    ]
+    del entries[1]["parse_status"]
+    manifest_path.write_text(json.dumps(entries, indent=2) + "\n", encoding="utf-8")
+
+    with pytest.raises(SystemExit, match="amazon-hollow"):
+        gen.load_committed_manifest(manifest_path)
+
+
+def test_load_committed_manifest_aborts_naming_the_index_when_the_slug_is_missing(tmp_path):
+    """An entry without a slug is named by index, its only identity left."""
+    manifest_path = tmp_path / "amazon_oa_manifest.json"
+    entries = [
+        {"slug": "amazon-intact", "title": "Intact", "url": "https://x/intact", "parse_status": "parsed-empty-cases"},
+        {"title": "Headless", "url": "https://x/headless", "parse_status": "page-unparseable"},
+    ]
+    manifest_path.write_text(json.dumps(entries, indent=2) + "\n", encoding="utf-8")
+
+    with pytest.raises(SystemExit, match=r"entry #1 is missing slug"):
+        gen.load_committed_manifest(manifest_path)
+
+
+def test_load_committed_manifest_accepts_the_committed_manifest():
+    """The committed manifest passes the per-entry validation intact."""
+    entries = gen.load_committed_manifest()
+
+    assert entries
+    assert all(
+        {"slug", "title", "url", "parse_status"} <= set(entry) for entry in entries
+    )
+
+
 @pytest.mark.skipif(
     not all(path.exists() for path in REAL_BANK_PAGES),
     reason="cached bank pages not present (offline fixture-only run)",
@@ -1591,7 +1634,10 @@ def test_main_check_mode_does_not_rewrite_manifest(tmp_path, monkeypatch, seeded
     )
 
     manifest_path = tmp_path / "manifest.json"
-    manifest_path.write_text('[{"slug": "amazon-x", "parse_status": "parsed-with-cases"}]', encoding="utf-8")
+    manifest_path.write_text(
+        '[{"slug": "amazon-x", "title": "X", "url": "https://x", "parse_status": "parsed-with-cases"}]',
+        encoding="utf-8",
+    )
     monkeypatch.setattr(gen, "MANIFEST_PATH", manifest_path)
     monkeypatch.setattr(gen, "check", lambda manifest: 0)
     writes = []

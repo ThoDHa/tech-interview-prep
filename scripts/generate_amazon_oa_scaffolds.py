@@ -253,12 +253,17 @@ def build_manifest(page_texts: Sequence[str]) -> List[dict]:
     return enriched
 
 
+COMMITTED_ENTRY_REQUIRED_KEYS = ("slug", "title", "url", "parse_status")
+
+
 def load_committed_manifest(path: Path = MANIFEST_PATH) -> List[dict]:
     """Load the committed manifest, the offline source of truth.
 
     The bank pages under /tmp are recon scratch, absent on any fresh clone;
     every generation mode must be able to run from the committed manifest
-    alone.
+    alone. Every entry must carry the identity and classification keys
+    the emission, check, and seed paths read directly: an entry missing
+    `parse_status` would silently flip the authored-protection predicates.
 
     Args:
         path: Path to the manifest JSON (default: scripts/amazon_oa_manifest.json).
@@ -268,7 +273,9 @@ def load_committed_manifest(path: Path = MANIFEST_PATH) -> List[dict]:
         `parse_status`.
 
     Raises:
-        SystemExit: When the manifest file is missing or is not valid JSON.
+        SystemExit: When the manifest file is missing, is not valid JSON,
+            is not a JSON list, or an entry is not a JSON object or lacks
+            one of slug, title, url, or parse_status.
     """
     try:
         entries = json.loads(path.read_text(encoding="utf-8"))
@@ -278,6 +285,15 @@ def load_committed_manifest(path: Path = MANIFEST_PATH) -> List[dict]:
         raise SystemExit(f"committed manifest {path} is not valid JSON: {error}")
     if not isinstance(entries, list):
         raise SystemExit(f"committed manifest {path} must be a JSON list")
+    for index, entry in enumerate(entries):
+        if not isinstance(entry, dict):
+            raise SystemExit(f"committed manifest {path} entry #{index} must be a JSON object")
+        missing_keys = [key for key in COMMITTED_ENTRY_REQUIRED_KEYS if key not in entry]
+        if missing_keys:
+            named = f"'{entry['slug']}'" if "slug" in entry else f"#{index}"
+            raise SystemExit(
+                f"committed manifest {path} entry {named} is missing {', '.join(missing_keys)}"
+            )
     return entries
 
 
