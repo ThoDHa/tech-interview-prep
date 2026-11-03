@@ -133,18 +133,7 @@ The repeated scan re-finds each winner from scratch: `k` rounds cost `k * m` com
 
 #### Walkthrough
 
-Trace both stages on Example 1: `nums = [1,2,2,3,3,3]`, `k = 2`. The counting pass tallies one value at a time:
-
-```text
-value 1   counts = {1: 1}
-value 2   counts = {1: 1, 2: 1}
-value 2   counts = {1: 1, 2: 2}
-value 3   counts = {1: 1, 2: 2, 3: 1}
-value 3   counts = {1: 1, 2: 2, 3: 2}
-value 3   counts = {1: 1, 2: 2, 3: 3}
-```
-
-Sorting the distinct values by descending frequency orders them `[3, 2, 1]` (frequencies `3, 2, 1`), and the slice `[3, 2][:2]` returns `[3, 2]`. The expected Output lists `[2, 3]`; the two differ only by the allowed reordering, since any order of the `k` winners is accepted.
+Trace the ranking on Example 1: `nums = [1,2,2,3,3,3]`, `k = 2`, where the counting pass traced above has left `counts = {1: 1, 2: 2, 3: 3}`. Sorting the distinct values by descending frequency orders them `[3, 2, 1]` (frequencies `3, 2, 1`), and the slice `[3, 2][:2]` returns `[3, 2]`. The expected Output lists `[2, 3]`; the two differ only by the allowed reordering, since any order of the `k` winners is accepted.
 
 #### Solution
 
