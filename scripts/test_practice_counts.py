@@ -8,21 +8,16 @@ cases-only Amazon folder count (363 of 410), the reference-test Amazon
 folder count (47 of 410), and the fresh-clone skip floor
 (over 3,100). This guard re-counts the tree and fails on drift: a wave
 landing that adds or removes problems, write-ups, or case files must update
-the quoted counts in the same change. Rewording a quoted sentence also fails
-the guard on purpose, so the new wording and these regexes are updated
-together. Run with:
-the write-up wave progress (183 of 410), the compiled PDF page count (578 =
-168 + 410), the workspace reference-file counts (91 of 168, 47 of 410), the
-cases-only Amazon folder count (363 of 410), the reference-test Amazon
-folder count (47 of 410), and the fresh-clone skip floor (over 3,100).
-This guard re-counts the tree and fails on drift: a wave landing that adds
-or removes problems, write-ups, or case files must update the quoted counts
-in the same change. The skip floor is proven twice: the collected total is
-the cheap first gate, and a static recount of the skip items on the stub
-tree (per-case items in folders whose solution still raises NotSolved plus
-firing module-level skips) is the honest proof that the floor sits below
-the actual skips. Rewording a quoted sentence also fails the guard on
-purpose, so the new wording and these regexes are updated together. Run with:
+the quoted counts in the same change. The skip floor is proven twice: the
+collected total is the cheap first gate, and a static recount of the skip
+items on the stub tree (per-case items in folders whose solution still
+raises NotSolved plus firing module-level skips) proves the floor sits
+below the stub skip population. Constructor-only cases of a counted stub
+(an implemented `__init__` per the design-class exemplar) pass a run while
+the recount still counts them, so the recount bounds the run's skips from
+above and the collected-total gate carries the lower-bound proof.
+Rewording a quoted sentence also fails the guard on purpose, so the new
+wording and these regexes are updated together. Run with:
 
     cd practice && uv run pytest ../scripts/
 """
@@ -475,10 +470,12 @@ def workspace_skip_recount() -> int:
     of every folder whose solution entry points still raise NotSolved
     (design-class methods included), plus one item per test module whose
     module-level skip fires. Item counts come from a single collection
-    pass, so nothing executes. Unrecognized skip shapes resolve to zero,
-    keeping the recount a lower bound of a fresh-clone run's skips; it is
-    exact while every counted stub is untouched, so the quoted floor must
-    sit below it.
+    pass, so nothing executes. Unrecognized skip shapes resolve to zero.
+    Constructor-only cases of a counted stub (an implemented `__init__`
+    per the design-class exemplar) pass a run while the recount still
+    counts them, so the recount bounds a fresh-clone run's skips from
+    above by exactly those items; the collected-total gate keeps the
+    floor's lower-bound proof.
 
     Returns:
         The static count of skip items on the committed tree.
