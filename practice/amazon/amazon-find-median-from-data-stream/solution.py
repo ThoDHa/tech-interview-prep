@@ -8,11 +8,23 @@ Process a finite sequence of operations while maintaining every integer added so
   uv run pytest amazon/amazon-find-median-from-data-stream/              # run the test sets
 """
 
-from harness import NotSolved, pick_case
+from harness import NotSolved, pick_case, run_operations
 
 
-class Solution:
-    def processMedianOperations(self, operations):
+class MedianFinder:
+    def __init__(self) -> None:
+        # Initialize empty state here; methods below raise until implemented.
+        pass
+
+    def add(self, num: int) -> None:
+        """State the time and space complexity of your approach, and explain why.
+
+        Time:  O(?):
+        Space: O(?):
+        """
+        raise NotSolved
+
+    def median(self) -> float:
         """State the time and space complexity of your approach, and explain why.
 
         Time:  O(?):
@@ -22,11 +34,15 @@ class Solution:
 
 
 if __name__ == "__main__":
-    # Debug playground: set a breakpoint in processMedianOperations above, then run this file.
-    # Pick a case by id (ids are in cases.json).
+    # Debug playground: set a breakpoint in a MedianFinder method, then run this file.
+    # Pick a case by id (ids are in cases.json / cases_full.json).
     CASE = "example_1"
     case = pick_case(__file__, CASE)
-    result = Solution().processMedianOperations(*case["args"])
-    print(f"case {case['id']}: args = {case['args']}")
-    print(f"expected: {case['expected']}")
-    print(f"got:      {result}")
+    print(f"case {case['id']}: operations = {case['operations']}")
+    print(f"arguments: {case['arguments']}")
+    print(f"expected:  {case['expected']}")
+    try:
+        result = run_operations(MedianFinder, case["operations"], case["arguments"])
+        print(f"got:       {result}")
+    except NotSolved:
+        print("got:       implement MedianFinder's methods first")
