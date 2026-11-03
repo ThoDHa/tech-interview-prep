@@ -1216,6 +1216,47 @@ def test_check_stays_green_for_a_death_preserved_writeup(tmp_path, monkeypatch):
     assert gen.check([entry]) == 0
 
 
+def test_check_stays_green_for_a_death_preserved_writeup_with_a_carried_section(tmp_path, monkeypatch):
+    """The check stays green when a dead page carries a committed section.
+
+    The union appends a committed-only section after the Solutions block,
+    and the required Solutions-tail fragment remains a substring of the
+    carried file, so the carried archive never flags the write-up stale;
+    drift in the pinned Solutions block still fails.
+    """
+    redirect_check_paths(tmp_path, monkeypatch)
+    entry = dict(UNPARSEABLE_ENTRY)
+    fresh = gen.render_writeup(entry, None, "")
+    committed_only_section = "## Archived round trace\n\nHand-added trace table.\n\n"
+    committed = (
+        fresh.replace(
+            "<!-- Statement not parseable from FastPrep; fill it in. -->",
+            "Archived statement surviving the page death.",
+            1,
+        ).rstrip()
+        + "\n\n"
+        + committed_only_section
+    )
+    write_scaffold_set(tmp_path, entry)
+    (gen.DOCS_DIR / "amazon-gone.md").write_text(committed, encoding="utf-8")
+    (gen.DOCS_DIR / "index.md").write_text(gen.render_index([entry]), encoding="utf-8")
+
+    assert gen.check([entry]) == 0
+
+    tampered_solutions = committed.replace(
+        f"{gen.WRITEUP_PLACEHOLDER_MARKER} the worked derivation and write-up land",
+        f"{gen.WRITEUP_PLACEHOLDER_MARKER} drifted scaffold text",
+        1,
+    )
+    assert gen.WRITEUP_PLACEHOLDER_MARKER in tampered_solutions
+    (gen.DOCS_DIR / "amazon-gone.md").write_text(tampered_solutions, encoding="utf-8")
+    assert gen.check([entry]) == 1
+
+    dropped_section = committed.replace(committed_only_section, "", 1)
+    (gen.DOCS_DIR / "amazon-gone.md").write_text(dropped_section, encoding="utf-8")
+    assert gen.check([entry]) == 0
+
+
 def test_check_pins_an_authored_dead_page_writeups_title_line(tmp_path, monkeypatch):
     """A fully authored write-up on a dead page is pinned on its title line.
 
