@@ -38,7 +38,7 @@ You may return the output in **any order**.
 
 Selection by frequency decomposes into two stages that can be optimized separately: tally how often each value occurs, then choose the `k` highest tallies. Every solution below counts in one linear pass and differs only in how the second stage selects the winners.
 
-1. **Start literal.** Take the winners one at a time: each of the `k` rounds scans every remaining count for the highest and deletes its value, costing `O(n + k * m)` for `m` distinct values: see [Repeated Max Scan](#repeated-max-scan).
+1. **Start literal.** Take the winners one at a time: each of the `k` rounds scans every remaining count for the highest and deletes its value, costing `O(n + k * m)` for `m` distinct values: see [Repeated Maximum Scan](#repeated-maximum-scan).
 2. **Order once instead of rescanning.** Re-finding every winner from scratch is the scan's waste; one descending ranking of the `m` distinct values answers all `k` rounds, with the ranking handed to the language's sort at `O(m log m)`: see [Count and Sort](#count-and-sort).
 3. **Keep only the winners.** A min-heap of size `k` holds the current top `k` as values stream past: a value beats the heap's minimum or is discarded. Each of the `m` values costs one bounded `O(log k)` push or pop: see [Min-Heap of Size K](#min-heap-of-size-k).
 4. **Exploit the frequency bound.** A value's frequency can never exceed `n`, so the distinct values drop into `n + 1` frequency slots and reading the slots from high to low collects the winners in plain linear time, `O(n)`: see [Bucket Sort](#bucket-sort).
@@ -46,7 +46,7 @@ Selection by frequency decomposes into two stages that can be optimized separate
 
 ## Solutions
 
-### Repeated Max Scan
+### Repeated Maximum Scan
 
 #### Derivation
 
@@ -358,7 +358,7 @@ The counter and the returned list hold `O(m)` entries.
 
 ### Time Complexity
 
-- **Repeated Max Scan**: `O(n + k * m)` - `k` rounds, each a full scan of the surviving counts.
+- **Repeated Maximum Scan**: `O(n + k * m)` - `k` rounds, each a full scan of the surviving counts.
 - **Count and Sort**: `O(n log n)` - sorting all `m` distinct values dominates.
 - **Min-Heap of Size K**: `O(n log k)` - one bounded push-pop per distinct value.
 - **Bucket Sort**: `O(n)` - counting, filing, and scanning, with no comparisons.
@@ -366,7 +366,7 @@ The counter and the returned list hold `O(m)` entries.
 
 ### Space Complexity
 
-- **Repeated Max Scan**: `O(n)` - the count map plus the `k` winners.
+- **Repeated Maximum Scan**: `O(n)` - the count map plus the `k` winners.
 - **Count and Sort**: `O(n)` - count map plus sorted distinct list.
 - **Min-Heap of Size K**: `O(n)` - count map plus a heap capped at `k`.
 - **Bucket Sort**: `O(n)` - count map plus `n + 1` frequency slots.
@@ -374,7 +374,7 @@ The counter and the returned list hold `O(m)` entries.
 
 ### Trade-offs
 
-- **Repeated Max Scan** needs nothing beyond scans and a dictionary, but every winner costs a full pass over the surviving counts.
+- **Repeated Maximum Scan** needs nothing beyond scans and a dictionary, but every winner costs a full pass over the surviving counts.
 - **Count and Sort** is the clearest to write and verify, but pays for ordering values nobody asked about.
 - **Min-Heap of Size K** bounds its extra structure at `k`, which shines when `k` is small next to `n`.
 - **Bucket Sort** is asymptotically optimal and comparison-free, at the price of an `n + 1` slot array even when only a few frequencies occur.
@@ -382,7 +382,7 @@ The counter and the returned list hold `O(m)` entries.
 
 ### When to Use Each
 
-- **Repeated Max Scan**: tiny `k` over large distinct sets, or as the hand-rolled warm-up before any ordering machinery.
+- **Repeated Maximum Scan**: tiny `k` over large distinct sets, or as the hand-rolled warm-up before any ordering machinery.
 - **Count and Sort**: quick scripts, small inputs, or when the full descending ranking is wanted anyway and `k` is not far below `m`.
 - **Min-Heap of Size K**: streaming or huge inputs where `k` is small and candidates should be inspected once.
 - **Bucket Sort**: the optimal answer over in-memory integer arrays (recommended here).

@@ -42,7 +42,7 @@ Return the shortest distance from source to every vertex in vertex order. Return
 
 ## Deriving the Solution
 
-Nonnegative weights buy the one property everything else builds on: settling vertices in increasing distance order is safe, because any path leaving the settled frontier can only get more expensive. The task then reduces to "hand me the not-yet-settled vertex with the smallest tentative distance, fast", and the two solutions below differ only in how literally they answer that request.
+Nonnegative weights buy the one property everything else builds on: settling vertices in increasing distance order is safe, because any path leaving the settled frontier can only get more expensive. [Network Delay Time](../leetcode/network_delay_time.md) shares the nonnegative weights and the Dijkstra core, then answers a different question: it collapses the distances into one number, the moment the last node on a directed graph receives the signal, where this statement returns every vertex's distance in order on an undirected graph. The task then reduces to "hand me the not-yet-settled vertex with the smallest tentative distance, fast", and the two solutions below differ only in how literally they answer that request.
 
 1. **Start literal.** Relax every edge over and over; a pass that changes nothing means every shortest distance has settled: correct, `O(V * E)`: see [Bellman-Ford Relaxation](#bellman-ford-relaxation).
 2. **Spot the waste.** A full sweep touches every edge even though each round only the frontier's cheapest vertex can improve anything; most relaxations are re-checks of vertices whose distance stopped changing long ago.

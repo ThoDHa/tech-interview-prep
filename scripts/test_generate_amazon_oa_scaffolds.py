@@ -864,6 +864,53 @@ def test_emit_scaffolds_records_parse_status_on_entries(tmp_path, monkeypatch):
     assert dead_entry["parse_status"] == "page-unparseable"
 
 
+def test_emit_scaffolds_transient_guard_keeps_committed_cases_when_a_parsed_with_cases_slug_parses_empty_live(tmp_path, monkeypatch):
+    """A transiently dead live parse cannot wipe a case-parsed folder.
+
+    A committed `parsed-with-cases` slug whose live parse yields no problem
+    and no cases (transient 404, empty parse) keeps its practice files and
+    parse_status; the write-up still takes its normal path and the run log
+    names the slug under `transient_parse_guard` for a manual decision.
+    """
+    docs_dir = tmp_path / "docs" / "amazon"
+    practice_dir = tmp_path / "practice" / "amazon"
+    monkeypatch.setattr(gen, "DOCS_DIR", docs_dir)
+    monkeypatch.setattr(gen, "PRACTICE_DIR", practice_dir)
+    seed_cache(monkeypatch, tmp_path / "cache", "amazon-ok")
+    monkeypatch.setattr(
+        gen,
+        "fetch_problem_page",
+        lambda slug, cache_dir=None, delay=True, network=True: "<html>no payload</html>",
+    )
+    problem = gen.extract_problem_record(FASTPREP_PAGE)
+    parsed_cases = gen.cases_from_record(problem)
+    assert parsed_cases.cases, "fixture must parse to non-empty cases"
+    entry = {"slug": "amazon-ok", "title": "Ok", "url": "https://x", "companies": ["Amazon"], "updated": "2026-09-19", "parse_status": "parsed-with-cases"}
+    statement_html = gen.resolve_statement(problem, FASTPREP_PAGE)
+    for path, content in gen.render_all(entry, problem, parsed_cases, statement_html).items():
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text(content, encoding="utf-8")
+    committed_cases = (practice_dir / "amazon-ok" / "cases.json").read_text(encoding="utf-8")
+    committed_stub = (practice_dir / "amazon-ok" / "solution.py").read_text(encoding="utf-8")
+    committed_test = (practice_dir / "amazon-ok" / "test_amazon-ok.py").read_text(encoding="utf-8")
+    stale_placeholder = gen.render_writeup(entry, problem, statement_html)
+    (docs_dir / "amazon-ok.md").write_text(stale_placeholder, encoding="utf-8")
+
+    stats = gen.emit_scaffolds([entry], fetch=False)
+
+    slug_dir = practice_dir / "amazon-ok"
+    assert stats["transient_parse_guard"] == ["amazon-ok"]
+    assert stats["cases_preserved"] == []
+    assert stats["cases_conflicted"] == []
+    assert (slug_dir / "cases.json").read_text(encoding="utf-8") == committed_cases
+    assert (slug_dir / "solution.py").read_text(encoding="utf-8") == committed_stub
+    assert (slug_dir / "test_amazon-ok.py").read_text(encoding="utf-8") == committed_test
+    assert entry["parse_status"] == "parsed-with-cases"
+    assert stats["generated"] == 1
+    assert stats["writeups_preserved_dead_page"] == ["amazon-ok"]
+    assert (docs_dir / "amazon-ok.md").read_text(encoding="utf-8") == stale_placeholder
+
+
 def authored_writeup(entry: dict) -> str:
     """Render a placeholder write-up for `entry`, then hand-author its body."""
     placeholder = gen.render_writeup(entry, None, "")
