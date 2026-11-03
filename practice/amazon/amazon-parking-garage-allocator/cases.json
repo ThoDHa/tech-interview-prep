@@ -1,1 +1,80 @@
-[]
+[
+  {
+    "id": "example_1",
+    "operations": [
+      "ParkingGarage",
+      "park",
+      "park",
+      "leave",
+      "park"
+    ],
+    "arguments": [
+      [
+        6
+      ],
+      [
+        2
+      ],
+      [
+        3
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        1
+      ]
+    ],
+    "expected": [
+      null,
+      0,
+      2,
+      null,
+      0
+    ]
+  },
+  {
+    "id": "example_2",
+    "operations": [
+      "ParkingGarage",
+      "park",
+      "park"
+    ],
+    "arguments": [
+      [
+        2
+      ],
+      [
+        3
+      ],
+      [
+        2
+      ]
+    ],
+    "expected": [
+      null,
+      -1,
+      0
+    ]
+  },
+  {
+    "id": "min_garage_single_park",
+    "operations": [
+      "ParkingGarage",
+      "park"
+    ],
+    "arguments": [
+      [
+        1
+      ],
+      [
+        1
+      ]
+    ],
+    "expected": [
+      null,
+      0
+    ]
+  }
+]
