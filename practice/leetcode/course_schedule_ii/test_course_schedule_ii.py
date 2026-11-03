@@ -17,9 +17,20 @@ def _ids(cases):
     return [case["id"] for case in cases]
 
 
+def _is_valid_order(order, num_courses, prerequisites):
+    if sorted(order) != list(range(num_courses)):
+        return False
+    place = {course: position for position, course in enumerate(order)}
+    return all(place[before] < place[after] for after, before in prerequisites)
+
+
 def _check(method, case):
-    # Any topological order of the courses is valid, so compare the course multiset.
-    assert sorted(method(*case["args"])) == sorted(case["expected"])
+    num_courses, prerequisites = case["args"]
+    order = method(*case["args"])
+    if case["expected"] == []:
+        assert order == []
+    else:
+        assert order != [] and _is_valid_order(order, num_courses, prerequisites)
 
 
 @pytest.mark.simple
