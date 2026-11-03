@@ -2475,13 +2475,36 @@ def test_committed_amazon_lc_overlap_aliases_pin_the_exact_duplicates():
     )
 
 
-def test_committed_amazon_lc_overlap_aliases_join_the_slug_equality_marker_set():
+def emitted_unified_section():
+    """Render the unified section through the production section builder.
+
+    `committed_section` re-renders the slug-equality overlap alone; the
+    production builder is where the alias join lives, so the alias
+    mechanism is asserted against its real output rather than a test
+    recomputation of it.
+    """
+    return next(
+        section_text
+        for section_name, _start, _end, section_text in gen.render_sections()
+        if section_name == "unified-leetcode"
+    )
+
+
+def test_committed_amazon_lc_overlap_aliases_extend_the_emitted_marker_set():
     neetcode = gen.load_neetcode_manifest(NEETCODE_MANIFEST_PATH)
     amazon = gen.load_amazon_manifest(AMAZON_MANIFEST_PATH)
     aliases = gen.load_amazon_lc_overlap_aliases(AMAZON_LC_OVERLAP_ALIASES_PATH)
     slug_equality = gen.amazon_overlap_lc_slugs(neetcode, amazon)
-    for lc_slug in aliases.values():
-        assert lc_slug not in slug_equality, (
-            "an alias restating slug equality is load-bearing for nothing"
-        )
-        assert lc_slug in slug_equality | set(aliases.values()), lc_slug
+    assert slug_equality.isdisjoint(set(aliases.values())), (
+        "an alias restating slug equality is load-bearing for nothing"
+    )
+    emitted_marks = {
+        unified_row_lc_slug(row)
+        for row in unified_table_rows(emitted_unified_section())
+        if gen.AMAZON_MARKER in row
+    }
+    assert set(aliases.values()) <= emitted_marks, (
+        "the alias mapping no longer reaches the emitted unified table;"
+        " the section builder's alias join is broken, so the exact"
+        " duplicates it names lose their Amazon OA markers"
+    )
