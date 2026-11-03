@@ -17,9 +17,29 @@ def _ids(cases):
     return [case["id"] for case in cases]
 
 
+def _pair_ordered(first, second, place):
+    for first_letter, second_letter in zip(first, second):
+        if first_letter != second_letter:
+            return place[first_letter] < place[second_letter]
+    return len(first) <= len(second)
+
+
+def _is_valid_order(order, words):
+    letters = {letter for word in words for letter in word}
+    if len(order) != len(letters) or set(order) != letters:
+        return False
+    place = {letter: position for position, letter in enumerate(order)}
+    return all(
+        _pair_ordered(first, second, place) for first, second in zip(words, words[1:])
+    )
+
+
 def _check(method, case):
-    # Any topological order of the alien alphabet is valid, so compare characters.
-    assert sorted(method(*case["args"])) == sorted(case["expected"])
+    order = method(*case["args"])
+    if case["expected"] == "":
+        assert order == ""
+    else:
+        assert order != "" and _is_valid_order(order, case["args"][0])
 
 
 @pytest.mark.simple
