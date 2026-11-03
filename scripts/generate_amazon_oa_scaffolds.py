@@ -1234,7 +1234,13 @@ def emit_scaffolds(entries: Sequence[dict], fetch: bool = True) -> dict:
         FastPrep page is dead), `cases_preserved` (slugs whose authored
         practice cases.json, stub, and test module were left untouched),
         `cases_conflicted` (slugs whose hand-authored practice cases.json
-        met a non-empty upstream parse and was overwritten; report-only).
+        met a non-empty upstream parse and was overwritten; report-only),
+        `transient_parse_guard` (slugs whose committed parse_status is
+        `parsed-with-cases` but whose live parse yielded no problem and
+        no cases; their committed practice files and classification are
+        kept and only the write-up is written, so a genuinely dead page
+        surfaces for a manual decision instead of wiping the folder in
+        one pass).
     """
     stats = {
         "generated": 0,
@@ -1246,6 +1252,7 @@ def emit_scaffolds(entries: Sequence[dict], fetch: bool = True) -> dict:
         "writeups_preserved_dead_page": [],
         "cases_preserved": [],
         "cases_conflicted": [],
+        "transient_parse_guard": [],
     }
     DOCS_DIR.mkdir(parents=True, exist_ok=True)
     PRACTICE_DIR.mkdir(parents=True, exist_ok=True)
@@ -1269,7 +1276,21 @@ def emit_scaffolds(entries: Sequence[dict], fetch: bool = True) -> dict:
         authored_cases = committed_cases_are_authored(
             entry, PRACTICE_DIR / slug / "cases.json"
         )
-        if authored_cases and not parsed_cases.cases:
+        transient_parse = (
+            entry.get("parse_status") == "parsed-with-cases"
+            and problem is None
+            and not parsed_cases.cases
+        )
+        if transient_parse:
+            # A committed case-parsed slug whose live parse transiently
+            # yields nothing: the committed practice files and
+            # parse_status stay authoritative, and only the (separately
+            # guarded) write-up remains a write target, so a genuinely
+            # dead page surfaces under the stat for a manual decision
+            # instead of silently wiping the gauntlet in one pass.
+            stats["transient_parse_guard"].append(slug)
+            rendered = {writeup_path: rendered[writeup_path]}
+        elif authored_cases and not parsed_cases.cases:
             # Authored practice cases on a page that yields none: the stub,
             # cases.json, and test module are hand-owned, so only the
             # (separately guarded) write-up remains a write target.
@@ -1296,7 +1317,9 @@ def emit_scaffolds(entries: Sequence[dict], fetch: bool = True) -> dict:
                         stats["writeups_preserved_dead_page"].append(slug)
                     content = merged_text
             path.write_text(content, encoding="utf-8")
-        if parsed_cases.cases:
+        if transient_parse:
+            pass
+        elif parsed_cases.cases:
             entry["parse_status"] = "parsed-with-cases"
             stats["cases_parsed"] += 1
         else:
@@ -1602,6 +1625,12 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
     )
     if stats["parse_failures"]:
         print("parse failures: " + ", ".join(stats["parse_failures"]))
+    if stats["transient_parse_guard"]:
+        print(
+            "transient parse guard (committed parsed-with-cases kept, live"
+            " parse yielded nothing; manual decision owed): "
+            + ", ".join(stats["transient_parse_guard"])
+        )
     if stats["skipped_no_cache"]:
         print(
             "skipped (no cache, fetch disabled, existing scaffolds kept): "
