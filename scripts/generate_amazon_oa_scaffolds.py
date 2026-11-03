@@ -292,7 +292,11 @@ def load_committed_manifest(path: Path = MANIFEST_PATH) -> List[dict]:
         if missing_keys:
             named = f"'{entry['slug']}'" if "slug" in entry else f"#{index}"
             raise SystemExit(
-                f"committed manifest {path} entry {named} is missing {', '.join(missing_keys)}"
+                f"committed manifest {path} entry {named} is missing {', '.join(missing_keys)};"
+                " the manifest is hand-editable data: add the key(s) by hand"
+                " (title and url from the write-up's pinned header line,"
+                " parse_status from the practice folder's cases.json or a full"
+                " generation run)"
             )
     return entries
 
