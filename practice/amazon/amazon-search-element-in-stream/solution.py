@@ -7,12 +7,23 @@ Values arrive one at a time in a stream. At any moment, you may be asked whether
   uv run python amazon/amazon-search-element-in-stream/solution.py   # debug one case (see CASE below)
   uv run pytest amazon/amazon-search-element-in-stream/              # run the test sets
 """
+from harness import NotSolved, pick_case, run_operations
 
-from harness import NotSolved, pick_case
 
+class StreamSearch:
+    def __init__(self) -> None:
+        # Initialize empty state here; methods below raise until implemented.
+        pass
 
-class Solution:
-    def solve(self, operations, values):
+    def add(self, value: int) -> None:
+        """State the time and space complexity of your approach, and explain why.
+
+        Time:  O(?):
+        Space: O(?):
+        """
+        raise NotSolved
+
+    def search(self, value: int) -> bool:
         """State the time and space complexity of your approach, and explain why.
 
         Time:  O(?):
@@ -22,13 +33,15 @@ class Solution:
 
 
 if __name__ == "__main__":
-    # Debug playground: set a breakpoint in solve above, then run this file.
-    CASE = None
-    if CASE is None:
-        print("no cases authored yet; add cases to cases.json or cases_full.json, then set CASE to an id")
-    else:
-        case = pick_case(__file__, CASE)
-        result = Solution().solve(*case["args"])
-        print(f"case {case['id']}: args = {case['args']}")
-        print(f"expected: {case['expected']}")
-        print(f"got:      {result}")
+    # Debug playground: set a breakpoint in a StreamSearch method, then run this file.
+    # Pick a case by id (ids are in cases.json / cases_full.json).
+    CASE = "example_1"
+    case = pick_case(__file__, CASE)
+    print(f"case {case['id']}: operations = {case['operations']}")
+    print(f"arguments: {case['arguments']}")
+    print(f"expected:  {case['expected']}")
+    try:
+        result = run_operations(StreamSearch, case["operations"], case["arguments"])
+        print(f"got:       {result}")
+    except NotSolved:
+        print("got:       implement StreamSearch's methods first")

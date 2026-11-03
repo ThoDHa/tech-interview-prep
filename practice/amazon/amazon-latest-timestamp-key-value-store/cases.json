@@ -1,1 +1,115 @@
-[]
+[
+  {
+    "id": "example_1",
+    "operations": [
+      "LatestTimestampStore",
+      "set",
+      "set",
+      "get",
+      "set",
+      "get",
+      "set",
+      "get"
+    ],
+    "arguments": [
+      [],
+      [
+        10,
+        "a",
+        "newer"
+      ],
+      [
+        3,
+        "a",
+        "older"
+      ],
+      [
+        "a"
+      ],
+      [
+        10,
+        "a",
+        "tie"
+      ],
+      [
+        "a"
+      ],
+      [
+        12,
+        "a",
+        "newest"
+      ],
+      [
+        "a"
+      ]
+    ],
+    "expected": [
+      null,
+      null,
+      null,
+      "newer",
+      null,
+      "tie",
+      null,
+      "newest"
+    ]
+  },
+  {
+    "id": "example_2",
+    "operations": [
+      "LatestTimestampStore",
+      "get",
+      "set",
+      "set",
+      "get",
+      "get"
+    ],
+    "arguments": [
+      [],
+      [
+        "x"
+      ],
+      [
+        0,
+        "x",
+        "red"
+      ],
+      [
+        5,
+        "y",
+        "blue"
+      ],
+      [
+        "x"
+      ],
+      [
+        "y"
+      ]
+    ],
+    "expected": [
+      null,
+      "",
+      null,
+      null,
+      "red",
+      "blue"
+    ]
+  },
+  {
+    "id": "get_before_any_set",
+    "operations": [
+      "LatestTimestampStore",
+      "get"
+    ],
+    "arguments": [
+      [],
+      [
+        "k"
+      ]
+    ],
+    "expected": [
+      null,
+      ""
+    ]
+  }
+]

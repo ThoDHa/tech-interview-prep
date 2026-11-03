@@ -1,1 +1,108 @@
-[]
+[
+  {
+    "id": "example_1",
+    "operations": [
+      "IPv4Pool",
+      "check_ip",
+      "add_ip",
+      "check_ip",
+      "add_ip",
+      "remove_ip",
+      "check_ip"
+    ],
+    "arguments": [
+      [],
+      [
+        "10.0.0.1"
+      ],
+      [
+        "10.0.0.1"
+      ],
+      [
+        "10.0.0.1"
+      ],
+      [
+        "10.0.0.1"
+      ],
+      [
+        "10.0.0.1"
+      ],
+      [
+        "10.0.0.1"
+      ]
+    ],
+    "expected": [
+      null,
+      false,
+      null,
+      true,
+      null,
+      null,
+      false
+    ]
+  },
+  {
+    "id": "example_2",
+    "operations": [
+      "IPv4Pool",
+      "add_ip",
+      "add_ip",
+      "remove_ip",
+      "check_ip",
+      "check_ip",
+      "check_ip"
+    ],
+    "arguments": [
+      [],
+      [
+        "0.0.0.0"
+      ],
+      [
+        "255.255.255.255"
+      ],
+      [
+        "128.0.0.0"
+      ],
+      [
+        "255.255.255.255"
+      ],
+      [
+        "128.0.0.0"
+      ],
+      [
+        "0.0.0.0"
+      ]
+    ],
+    "expected": [
+      null,
+      null,
+      null,
+      null,
+      true,
+      false,
+      true
+    ]
+  },
+  {
+    "id": "example_3",
+    "operations": [
+      "IPv4Pool",
+      "add_ip",
+      "remove_ip"
+    ],
+    "arguments": [
+      [],
+      [
+        "192.168.1.1"
+      ],
+      [
+        "192.168.1.1"
+      ]
+    ],
+    "expected": [
+      null,
+      null,
+      null
+    ]
+  }
+]
