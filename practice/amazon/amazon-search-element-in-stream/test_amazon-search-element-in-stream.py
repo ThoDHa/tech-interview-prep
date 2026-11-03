@@ -1,16 +1,17 @@
-"""Tests for Search for an Element in a Stream — your attempt (solution.py) against cases.json.
+"""Tests for Search for an Element in a Stream — your attempt (solution.py) against both case sets.
 
-The worked approaches live in ../../../docs/amazon/amazon-search-element-in-stream.md.
+Each case is an Amazon design-operation sequence (operations + arguments) that
+is replayed against your StreamSearch via run_operations. cases.json (marker `simple`)
+is the "Run" set; cases_full.json (marker `full`) is the "Submit" gauntlet. The
+worked approaches live in ../../../docs/amazon/amazon-search-element-in-stream.md.
 """
 
 import pytest
 
-from harness import NotSolved, load_solution
+from harness import NotSolved, load_cases, load_solution, run_operations
 
-CASES = []
-
-if len(CASES) == 0:
-    pytest.skip("design-operation example for amazon-search-element-in-stream is not `==`-assertable", allow_module_level=True)
+SIMPLE = load_cases(__file__, "cases.json")
+FULL = SIMPLE + load_cases(__file__, "cases_full.json")
 
 solution = load_solution(__file__)
 
@@ -19,13 +20,24 @@ def _ids(cases):
     return [case["id"] for case in cases]
 
 
-def _check(method, case):
-    assert method(*case["args"]) == case["expected"]
+def _check(cls, case):
+    result = run_operations(cls, case["operations"], case["arguments"])
+    assert result == case["expected"]
 
 
-@pytest.mark.parametrize("case", CASES, ids=_ids(CASES))
-def test_solution(case):
+@pytest.mark.simple
+@pytest.mark.parametrize("case", SIMPLE, ids=_ids(SIMPLE))
+def test_solution_simple(case):
     try:
-        _check(solution.Solution().solve, case)
+        _check(solution.StreamSearch, case)
+    except NotSolved:
+        pytest.skip("solution.py not implemented yet")
+
+
+@pytest.mark.full
+@pytest.mark.parametrize("case", FULL, ids=_ids(FULL))
+def test_solution_full(case):
+    try:
+        _check(solution.StreamSearch, case)
     except NotSolved:
         pytest.skip("solution.py not implemented yet")
