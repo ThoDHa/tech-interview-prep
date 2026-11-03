@@ -101,6 +101,12 @@ ORDERING (by discoverability, not raw speed)
     for a hand-written binary search, `itertools.accumulate` for a running-total
     loop, `deque` for a `list.pop(0)` queue). The algorithm itself stays visible
     on the page: only the bookkeeping moves.
+  - A DISTINCT STRATEGY THAT DELEGATES ITS CORE OPERATION ranks by its own
+    complexity: when a builtin or library call implements the core operation
+    of a genuinely different algorithm (not a bookkeeping swap on one already
+    present), name the delegation in the section name and rank it mid-ladder
+    where that complexity wins, instead of forcing it into the tidy-up slot
+    or the one-liner tail.
   - PYTHONIC ONE-LINERS GO LAST, after every from-scratch approach, even when
     they look trivially simple. A solution that leans on a built-in or stdlib
     call to do the core work (`sorted(s) == sorted(t)`, `Counter(a) == Counter(b)`,
