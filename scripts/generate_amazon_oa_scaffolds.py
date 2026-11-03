@@ -1350,13 +1350,10 @@ def emit_scaffolds(entries: Sequence[dict], fetch: bool = True) -> dict:
                         stats["writeups_preserved_dead_page"].append(slug)
                     carried_sections = committed_only_sections(committed_text, content)
                     if carried_sections:
-                        stats["death_merge_union"].append(
-                            f"{slug}: "
-                            + ", ".join(
-                                section.splitlines()[0]
-                                for section in carried_sections
-                            )
+                        carried_headings = ", ".join(
+                            section.splitlines()[0] for section in carried_sections
                         )
+                        stats["death_merge_union"].append(f"{slug}: {carried_headings}")
                     content = merged_text
             path.write_text(content, encoding="utf-8")
         if transient_parse:
