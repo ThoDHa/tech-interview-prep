@@ -37,6 +37,9 @@ Difficulty/Time columns reuse generate_index_tables.py's conventions: the
 committed amazon_difficulty_overrides.json corrects externally sourced
 difficulties at render time, and Time carries the shared difficulty-based
 estimates (Easy 15 / Medium 25 / Hard 40 minutes, a dash where unknown).
+The committed amazon_constraints_overrides.json supplies Constraints bullets
+for slugs whose FastPrep page lists none, so their generator-owned write-ups
+render a filled section on every refresh.
 
 Usage (from the repository root):
   cd practice && uv run pytest ../scripts/          # run the generator tests
@@ -65,6 +68,7 @@ import generate_index_tables as index_tables
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 MANIFEST_PATH = REPO_ROOT / "scripts" / "amazon_oa_manifest.json"
+CONSTRAINTS_OVERRIDES_PATH = REPO_ROOT / "scripts" / "amazon_constraints_overrides.json"
 DOCS_DIR = REPO_ROOT / "docs" / "amazon"
 PRACTICE_DIR = REPO_ROOT / "practice" / "amazon"
 TEMPLATE_PATH = REPO_ROOT / "docs" / "leetcode" / "_TEMPLATE.md"
@@ -130,6 +134,13 @@ MIN_PLAUSIBLE_STATEMENT_LENGTH = 40
 CONTRIBUTOR_CHROME_PATTERN = re.compile(r"^Special thanks:.*(?:\n|$)", re.M)
 WRITEUP_SECTION_HEADING_PATTERN = re.compile(r"(?m)^## .*$")
 HTML_COMMENT_PATTERN = re.compile(r"<!--.*?-->", re.S)
+# A `<` that opens no plausible tag (`</?letter`, no angle brackets, then
+# `>`) is prose: recovered FastPrep statements carry raw comparisons like
+# `0 ≤ i < n`. Escape it before the tag strips run, because the generic
+# strip would otherwise swallow from the raw `<` through the next real
+# tag's `>`, deleting whole clauses; `html.unescape` restores it at the
+# end.
+PROSE_LESS_THAN_PATTERN = re.compile(r"<(?!/?[a-zA-Z][^<>]*>)")
 NEXT_FLIGHT_CHUNK_PATTERN = re.compile(
     r'self\.__next_f\.push\(\[1,("(?:[^"\\]|\\.)*")\]\)'
 )
@@ -850,10 +861,86 @@ def render_examples(problem: Optional[dict], slug: str) -> List[str]:
     return lines
 
 
-def render_constraints(problem: Optional[dict], slug: str) -> List[str]:
-    """Render the Constraints section from parsed constraints or a placeholder."""
+def load_constraints_overrides(path: Optional[Path] = None) -> dict:
+    """Load the committed slug -> constraint-bullet overrides.
+
+    FastPrep ships no constraints block on some problem pages, so their
+    generator-owned write-ups would render an empty Constraints section on
+    every refresh. This hand-editable file supplies those sections: each
+    entry maps a manifest slug to the bullet strings rendered verbatim.
+    An absent file is the empty mapping (the revert path: deleting it and
+    regenerating restores the placeholders); anything present must be one
+    JSON object whose values are non-empty lists of non-empty strings.
+
+    Args:
+        path: Path to amazon_constraints_overrides.json; None (the
+            default) means the module constant, resolved at call time so
+            tests can repoint it.
+
+    Returns:
+        The slug -> bullet-strings mapping, empty when the file is absent.
+
+    Raises:
+        SystemExit: When the file is unreadable, invalid JSON, not a JSON
+            object, or an entry is not a non-empty list of non-empty
+            strings.
+    """
+    if path is None:
+        path = CONSTRAINTS_OVERRIDES_PATH
+    try:
+        overrides = json.loads(path.read_text(encoding="utf-8"))
+    except FileNotFoundError:
+        return {}
+    except (UnicodeDecodeError, json.JSONDecodeError) as error:
+        raise SystemExit(f"constraints overrides {path} is not valid JSON: {error}")
+    if not isinstance(overrides, dict):
+        raise SystemExit(f"constraints overrides {path} must be a JSON object")
+    for slug, bullets in overrides.items():
+        if (
+            not isinstance(bullets, list)
+            or not bullets
+            or not all(isinstance(text, str) and text.strip() for text in bullets)
+        ):
+            raise SystemExit(
+                f"constraints override for {slug!r} must be a non-empty list"
+                " of non-empty constraint strings"
+            )
+    return overrides
+
+
+def render_constraints(
+    problem: Optional[dict],
+    slug: str,
+    constraints_overrides: Optional[Mapping[str, List[str]]] = None,
+) -> List[str]:
+    """Render the Constraints section from parsed constraints or a placeholder.
+
+    A page whose parse yields no constraints falls back to the committed
+    slug -> bullets override map (the committed file when the argument is
+    None, mirroring render_index's difficulty_overrides); a slug the map
+    does not address keeps the placeholder comment.
+
+    Args:
+        problem: Parsed FastPrep record, or None when the page failed to
+            parse.
+        slug: The FastPrep problem slug the section renders for.
+        constraints_overrides: Slug -> bullet strings consulted on an
+            empty parse; None (the default) means the committed overrides
+            file.
+
+    Returns:
+        The section's markdown lines, with a trailing blank line.
+    """
     raw_constraints = str((problem or {}).get("constraints") or "").strip()
     if not raw_constraints:
+        overrides = (
+            load_constraints_overrides()
+            if constraints_overrides is None
+            else constraints_overrides
+        )
+        bullets = overrides.get(slug)
+        if bullets:
+            return [f"- `{text}`" for text in bullets] + [""]
         return [
             f"<!-- Constraints not parseable from FastPrep for {slug}; fill them in. -->",
             "",
@@ -889,9 +976,11 @@ def html_to_markdown(fragment: str) -> str:
     Block-level tags separate the blocks they bound: both the opening and
     closing tag emit a paragraph break, so a run-in `<h3>` heading or a
     `<ul>` of method specs never glues to the neighboring sentence. `<br>`
-    and `<li>` emit single line breaks; inline tags are stripped bare.
+    and `<li>` emit single line breaks; inline tags are stripped bare. A
+    `<` in prose that opens no plausible tag is kept as a literal `<`.
     """
     text = HTML_COMMENT_PATTERN.sub("", fragment)
+    text = PROSE_LESS_THAN_PATTERN.sub("&lt;", text)
     text = re.sub(r"<sup>(.*?)</sup>", r"^\1", text, flags=re.S | re.I)
     text = re.sub(
         r"(?i)</?(?:p|h[1-6]|ul|ol|pre|blockquote|div|table|tr)\b[^>]*>",
