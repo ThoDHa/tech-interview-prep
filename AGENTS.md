@@ -72,7 +72,11 @@ all three after touching a generator, its data sources, or generated output.
   write-ups stay generator-owned and keep refreshing. The four
   `page-unparseable` entries are dead FastPrep pages whose write-ups are
   death-preserved archives: emission keeps their archived sections and
-  pins only the generator-owned `## Solutions` block. An authored write-up
+  pins only the generator-owned `## Solutions` block. A committed section
+  carrying content whose heading the fresh render lacks is carried and
+  re-appended after the template sections in committed order, named under
+  `death merge union` in the run log; a marker hole (a section holding
+  only placeholder comments) is dropped, not carried. An authored write-up
   (placeholder marker gone) is preserved untouched; the generator still
   pins its `# [Title](url)` header line byte-exact, and the body is
   hand-editable. An authored-cases folder (a non-empty `cases.json` under a
