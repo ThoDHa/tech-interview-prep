@@ -1092,6 +1092,58 @@ def test_emit_scaffolds_transient_guard_keeps_committed_cases_when_a_parsed_with
     assert (docs_dir / "amazon-ok.md").read_text(encoding="utf-8") == stale_placeholder
 
 
+def test_emit_scaffolds_held_slug_with_a_dead_page_never_fetches_and_changes_nothing(tmp_path, monkeypatch):
+    """A held slug is a no-op even when its upstream page is dead.
+
+    Fetch-new-only sync: a slug present in the committed manifest is never
+    fetched, parsed, or re-emitted, so a 404 upstream changes nothing
+    locally; the death and guard machinery stays unreached for it.
+    """
+    docs_dir = tmp_path / "docs" / "amazon"
+    practice_dir = tmp_path / "practice" / "amazon"
+    monkeypatch.setattr(gen, "DOCS_DIR", docs_dir)
+    monkeypatch.setattr(gen, "PRACTICE_DIR", practice_dir)
+    entry = {
+        "slug": "amazon-gone",
+        "title": "Gone",
+        "url": "https://x/gone",
+        "companies": ["Amazon"],
+        "updated": "2026-09-19",
+        "parse_status": "page-unparseable",
+    }
+    write_scaffold_set(tmp_path, entry)
+    committed_files = {
+        docs_dir / "amazon-gone.md",
+        practice_dir / "amazon-gone" / "solution.py",
+        practice_dir / "amazon-gone" / "cases.json",
+        practice_dir / "amazon-gone" / "test_amazon-gone.py",
+    }
+    committed = {path: path.read_text(encoding="utf-8") for path in committed_files}
+    calls = []
+
+    def spy(slug, cache_dir=None, delay=True, network=True):
+        calls.append(slug)
+        return gen.FETCH_FAILED_MARKER_TEMPLATE.format(error_code=404, slug=slug)
+
+    monkeypatch.setattr(gen, "fetch_problem_page", spy)
+
+    stats = gen.emit_scaffolds([entry], fetch=True, held_slugs={"amazon-gone"})
+
+    assert calls == []
+    for path, text in committed.items():
+        assert path.read_text(encoding="utf-8") == text
+    assert stats["held_skipped"] == ["amazon-gone"]
+    assert stats["generated"] == 0
+    assert stats["parse_failures"] == []
+    assert stats["transient_parse_guard"] == []
+    assert stats["writeups_preserved"] == []
+    assert stats["writeups_preserved_dead_page"] == []
+    assert stats["death_merge_union"] == []
+    assert stats["cases_preserved"] == []
+    assert stats["cases_conflicted"] == []
+    assert entry["parse_status"] == "page-unparseable"
+
+
 def authored_writeup(entry: dict) -> str:
     """Render a placeholder write-up for `entry`, then hand-author its body."""
     placeholder = gen.render_writeup(entry, None, "")
@@ -1677,9 +1729,9 @@ def test_main_seeds_committed_parse_status_before_emission(tmp_path, monkeypatch
     seen = {}
     real_emit = gen.emit_scaffolds
 
-    def spy_emit(entries, fetch=True):
+    def spy_emit(entries, fetch=True, held_slugs=()):
         seen["entries"] = [dict(entry) for entry in entries]
-        return real_emit(entries, fetch=fetch)
+        return real_emit(entries, fetch=fetch, held_slugs=held_slugs)
 
     monkeypatch.setattr(gen, "emit_scaffolds", spy_emit)
 
@@ -2379,28 +2431,6 @@ def test_check_catches_a_retired_command_path_in_a_parsed_stub(tmp_path, monkeyp
     assert gen.check([entry]) == 1
 
 
-def test_main_warns_when_bank_pages_are_absent_and_slugs_are_skipped(tmp_path, monkeypatch, capsys):
-    monkeypatch.setattr(gen, "DEFAULT_BANK_PAGES", [tmp_path / "absent" / "coding.md"])
-    manifest_path = tmp_path / "amazon_oa_manifest.json"
-    manifest_path.write_text(
-        json.dumps([UNPARSEABLE_ENTRY], indent=2) + "\n", encoding="utf-8"
-    )
-    monkeypatch.setattr(gen, "MANIFEST_PATH", manifest_path)
-    monkeypatch.setattr(gen, "FASTPREP_CACHE_DIR", tmp_path / "empty-cache")
-    mkdocs_path = tmp_path / "mkdocs.yml"
-    mkdocs_path.write_text(
-        'nav:\n  - Home: index.md\n  - Problems:\n    - Leetcode:\n'
-        "      - \"Amazon OA\": amazon/index.md\n",
-        encoding="utf-8",
-    )
-    monkeypatch.setattr(gen, "MKTABS_PATH", mkdocs_path)
-    redirect_check_paths(tmp_path, monkeypatch)
-    assert gen.main([]) == 0
-    out = capsys.readouterr().out
-    assert "amazon-gone" in out
-    assert "warning:" in out
-
-
 def test_main_check_falls_back_to_committed_manifest_without_bank_pages(tmp_path, monkeypatch):
     monkeypatch.setattr(gen, "DEFAULT_BANK_PAGES", [tmp_path / "absent" / "coding.md"])
     manifest_path = tmp_path / "amazon_oa_manifest.json"
@@ -2425,3 +2455,260 @@ def test_main_check_falls_back_to_committed_manifest_without_bank_pages(tmp_path
 def test_main_with_explicit_missing_bank_page_errors():
     with pytest.raises(SystemExit, match="bank page not found"):
         gen.main(["--bank-page", "/nonexistent/bank.md", "--check"])
+
+
+SYNC_BANK_PAGE = """# Coding OA bank, sync fixture (trimmed)
+
+| Company | OA / Interview Question | Practice | Updated |
+| :-- | :-- | :-: | :-- |
+|**Amazon**|[Brand New Problem](https://www.fastprep.io/problems/amazon-brand-new-problem)|[![Practice][p]](https://www.fastprep.io/problems/amazon-brand-new-problem)|🔥 Nov 1, 2026|
+|**Amazon**|[Held Old](https://www.fastprep.io/problems/amazon-held-old)|[![Practice][p]](https://www.fastprep.io/problems/amazon-held-old)|🔥 Nov 2, 2026|
+"""
+
+HELD_ENTRY = {
+    "slug": "amazon-held-old",
+    "title": "Held Old",
+    "url": "https://www.fastprep.io/problems/amazon-held-old",
+    "companies": ["Amazon"],
+    "updated": "2026-09-18",
+    "parse_status": "page-unparseable",
+}
+
+
+def redirect_sync_run(tmp_path, monkeypatch, bank_text, manifest_entries):
+    """Point every path an online `main()` run reads and writes at tmp_path."""
+    bank_path = tmp_path / "coding.md"
+    bank_path.write_text(bank_text, encoding="utf-8")
+    monkeypatch.setattr(gen, "DEFAULT_BANK_PAGES", [bank_path])
+    manifest_path = tmp_path / "amazon_oa_manifest.json"
+    manifest_path.write_text(
+        json.dumps(manifest_entries, indent=2) + "\n", encoding="utf-8"
+    )
+    monkeypatch.setattr(gen, "MANIFEST_PATH", manifest_path)
+    monkeypatch.setattr(gen, "FASTPREP_CACHE_DIR", tmp_path / "cache")
+    mkdocs_path = tmp_path / "mkdocs.yml"
+    mkdocs_path.write_text(
+        'nav:\n  - Home: index.md\n  - Problems:\n    - Leetcode:\n'
+        '      - "Amazon OA": amazon/index.md\n',
+        encoding="utf-8",
+    )
+    monkeypatch.setattr(gen, "MKTABS_PATH", mkdocs_path)
+    redirect_check_paths(tmp_path, monkeypatch)
+    return manifest_path
+
+
+def scaffold_texts(slug):
+    """Snapshot the four scaffold files of one slug for untouched checks."""
+    return {
+        gen.DOCS_DIR / f"{slug}.md": (gen.DOCS_DIR / f"{slug}.md").read_text(encoding="utf-8"),
+        gen.PRACTICE_DIR / slug / "solution.py": (gen.PRACTICE_DIR / slug / "solution.py").read_text(encoding="utf-8"),
+        gen.PRACTICE_DIR / slug / "cases.json": (gen.PRACTICE_DIR / slug / "cases.json").read_text(encoding="utf-8"),
+        gen.PRACTICE_DIR / slug / f"test_{slug}.py": (gen.PRACTICE_DIR / slug / f"test_{slug}.py").read_text(encoding="utf-8"),
+    }
+
+
+def test_main_sync_fetches_and_scaffolds_a_new_slug_exactly_as_before(tmp_path, monkeypatch, capsys):
+    """Fetch-new-only sync scaffolds a slug absent from the committed manifest."""
+    manifest_path = redirect_sync_run(tmp_path, monkeypatch, SYNC_BANK_PAGE, [HELD_ENTRY])
+    write_scaffold_set(tmp_path, HELD_ENTRY)
+    held_committed = scaffold_texts(HELD_ENTRY["slug"])
+    calls = []
+
+    def spy(slug, cache_dir=None, delay=True, network=True):
+        calls.append(slug)
+        return FASTPREP_PAGE
+
+    monkeypatch.setattr(gen, "fetch_problem_page", spy)
+
+    assert gen.main([]) == 0
+
+    assert calls == ["amazon-brand-new-problem"]
+    assert (gen.DOCS_DIR / "amazon-brand-new-problem.md").exists()
+    assert (gen.PRACTICE_DIR / "amazon-brand-new-problem" / "solution.py").exists()
+    cases = json.loads(
+        (gen.PRACTICE_DIR / "amazon-brand-new-problem" / "cases.json").read_text(encoding="utf-8")
+    )
+    assert cases
+    out = capsys.readouterr().out
+    assert "scaffolds: 1 generated" in out
+    manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+    by_slug = {entry["slug"]: entry for entry in manifest}
+    assert by_slug["amazon-brand-new-problem"]["parse_status"] == "parsed-with-cases"
+    for path, text in held_committed.items():
+        assert path.read_text(encoding="utf-8") == text
+
+
+def test_main_sync_fetches_and_classifies_a_null_status_manifest_slug(tmp_path, monkeypatch, capsys):
+    """A committed null parse_status does not hold: the sync heals it.
+
+    A --manifest-only bootstrap, a --limit overshoot, or a --no-fetch
+    skip can write a slug into the manifest before any classification.
+    Such an entry stays fetchable: the next bank-available run fetches
+    its live page, scaffolds it, and classifies it, while genuinely
+    classified committed slugs stay held and untouched.
+    """
+    null_status_entry = {
+        "slug": "amazon-brand-new-problem",
+        "title": "Brand New Problem",
+        "url": "https://www.fastprep.io/problems/amazon-brand-new-problem",
+        "companies": ["Amazon"],
+        "updated": "2026-09-20",
+        "difficulty": None,
+        "categories": None,
+        "parse_status": None,
+    }
+    manifest_path = redirect_sync_run(
+        tmp_path, monkeypatch, SYNC_BANK_PAGE, [HELD_ENTRY, null_status_entry]
+    )
+    write_scaffold_set(tmp_path, HELD_ENTRY)
+    held_committed = scaffold_texts(HELD_ENTRY["slug"])
+    calls = []
+
+    def spy(slug, cache_dir=None, delay=True, network=True):
+        calls.append(slug)
+        return FASTPREP_PAGE
+
+    monkeypatch.setattr(gen, "fetch_problem_page", spy)
+
+    assert gen.main([]) == 0
+
+    assert calls == ["amazon-brand-new-problem"]
+    assert (gen.DOCS_DIR / "amazon-brand-new-problem.md").exists()
+    cases = json.loads(
+        (gen.PRACTICE_DIR / "amazon-brand-new-problem" / "cases.json").read_text(encoding="utf-8")
+    )
+    assert cases
+    manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+    by_slug = {entry["slug"]: entry for entry in manifest}
+    assert by_slug["amazon-brand-new-problem"]["parse_status"] == "parsed-with-cases"
+    assert by_slug["amazon-held-old"]["parse_status"] == "page-unparseable"
+    for path, text in held_committed.items():
+        assert path.read_text(encoding="utf-8") == text
+    out = capsys.readouterr().out
+    assert "held (committed copies authoritative, untouched): 1" in out
+
+
+def test_main_sync_refreshes_a_held_slug_bank_row_without_fastprep_fetches(tmp_path, monkeypatch, capsys):
+    """A held slug's manifest row refreshes from the bank row alone.
+
+    The bank row carries the row data (title, companies, dates), so a date
+    change lands in the manifest with zero FastPrep fetches and the held
+    scaffolds stay byte-identical.
+    """
+    bank_text = (
+        "# Coding OA bank, held-only sync fixture (trimmed)\n\n"
+        "| Company | OA / Interview Question | Practice | Updated |\n"
+        "| :-- | :-- | :-: | :-- |\n"
+        "|**Amazon**|[Held Old](https://www.fastprep.io/problems/amazon-held-old)"
+        "|[![Practice][p]](https://www.fastprep.io/problems/amazon-held-old)"
+        "|🔥 Nov 2, 2026|\n"
+    )
+    manifest_path = redirect_sync_run(tmp_path, monkeypatch, bank_text, [HELD_ENTRY])
+    write_scaffold_set(tmp_path, HELD_ENTRY)
+    held_committed = scaffold_texts(HELD_ENTRY["slug"])
+    calls = []
+
+    def spy(slug, cache_dir=None, delay=True, network=True):
+        calls.append(slug)
+        return FASTPREP_PAGE
+
+    monkeypatch.setattr(gen, "fetch_problem_page", spy)
+
+    assert gen.main([]) == 0
+
+    assert calls == []
+    manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+    assert manifest == [
+        {
+            "slug": "amazon-held-old",
+            "title": "Held Old",
+            "url": "https://www.fastprep.io/problems/amazon-held-old",
+            "companies": ["Amazon"],
+            "updated": "2026-11-02",
+            "difficulty": None,
+            "categories": None,
+            "parse_status": "page-unparseable",
+        }
+    ]
+    for path, text in held_committed.items():
+        assert path.read_text(encoding="utf-8") == text
+    out = capsys.readouterr().out
+    assert "held (committed copies authoritative, untouched): 1" in out
+
+
+def test_main_without_bank_pages_leaves_held_slugs_untouched_as_no_ops(tmp_path, monkeypatch, capsys):
+    """Offline fallback: every committed slug is held and emission is a no-op.
+
+    The bank pages are absent, so the manifest is the committed hold list;
+    the run refreshes nothing, fetches nothing, and keeps every scaffold
+    byte-identical.
+    """
+    monkeypatch.setattr(gen, "DEFAULT_BANK_PAGES", [tmp_path / "absent" / "coding.md"])
+    manifest_path = tmp_path / "amazon_oa_manifest.json"
+    manifest_path.write_text(
+        json.dumps([UNPARSEABLE_ENTRY], indent=2) + "\n", encoding="utf-8"
+    )
+    monkeypatch.setattr(gen, "MANIFEST_PATH", manifest_path)
+    monkeypatch.setattr(gen, "FASTPREP_CACHE_DIR", tmp_path / "empty-cache")
+    mkdocs_path = tmp_path / "mkdocs.yml"
+    mkdocs_path.write_text(
+        'nav:\n  - Home: index.md\n  - Problems:\n    - Leetcode:\n'
+        '      - "Amazon OA": amazon/index.md\n',
+        encoding="utf-8",
+    )
+    monkeypatch.setattr(gen, "MKTABS_PATH", mkdocs_path)
+    redirect_check_paths(tmp_path, monkeypatch)
+    write_scaffold_set(tmp_path, UNPARSEABLE_ENTRY)
+    committed = scaffold_texts(UNPARSEABLE_ENTRY["slug"])
+    committed_manifest = manifest_path.read_text(encoding="utf-8")
+    calls = []
+
+    def spy(slug, cache_dir=None, delay=True, network=True):
+        calls.append(slug)
+        return FASTPREP_PAGE
+
+    monkeypatch.setattr(gen, "fetch_problem_page", spy)
+
+    assert gen.main([]) == 0
+
+    assert calls == []
+    for path, text in committed.items():
+        assert path.read_text(encoding="utf-8") == text
+    assert manifest_path.read_text(encoding="utf-8") == committed_manifest
+    out = capsys.readouterr().out
+    assert "held (committed copies authoritative, untouched): 1" in out
+
+
+def test_main_no_fetch_regenerates_a_new_slug_from_cache_and_skips_an_uncached_one(tmp_path, monkeypatch, capsys):
+    """--no-fetch stays the offline safety net for new slugs only.
+
+    A new slug with a cached page scaffolds from the cache without network;
+    a new slug without one is skipped with its scaffolds absent, and the
+    held slug is untouched throughout.
+    """
+    bank_text = SYNC_BANK_PAGE.replace(
+        "[Held Old](https://www.fastprep.io/problems/amazon-held-old)",
+        "[Uncached New](https://www.fastprep.io/problems/amazon-uncached-new)",
+    )
+    redirect_sync_run(tmp_path, monkeypatch, bank_text, [HELD_ENTRY])
+    write_scaffold_set(tmp_path, HELD_ENTRY)
+    held_committed = scaffold_texts(HELD_ENTRY["slug"])
+    seed_cache(monkeypatch, tmp_path / "cache", "amazon-brand-new-problem")
+    calls = []
+
+    def spy(slug, cache_dir=None, delay=True, network=True):
+        calls.append((slug, network))
+        return "<html>cached</html>"
+
+    monkeypatch.setattr(gen, "fetch_problem_page", spy)
+
+    assert gen.main(["--no-fetch"]) == 0
+
+    assert calls == [("amazon-brand-new-problem", False)]
+    assert (gen.DOCS_DIR / "amazon-brand-new-problem.md").exists()
+    assert not (gen.DOCS_DIR / "amazon-uncached-new.md").exists()
+    for path, text in held_committed.items():
+        assert path.read_text(encoding="utf-8") == text
+    out = capsys.readouterr().out
+    assert "amazon-uncached-new" in out
+    assert "skipped" in out
