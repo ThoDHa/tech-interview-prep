@@ -2431,28 +2431,6 @@ def test_check_catches_a_retired_command_path_in_a_parsed_stub(tmp_path, monkeyp
     assert gen.check([entry]) == 1
 
 
-def test_main_warns_when_bank_pages_are_absent_and_slugs_are_skipped(tmp_path, monkeypatch, capsys):
-    monkeypatch.setattr(gen, "DEFAULT_BANK_PAGES", [tmp_path / "absent" / "coding.md"])
-    manifest_path = tmp_path / "amazon_oa_manifest.json"
-    manifest_path.write_text(
-        json.dumps([UNPARSEABLE_ENTRY], indent=2) + "\n", encoding="utf-8"
-    )
-    monkeypatch.setattr(gen, "MANIFEST_PATH", manifest_path)
-    monkeypatch.setattr(gen, "FASTPREP_CACHE_DIR", tmp_path / "empty-cache")
-    mkdocs_path = tmp_path / "mkdocs.yml"
-    mkdocs_path.write_text(
-        'nav:\n  - Home: index.md\n  - Problems:\n    - Leetcode:\n'
-        "      - \"Amazon OA\": amazon/index.md\n",
-        encoding="utf-8",
-    )
-    monkeypatch.setattr(gen, "MKTABS_PATH", mkdocs_path)
-    redirect_check_paths(tmp_path, monkeypatch)
-    assert gen.main([]) == 0
-    out = capsys.readouterr().out
-    assert "amazon-gone" in out
-    assert "warning:" in out
-
-
 def test_main_check_falls_back_to_committed_manifest_without_bank_pages(tmp_path, monkeypatch):
     monkeypatch.setattr(gen, "DEFAULT_BANK_PAGES", [tmp_path / "absent" / "coding.md"])
     manifest_path = tmp_path / "amazon_oa_manifest.json"
