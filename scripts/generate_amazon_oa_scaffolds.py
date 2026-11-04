@@ -134,6 +134,12 @@ MIN_PLAUSIBLE_STATEMENT_LENGTH = 40
 CONTRIBUTOR_CHROME_PATTERN = re.compile(r"^Special thanks:.*(?:\n|$)", re.M)
 WRITEUP_SECTION_HEADING_PATTERN = re.compile(r"(?m)^## .*$")
 HTML_COMMENT_PATTERN = re.compile(r"<!--.*?-->", re.S)
+# A `<` that opens no plausible tag (`</?letter`, no angle brackets, then
+# `>`) is prose — recovered FastPrep statements carry raw comparisons like
+# `0 ≤ i < n` — so it is escaped before the tag strips run; `html.unescape`
+# restores it at the end. Without this, the generic strip swallows from the
+# raw `<` through the next real tag's `>`, deleting whole clauses.
+PROSE_LESS_THAN_PATTERN = re.compile(r"<(?!(?:/?[a-zA-Z][^<>]*>))")
 NEXT_FLIGHT_CHUNK_PATTERN = re.compile(
     r'self\.__next_f\.push\(\[1,("(?:[^"\\]|\\.)*")\]\)'
 )
@@ -969,9 +975,11 @@ def html_to_markdown(fragment: str) -> str:
     Block-level tags separate the blocks they bound: both the opening and
     closing tag emit a paragraph break, so a run-in `<h3>` heading or a
     `<ul>` of method specs never glues to the neighboring sentence. `<br>`
-    and `<li>` emit single line breaks; inline tags are stripped bare.
+    and `<li>` emit single line breaks; inline tags are stripped bare. A
+    `<` in prose that opens no plausible tag is kept as a literal `<`.
     """
     text = HTML_COMMENT_PATTERN.sub("", fragment)
+    text = PROSE_LESS_THAN_PATTERN.sub("&lt;", text)
     text = re.sub(r"<sup>(.*?)</sup>", r"^\1", text, flags=re.S | re.I)
     text = re.sub(
         r"(?i)</?(?:p|h[1-6]|ul|ol|pre|blockquote|div|table|tr)\b[^>]*>",

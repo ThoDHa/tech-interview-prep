@@ -656,6 +656,43 @@ def test_html_to_markdown_puts_each_list_item_on_its_own_line():
     assert ".remove_ip" not in rendered
 
 
+def test_html_to_markdown_keeps_a_raw_less_than_a_later_tag_would_eat():
+    """A raw `<` in prose that opens no tag survives the tag strips.
+
+    Shaped like the real find-max-value statement (`where 0 ≤ i < n)`
+    followed by `<strong>Input Parameters:</strong>`): the generic strip
+    used to swallow from the raw `<` through `<strong`'s `>`, deleting
+    every clause in between.
+    """
+    fragment = (
+        "<li>For every row i (where 0 ≤ i < n), the count must not surpass limit[i].</li>"
+        "<li>If picking exactly x elements is impossible, return -1.</li>"
+        "<p><strong>Input Parameters:</strong></p>"
+    )
+
+    rendered = gen.html_to_markdown(fragment)
+
+    assert rendered == (
+        "For every row i (where 0 ≤ i < n), the count must not surpass limit[i].\n"
+        "If picking exactly x elements is impossible, return -1.\n\n"
+        "Input Parameters:"
+    )
+
+
+def test_html_to_markdown_strips_only_the_real_tag_next_to_a_raw_less_than():
+    """A raw `<` directly before a real tag leaves the tag, keeps the `<`.
+
+    Shaped like the real find-requests-in-queue statement (`while time <
+    <code>wait[i]</code>`): the generic strip used to eat `< <code` as one
+    tag and render `time wait[i]`.
+    """
+    rendered = gen.html_to_markdown(
+        "<li>It must be processed while time < <code>wait[i]</code>.</li>"
+    )
+
+    assert rendered == "It must be processed while time < wait[i]."
+
+
 def test_html_to_markdown_strips_leading_indentation_from_every_line():
     rendered = gen.html_to_markdown(
         "<div class=\"wrap\"><p>First paragraph</p><p>  Second paragraph\n"
