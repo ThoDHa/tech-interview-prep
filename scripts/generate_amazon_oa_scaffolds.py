@@ -135,11 +135,12 @@ CONTRIBUTOR_CHROME_PATTERN = re.compile(r"^Special thanks:.*(?:\n|$)", re.M)
 WRITEUP_SECTION_HEADING_PATTERN = re.compile(r"(?m)^## .*$")
 HTML_COMMENT_PATTERN = re.compile(r"<!--.*?-->", re.S)
 # A `<` that opens no plausible tag (`</?letter`, no angle brackets, then
-# `>`) is prose — recovered FastPrep statements carry raw comparisons like
-# `0 ≤ i < n` — so it is escaped before the tag strips run; `html.unescape`
-# restores it at the end. Without this, the generic strip swallows from the
-# raw `<` through the next real tag's `>`, deleting whole clauses.
-PROSE_LESS_THAN_PATTERN = re.compile(r"<(?!(?:/?[a-zA-Z][^<>]*>))")
+# `>`) is prose: recovered FastPrep statements carry raw comparisons like
+# `0 ≤ i < n`. Escape it before the tag strips run, because the generic
+# strip would otherwise swallow from the raw `<` through the next real
+# tag's `>`, deleting whole clauses; `html.unescape` restores it at the
+# end.
+PROSE_LESS_THAN_PATTERN = re.compile(r"<(?!/?[a-zA-Z][^<>]*>)")
 NEXT_FLIGHT_CHUNK_PATTERN = re.compile(
     r'self\.__next_f\.push\(\[1,("(?:[^"\\]|\\.)*")\]\)'
 )
