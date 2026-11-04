@@ -34,7 +34,7 @@ long: the minimum total expense after applying some (possibly zero) number of op
 
 ## Constraints
 
-<!-- Constraints not parseable from FastPrep for amazon-minimize-effort; fill them in. -->
+- `N/A (FastPrep lists no constraints)`
 
 ## Solutions
 
