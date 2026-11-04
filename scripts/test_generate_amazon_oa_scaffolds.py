@@ -2538,6 +2538,56 @@ def test_main_sync_fetches_and_scaffolds_a_new_slug_exactly_as_before(tmp_path, 
         assert path.read_text(encoding="utf-8") == text
 
 
+def test_main_sync_fetches_and_classifies_a_null_status_manifest_slug(tmp_path, monkeypatch, capsys):
+    """A committed null parse_status does not hold: the sync heals it.
+
+    A --manifest-only bootstrap, a --limit overshoot, or a --no-fetch
+    skip can write a slug into the manifest before any classification.
+    Such an entry stays fetchable: the next bank-available run fetches
+    its live page, scaffolds it, and classifies it, while genuinely
+    classified committed slugs stay held and untouched.
+    """
+    null_status_entry = {
+        "slug": "amazon-brand-new-problem",
+        "title": "Brand New Problem",
+        "url": "https://www.fastprep.io/problems/amazon-brand-new-problem",
+        "companies": ["Amazon"],
+        "updated": "2026-09-20",
+        "difficulty": None,
+        "categories": None,
+        "parse_status": None,
+    }
+    manifest_path = redirect_sync_run(
+        tmp_path, monkeypatch, SYNC_BANK_PAGE, [HELD_ENTRY, null_status_entry]
+    )
+    write_scaffold_set(tmp_path, HELD_ENTRY)
+    held_committed = scaffold_texts(HELD_ENTRY["slug"])
+    calls = []
+
+    def spy(slug, cache_dir=None, delay=True, network=True):
+        calls.append(slug)
+        return FASTPREP_PAGE
+
+    monkeypatch.setattr(gen, "fetch_problem_page", spy)
+
+    assert gen.main([]) == 0
+
+    assert calls == ["amazon-brand-new-problem"]
+    assert (gen.DOCS_DIR / "amazon-brand-new-problem.md").exists()
+    cases = json.loads(
+        (gen.PRACTICE_DIR / "amazon-brand-new-problem" / "cases.json").read_text(encoding="utf-8")
+    )
+    assert cases
+    manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+    by_slug = {entry["slug"]: entry for entry in manifest}
+    assert by_slug["amazon-brand-new-problem"]["parse_status"] == "parsed-with-cases"
+    assert by_slug["amazon-held-old"]["parse_status"] == "page-unparseable"
+    for path, text in held_committed.items():
+        assert path.read_text(encoding="utf-8") == text
+    out = capsys.readouterr().out
+    assert "held (committed copies authoritative, untouched): 1" in out
+
+
 def test_main_sync_refreshes_a_held_slug_bank_row_without_fastprep_fetches(tmp_path, monkeypatch, capsys):
     """A held slug's manifest row refreshes from the bank row alone.
 

@@ -6,7 +6,8 @@ Pipeline:
   2. Write scripts/amazon_oa_manifest.json; each entry carries the
       write-up header's difficulty and categories (None where the header
       carries the unknown markers).
-  3. For each manifest entry absent from the committed manifest, fetch the
+  3. For each manifest entry absent from the committed manifest or left
+      unclassified (parse_status None) by it, fetch the
       FastPrep problem page (disk cache, polite delay), parse the
       statement/examples/constraints, and emit:
         - docs/amazon/<slug>.md                  (statement write-up scaffold)
@@ -16,12 +17,16 @@ Pipeline:
         - docs/amazon/index.md   (bank table: Problem, Difficulty, Category,
           Time, Companies, Updated)
 
-Fetch-new-only contract: a slug present in the committed manifest is held;
-its committed write-up, practice folder, and classification are
-authoritative once fetched, and no sync path fetches, parses, or re-emits
-it. The bank pages drive discovery and the manifest row refresh (title,
-url, companies, updated); FastPrep is fetched only for slugs the manifest
-does not hold. A new slug whose page is dead scaffolds placeholders, is
+Fetch-new-only contract: a slug the committed manifest genuinely
+classifies (parse_status set) is held; its committed write-up, practice
+folder, and classification are authoritative once fetched, and no sync
+path fetches, parses, or re-emits it. An entry whose parse_status is None
+is not held: written unclassified by a --manifest-only bootstrap, a
+--limit overshoot, or a --no-fetch skip, it stays fetchable and the next
+bank-available run classifies it. The bank pages drive discovery and the
+manifest row refresh (title, url, companies, updated); FastPrep is
+fetched only for slugs the manifest does not hold or has not classified.
+A new slug whose page is dead scaffolds placeholders, is
 classified `page-unparseable`, and freezes once held until hand-authored.
 
 Cases contract: a case is emitted only when every example value parses to a
@@ -42,8 +47,8 @@ per-slug parse_status) is the source of truth. When the bank pages under /tmp
 are absent (any fresh clone), every mode falls back to the committed manifest,
 where every slug is held and emission is a no-op, and --check compares the
 tree against manifest-driven expectations, never against a re-render from the
-unversioned fastprep cache. --no-fetch keeps a narrower safety net for slugs
-the manifest does not hold: a new slug renders from the disk cache when one
+unversioned fastprep cache. --no-fetch keeps a narrower safety net for
+unheld slugs: such a slug renders from the disk cache when one
 exists and is skipped untouched when it does not; repairing a held slug's
 scaffolds means removing its manifest entry by hand so the next run treats
 it as new. The bank index's
@@ -1429,8 +1434,9 @@ def emit_scaffolds(entries: Sequence[dict], fetch: bool = True,
             continue
         cached = has_cached_page(slug)
         if not fetch and not cached:
-            # The entry was not emitted; its existing parse_status (from a
-            # previous full generation) stays authoritative.
+            # The entry was not emitted; its classification state is left
+            # untouched, so an unclassified slug stays fetchable on a
+            # later bank-available run.
             stats["skipped_no_cache"].append(slug)
             continue
         page_html = fetch_problem_page(slug, delay=fetch, network=fetch)
@@ -1777,12 +1783,18 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
         # The committed manifest classifies, the bank pages enrich: a built
         # entry carries no parse_status, and emission's preservation and
         # conflict predicates read the committed classification, so the
-        # seed must land before emission. Its slugs are also the hold list:
-        # fetch-new-only sync fetches FastPrep only for slugs it omits.
+        # seed must land before emission. Only genuinely classified
+        # committed slugs are held: a null parse_status (a --manifest-only
+        # bootstrap, a --limit overshoot, a --no-fetch skip) stays
+        # fetchable, and the next bank-available run classifies it.
         committed_by_slug = {
             entry["slug"]: entry for entry in load_committed_manifest(MANIFEST_PATH)
         }
-        held_slugs = set(committed_by_slug)
+        held_slugs = {
+            slug
+            for slug, committed in committed_by_slug.items()
+            if committed["parse_status"] is not None
+        }
         for entry in manifest:
             committed = committed_by_slug.get(entry["slug"])
             if committed is not None:
