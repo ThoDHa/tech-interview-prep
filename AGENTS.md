@@ -67,31 +67,47 @@ all three after touching a generator, its data sources, or generated output.
   aborts the run. `cases_full.json` is never generated.
 - `scripts/generate_amazon_oa_scaffolds.py` emits the Amazon scaffolds under
   `docs/amazon/` and `practice/amazon/`, and owns
-  `docs/amazon/index.md` whole-file. The committed manifest classifies each
-  slug (`parse_status`); the bank pages only enrich it. Placeholder
-  write-ups stay generator-owned and keep refreshing. The four
-  `page-unparseable` entries are dead FastPrep pages whose write-ups are
-  death-preserved archives: emission keeps their archived sections and
-  pins only the generator-owned `## Solutions` block. A committed section
-  carrying content whose heading the fresh render lacks is carried and
-  re-appended after the template sections in committed order, named under
-  `death merge union` in the run log; a marker hole (a section holding
-  only placeholder comments) is dropped, not carried. An authored write-up
-  (placeholder marker gone) is preserved untouched; the generator still
-  pins its `# [Title](url)` header line byte-exact, and the body is
-  hand-editable. An authored-cases folder (a non-empty `cases.json` under a
-  committed status other than `parsed-with-cases`) is hand-owned: emission
-  leaves its stub, `cases.json`, and test module untouched, and `--check`
-  pins only that those three files exist. A refresh whose live parse meets
-  such a folder anyway still overwrites it, and the run log names the slug
-  under `practice cases conflicted`. A committed `parsed-with-cases` slug
-  whose live parse yields no problem and no cases keeps its practice files
-  and classification untouched, and the run log names it under `transient
-  parse guard` so a transient failure or a genuinely dead page surfaces
-  for a manual decision. For every remaining folder, the
-  generator pins the `# [Title](url)` header line byte-exact on the
-  write-up and fragment-pins the leading docstring lines of `solution.py`
-  and `test_<slug>.py` under `practice/amazon/<slug>/`.
+  `docs/amazon/index.md` whole-file. Sync is fetch-new-only: the
+  committed manifest is the hold list, an online run builds its entries
+  from the bank rows (discovery plus the row refresh: title, url,
+  companies, updated), and FastPrep pages are fetched, parsed, and emitted
+  only for slugs the manifest does not hold. A held slug's committed
+  write-up, practice folder, and classification are authoritative once
+  fetched: no held-slug path reaches the fetcher, an upstream page death
+  or bank-row date change never touches its files, and the four
+  `page-unparseable` entries are no-ops on every future sync by
+  construction. A new slug whose page is dead scaffolds placeholders and
+  freezes once held until hand-authored. The death and guard machinery
+  stays as code off the hot path: the `page-unparseable` write-ups are
+  death-preserved archives whose committed sections emission keeps and
+  whose generator-owned `## Solutions` block alone is pinned; a committed
+  section carrying content whose heading the fresh render lacks is
+  carried and re-appended after the template sections in committed order,
+  named under `death merge union` in the run log, and a marker hole (a
+  section holding only placeholder comments) is dropped, not carried. A
+  committed `parsed-with-cases` slug whose live parse yields no problem
+  and no cases keeps its practice files and classification untouched and
+  is named under `transient parse guard` for a manual decision. An
+  authored write-up (placeholder marker gone) is preserved untouched
+  wherever emission reaches it; the generator pins its
+  `# [Title](url)` header line byte-exact, and the body is
+  hand-editable. An authored-cases folder (a non-empty `cases.json` under
+  a committed status other than `parsed-with-cases`) is hand-owned:
+  emission leaves its stub, `cases.json`, and test module untouched, and
+  `--check` pins only that those three files exist; a refresh whose live
+  parse meets such a folder anyway still overwrites it, and the run log
+  names the slug under `practice cases conflicted`. The provenance seed
+  still lands before emission: held entries carry their committed
+  classification into the written manifest, and brand-new slugs stay
+  unclassified until the live parse classifies them. For every folder
+  emission renders, the generator pins the `# [Title](url)` header line
+  byte-exact on the write-up and fragment-pins the leading docstring
+  lines of `solution.py` and `test_<slug>.py` under
+  `practice/amazon/<slug>/`. When the bank pages are absent, every slug
+  is held and emission is a no-op; `--no-fetch` keeps the safety net for
+  new slugs only, rendering from the disk cache or skipping untouched,
+  and repairing a held slug's scaffolds means removing its manifest
+  entry by hand so the next run treats it as new.
 - `scripts/generate_index_tables.py` owns the marker-bounded sections of
   `docs/leetcode/index.md` (`unified-leetcode`, `sources`) and the `Leetcode`
   and `Amazon` nav sections in `mkdocs.yml`.
