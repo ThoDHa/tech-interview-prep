@@ -32,7 +32,7 @@ We can optimally start from the first warehouse and collect 1 item, repeat the s
 
 ## Constraints
 
-<!-- Constraints not parseable from FastPrep for amazon-minimize-warehouse-transfer-cost; fill them in. -->
+- `N/A (FastPrep lists no constraints)`
 
 ## Solutions
 

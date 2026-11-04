@@ -656,6 +656,43 @@ def test_html_to_markdown_puts_each_list_item_on_its_own_line():
     assert ".remove_ip" not in rendered
 
 
+def test_html_to_markdown_keeps_a_raw_less_than_a_later_tag_would_eat():
+    """A raw `<` in prose that opens no tag survives the tag strips.
+
+    Shaped like the real find-max-value statement (`where 0 ≤ i < n)`
+    followed by `<strong>Input Parameters:</strong>`): the generic strip
+    used to swallow from the raw `<` through `<strong`'s `>`, deleting
+    every clause in between.
+    """
+    fragment = (
+        "<li>For every row i (where 0 ≤ i < n), the count must not surpass limit[i].</li>"
+        "<li>If picking exactly x elements is impossible, return -1.</li>"
+        "<p><strong>Input Parameters:</strong></p>"
+    )
+
+    rendered = gen.html_to_markdown(fragment)
+
+    assert rendered == (
+        "For every row i (where 0 ≤ i < n), the count must not surpass limit[i].\n"
+        "If picking exactly x elements is impossible, return -1.\n\n"
+        "Input Parameters:"
+    )
+
+
+def test_html_to_markdown_strips_only_the_real_tag_next_to_a_raw_less_than():
+    """A raw `<` directly before a real tag leaves the tag, keeps the `<`.
+
+    Shaped like the real find-requests-in-queue statement (`while time <
+    <code>wait[i]</code>`): the generic strip used to eat `< <code` as one
+    tag and render `time wait[i]`.
+    """
+    rendered = gen.html_to_markdown(
+        "<li>It must be processed while time < <code>wait[i]</code>.</li>"
+    )
+
+    assert rendered == "It must be processed while time < wait[i]."
+
+
 def test_html_to_markdown_strips_leading_indentation_from_every_line():
     rendered = gen.html_to_markdown(
         "<div class=\"wrap\"><p>First paragraph</p><p>  Second paragraph\n"
@@ -841,6 +878,105 @@ def test_render_all_covers_every_scaffold_file():
         gen.PRACTICE_DIR / problem["id"] / "cases.json",
         gen.PRACTICE_DIR / problem["id"] / f"test_{problem['id']}.py",
     }
+
+
+def test_render_constraints_falls_back_to_the_override_bullets_when_the_parse_yields_none():
+    bullets = gen.render_constraints(
+        {"title": "Effort"},
+        "amazon-minimize-effort",
+        constraints_overrides={"amazon-minimize-effort": ["N/A (FastPrep lists no constraints)"]},
+    )
+    assert bullets == ["- `N/A (FastPrep lists no constraints)`", ""]
+
+
+def test_render_constraints_keeps_the_placeholder_when_no_override_addresses_the_slug():
+    bullets = gen.render_constraints(
+        None,
+        "amazon-unlisted",
+        constraints_overrides={"amazon-minimize-effort": ["N/A (FastPrep lists no constraints)"]},
+    )
+    assert bullets == [
+        "<!-- Constraints not parseable from FastPrep for amazon-unlisted; fill them in. -->",
+        "",
+    ]
+
+
+def test_render_constraints_prefers_the_parsed_constraints_over_the_override():
+    bullets = gen.render_constraints(
+        {"constraints": "1 <= n <= 50"},
+        "amazon-minimize-effort",
+        constraints_overrides={"amazon-minimize-effort": ["N/A (FastPrep lists no constraints)"]},
+    )
+    assert bullets == ["- `1 <= n <= 50`", ""]
+
+
+def test_load_constraints_overrides_missing_file_is_the_empty_mapping(tmp_path):
+    assert gen.load_constraints_overrides(tmp_path / "absent.json") == {}
+
+
+def test_load_constraints_overrides_rejects_a_non_object_file(tmp_path):
+    path = tmp_path / "overrides.json"
+    path.write_text("[]", encoding="utf-8")
+    with pytest.raises(SystemExit, match="must be a JSON object"):
+        gen.load_constraints_overrides(path)
+
+
+def test_load_constraints_overrides_rejects_a_non_list_entry(tmp_path):
+    path = tmp_path / "overrides.json"
+    path.write_text(json.dumps({"amazon-minimize-effort": "N/A"}), encoding="utf-8")
+    with pytest.raises(SystemExit, match="amazon-minimize-effort"):
+        gen.load_constraints_overrides(path)
+
+
+def test_load_constraints_overrides_rejects_a_non_string_bullet(tmp_path):
+    path = tmp_path / "overrides.json"
+    path.write_text(json.dumps({"amazon-minimize-effort": ["ok", 3]}), encoding="utf-8")
+    with pytest.raises(SystemExit, match="amazon-minimize-effort"):
+        gen.load_constraints_overrides(path)
+
+
+def test_committed_constraints_overrides_reference_manifest_slugs_with_bullet_strings():
+    overrides = gen.load_constraints_overrides()
+    manifest_slugs = {entry["slug"] for entry in gen.load_committed_manifest()}
+    assert overrides, "the committed file exists; an empty object would not fill the two pages"
+    for slug, bullets in overrides.items():
+        assert slug in manifest_slugs, f"override names unknown slug {slug}"
+        assert bullets and all(isinstance(text, str) and text.strip() for text in bullets)
+
+
+def test_emit_scaffolds_renders_override_constraints_into_a_placeholder_writeup(tmp_path, monkeypatch):
+    """The regeneration fills a FastPrep-empty Constraints section from the committed overrides.
+
+    A placeholder write-up whose page parses to a problem with no
+    constraints data re-renders with the committed override bullets in its
+    Constraints section; the placeholder comment is gone and the practice
+    folder takes its normal path (the case data parses).
+    """
+    docs_dir = tmp_path / "docs" / "amazon"
+    practice_dir = tmp_path / "practice" / "amazon"
+    monkeypatch.setattr(gen, "DOCS_DIR", docs_dir)
+    monkeypatch.setattr(gen, "PRACTICE_DIR", practice_dir)
+    seed_cache(monkeypatch, tmp_path / "cache", "amazon-effort")
+    overrides_path = tmp_path / "overrides.json"
+    overrides_path.write_text(
+        json.dumps({"amazon-effort": ["N/A (FastPrep lists no constraints)"]}), encoding="utf-8"
+    )
+    monkeypatch.setattr(gen, "CONSTRAINTS_OVERRIDES_PATH", overrides_path)
+    monkeypatch.setattr(
+        gen,
+        "fetch_problem_page",
+        lambda slug, cache_dir=None, delay=True, network=True: FASTPREP_PAGE,
+    )
+    entry = {"slug": "amazon-effort", "title": "Effort", "url": "https://x", "companies": ["Amazon"], "updated": "2026-09-19"}
+
+    stats = gen.emit_scaffolds([entry], fetch=False)
+
+    writeup = (docs_dir / "amazon-effort.md").read_text(encoding="utf-8")
+    section = writeup.split("## Constraints", 1)[1].split("## Solutions", 1)[0]
+    assert "- `N/A (FastPrep lists no constraints)`" in section
+    assert "Constraints not parseable from FastPrep" not in writeup
+    assert stats["cases_conflicted"] == []
+    assert stats["generated"] == 1
 
 
 def test_emit_scaffolds_skips_uncached_slugs_without_overwriting(tmp_path, monkeypatch):
