@@ -6,14 +6,23 @@ Pipeline:
   2. Write scripts/amazon_oa_manifest.json; each entry carries the
       write-up header's difficulty and categories (None where the header
       carries the unknown markers).
-  3. For each manifest entry, fetch the FastPrep problem page (disk cache,
-      polite delay), parse the statement/examples/constraints, and emit:
+  3. For each manifest entry absent from the committed manifest, fetch the
+      FastPrep problem page (disk cache, polite delay), parse the
+      statement/examples/constraints, and emit:
         - docs/amazon/<slug>.md                  (statement write-up scaffold)
         - practice/amazon/<slug>/solution.py     (NotSolved stub)
         - practice/amazon/<slug>/cases.json      (parseable examples, else [])
         - practice/amazon/<slug>/test_<slug>.py  (harness-driven tests)
         - docs/amazon/index.md   (bank table: Problem, Difficulty, Category,
           Time, Companies, Updated)
+
+Fetch-new-only contract: a slug present in the committed manifest is held;
+its committed write-up, practice folder, and classification are
+authoritative once fetched, and no sync path fetches, parses, or re-emits
+it. The bank pages drive discovery and the manifest row refresh (title,
+url, companies, updated); FastPrep is fetched only for slugs the manifest
+does not hold. A new slug whose page is dead scaffolds placeholders, is
+classified `page-unparseable`, and freezes once held until hand-authored.
 
 Cases contract: a case is emitted only when every example value parses to a
 JSON-representable literal assertable with `==` against the method's return
@@ -31,8 +40,13 @@ generator's own last render and stays generator-owned.
 Offline contract: the committed scripts/amazon_oa_manifest.json (with its
 per-slug parse_status) is the source of truth. When the bank pages under /tmp
 are absent (any fresh clone), every mode falls back to the committed manifest,
-and --check compares the tree against manifest-driven expectations, never
-against a re-render from the unversioned fastprep cache. The bank index's
+where every slug is held and emission is a no-op, and --check compares the
+tree against manifest-driven expectations, never against a re-render from the
+unversioned fastprep cache. --no-fetch keeps a narrower safety net for slugs
+the manifest does not hold: a new slug renders from the disk cache when one
+exists and is skipped untouched when it does not; repairing a held slug's
+scaffolds means removing its manifest entry by hand so the next run treats
+it as new. The bank index's
 Difficulty/Time columns reuse generate_index_tables.py's conventions: the
 committed amazon_difficulty_overrides.json corrects externally sourced
 difficulties at render time, and Time carries the shared difficulty-based
@@ -62,7 +76,7 @@ import urllib.error
 import urllib.request
 from dataclasses import dataclass
 from pathlib import Path
-from typing import Any, Dict, List, Mapping, NamedTuple, Optional, Sequence, Tuple
+from typing import Any, Collection, Dict, List, Mapping, NamedTuple, Optional, Sequence, Tuple
 
 import generate_index_tables as index_tables
 
@@ -1357,7 +1371,8 @@ def fetch_problem_page(
 # ---------------------------------------------------------------------------
 
 
-def emit_scaffolds(entries: Sequence[dict], fetch: bool = True) -> dict:
+def emit_scaffolds(entries: Sequence[dict], fetch: bool = True,
+                   held_slugs: Collection[str] = ()) -> dict:
     """Write docs and practice scaffolds for the given manifest entries.
 
     Args:
@@ -1365,11 +1380,15 @@ def emit_scaffolds(entries: Sequence[dict], fetch: bool = True) -> dict:
         fetch: When False, never hit the network and never overwrite an
             existing non-placeholder scaffold for a slug whose page is not
             cached; such slugs are reported as `skipped_no_cache` instead.
+        held_slugs: Slugs whose committed copies are authoritative; each
+            is skipped before any cache probe or fetch, so no held-slug
+            path can reach the fetcher.
 
     Returns:
         Stats: `generated` (n), `cases_parsed` (n), `cases_empty` (n),
         `parse_failures` (slugs whose FastPrep page did not parse),
         `skipped_no_cache` (slugs left untouched under fetch=False),
+        `held_skipped` (held slugs left untouched by construction),
         `writeups_preserved` (slugs whose authored write-up was left
         untouched), `writeups_preserved_dead_page` (slugs whose committed
         write-up sections were merged into the placeholder because the
@@ -1392,6 +1411,7 @@ def emit_scaffolds(entries: Sequence[dict], fetch: bool = True) -> dict:
         "cases_empty": 0,
         "parse_failures": [],
         "skipped_no_cache": [],
+        "held_skipped": [],
         "writeups_preserved": [],
         "writeups_preserved_dead_page": [],
         "cases_preserved": [],
@@ -1403,6 +1423,9 @@ def emit_scaffolds(entries: Sequence[dict], fetch: bool = True) -> dict:
     PRACTICE_DIR.mkdir(parents=True, exist_ok=True)
     for entry in entries:
         slug = entry["slug"]
+        if slug in held_slugs:
+            stats["held_skipped"].append(slug)
+            continue
         cached = has_cached_page(slug)
         if not fetch and not cached:
             # The entry was not emitted; its existing parse_status (from a
@@ -1742,7 +1765,10 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
         # The committed manifest is the source of truth: --check never
         # depends on the bank pages or the fastprep cache, and a fresh
         # clone (no recon-scratch bank pages) still runs from the commit.
+        # Offline, the committed manifest is itself the hold list: every
+        # slug is held and emission is a no-op.
         manifest = load_committed_manifest(MANIFEST_PATH)
+        held_slugs = {entry["slug"] for entry in manifest}
         source = "committed manifest fallback"
     else:
         manifest = build_manifest([path.read_text(encoding="utf-8") for path in bank_pages])
@@ -1750,10 +1776,12 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
         # The committed manifest classifies, the bank pages enrich: a built
         # entry carries no parse_status, and emission's preservation and
         # conflict predicates read the committed classification, so the
-        # seed must land before emission.
+        # seed must land before emission. Its slugs are also the hold list:
+        # fetch-new-only sync fetches FastPrep only for slugs it omits.
         committed_by_slug = {
             entry["slug"]: entry for entry in load_committed_manifest(MANIFEST_PATH)
         }
+        held_slugs = set(committed_by_slug)
         for entry in manifest:
             committed = committed_by_slug.get(entry["slug"])
             if committed is not None:
@@ -1770,7 +1798,9 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
 
     ensure_nav_entry()
     write_index(entries if args.limit else manifest)
-    stats = emit_scaffolds(entries, fetch=not args.no_fetch and bank_available)
+    stats = emit_scaffolds(
+        entries, fetch=not args.no_fetch and bank_available, held_slugs=held_slugs
+    )
     # Written after emission so entries carry the parse_status set there.
     write_manifest(manifest)
     print(
@@ -1790,17 +1820,16 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
             " parse yielded nothing; manual decision owed): "
             + ", ".join(stats["transient_parse_guard"])
         )
+    if stats["held_skipped"]:
+        print(
+            "held (committed copies authoritative, untouched): "
+            f"{len(stats['held_skipped'])}"
+        )
     if stats["skipped_no_cache"]:
         print(
             "skipped (no cache, fetch disabled, existing scaffolds kept): "
             + ", ".join(stats["skipped_no_cache"])
         )
-        if not bank_available:
-            print(
-                "warning: the Tech-OA bank pages are absent and the fastprep"
-                " cache has no entry for the skipped slug(s); their existing"
-                " scaffolds were left untouched"
-            )
     if stats["writeups_preserved"]:
         print(
             "write-ups preserved (authored, left untouched): "
