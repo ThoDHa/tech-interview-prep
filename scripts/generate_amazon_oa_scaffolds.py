@@ -353,8 +353,9 @@ def parse_difficulty_line(writeup_path: Path) -> dict:
     """
     if not writeup_path.exists():
         raise SystemExit(
-            f"write-up not found: {writeup_path}; regenerate the scaffolds"
-            " before building the manifest"
+            f"write-up not found: {writeup_path}; restore it from git or"
+            " hand-remove its manifest entry so the next run scaffolds the"
+            " slug as new"
         )
     lines = writeup_path.read_text(encoding="utf-8").splitlines()
     header = (
